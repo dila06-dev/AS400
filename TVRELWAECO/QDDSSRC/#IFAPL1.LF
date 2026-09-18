@@ -1,0 +1,13 @@
+      * Physische Datei: IFAP
+      * ANLEGEDATUM: OKTOBER 2010
+      *SORT:        FIRMEN#, AUFTRAG# DES KUNDEN
+      * ÄNDERUNGEN:
+      * AUSSCHLUSS:  ...
+     A
+     A                                      UNIQUE
+     A          R IFAP1                     PFILE(IFAP)
+     A
+     A                                      TEXT('POSITIONSSÄTZE')
+     A          K IFAPIFFI
+     A          K IFAPIFNR
+     A          K IFAPIFPO

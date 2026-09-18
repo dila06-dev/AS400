@@ -1,0 +1,25 @@
+     A**************************************************************************
+     A*  Copyright 2013 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Relationen TNT                                                        *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: PH 19.02.2012 DOMETIC Projekt 8997                          *
+     A*  Änderung: XX XX.XX.XXXX                                               *
+     A**************************************************************************
+     A                                      REF(WAOS)
+     A          R KYWAOS1
+     A*-------------------------------------------------------------------------
+     A            KYWAOSFIRMR               REFFLD(WAOSFIRM)
+     A            KYWAOSLISOR               REFFLD(WAOSLISO)
+     A            KYWAOSPLZBR               REFFLD(WAOSPLZB)
+     A            KYWAOSPLZVR               REFFLD(WAOSPLZV)
+     A*
+     A            K$WAOSFREI    30
+     A            K#WAOSLOCKR               REFFLD(WAOSLOCK)
+     A*
+     A            K#WAOSFIRMR               REFFLD(WAOSFIRM)
+     A            K#WAOSLISOR               REFFLD(WAOSLISO)
+     A            K#WAOSPLZBR               REFFLD(WAOSPLZB)

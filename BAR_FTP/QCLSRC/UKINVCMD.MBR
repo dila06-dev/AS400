@@ -1,0 +1,7 @@
+winadmin   3veKhCMZ
+ascii
+NAMEFMT 0
+cd domains/dometic-group.com/public_ftp/dwuk/rcv
+lcd WAECOEDI
+PUT DOMINV_UK UKI101229_2000.TXT
+quit

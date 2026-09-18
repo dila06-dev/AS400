@@ -1,0 +1,21 @@
+     A*
+     A*         DATUM IMMER TT.MM.JJJJ
+     A*         ZEIT  IMMER HH:MM
+     A*           ORDANLORT     = EMSDETTEN
+     A          R HDXORDERR                 TEXT('HDXINPUT')
+     A*****************************************************************
+     A            H010          01A
+     A            H040          10S 0
+     A            H050          30A
+     A            H100          30A
+     A            H110          30A
+     A            H120          30A
+     A            H130          30A
+     A            H140           3A
+     A            H150           5S 0
+     A            H160          30A
+     A            H240          21A
+     A*****************************************************************
+     A            H060            L         TEXT('BELEGDATUM')
+     A            H360            L         TEXT('Date of transmissing')
+     A            H370            Z         TEXT('TIMESTAMP')

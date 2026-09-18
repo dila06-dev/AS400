@@ -1,0 +1,8 @@
+     A                                      UNIQUE
+     A          R P_LISTINGR
+     A            FIRMA          1A         TEXT('FIRMA')
+     A            KUNDE          5A         TEXT('KUNDE')
+     A            LISTE         10A         TEXT('LISTE')
+     A            AKTIV          1A         TEXT('AKTIV')
+     A
+     A          K KUNDE

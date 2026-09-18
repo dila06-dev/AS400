@@ -1,0 +1,25 @@
+     A**************************************************************************
+     A*  Copyright 2012 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Schnittstelle BRT Italien Schlüsselaufbau                             *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: PH 20.12.2012 Projekt 9128                                  *
+     A*  Änderung: XX XX.XX.XXXX                                               *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R KYSPH01
+     A*-------------------------------------------------------------------------
+     A            KYSPH0B020R               REFFLD(SPEDH01/BRT020 *LIBL/SPEDH0)
+     A            KYSPH0FREI    30
+     A            K#SPH0LOCKR               REFFLD(##LOCK)
+     A            K#SPH0B020R               REFFLD(SPEDH01/BRT020 *LIBL/SPEDH0)
+     A            SPH0LOCK  R               REFFLD(##LOCK)
+     A            SPH0JNAM  R               REFFLD(##JNAM)
+     A            SPH0JDAT  R               REFFLD(##JDAT)
+     A            SPH0JZEI  R               REFFLD(##JZEI)
+     A            SPH0USER  R               REFFLD(##USER)
+     A            SPH0PROG  R               REFFLD(##PROG)
+     A            SPH0BIBL  R               REFFLD(##BIBL)

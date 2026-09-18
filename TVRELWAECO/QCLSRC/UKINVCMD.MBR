@@ -1,0 +1,7 @@
+winadmin   gbjYzXrqX44T6bZV
+ascii
+NAMEFMT 0
+cd domains/dometic-group.com/public_ftp/dwuk/rcv
+lcd TVRELWAECO
+PUT DOMINV_UK UKI260917_1831.TXT
+quit

@@ -1,0 +1,7 @@
+winadmin   gbjYzXrqX44T6bZV
+ascii
+NAMEFMT 0
+cd domains/dometic-group.com/public_ftp/dwpl/rcv
+lcd TVRELWAECO
+PUT DOMINV_PL PLI260914_1833.TXT
+quit

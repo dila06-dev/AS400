@@ -1,0 +1,14 @@
+      * Physische Datei: VEZU
+      * ANLEGEDATUM: 07/2012
+      *SORT:        ...
+      * ÄNDERUNGEN:
+      * AUSSCHLUSS:  ...
+     A
+     A*                                     UNIQUE
+     A          R VEZU1                     PFILE(VEZU)
+     A
+     A
+     A          K VZFIRM
+     A          K VZBEGR
+     A          K VZKDLI
+     A          K VZGADA                    DESCEND

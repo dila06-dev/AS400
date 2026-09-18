@@ -1,0 +1,6 @@
+     A          R XMLINVOICE                TEXT('XMLINVOICE         ')
+     A*****************************************************************
+     A            INVOICE     1024A
+     A            DATE_           L         TEXT('Date of transmissing')
+     A            TSTAMP_         Z         TEXT('TIMESTAMP')
+     A

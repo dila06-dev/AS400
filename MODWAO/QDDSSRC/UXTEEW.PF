@@ -1,0 +1,16 @@
+     A**************************************************************************
+     A*  Copyright 2011 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Identstamm-Erweiterung                                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: PH 16.01.2011 Projekt 7038                                  *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R UXTEEW1
+     A*
+     A            UXTEEWFIRMR               REFFLD(TEEW1/TEEWFIRM *LIBL/TEEW)
+     A            UXTEEWTENRR               REFFLD(TEEW1/TEEWTENR *LIBL/TEEW)

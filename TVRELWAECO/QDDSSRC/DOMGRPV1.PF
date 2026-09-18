@@ -1,0 +1,31 @@
+     A*
+     A*CRTSRCPF FILE(TVRELWAECO/IMPORT2400) RCDLEN(2400)
+     A*TEXT('DATA STREAM FOR IMPORT 2400 BYTES')
+     A*
+     A*
+     A*
+     A*CPYFRMSTMF FROMSTMF('/LAGER/SCM/ITEMSUPLOADV1.1.CSV')
+     A*TOMBR('/QSYS.LIB/TVRELWAECO.LIB/IMPORT2400.FILE/IMPORT2400.MBR')
+     A*MBROPT(*REPLACE)
+     A*
+     A*CPYFRMIMPF FROMFILE(TVRELWAECO/IMPORT2400)
+     A*TOFILE(TVRELWAECO/ITEMIMPV1) MBROPT(*REPLACE)
+     A*FLDDLM(';') DECPNT(*COMMA)
+     A*FROMRCD(1) RPLNULLVAL(*FLDDFT)
+     A*
+     A*
+     A*
+     A          R ITEMIMPV1R                TEXT('ITEMIMPV1')
+     A********************************************************************
+     A            #DESC1        50A         COLHDG('01ITEM DESCRIPTION')
+     A            #DESC2        50A         COLHDG('02ITEM DESCRIPTION')
+     A            #PGRP         03A         COLHDG('05DOM FIN PROD GROUP')
+     A*****************************************************************
+     A*
+     A*****************************************************************
+     A            H1              L         TEXT('Date of transmissing')
+     A            H2              Z         TEXT('TIMESTAMP')
+     A            H3              L         TEXT('Date of INPUT')
+     A            H4              Z         TEXT('TIMESTAMP INPUT')
+     A            H5              T         TEXT('TIME      INPUT')
+     A*****************************************************************

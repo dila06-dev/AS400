@@ -1,0 +1,58 @@
+     C**************************************************************************
+     C* PROGRAMMNAME.:##D3CTLA                                               
+     C* FUNKTION.....:STEUERUNGSROUTINEN CLEAR/READ
+     C* OKTOBER 2009   GANG, MANFRED
+     C*-------------------------------------------------------------------------
+     C**************************************************************************
+     C* SR1101: DATEI LESEN UM DIALOGSATZ D3 ZU FÜLLEN
+     C*-------------------------------------------------------------------------
+     C*
+     C           SR1101    BEGSR
+     C*
+     C                     EXSR SRATTR                     PRÜFUNGEN
+     C           D3OP      IFNE *BLANK
+     C                     EXSR SR1500                     PRÜFUNGEN
+     C                     ENDIF
+     C                     SETOF                     60
+     C           CTLVLD    IFEQ 'F'
+     C                     SETON                     60
+     C                     MOVEAATR,9     §§OP
+     C                     ELSE
+     C           *IN26     IFEQ '1'
+     C                     MOVE '1'       CTLCHG
+     C                     ENDIF
+     C                     MOVELD3KW      XXKW    4
+     C                     MOVELKEYFMT    KEYDAT
+     C                     CLEAR§DDS1§D3
+     C                     MOVEADSPMOD    *IN,33           BILDS.-MODUS
+     C                     MOVEAFUNKT     *IN,81           BERECHTIGUNGEN
+     C                     MOVEAFKTTST    *IN,35           BERECHTIGUNGEN
+     C                     MOVELXXKW      D3KW    4
+     C                     EXSR SRATTR                     PRÜFUNGEN
+     C                     EXSR SR1199
+     C           KEY001    CHAIN§000LOG1             91
+     C           *IN91     IFEQ '1'
+     C           CTLCHG    IFEQ '1'
+     C                     MOVEL'AL00001' MSG              KEINE SÄTZE
+     C                     EXSR SNDMSG
+     C                     EXSR SR1150
+     C                     ENDIF
+     C                     ELSE
+     C                     MOVE 'N'       CTLVLD
+     C                     MOVE '0'       CTLPRF  1
+     C                     EXSR SR1120
+     C           CTLPRF    IFEQ '0'
+     C                     EXSR SR1121
+     C                     EXSR SR1199
+     C                     MOVEL'AL00027' MSG
+     C                     EXSR SNDMSG
+     C                     ENDIF
+     C                     ENDIF
+     C                     ENDIF
+     C*
+     C                     Z-ADD*ZERO     §§CRLN
+     C                     Z-ADD*ZERO     §§CRCL
+     C*
+     C           ##1101    ENDSR
+     C*
+     C*

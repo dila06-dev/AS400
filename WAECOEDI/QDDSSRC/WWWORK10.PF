@@ -1,0 +1,41 @@
+     A          R ORK00R1
+     A            ORK010         7S 0
+     A                                      TEXT('Mitglieds-Nr. Absender')
+     A                                      COLHDG('Mit' -
+     A                                      'glied ' -
+     A                                      'Abs.')
+     A                                      EDTCDE(Z)
+     A            ORK020         7S 0
+     A                                      TEXT('Mitglieds-Nr. Empfänger')
+     A                                      COLHDG('Mit' -
+     A                                      'glied' -
+     A                                      'Empf.')
+     A                                      EDTCDE(Z)
+     A            ORK030         7S 0
+     A                                      TEXT('Kunden-Nr. beim Empf.')
+     A                                      COLHDG('Kd.Nr.' -
+     A                                      'beim ' -
+     A                                      'Empf.')
+     A                                      EDTCDE(Z)
+     A            ORK040         7S 0
+     A                                      TEXT('Auftr.Nr. beim Abs.')
+     A                                      COLHDG('Auft.Nr.' -
+     A                                      'beim ' -
+     A                                      'Abs.')
+     A                                      EDTCDE(Z)
+     A            ORK050         7S 0
+     A                                      TEXT('Auftr.Nr. bei WAECO')
+     A                                      COLHDG('Auft.Nr.' -
+     A                                      'bei ' -
+     A                                      'WAECO')
+     A                                      EDTCDE(Z)
+     A            ORK060         3A
+     A                                      TEXT('Auftrags-Bearbeiter WAECO')
+     A                                      COLHDG('Auft.SaBe' -
+     A                                      'bei ' -
+     A                                      'WAECO')
+     A**
+     A          K ORK010
+     A          K ORK020
+     A          K ORK030
+     A          K ORK040

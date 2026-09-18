@@ -1,0 +1,23 @@
+     A*****************************************************************
+     A*                                                               *
+     A*  Copyright 2010 by    trend SWM                               *
+     A*                       Verwaltungs GmbH                        *
+     A*                       Gundelfinger Str. 11                    *
+     A*                       D-79108 Freiburg                        *
+     A*  -----------------------------------------------------------  *
+     A*                                                               *
+     A*  Kundenstamm-Erweiterungen                                    *
+     A*                                                               *
+     A*  -----------------------------------------------------------  *
+     A*                                                               *
+     A*  Schlüsselbeschreibung                                        *
+     A*  ---------------------                                        *
+     A*  Firmennummer                  KYKDEWFIRM   KDEWFIRM  K       *
+     A*  Kundennumer                   KYKDEWKDNR   KDEWKDNR  K       *
+     A*                                                               *
+     A*****************************************************************
+     A*
+     A          R KDEW1                     PFILE(KDEW)
+     A*
+     A          K KDEWFIRM
+     A          K KDEWKDNR

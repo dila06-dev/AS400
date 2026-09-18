@@ -1,0 +1,614 @@
+UPDATE KDEW    SET KDEWKSST =
+( SELECT SUBSTR(ITEM2, 1, 4)  FROM TVRELWAECO/FROM_EXCEL
+  WHERE KDEWFIRM='01' AND KDEWKDNR=SUBSTR(ITEM, 1, 6)
+        AND KDEWKDNR ='001089'                      )
+  WHERE EXISTS
+( SELECT SUBSTR(ITEM2, 1, 4)  FROM TVRELWAECO/FROM_EXCEL
+  WHERE KDEWFIRM='01' AND KDEWKDNR=SUBSTR(ITEM, 1, 6)
+        AND KDEWKDNR ='001089'                      )
+ prüfen gegenwert
+
+UPDATE kund01  SET KDKDGR   =
+( SELECT substr(ITEM3, 1, 3)  FROM TVRELWAECO/FROM_EXCE2
+  WHERE kdfirm  ='01' AND KDKDNR  =SUBSTR(ITEM, 1, 6)
+        AND kdkdnr   ='088505'                      )
+  WHERE EXISTS
+( SELECT substr(ITEM3, 1, 3)  FROM TVRELWAECO/FROM_EXCE2
+  WHERE kdfirm  ='01' AND KDKDNR  =SUBSTR(ITEM, 1, 6)
+        AND kdkdnr   ='088505'                      )
+  90 + Beschreibungssatz einer fehlt
+
+ SELECT * FROM teil01 WHERE tefirm='52' or tefirm='08'
+ Datei TEILSICHER in TVRELWAECO wurde erstellt.
+
+ SELECT * FROM e_preisek WHERE #version='NLVANDERLE LP1- 2014' and
+ #PRS040 <> '682334'
+ Datei #E_PREISEK in TVRELWAECO wurde erstellt.
+
+
+ UPDATE teil01  SET TEVEP2   =
+ ( SELECT #PRS050  FROM            #e_preisek
+   WHERE (tefirm='52' or tefirm='08')  and #PRS040=tetenr )
+   WHERE EXISTS
+ ( SELECT #PRS050  FROM            #e_preisek
+   WHERE (tefirm='52' or tefirm='08')  and #PRS040=tetenr )
+ 14125 Zeilen in TEIL01 in TVPF aktualisiert.
+
+ UPDATE teil01  SET TESTPR   =
+ ( SELECT #PRS050  FROM            #e_preisek
+   WHERE (tefirm='52' or tefirm='08')  and #PRS040=tetenr )
+   WHERE EXISTS
+ ( SELECT #PRS050  FROM            #e_preisek
+   WHERE (tefirm='52' or tefirm='08')  and #PRS040=tetenr )
+ 14125 Zeilen in TEIL01 in TVPF aktualisiert.
+
+ UPDATE teil01  SET TEV2DA   =
+ ( SELECT '20140101' from          #e_preisek
+   WHERE (tefirm='52' or tefirm='08')  and #PRS040=tetenr )
+   WHERE EXISTS
+ ( SELECT '20140101' from          #e_preisek
+   WHERE (tefirm='52' or tefirm='08')  and #PRS040=tetenr )
+ 14125 Zeilen in TEIL01 in TVPF aktualisiert.
+
+ UPDATE teil01  SET testda   =
+ ( SELECT '20140101' from          #e_preisek
+   WHERE (tefirm='52' or tefirm='08')  and #PRS040=tetenr )
+   WHERE EXISTS
+ ( SELECT '20140101' from          #e_preisek
+   WHERE (tefirm='52' or tefirm='08')  and #PRS040=tetenr )
+ 14125 Zeilen in TEIL01 in TVPF aktualisiert.
+
+  SELECT TEVEP2, TESTPR FROM teil WHERE TEFIRM ='52' and TETENR
+  ='294681106'
+
+  update        prei01 set prgbda=20140104
+                       WHERE PRFIRM='01' and PRBEGR ='PKD' and PRKDLI
+  <>'191453' and (PRGBDA =0  or PRGBDA >20140000)
+                           and PRKDLI in ( SELECT substr(ITEM, 1, 6)
+  FROM TVRELWAECO/FROM_EXCE2)
+  46774 Zeilen in PREI01 in TVPF aktualisiert.
+
+  update       afko set AKKDGR ='273', AKAFDA=20140101
+  WHERE AKFIRM ='01' and AKAFDA> 20130000 and
+        AKAFST =' ' and AKAFAT ='08' and AKKDGR ='073' and
+        akkdnr in(select substr(ITEM, 1, 6)
+                  FROM TVRELWAECO/FROM_EXCE2 where
+                  substr(ITEM3, 1, 3) ='273')
+  38 Zeilen in AFKO in TVPF aktualisiert.
+  update       afko set AKKDGR ='373', AKAFDA=20140101
+  WHERE AKFIRM ='01' and AKAFDA> 20130000 and
+        AKAFST =' ' and AKAFAT ='08' and AKKDGR ='073' and
+        akkdnr in(select substr(ITEM, 1, 6)
+                  FROM TVRELWAECO/FROM_EXCE2 where
+                  substr(ITEM3, 1, 3) ='373')
+  12 Zeilen in AFKO in TVPF aktualisiert.
+
+  update       afko set AKKDGR ='173', AKAFDA=20140101
+  WHERE AKFIRM ='01' and AKAFDA> 20121200 and
+        AKAFST =' ' and AKAFAT ='A02' and AKKDGR ='073' and
+        akkdnr in(select substr(ITEM, 1, 6)
+                  FROM TVRELWAECO/FROM_EXCE2 where
+                  substr(ITEM3, 1, 3) ='173') and
+                   (akkdnr='015177' or akkdnr='062765' )
+  326 Zeilen in AFKO in TVPF aktualisiert.
+
+  26.02.2014
+  __________
+  UPDATE teil01  SET TESTPR   =
+  ( SELECT    round(sku/1,03, 2)    FROM            SKUUPDATEP
+    WHERE (tefirm='52' or tefirm='08')  and ITEM   =tetenr )
+    WHERE EXISTS
+  ( SELECT    round(sku/1,03, 2)    FROM            SKUUPDATEP
+    WHERE (tefirm='52' or tefirm='08')  and ITEM   =tetenr )
+  6192 Zeilen in TEIL01 in TVPF aktualisiert.
+
+
+  SELECT * FROM prei WHERE (PRFIRM ='52' or prfirm='08') and PRTENR
+  in ( select ITEM from SKUUPDATEP) and prkdli='0000001' and PRGADA >
+  20140100
+  Datei LP1NEUNLBL in TVRELWAECO wurde erstellt.
+
+  UPDATE  LP1NEUNLBL   SET PREZPR   =
+  ( SELECT  sku/1,03     FROM            SKUUPDATEP
+    WHERE (prfirm='52' or prfirm='08')  and ITEM   =prtenr)
+    WHERE EXISTS
+  ( SELECT  SKU/1.03     FROM            SKUUPDATEP
+    WHERE (prfirm='52' or prfirm='08')  and ITEM   =prtenr)
+  6047 Zeilen in LP1NEUNLBL in TVRELWAECO aktualisiert.
+
+  UPDATE  LP1NEUNLBL   SET PREZPR   =
+  ( SELECT  round(sku/1,03, 2)     FROM            SKUUPDATEP
+    WHERE (prfirm='52' or prfirm='08')  and ITEM   =prtenr)
+    WHERE EXISTS
+  ( SELECT  round(sku/1,03, 2)     from      SKUUPDATEP
+    WHERE (prfirm='52' or prfirm='08')  and ITEM   =prtenr)
+  6047 Zeilen in LP1NEUNLBL in TVRELWAECO aktualisiert.
+
+  update             LP1NEUNLBL set prprog='SQL     '
+  6047 Zeilen in LP1NEUNLBL in TVRELWAECO aktualisiert.
+
+  update             LP1NEUNLBL set prgada=20140227
+  6047 Zeilen in LP1NEUNLBL in TVRELWAECO aktualisiert.
+  update             LP1NEUNLBL set PRJDAT=20140227
+  6047 Zeilen in LP1NEUNLBL in TVRELWAECO aktualisiert.
+
+  sELECT * FROM LP1NEUNLBL
+  6047 Sätze zu Teildatei PREI in Datei PREI hinzugefügt.
+
+ hier datumsangaben geändert    ==> 27.02.14 bis 31.12.14
+ insert into tvrelwaeco/E_PREIS
+ SELECT zoned(1, 2, 0) #PRS010, char('400XXX', 6) #PRS020,char('000',
+  3) #PRS030, item #PRS040,
+  zoned(round(sku/1,03, 2), 9, 2) #PRS050,
+ zoned(substr(char(current date -001 day), 1, 2)  concat
+ substr(char(current date -000 day), 4, 2)  concat
+ substr(char(current date -000 day), 7, 2), 6, 0)   #PRS070,
+                                             char(' ', 15) #prs080,
+ zoned(substr(char(current date +400 day), 1, 2)  concat
+ substr(char(current date +400 day), 4, 2)  concat
+ substr(char(current date +400 day), 7, 2), 6, 0) #PRS120,
+ zoned(0, 6, 0) #GEBUCHT, char('#', 1) #modus,
+ char(('$' concat substr(char(current timestamp), 01, 19)), 50)
+  #version, zoned(0, 9, 2) #PRS050_A, zoned(0, 6, 0) #PRS070_A,
+ char(' ', 15)   #PRS080_A,  zoned(0, 6, 0) #PRS120_A
+ FROM SKUUPDATEP
+
+zu Hause
+ UPDATE teil01  SET TESTPR   =
+ ( SELECT    round(sku/1,03, 2)    FROM            SKUUPDATEX
+   WHERE (tefirm='52' or tefirm='08')  and ITEM   =tetenr )
+   WHERE EXISTS
+ ( SELECT    round(sku/1,03, 2)    FROM            SKUUPDATEX
+   WHERE (tefirm='52' or tefirm='08')  and ITEM   =tetenr )
+ 68 Zeilen in TEIL01 in TVPF aktualisiert.
+
+ SELECT * FROM prei WHERE (PRFIRM ='52' or prfirm='08') and PRTENR
+ in ( select ITEM from SKUUPDATEx) and prkdli='0000001' and PRGADA >
+ 20140100
+ Datei LP1NEUNLB2 in TVRELWAECO wurde erstellt.
+
+ UPDATE  LP1NEUNLB2   SET PREZPR   =
+ ( SELECT  round(sku/1,03, 2)     FROM            SKUUPDATEx
+   WHERE (prfirm='52' or prfirm='08')  and ITEM   =prtenr)
+   WHERE EXISTS
+ ( SELECT  round(sku/1,03, 2)     from      SKUUPDATEx
+   WHERE (prfirm='52' or prfirm='08')  and ITEM   =prtenr)
+ 66 Zeilen in LP1NEUNLB2 in TVRELWAECO aktualisiert.
+
+ update             LP1NEUNLB2 set prprog='SQL     '
+ 66 Zeilen in LP1NEUNLB2 in TVRELWAECO aktualisiert.
+ update             LP1NEUNLB2 set prgada=20140227
+ 66 Zeilen in LP1NEUNLB2 in TVRELWAECO aktualisiert.
+ update             LP1NEUNLB2 set PRJDAT=20140227
+ 66 Zeilen in LP1NEUNLB2 in TVRELWAECO aktualisiert.
+
+ sELECT * FROM LP1NEUNLB2
+ 66 Sätze zu Teildatei PREI in Datei PREI hinzugefügt.
+
+ insert into tvrelwaeco/E_PREIS
+ SELECT zoned(1, 2, 0) #PRS010, char('400XXX', 6) #PRS020,char('000',
+  3) #PRS030, item #PRS040,
+  zoned(round(sku/1,03, 2), 9, 2) #PRS050,
+ zoned(substr(char(current date -001 day), 1, 2)  concat
+ substr(char(current date -000 day), 4, 2)  concat
+ substr(char(current date -000 day), 7, 2), 6, 0)   #PRS070,
+                                             char(' ', 15) #prs080,
+ zoned(substr(char(current date +100 day), 1, 2)  concat
+ substr(char(current date +100 day), 4, 2)  concat
+ substr(char(current date +100 day), 7, 2), 6, 0) #PRS120,
+ zoned(0, 6, 0) #GEBUCHT, char('#', 1) #modus,
+ char(('$' concat substr(char(current timestamp), 01, 19)), 50)
+  #version, zoned(0, 9, 2) #PRS050_A, zoned(0, 6, 0) #PRS070_A,
+ char(' ', 15)   #PRS080_A,  zoned(0, 6, 0) #PRS120_A
+ FROM SKUUPDATEx
+
+ update e_preis set #prs070=270214
+ 34 Zeilen in E_PREIS in TVRELWAECO aktualisiert.
+ update e_preis set #prs120=311214
+ 34 Zeilen in E_PREIS in TVRELWAECO aktualisiert.
+
+ insert into tvrelwaeco/E_PREIS
+ SELECT zoned(1, 2, 0) #PRS010, char('400XXX', 6) #PRS020,char('000',
+  3) #PRS030, item #PRS040,
+  zoned(round(ics2      2), 9, 2) #PRS050,
+ zoned(substr(char(current date -001 day), 1, 2)  concat
+ substr(char(current date -000 day), 4, 2)  concat
+ substr(char(current date -000 day), 7, 2), 6, 0)   #PRS070,
+                                             char(' ', 15) #prs080,
+ zoned(substr(char(current date +100 day), 1, 2)  concat
+ substr(char(current date +100 day), 4, 2)  concat
+ substr(char(current date +100 day), 7, 2), 6, 0) #PRS120,
+ zoned(0, 6, 0) #GEBUCHT, char('#', 1) #modus,
+ char(('$' concat substr(char(current timestamp), 01, 19)), 50)
+  #version, zoned(0, 9, 2) #PRS050_A, zoned(0, 6, 0) #PRS070_A,
+ char(' ', 15)   #PRS080_A,  zoned(0, 6, 0) #PRS120_A
+ FROM itemservnl wher tstamp ='2014-02-25-06.00.11.564173'
+ and item not in (select  #PRS040      from e_preiss  where
+     #PRS020='400XXX')
+ 13633 Zeilen in E_PREIS in TVRELWAECO eingefügt.
+
+ update e_preis set #prs120=311214
+ 13633 Zeilen in E_PREIS in TVRELWAECO aktualisiert
+
+ SELECT DISTINCT ITALY.SEL0001, ITALY.APTENR, ITALY.ZOLLNR,
+ artnr,kalk_file.GEWICHT WEIGHT, dec((kalk_file.GEWICHT-
+ ((dec(M40001)+dec(M40002)+dec(M40303))/1000 )), 13, 4) netWEIGHT,
+ dec(M40001) paper,dec(M40002) plastic, dec(M40303)
+ wood,KALK_FILE.ULAND ccode FROM italy,
+ bar_kalk/kalk_file,umweltfile WHERE ITALY.APTENR= KALK_FILE.ARTNR
+ and ITALY.APTENR= UMWELTFILE.APTENR
+ Datei ITALY2 in TVRELWAECO wurde ersetzt.
+
+ 25.03.2014
+ UPDATE teil01  SET TESTPR   =
+ ( SELECT    round(ICS_2*1,08, 2)    FROM  itemservch
+   where TSTAMP='2014-03-20-06.00.08.530173' and tefirm='55'
+         and tetenr=item                                           )
+   WHERE EXISTS
+ ( SELECT    round(ICS_2*1,08, 2)    FROM  itemservch
+   where TSTAMP='2014-03-20-06.00.08.530173' and tefirm='55'
+         and tetenr=item                                          )
+ 6023 Zeilen in TEIL01 in TVPF aktualisiert.
+
+ SELECT ITEM, "DESC", DUTY#, EAN, STATUS , round(ICS_2*1,08, 2)
+ STK3_fix ,ICS_2,CURRENCY FROM itemservch WHERE TSTAMP
+ ='2014-03-20-06.00.08.530173' and item in (select tetenr from teil
+ where tefirm='55')
+ Datei SCHWEIZ in TVRELWAECO wurde erstellt.
+
+ SELECT ics_2,round(ICS_2*0,08, 2) fracht,artnum, sku FROM
+ itemservch, PRODWCH55/prj015p WHERE
+ TSTAMP='2014-03-20-06.00.08.530173' and ARTNUM= dec(sku)
+ Datei ZW in TVRELWAECO wurde erstellt.
+ UPDATE  PRODWCH55/prj015p a SET a.LFDSTKfra=
+ ( SELECT max(fracht) FROM zw b where a.artnum=b.ARTNUM
+   group by        b.artnum)
+   WHERE EXISTS
+ ( SELECT max(fracht) FROM zw b where a.artnum=b.ARTNUM
+   group by        b.artnum)
+ 4239 Zeilen in PRJ015P in PRODWCH55 aktualisiert.
+
+ UPDATE  PRODWCH55/prj015p a SET a.lfdSTKMAT=
+ ( SELECT max(ics_2)  FROM zw b where a.artnum=b.ARTNUM
+   group by        b.artnum)
+   WHERE EXISTS
+ ( SELECT max(ics_2)  FROM zw b where a.artnum=b.ARTNUM
+   group by        b.artnum)
+ 4239 Zeilen in PRJ015P in PRODWCH55 aktualisiert.
+
+ SELECT zoned(1, 2, 0) #PRS010, char('191453', 6) #PRS020,char('000',
+  3) #PRS030, item #PRS040,
+  zoned(round(ICS_2/1,00, 2), 9, 2) #PRS050,
+ zoned(substr(char(current date -001 day), 1, 2)  concat
+ substr(char(current date -000 day), 4, 2)  concat
+ substr(char(current date -000 day), 7, 2), 6, 0)   #PRS070,
+                                             char(' ', 15) #prs080,
+ zoned(substr(char(current date +419 day), 1, 2)  concat
+ substr(char(current date +419 day), 4, 2)  concat
+ substr(char(current date +419 day), 7, 2), 6, 0) #PRS120,
+ zoned(0, 6, 0) #GEBUCHT, char('#', 1) #modus,
+ char(('$' concat substr(char(current timestamp), 01, 19)), 50)
+  #version, zoned(0, 9, 2) #PRS050_A, zoned(0, 6, 0) #PRS070_A,
+ char(' ', 15)   #PRS080_A,  zoned(0, 6, 0) #PRS120_A
+ FROM itemserv
+
+
+ 12.12.2014
+ update  teil   set testpv= 0
+ WHERE TEFIRM ='55' and testpv<> 0
+ 19 Zeilen in TEIL in TVPF aktualisiert.
+
+ update  teil   set testpv=
+ (select max(i5) from  TRANSXLS  where i1='CH412' and i3=tetenr
+  and TEFIRM ='55' and i5 <> 0 group by I3)
+ where exists
+ (select max(i5) from  TRANSXLS  where i1='CH412' and i3=tetenr
+  and TEFIRM ='55' and i5 <> 0 group by i3)
+ 1444 Zeilen in TEIL in TVPF aktualisiert.
+
+
+
+ 19.12.2014 zum 31.12.2014  Produktgruppen
+ erledigt 01.01.2915        17896 Zeilen in TEIL in TVPF aktualisiert.
+ update  teil   set TEPRGR=
+ (select max(i2) from  TRANSXLS  where i1=tetenr
+  and TEFIRM ='52' and substr(char(i5), 1, 2) ='52'
+  and i1='9109000048' group by I1)
+ where exists
+ (select max(i2) from  TRANSXLS  where i1=tetenr
+  and TEFIRM ='52' and substr(char(i5), 1, 2) ='52'
+  and i1='9109000048' group by I1)
+
+ 19.12.2014 zum 31.12.2014  Produktgruppen
+ erledigt 01.01.2915        17246 Zeilen in TEIL in TVPF aktualisiert.
+  update  teil   set TEPRGR=
+  (select max(i2) from  TRANSXLS  where i1=tetenr
+   and TEFIRM ='08' and substr(char(i5), 1, 1) ='8'
+   and i1='9109000048' group by I1)
+  where exists
+  (select max(i2) from  TRANSXLS  where i1=tetenr
+   and TEFIRM ='08' and substr(char(i5), 1, 1) ='8'
+   and i1='9109000048' group by I1)
+
+
+ 19.12.2014 zum 31.12.2014  Verkaufsgruppen
+ erledigt 01.01.2915    17896 Zeilen in TEEW in MODWAO aktualisiert.
+ ==> Gruppe 1
+ update teew set TEEWVKG1  =
+ (select max(substr(i2, 1, 2)) from TRANSXLS2 where i1=TEEWTENR
+  and TEEWFIRM ='52' and substr(char(i5), 1, 2) ='52'
+  and i1='9109000048' group by I1)
+ where exists
+ (select max(substr(i2, 1, 2)) from TRANSXLS2 where i1=TEEWTENR
+  and TEEWFIRM ='52' and substr(char(i5), 1, 2) ='52'
+  and i1='9109000048' group by I1)
+
+ 19.12.2014 zum 31.12.2014  Verkaufsgruppen
+ erledigt 01.01.2915      17224 Zeilen in TEEW in MODWAO aktualisiert.
+  update teew set TEEWVKG1  =
+  (select max(substr(i2, 1, 2)) from TRANSXLS2 where i1=TEEWTENR
+   and TEEWFIRM ='08' and substr(char(i5), 1, 1) ='8'
+   and i1='9109000048' group by I1)
+  where exists
+  (select max(substr(i2, 1, 2)) from TRANSXLS2 where i1=TEEWTENR
+   and TEEWFIRM ='08' and substr(char(i5), 1, 1) ='8'
+   and i1='9109000048' group by I1)
+
+ ==> gruppe 2
+ 19.12.2014 zum 31.12.2014  Verkaufsgruppen
+ erledigt 01.01.2915     17896 Zeilen in TEEW in MODWAO aktualisiert.
+ update teew set TEEWVKG2  =
+ (select max(substr(i2, 3, 2)) from TRANSXLS2 where i1=TEEWTENR
+  and TEEWFIRM ='52' and substr(char(i5), 1, 2) ='52'
+  and i1='9109000048' group by I1)
+ where exists
+ (select max(substr(i2, 3, 2)) from TRANSXLS2 where i1=TEEWTENR
+  and TEEWFIRM ='52' and substr(char(i5), 1, 2) ='52'
+  and i1='9109000048' group by I1)
+
+ 19.12.2014 zum 31.12.2014  Verkaufsgruppen
+ erledigt 01.01.2915    17224 Zeilen in TEEW in MODWAO aktualisiert.
+  update teew set TEEWVKG2  =
+  (select max(substr(i2, 3, 2)) from TRANSXLS2 where i1=TEEWTENR
+   and TEEWFIRM ='08' and substr(char(i5), 1, 1) ='8'
+   and i1='9109000048' group by I1)
+  where exists
+  (select max(substr(i2, 3, 2)) from TRANSXLS2 where i1=TEEWTENR
+   and TEEWFIRM ='08' and substr(char(i5), 1, 1) ='8'
+   and i1='9109000048' group by I1)
+
+
+ ==> gruppe 3
+ 19.12.2014 zum 31.12.2014  Verkaufsgruppen
+ erledigt 01.01.2915     17896 Zeilen in TEEW in MODWAO aktualisiert.
+ update teew set TEEWVKG3  =
+ (select max(substr(i2, 5, 2)) from TRANSXLS2 where i1=TEEWTENR
+  and TEEWFIRM ='52' and substr(char(i5), 1, 2) ='52'
+  and i1='9109000048' group by I1)
+ where exists
+ (select max(substr(i2, 5, 2)) from TRANSXLS2 where i1=TEEWTENR
+  and TEEWFIRM ='52' and substr(char(i5), 1, 2) ='52'
+  and i1='9109000048' group by I1)
+
+ ==> gruppe 3
+ 19.12.2014 zum 31.12.2014  Verkaufsgruppen
+ erledigt 01.01.2915     17224 Zeilen in TEEW in MODWAO aktualisiert.
+  update teew set TEEWVKG3  =
+  (select max(substr(i2, 5, 2)) from TRANSXLS2 where i1=TEEWTENR
+   and TEEWFIRM ='08' and substr(char(i5), 1, 1) ='8'
+   and i1='9109000048' group by I1)
+  where exists
+  (select max(substr(i2, 5, 2)) from TRANSXLS2 where i1=TEEWTENR
+   and TEEWFIRM ='08' and substr(char(i5), 1, 1) ='8'
+   and i1='9109000048' group by I1)
+
+
+ ==> gruppe 4
+ 19.12.2014 zum 31.12.2014  Verkaufsgruppen
+ erledigt 01.01.2915     17896 Zeilen in TEEW in MODWAO aktualisiert.
+ update teew set TEEWVKG4  =
+ (select max(substr(i2, 7, 2)) from TRANSXLS2 where i1=TEEWTENR
+  and TEEWFIRM ='52' and substr(char(i5), 1, 2) ='52'
+  and i1='9109000048' group by I1)
+ where exists
+ (select max(substr(i2, 7, 2)) from TRANSXLS2 where i1=TEEWTENR
+  and TEEWFIRM ='52' and substr(char(i5), 1, 2) ='52'
+  and i1='9109000048' group by I1)
+
+ 19.12.2014 zum 31.12.2014  Verkaufsgruppen
+ erledigt 01.01.2915     17224 Zeilen in TEEW in MODWAO aktualisiert.
+  update teew set TEEWVKG4  =
+  (select max(substr(i2, 7, 2)) from TRANSXLS2 where i1=TEEWTENR
+   and TEEWFIRM ='08' and substr(char(i5), 1, 1) ='8'
+   and i1='9109000048' group by I1)
+  where exists
+  (select max(substr(i2, 7, 2)) from TRANSXLS2 where i1=TEEWTENR
+   and TEEWFIRM ='08' and substr(char(i5), 1, 1) ='8'
+   and i1='9109000048' group by I1)
+
+
+ ==> gruppe 5
+ 19.12.2014 zum 31.12.2014  Verkaufsgruppen
+ erledigt 01.01.2915     17896 Zeilen in TEEW in MODWAO aktualisiert.
+ update teew set TEEWVKG5  =
+ (select max(substr(i2, 9, 2)) from TRANSXLS2 where i1=TEEWTENR
+  and TEEWFIRM ='52' and substr(char(i5), 1, 2) ='52'
+  and i1='9109000048' group by I1)
+ where exists
+ (select max(substr(i2, 9, 2)) from TRANSXLS2 where i1=TEEWTENR
+  and TEEWFIRM ='52' and substr(char(i5), 1, 2) ='52'
+  and i1='9109000048' group by I1)
+
+ 19.12.2014 zum 31.12.2014  Verkaufsgruppen
+ erledigt 01.01.2915     17224 Zeilen in TEEW in MODWAO aktualisiert.
+  update teew set TEEWVKG5  =
+  (select max(substr(i2, 9, 2)) from TRANSXLS2 where i1=TEEWTENR
+   and TEEWFIRM ='08' and substr(char(i5), 1, 1) ='8'
+   and i1='9109000048' group by I1)
+  where exists
+  (select max(substr(i2, 9, 2)) from TRANSXLS2 where i1=TEEWTENR
+   and TEEWFIRM ='08' and substr(char(i5), 1, 1) ='8'
+   and i1='9109000048' group by I1)
+
+
+   update prei set prgbda=20141231
+   WHERE (PRFIRM =08 or prfirm=52)
+   and PRBEGR ='PVK' and prgbda = 0
+   and prjdat <> 20141219 and PRTENR in
+   (select #PRS040 from x)
+   16704 Zeilen in PREI in TVPF aktualisiert.
+
+   update kdew  set KDEWRPMG =
+   (select max(i3) from TVRELWAECO/TRANSXLS3
+     where i2=KDEWKDNR  and i1='52' and KDEWFIRM ='52'
+     and i2<>'xx50100' group by i3)
+    where exists
+   (select max(i3) from TVRELWAECO/TRANSXLS3
+     where i2=KDEWKDNR  and i1='52' and KDEWFIRM ='52'
+     and i2<>'xx50100'  group by i3)
+   9973 Zeilen in KDEW in MODWAO aktualisiert.
+
+
+   **** für Belgien kommen noch
+   05.01.2015
+   update kdew  set KDEWRPMG =
+   (select max(i3) from TVRELWAECO/TRANSXLS3
+     where i2=KDEWKDNR  and i1='08' and KDEWFIRM ='08'
+     and i2<>'xx50100' group by i2, i1)
+    where exists
+   (select max(i3) from TVRELWAECO/TRANSXLS3
+     where i2=KDEWKDNR  and i1='08' and KDEWFIRM ='08'
+     and i2<>'xx50100' group by i2, i1)
+   2325 Zeilen in KDEW in MODWAO aktualisiert.
+
+   Branche für Belgien 05.01.2015
+   update kund01 set KDNIGB   =
+   (select max(substr(SRCDTA, 12, 3)) from TVRELWAECO/branche
+     where KDKDNR=substr(SRCDTA, 4, 7) and KDFIRM='08'
+     and substr(SRCDTA, 04, 7)<>'0003925'
+     group by    (substr(SRCDTA, 11, 3)))
+    where exists
+   (select max(substr(SRCDTA, 11, 3)) from TVRELWAECO/branche
+     where KDKDNR=substr(SRCDTA, 4, 7) and KDFIRM='08'
+     and substr(SRCDTA, 04, 7)<>'0003925'
+     group by    (substr(SRCDTA, 12, 3)))
+   458 Zeilen in KUND01 in TVPF aktualisiert.
+
+   update vezu01 set VZVTN1   =
+   (select max(substr(SRCDTA, 12, 3)) from TVRELWAECO/vertreter
+     where VZKDLI=substr(SRCDTA, 4, 7) and VZFIRM='08'
+     and substr(SRCDTA, 04, 7)<>'0001300'
+     group by    (substr(SRCDTA, 11, 3)))
+    where exists
+   (select max(substr(SRCDTA, 12, 3)) from TVRELWAECO/vertreter
+     where VZKDLI=substr(SRCDTA, 4, 7) and VZFIRM='08'
+     and substr(SRCDTA, 04, 7)<>'0001300'
+     group by    (substr(SRCDTA, 11, 3)))
+
+     SELECT VEZU.VZLOCK, VEZU.VZJNAM, VEZU.VZJDAT, VEZU.VZJZEI,
+     VEZU.VZUSER, VEZU.VZPROG, VEZU.VZBIBL, VEZU.VZFIRM, VEZU.VZBEGR,
+     VEZU.VZLAND,  char(substr(SRCDTA, 4, 7), 10 ),
+                               VEZU.VZVSNR,      VZKDLG, VEZU.VZPRGR,
+     VEZU.VZVKGB, VEZU.VZPOLZ, VEZU.VZTENR, VEZU.VZWACD, VEZU.VZGADA,
+     VEZU.VZGBDA,  char(substr(SRCDTA, 12, 3), 10)
+                              ,VEZU.VZFR01, VEZU.VZVTN2, VEZU.VZFR02,
+     VEZU.VZVTN3, VEZU.VZFR03, VEZU.VZPJNR, VEZU.VZVTN4, VEZU.VZVTN5,
+     VEZU.VZFREX FROM vezu, vertreter WHERE VZFIRM ='08' and VZKDLI
+     ='6164525'
+     Datei XX in QTEMP wurde erstellt.
+
+     UPDATE QTEMP/XX SET VZUSER = 'GANG', VZPROG = 'SQL'
+     1771 Zeilen in XX in QTEMP aktualisiert.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

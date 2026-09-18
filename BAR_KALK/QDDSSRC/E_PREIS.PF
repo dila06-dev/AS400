@@ -1,0 +1,18 @@
+     A*                                     UNIQUE
+     A          R E_PREISR
+     A            #PRS010        2S 0       TEXT('FIRMA')
+     A            #PRS020        5A         TEXT('SCHLÜSSEL KDGR,VERB,HG,KDNR')
+     A            #PRS030        3A         TEXT('VERKAUFSARTIKEL LIEFERANTEN')
+     A            #PRS040       15A         TEXT('VERKAUFSARTIKEL ARTIKEL NR.')
+     A            #PRS050        9S 2       TEXT('NETTO-PREIS')
+     A            #PRS070        6S 0       TEXT('GÜLTIG AB TTMMJJ')
+     A            #PRS080       15A         TEXT('KUNDEN-ARTIKEL-NR.')
+     A            #PRS120        6S 0       TEXT('GÜLTIG BIS TTMMJJ')
+     A            #GEBUCHT       6S 0       TEXT('GEBUCHT')
+     A            #MODUS         1A         TEXT('MODUS UPDATE/NEW')
+     A            #VERSION      20A         TEXT('VERSION')
+     A            #PRS050_A      9S 2       TEXT('NETTO-PREIS')
+     A            #PRS070_A      6S 0       TEXT('GÜLTIG AB TTMMJJ')
+     A            #PRS080_A     15A         TEXT('KUNDEN-ARTIKEL-NR.')
+     A            #PRS120_A      6S 0       TEXT('GÜLTIG BIS TTMMJJ')
+

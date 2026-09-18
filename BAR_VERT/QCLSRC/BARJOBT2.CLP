@@ -1,0 +1,26 @@
+PGM
+
+/* BANKDATEN HOLEN UND FÜR SCHILLING BEREITSTELL.07/2018  */
+             ADDLIBLE   LIB(BAR_FTP)
+             CALL       PGM(BAR_FTP/BANKFTP)
+             RMVLIBLE   LIB(BAR_FTP)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ENDPGM

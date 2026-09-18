@@ -1,0 +1,23 @@
+     A*****************************************************************
+     A*                                                               *
+     A*  Copyright 2010 by    trend SWM                               *
+     A*                       Verwaltungs GmbH                        *
+     A*                       Gundelfinger Str. 11                    *
+     A*                       D-79111 Freiburg                        *
+     A*  -----------------------------------------------------------  *
+     A*  KUNDENSTAMM-ERWEITERUNGEN                                    *
+     A*  -----------------------------------------------------------  *
+     A*  Erstellt: RH 02.11.2010                                      *
+     A*  Änderung: MG 28.09.2012 Service 20120927-006                 *
+     A*            Vorbelegung Land bei Neuanlage WAOP-Satz           *
+     A*****************************************************************
+     A                                      REF(KDEW)
+     A          R KYKDEW1
+     A*
+     A            KYKDEWFIRMR               REFFLD(KDEWFIRM)
+     A            KYKDEWKDNRR               REFFLD(KDEWKDNR)
+     A            KYKDEWKDPLR               REFFLD(KDEWKDPL)
+     A            KKDEW$FREI    26
+     A            K#KDEWLOCKR               REFFLD(KDEWLOCK)
+     A            K#KDEWFIRMR               REFFLD(KDEWFIRM)
+     A            K#KDEWKDNRR               REFFLD(KDEWKDNR)

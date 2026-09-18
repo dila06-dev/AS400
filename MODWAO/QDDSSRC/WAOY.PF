@@ -1,0 +1,29 @@
+     A**************************************************************************
+     A*  Copyright 2021 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Jechtinger Straße 9                              *
+     A*                       DE 79111 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Zuordnung Land <- Artikel (Ein-/Ausschluss)                           *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: PH 01.03.2021 Projekt 16393-01                              *
+     A*  Änderung: XX XX.XX.XXXX                                               *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R WAOY1
+     A*-------------------------------------------------------------------------
+     A            WAOYLOCK  R               REFFLD(##LOCK)
+     A            WAOYJNAM  R               REFFLD(##JNAM)
+     A            WAOYJDAT  R               REFFLD(##JDAT)
+     A            WAOYJZEI  R               REFFLD(##JZEI)
+     A            WAOYUSER  R               REFFLD(##USER)
+     A            WAOYPROG  R               REFFLD(##PROG)
+     A            WAOYBIBL  R               REFFLD(##BIBL)
+     A            WAOYFIRM  R               REFFLD(##FIRM)
+     A            WAOYLAND  R               REFFLD(##LAND)
+     A            WAOYTENR  R               REFFLD(##TENR)
+     A            WAOYEASC       1          TEXT('Ein-/Ausschluss')
+     A                                      COLHDG('E/A')
+     A            WAOYTSTP  R               REFFLD(##TSTP)
+     A            WAOYERUS  R               REFFLD(##ERUS)
+     A            WAOYFREI  R  100          REFFLD(##FREI)

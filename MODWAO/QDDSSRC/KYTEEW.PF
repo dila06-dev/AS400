@@ -1,0 +1,20 @@
+     A**************************************************************************
+     A*  Copyright 2001 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Identstamm-Erweiterungen                                              *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: ZG 16.11.2010 BESUCH WAECO                                  *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(TEEW)
+     A          R KYTEEW1
+     A*-------------------------------------------------------------------------
+     A            KYTEEWFIRMR               REFFLD(TEEWFIRM)
+     A            KYTEEWTENRR               REFFLD(TEEWTENR)
+     A            K$TEEWFREI    30
+     A            K#TEEWLOCKR               REFFLD(TEEWLOCK)
+     A            K#TEEWFIRMR               REFFLD(TEEWFIRM)
+     A            K#TEEWTENRR               REFFLD(TEEWTENR)

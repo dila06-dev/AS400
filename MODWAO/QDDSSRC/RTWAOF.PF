@@ -1,0 +1,52 @@
+     A**************************************************************************
+     A*  Copyright 2001 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------- *
+     A*  Rückgabebereich Vorlageprogram                                        *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: RE 19.12.2000                                               *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R RTWAOF1
+     A*-------------------------------------------------------------------------
+     A* allgemeine Rückgabe
+     A*-------------------------------------------------------------------------
+     A            RTWAOFPROGR               REFFLD(##PROG)
+     A            RTWAOFDANAR               REFFLD(##DANA)
+     A            RTWAOFRTCDR               REFFLD(##RTCD)
+     A            RTWAOFFFLDR               REFFLD(##FFLD)
+     A            RTWAOFFENRR               REFFLD(##FENR)
+     A            RTWAOFPA03R               REFFLD(##A010)
+     A                                      TEXT('Parameter 3 bei Fehler')
+     A            RTWAOFPA04R               REFFLD(##A010)
+     A                                      TEXT('Parameter 4 bei Fehler')
+     A            RTWAOFPA05R               REFFLD(##A010)
+     A                                      TEXT('Parameter 5 bei Fehler')
+     A            RTWAOFPA06R               REFFLD(##A010)
+     A                                      TEXT('Parameter 6 bei Fehler')
+     A            RTWAOFPA07R               REFFLD(##A010)
+     A                                      TEXT('Parameter 7 bei Fehler')
+     A*-------------------------------------------------------------------------
+     A* ON/OFF Rückgabe KZ für Prüfungen
+     A*-------------------------------------------------------------------------
+     A            RTWAOFQQKZR               REFFLD(##A001)
+     A                                      TEXT('ON/OFF-Feld für Prüfung 1')
+     A            RTWAOFYYKZR               REFFLD(##A001)
+     A                                      TEXT('ON/OFF-Feld für Prüfung 2')
+     A            RTWAOFFR01R               REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* Key-Felder
+     A*-------------------------------------------------------------------------
+     A            RTWAOFKAJJR               REFFLD(WAOF1/WAOFKAJJ *LIBL/WAOF)
+     A            RTWAOFKANRR               REFFLD(WAOF1/WAOFKANR *LIBL/WAOF)
+     A            RTWAOFVEURR               REFFLD(WAOF1/WAOFVEUR *LIBL/WAOF)
+     A            RTWAOFFR02R  256          REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* evt. weitere Felder nach Ermittlung
+     A*-------------------------------------------------------------------------
+     A            RTWAOFTSTPR               REFFLD(WAOF1/WAOFTSTP *LIBL/WAOF)
+     A            RTWAOFERUSR               REFFLD(WAOF1/WAOFERUS *LIBL/WAOF)
+     A            RTWAOFFR03R 1024          REFFLD(##FREI)

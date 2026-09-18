@@ -1,0 +1,571 @@
+/*       PROGRAMMNAME:  routine                                      */
+/*       VERFASSER   :  schneider    STAND:22.06.2011                */
+/*       BESCHREIBUNG:  div. routinevorlaufprogramme täglich, z.b.   */
+/*                      qry etc.                                     */
+/*                      aufruf erfolgt über programm WAECOSAV(CL)    */
+/*                      aus datei #PGMAUFR                           */
+/*  GEÄNDERT:                                                        */
+/*       gang           Protokoll aktiviert 21.10.2019               */
+/*       gang           Stahgruber  Verarbeitung war doppelt         */
+/*                      inaktiviert 21.10.2019                       */
+/*********************************************************************/
+             PGM
+
+             DCL        VAR(&PGM)     TYPE(*CHAR) LEN(10)
+             DCL        VAR(&JOB)     TYPE(*CHAR) LEN(10)
+             DCL        VAR(&PGM)     TYPE(*CHAR) LEN(10)
+             DCL        VAR(&USER)    TYPE(*CHAR) LEN(10)
+             DCL        VAR(&NBR)     TYPE(*CHAR) LEN(06)
+             DCL        VAR(&TXT)     TYPE(*CHAR) LEN(50)
+             DCL        VAR(&MD) TYPE(*CHAR) LEN(256) VALUE(' ')
+
+             DCL        VAR(&ERROR1)     TYPE(*CHAR) LEN(01) VALUE('0')
+             DCL        VAR(&ERROR2)     TYPE(*CHAR) LEN(01) VALUE('0')
+/*           DCL        VAR(&ERROR3)     TYPE(*CHAR) LEN(01) VALUE('0')   */
+             DCL        VAR(&QTIME)     TYPE(*CHAR) LEN(6)
+             DCL        VAR(&QDATETIME) TYPE(*CHAR) LEN(20)
+
+             ADDLIBLE   LIB(GANG) POSITION(*LAST)
+             MONMSG     MSGID(CPF0000) EXEC(CHGVAR VAR(&ERROR2) +
+                          VALUE('1'))
+             ADDLIBLE   LIB(TVRELWAECO) POSITION(*LAST)
+             MONMSG     MSGID(CPF0000) EXEC(CHGVAR VAR(&ERROR1) +
+                          VALUE('1'))
+
+/*          PROTOKOLLIERUNG ---                                           */
+             RTVJOBA    JOB(&JOB) USER(&USER) NBR(&NBR)
+             CHGVAR     VAR(&PGM) VALUE('ROUTINE   ')
+             RTVMBRD    FILE(BAR_VERT/QCLSRC) MBR(&PGM) TEXT(&TXT)
+             MONMSG     MSGID(CPF0000)
+             CHGVAR     VAR(%SST(&MD 01 10)) VALUE(&PGM)
+             CHGVAR     VAR(%SST(&MD 11 10)) VALUE(&JOB)
+             CHGVAR     VAR(%SST(&MD 22 10)) VALUE(&USER)
+             CHGVAR     VAR(%SST(&MD 33 06)) VALUE(&NBR)
+             CHGVAR     VAR(%SST(&MD 40 06)) VALUE('START')
+             CHGVAR     VAR(%SST(&MD 46 50)) VALUE(&TXT)
+             CALL       PGM(DUMMY512) PARM(&MD '#DC0002' ' ' ' ' +
+                           'JOB_RUN   '  'TVRELWAECO' '*ADD')
+             MONMSG     MSGID(CPF0000)
+/*          PROTOKOLLIERUNG ---                                           */
+
+             RTVSYSVAL  SYSVAL(QTIME) RTNVAR(&QTIME)
+             RTVSYSVAL  SYSVAL(QDATETIME) RTNVAR(&QDATETIME)
+
+
+
+             CHGJOB     LOG(4 00 *SECLVL) LOGCLPGM(*YES) +
+                          LOGOUTPUT(*JOBEND)
+
+
+/*---------------- datei für qmanager preise ------------------------*/
+  /*         RUNQRY     QRY(TVRELWAECO/KALK) /* erstellen +
+                          basisdatei für preise albuixech Datei +
+                          KALK */
+  /*         MONMSG     MSGID(CPF0000)       */
+
+  /*         RUNQRY     QRY(TVRELWAECO/KALKVJ) /* erstellen +
+                          basisdatei für preise albuixech Datei +
+                          KALKVJ */
+  /*         MONMSG     MSGID(CPF0000)       */
+
+  /*         RUNQRY     QRY(TVRELWAECO/TRDCGQ1) /* erstellen +
+                          basisdatei für preise albuixech Datei +
+                          #TRDCGP1 */
+  /*         MONMSG     MSGID(CPF0000)       */
+
+  /*         RUNQRY     QRY(TVRELWAECO/TRDCGQ2) /* erstellen +
+                          basisdatei für preise albuixech Datei +
+                          #TRDCGP1 */
+  /*         MONMSG     MSGID(CPF0000)          */
+
+/* emitteln prozentwerte in outfile aus qry                          */
+  /*         CALL       PGM(TVRELWAECO/#TRDCGP1R) */
+  /*         MONMSG     MSGID(CPF0000)            */
+
+/*---------------- datei für qmanager stückliste --------------------*/
+             RUNQRY     QRY(TVRELWAECO/SCBBUP01) /* erstellen +
+                          temporäre datei für stückliste  Datei +
+                          QO_temp  */
+             MONMSG     MSGID(CPF0000)
+
+             RUNQRY     QRY(TVRELWAECO/SCBBUP02) /* erstellen +
+                          ausertungsdatei für stückliste  datei +
+                          QO_BBU   */
+             MONMSG     MSGID(CPF0000)
+
+/*---------------- datei für qmanager kostenbriefkasten--------------*/
+             RUNQRY     QRY(TVRELWAECO/KBQ1) /* erstellen Auswertung +
+                          für Kostenbriefkasten 1.            */
+             MONMSG     MSGID(CPF0000)
+             RUNQRY     QRY(TVRELWAECO/KBQ2) /* erstellen QKB02 für +
+                          Kostenbriefkasten 2.            */
+             MONMSG     MSGID(CPF0000)
+
+/*---------------- datei für qmanager vezu vertreter ----------------*/
+             RUNQRY     QRY(TVRELWAECO/Q_01_010) /* erstellen datei +
+                          QO_01_010 für WAO0033BA Teil 1 */
+             MONMSG     MSGID(CPF0000)
+
+             RUNQRY     QRY(TVRELWAECO/Q_01_011) /* erstellen datei +
+                          QO_01_010 für WAO0033BA Teil 2 */
+             MONMSG     MSGID(CPF0000)
+
+/*---------------- datei für qmanager auftragsabgleich --------------*/
+/*                 status 00 im  kopf und status 90 in postition     */
+/*           RUNQRY     QRY(TVRELWAECO/Q_01_035) /* erstellen datei +
+                          QO_01_035                      */
+             MONMSG     MSGID(CPF0000)
+/*           RUNQRY     QRY(TVRELWAECO/Q_01_036) /* erstellen datei +
+                          QO_01_036                      */
+             MONMSG     MSGID(CPF0000)
+/*           RUNQRY     QRY(TVRELWAECO/Q_01_037) /* erstellen datei +
+                          QO_01_037                      */
+             MONMSG     MSGID(CPF0000)
+/*           RUNQRY     QRY(TVRELWAECO/Q_01_038) /* hinzufügen in   +
+                          datei QO_01_037  basis für q-manager */
+             MONMSG     MSGID(CPF0000)
+
+/*---------------- datei für qmanager Auftragsumsätze >=2017 --------*/
+             RUNQRY     QRY(TVRELWAECO/Q_01_125) /* erstellen datei +
+                          für Auftragsumsätze   QO_01_125 */
+             MONMSG     MSGID(CPF0000)
+
+/*---------------- datei für qmanager Auftragssummen  >=2019 --------*/
+/*---------------- AA 25,26,27 für sasseJ ---------------------------*/
+             RUNQRY     QRY(TVRELWAECO/Q_01_135) /* erstellen datei +
+                          für Auftragsumsätze   QO_01_135 */
+             MONMSG     MSGID(CPF0000)
+             RUNQRY     QRY(TVRELWAECO/Q_01_136) /* erstellen datei +
+                          für Auftragsumsätze   QO_01_136 */
+             MONMSG     MSGID(CPF0000)
+
+/*---------------- alle Auftragsarten für sassej---------------------*/
+             RUNQRY     QRY(TVRELWAECO/Q_01_137) /* erstellen datei +
+                          für Auftragsumsätze   QO_01_137 */
+             MONMSG     MSGID(CPF0000)
+             RUNQRY     QRY(TVRELWAECO/Q_01_138) /* erstellen datei +
+                          für Auftragsumsätze   QO_01_138 */
+             MONMSG     MSGID(CPF0000)
+
+/*---------------- Neukeunde aus VALP Fa.01--------------------------*/
+             RUNQRY     QRY(TVRELWAECO/Q_01_140) /* erstellen datei +
+                          für Neukunden         QO_01_140 */
+             MONMSG     MSGID(CPF0000)
+
+/*---------------- setzten berechtigung trend-dateien  --------------*/
+             GRTOBJAUT  OBJ(TVPF/AFRK) OBJTYPE(*FILE) USER(*PUBLIC) +
+                          AUT(*USE)
+             MONMSG     MSGID(CPF0000)
+             GRTOBJAUT  OBJ(TVPF/AFRP) OBJTYPE(*FILE) USER(*PUBLIC) +
+                          AUT(*USE)
+             MONMSG     MSGID(CPF0000)
+             GRTOBJAUT  OBJ(TVPF/BBEP) OBJTYPE(*FILE) USER(*PUBLIC) +
+                          AUT(*USE)
+             MONMSG     MSGID(CPF0000)
+             GRTOBJAUT  OBJ(TVPF/AGKO) OBJTYPE(*FILE) USER(*PUBLIC) +
+                          AUT(*USE)
+             MONMSG     MSGID(CPF0000)
+             GRTOBJAUT  OBJ(TVPF/AFKM) OBJTYPE(*FILE) USER(*PUBLIC) +
+                          AUT(*USE)
+             MONMSG     MSGID(CPF0000)
+             GRTOBJAUT  OBJ(TVPF/DIST) OBJTYPE(*FILE) USER(*PUBLIC) +
+                          AUT(*USE)
+             MONMSG     MSGID(CPF0000)
+             GRTOBJAUT  OBJ(TVPF/AFKN) OBJTYPE(*FILE) USER(*PUBLIC) +
+                          AUT(*USE)
+             MONMSG     MSGID(CPF0000)
+
+/*---------------- datei für qmanager aufträge mit manuell. rabatt---*/
+             RUNQRY     QRY(TVRELWAECO/KDRABQ1) /* erstellen +
+                          Auswertung für manuellen +
+                          rabatt                */
+             MONMSG     MSGID(CPF0000)
+
+/*---------------- dateien für query aus tabelle trtp ---------------*/
+             RUNQRY     QRY(TVRELWAECO/#KDGRQ) /* erstellen Datei +
+                          #KDGR in TVRELWAECO      Kundengruppe    */
+             MONMSG     MSGID(CPF0000)
+             RUNQRY     QRY(TVRELWAECO/#KDKRQ) /* erstellen Datei +
+                          #KDKR in TVRELWAECO      Kunden-Kreis    */
+             MONMSG     MSGID(CPF0000)
+             RUNQRY     QRY(TVRELWAECO/#NIGBQ) /* erstellen Datei +
+                          #NIGB in TVRELWAECO      Branche         */
+             MONMSG     MSGID(CPF0000)
+             RUNQRY     QRY(TVRELWAECO/#KDBRQ) /* erstellen Datei +
+                          #KDBR in TVRELWAECO      Branche         */
+             MONMSG     MSGID(CPF0000)
+             RUNQRY     QRY(TVRELWAECO/#KSTCQ) /* erstellen Datei +
+                          #KSTC in TVRELWAECO      Vertriebsbereich*/
+             MONMSG     MSGID(CPF0000)
+             RUNQRY     QRY(TVRELWAECO/#KOSTQ) /* erstellen Datei +
+                          #KOST in TVRELWAECO      Kostenstelle    */
+             MONMSG     MSGID(CPF0000)
+             RUNQRY     QRY(TVRELWAECO/#KDEWKDPLQ) /* erstellen +
+                          Datei #KDEWKDPL in TVRELWAECO  +
+                                                   Plankunde        */
+             MONMSG     MSGID(CPF0000)
+             RUNQRY     QRY(TVRELWAECO/#KDEWRPMQ) /* erstellen +
+                          Datei #KDEWRPM in TVRELWAECO  +
+                                                   RPM-Gruppe       */
+             MONMSG     MSGID(CPF0000)
+             RUNQRY     QRY(TVRELWAECO/#VSBDQ) /* erstellen Datei +
+                          #VSBD  in TVRELWAECO     Versandbeding. */
+             MONMSG     MSGID(CPF0000)
+             RUNQRY     QRY(TVRELWAECO/#ZABDQ) /* erstellen Datei +
+                          #ZABD  in TVRELWAECO     Zahlungsbeding. */
+             MONMSG     MSGID(CPF0000)
+             RUNQRY     QRY(TVRELWAECO/#LIBDQ) /* erstellen Datei +
+                          #LIBD  in TVRELWAECO     Lieferbeding.   */
+             MONMSG     MSGID(CPF0000)
+             RUNQRY     QRY(TVRELWAECO/#PRGRQ) /* erstellen Datei +
+                          #PRODG in TVRELWAECO     Produktgruppen  */
+             MONMSG     MSGID(CPF0000)
+             RUNQRY     QRY(TVRELWAECO/#PACDQ) /* erstellen Datei +
+                          #PACD in TVRELWAECO  ProdAeraCode PACD +
+                          Dometic */
+             RUNQRY     QRY(TVRELWAECO/#PRGRDQ) /* erstellen Datei +
+                          #PRODGDOM in TVRELWAECO  Produktgruppen +
+                          Dometic */
+             MONMSG     MSGID(CPF0000)
+             RUNQRY     QRY(TVRELWAECO/#MATGQ) /* erstellen Datei +
+                          #MATG in TVRELWAECO     Materialgruppen */
+             MONMSG     MSGID(CPF0000)
+             RUNQRY     QRY(TVRELWAECO/#UREGQ) /* erstellen Datei +
+                          #ureg in TVRELWAECO     Bundesländer  */
+             MONMSG     MSGID(CPF0000)
+             RUNQRY     QRY(TVRELWAECO/#LANDQ) /* erstellen Datei +
+                          #land in TVRELWAECO     Länder        */
+             MONMSG     MSGID(CPF0000)
+             RUNQRY     QRY(TVRELWAECO/#BESTQ) /* erstellen Datei +
+                          #BEST in TVRELWAECO     Status Bestell*/
+             MONMSG     MSGID(CPF0000)
+             RUNQRY     QRY(TVRELWAECO/#AFSTQ) /* erstellen Datei +
+                          #AFST in TVRELWAECO     Status AFPO   */
+             MONMSG     MSGID(CPF0000)
+             RUNQRY     QRY(TVRELWAECO/#USERQ) /* erstellen Datei +
+                          #USER in TVRELWAECO     User          */
+             MONMSG     MSGID(CPF0000)
+             RUNQRY     QRY(TVRELWAECO/#USERQ_MAI) /* erstellen +
+                          Datei #USER_MAIL in TVRELWAECO     +
+                          User          */
+             MONMSG     MSGID(CPF0000)
+             RUNQRY     QRY(TVRELWAECO/#WAO7Q) /* erstellen Datei +
+                          #wao7 in TVRELWAECO     lagerzone bez.*/
+             MONMSG     MSGID(CPF0000)
+             RUNQRY     QRY(TVRELWAECO/#MWSTQ) /* erstellen Datei +
+                          #MWST in TVRELWAECO      MWST-Codes      */
+             MONMSG     MSGID(CPF0000)
+             RUNQRY     QRY(TVRELWAECO/#PDIMQ) /* erstellen Datei +
+                          #PDIM in TVRELWAECO      Preisdimension  */
+             MONMSG     MSGID(CPF0000)
+             RUNQRY     QRY(TVRELWAECO/#KONDQ) /* erstellen Datei +
+                          #KOND in TVRELWAECO      Konditionsarten */
+             MONMSG     MSGID(CPF0000)
+             RUNQRY     QRY(TVRELWAECO/#KONTQ) /* erstellen Datei +
+                          #KONT in TVRELWAECO      Konten          */
+             MONMSG     MSGID(CPF0000)
+             RUNQRY     QRY(TVRELWAECO/#ZOLLTQ) /* erstellen Datei +
+                          #ZOLLT in TVRELWAECO      Zolltext        */
+             MONMSG     MSGID(CPF0000)
+
+/*---------------- dateien umsätze q-manager ------------------------*/
+ /*          RUNQRY     QRY(TVRELWAECO/UMS2011Q) /* erstellen Datei +
+                          qout2011/TVRELWAECO      Kundenumsatz    */
+ /*          MONMSG     MSGID(CPF0000)                             */
+ /*          RUNQRY     QRY(TVRELWAECO/UMS2012Q) /* erstellen Datei +
+                          qout2012/TVRELWAECO      Kundenumsatz    */
+ /*          MONMSG     MSGID(CPF0000)                             */
+ /*          RUNQRY     QRY(TVRELWAECO/UMS2013Q) /* erstellen Datei +
+                          qout2013/TVRELWAECO      Kundenumsatz    */
+ /*          MONMSG     MSGID(CPF0000)                             */
+ /*          RUNQRY     QRY(TVRELWAECO/UMS2014Q) /* erstellen Datei +
+                          qout2014/TVRELWAECO      Kundenumsatz    */
+ /*          MONMSG     MSGID(CPF0000)                             */
+ /*          RUNQRY     QRY(TVRELWAECO/UMS2015Q) /* erstellen Datei +
+                          qout2015/TVRELWAECO      Kundenumsatz    */
+ /*          MONMSG     MSGID(CPF0000)                             */
+ /*          RUNQRY     QRY(TVRELWAECO/UMS2016Q) /* erstellen Datei +
+                          qout2016/TVRELWAECO      Kundenumsatz    */
+ /*          MONMSG     MSGID(CPF0000)                             */
+ /*          RUNQRY     QRY(TVRELWAECO/UMS2017Q) /* erstellen Datei +
+                          qout2017/TVRELWAECO      Kundenumsatz    */
+ /*          MONMSG     MSGID(CPF0000)                             */
+ /*          RUNQRY     QRY(TVRELWAECO/UMS2018Q) /* erstellen Datei +
+                          qout2018/TVRELWAECO      Kundenumsatz    */
+ /*          MONMSG     MSGID(CPF0000)                             */
+ /*          RUNQRY     QRY(TVRELWAECO/UMS2019Q) /* erstellen Datei +
+                          qout2019/TVRELWAECO      Kundenumsatz    */
+ /*          MONMSG     MSGID(CPF0000)                             */
+ /*          RUNQRY     QRY(TVRELWAECO/UMS2020Q) /* erstellen Datei +
+                          qout2020/TVRELWAECO      Kundenumsatz    */
+ /*          MONMSG     MSGID(CPF0000)                             */
+ /*          RUNQRY     QRY(TVRELWAECO/UMS2021Q) /* erstellen Datei +
+                          qout2021/TVRELWAECO      Kundenumsatz    */
+ /*          MONMSG     MSGID(CPF0000)                             */
+ /*          RUNQRY     QRY(TVRELWAECO/UMS2022Q) /* erstellen Datei +
+                          qout2022/TVRELWAECO      Kundenumsatz    */
+             MONMSG     MSGID(CPF0000)
+             RUNQRY     QRY(TVRELWAECO/UMS2023Q) /* erstellen Datei +
+                          qout2023/TVRELWAECO      Kundenumsatz    */
+             RUNQRY     QRY(TVRELWAECO/UMS2024Q) /* erstellen Datei +
+                          qout2024/TVRELWAECO      Kundenumsatz    */
+             MONMSG     MSGID(CPF0000)
+
+             RUNQRY     QRY(TVRELWAECO/UMS2025Q) /* erstellen Datei +
+                          qout2025/TVRELWAECO      Kundenumsatz    */
+             MONMSG     MSGID(CPF0000)
+
+             RUNQRY     QRY(TVRELWAECO/UMS2026Q) /* erstellen Datei +
+                          qout2026/TVRELWAECO      Kundenumsatz    */
+             MONMSG     MSGID(CPF0000)
+
+
+/*---------------- datei für vertreter ------------------------------*/
+             RUNQRY     QRY(TVRELWAECO/#KDVERTQ1) /* erstellen Datei +
+                          #kd_vert/TVRELWAECO      Vertreter       */
+             MONMSG     MSGID(CPF0000)
+             RUNQRY     QRY(TVRELWAECO/#KDVERTQ2) /* erstellen Datei +
+                          #kd_vert/TVRELWAECO      Vertreter       */
+             MONMSG     MSGID(CPF0000)
+
+/*---------------- datei für preise q-manager nach vertriebsbereich--*/
+             RUNQRY     QRY(TVRELWAECO/PREISEVBQ) /* erstellen Datei +
+                          PREISKONTR/TVRELWAECO Preise PKD/PKO */
+             MONMSG     MSGID(CPF0000)
+
+/*---------------- datei für abgeleich lfs-trend gelöschte vorgänge--*/
+/*                 in lfs aber immer noch offenen komm-nr. in trend  */
+             RUNQRY     QRY(TVRELWAECO/LFSKQ1) /* erstellen Datei +
+                          TVRELWAECO/QO_LFSK1                  */
+             MONMSG     MSGID(CPF0000)
+             RUNQRY     QRY(TVRELWAECO/LFSKQ11) /* erstellen Datei +
+                          TVRELWAECO/QO_LFSK11                  */
+             MONMSG     MSGID(CPF0000)
+             RUNQRY     QRY(TVRELWAECO/LFSKQ2) /* erstellen Datei +
+                          TVRELWAECO/LFSKQ02                    */
+             MONMSG     MSGID(CPF0000)
+
+/*---------------- datei für QRY-Manager trend TFR-Preise Hause------*/
+             RUNQRY     QRY(TVRELWAECO/Q_01_130) /* erstellen Datei +
+                          QO_01_130 für QRY-trend              */
+             MONMSG     MSGID(CPF0000)
+
+             RUNQRY     QRY(TVRELWAECO/Q_01_139) /* erstellen Datei +
+                          QO_01_139 für QRY-trend historie     */
+             MONMSG     MSGID(CPF0000)
+
+/*---------------- datei für QRY-Manager trend PVK-Preise -----------*/
+             RUNQRY     QRY(TVRELWAECO/Q_01_131) /* erstellen Datei +
+                          QO_01_131 für QRY-trend              */
+             MONMSG     MSGID(CPF0000)
+
+/*---------------- datei für QRY-Manager trend PVK-Preise + History--*/
+             RUNQRY     QRY(TVRELWAECO/Q_01_132) /* erstellen Datei +
+                          QO_01_132 für QRY-trend              */
+             MONMSG     MSGID(CPF0000)
+
+/*---------------- datei für QRY-Manager trend PVK-Preise CH --------*/
+             RUNQRY     QRY(TVRELWAECO/Q_55_010) /* erstellen Datei +
+                          QO_55_010 für QRY-trend              */
+             MONMSG     MSGID(CPF0000)
+
+/*---------------- datei für QRY-Manager trend PVK-Preise AT --------*/
+             RUNQRY     QRY(TVRELWAECO/Q_61_010) /* erstellen Datei +
+                          QO_61_010 für QRY-trend              */
+             MONMSG     MSGID(CPF0000)
+
+/*---------------- datei für qry LP1 preise mit allen währungen------*/
+             RUNQRY     QRY(TVRELWAECO/q_01_046) /* erstellen Datei +
+                          QO_01_046 für QRY-trend              */
+             MONMSG     MSGID(CPF0000)
+
+/*---------------- datei für qry PVK preise CH ----------------------*/
+             RUNQRY     QRY(TVRELWAECO/q_01_041) /* erstellen Datei +
+                          QO_01_041 für QRY-trend              */
+             MONMSG     MSGID(CPF0000)
+
+/*---------------- datei für IC-Abgleich Igloo für WAOK088SC---------*/
+             RUNQRY     QRY(TVRELWAECO/q_01_200) /* erstellen Datei +
+                          QO_01_200 für QRY-trend              */
+             MONMSG     MSGID(CPF0000)
+
+/*---------------- datei für OTC AF/PO für WAOK09SC Teil 1+2 --------*/
+             RUNQRY     QRY(TVRELWAECO/q_01_201) /* erstellen Datei +
+                          QO_01_201 für QRY-trend              */
+             MONMSG     MSGID(CPF0000)
+
+             RUNQRY     QRY(TVRELWAECO/q_01_202) /* erstellen Datei +
+                          QO_01_202 für QRY-trend              */
+             MONMSG     MSGID(CPF0000)
+
+/*---------------- datei für IC-Abgleich Igloo für WAOK090SC---------*/
+             RUNQRY     QRY(TVRELWAECO/q_01_203) /* erstellen Datei +
+                          QO_01_203 für QRY-trend              */
+             MONMSG     MSGID(CPF0000)
+
+
+/*---------------- div. SQL aktivitäten -----------------------------*/
+/*          ändern druck-kz bei LS-druck von M auf Y in KUND        */
+             RUNSQLSTM  SRCFILE(DOWSRC/QSQLSRC) SRCMBR(UPVSBDSQL)
+             MONMSG     MSGID(CPF0000)
+
+/*          ändern druck-kz bei LS-druck von M auf Y in AFKO         */
+             RUNSQLSTM  SRCFILE(DOWSRC/QSQLSRC) SRCMBR(UPVSBDSQL2)
+             MONMSG     MSGID(CPF0000)
+
+/*          ändern Lagernummer Fa. 20 auf A90 in TEIL                */
+/*           RUNSQLSTM  SRCFILE(DOWSRC/QSQLSRC) SRCMBR(UPF_20SQL)    */
+/*           MONMSG     MSGID(CPF0000)                               */
+
+/*          ändern kommsperre auf N wenn leer in AFKO                */
+             RUNSQLSTM  SRCFILE(DOWSRC/QSQLSRC) SRCMBR(UPKOMSSQL2)
+             MONMSG     MSGID(CPF0000)
+
+/*          ändern TEEW SBD-Pflicht auf 0 ausser  Fa. 01             */
+             RUNSQLSTM  SRCFILE(DOWSRC/QSQLSRC) SRCMBR(UPF_61SQL)
+             MONMSG     MSGID(CPF0000)
+
+/*          ändern druck-kz bei LS-druck von M auf D in KUND         */
+             RUNSQLSTM  SRCFILE(DOWSRC/QSQLSRC) SRCMBR(UPMAIL1SQL)
+             MONMSG     MSGID(CPF0000)
+
+/*          ändern druck-kz bei RG-druck von M auf D in KUND-Test    */
+             RUNSQLSTM  SRCFILE(DOWSRC/QSQLSRC) SRCMBR(UPMAIL2SQL)
+             MONMSG     MSGID(CPF0000)
+
+/*          löschen Gewichte aus TEIL bei P-Artikeln Brutto          */
+             RUNSQLSTM  SRCFILE(DOWSRC/QSQLSRC) SRCMBR(UP_TEIL_01)
+             MONMSG     MSGID(CPF0000)
+
+/*          löschen Gewichte aus TEIL bei P-Artikeln Netto           */
+             RUNSQLSTM  SRCFILE(DOWSRC/QSQLSRC) SRCMBR(UP_TEIL_02)
+             MONMSG     MSGID(CPF0000)
+
+/*          ändern kund kostenbriefkasten auf J CH Kunden 01/001     */
+             RUNSQLSTM  SRCFILE(DOWSRC/QSQLSRC) SRCMBR(UP_01KUN01)
+             MONMSG     MSGID(CPF0000)
+
+/*          löschen Satzsperre AFKM                                  */
+             RUNSQLSTM  SRCFILE(DOWSRC/QSQLSRC) SRCMBR(UP_AFKM_01)
+             MONMSG     MSGID(CPF0000)
+
+/*          löschen Satzsperre AFKO                                  */
+             RUNSQLSTM  SRCFILE(DOWSRC/QSQLSRC) SRCMBR(UP_AFKO_01)
+             MONMSG     MSGID(CPF0000)
+
+/*          löschen Satzsperre AFLK                                  */
+             RUNSQLSTM  SRCFILE(DOWSRC/QSQLSRC) SRCMBR(UP_AFLK_01)
+             MONMSG     MSGID(CPF0000)
+
+/*          löschen Satzsperre AGKO                                  */
+             RUNSQLSTM  SRCFILE(DOWSRC/QSQLSRC) SRCMBR(UP_AGKO_01)
+             MONMSG     MSGID(CPF0000)
+
+/*          löschen Satzsperre BBEK                                  */
+             RUNSQLSTM  SRCFILE(DOWSRC/QSQLSRC) SRCMBR(UP_BBEK_01)
+             MONMSG     MSGID(CPF0000)
+
+/*          löschen Satzsperre IFAK                                  */
+             RUNSQLSTM  SRCFILE(DOWSRC/QSQLSRC) SRCMBR(UP_IFAK_01)
+             MONMSG     MSGID(CPF0000)
+
+/*          löschen Satzsperre KUND                                  */
+             RUNSQLSTM  SRCFILE(DOWSRC/QSQLSRC) SRCMBR(UP_KUND_02)
+             MONMSG     MSGID(CPF0000)
+
+/*          löschen Satzsperre KDEW                                  */
+             RUNSQLSTM  SRCFILE(DOWSRC/QSQLSRC) SRCMBR(UP_KDEW_01)
+             MONMSG     MSGID(CPF0000)
+
+/*          Setzen Kommschein verdichten auf J wenn Feld leer        */
+             RUNSQLSTM  SRCFILE(DOWSRC/QSQLSRC) SRCMBR(UP_KDEW_02)
+             MONMSG     MSGID(CPF0000)
+
+/*          löschen Satzsperre TEEW                                  */
+             RUNSQLSTM  SRCFILE(DOWSRC/QSQLSRC) SRCMBR(UP_TEEW_01)
+             MONMSG     MSGID(CPF0000)
+
+/*          löschen Satzsperre TEIL                                  */
+             RUNSQLSTM  SRCFILE(DOWSRC/QSQLSRC) SRCMBR(UP_TEIL_03)
+             MONMSG     MSGID(CPF0000)
+
+/*          löschen Satzsperre LGPO                                  */
+             RUNSQLSTM  SRCFILE(DOWSRC/QSQLSRC) SRCMBR(UP_LGPO_01)
+             MONMSG     MSGID(CPF0000)
+
+/*          löschen Satzsperre LGKO                                  */
+             RUNSQLSTM  SRCFILE(DOWSRC/QSQLSRC) SRCMBR(UP_LGKO_01)
+             MONMSG     MSGID(CPF0000)
+
+/*          Gemeinkosten auf N setzen in TEIL                        */
+             RUNSQLSTM  SRCFILE(DOWSRC/QSQLSRC) SRCMBR(UP_TEIL_04)
+             MONMSG     MSGID(CPF0000)
+
+/*          löschen Satzsperre SLKO                                  */
+             RUNSQLSTM  SRCFILE(DOWSRC/QSQLSRC) SRCMBR(UP_SLKO_01)
+             MONMSG     MSGID(CPF0000)
+
+/*          löschen Satzsperre LIEF                                  */
+             RUNSQLSTM  SRCFILE(DOWSRC/QSQLSRC) SRCMBR(UP_LIEF_01)
+             MONMSG     MSGID(CPF0000)
+
+/*          löschen Satzsperre LBAK                                  */
+             RUNSQLSTM  SRCFILE(DOWSRC/QSQLSRC) SRCMBR(UP_LBAK_01)
+             MONMSG     MSGID(CPF0000)
+
+/*          setzen Kennzeichen TEGNPA auf J in TEIL                  */
+             RUNSQLSTM  SRCFILE(DOWSRC/QSQLSRC) SRCMBR(UP_01TEGNP)
+             MONMSG     MSGID(CPF0000)
+
+/*          setzen lager 595 in afpo für aa54 status <90 werk 010    */
+             RUNSQLSTM  SRCFILE(DOWSRC/QSQLSRC) SRCMBR(UP_AFPO_01)
+             MONMSG     MSGID(CPF0000)
+
+/*---------------- div. aktivitäten -----------------------------*/
+             STRPRTWTR  DEV(PRTSCHI04) /* Duckerwarteschlange +
+                          starten */
+             MONMSG     MSGID(CPF0000)
+
+
+/*-------------------------------------------------------------------*/
+/*          Gang                                                     */
+/*          ändern edifact hier stahlgruber       Fa. 01             */
+/*       21.10.2019: stop job                                        */
+/*       Achtung prüfen wegen Ezitel                                 */
+/*          ändern edifact hier stahlgruber       Fa. 01             */
+/*           RUNSQLSTM  SRCFILE(DOWSRC/QSQLSRC) SRCMBR(UP_01EDI01)   */
+/*           MONMSG     MSGID(CPF0000)                               */
+
+/*---------------- einmalaktivitäten --------------------------------*/
+ /*          ADDPFTRG   FILE(TVPF/AFPO) TRGTIME(*AFTER) +
+                          TRGEVENT(*UPDATE) PGM(MODWAO/TGAFPO01) +
+             MONMSG     MSGID(CPF0000)   */
+/*-------------------------------------------------------------------*/
+
+/*          PROTOKOLLIERUNG ---                                           */
+             CHGVAR     VAR(&MD) +
+                          VALUE('                                     -
+                                                           ')
+             CHGVAR     VAR(%SST(&MD 01 10)) VALUE(&PGM)
+             CHGVAR     VAR(%SST(&MD 11 10)) VALUE(&JOB)
+             CHGVAR     VAR(%SST(&MD 22 10)) VALUE(&USER)
+             CHGVAR     VAR(%SST(&MD 33 06)) VALUE(&NBR)
+             CHGVAR     VAR(%SST(&MD 40 06)) VALUE('ENDE ')
+             CHGVAR     VAR(%SST(&MD 46 50)) VALUE(&TXT)
+             CALL       PGM(DUMMY512) PARM(&MD '#DC0002' ' ' ' ' +
+                           'JOB_RUN   '  'TVRELWAECO' '*ADD')
+             MONMSG     MSGID(CPF0000)
+/*          PROTOKOLLIERUNG ---                                           */
+
+             IF         COND(&ERROR1 = '0') THEN(DO)
+                RMVLIBLE   LIB(TVRELWAECO)
+                MONMSG     MSGID(CPF0000)
+             ENDDO
+
+             IF         COND(&ERROR2 = '0') THEN(DO)
+                RMVLIBLE   LIB(GANG)
+                MONMSG     MSGID(CPF0000)
+             ENDDO
+
+ ENDE:
+             ENDPGM

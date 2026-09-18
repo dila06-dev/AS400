@@ -1,0 +1,66 @@
+     A*
+     A*CRTSRCPF FILE(TVRELWAECO/IVEAS_I) RCDLEN(2400)
+     A*TEXT('DATA STREAM FOR IVEAS 2400 BYTES')
+     A*
+     A*CPYFRMSTMF FROMSTMF('/IVEAS/478451.BAK')
+     A*TOMBR('/QSYS.LIB/TVRELWAECO.LIB/IVEAS_I.FILE/IVEASI.MBR')
+     A*MBROPT(*REPLACE)
+     A*
+     A*SELECT SUBSTR( SRCDTA , 1, 1810) FROM TVRELWAECO/IVEAS_I WHERE
+     A*SUBSTR( SRCDTA , 1, 1) = '1'
+     A*DATEI IVEAS_I1 IN TVRELWAECO WURDE ERSTELLT.
+     A*
+     A*CPYF FROMFILE(IVEAS_I1) TOFILE(IVEAS_SA1) MBROPT(*REPLACE) FMTOPT(*NOCHK)
+     A*
+     A*
+     A*
+     A          R IMPKS_SAK                 TEXT('IVEAS')
+     A********************************************************************
+     A            COM           12A         COLHDG('COM         101   12')
+     A            REFNO         35A         COLHDG('REFNO       103   13')
+     A            SATZART        1A         COLHDG('SATZART     100    1')
+     A            ARTNO         50A         COLHDG('ARTNO       102   12')
+     A            QTY           12A         COLHDG('QTY         102   12')
+     A            UNITS          3A         COLHDG('UNITS       104   63')
+     A            CONVUNITST    12A         COLHDG('CONVUNITST  105   71')
+     A            COMMCD        11A         COLHDG('COMMCD      105   71')
+     A            COMMCDX1       4A         COLHDG('COMMCDX1    105   71')
+     A            COMMCDX2       4A         COLHDG('COMMCDX2    105   71')
+     A            PROCD          5A         COLHDG('PROCD       105   71')
+     A            PROCDX         2A         COLHDG('PROCDX      105   71')
+     A            GDESC        240A         COLHDG('GDESC       105   71')
+     A            COUO           2A         COLHDG('COUO        105   71')
+     A            WTNETT        10A         COLHDG('WTNETT      105   71')
+     A            WTGROSS       10A         COLHDG('WTGROSS     105   71')
+     A            PACKTYPE       2A         COLHDG('PACKTYPE    105   71')
+     A            PACKQTY        5A         COLHDG('PACKQTY     105   71')
+     A            PACKDESC      70A         COLHDG('PACKDESC    105   71')
+     A            COND           1A         COLHDG('COND        105   71')
+     A            PREIS         12A         COLHDG('PREIS       105   71')
+     A            TOWNDELTO     35A         COLHDG('TOWNDELTO   105   71')
+     A            CONVUNITC     12A         COLHDG('CONVUNITC   105   71')
+     A            UNITC          3A         COLHDG('UNITC       105   71')
+     A            CONVUNITA     12A         COLHDG('CONVUNITA   105   71')
+     A            UNITA          3A         COLHDG('UNITA       105   71')
+     A            SPECTYP1       1A         COLHDG('SPECTYP1    105   71')
+     A            VALBASE       12A         COLHDG('VALBASE     105   71')
+     A            RESPAREA       2A         COLHDG('RESPAREA    105   71')
+     A            COSTCENT1     12A         COLHDG('COSTCENT1   105   71')
+     A            COSTCENT2     12A         COLHDG('COSTCENT2   105   71')
+     A            COSTCENT3     12A         COLHDG('COSTCENT3   105   71')
+     A            EUCODE         3A         COLHDG('EUCODE      105   71')
+     A            ABGST          2A         COLHDG('ABGST       105   71')
+     A            WTPER          8A         COLHDG('WTPER       105   71')
+     A            PPER           8A         COLHDG('PPER        105   71')
+     A            POSNO          8A         COLHDG('POSNO       105   71')
+     A*****************************************************************
+     A*
+     A*****************************************************************
+     A            H1              L         TEXT('Date of transmissing')
+     A            H2              Z         TEXT('TIMESTAMP')
+     A            MANDANT        3A         COLHDG('MANDANT  ')
+     A            KJAHR          4S 0       COLHDG('JAHR     ')
+     A            KRL            1A         COLHDG('R=RECHNUNG, L=LIEF.')
+     A            KRECHLIEF     10A         COLHDG('RECHNUNG ODER LIEF.')
+     A            VERABKZ        1A         COLHDG('VERARBEITUNGSKZ')
+     A*****************************************************************

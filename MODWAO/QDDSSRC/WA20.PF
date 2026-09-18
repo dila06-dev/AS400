@@ -1,0 +1,32 @@
+     A**************************************************************************
+     A*  Copyright 2024 by    trend SWM EDV-Beratung GmbH & Co. KG             *
+     A*                       Jechtinger Straße 9                              *
+     A*                       DE 79111 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Preisdifferenz-Briefkasten - Kopf                                     *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: PH 29.11.2024 Case #03829427                                *
+     A*  Änderung: XX XX.XX.XXXX                                               *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R WA201
+     A*-------------------------------------------------------------------------
+     A            WA20LOCK  R               REFFLD(##LOCK)
+     A            WA20JNAM  R               REFFLD(##JNAM)
+     A            WA20JDAT  R               REFFLD(##JDAT)
+     A            WA20JZEI  R               REFFLD(##JZEI)
+     A            WA20USER  R               REFFLD(##USER)
+     A            WA20PROG  R               REFFLD(##PROG)
+     A            WA20BIBL  R               REFFLD(##BIBL)
+     A            WA20FIRM  R               REFFLD(##FIRM)
+     A            WA20BLJJ  R               REFFLD(##BLJJ)
+     A            WA20BLNR  R               REFFLD(##BLNR)
+     A            WA20BLNN  R               REFFLD(##BLNN)
+     A            WA20BLGA  R               REFFLD(##BLGA)
+     A            WA20LFNR  R               REFFLD(##LFNR)
+     A            WA20FRUS  R               REFFLD(##FRUS)
+     A            WA20FRDA  R               REFFLD(##FRDA)
+     A            WA20STAT  R               REFFLD(##STAT)
+     A            WA20TSTP  R               REFFLD(##TSTP)
+     A            WA20ERUS  R               REFFLD(##ERUS)
+     A            WA20FREI  R  100          REFFLD(##FREI)

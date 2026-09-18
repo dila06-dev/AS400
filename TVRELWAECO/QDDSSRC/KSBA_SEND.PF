@@ -1,0 +1,12 @@
+     A          R KSBA_SENDR
+     A
+      * :KSBA SENDUNGSPROTOKOLL
+     A            OBJEKT        25A
+     A            INPUT           L
+     A            RETURE          L
+     A            STATUS        10A
+     A            §§§USR        10A
+     A            §§§PGM        10A
+     A            TSTAMPI         Z
+     A          K OBJEKT
+     A

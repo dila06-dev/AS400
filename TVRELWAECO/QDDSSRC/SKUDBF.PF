@@ -1,0 +1,18 @@
+     A*
+     A*         DATUM IMMER TT.MM.JJJJ
+     A*         ZEIT  IMMER HH:MM
+     A*           ORDANLORT     = EMSDETTEN
+     A          R SKUDBFR                   TEXT('SKU#')
+     A*****************************************************************
+     A            #ITEM         15A         COLHDG('FR ITEM#')
+     A            #REPLACEM     15A         COLHDG('FR REPLACM#')
+     A            #DESC         50A         COLHDG('FR #DESC#')
+     A            #SC           15A         COLHDG('FR SC#')
+     A*****************************************************************
+     A            H1            10A         TEXT('status')
+     A            H2              L         TEXT('Date of transmissing')
+     A            H3              Z         TEXT('TIMESTAMP')
+     A            H4           256A         TEXT('statusII')
+     A            H5              L         TEXT('Date of UPLOAD      ')
+     A            H6              Z         TEXT('TIMESTAMP OF UPLOAD')
+     A

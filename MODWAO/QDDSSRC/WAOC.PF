@@ -1,0 +1,32 @@
+     A**************************************************************************
+     A*  Copyright 2009 by    trend SWM                                        *
+     A*                       Verwaltungs GmbH                                 *
+     A*                       Ziegelhofstraße 210a                             *
+     A*                       DE 79110 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Produktgruppen<-Margenmatrix                                          *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: HR 03.02.2011 Projekt 7120 für Kunde Dometec                *
+     A*  Änderung: XX XX.XX.XXXX                                               *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R WAOC1
+     A*-------------------------------------------------------------------------
+     A            WAOCLOCK  R               REFFLD(##LOCK)
+     A            WAOCJNAM  R               REFFLD(##JNAM)
+     A            WAOCJDAT  R               REFFLD(##JDAT)
+     A            WAOCJZEI  R               REFFLD(##JZEI)
+     A            WAOCUSER  R               REFFLD(##USER)
+     A            WAOCPROG  R               REFFLD(##PROG)
+     A            WAOCBIBL  R               REFFLD(##BIBL)
+     A*
+     A            WAOCFIRM  R               REFFLD(##FIRM)
+     A            WAOCPRGR  R               REFFLD(##PRGR)
+     A            WAOCLFNR  R               REFFLD(##LFNR)
+     A            WAOCRSBE  R               REFFLD(##RSBEKVKK)
+     A            WAOCSAVK  R               REFFLD(##SAVK)
+     A            WAOCPGDO  R               REFFLD(##PRGR)
+     A                                      TEXT('Prod-Grp Dom')
+     A                                      COLHDG('Prod-Grp Dom')
+     A            WAOCFREI  R  100          REFFLD(##FREI)

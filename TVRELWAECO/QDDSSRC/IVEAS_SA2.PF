@@ -1,0 +1,50 @@
+     A*
+     A*CRTSRCPF FILE(TVRELWAECO/IVEAS_I) RCDLEN(2400)
+     A*TEXT('DATA STREAM FOR IVEAS 2400 BYTES')
+     A*
+     A*CPYFRMSTMF FROMSTMF('/IVEAS/478451.BAK')
+     A*TOMBR('/QSYS.LIB/TVRELWAECO.LIB/IVEAS_I.FILE/IVEASI.MBR')
+     A*MBROPT(*REPLACE)
+     A*TEILDATEI IVEASI ZU DATEI IVEAS_I IN TVRELWAECO HINZUGEFÜGT.
+     A*
+     A*SELECT SUBSTR( SRCDTA , 1, 0497) FROM TVRELWAECO/IVEAS_I WHERE
+     A*SUBSTR( SRCDTA , 1, 1) = '2'
+     A*DATEI IVEAS_I2 IN TVRELWAECO WURDE ERSTELLT.
+     A*
+     A*CPYF FROMFILE(IVEAS_I2) TOFILE(IVEAS_SA2) MBROPT(*REPLACE) FMTOPT(*NOCHK)
+     A*
+     A*
+     A*
+     A          R IVEAS_SA2                 TEXT('IVEAS')
+     A********************************************************************
+     A            SATZART2       1A         COLHDG('SATZART2   5200    1')
+     A            PACKART       50A         COLHDG('PACKART    5201    2')
+     A            ANZPACK       14A         COLHDG('ANZPACK    5202   52')
+     A            PACKBRUTTO    10A         COLHDG('PACKBRUTTO 5203   66')
+     A            PACKVOL       10A         COLHDG('PACKVOL    5204   76')
+     A            PACKNR         6A         COLHDG('PACKNR     5205   86')
+     A            PACKBREIT     10A         COLHDG('PACKBREIT  5206   92')
+     A            PACKHOCH      10A         COLHDG('PACKHOCH   5207  102')
+     A            PACKLANG      10A         COLHDG('PACKLANG   5208  112')
+     A            PACKMTR       10A         COLHDG('PACKMTR    5209  122')
+     A            PACKMARK1     50A         COLHDG('PACKMARK1  5210  132')
+     A            PACKMARK2     50A         COLHDG('PACKMARK2  5211  182')
+     A            PACKMARK3     50A         COLHDG('PACKMARK3  5212  232')
+     A            PACKMARK4     50A         COLHDG('PACKMARK4  5213  282')
+     A            PACKMARK5     50A         COLHDG('PACKMARK5  5214  332')
+     A            PACKWERT      10A         COLHDG('PACKWERT   5215  382')
+     A            PACKTXT       50A         COLHDG('PACKTXT    5216  392')
+     A            PACKINNR       6A         COLHDG('PACKINNR   5217  442')
+     A            PACKINTXT     50A         COLHDG('PACKINTXT  5218  448')
+     A*           DUMMY           A         COLHDG('5219               ')
+     A*****************************************************************
+     A*
+     A*****************************************************************
+     A            H1              L         TEXT('DATE OF TRANSMISSING')
+     A            H2              Z         TEXT('TIMESTAMP')
+     A            MANDANT        3A         COLHDG('MANDANT  ')
+     A            KJAHR          4S 0       COLHDG('JAHR     ')
+     A            KRL            1A         COLHDG('R=RECHNUNG, L=LIEF.')
+     A            KRECHLIEF     10A         COLHDG('RECHNUNG ODER LIEF.')
+     A            VERABKZ        1A         COLHDG('VERARBEITUNGSKZ')
+     A*****************************************************************

@@ -1,0 +1,92 @@
+     A**************************************************************************
+     A*  Copyright 2001 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------- *
+     A*  Kommunikationsbereich Speditionsdatei Hellmann                        *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: SZ 16.11.2010                                               *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R EXSP161
+     A*-------------------------------------------------------------------------
+     A* Programmstatus
+     A*-------------------------------------------------------------------------
+     A            EXSP16PGSTR               REFFLD(##PGST)
+     A            EXSP16PROGR               REFFLD(##PROG)
+     A*-------------------------------------------------------------------------
+     A* Übergabefelder
+     A*-------------------------------------------------------------------------
+     A            EXSP16ZEZAR               REFFLD(##ZEZA)
+     A            EXSP16BOKZR               REFFLD(##JNKZ)
+     A            EXSP16WPNRR               REFFLD(##A012)
+     A            EXSP16GADAR               REFFLD(##GADA)
+     A            EXSP16DWKZR               REFFLD(##JNKZ)
+     A            EXSP16SBKZR               REFFLD(##JNKZ)
+     A            EXSP16WKNRR               REFFLD(AFKO1/AKWKNR *LIBL/AFKO)
+     A            EXSP16SPE1R               REFFLD(LIEF1/LFLFNR *LIBL/LIEF)
+     A            EXSP16SPE2R               REFFLD(LIEF1/LFLFNR *LIBL/LIEF)
+     A            EXSP16SPE3R               REFFLD(LIEF1/LFLFNR *LIBL/LIEF)
+     A            EXSP16AJ10R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP16AN10R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP16AJ11R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP16AN11R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP16AJ12R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP16AN12R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP16AJ13R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP16AN13R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP16AJ14R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP16AN14R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP16AJ15R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP16AN15R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP16AJ16R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP16AN16R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP16AJ17R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP16AN17R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP16AJ18R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP16AN18R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP16AJ19R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP16AN19R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP16AJ20R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP16AN20R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP16AJ21R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP16AN21R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP16AJ22R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP16AN22R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP16AJ23R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP16AN23R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP16AJ24R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP16AN24R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP16AJ25R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP16AN25R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP16AJ26R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP16AN26R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP16AJ27R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP16AN27R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP16AJ28R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP16AN28R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP16AJ29R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP16AN29R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP16AJ30R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP16AN30R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP16AJ31R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP16AN31R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP16AJ32R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP16AN32R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP16AJ33R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP16AN33R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP16AJ34R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP16AN34R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP16AJ35R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP16AN35R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP16AJ36R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP16AN36R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP16AJ37R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP16AN37R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP16AJ38R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP16AN38R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP16AJ39R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP16AN39R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP16FREIR  649          REFFLD(##FREI)

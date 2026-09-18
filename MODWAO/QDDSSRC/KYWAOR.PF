@@ -1,0 +1,20 @@
+     A**************************************************************************
+     A*  Copyright 2000 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Versandbedingung/Pickliste                                            *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: ZG 19.07.2012 Projekt 8587                                  *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(WAOR)
+     A          R KYWAOR1
+     A*
+     A            KYWAORFIRMR               REFFLD(WAORFIRM)
+     A            KYWAORVSBDR               REFFLD(WAORVSBD)
+     A            K$WAOR        30
+     A            K#WAORLOCKR               REFFLD(WAORLOCK)
+     A            K#WAORFIRMR               REFFLD(WAORFIRM)
+     A            K#WAORVSBDR               REFFLD(WAORVSBD)

@@ -1,0 +1,39 @@
+2026-09-18-10.19.06.488209   18.09.2026   10.19.06
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host www143.your-server.de, Adresse
+ 2a01:4f8:d0a:11e0::2 über Port 21 herzustellen.
+220 FTP Server 1.0
+Anmelde-ID (gang) eingeben:
+550 SSL/TLS required on the control channel
+ User login failed
+Einen FTP-Unterbefehl eingeben.
+> www143.your-server.de
+Unterbefehl 'www143.your-' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP
+ eingeben.
+Einen FTP-Unterbefehl eingeben.
+> REM *********************
+Unterbefehl 'REM' nicht gültig.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+550 SSL/TLS required on the control channel
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+550 SSL/TLS required on the control channel
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Einen FTP-Unterbefehl eingeben.
+> CD /
+Zuerst muss Unterbefehl USER abgesetzt werden.
+Einen FTP-Unterbefehl eingeben.
+> APPEND SCHLANSERO SCHLANSER-20260918101906.csv
+Zuerst muss Unterbefehl USER abgesetzt werden.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.

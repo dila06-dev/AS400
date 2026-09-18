@@ -1,0 +1,23 @@
+/*-------------------------------------------------*/
+/* Dometic invoice Schnittstellen füllen           */
+/*-------------------------------------------------*/
+             PGM
+
+             ADDLIBLE   LIB(WAECOEDI)
+             MONMSG     MSGID(CPF2103)
+
+             OVRDBF     FILE(WWWORK10) TOFILE(WAECOEDI/WWWORK10)
+
+
+/* Dometic France  */
+ NEXT0:      CLRPFM     FILE(DOMINV_FR)
+             CALL       PGM(DOMINV_FR)
+
+
+/* Dometic UK      */
+ NEXT1:      CLRPFM     FILE(DOMINV_UK)
+             CALL       PGM(DOMINV_UK)
+
+             DLTOVR     FILE(WWWORK10)
+
+             ENDPGM

@@ -1,0 +1,68 @@
+     A*****************************************************************
+     A*  Copyright 1997 by    trend SWM                               *
+     A*                       Verwaltungs-GmbH                        *
+     A*                       Bötzinger Strasse 36                    *
+     A*                       D-79111 Freiburg                        *
+     A*  -----------------------------------------------------------  *
+     A*  Schnittstellendatei für Lagerbewegung                        *
+     A*  -----------------------------------------------------------  *
+     A*  Erstellt: SZ 17.06.1997                                      *
+     A*  Änderung: SZ 07.06.2000 Auslagerstrecke auf 2 Stellen erw.   *
+     A*            Umlagerplatz eingefügt                             *
+     A*                                                               *
+     A*****************************************************************
+     A                                      REF(SWMREF)
+     A          R PCLB1
+     A*
+     A            PCLBLOCK  R               REFFLD(##LOCK)
+     A            PCLBJNAM  R               REFFLD(##JNAM)
+     A            PCLBJDAT  R               REFFLD(##JDAT)
+     A            PCLBJZEI  R               REFFLD(##JZEI)
+     A            PCLBUSER  R               REFFLD(##USER)
+     A            PCLBPROG  R               REFFLD(##PROG)
+     A            PCLBBIBL  R               REFFLD(##BIBL)
+     A            PCLBFIRM  R               REFFLD(##FIRM)
+     A            PCLBTENR  R               REFFLD(##TENR)
+     A            PCLBLANR  R               REFFLD(##LANR)
+     A            PCLBLORT  R               REFFLD(##LORT)
+     A            PCLBSTAT  R               REFFLD(##STAT)
+     A            PCLBBUMG  R               REFFLD(##BUMG)
+     A            PCLBBUKZ  R               REFFLD(##BUKZ)
+     A            PCLBKMTE  R               REFFLD(##KMTE)
+     A            PCLBAFDN  R               REFFLD(##AFDN)
+     A            PCLBAFJJ  R               REFFLD(##AFJJ)
+     A            PCLBAFNR  R               REFFLD(##AFNR)
+     A            PCLBAFPO  R               REFFLD(##AFPO)
+     A            PCLBAFUP  R               REFFLD(##AFUP)
+     A            PCLBDANA  R               REFFLD(##DANA)
+     A            PCLBTMST  R               REFFLD(##TMST)
+     A            PCLBJAHR  R               REFFLD(##JAHR)
+     A            PCLBNMKR  R               REFFLD(##NMKR)
+     A            PCLBPOSI  R               REFFLD(##POSI)
+     A            PCLBKDNR  R               REFFLD(##KDNR)
+     A            PCLBRMKZ  R               REFFLD(##RMKZ)
+     A            PCLBRMMG  R               REFFLD(##RMMG)
+     A            PCLBRMDA  R               REFFLD(##RMDA)
+     A            PCLBRMZT  R               REFFLD(##RMZT)
+     A            PCLBFENR  R               REFFLD(##FENR)
+     A            PCLBTGTP  R               REFFLD(##TGTP)
+     A            PCLBSEDA  R               REFFLD(##SEDA)
+     A            PCLBSEZT  R               REFFLD(##SEZT)
+     A            PCLBLFIX  R               REFFLD(##LFIX)
+     A            PCLBSEST  R               REFFLD(##SEST)
+     A            PCLBCHAR  R               REFFLD(##CHAR)
+     A            PCLBSTMG  R               REFFLD(##STMG)
+     A            PCLBMGVP  R               REFFLD(##MGVP)
+     A            PCLBMEIN  R               REFFLD(##MEIN)
+     A            PCLBBHNR  R               REFFLD(##BHNR)
+     A            PCLBBEZ1  R               REFFLD(##BEZ1)
+     A            PCLBBEZ2  R               REFFLD(##BEZ2)
+     A            PCLBTSTP  R               REFFLD(##TSTP)
+     A            PCLBVEDA  R               REFFLD(##VEDA)
+     A            PCLBULNR  R               REFFLD(##LANR)
+     A            PCLBALST  R               REFFLD(##ALST)
+     A            PCLBUORT  R               REFFLD(##LORT)
+     A            PCLBALPR  R               REFFLD(##ALPR)
+     A            PCLBFRIN  R  -10          REFFLD(##FREI)
+     A            PCLBFREX  R               REFFLD(##FREI)
+     A*

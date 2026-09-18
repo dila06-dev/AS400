@@ -1,0 +1,90 @@
+     A*%%TS  SD  20031031  172721  POHL        REL-V5R2M0  5722-WDS
+     A*%%EC
+     A                                      DSPSIZ(24 80 *DS3)
+     A                                      REF(*LIBL/TPREFPF TPREFPFF)
+     A                                      PRINT
+     A          R PROMPT
+     A*%%TS  SD  20020919  094731  POHL        REL-V4R4M0  5769-PW1
+     A                                 22  2'-----------------------------------
+     A                                      ------------------------------------
+     A                                      ---------'
+     A                                      COLOR(BLU)
+     A                                 23  2'F3=Verlassen   F12=Abbrechen'
+     A                                      COLOR(BLU)
+     A                                 24 43'(c) GSQ-Jansen, Nordhorn, 2002'
+     A                                      DSPATR(HI)
+     A          R SUBFILE                   SFL
+     A*%%TS  SD  20020926  170112  POHL        REL-V4R4M0  5769-PW1
+     A            BLCMDL      1440A  H
+     A            B1CMD         70   O  8  5
+     A          R SUBCTL                    SFLCTL(SUBFILE)
+     A*%%TS  SD  20031031  172721  POHL        REL-V5R2M0  5722-WDS
+     A                                      SFLSIZ(0014)
+     A                                      SFLPAG(0013)
+     A                                      CF03
+     A                                      CF05
+     A                                      CF12
+     A                                      CF16
+     A N80                                  ROLLUP
+     A                                      RTNCSRLOC(&XXFMT &XXVAR &XXPOS)
+     A                                      CSRLOC(CSRZE      CSRSP)
+     A                                      OVERLAY
+     A  10                                  SFLDSP
+     A                                      SFLDSPCTL
+     A  12                                  SFLCLR
+     A  80                                  SFLEND
+     A                                      SFLDROP(CF10)
+     A  44                                  SFLMSG('Verarbeitungsart ungültig')
+     A            XXFMT         10A  H
+     A            XXVAR         10A  H
+     A            XXPOS          4S 0H
+     A            CSRZE          3S 0H
+     A            CSRSP          3S 0H
+     A            SFLPOS         4S 0H      SFLRCDNBR(*TOP)
+     A                                  1  3'LOG0110'
+     A                                      COLOR(BLU)
+     A                                  1 25'Anzeige eines Protokolleintrags'
+     A                                      DSPATR(HI)
+     A                                      DSPATR(UL)
+     A                                  1 63'Datum:'
+     A                                      COLOR(BLU)
+     A                                  1 70DATE
+     A                                      EDTCDE(Y)
+     A                                      COLOR(BLU)
+     A                                  2 63'Zeit :'
+     A                                      COLOR(BLU)
+     A                                  2 70TIME
+     A                                      COLOR(BLU)
+     A                                  3  3'Benutzer :'
+     A                                      COLOR(BLU)
+     A            LGUSER    R        O  3 14REFFLD(LGCMDPF0/LGUSER *LIBL/LGCMDP)
+     A                                  3 28'Zeit .:'
+     A                                      COLOR(BLU)
+     A            LGDATE    R        O  3 36REFFLD(LGCMDPF0/LGDATE *LIBL/LGCMDP)
+     A                                      DATFMT(*EUR)
+     A                                      TEXT('Datum')
+     A            LGTIME    R        O  3 47REFFLD(LGCMDPF0/LGTIME *LIBL/LGCMDP)
+     A                                      TIMFMT(*HMS)
+     A                                      TEXT('Zeit')
+     A                                  3 58'IP :'
+     A                                      COLOR(BLU)
+     A            LGIPAD    R        O  3 63REFFLD(LGCMDPF0/LGIPAD *LIBL/LGCMDP)
+     A                                  4  3'Protokoll:'
+     A                                      COLOR(BLU)
+     A            LGPROT    R        O  4 14REFFLD(LGCMDPF0/LGPROT *LIBL/LGCMDP)
+     A                                  4 28'GKz ..:'
+     A                                      COLOR(BLU)
+     A            LGGKZ     R        O  4 36REFFLD(LGCMDPF0/LGGKZ *LIBL/LGCMDP)
+     A                                  4 58'Pgm:'
+     A                                      COLOR(BLU)
+     A            LGEPGM        10A  O  4 63
+     A                                  6  2'Protokollierter Befehl            -
+     A                                                                         -
+     A                                              '
+     A                                      COLOR(BLU)
+     A                                  7  2'-----------------------------------
+     A                                      ------------------------------------
+     A                                      --------'
+     A                                      COLOR(BLU)
+     A            LGSPNT    R        O  5 36REFFLD(LGCMDPF0/LGSPNT *LIBL/LGCMDP)
+     A                                      TEXT('STOPPUNKT')

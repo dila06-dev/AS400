@@ -1,0 +1,35 @@
+     A*****************************************************************
+     A          R RRHGEFAHR                 TEXT('Gefahrguttabelle')
+     A            RGFIRM         2A         COLHDG('Firmen-Nr')
+     A            RGTENR        15A         COLHDG('Ident-Nr')
+     A            RGGVS         15A         COLHDG('GG Vorschrift')
+     A            RGGVV         15A         COLHDG('GG-Vorschr.Version')
+     A            RGUNR          4A         COLHDG('UN-Nummer')
+     A            RGUPN          3A         COLHDG('UN-Nummer Pos.')
+     A            RGKL           4A         COLHDG('Gefahrgutklasse')
+     A            RGZF           3A         COLHDG('Gefahrgutziffer')
+     A            RGBS           2A         COLHDG('Gefahrgutbuchstabe')
+     A            RGVPA          4A         COLHDG('Verpackungsart')
+     A            RGVG           3A         COLHDG('Verpackungsgruppe')
+     A            RGWGK          3A         COLHDG('Wassergefährdungskl')
+     A            RGBFK          3A         COLHDG('Beförderungskat.')
+     A            RGBGM         10A         COLHDG('begrenzte Menge')
+     A            RGFGM         10A         COLHDG('freigestellte Menge')
+     A            RGKFC         10A         COLHDG('Klassifizierungscode')
+     A            RGTBC         10A         COLHDG('Tunnelbeschränk.Code')
+     A            RGCT1         50A         COLHDG('Chemisch tech.Name 1')
+     A            RGCT2         50A         COLHDG('Chemisch tech.Name 2')
+     A            RGCT3         50A         COLHDG('Chemisch tech.Name 3')
+     A            RGBM          11S 3       COLHDG('Bruttoasse in KG')
+     A            RGNM          11S 3       COLHDG('Nettomasse in KG')
+     A            RGNME         11S 3       COLHDG('Nettoma.expl.Stoff')
+     A            RGNVO         11S         COLHDG('Nennvolumen')
+     A            RGMG          11P 3       COLHDG('GG Menge lt. GG ME')
+     A            RGME           4A         COLHDG('Gefahrgut ME')
+     A            NDS01          3S         COLHDG('Faktor Gefafahr')
+     A            RGFTYP        10A         COLHDG('GEFAHRGUTTYP')
+     A*****************************************************************
+     A          K RGFIRM
+     A          K RGTENR
+     A          K RGGVS
+     A          K RGGVV

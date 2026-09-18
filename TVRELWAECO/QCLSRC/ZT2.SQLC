@@ -1,0 +1,1 @@
+delete FROM ifap WHERE IFApIFFI = '99999' or IFApIFFI = '99999'

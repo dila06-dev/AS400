@@ -1,0 +1,35 @@
+     A**************************************************************************
+     A*  Copyright 2025 by                                                     *
+     A*                                                                        *
+     A*                                                                        *
+     A*                                                                        *
+     A*  --------------------------------------------------------------------  *
+     A*  Beschreibung: Erweiterung Identstamm um IVEAS Kodierungen auf Basis   *
+     A*                der Zolltarifnummer                                     *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: MG 03.07.2025                                               *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R IVSC1
+     A*-------------------------------------------------------------------------
+     A            IVSCLOCK  R               REFFLD(##LOCK)
+     A            IVSCJNAM  R               REFFLD(##JNAM)
+     A            IVSCJDAT  R               REFFLD(##JDAT)
+     A            IVSCJZEI  R               REFFLD(##JZEI)
+     A            IVSCUSER  R               REFFLD(##USER)
+     A            IVSCPROG  R               REFFLD(##PROG)
+     A            IVSCBIBL  R               REFFLD(##BIBL)
+     A            IVSCFIRM  R               REFFLD(##FIRM)
+     A            IVSCZOTN  R               REFFLD(##ZOTN)
+     A            IVSCIMEX       1A         TEXT('Import I Export E')
+     A                                      COLHDG('Import I Export E')
+     A            IVSCCODE      20A         TEXT('Unterl-Kodierung')
+     A                                      COLHDG('Unterl-Kodierung')
+     A            IVSCCBZ1     256A         TEXT('Kodierungsbezeich.')
+     A                                      COLHDG('Kodierungsbezeich.')
+     A            IVSCGADA  R               REFFLD(##GADA)
+     A            IVSCGBDA  R               REFFLD(##GBDA)
+     A            IVSCERUS  R               REFFLD(##ERUS)
+     A            IVSCFREI     120A         TEXT('FREIFELD')
+     A                                      COLHDG('FREIFELD')
+     A*****

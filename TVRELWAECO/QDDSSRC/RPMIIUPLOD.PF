@@ -1,0 +1,28 @@
+     A          R PRPM2SND                  TEXT('RPM2-STK-STAMMDATEI')
+     A*****************************************************************
+     A            RPMUPLDTE      8A         COLHDG('UPLOAD DATE JJJJMMTT')
+     A            RPMFOO        10A         COLHDG('FACTORY OF ORIGIN')
+     A            RPMUPLENT     10A         COLHDG('UPLOAD ENTITY')
+     A            RPMCOO        10A         COLHDG('COUNTRY OF ORIGIN')
+     A            RPMSKU        10A         COLHDG('STOCK KEEPING UNIT')
+     A            RPMSC         10A         COLHDG('SALES COMP.DIST-CENT')
+     A*****************************************************************
+     A            RPMPRCQTY     08P 0       COLHDG('PRICE' 'QUANTITY')
+     A            RPMPRCUNT     10A         COLHDG('PRICE' 'UNIT')
+     A            RPMCOM        20A         COLHDG('PRICE UNITCOMMENT')
+     A            RPMSTK3       11P 0       COLHDG('STK3 OHNE KOMMA')
+     A            RPMWHG         3A         COLHDG('CURRENCY')
+     A            RPMGUEVON      8A         COLHDG('GÜLTIG/VON JJJJMMTT')
+     A            RPMGUEBIS      8A         COLHDG('GÜLTIG/BIS JJJJMMTT')
+     A            RPMBRAND      20A         COLHDG('BRAND')
+     A            RPMREPORT     20A
+     A            $ARTNR        15A
+     A            $ARTSKU       15A
+     A            $ARTBEZFRA    15A
+     A            RPMTMP          Z
+     A*****************************************************************
+     A
+     A*         K RPMFOO
+     A*         K RPMSKU
+     A*         K RPMSC
+     A*         K RPMGUEBIS

@@ -1,0 +1,30 @@
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host dometic-group.com, Adresse
+ 193.84.54.32 über Port 21 herzustellen.
+220 ProFTPD Server ready.
+Anmelde-ID (gang) eingeben:
+331 Password required for winadmin
+530 Login incorrect.
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 1
+500 'SITE NAMEFMT' not understood
+Client NAMEFMT ist 1.
+Einen FTP-Unterbefehl eingeben.
+> cd domains/dometic-group.com/public_ftp/dwch/snd
+Zuerst muss Unterbefehl USER abgesetzt werden.
+Einen FTP-Unterbefehl eingeben.
+> lcd /WAECOEDI/ch
+Das lokale Arbeitsverzeichnis ist /WAECOEDI/ch
+Einen FTP-Unterbefehl eingeben.
+> MGET CH*
+Zuerst muss Unterbefehl USER abgesetzt werden.
+Einen FTP-Unterbefehl eingeben.
+> MDELETE CH*
+Zuerst muss Unterbefehl USER abgesetzt werden.
+Einen FTP-Unterbefehl eingeben.
+> quit
+221 Goodbye.

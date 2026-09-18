@@ -1,0 +1,134 @@
+/*    * PROGRAMMNAME.:$FAKTU01_W                                             */
+/*    * FUNKTION.....:...                                                    */
+/*    * 31.08.11       schneider                                              */
+/*    *                                                                       */
+/*    *-start Wochenrechung über kalenderdatei                               */
+/*    *-parameter: WO = Wochenrechnung                                       */
+/*    *            WM = Wochenrechnung+Monatsrechnung                        */
+/*    *            M  = Monatsrechnung                                       */
+/*    *                                                                      */
+/*    * Hinweis:                                                             */
+/*    * sind in der kalenderdatei (bar_vert/kalendern) keine einträge        */
+/*    * in den zeiten vorhanden, wird die jeweilige standardzeit             */
+/*    * vorbelegt.                                                           */
+/*    * in diesem fall 12:00 uhr für wochenrechnungen                        */
+/*    * bei änderungen der standardzeiten diese im programm ändern!!         */
+/*    * dieses programm wird über scde derzeit um 11:45h im sbs qsyswrk      */
+/*    * täglich gestartet. ($FAKTURA_W)                                      */
+/*    *                                                                       */
+/******************************************************************************/
+             PGM        PARM(&LOKATION)
+
+             DCLF       FILE(BAR_VERT/KALENDERN) OPNID(A)
+             DCL        VAR(&DATUMC) TYPE(*CHAR) LEN(6)
+             DCL        VAR(&DATUMS) TYPE(*DEC) LEN(6 0)
+             DCL        VAR(&QTIME) TYPE(*CHAR) LEN(6)
+             DCL        VAR(&TIME01) TYPE(*CHAR) LEN(6) /* Fa 01 */
+             DCL        VAR(&TIME01V) TYPE(*CHAR) LEN(6) /* Fa 01 +
+                          Vorbelegung */
+             DCL        VAR(&RG) TYPE(*CHAR) LEN(2)
+             DCL        VAR(&LOKATION) TYPE(*CHAR) LEN(3)
+             DCL        VAR(&FIRMA) TYPE(*CHAR) LEN(2) VALUE('  ')
+
+             CHGJOB     LOG(4 00 *SECLVL) LOGCLPGM(*YES) +
+                          LOGOUTPUT(*JOBEND)
+
+             ADDLIBLE   LIB(TVRELWAECO) POSITION(*LAST)
+             MONMSG     MSGID(CPF0000)
+
+             RTVJOBA    DATE(&DATUMC)
+             CHGVAR     VAR(&DATUMS) VALUE(&DATUMC)
+
+/*___   ermitteln firma ____________________________________________________ */
+             CALL       PGM(TVRELWAECO/DOWR000) PARM(&LOKATION &FIRMA)
+
+/*___   standardzeiten für faktura vorbelegen aus dtaara bar_vert/tagesrg___ */
+             RTVDTAARA  DTAARA(BAR_VERT/TAGESRG (101 6)) +
+                          RTNVAR(&TIME01V)
+
+/*___auslesen datei kalender _________________________________________________*/
+ LOOP:       RCVF       OPNID(A)
+             MONMSG     MSGID(CPF0864) EXEC(GOTO CMDLBL(WEITER))
+             IF         COND(&DATUMS *EQ &A_KALDAT2 *AND &A_KALFIRM +
+                          *EQ &FIRMA) THEN(CHGVAR VAR(&RG) +
+                          VALUE(&A_KALRGPARA))
+             IF         COND(&DATUMS *EQ &A_KALDAT2 *AND &A_KALFIRM +
+                          *EQ &FIRMA) THEN(CHGVAR VAR(&TIME01) +
+                          VALUE(&A_KALRGZEIT))
+             GOTO       CMDLBL(LOOP)
+/*____________________________________________________________________________*/
+
+/*___   zeiten für faktura vorbelegen, falls in der datei leer _____________ */
+/*___   vorbelegung aus dtaara bar_vert/tagesrg ____________________________ */
+ WEITER:     IF         COND(&TIME01 *EQ '      ') THEN(CHGVAR +
+                          VAR(&TIME01) VALUE(&TIME01V))
+/*____________________________________________________________________________*/
+
+             IF         COND(&RG *EQ 'WO' *OR &RG *EQ 'WM' *OR &RG +
+                          *EQ 'M ') THEN(DO)
+
+ LOOP2:      RTVSYSVAL  SYSVAL(QTIME) RTNVAR(&QTIME)
+             IF         COND(&QTIME *GE &TIME01) THEN(GOTO +
+                          CMDLBL(RGLAUF))
+             DLYJOB     DLY(300)
+             GOTO       CMDLBL(LOOP2)
+
+/*_durchführen wochenrechnungslauf____________________________________________*/
+ RGLAUF:     IF         COND(&RG *EQ 'WO' *OR &RG *EQ 'WM') THEN(DO)
+             SBMJOB     CMD(CALL PGM(TVPP/TRAB53SJ) PARM('MODWAO' +
+                          '01' '1' ' ' ' ' '001')) JOB(FAKTURA_1) +
+                          JOBD(MODWAO/JDFIB01) USER(FAKTURA) /* +
+                          'Wo-Sammelrechnungen Kz.1 +
+                          erstellen/drucken' */
+             ENDDO
+/*____________________________________________________________________________*/
+
+             DLYJOB     DLY(90)
+
+             IF         COND(&RG *EQ 'WO' *OR &RG *EQ 'WM') THEN(DO)
+             SBMJOB     CMD(CALL PGM(TVPP/TRAB53SJ) PARM('MODWAO' +
+                          '01' '5' ' ' ' ' '001')) JOB(FAKTURA_5) +
+                          JOBD(MODWAO/JDFIB01) USER(FAKTURA) /* +
+                          'Wo-Sammelrechnungen Kz.5 (Techno) +
+                          erstellen/drucken' */
+             ENDDO
+/*____________________________________________________________________________*/
+
+             DLYJOB     DLY(90)
+
+             IF         COND(&RG *EQ 'WO' *OR &RG *EQ 'WM') THEN(DO)
+             SBMJOB     CMD(CALL PGM(TVPP/TRAB53SJ) PARM('MODWAO' +
+                          '01' '3' ' ' ' ' '001')) JOB(FAKTURA_3) +
+                          JOBD(MODWAO/JDFIB01) USER(FAKTURA) /* +
+                          'Wo-Sammelrechnungen Kz.3 (Ford) +
+                          erstellen/drucken' */
+             ENDDO
+/*____________________________________________________________________________*/
+
+             DLYJOB     DLY(90)
+
+             IF         COND(&RG *EQ 'WO' *OR &RG *EQ 'WM') THEN(DO)
+             SBMJOB     CMD(CALL PGM(TVPP/TRAB53SJ) PARM('MODWAO' +
+                          '01' '6' ' ' ' ' '001')) JOB(FAKTURA_6) +
+                          JOBD(MODWAO/JDFIB01) USER(FAKTURA) /* +
+                          'Wo-Sammelrechnungen Kz.6 (Mobis) +
+                          erstellen/drucken' */
+             ENDDO
+/*____________________________________________________________________________*/
+
+             DLYJOB     DLY(90)
+
+/*_durchführen monatsendrechnungen____________________________________________*/
+             IF         COND(&RG *EQ 'WM' *OR &RG *EQ 'M ') THEN(DO)
+             SBMJOB     CMD(CALL PGM(TVPP/TRAB53SJ) PARM('MODWAO' +
+                          '01' '9' ' ' ' ' '001')) JOB(FAKTURA_9) +
+                          JOBD(MODWAO/JDFIB01) USER(FAKTURA) /* +
+                          'Mo-Sammelrechnungen Kz.9 +
+                          erstellen/drucken' */
+             ENDDO
+/*____________________________________________________________________________*/
+
+             ENDDO
+
+
+             ENDPGM

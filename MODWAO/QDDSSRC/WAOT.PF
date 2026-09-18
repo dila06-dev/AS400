@@ -1,0 +1,31 @@
+     A**************************************************************************
+     A*  Copyright 2009 by    trend SWM                                        *
+     A*                       Verwaltungs GmbH                                 *
+     A*                       Ziegelhofstraße 210a                             *
+     A*                       DE 79110 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Skiplot-Zähler                                                        *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: RE 20.08.2013 Projekt 9609                                  *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R WAOT1
+     A*-------------------------------------------------------------------------
+     A            WAOTLOCK  R               REFFLD(##LOCK)
+     A            WAOTJNAM  R               REFFLD(##JNAM)
+     A            WAOTJDAT  R               REFFLD(##JDAT)
+     A            WAOTJZEI  R               REFFLD(##JZEI)
+     A            WAOTUSER  R               REFFLD(##USER)
+     A            WAOTPROG  R               REFFLD(##PROG)
+     A            WAOTBIBL  R               REFFLD(##BIBL)
+     A*
+     A            WAOTFIRM  R               REFFLD(##FIRM)
+     A            WAOTTENR  R               REFFLD(##TENR)
+     A            WAOTPRZL  R               REFFLD(##N050)
+     A                                      TEXT('Prüf-Zähler')
+     A                                      COLHDG('Prüf-Zähler')
+     A            WAOTAKZL  R               REFFLD(##N050)
+     A                                      TEXT('Zähler')
+     A                                      COLHDG('Zähler')
+     A            WAOTFREI  R  100          REFFLD(##FREI)

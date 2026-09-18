@@ -1,0 +1,58 @@
+     A*%%TS  SD  20020809  084055  BARI        REL-V4R4M0  5769-PW1
+     A*  92/06/04  16:13:18    BARENKAMP   REL-R03M00  5728-PW1
+     A*%%EC
+     A                                      DSPSIZ(24 80 *DS3)
+     A                                      PRINT
+     A*  97/12/17  16:13:18    BARENKAMP   REL-V4R1M0  5728-PW1
+     A          R FMT010
+     A*%%TS  SD  20020809  084055  BARI        REL-V4R4M0  5769-PW1
+     A                                      CF03(03)
+     A                                      CF12(03)
+     A                                  1  3'MENINTRA '
+     A                                      COLOR(BLU)
+     A                                  1 34'Intrastat Meldungen'
+     A                                      DSPATR(HI)
+     A                                      DSPATR(UL)
+     A                                  1 65'Datum:'
+     A                                      COLOR(BLU)
+     A                                  1 72DATE
+     A                                      EDTCDE(Y)
+     A                                      COLOR(BLU)
+     A                                  2 65'Zeit :'
+     A                                      COLOR(BLU)
+     A                                  2 72TIME
+     A                                      COLOR(BLU)
+     A                                  3  2'Bitte wählen Sie....:'
+     A                                      DSPATR(HI)
+     A                                      DSPATR(UL)
+     A                                  4  2'-----------------------------------
+     A                                      ------------------------------------
+     A                                      ---------'
+     A                                      COLOR(BLU)
+     A                                  5  2'01 -> Einfuhr Meldungen erfassen'
+     A                                  6  2'02 -> Meldedatei pro Monat erstell-
+     A                                      en'
+     A                                  6  2'02 -> Meldedatei pro Mon.erstellen'
+     A                                 11 38'                                '
+     A                                 12 46'                                 '
+     A                                 13 46'                                 '
+     A                                 19  2'                                 '
+     A                                 20  2'99 -> Programm Ende'
+     A                                 20 80' '
+     A                                 21  2'-----------------------------------
+     A                                      ------------------------------------
+     A                                      ---------'
+     A                                      COLOR(BLU)
+     A                                 22  2'Ihr Wahl ... : '
+     A                                 22 18' '
+     A            AUSW           2A  I 22 20
+     A                                 22 80' '
+     A                                 23  2'F3=Verlassen F12=Abbruch'
+     A                                      COLOR(BLU)
+     A                                 23 30' '
+     A                                 24 38' '
+     A                                 24 40'(c) WAECO International Ba.01-02  -
+     A                                          '
+     A                                      DSPATR(HI)
+     A                                 12 43' '
+     A                                  7  2'03 -> Warennummernstamm erfassen'

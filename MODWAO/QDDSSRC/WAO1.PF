@@ -1,0 +1,56 @@
+     A**************************************************************************
+     A*  Copyright 2003 by    trend SWM
+     A*                       Verwaltung GmbH
+     A*                       Ziegelhofstraße 210a
+     A*                       DE 79110 Freiburg
+     A*****************************************************************
+     A*
+     A*  --------------------------------------------------------------------  *
+     A*  Beschreibung: Schnittstelle Lieferscheine von/zu BGfS                 *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: TB 15.10.2003
+     A*  Änderung: ZG 12.05.2005 PROJEKT 2984 DAS NEUSE FELD KOM-ART
+     A*            AM ENDE WEIL FREI SCHON BENUTZT
+     A*****************************************************************
+     A                                      REF(SWMREF)
+     A          R WAO11
+     A*
+     A            WAO1LOCK  R               REFFLD(##LOCK)
+     A            WAO1JNAM  R               REFFLD(##JNAM)
+     A            WAO1JDAT  R               REFFLD(##JDAT)
+     A            WAO1JZEI  R               REFFLD(##JZEI)
+     A            WAO1USER  R               REFFLD(##USER)
+     A            WAO1PROG  R               REFFLD(##PROG)
+     A            WAO1BIBL  R               REFFLD(##BIBL)
+     A            WAO1FIRM  R               REFFLD(##FIRM)
+     A*
+     A            WAO1LIJJ  R               REFFLD(##LIJJ)
+     A            WAO1LINR  R               REFFLD(##LINR)
+     A            WAO1RALP  R               REFFLD(##RALP)
+     A*
+     A            WAO1TENR  R               REFFLD(##TENR)
+     A            WAO1TBZ1  R               REFFLD(##BEZ1)
+     A            WAO1VSBD  R               REFFLD(##VSBD)
+     A            WAO1AFMG      11  2
+     A                                      TEXT('Soll-Menge')
+     A                                      COLHDG('Soll-Menge')
+     A            WAO1MEVS  R               REFFLD(##MEVK)
+     A                                      TEXT('Soll-Mengeneinheit')
+     A                                      COLHDG('Soll-Mengeneinheit')
+     A            WAO1GLMG  R               REFFLD(##GLMG)
+     A                                      TEXT('Ist-Menge')
+     A                                      COLHDG('Ist-Menge')
+     A            WAO1MEVI  R               REFFLD(##MEVK)
+     A                                      TEXT('Ist-Mengeneinheit')
+     A                                      COLHDG('Ist-Mengeneinheit')
+     A            WAO1UEST  R               REFFLD(##UEST)
+     A*
+     A            WAO1TSTP  R               REFFLD(##TSTP)
+     A*
+     A            WAO1FREI  R  100          REFFLD(##FREI)
+     A*
+     A            WAO1DANA  R               REFFLD(##DANA)
+     A            WAO1JAHR  R               REFFLD(##JAHR)
+     A            WAO1NMKR  R               REFFLD(##NMKR)
+     A            WAO1POSI  R               REFFLD(##POSI)
+     A            WAO1FREX  R  100          REFFLD(##FREX)

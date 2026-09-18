@@ -1,0 +1,61 @@
+     A**************************************************************************
+     A*  Copyright 2012 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Dachser                                                               *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: SZ 06.08.2014                                               *
+     A*                                                                        *
+     A**************************************************************************
+     A          R SPED801
+     A*-------------------------------------------------------------------------
+     A            S80010         1A         TEXT('N-HELLMANN/J-DPD')
+     A            S80020        15A         TEXT('AUFTRAGSBEZEICHNUNG')
+     A            S80030        30A         TEXT('ABSENDER NAME 1')
+     A            S80040        30A         TEXT('ABSENDER NAME 2')
+     A            S80050        30A         TEXT('ABSENDER STRASSE')
+     A            S80060         3A         TEXT('ABSENDER LKZ')
+     A            S80070        10A         TEXT('ABSENDER PLZ')
+     A            S80080        30A         TEXT('ABSENDER ORT')
+     A            S80090         6A         TEXT('KUNDENNUMMER')
+     A            S80100        10A         TEXT('FILLER')
+     A            S80110         1A         TEXT('STATUS')
+     A            S80120        30A         TEXT('EMPFÄNGER-NAME-1')
+     A            S80130        30A         TEXT('EMPFÄNGER-NAME-2')
+     A            S80140        30A         TEXT('EMPFÄNGER STRASSE')
+     A            S80150         3A         TEXT('EMPFÄNGER LKZ')
+     A            S80160        10A         TEXT('EMPFÄNGER-PLZ')
+     A            S80170        30A         TEXT('EMPFÄNGER ORT')
+     A            S80180         8A         TEXT('EMPFÄNGER EIGEN')
+     A            S80190        30A         TEXT('FRACHTZAHLER-NAME-1')
+     A            S80200        30A         TEXT('FRACHTZAHLER-NAME-2')
+     A            S80210        30A         TEXT('FRACHTZAHLER-STRASSE')
+     A            S80220         3A         TEXT('FRACHTZAHLER-LKZ')
+     A            S80230        10A         TEXT('FRACHTZAHLER-PLZ')
+     A            S80240        25A         TEXT('FRACHTZAHLER-ORT')
+     A            S80250         8S 2       TEXT('WARENWERT/VERSICHERUNGSSUMM')
+     A            S80260         8S 2       TEXT('NACHNAHMEBETRAG')
+     A            S80270        80A         TEXT('BORDEROTEXT ZUS.INFO SPED.')
+     A            S80280         3S 0       TEXT('TEXTNUMMER 205,301,303,501')
+     A            S80290        20A         TEXT('TEXTZUSATZ DATUM/TELEFON')
+     A            S80300        30A         TEXT('RECHNUNGSTEXT')
+     A            S80310         5A         TEXT('TOURNUMMER IMMER 099')
+     A            S80320         5S 0       TEXT('GEWICHT')
+     A            S80330         6S 0       TEXT('RAUMINHALT N.BEI CBM SPERRE')
+     A            S80340         2S 0       TEXT('FRANKATURKENNZEICHEN')
+     A            S80350        15A         TEXT('ARTNR. 1')
+     A            S80360         4S 0       TEXT('ANZ. VP1')
+     A            S80370         2A         TEXT('VERP.-SCHL.1')
+     A            S80380        12S 3       TEXT('GEWICHT 1')
+     A            S80390        15A         TEXT('ARTNR. 2')
+     A            S80400         4S 0       TEXT('ANZ. VP2')
+     A            S80410         2A         TEXT('VERP.-SCHL 2')
+     A            S80420        12S 3       TEXT('GEWICHT 2')
+     A            S80430        15A         TEXT('ARTNR. 3')
+     A            S80440         4S 0       TEXT('ANZ. VP3')
+     A            S80450         2A         TEXT('VERP.-SCHL 3')
+     A            S80460        12S 3       TEXT('GEWICHT 3')
+     A            S80470         1A         TEXT('VERSENDEN')
+     A            S80480          Z         TEXT('ZEITSTEMPEL')

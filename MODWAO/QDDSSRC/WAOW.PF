@@ -1,0 +1,45 @@
+     A**************************************************************************
+     A*  Copyright 2014 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Beschreibung                                                          *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: RE 18.11.2014 PROJEKT 11070                                 *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R WAOW1
+     A*-------------------------------------------------------------------------
+     A            WAOWLOCK  R               REFFLD(##LOCK)
+     A            WAOWJNAM  R               REFFLD(##JNAM)
+     A            WAOWJDAT  R               REFFLD(##JDAT)
+     A            WAOWJZEI  R               REFFLD(##JZEI)
+     A            WAOWUSER  R               REFFLD(##USER)
+     A            WAOWPROG  R               REFFLD(##PROG)
+     A            WAOWBIBL  R               REFFLD(##BIBL)
+     A            WAOWFIRM  R               REFFLD(##FIRM)
+     A            WAOWRGJJ  R               REFFLD(##RGJJ)
+     A            WAOWRGNR  R               REFFLD(##RGNR)
+     A            WAOWLIJJ  R               REFFLD(##LIJJ)
+     A            WAOWLINR  R               REFFLD(##LINR)
+     A            WAOWREDA  R               REFFLD(##REDA)
+     A            WAOWRAKD  R               REFFLD(##RAKD)
+     A            WAOWKDNR  R               REFFLD(##KDNR)
+     A            WAOWNAM1  R               REFFLD(##NAM1)
+     A            WAOWNAM2  R               REFFLD(##NAM2)
+     A            WAOWSTRA  R               REFFLD(##STRA)
+     A            WAOWLAND  R               REFFLD(##LAND)
+     A            WAOWPOLZ  R               REFFLD(##POLZ)
+     A            WAOWWORT  R               REFFLD(##WORT)
+     A            WAOWUSTI  R               REFFLD(##USTI)
+     A            WAOWWAWT  R               REFFLD(##WAWT)
+     A            WAOWMWBT  R               REFFLD(##MWBT)
+     A            WAOWBRSU  R               REFFLD(##BRSU)
+     A            WAOWRNA1  R               REFFLD(##NAM1)
+     A            WAOWRNA2  R               REFFLD(##NAM2)
+     A            WAOWRSTR  R               REFFLD(##STRA)
+     A            WAOWRLAN  R               REFFLD(##LAND)
+     A            WAOWRPLZ  R               REFFLD(##POLZ)
+     A            WAOWRWOR  R               REFFLD(##WORT)

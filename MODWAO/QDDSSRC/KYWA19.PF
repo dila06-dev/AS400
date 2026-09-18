@@ -1,0 +1,21 @@
+     A**************************************************************************
+     A*  Copyright 2025 by    trend SWM EDV-Beratung GmbH & Co. KG             *
+     A*                       Jechtinger Straße 9                              *
+     A*                       DE 79111 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Zuordnung PRGR/Dometic <- Produktgruppe                               *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: PH 08.05.2025 Case #04280892                                *
+     A*  Änderung: XX XX.XX.XXXX                                               *
+     A**************************************************************************
+     A                                      REF(WA19)
+     A          R KYWA191
+     A*-------------------------------------------------------------------------
+     A            KYWA19FIRMR               REFFLD(WA19FIRM)
+     A            KYWA19TEPGR               REFFLD(WA19TEPG)
+     A            KYWA19PRGRR               REFFLD(WA19PRGR)
+     A            K$WA19FREI    30
+     A            K#WA19LOCKR               REFFLD(WA19LOCK)
+     A            K#WA19FIRMR               REFFLD(WA19FIRM)
+     A            K#WA19TEPGR               REFFLD(WA19TEPG)
+     A            K#WA19PRGRR               REFFLD(WA19PRGR)

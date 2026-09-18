@@ -1,0 +1,45 @@
+     A**************************************************************************
+     A*  Copyright 2010 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Empfang Speditionsdaten                                               *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: SZ 06.03.2011 Projekt 7190                                  *
+     A*  Änderung: SZ 23.09.2011 Projekt 7197, Anzahl 2, Lademittel 2, Text    *
+     A*  Änderung: SZ 30.01.2017 Spediteur, Versandbedingung                   *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R WAOE1
+     A*-------------------------------------------------------------------------
+     A            WAOELOCK  R               REFFLD(##LOCK)
+     A            WAOEJNAM  R               REFFLD(##JNAM)
+     A            WAOEJDAT  R               REFFLD(##JDAT)
+     A            WAOEJZEI  R               REFFLD(##JZEI)
+     A            WAOEUSER  R               REFFLD(##USER)
+     A            WAOEPROG  R               REFFLD(##PROG)
+     A            WAOEBIBL  R               REFFLD(##BIBL)
+     A            WAOEFIRM  R               REFFLD(##FIRM)
+     A            WAOEKMJJ  R               REFFLD(##KMJJ)
+     A            WAOEKMNR  R               REFFLD(##KMNR)
+     A            WAOEKMPO  R               REFFLD(##KMPO)
+     A            WAOEUPOS  R               REFFLD(##UPOS)
+     A            WAOEKDNR  R               REFFLD(##KDNR)
+     A            WAOEDPDN  R               REFFLD(##DPDNAFVS)
+     A            WAOEPAKN  R               REFFLD(##PAKNVSGB)
+     A            WAOEVPMI  R               REFFLD(##VPMI)
+     A            WAOEAZVP  R               REFFLD(##AZVP)
+     A            WAOEGWBR  R               REFFLD(##GWBR)
+     A            WAOEGWDI  R               REFFLD(##GWDI)
+     A            WAOESEDA  R               REFFLD(##SEDA)
+     A            WAOEDATN  R   10          REFFLD(##DTEI)
+     A            WAOESTAT  R               REFFLD(##STAT)
+     A            WAOEVPM2  R               REFFLD(##VPMI)
+     A            WAOEAZV2  R               REFFLD(##AZVP)
+     A            WAOEHINW  R               REFFLD(##HINW)
+     A            WAOESPED  R               REFFLD(##SPED)
+     A            WAOEVSBD  R               REFFLD(##VSBD)
+     A            WAOEFREI  R   38          REFFLD(##FREI)
+     A*

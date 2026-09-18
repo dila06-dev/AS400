@@ -1,0 +1,61 @@
+     A*
+     A*
+     A*
+     A          R TCT_TREND                 TEXT('TCTIN')
+     A********************************************************************
+     A* ZOTN
+     A            IDENT_NR      15A         COLHDG('IDENT-NR            ')
+     A            CODENUMMER    11A         COLHDG('CODENUMMER          ')
+     A            CODE_BEZEI   255A         COLHDG('CODENUMMER BEZEICHNU')
+     A            CODE_AB       08S 0       COLHDG('CODENUM.  GUELTIG AB')
+     A            CODE_USER     25A         COLHDG('CODENUM.  USER      ')
+     A*
+     A            LAND          50A         COLHDG('GS1 LANDKENNUNG     ')
+     A            HME           50A         COLHDG('GS1 MAßEINHEIT      ')
+     A            WARENNUMM     08S 0       COLHDG('WARENNUMMER 85%     ')
+     A            HANDELSMAS     4A         COLHDG('HANDELSMASR GS1     ')
+     A            CODE_USER2    25A         COLHDG('ÄNDERUNG  USER      ')
+     A            CODELANDAB    08S 0       COLHDG('CODENUM.  GUELTIG AB')
+     A* IVSC
+     A            IMP_EXP        1A         COLHDG('IMPORT EXPORT       ')
+     A            CODE          20A         COLHDG('CODE Z.B. Y901      ')
+     A            CODEBEZEI    255A         COLHDG('CODE BEZEICHNUNG    ')
+     A            CODEMASSNC   255A         COLHDG('MAßNAHME WAREN# LAND')
+     A            CODEMASSNW   255A         COLHDG('MAßNAHME CODE#  LAND')
+     A            CODELAND       3A         COLHDG('CODE LAND/MAßNAHME  ')
+     A            CODE_AB2      08S 0       COLHDG('CODENUM. GUELTIG AB ')
+     A            CODE_BIS      08S 0       COLHDG('CODENUM. GUELTIG BIS')
+     A            CODE_USER3    25A         COLHDG('CODENUM. USER IVSC  ')
+     A* IAWR
+     A            CODENR1AWR    11A         COLHDG('DUAL-USE GÜTER      ')
+     A            KEY1AWR       15A         COLHDG('DUAL_USE TEXT       ')
+     A            DUAL_USE      60A         COLHDG('DUAL_USE            ')
+     A            KEY1AB        08S 0       COLHDG('DUAL-USE GUELTIG AB ')
+     A            KEY1BIS       08S 0       COLHDG('DUAL-USE GUELTIG BIS')
+     A            KEY1USER      25A         COLHDG('DUAL-USE USER IAWR  ')
+     A*
+     A            CODENR2AWR    11A         COLHDG('USCCN               ')
+     A            KEY2AWR       15A         COLHDG('USCCN  TEXT         ')
+     A            USCCN         60A         COLHDG('USCCN               ')
+     A            KEY2AB        08S 0       COLHDG('USCCN  GUELTIG AB   ')
+     A            KEY2BIS       08S 0       COLHDG('USCCN  GUELTIG BIS  ')
+     A            KEY2USER      25A         COLHDG('USCCN  USER         ')
+     A*
+     A            CODENR3AWR    11A         COLHDG('EMBARGO GÜTER       ')
+     A            KEY3AWR       15A         COLHDG('EMBARGO TEXT        ')
+     A            EMBARGO       60A         COLHDG('EMBARGO             ')
+     A            KEY3AB        08S 0       COLHDG('EMBARGO GUELTIG AB  ')
+     A            KEY3BIS       08S 0       COLHDG('EMBARGO GUELTIG BIS ')
+     A            KEY3USER      25A         COLHDG('EMBARGO USER        ')
+     A*
+     A* TRACING
+     A*           TRACE         25A         COLHDG('TRACE               ')
+     A********************************************************************
+     A            STATUS         2S 0       COLHDG('STATUS              ')
+     A********************************************************************
+     A            H1              L         TEXT('DATE OF TRANSMISSING')
+     A            H2              Z         TEXT('TIMESTAMP')
+     A            H3              L         TEXT('DATE OF INPUT')
+     A            H4              Z         TEXT('TIMESTAMP INPUT')
+     A            H5              T         TEXT('TIME      INPUT')
+     A*****************************************************************

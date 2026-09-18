@@ -1,0 +1,49 @@
+     A**************************************************************************
+     A*  Copyright 2001 by    trend SWM                                        *
+     A*                       Verwaltungs GmbH                                 *
+     A*                       Ziegelhofstraße 210a                             *
+     A*                       DE 79110 Freiburg                                *
+     A*  --------------------------------------------------------------------- *
+     A*  Rückgabebereich Kunden-Auftrags-Art Parameter     Erweiterung         *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: RE 13.09.2016                                               *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R RTWA131
+     A*-------------------------------------------------------------------------
+     A* allgemeine Rückgabe
+     A*-------------------------------------------------------------------------
+     A            RTWA13PROGR               REFFLD(##PROG)
+     A            RTWA13DANAR               REFFLD(##DANA)
+     A            RTWA13RTCDR               REFFLD(##RTCD)
+     A            RTWA13FFLDR               REFFLD(##FFLD)
+     A            RTWA13FENRR               REFFLD(##FENR)
+     A            RTWA13PA03R               REFFLD(##A010)
+     A                                      TEXT('Parameter 3 bei Fehler')
+     A            RTWA13PA04R               REFFLD(##A010)
+     A                                      TEXT('Parameter 4 bei Fehler')
+     A            RTWA13PA05R               REFFLD(##A010)
+     A                                      TEXT('Parameter 5 bei Fehler')
+     A            RTWA13PA06R               REFFLD(##A010)
+     A                                      TEXT('Parameter 6 bei Fehler')
+     A            RTWA13PA07R               REFFLD(##A010)
+     A                                      TEXT('Parameter 7 bei Fehler')
+     A*-------------------------------------------------------------------------
+     A* ON/OFF Rückgabe KZ für Prüfungen
+     A*-------------------------------------------------------------------------
+     A            RTWA13QQKZR               REFFLD(##A001)
+     A                                      TEXT('ON/OFF-Feld für Prüfung 1')
+     A            RTWA13YYKZR               REFFLD(##A001)
+     A                                      TEXT('ON/OFF-Feld für Prüfung 2')
+     A            RTWA13FR01R               REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* Key-Felder
+     A*-------------------------------------------------------------------------
+     A            RTWA13AFATR               REFFLD(WA131/WA13AFAT *LIBL/WA13)
+     A            RTWA13FR02R  256          REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* evt. weitere Felder nach Ermittlung
+     A*-------------------------------------------------------------------------
+     A            RTWA13TLKZR               REFFLD(WA131/WA13TLKZ *LIBL/WA13)
+     A            RTWA13FR03R  657          REFFLD(##FREI)

@@ -1,0 +1,15 @@
+     A                                      UNIQUE
+     A          R ARTIERR
+     A            ART030        15A         TEXT('ARTIKEL')
+     A            E1            15A         TEXT('ERSATZARTIKEL 1')
+     A            E2            15A         TEXT('ERSATZARTIKEL 2')
+     A            E3            15A         TEXT('ERSATZARTIKEL 3')
+     A            E4            15A         TEXT('ERSATZARTIKEL 4')
+     A            E5            15A         TEXT('ERSATZARTIKEL 5')
+     A            E6            15A         TEXT('ERSATZARTIKEL 6')
+     A            E7            15A         TEXT('ERSATZARTIKEL 7')
+     A            E8            15A         TEXT('ERSATZARTIKEL 8')
+     A            E9            15A         TEXT('ERSATZARTIKEL 9')
+     A            E10           15A         TEXT('ERSATZARTIKEL 10')
+
+     A          K ART030

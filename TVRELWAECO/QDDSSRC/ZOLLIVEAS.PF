@@ -1,0 +1,23 @@
+     A*
+     A*         DATUM IMMER TT.MM.JJJJ
+     A*         ZEIT  IMMER HH:MM
+     A          R ZOLLIVEAS                 TEXT('ZOLLIVEAS')
+     A*****************************************************************
+     A            LFD#           7S 0       TEXT('LFD NUMMER')
+     A            ART#          30A         TEXT('ITEM')
+     A            KURZBEZ      100A         TEXT('BEZEICHNUNG KURZ')
+     A            LANGBEZ      250A         TEXT('BEZEICHNUNG LANG')
+     A            ZOLLBEZ      250A         TEXT('BEZEICHNUNG ZOLL')
+     A            ZOLLTARIF     11A         TEXT('TRAIFCODE')
+     A            UL             5A         TEXT('URSPRUNGSLAND')
+     A            VERSREG        5A         TEXT('VERSANDREGION')
+     A            CODIERUNG     12A         TEXT('KODIERUNG')
+     A            UC_TYP        20A         TEXT('UC_TYP')
+     A            USRADD        20A         TEXT('USER ADD')
+     A            USRCHANGE     20A         TEXT('USER CHANGE')
+     A            DATEADD       40A         TEXT('DATE ADD')
+     A            DATECHANGE    40A         TEXT('DATE CHANGE')
+     A            WARE           1A         TEXT('HANDELSWARE')
+     A            STATUS_I       2A         TEXT('STATUS')
+     A            DATE_I          L         TEXT('Date of transmissing')
+     A            TSTAMP_I        Z         TEXT('TIMESTAMP')

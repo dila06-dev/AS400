@@ -1,0 +1,516 @@
+
+      //************************************************************************
+      //
+      //      Programmname       .....................
+      //      Erstellt  am       2017
+      //      Erstellt von       IT Dometic
+      //
+      */      Beschreibung
+      // ----------------------------------+------------------------------------
+      // Geändert am Kürzel Name           ! Anfo-Nr. (Zeile 1) + Beschreibung
+      // ----------------------------------+------------------------------------
+      //                                   !
+      //  tt.mm.jjjj  xx01  .............. !
+      //                                   !
+      //************************************************************************
+
+      //------------------------------------------------------------------------
+      //    S T E U E R - B E S T I M M U N G E N
+      //------------------------------------------------------------------------
+      //h datfmt(*EUR)
+     h datfmt(*DMY)
+     h datedit(*DMY.)
+     h timfmt(*HMS:)
+     h decedit('0,')
+     h langid('DE')
+     h option(*SRCSTMT:*NoDebugIO)
+     h dftactgrp(*no) actgrp(*caller)
+     h copyright('IT Dometic 2017')
+     h PGMINFO(*PCML:*Module)
+
+      //------------------------------------------------------------------------
+      //    D A T E I - D E F I N I T I O N E N
+      //------------------------------------------------------------------------
+
+
+      //------------------------------------------------------------------------
+      //    D A T E N S T R U K T U R E N
+      //------------------------------------------------------------------------
+      // System-Datenstruktur
+
+
+
+      // System-Datenstruktur
+     d DSPGM          SDS
+     d  §§§PGM                 1     10
+     d  §§§STS                11     15
+     d  §§§SEQ                21     28
+     d  §§§SR                 29     36
+     d  §§§MSG                40     46
+     d  §§§LIB                81     90
+     d  §§§MTX                91    170
+     d  §§§FIL               201    208
+     d  §§§FST               209    243
+     d  §§§JOB               244    253
+     d  §§§USR               254    263
+     d  §§§JNO               264    269  0
+     d  §§§SDT               276    281  0
+     d  §§§STM               282    287  0
+
+
+     D MD#2            S              1    DIM(512)
+     D ATR             S              1    DIM(63)
+     D ATTS            S              1    DIM(1)
+     D ATTK            S              1    DIM(1)
+     D ATTO            S              1    DIM(1)
+     D KEY             S              2    DIM(24)
+     D FKTTST          S              1    DIM(6)
+
+      //------------------------------------------------------------------------
+      //    V A R I A B L E N
+      //------------------------------------------------------------------------
+      // qcmdexc
+      //------------------------------------------------------------------------
+     D Wrk             DS                  Qualified inz
+     D Var1                         480A   inz(' ')
+     D L               s              9  0
+     D
+     D QCMDEXC         PR                  ExtPgm('QCMDEXC')
+     D cmd                        32702A   const options(*varsize)
+     D len                           15P 5 const
+
+     D cmd             s            520A   varying
+
+       // ______________________________________________________________________
+       // dummy512
+       // ______________________________________________________________________
+     D DUMMY512        PR                  ExtPgm('DUMMY512')
+       //p_md                         001a   DIM(256)
+     D p_md                         256a
+     D p_MSG                          7a
+     D p_MSGF                        10a
+     D p_PRINT                       10a
+     D p_OUTFIL                      10a
+     D p_LIB                         10a
+     D P_REPADD                      10a
+
+       // Sicherung pbestlo
+       // ______________________________________________________________________
+     d   #DATECHE##    PR                  ExtPgm('#DATECHE##')
+
+      // dummy512
+      //------------------------------------------------------------------------
+      // p_md            s            001a   inz
+      //                                     dim(256)
+     D p_md            s            256a   inz
+     D p_MSG           s              7a   inz
+     D p_MSGF          s             10a   inz
+     D p_PRINT         s             10a   inz
+     D p_OUTFIL        s             10a   inz
+     D p_LIB           s             10a   inz
+     D P_REPADD        s             10a   inz
+
+     D w_rrn           s              2  0 inz
+     D status          s            132A   inz
+     D P_INFIL         s             21A   inz
+     D §RECORDS        s              7  0 inz
+     D error1          s              1a   inz
+     D error2          s              1a   inz
+     D error3          s              1a   inz
+     D error4          s              1a   inz
+     D error5          s              1a   inz
+     D Quser           s             10a   inz
+     D Qjob            s             10a   inz
+     D Qnumber         s              6a   inz
+     D link            s             26a   inz
+     D Qspool          s             10a   inz
+     D qlfdnr          s              4a   inz
+     D qoutq           s             10a   inz
+     D qinputdat       s             08a   inz
+     D qinputdat#      s               d   DATFMT(*ymd)
+     D qinputtime      s             08a   inz
+
+      //------------------------------------------------------------------------
+      //    V A R I A B L E N
+      //------------------------------------------------------------------------
+
+      /eject
+      //************************************************************************
+      //          -----------------
+      //          M A I N - L I N E
+      //          -----------------
+      //************************************************************************
+
+     C     *ENTRY        PLIST
+     C                   PARM                    UPLSTD            6
+     C                   PARM                    days              6 0
+      /FREE
+
+       Exec Sql
+        set option commit = *none, datfmt = *iso, timfmt = *iso;
+
+       eval status ='Start #DATECHECK USERI5            eingeleitet';
+
+       if        UPLSTD  = '$$$$$$';
+          exsr      SR_log;
+          exsr sr2000;
+          exsr SR_output;
+       endif;
+
+       if        UPLSTD  = '      ';
+          days =    999999;
+       else;
+          exsr      sr1000;
+       endif;
+
+
+
+       eval status ='Ende #DATECHECK USERI5            eingeleitet';
+
+       if        UPLSTD  = '$$$$$$';
+          exsr      SR_log;
+       endif;
+
+       *inlr = *on;
+
+       //-----------------------------------------------------------------------
+       //report
+       //-----------------------------------------------------------------------
+
+       begsr SR2000;
+
+       //sql handling
+       // exec sql
+       //            whenever not found CONTINUE;;
+       // exec sql
+       //            WHENEVER SQLWARNING CONTINUE;
+       // exec sql
+       //            WHENEVER SQLERROR  CONTINUE;
+
+       error5  = ' ';
+       MONITOR;
+          Wrk.var1 =
+              'CLRPFM FILE(tvrelwaeco/USERI5)';
+          cmd = %TrimR(Wrk.Var1);
+          L      = %Len(Cmd);
+          QCMDEXC(cmd: %len(cmd));
+          on-error;
+             status='error CLRPFM FILE(tvrelwaeco/USERI5)           ';
+             exsr      SR_log;
+             error5  = '1';
+       endmon;
+
+       MONITOR;
+          Wrk.var1 =
+              'CLRPFM FILE(tvrelwaeco/#DSPUSRPRF)';
+          cmd = %TrimR(Wrk.Var1);
+          L      = %Len(Cmd);
+          QCMDEXC(cmd: %len(cmd));
+          on-error;
+             status='error CLRPFM FILE(tvrelwaeco/#DSPUSRPRF)       ';
+             exsr      SR_log;
+             error5  = '1';
+       endmon;
+
+       MONITOR;
+          Wrk.var1 =
+              'DSPUSRPRF ' +
+              'USRPRF(*ALL) TYPE(*BASIC) OUTPUT(*OUTFILE) ' +
+              'OUTFILE(TVRELWAECO/#DSPUSRPRF) ' +
+              'OUTMBR(*FIRST *REPLACE)';
+          cmd = %TrimR(Wrk.Var1);
+          L      = %Len(Cmd);
+          QCMDEXC(cmd: %len(cmd));
+          on-error;
+             status='error DSPUSRPRF (tvrelwaeco/#DSPUSRPRF)        ';
+             exsr      SR_log;
+             error5  = '1';
+       endmon;
+
+       if error5 = ' ';
+       //clear
+       exec sql
+          delete  FROM admin_bari WHERE date( SEL0004 ) =current date;
+       exec sql
+          delete  FROM #US5000 WHERE date( SEL1 ) =current date;
+
+       //Userprotokoll
+       exec sql
+          insert into tvrelwaeco/#US5000
+          SELECT UPUPRF,UPUSCL,UPPWCD,UPPWCT,UPPSOD,UPPSOT,UPSPAU,
+                 UPINPG,UPINPL,UPJBDS,UPOWNR,UPSTAT,UPENLM,UPLPWM, UPPWCB,
+                 UPLSTD,current timestamp FROM TVRELWAECO/#DSPUSRPRF;
+
+
+       //User, die gelöscht werden sollten nach ??? Tagen
+       exec sql
+          insert into tvrelwaeco/ADMIN_BARI
+          SELECT   distinct UPUPRF,UPSTAT,
+                   case
+                   when UPLSTD <> ' ' then
+                   days(current date) -
+                   days(date(substr((UPLSTD), 5, 2) concat '.' concat
+                             substr((UPLSTD), 3, 2) concat '.' concat
+                             substr((UPLSTD), 1, 2)  ) +0 days )
+                   else 99999
+                   end,
+                   current timestamp,
+                   char('Job will *DISABLED this userprofile', 100) todo
+                   from TVRELWAECO/#DSPUSRPRF
+                   where  UPSTAT   = '*ENABLED' and
+                   ( UPLSTD <> ' ' and
+                   days(current date) -
+                   days(date(substr((UPLSTD), 5, 2) concat '.' concat
+                             substr((UPLSTD), 3, 2) concat '.' concat
+                             substr((UPLSTD), 1, 2)  ) +0 days ) > :days);
+
+       //neue User
+       exec sql
+          insert into tvrelwaeco/ADMIN_BARI
+          SELECT   distinct UPUPRF,UPSTAT,
+                   case
+                   when UPLSTD <> ' ' then
+                   days(current date) -
+                   days(date(substr((UPLSTD), 5, 2) concat '.' concat
+                             substr((UPLSTD), 3, 2) concat '.' concat
+                             substr((UPLSTD), 1, 2)  ) +0 days )
+                   else 99999
+                   end,
+                   current timestamp,
+                   char('Neuer User eingerichtet            ', 100) todo
+                   from TVRELWAECO/#DSPUSRPRF
+                   where
+                   UPUPRF not in (select upuprf from #US5000
+                                  WHERE SEL1 < current date -01 day);
+
+       //komplett gelöschte User
+       exec sql
+          insert into tvrelwaeco/ADMIN_BARI
+          SELECT   distinct UPUPRF,UPSTAT,
+                   case
+                   when UPLSTD <> ' ' then
+                   days(current date) -
+                   days(date(substr((UPLSTD), 5, 2) concat '.' concat
+                             substr((UPLSTD), 3, 2) concat '.' concat
+                             substr((UPLSTD), 1, 2)  ) +0 days )
+                   else 99999
+                   end,
+                   current timestamp,
+                   char('User gelöscht                      ', 100) todo
+                   from TVRELWAECO/#US5000
+                   where
+                   UPUPRF not in (select upuprf from #DSPUSRPRF);
+
+       callp       #DATECHE##();
+
+       //aktuelle Liste
+       exec sql
+          insert into tvrelwaeco/USERI5
+          SELECT *  FROM admin_bari, #DSPUSRPRF
+          WHERE date( SEL0004 ) = current date and
+                admin_barI.UPUPRF= #DSPUSRPRF.UPUPRF;
+       endif;
+
+       endsr;
+
+       //-----------------------------------------------------------------------
+       //Date ermittlung
+       //-----------------------------------------------------------------------
+
+       begsr SR1000;
+
+       //aktuelle Liste
+       exec sql
+          SELECT days(current date) -
+                 days(date(substr((:UPLSTD), 5, 2) concat '.' concat
+                           substr((:UPLSTD), 3, 2) concat '.' concat
+                           substr((:UPLSTD), 1, 2)  ) +0 days )
+                 into: days
+                 from qsys2/qsqptabl;
+
+       endsr;
+
+       //-----------------------------------------------------------------------
+       //report
+       //-----------------------------------------------------------------------
+
+       begsr SR_output;
+
+         eval p_infil   =  'USERI5'        +
+                        %char(%dec(%char(%date():*iso0):8:0)) +
+                        %char(%dec(%char(%time():*iso0):8:0));
+         eval p_outfil =  'USERI5';
+
+         eval p_msgf    =  *blank;
+         eval p_print   =  *blank;
+         eval p_lib     =  'TVRELWAECO';
+
+         clear     Wrk.var1;
+         clear     status;
+
+       MONITOR;
+       Wrk.var1 =
+           'RMVLNK OBJLNK(''/IT/USERI5_'')';
+         cmd = %TrimR(Wrk.Var1);
+         l      = %Len(Cmd);
+         QCMDEXC(cmd: %len(cmd));
+          status='rmvlnk successful removed /IT/USERI5_*';
+          exsr      SR_log;
+       on-error;
+          status='Error by rmvlnk object /Lager/USERI5_*';
+          exsr      SR_log;
+       endmon;
+
+       eval p_outfil =  'USERI5';
+
+       MONITOR;
+       Wrk.var1 =
+           'CVTDBF OBJ(''/IT/'+ p_infil +''  +
+                      '.csv'') ' +
+           'DBFILE(TVRELWAECO/'+ p_outfil +') DBOUTFMT(*CSV) '  +
+           'DBFLDDSC(*YES)';
+         cmd = %TrimR(Wrk.Var1);
+         l      = %Len(Cmd);
+         QCMDEXC(cmd: %len(cmd));
+          status='CVTDBF successful done USERI5                    ';
+          exsr      SR_log;
+       on-error;
+          status='Error by CVTDBF object USERI5                    ';
+          exsr      SR_log;
+       endmon;
+       eval p_outfil =  'USERI5   ';
+
+       MONITOR;
+       Wrk.var1 =
+           'CHGAUT OBJ(''/IT/'+ p_infil +''  +
+                      '.csv'') ' +
+           'USER(GANG) DTAAUT(*RWX)                   ' +
+           'OBJAUT(*OBJMGT *OBJEXIST *OBJALTER *OBJREF)';
+         cmd = %TrimR(Wrk.Var1);
+         L      = %Len(Cmd);
+         QCMDEXC(cmd: %len(cmd));
+          status='chgaut successful FILE(TVRELWAECO/USERI5) gang  ';
+       on-error;
+          status='Error by chgaut object (TVRELWAECO/USERI5) gang ';
+       endmon;
+
+
+         eval p_infil   =  'ADMIN_BARI'    +
+                        %char(%dec(%char(%date():*iso0):8:0)) +
+                        %char(%dec(%char(%time():*iso0):8:0));
+         eval p_outfil =  'USERI5';
+
+         eval p_msgf    =  *blank;
+         eval p_print   =  *blank;
+         eval p_lib     =  'TVRELWAECO';
+
+         clear     Wrk.var1;
+         clear     status;
+
+       MONITOR;
+       Wrk.var1 =
+           'RMVLNK OBJLNK(''/IT/ADMIN_BARI_'')';
+         cmd = %TrimR(Wrk.Var1);
+         l      = %Len(Cmd);
+         QCMDEXC(cmd: %len(cmd));
+          status='rmvlnk successful removed /IT/ADMIN_BARI_*';
+          exsr      SR_log;
+       on-error;
+          status='Error by rmvlnk object /Lager/ADMIN_BARI_*)';
+          exsr      SR_log;
+       endmon;
+
+       eval p_outfil =  'ADMIN_BARI';
+
+       MONITOR;
+       Wrk.var1 =
+           'CVTDBF OBJ(''/IT/'+ p_infil +''  +
+                      '.csv'') ' +
+           'DBFILE(TVRELWAECO/'+ p_outfil +') DBOUTFMT(*CSV) '  +
+           'DBFLDDSC(*YES)';
+         cmd = %TrimR(Wrk.Var1);
+         l      = %Len(Cmd);
+         QCMDEXC(cmd: %len(cmd));
+          status='CVTDBF successful done ADMIN_BARI                ';
+          exsr      SR_log;
+       on-error;
+          status='Error by CVTDBF object ADMIN_BARI                ';
+          exsr      SR_log;
+       endmon;
+       eval p_outfil =  'ADMIN_BARI';
+
+       MONITOR;
+       Wrk.var1 =
+           'CHGAUT OBJ(''/IT/'+ p_infil +''  +
+                      '.csv'') ' +
+           'USER(GANG) DTAAUT(*RWX)                   ' +
+           'OBJAUT(*OBJMGT *OBJEXIST *OBJALTER *OBJREF)';
+         cmd = %TrimR(Wrk.Var1);
+         L      = %Len(Cmd);
+         QCMDEXC(cmd: %len(cmd));
+          status='chgaut successful FILE(TVRELWAECO/ADMIN_BARI) gang  ';
+       on-error;
+          status='Error by chgaut object (TVRELWAECO/ADMIN_BARI) gang ';
+       endmon;
+
+
+
+
+
+
+       MONITOR;
+       Wrk.var1 =
+           'STRPCO PCTA(*NO)';
+         cmd = %TrimR(Wrk.Var1);
+         L      = %Len(Cmd);
+         QCMDEXC(cmd: %len(cmd));
+          status='STRPCO successful                                  ';
+       on-error;
+          status='Error by STRPCO                                  ';
+       endmon;
+
+       MONITOR;
+       Wrk.var1 =
+           'STRPCCMD PCCMD(''//172.16.100.1/IT/cpy.cmd'')';
+         cmd = %TrimR(Wrk.Var1);
+         L      = %Len(Cmd);
+         QCMDEXC(cmd: %len(cmd));
+          status='STRPCCMD successful FILE(TVRELWAECO/..USERI5)        ';
+       on-error;
+          status='Error by STRPCCMD object (TVRELWAECO/..USERI5)     ';
+       endmon;
+
+       endsr;
+
+       //-----------------------------------------------------------------------
+       //log report
+       //-----------------------------------------------------------------------
+
+       begsr sr_log;
+
+         clear p_md;
+       //  %Subarr(p_md:01)  = 'AT_item   ';
+       //  %Subarr(p_md:11:10)  = §§§JOB;
+       //  %Subarr(p_md:22:10)  = §§§USR;
+       //  %Subarr(p_md:33:132) = status;
+         eval p_md      =  §§§PGM         +
+                           §§§JOB         +
+                           §§§USR         +
+                           status;
+
+         eval p_msg     =  '#DC0002';
+         eval p_msgf    =  *blank;
+         eval p_print   =  *blank;
+         eval p_outfil  =  'JOB_RUN   ';
+         eval p_lib     =  'TVRELWAECO';
+         eval p_repadd  =  '*ADD';
+
+         callP DUMMY512(p_md:     p_msg:    p_msgf:     p_print:
+                        p_outfil: p_lib:    p_repadd);
+         clear status;
+
+       //callP     QMHSNDPM('CPF9897': 'QCPFMSG   *LIBL':
+       //            Msg: MsgLen: '*ESCAPE':
+       //            '*': 3: TheKey: dsEC);
+
+       endsr;

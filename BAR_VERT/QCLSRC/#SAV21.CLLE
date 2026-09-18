@@ -1,0 +1,107 @@
+/*       PROGRAMMNAME:  #sav21                                       */
+/*       VERFASSER   :  schneider   STAND:15.03.2013                 */
+/*       BESCHREIBUNG:  sicherung komplettes system                  */
+/*                      ULTRIUM-4 MAGNETBAND                         */
+/*                                                                   */
+/*                                                                   */
+/*  GEÄNDERT:                                                        */
+/*                                                                   */
+/*                                                                   */
+/*                                                                   */
+/*********************************************************************/
+             PGM        PARM(&RESTART)
+
+             DCL        VAR(&RESTART) TYPE(*CHAR) LEN(4)
+
+             CHGJOB     LOG(4 00 *SECLVL) LOGCLPGM(*YES) +
+                          LOGOUTPUT(*JOBEND)
+/*___________________________________________________________________  _______*/
+
+
+             IF         COND(&RESTART = '    ') THEN(DO)
+             CHGVAR     VAR(&RESTART) VALUE(*YES)
+             ENDDO
+
+
+             CHKTAP     DEV(TAP01) ENDOPT(*REWIND)
+             MONMSG     MSGID(CPF6760) EXEC(GOTO CMDLBL(FEHLER))
+             MONMSG     MSGID(CPF6772) EXEC(INZTAP DEV(TAP01) +
+                          NEWVOL(WAECO) NEWOWNID(WAECO) CHECK(*NO) +
+                          DENSITY(*CTGTYPE))
+             INZTAP     DEV(TAP01) NEWVOL(WAECO) NEWOWNID(WAECO) +
+                          CHECK(*NO) DENSITY(*CTGTYPE)
+
+/*___________________________________________________________________  _______*/
+/*    gesamtsicherung mit ipl                                          -------*/
+/*___________________________________________________________________  _______*/
+
+/*___________________________________________________________________  _______*/
+/*  beenden subsysteme trend                                           -------*/
+/*___________________________________________________________________  _______*/
+             ENDSBS     SBS(TRDMDE) OPTION(*IMMED) ENDSBSOPT(*NOJOBLOG)
+             MONMSG     MSGID(CPF0000)
+             DLYJOB     DLY(60)
+
+             ENDSBS     SBS(TRBATCH) OPTION(*IMMED) +
+                          ENDSBSOPT(*NOJOBLOG)
+             MONMSG     MSGID(CPF0000)
+             DLYJOB     DLY(60)
+
+             ENDSBS     SBS(TRXCALP) OPTION(*IMMED) +
+                          ENDSBSOPT(*NOJOBLOG)
+             MONMSG     MSGID(CPF0000)
+             DLYJOB     DLY(60)
+
+             ENDSBS     SBS(TRXCALW) OPTION(*IMMED) +
+                          ENDSBSOPT(*NOJOBLOG)
+             MONMSG     MSGID(CPF0000)
+             DLYJOB     DLY(60)
+
+/*___________________________________________________________________  _______*/
+
+             ENDSBS     SBS(*ALL) OPTION(*IMMED) +
+                          ENDSBSOPT(*NOJOBLOG) BCHTIMLMT(*NOMAX)
+             MONMSG     MSGID(CPF0000) EXEC(GOTO CMDLBL(CTL))
+             DLYJOB     DLY(800)
+
+             SAVSYS     DEV(TAP01) ENDOPT(*LEAVE)
+             MONMSG     MSGID(CPF0000) EXEC(GOTO CMDLBL(CTL))
+
+             SAVSECDTA  DEV(TAP01) ENDOPT(*LEAVE)
+             MONMSG     MSGID(CPF0000) EXEC(GOTO CMDLBL(CTL))
+             SAVCFG     DEV(TAP01) ENDOPT(*LEAVE)
+             MONMSG     MSGID(CPF0000) EXEC(GOTO CMDLBL(CTL))
+
+             SAVLIB     LIB(*NONSYS) DEV(TAP01) ENDOPT(*LEAVE)
+             MONMSG     MSGID(CPF0000) EXEC(GOTO CMDLBL(CTL))
+
+             SAVDLO     DLO(*ALL) FLR(*ANY) DEV(TAP01) ENDOPT(*LEAVE)
+             MONMSG     MSGID(CPF0000) EXEC(GOTO CMDLBL(CTL))
+
+             SAV        DEV('QSYS.LIB/TAP01.DEVD') OBJ(('/*' +
+                          *INCLUDE) ('/QSYS.LIB' *OMIT) ('/QDLS' +
+                          *OMIT) ('/QIBM' *OMIT) +
+                          ('/TRENDJAVA/PRINTJOBS' *OMIT) +
+                          ('/TRENDJAVA/PRINTJOBSTEST' *OMIT)) +
+                          SAVACT(*YES) ENDOPT(*UNLOAD) UPDHST(*YES) +
+                          DTACPR(*NO)
+             MONMSG     MSGID(CPF0000) EXEC(GOTO CMDLBL(CTL))
+
+             SNDMSG     MSG('Sichrung komplett durchgeführt vor +
+                          IPL') TOUSR(BARENKAMP)
+             MONMSG     MSGID(CPF0000) EXEC(GOTO CMDLBL(CTL))
+
+/*___________durchführen ipl _________________________________________________*/
+
+ CTL:        PWRDWNSYS  OPTION(*IMMED) RESTART(&RESTART) CONFIRM(*NO)
+/*____________________________________________________________________________*/
+
+             GOTO       CMDLBL(ENDE)
+
+ FEHLER:     SNDMSG     MSG('Achtung: keine Sicherung, da kein Band +
+                          eingelegt war!!') TOUSR(*SYSOPR)
+             SNDMSG     MSG('Achtung: keine Sicherung, da kein Band +
+                          eingelegt war!!') TOUSR(BARENKAMP)
+
+ ENDE:       RCLRSC
+             ENDPGM

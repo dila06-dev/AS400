@@ -1,0 +1,2807 @@
+2014-04-14-17.34.58.369686   14.04.2014   17.34.58
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd domains/dometic-group.com
+550 /domains/dometic-group.com: No such file or directory.
+Einen FTP-Unterbefehl eingeben.
+> lcd TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> REM *** *******************************************************  **************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> PUT TVRELWAECO/DE411-*
+Zeichen (-) ist im Objektnamen nicht zulässig.
+Einen FTP-Unterbefehl eingeben.
+> quit
+221 Goodbye!
+2014-04-14-17.45.01.432916   14.04.2014   17.45.01
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20140414.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,10,111)
+150 Opening ASCII mode data connection for DE411-20140414.txt.
+226 Transfer complete.
+5399014 Byte in 2.986 Sekunden übertragen. Übertragungsgeschwindigkeit 1807.911 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2014-05-09-13.19.53.898933   09.05.2014   13.19.53
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20140509.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,10,19)
+150 Opening ASCII mode data connection for DE411-20140509.txt.
+226 Transfer complete.
+5514904 Byte in 4.014 Sekunden übertragen. Übertragungsgeschwindigkeit 1374.030 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2014-05-14-15.04.17.233965   14.05.2014   15.04.17
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20140514.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,9,217)
+150 Opening ASCII mode data connection for DE411-20140514.txt.
+226 Transfer complete.
+8759394 Byte in 8.050 Sekunden übertragen. Übertragungsgeschwindigkeit 1088.150 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2014-05-26-16.19.09.951661   26.05.2014   16.19.09
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20140526.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,12,53)
+150 Opening ASCII mode data connection for DE411-20140526.txt.
+226 Transfer complete.
+9088508 Byte in 14.574 Sekunden übertragen. Übertragungsgeschwindigkeit 623.602 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2014-05-27-14.47.11.147917   27.05.2014   14.47.11
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20140527.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,16,0)
+150 Opening ASCII mode data connection for DE411-20140527.txt.
+226 Transfer complete.
+9135152 Byte in 4.867 Sekunden übertragen. Übertragungsgeschwindigkeit 1876.885 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2014-06-05-08.27.03.571941   05.06.2014   08.27.03
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20140605.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,14,218)
+150 Opening ASCII mode data connection for DE411-20140605.txt.
+226 Transfer complete.
+     0 Byte in 0.001 Sekunden übertragen. Übertragungsgeschwindigkeit 0.000 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2014-06-05-10.12.51.523050   05.06.2014   10.12.51
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20140605.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,15,35)
+150 Opening ASCII mode data connection for DE411-20140605.txt.
+226 Transfer complete.
+18166204 Byte in 10.286 Sekunden übertragen. Übertragungsgeschwindigkeit 1766.087 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2014-06-06-06.25.48.003862   06.06.2014   06.25.48
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20140606.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,13,74)
+150 Opening ASCII mode data connection for DE411-20140606.txt.
+226 Transfer complete.
+     0 Byte in 0.001 Sekunden übertragen. Übertragungsgeschwindigkeit 0.000 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2014-06-06-11.26.15.237185   06.06.2014   11.26.15
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20140606.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,15,189)
+150 Opening ASCII mode data connection for DE411-20140606.txt.
+226 Transfer complete.
+9093120 Byte in 21.761 Sekunden übertragen. Übertragungsgeschwindigkeit 417.868 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2014-06-13-08.27.08.643936   13.06.2014   08.27.08
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20140613.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,12,147)
+150 Opening ASCII mode data connection for DE411-20140613.txt.
+226 Transfer complete.
+9186728 Byte in 6.009 Sekunden übertragen. Übertragungsgeschwindigkeit 1528.882 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2014-06-20-08.36.41.980828   20.06.2014   08.36.41
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20140620.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,13,80)
+150 Opening ASCII mode data connection for DE411-20140620.txt.
+226 Transfer complete.
+     0 Byte in 0.004 Sekunden übertragen. Übertragungsgeschwindigkeit 0.000 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2014-06-23-10.36.27.540944   23.06.2014   10.36.27
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20140623.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,12,93)
+150 Opening ASCII mode data connection for DE411-20140623.txt.
+226 Transfer complete.
+9318328 Byte in 6.863 Sekunden übertragen. Übertragungsgeschwindigkeit 1357.707 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2014-06-27-08.45.56.836079   27.06.2014   08.45.56
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20140627.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,11,158)
+150 Opening ASCII mode data connection for DE411-20140627.txt.
+226 Transfer complete.
+9394586 Byte in 8.458 Sekunden übertragen. Übertragungsgeschwindigkeit 1110.733 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2014-07-04-08.45.42.065790   04.07.2014   08.45.42
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20140704.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,11,178)
+150 Opening ASCII mode data connection for DE411-20140704.txt.
+226 Transfer complete.
+9513842 Byte in 10.121 Sekunden übertragen. Übertragungsgeschwindigkeit 940.001 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2014-07-11-08.51.03.619398   11.07.2014   08.51.03
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20140711.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,5,233)
+150 Opening ASCII mode data connection for DE411-20140711.txt.
+226 Transfer complete.
+9646802 Byte in 5.374 Sekunden übertragen. Übertragungsgeschwindigkeit 1795.080 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2014-07-18-08.53.22.742424   18.07.2014   08.53.22
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20140718.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,9,187)
+150 Opening ASCII mode data connection for DE411-20140718.txt.
+226 Transfer complete.
+9749588 Byte in 5.327 Sekunden übertragen. Übertragungsgeschwindigkeit 1830.170 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2014-07-25-08.56.46.986667   25.07.2014   08.56.46
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20140725.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,4,202)
+150 Opening ASCII mode data connection for DE411-20140725.txt.
+226 Transfer complete.
+9808536 Byte in 7.176 Sekunden übertragen. Übertragungsgeschwindigkeit 1366.895 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2014-08-01-09.05.56.137109   01.08.2014   09.05.56
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20140801.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,10,147)
+150 Opening ASCII mode data connection for DE411-20140801.txt.
+226 Transfer complete.
+9881028 Byte in 6.196 Sekunden übertragen. Übertragungsgeschwindigkeit 1594.669 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2014-08-08-09.09.21.134911   08.08.2014   09.09.21
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20140808.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,8,176)
+150 Opening ASCII mode data connection for DE411-20140808.txt.
+226 Transfer complete.
+9976882 Byte in 6.397 Sekunden übertragen. Übertragungsgeschwindigkeit 1559.506 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2014-08-15-09.04.06.224362   15.08.2014   09.04.06
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20140815.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,15,138)
+150 Opening ASCII mode data connection for DE411-20140815.txt.
+226 Transfer complete.
+10029498 Byte in 7.771 Sekunden übertragen. Übertragungsgeschwindigkeit 1290.551 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2014-08-22-09.04.37.755178   22.08.2014   09.04.37
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20140822.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,9,115)
+150 Opening ASCII mode data connection for DE411-20140822.txt.
+226 Transfer complete.
+10072056 Byte in 4.967 Sekunden übertragen. Übertragungsgeschwindigkeit 2027.878 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2014-08-29-09.07.50.929868   29.08.2014   09.07.50
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20140829.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,13,221)
+150 Opening ASCII mode data connection for DE411-20140829.txt.
+226 Transfer complete.
+10163904 Byte in 6.747 Sekunden übertragen. Übertragungsgeschwindigkeit 1506.417 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2014-09-05-09.11.22.103080   05.09.2014   09.11.22
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20140905.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,17,100)
+150 Opening ASCII mode data connection for DE411-20140905.txt.
+226 Transfer complete.
+10441168 Byte in 9.338 Sekunden übertragen. Übertragungsgeschwindigkeit 1118.151 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2014-09-12-09.14.02.898781   12.09.2014   09.14.02
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20140912.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,16,230)
+150 Opening ASCII mode data connection for DE411-20140912.txt.
+226 Transfer complete.
+10618972 Byte in 11.715 Sekunden übertragen. Übertragungsgeschwindigkeit 906.454 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2014-09-19-09.15.06.361711   19.09.2014   09.15.06
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20140919.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,5,138)
+150 Opening ASCII mode data connection for DE411-20140919.txt.
+226 Transfer complete.
+10672228 Byte in 8.798 Sekunden übertragen. Übertragungsgeschwindigkeit 1213.049 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2014-09-26-09.18.12.932318   26.09.2014   09.18.12
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20140926.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,19,92)
+150 Opening ASCII mode data connection for DE411-20140926.txt.
+226 Transfer complete.
+10777220 Byte in 5.904 Sekunden übertragen. Übertragungsgeschwindigkeit 1825.318 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2014-10-03-09.17.29.053754   03.10.2014   09.17.29
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20141003.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,14,109)
+150 Opening ASCII mode data connection for DE411-20141003.txt.
+226 Transfer complete.
+10894676 Byte in 6.192 Sekunden übertragen. Übertragungsgeschwindigkeit 1759.367 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2014-10-06-12.11.18.602941   06.10.2014   12.11.18
+2014-10-06-12.28.20.423410   06.10.2014   12.28.20
+2014-10-06-12.31.09.596413   06.10.2014   12.31.09
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20141006.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,12,192)
+150 Opening ASCII mode data connection for DE411-20141006.txt.
+226 Transfer complete.
+15526918 Byte in 9.870 Sekunden übertragen. Übertragungsgeschwindigkeit 1573.124 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2014-10-10-09.21.53.579150   10.10.2014   09.21.53
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20141010.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,14,5)
+150 Opening ASCII mode data connection for DE411-20141010.txt.
+226 Transfer complete.
+10947292 Byte in 5.246 Sekunden übertragen. Übertragungsgeschwindigkeit 2086.751 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2014-10-17-10.13.29.937219   17.10.2014   10.13.29
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20141017.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,5,219)
+150 Opening ASCII mode data connection for DE411-20141017.txt.
+226 Transfer complete.
+11012892 Byte in 7.966 Sekunden übertragen. Übertragungsgeschwindigkeit 1382.518 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2014-10-24-09.36.30.951874   24.10.2014   09.36.30
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20141024.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,15,180)
+150 Opening ASCII mode data connection for DE411-20141024.txt.
+226 Transfer complete.
+11048718 Byte in 9.046 Sekunden übertragen. Übertragungsgeschwindigkeit 1221.406 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2014-10-31-09.39.47.202302   31.10.2014   09.39.47
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20141031.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,8,246)
+150 Opening ASCII mode data connection for DE411-20141031.txt.
+226 Transfer complete.
+11098248 Byte in 5.907 Sekunden übertragen. Übertragungsgeschwindigkeit 1878.758 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2014-11-07-09.46.50.829629   07.11.2014   09.46.50
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20141107.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,16,29)
+150 Opening ASCII mode data connection for DE411-20141107.txt.
+226 Transfer complete.
+11169540 Byte in 8.945 Sekunden übertragen. Übertragungsgeschwindigkeit 1248.647 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2014-11-14-09.35.02.069432   14.11.2014   09.35.02
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20141114.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,16,173)
+150 Opening ASCII mode data connection for DE411-20141114.txt.
+226 Transfer complete.
+11228208 Byte in 8.730 Sekunden übertragen. Übertragungsgeschwindigkeit 1286.094 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2014-11-15-01.39.50.365608   15.11.2014   01.39.50
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20141115.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,8,193)
+150 Opening ASCII mode data connection for DE411-20141115.txt.
+226 Transfer complete.
+11228208 Byte in 5.554 Sekunden übertragen. Übertragungsgeschwindigkeit 2021.749 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2014-11-21-07.42.20.697332   21.11.2014   07.42.20
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20141121.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,12,47)
+150 Opening ASCII mode data connection for DE411-20141121.txt.
+226 Transfer complete.
+11336526 Byte in 6.172 Sekunden übertragen. Übertragungsgeschwindigkeit 1836.804 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2014-11-28-07.43.27.426537   28.11.2014   07.43.27
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20141128.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,18,217)
+150 Opening ASCII mode data connection for DE411-20141128.txt.
+226 Transfer complete.
+11407818 Byte in 6.159 Sekunden übertragen. Übertragungsgeschwindigkeit 1852.165 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2014-12-05-07.44.16.503197   05.12.2014   07.44.16
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20141205.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,15,195)
+150 Opening ASCII mode data connection for DE411-20141205.txt.
+226 Transfer complete.
+11450056 Byte in 6.026 Sekunden übertragen. Übertragungsgeschwindigkeit 1899.993 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2014-12-12-07.47.13.034303   12.12.2014   07.47.13
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20141212.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,11,182)
+150 Opening ASCII mode data connection for DE411-20141212.txt.
+226 Transfer complete.
+11534292 Byte in 8.538 Sekunden übertragen. Übertragungsgeschwindigkeit 1350.922 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2014-12-19-07.43.36.417964   19.12.2014   07.43.36
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20141219.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,7,202)
+150 Opening ASCII mode data connection for DE411-20141219.txt.
+226 Transfer complete.
+11593160 Byte in 6.151 Sekunden übertragen. Übertragungsgeschwindigkeit 1884.648 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2014-12-26-07.42.15.800647   26.12.2014   07.42.15
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20141226.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,16,200)
+150 Opening ASCII mode data connection for DE411-20141226.txt.
+226 Transfer complete.
+11619008 Byte in 6.152 Sekunden übertragen. Übertragungsgeschwindigkeit 1888.550 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2015-01-02-07.25.44.974891   02.01.2015   07.25.44
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20150102.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,11,183)
+150 Opening ASCII mode data connection for DE411-20150102.txt.
+226 Transfer complete.
+11619008 Byte in 6.188 Sekunden übertragen. Übertragungsgeschwindigkeit 1877.523 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2015-01-09-07.27.27.555121   09.01.2015   07.27.27
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20150109.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,11,112)
+150 Opening ASCII mode data connection for DE411-20150109.txt.
+226 Transfer complete.
+2114418 Byte in 1.241 Sekunden übertragen. Übertragungsgeschwindigkeit 1703.512 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2015-01-16-07.27.43.694826   16.01.2015   07.27.43
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20150116.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,7,127)
+150 Opening ASCII mode data connection for DE411-20150116.txt.
+226 Transfer complete.
+3498052 Byte in 2.148 Sekunden übertragen. Übertragungsgeschwindigkeit 1628.184 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2015-01-23-07.28.05.866291   23.01.2015   07.28.05
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20150123.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,16,184)
+150 Opening ASCII mode data connection for DE411-20150123.txt.
+226 Transfer complete.
+4222132 Byte in 2.118 Sekunden übertragen. Übertragungsgeschwindigkeit 1993.298 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2015-01-30-07.29.10.476144   30.01.2015   07.29.10
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20150130.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,14,50)
+150 Opening ASCII mode data connection for DE411-20150130.txt.
+226 Transfer complete.
+4814972 Byte in 2.635 Sekunden übertragen. Übertragungsgeschwindigkeit 1827.476 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2015-02-06-07.29.45.157347   06.02.2015   07.29.45
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20150206.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,11,141)
+150 Opening ASCII mode data connection for DE411-20150206.txt.
+226 Transfer complete.
+5245838 Byte in 2.581 Sekunden übertragen. Übertragungsgeschwindigkeit 2032.440 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2015-02-13-07.30.28.004830   13.02.2015   07.30.28
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20150213.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,10,210)
+150 Opening ASCII mode data connection for DE411-20150213.txt.
+226 Transfer complete.
+5647370 Byte in 3.128 Sekunden übertragen. Übertragungsgeschwindigkeit 1805.466 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2015-02-20-07.30.43.423673   20.02.2015   07.30.43
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20150220.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,14,41)
+150 Opening ASCII mode data connection for DE411-20150220.txt.
+226 Transfer complete.
+5914376 Byte in 4.639 Sekunden übertragen. Übertragungsgeschwindigkeit 1275.015 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2015-02-27-07.31.29.160839   27.02.2015   07.31.29
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20150227.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,12,249)
+150 Opening ASCII mode data connection for DE411-20150227.txt.
+226 Transfer complete.
+6221174 Byte in 3.024 Sekunden übertragen. Übertragungsgeschwindigkeit 2056.985 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2015-03-06-07.31.46.386352   06.03.2015   07.31.46
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20150306.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,4,125)
+150 Opening ASCII mode data connection for DE411-20150306.txt.
+226 Transfer complete.
+6498518 Byte in 4.124 Sekunden übertragen. Übertragungsgeschwindigkeit 1575.771 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2015-03-13-07.33.43.893511   13.03.2015   07.33.43
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20150313.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,6,250)
+150 Opening ASCII mode data connection for DE411-20150313.txt.
+226 Transfer complete.
+6770650 Byte in 3.453 Sekunden übertragen. Übertragungsgeschwindigkeit 1960.731 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2015-03-20-07.32.03.743099   20.03.2015   07.32.03
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20150320.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,8,47)
+150 Opening ASCII mode data connection for DE411-20150320.txt.
+226 Transfer complete.
+7009322 Byte in 3.921 Sekunden übertragen. Übertragungsgeschwindigkeit 1787.683 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2015-03-27-07.33.45.962170   27.03.2015   07.33.45
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20150327.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,13,152)
+150 Opening ASCII mode data connection for DE411-20150327.txt.
+226 Transfer complete.
+7438822 Byte in 3.343 Sekunden übertragen. Übertragungsgeschwindigkeit 2225.344 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2015-04-03-07.37.12.635659   03.04.2015   07.37.12
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20150403.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,18,181)
+150 Opening ASCII mode data connection for DE411-20150403.txt.
+226 Transfer complete.
+7631010 Byte in 3.618 Sekunden übertragen. Übertragungsgeschwindigkeit 2109.083 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2015-04-10-07.51.28.973428   10.04.2015   07.51.28
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20150410.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,6,163)
+150 Opening ASCII mode data connection for DE411-20150410.txt.
+226 Transfer complete.
+7720332 Byte in 3.420 Sekunden übertragen. Übertragungsgeschwindigkeit 2257.458 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2015-04-17-07.36.39.567984   17.04.2015   07.36.39
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20150417.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,18,56)
+150 Opening ASCII mode data connection for DE411-20150417.txt.
+226 Transfer complete.
+7898816 Byte in 3.558 Sekunden übertragen. Übertragungsgeschwindigkeit 2220.255 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2015-04-24-07.45.05.818302   24.04.2015   07.45.05
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20150424.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,13,117)
+150 Opening ASCII mode data connection for DE411-20150424.txt.
+226 Transfer complete.
+8144340 Byte in 3.735 Sekunden übertragen. Übertragungsgeschwindigkeit 2180.341 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2015-05-01-07.37.11.730441   01.05.2015   07.37.11
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20150501.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,8,235)
+150 Opening ASCII mode data connection for DE411-20150501.txt.
+226 Transfer complete.
+9550748 Byte in 4.240 Sekunden übertragen. Übertragungsgeschwindigkeit 2252.410 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2015-05-08-07.36.29.853026   08.05.2015   07.36.29
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20150508.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,18,142)
+150 Opening ASCII mode data connection for DE411-20150508.txt.
+226 Transfer complete.
+9743016 Byte in 4.643 Sekunden übertragen. Übertragungsgeschwindigkeit 2098.622 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2015-05-15-07.25.40.819626   15.05.2015   07.25.40
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20150515.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,9,23)
+150 Opening ASCII mode data connection for DE411-20150515.txt.
+226 Transfer complete.
+     0 Byte in 0.002 Sekunden übertragen. Übertragungsgeschwindigkeit 0.000 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2015-05-22-07.32.24.140189   22.05.2015   07.32.24
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20150522.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,19,8)
+150 Opening ASCII mode data connection for DE411-20150522.txt.
+226 Transfer complete.
+10117980 Byte in 5.328 Sekunden übertragen. Übertragungsgeschwindigkeit 1898.976 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2015-05-29-07.40.38.440788   29.05.2015   07.40.38
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20150529.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,9,9)
+150 Opening ASCII mode data connection for DE411-20150529.txt.
+226 Transfer complete.
+10283000 Byte in 5.060 Sekunden übertragen. Übertragungsgeschwindigkeit 2032.386 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2015-06-05-07.35.44.626951   05.06.2015   07.35.44
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20150605.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,14,98)
+150 Opening ASCII mode data connection for DE411-20150605.txt.
+226 Transfer complete.
+10391838 Byte in 4.745 Sekunden übertragen. Übertragungsgeschwindigkeit 2190.007 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2015-06-12-07.38.04.288835   12.06.2015   07.38.04
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20150612.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,5,109)
+150 Opening ASCII mode data connection for DE411-20150612.txt.
+226 Transfer complete.
+10560344 Byte in 5.062 Sekunden übertragen. Übertragungsgeschwindigkeit 2085.994 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2015-06-19-07.40.34.275739   19.06.2015   07.40.34
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20150619.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,9,236)
+150 Opening ASCII mode data connection for DE411-20150619.txt.
+226 Transfer complete.
+10725004 Byte in 5.121 Sekunden übertragen. Übertragungsgeschwindigkeit 2094.280 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2015-06-19-17.40.50.139093   19.06.2015   17.40.50
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20150619.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,5,187)
+150 Opening ASCII mode data connection for DE411-20150619.txt.
+226 Transfer complete.
+10725004 Byte in 4.905 Sekunden übertragen. Übertragungsgeschwindigkeit 2186.423 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2015-06-26-08.41.31.836654   26.06.2015   08.41.31
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20150626.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,19,110)
+150 Opening ASCII mode data connection for DE411-20150626.txt.
+226 Transfer complete.
+10880166 Byte in 5.578 Sekunden übertragen. Übertragungsgeschwindigkeit 1950.506 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2015-07-03-08.41.39.074714   03.07.2015   08.41.39
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20150703.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,11,44)
+150 Opening ASCII mode data connection for DE411-20150703.txt.
+226 Transfer complete.
+11091990 Byte in 6.044 Sekunden übertragen. Übertragungsgeschwindigkeit 1835.223 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2015-07-10-08.45.30.330585   10.07.2015   08.45.30
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20150710.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,17,204)
+150 Opening ASCII mode data connection for DE411-20150710.txt.
+226 Transfer complete.
+11266948 Byte in 5.549 Sekunden übertragen. Übertragungsgeschwindigkeit 2030.509 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2015-07-17-08.42.27.752174   17.07.2015   08.42.27
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20150717.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,9,72)
+150 Opening ASCII mode data connection for DE411-20150717.txt.
+226 Transfer complete.
+11471360 Byte in 5.390 Sekunden übertragen. Übertragungsgeschwindigkeit 2128.406 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2015-07-24-08.42.45.334817   24.07.2015   08.42.45
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20150724.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,12,68)
+150 Opening ASCII mode data connection for DE411-20150724.txt.
+226 Transfer complete.
+11583244 Byte in 10.755 Sekunden übertragen. Übertragungsgeschwindigkeit 1077.022 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2015-07-31-08.41.53.729357   31.07.2015   08.41.53
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20150731.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,9,9)
+150 Opening ASCII mode data connection for DE411-20150731.txt.
+226 Transfer complete.
+11753916 Byte in 4.809 Sekunden übertragen. Übertragungsgeschwindigkeit 2444.356 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2015-08-07-08.43.05.740204   07.08.2015   08.43.05
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20150807.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,19,40)
+150 Opening ASCII mode data connection for DE411-20150807.txt.
+226 Transfer complete.
+11901826 Byte in 5.660 Sekunden übertragen. Übertragungsgeschwindigkeit 2102.738 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2015-08-14-08.43.49.825280   14.08.2015   08.43.49
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20150814.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,14,157)
+150 Opening ASCII mode data connection for DE411-20150814.txt.
+226 Transfer complete.
+11977804 Byte in 6.190 Sekunden übertragen. Übertragungsgeschwindigkeit 1934.891 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2015-08-21-08.41.55.050963   21.08.2015   08.41.55
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20150821.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,9,44)
+150 Opening ASCII mode data connection for DE411-20150821.txt.
+226 Transfer complete.
+12085962 Byte in 5.520 Sekunden übertragen. Übertragungsgeschwindigkeit 2189.672 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2015-08-28-08.41.56.684930   28.08.2015   08.41.56
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20150828.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,17,74)
+150 Opening ASCII mode data connection for DE411-20150828.txt.
+226 Transfer complete.
+12178330 Byte in 6.390 Sekunden übertragen. Übertragungsgeschwindigkeit 1905.947 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2015-09-04-08.42.43.960665   04.09.2015   08.42.43
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20150904.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,13,28)
+150 Opening ASCII mode data connection for DE411-20150904.txt.
+226 Transfer complete.
+12296546 Byte in 36.277 Sekunden übertragen. Übertragungsgeschwindigkeit 338.959 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2015-09-11-08.43.23.334007   11.09.2015   08.43.23
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20150911.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,9,193)
+150 Opening ASCII mode data connection for DE411-20150911.txt.
+226 Transfer complete.
+12405064 Byte in 10.608 Sekunden übertragen. Übertragungsgeschwindigkeit 1169.363 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2015-09-18-08.43.14.339720   18.09.2015   08.43.14
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20150918.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,8,198)
+150 Opening ASCII mode data connection for DE411-20150918.txt.
+226 Transfer complete.
+12552654 Byte in 7.500 Sekunden übertragen. Übertragungsgeschwindigkeit 1673.687 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2015-09-25-08.45.00.400488   25.09.2015   08.45.00
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20150925.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,4,62)
+150 Opening ASCII mode data connection for DE411-20150925.txt.
+226 Transfer complete.
+12630798 Byte in 43.290 Sekunden übertragen. Übertragungsgeschwindigkeit 291.771 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2015-10-14-16.36.44.061348   14.10.2015   16.36.44
+2015-10-14-16.53.10.873043   14.10.2015   16.53.10
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20151014.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,17,212)
+150 Opening ASCII mode data connection for DE411-20151014.txt.
+226 Transfer complete.
+16599888 Byte in 2.932 Sekunden übertragen. Übertragungsgeschwindigkeit 5662.320 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2015-10-21-18.23.40.446225   21.10.2015   18.23.40
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20151021.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,11,123)
+150 Opening ASCII mode data connection for DE411-20151021.txt.
+226 Transfer complete.
+16643046 Byte in 6.874 Sekunden übertragen. Übertragungsgeschwindigkeit 2421.151 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2015-10-22-09.43.22.763281   22.10.2015   09.43.22
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMII4_OUT DE411-20151022.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,15,180)
+150 Opening ASCII mode data connection for DE411-20151022.txt.
+226 Transfer complete.
+16643046 Byte in 80.002 Sekunden übertragen. Übertragungsgeschwindigkeit 208.033 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!

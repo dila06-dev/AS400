@@ -1,0 +1,31 @@
+/*-------------------------------------------------*/
+/* Dometic Order Schnittstellen abfragen           */
+/*-------------------------------------------------*/
+             PGM
+
+             ADDLIBLE   LIB(WAECOEDI)
+             MONMSG     MSGID(CPF2103)
+             ADDLIBLE   LIB(BAR_FTP)
+             MONMSG     MSGID(CPF2103)
+
+/* Dometic Schweiz */
+/*           CALL       PGM(BAR_FTP/GFTPORDERS) PARM('ch')  */
+/*           CALL       PGM(WAECOEDI/IFSORDERS) PARM('ch')  */
+
+/* Dometic Dänemark */
+/*           CALL       PGM(BAR_FTP/GFTPORDERS) PARM('dk') */
+/*           CALL       PGM(WAECOEDI/IFSORDERS) PARM('dk') */
+
+/* Dometic UK */
+             CALL       PGM(BAR_FTP/GFTPORDERS) PARM('uk')
+             CALL       PGM(WAECOEDI/IFSORDERS) PARM('uk')
+
+/* Dometic Frankreich */
+/*           CALL       PGM(BAR_FTP/GFTPORDERS) PARM('fr')    */
+/*           CALL       PGM(WAECOEDI/IFSORDERS) PARM('fr')    */
+
+
+             RMVLIBLE   LIB(WAECOEDI)
+             RMVLIBLE   LIB(BAR_FTP)
+
+             ENDPGM

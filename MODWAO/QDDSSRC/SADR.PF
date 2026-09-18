@@ -1,0 +1,124 @@
+     A**************************************************************************
+     A*  Copyright 1995 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Schilling-Buchhaltung Übergabeparameter Adressen                      *
+     A*  Erstellt aus Copy-Strecke SASS/X03SADRRCV                             *
+     A*  Verwendet in Programm TRKUSC                                          *
+     A*  Die Kommentare stehen immer vor dem zugehörigen Feld                  *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: SZ 22.09.1995                                               *
+     A*  Änderung: SZ 24.01.2002 Anpassung Release 2.03                        *
+     A*  Änderung: SZ 08.03.2013 Projekt 9110, Adressnummer 9-stellig u.a.     *
+     A*            Basis ist jetzt SASS/X04SADRRCV                             *
+     A*  Änderung: SZ 15.07.2013 Projekt 9235, Anpassungen Schilling Release   *
+     A*            2.10 Basis ist jetzt SFBS/X06FADRRCV                        *
+     A*                                                                        *
+     A**************************************************************************
+     A          R SADR1
+     A*-------------------------------------------------------------------------
+     A            SAFIRM         5S 0       COLHDG('Firma')
+     A            SAADNR         9A         COLHDG('Adressnummer')
+     A            SAAENA         1A         COLHDG('Änderungsart')
+     A            SATAST         2A         COLHDG('Tastencode')
+     A            SAADNV         9A         COLHDG('Adressnummer von')
+     A*                              'B' = KEINE BERECHTIGUNG (USER)
+     A*                              'F' = FEHLER IM PGM, SIEHE FTX
+     A*                                    (WENN TASTE F15 ÜBERGEBEN)
+     A*                              'S' = FUNKTION IST GESPERRT
+     A*                                    (TAGESABSCHLUSS ETC IN FIBU)
+     A*                              ' ' = KEIN FEHLER FESTGESTELLT
+     A            SARCOD         1A         COLHDG('Returncode')
+     A            SAFTXT        70A         COLHDG('Fehlertext')
+     A*-------------------------------------------------------------------------
+     A*                                     'LESEN' = LESEN ADRESSE
+     A*                                     'SCHREIBEN' = SCHREIBEN/ZURÜCK-
+     A*                                           SCHREIBEN ADRESSE'
+     A*                                     'SPERREN' = SETZEN LOCKSTAT BEI
+     A*                                           VORHANDENER ADRESSE/FREIGABE
+     A*                                           SATZSPERRE (UF) BEI NICHT VORH
+     A*                                     'FREIGEBEN' = SATZSPERRE ENTFERNEN
+     A*                                           (UF)
+     A*                                     'CLOSE  ' = SCHLIESSEN DER DATEI
+     A*                                     'AUFRUF' = AUFRUF UP STAMMDATEN-
+     A*                                           PFLEGE (SADRUP)
+     A            SAFUNK        10A         COLHDG('Funktion')
+     A*                                     'J' = Karteinotiz vorhanden
+     A            SAKART         1A         COLHDG('Karteinotiz')
+     A*                                     'J' = Neuanlage der Adresse
+     A            SAWNEU         1A         COLHDG('Neuanlage')
+     A*                                     01 - 40 = max.Länge einer ADR-Zeile
+     A            SAMAXL         2S 0       COLHDG('max.Länge Adresszeil')
+     A*                                     'J' = Aufruf aus Fremdanwendung
+     A*                                           (Schützen der Felder)
+     A            SAFRMD         1A         COLHDG('Fremdanwendung')
+     A            SAKONZ         5S 0       COLHDG('Konzern Firma')
+     A*                                     'J' = konzernabhängige Firma
+     A            SAKOAB         1A         COLHDG('konzab.Firma')
+     A            SATIME         8A         COLHDG('Zeit Änderung')
+     A            SAADRN         9A         COLHDG('Adressnr.')
+     A            SALISO         3A         COLHDG('Land ISO')
+     A            SAFIL1        55A         COLHDG('Leerfeld')
+     A*-------------------------------------------------------------------------
+     A            SAANRD         1A         COLHDG('Anrede')
+     A            SANAM1        40A         COLHDG('Name 1')
+     A            SANAM2        40A         COLHDG('Name 2')
+     A            SANAM3        40A         COLHDG('Name 3')
+     A            SAPOFA        40A         COLHDG('Postfach')
+     A            SAPLZP        10A         COLHDG('PLZ Postfach')
+     A            SASTRA        40A         COLHDG('Straße')
+     A            SAPOLZ        40A         COLHDG('PLZ Ort')
+     A            SAPOLD         3A         COLHDG('Land')
+     A            SASPCD         1A         COLHDG('Sprache')
+     A            SAMATC        10A         COLHDG('Matchcode')
+     A            SAMAT2        10A         COLHDG('Matchcode 2')
+     A            SATELF        20A         COLHDG('Telefon')
+     A            SATELX        20A         COLHDG('Telex')
+     A            SATLFA        20A         COLHDG('Telefax')
+     A            SABTXN        20A         COLHDG('BTX')
+     A            SAMAIL        50A         COLHDG('e-Mail Adresse')
+     A            SAMAI2        50A         COLHDG('e-Mail Adresse 2')
+     A            SAJZEI         8A         COLHDG('Zeit Änderung')
+     A            SAINET        40A         COLHDG('Internet')
+     A            SATITL        20A         COLHDG('Titel')
+     A            SAAEND         1A         COLHDG('e-Mail Kennzeichen')
+     A            SAVAR1        20A         COLHDG('Variable 1')
+     A            SAVAR2        20A         COLHDG('Variable 2')
+     A            SAVAR3        20A         COLHDG('Variable 3')
+     A            SAVAR4        20A         COLHDG('Variable 4')
+     A            SAVAR5        20A         COLHDG('Variable 5')
+     A            SAFIL2        88A         COLHDG('Leerfeld')
+     A            SAFIL3       256A         COLHDG('Leerfeld')
+     A*-------------------------------------------------------------------------
+     A*                                     _ = NICHT BENUTZT
+     A*                                     V = DATEN ÜBERGEBEN (VORSCHLAG)
+     A*                                     J = DATEN ÜBERG + FELD SPERREN
+     A            SAKZAN         1A         COLHDG('KZ Anrede')
+     A            SAKZN1         1A         COLHDG('KZ Name 1')
+     A            SAKZN2         1A         COLHDG('KZ Name 2')
+     A            SAKZN3         1A         COLHDG('KZ Name 3')
+     A            SAKZPF         1A         COLHDG('KZ Postfach')
+     A            SAKZPP         1A         COLHDG('KZ PLZ Postfach')
+     A            SAKZST         1A         COLHDG('KZ Straße')
+     A            SAKZPZ         1A         COLHDG('KZ PLZ Ort')
+     A            SAKZLD         1A         COLHDG('KZ Land')
+     A            SAKZSP         1A         COLHDG('KZ Sprache')
+     A            SAKZMC         1A         COLHDG('KZ Matchcode')
+     A            SAKZM2         1A         COLHDG('KZ Matchcode 2')
+     A            SAKZTL         1A         COLHDG('KZ Telefon')
+     A            SAKZTX         1A         COLHDG('KZ Telex')
+     A            SAKZFX         1A         COLHDG('KZ Telefax')
+     A            SAKZBX         1A         COLHDG('KZ BTX')
+     A            SAKZML         1A         COLHDG('KZ e-Mail')
+     A            SAKZIN         1A         COLHDG('KZ Internet')
+     A            SAKZTI         1A         COLHDG('KZ Titel')
+     A            SAKZMK         1A         COLHDG('KZ e-Mail Kz.')
+     A            SAKZV1         1A         COLHDG('KZ Variable 1')
+     A            SAKZV2         1A         COLHDG('KZ Variable 2')
+     A            SAKZV3         1A         COLHDG('KZ Variable 3')
+     A            SAKZV4         1A         COLHDG('KZ Variable 4')
+     A            SAKZV5         1A         COLHDG('KZ Variable 5')
+     A            SAFIL4        64A         COLHDG('Leerfeld')
+     A            SAFIL5        64A         COLHDG('Leerfeld')

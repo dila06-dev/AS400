@@ -1,0 +1,33 @@
+     A**************************************************************************
+     A*  Copyright 2000 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Empfang Speditionsdaten                                               *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: SZ 06.03.2011 Projekt 7190                                  *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(WAOE)
+     A          R KYWAOE1
+     A*
+     A            KYWAOEFIRMR               REFFLD(WAOEFIRM)
+     A            KYWAOEKMJJR               REFFLD(WAOEKMJJ)
+     A            KYWAOEKMNRR               REFFLD(WAOEKMNR)
+     A            KYWAOEKMPOR               REFFLD(WAOEKMPO)
+     A            KYWAOEUPOSR               REFFLD(WAOEUPOS)
+     A            KYWAOEDPDNR               REFFLD(WAOEDPDN)
+     A            KYWAOEPAKNR               REFFLD(WAOEPAKN)
+     A            KYWAOEDATNR               REFFLD(WAOEDATN)
+     A            KYWAOESTATR               REFFLD(WAOESTAT)
+     A*
+     A            K$WAOE        30
+     A            K#WAOELOCKR               REFFLD(WAOELOCK)
+     A*
+     A            K#WAOEFIRMR               REFFLD(WAOEFIRM)
+     A            K#WAOEKMJJR               REFFLD(WAOEKMJJ)
+     A            K#WAOEKMNRR               REFFLD(WAOEKMNR)
+     A            K#WAOEKMPOR               REFFLD(WAOEKMPO)
+     A            K#WAOEUPOSR               REFFLD(WAOEUPOS)
+     A*

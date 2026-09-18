@@ -1,0 +1,86 @@
+     A*___________________________________________________________________
+     A* TRANSFER FILE SALES TRANSACTIONS FOR RPM
+     A* 25.08.2015
+     A* M.GANG
+     A* ÄNDERUNGEN:
+     A*___________________________________________________________________
+     A*
+     A          R RPMSALES$$                TEXT('TRANSFERFILE')
+     A********************************************************************
+     A*****       I1           128A         COLHDG('AUSGABE ALS TXT FILE')
+     A********************************************************************
+     A            POSTDATE       8A         TEXT('POSTDATE              ')
+     A            ENTITY         5A         TEXT('ENTITY                ')
+     A            COUNT_ISO      2A         TEXT('COUNT_ISO             ')
+     A            ITEM          15A         TEXT('ITEM# SKU             ')
+     A            ITEMDESC      30A         TEXT('ITEM DESCRIPTION      ')
+     A            APGLMG        10S 0       TEXT('DELIVERY QUANTITY     ')
+     A            ENTRY#        11A         TEXT('ENTRY#                ')
+     A            DOCTYPE       18A         TEXT('DOC CLASSIFICATION    ')
+     A            DOC           60A         TEXT('DOCUMENT IDENTIFICATIO')
+     A            RKREDA         8S 0       TEXT('INVOICING DATE        ')
+     A            COST_UNIT     13S 0       TEXT('PRICE PER UNIT        ')
+     A            RPNESU        13S 0       TEXT('INVOICING AMOUNT      ')
+     A            RKWACD         3A         TEXT('CURRENCY              ')
+     A            APPRGR         4A         TEXT('PRODUCT GROUP         ')
+     A            DIVISION       8A         TEXT('DIVISION              ')
+     A            CUSTOMER#     10A         TEXT('CUSTOMER NUMBER       ')
+     A            CUSTOMER      30A         TEXT('CUSTOMER SHORT NAME   ')
+     A            RPMGROUP      10A         TEXT('RPM CLASSIFICATION    ')
+     A********************************************************************
+     A            AKFIRM        02A         TEXT('FIRMA                 ')
+     A            AKAFJJ        04S 0       TEXT('AUFTRAGSJAHR          ')
+     A            AKAFNR        06A         TEXT('AUFTRAGSNUMMER        ')
+     A            AKAFAT        03A         TEXT('AUFTRAGSART           ')
+     A            TEPRGR        04A         TEXT('GRUPPE WAECO          ')
+     A            PLANKUNDE     10A         TEXT('PLANKUNDE             ')
+     A            VAT#          20A         TEXT('VAT REGISTRATION #    ')
+     A            §RKKON        10A         TEXT('KONDITION             ')
+     A            TEDIAV        03A         TEXT('TEDIAV                ')
+     A            ABSATZAJ      14S 2       TEXT('ABSATZAJ              ')
+     A            ABSATZVJ      14S 2       TEXT('ABSATZVJ              ')
+     A            ABSATZVVJ     14S 2       TEXT('ABSATZVVJ             ')
+     A            ABSATZ_       14S 2       TEXT('ABSATZ_  HISTORIE     ')
+     A********************************************************************
+     A            I_RKWACD       3A         TEXT('CURRENCY ORIGINAL     ')
+     A            I_RPNESU      13S 0       TEXT('INVOICING AMOUNT ORIG ')
+     A            ARTNR         15A         TEXT('ARTNR                 ')
+     A            ARTSKU        15A         TEXT('ARTSKU                ')
+     A            ARTBEZFRA     15A         TEXT('ARTBEZFRA             ')
+     A            ART           15A         TEXT('ART                   ')
+     A********************************************************************
+     A            J01            4S 0       TEXT('JAHR                  ')
+     A********************************************************************
+     A            A01           14S 2       TEXT('ABSATZ JANUAR         ')
+     A            A02           14S 2       TEXT('ABSATZ FEBRUAR        ')
+     A            A03           14S 2       TEXT('ABSATZ MAERZ          ')
+     A            A04           14S 2       TEXT('ABSATZ APRIL          ')
+     A            A05           14S 2       TEXT('ABSATZ MAI            ')
+     A            A06           14S 2       TEXT('ABSATZ JUNI           ')
+     A            A07           14S 2       TEXT('ABSATZ JULI           ')
+     A            A08           14S 2       TEXT('ABSATZ AUGUST         ')
+     A            A09           14S 2       TEXT('ABSATZ SEPTEMBER      ')
+     A            A10           14S 2       TEXT('ABSATZ OKTOBER        ')
+     A            A11           14S 2       TEXT('ABSATZ NOVEMBER       ')
+     A            A12           14S 2       TEXT('ABSATZ DEZEMBER       ')
+     A********************************************************************
+     A            U01           14S 2       TEXT('UMSATZ JANUAR         ')
+     A            U02           14S 2       TEXT('UMSATZ FEBRUAR        ')
+     A            U03           14S 2       TEXT('UMSATZ MAERZ          ')
+     A            U04           14S 2       TEXT('UMSATZ APRIL          ')
+     A            U05           14S 2       TEXT('UMSATZ MAI            ')
+     A            U06           14S 2       TEXT('UMSATZ JUNI           ')
+     A            U07           14S 2       TEXT('UMSATZ JULI           ')
+     A            U08           14S 2       TEXT('UMSATZ AUGUST         ')
+     A            U09           14S 2       TEXT('UMSATZ SEPTEMBER      ')
+     A            U10           14S 2       TEXT('UMSATZ OKTOBER        ')
+     A            U11           14S 2       TEXT('UMSATZ NOVEMBER       ')
+     A            U12           14S 2       TEXT('UMSATZ DEZEMBER       ')
+     A********************************************************************
+     A            H1            10A         TEXT('status')
+     A            H2              L         TEXT('Date of transmissing')
+     A            H3              Z         TEXT('TIMESTAMP')
+     A            H4           256A         TEXT('statusII')
+     A            H5              L         TEXT('Date of UPLOAD      ')
+     A            H6              Z         TEXT('TIMESTAMP OF UPLOAD')
+     A            LAGER          3A

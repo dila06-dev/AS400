@@ -1,0 +1,17 @@
+      * Physische Datei: ORDERH
+      * ANLEGEDATUM: OKTOBER 2010
+      *SORT:        SALESCOMPANY (88505), ORDER IN AXAPTA, PRIORITY
+      *SELECT:      STATUS (PRESELECTED)
+      * ÄNDERUNGEN:
+      * AUSSCHLUSS:  ...
+     A
+     A*                                     UNIQUE
+     A          R ORDERHPF                  PFILE(ORDERH)
+     A
+     A                                      TEXT('KOPFSÄTZE')
+     A          K H060
+     A          K H050
+     A          K H030
+     A          K H250
+     A          S H350                      CMP(EQ '          ' )
+     A          S H030                      CMP(EQ 99999)

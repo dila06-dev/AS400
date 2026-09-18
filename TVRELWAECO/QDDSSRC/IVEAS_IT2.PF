@@ -1,0 +1,35 @@
+     A*
+     A*CRTSRCPF FILE(TVRELWAECO/IVEAS_I) RCDLEN(2400)
+     A*TEXT('DATA STREAM FOR IVEAS 2400 BYTES')
+     A*
+     A*CPYFRMSTMF FROMSTMF('/IVEAS/478451.BAK')
+     A*TOMBR('/QSYS.LIB/TVRELWAECO.LIB/IVEAS_I.FILE/IVEASI.MBR')
+     A*MBROPT(*REPLACE)
+     A*
+     A*SELECT SUBSTR( SRCDTA , 1, 1810) FROM TVRELWAECO/IVEAS_I WHERE
+     A*SUBSTR( SRCDTA , 1, 1) = '1'
+     A*DATEI IVEAS_I1 IN TVRELWAECO WURDE ERSTELLT.
+     A*
+     A*CPYF FROMFILE(IVEAS_I1) TOFILE(IVEAS_SA1) MBROPT(*REPLACE) FMTOPT(*NOCHK)
+     A*
+     A*
+     A*
+     A          R IVEAS_IT2                 TEXT('IVEAS')
+     A********************************************************************
+     A            SATZART        1A         COLHDG('SATZART 2      1   1')
+     A            FREMDSPRA      2A         COLHDG('FREMDSPRACH    2   2')
+     A            BESCHR_FSP   255A         COLHDG('BESCH FREMD    4 255')
+     A            VERPACKART    50A         COLHDG('VPART FREMD  259  50')
+     A            MASSEINEIT    10A         COLHDG('MASSEINHEIT  309  10')
+     A            EMPTY       1169A         COLHDG('LEER        319 1169')
+     A*****************************************************************
+     A*
+     A*****************************************************************
+     A            H1              L         TEXT('Date of transmissing')
+     A            H2              Z         TEXT('TIMESTAMP')
+     A            MANDANT        3A         COLHDG('MANDANT  ')
+     A            KJAHR          4S 0       COLHDG('JAHR     ')
+     A            KRL            1A         COLHDG('R=RECHNUNG, L=LIEF.')
+     A            KRECHLIEF     10A         COLHDG('RECHNUNG ODER LIEF.')
+     A            VERABKZ        1A         COLHDG('VERARBEITUNGSKZ')
+     A*****************************************************************

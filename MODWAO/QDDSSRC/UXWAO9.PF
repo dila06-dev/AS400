@@ -1,0 +1,20 @@
+     A**************************************************************************
+     A*  Copyright 2011 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Matrix Konto/Kostenstellen                                            *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: PH 05.01.2011 Projekt 7025                                  *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R UXWAO91
+     A*
+     A            UXWAO9FIRMR               REFFLD(WAO91/WAO9FIRM *LIBL/WAO9)
+     A            UXWAO9BEGRR               REFFLD(WAO91/WAO9BEGR *LIBL/WAO9)
+     A            UXWAO9AFATR               REFFLD(WAO91/WAO9AFAT *LIBL/WAO9)
+     A            UXWAO9PRGRR               REFFLD(WAO91/WAO9PRGR *LIBL/WAO9)
+     A            UXWAO9KONTR               REFFLD(WAO91/WAO9KONT *LIBL/WAO9)
+     A            UXWAO9KSSTR               REFFLD(WAO91/WAO9KSST *LIBL/WAO9)

@@ -1,0 +1,18 @@
+     A          R KIAINTER
+     A
+      * :KIAINTER
+     A            DISTR          8A         TEXT('                      ')
+     A            COUNTR         8A         TEXT('                      ')
+     A            SUPPLWORLD    32A         TEXT('                      ')
+     A            CATEGORY      32A         TEXT('                      ')
+     A            SUPPLLOCAL    32A         TEXT('                      ')
+     A            BRAND         13A         TEXT('                      ')
+     A            TPTTXT        40A         TEXT('TABELLENTEXT..:       ')
+     A            TEEANR        13A         TEXT('EAN-NR                ')
+     A            ARTNR         15A         TEXT('                      ')
+     A            TETBZ1        30A         TEXT('BEZEICHNUNG 1         ')
+     A            BILLING       12S 2       TEXT('PREIS STANDARD        ')
+     A            RABATT        12S 2       TEXT('RABATT IN EURO       ')
+     A            NETTO         12S 2       TEXT('NETTOWERT EURO        ')
+     A            TEPRGR         4A         TEXT('PRODUKT-GRUPPE        ')
+     A            RABATTP       12S 2       TEXT('RABATT IN PROZENT     ')

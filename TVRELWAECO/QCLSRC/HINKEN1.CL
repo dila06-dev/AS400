@@ -1,0 +1,6 @@
+/*                                     HINKEN1    25.02.11 08:45:29 */
+CRTDEVDSP DEVD(HINKEN1) DEVCLS(*VRT) TYPE(3179) MODEL(2) +
+         ONLINE(*NO) CTL(QVIRCD0002) KBDTYPE(AGB) CHRID(697 273) +
+         ALWBLN(*YES) PRTDEV(*SYSVAL) OUTQ(*DEV) +
+         PRTFILE(*LIBL/QSYSPRT) +
+         TEXT('Einheit für S105DD7A erstellt.') DEPLOCNAME(*NONE)

@@ -1,0 +1,30 @@
+     A                                      UNIQUE
+     A          R #SYSTEMR
+     A            $KEY1         15A         TEXT(' ')
+     A            $KEY2         15A         TEXT(' ')
+     A            $KEY3         15A         TEXT(' ')
+     A            $BEZEICH     200A         TEXT(' ')
+     A            $P1          120A         TEXT(' ')
+     A            $P2          120A         TEXT(' ')
+     A            $P3          120A         TEXT(' ')
+     A            $P4           14S 6       TEXT(' ')
+     A            $P5           14S 6       TEXT(' ')
+     A            $P6           14S 6       TEXT(' ')
+     A            $R1            1A         TEXT(' ')
+     A            $R2            1A         TEXT(' ')
+     A            $R3            1A         TEXT(' ')
+     A            $GV             L         TEXT(' ')
+     A            $GB             L         TEXT(' ')
+      *
+                  $AKT           1A         TEXT('(A)AKTIV,(I)INAKTIV')
+                                            COLHDG('(A)AKTIV, (I)INAKTIV')
+      *ÄNDERUNGSDIENST
+     A            $EDAT          8S 0       TEXT('Änderungs-Datum JJJJMMTT')
+     A                                      COLHDG('Änderungs-Datum')
+     A            $ADAT          8S 0       TEXT('Anlage-Datum JJJJMMTT')
+     A                                      COLHDG('Anlagedatum')
+     A            $USR          10A         TEXT('Modifizierung-USER')
+     A                                      COLHDG('Modifizierung-USER')
+     A          K $KEY1
+     A          K $KEY2
+     A          K $KEY3

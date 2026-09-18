@@ -1,0 +1,32 @@
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.dometic-group.com, Adresse
+ 193.84.54.32 über Port 21 herzustellen.
+220 ProFTPD 1.3.4a Server ready.
+Anmelde-ID (bari) eingeben:
+331 Password required for service@dometic-group.com
+230 User service@dometic-group.com logged in
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 1
+500 'SITE NAMEFMT' not understood
+Client NAMEFMT ist 1.
+Einen FTP-Unterbefehl eingeben.
+> cd /export
+250 CWD command successful
+Einen FTP-Unterbefehl eingeben.
+> lcd /DOMRRA
+Das lokale Arbeitsverzeichnis ist /DOMRRA
+Einen FTP-Unterbefehl eingeben.
+> GET export.csv (REPLACE
+229 Entering Extended Passive Mode (|||1588|)
+150 Opening ASCII mode data connection for export.csv (2876537 bytes)
+226 Transfer complete
+2885123 Byte in 0,812 Sekunden übertragen. Übertragungsgeschwindigkeit 3550,921
+ KB/s.
+Einen FTP-Unterbefehl eingeben.
+> quit
+221 Goodbye.

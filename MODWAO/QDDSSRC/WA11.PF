@@ -1,0 +1,29 @@
+     A**************************************************************************
+     A*  Copyright 2022 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Jechtinger Straße 9                              *
+     A*                       DE 79111 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Zuordnung Auftragswerk <- Artikel-Werk                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: PH 08.12.2022 Projekt 220567-02                             *
+     A*  Änderung: XX XX.XX.XXXX                                               *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R WA111
+     A*-------------------------------------------------------------------------
+     A            WA11LOCK  R               REFFLD(##LOCK)
+     A            WA11JNAM  R               REFFLD(##JNAM)
+     A            WA11JDAT  R               REFFLD(##JDAT)
+     A            WA11JZEI  R               REFFLD(##JZEI)
+     A            WA11USER  R               REFFLD(##USER)
+     A            WA11PROG  R               REFFLD(##PROG)
+     A            WA11BIBL  R               REFFLD(##BIBL)
+     A            WA11FIRM  R               REFFLD(##FIRM)
+     A            WA11WKNR  R               REFFLD(##WKNR)
+     A            WA11TEWK  R               REFFLD(##WKNR)
+     A                                      COLHDG('ID-Wrk')
+     A                                      TEXT('Ident-Werks-Nr')
+     A            WA11TSTP  R               REFFLD(##TSTP)
+     A            WA11ERUS  R               REFFLD(##ERUS)
+     A            WA11FREI  R  100          REFFLD(##FREI)

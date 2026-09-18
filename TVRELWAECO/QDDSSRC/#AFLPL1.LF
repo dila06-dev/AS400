@@ -1,0 +1,15 @@
+      * Physische Datei: AFLP
+      * ANLEGEDATUM: OKTOBER 2010
+      *SORT:        FIRMA, RECHNUNG, LIEFERSCHEIN
+      * ÄNDERUNGEN:
+      * AUSSCHLUSS:  ...
+     A
+     A**********                            UNIQUE
+     A          R AFLP1                     PFILE(AFLP)
+     A
+     A          K ALFIRM
+     A          K ALRGJJ
+     A          K ALRGNR
+     A          K ALLIJJ
+     A          K ALLINR
+     A          K ALLIPO

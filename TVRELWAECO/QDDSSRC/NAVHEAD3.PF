@@ -1,0 +1,30 @@
+     A          R NAVHEADR
+     A
+      * :HeaderInfos
+     A            EDIH040        7A
+     A                                      TEXT('Auftr.Nr. beim Abs.')
+     A            EDIH370        3A
+     A                                      TEXT('Auftragsherkunft')
+     A            EDIH210       30A
+     A                                      TEXT('Vers.Adr.Name 1')
+     A            EDIH220       30A
+     A                                      TEXT('Vers.Adr.Name 2')
+     A            EDIH260        5A
+     A                                      TEXT('Vers.Adr. PLZ')
+     A            EDIH270       30A
+     A                                      TEXT('Vers.Adr. O r t')
+     A            EDIH240       30A
+     A                                      TEXT('Vers.Adr.Strasse')
+     A            EDIH230       30A
+     A                                      TEXT('Vers.Adr.Name 3')
+     A            EDIH280       60A
+     A                                      TEXT('Kopf-Text  1')
+     A            EDIH290       60A
+     A                                      TEXT('Kopf-Text  2')
+     A            EDIH300       60A
+     A                                      TEXT('Kopf-Text  3')
+     A            EDIH250        3A
+     A                                      TEXT('Vers.Adr. Land')
+     A            EDIH030Y      15A
+     A                                      TEXT('Kunden-Nr. beim Empf.')
+     A          K EDIH040

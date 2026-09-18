@@ -1,0 +1,12 @@
+      * Physische Datei: KOND
+      * ANLEGEDATUM: OKTOBER 2010
+      *SORT:        ...
+      * ÄNDERUNGEN:
+      * AUSSCHLUSS:  ...
+     A
+     A                                      UNIQUE
+     A          R TEEW1                     PFILE(TEEW)
+     A
+     A          K TEEWFIRM
+     A          K TEEWSKUN
+     A          S TEEWSKUN                  CMP(NE '               ')

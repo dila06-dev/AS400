@@ -1,0 +1,71 @@
+      * PROGRAMMNAME.:DW_PSSRR                                                
+      * FUNKTION.....:FEHLER-ROUTINE
+      * OKTOBER 2009   GANG, MANFRED
+      *
+      *
+      *-ÄNDERUNGSDIENST---------------------------------------------------------
+      * XX.XX.XX                                              PGMR.....
+      *-------------------------------------------------------------------------
+     H**************************************************************************
+     H/COPY ##H
+     F**************************************************************************
+     FDWESSRD CF  E                    WORKSTN
+     I**************************************************************************
+     IDSPGM       DS
+     I                                        1  10 §§§PGM
+     I                                       11  150§§§STS
+     I                                       21  28 §§§SEQ
+     I                                       29  36 §§§SR
+     I                                       40  46 §§§MSG
+     I                                       81  90 §§§LIB
+     I                                       91 170 §§§MTX
+     I                                      201 208 §§§FIL
+     I                                      209 243 §§§FST
+     I                                      244 253 §§§JOB
+     I                                      254 263 §§§USR
+     I                                      264 2690§§§JNO
+     I                                      276 2810§§§SDT
+     I                                      282 2870§§§STM
+     C**************************************************************************
+     C           *ENTRY    PLIST
+     C                     PARM           DUMP    1
+     C                     PARM           DSPGM
+     C                     PARM           MSGF
+     C**************************************************************************
+     C           §§§SR     IFEQ *ZERO
+     C                     MOVE *BLANK    §§§SR
+     C                     END
+     C           §§§SEQ    IFEQ *ZERO
+     C                     MOVE *BLANK    §§§SEQ
+     C                     END
+     C           §§§STS    IFNE *ZERO
+     C                     MOVEL§§§STS    D1STS
+     C                     END
+     C                     MOVEL§§§MTX    D1MTX
+     C                     MOVEL§§§FST    WK005A  5
+     C           WK005A    IFEQ '00000'
+     C                     MOVE *BLANK    §§§FIL
+     C                     MOVE *BLANK    §§§FST
+     C                     END
+     C* WENN AUSGABEFEHLER, WEIL MODUS *DS3, EXFMT IM MODUS *DS4 WIEDERHOLEN
+     C                     MOVE '0'       *IN41
+     C           DIALOG    TAG
+     C                     EXFMTDWEPSSR1               91
+     C           *IN91     IFEQ '1'
+     C                     MOVE '1'       *IN41
+     C                     EXFMTDWEPSSR1
+     C                     END
+     C*
+     C           *IN01     IFEQ '1'
+     C                     MOVE 'N'       DUMP
+     C                     ELSE
+     C                     MOVE 'J'       DUMP
+     C                     END
+     C           *IN10     IFEQ '1'
+     C                     CALL 'QUSCMDLN'
+     C                     GOTO DIALOG
+     C                     END
+     C*
+     C                     WRITEDWEPSSR0
+     C                     CALL '##DSPJOB'
+     C                     MOVE '1'       *INLR

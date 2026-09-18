@@ -1,0 +1,386 @@
+/*       PROGRAMMNAME:  WAECOSAV                                     */
+/*       VERFASSER   :  H. BARENKAMP STAND:18.08.2010                */
+/*       BESCHREIBUNG:  SICHERN ALLER USER-BIBLIOTHEKEN TÄGLICH AUF  */
+/*                      ULTRIUM-4 MAGNETBAND                         */
+/*                                                                   */
+/*                      Seicherungsverlauf wird in DTAARA            */
+/*                      geschrieben: BAR_VERT/SICHERUNG              */
+/*                                                                   */
+/*                                                                   */
+/*  GEÄNDERT:  7.12.12 SCHNEIDER  PRÜFUNG, OB BAND EINGELEGT         */
+/*                                WENN NEIN, DANN MELDUNG AN SYSOPR  */
+/*                                VERARBEITUNG LÄUFT WEITER          */
+/*            12.01.11 SCHNEIDER  BEENDEN UND STARTEN TREND SBS      */
+/*                                EINGEBAUT                          */
+/*                                                                   */
+/*          (13.01.11 BARENKAMP SICHERUNG AUF TAP02 ULTRIUM4)        */
+/*           wieder auf tap01                                        */
+/*                                                                   */
+/*           24.01.11 schneider einbau programmaufrufe aus           */
+/*                              datei mit parameter ausführen J/N    */
+/*                              bei bedarf                           */
+/*           25.01.11 schneider einbau sicherung ifs                 */
+/*                                                                   */
+/*           26.01.11 Gang TVRELWAECO in Sicherung aufgenommen       */
+/*                    PGM,                                           */
+/*                                                                   */
+/*           29.08.11 schneider einbau abfrage bandname aus datei    */
+/*                    bar_vert/kalendern                             */
+/*                    zusatzlich einbau savsecdta                    */
+/*                    umstellung auf savlib *allusr                  */
+/*                                                                   */
+/*           21.03.12 schneider einbau komplettsicherung und         */
+/*                    ipl (steurerung über parameter SI)             */
+/*                         oder SR für REORG+sicherung               */
+/*                                                                   */
+/*           24.07.12 schneider umbau dateireorg auf eingabe-        */
+/*                    datei #REORGPF in BAR_VERT                     */
+/*                                                                   */
+/*           20.03.13 schneider einbau routinejobs mit aufruf        */
+/*                    als string (CMD) aus #PGMAUFR                  */
+/*                                                                   */
+/*           08.07.13 schneider einbau komplettsicherungskz          */
+/*                    für gesamtsicherung + IPL täglich              */
+/*                    möglich. umbau auf subroutine                  */
+/*                                                                   */
+/*           02.11.15 schneider:einbau beenden subsysteme            */
+/*                    trend über subroutine                          */
+/*                                                                   */
+/*           22.04.16 schneider:einbau ausschluss div. ifs-          */
+/*                    verzeichznisse lfs aus sicherung               */
+/*                    vorgabe e+p                                    */
+/*                                                                   */
+/*           10.07.26 umbau auf cloud                                */
+/*                                                                   */
+/*********************************************************************/
+             PGM        PARM(&LOKATION)
+
+             DCLF       FILE(BAR_VERT/KALENDERN) OPNID(A)
+             DCLF       FILE(BAR_VERT/#PGMAUFR) OPNID(B)
+             DCLF       FILE(BAR_VERT/#REORGPF) OPNID(C)
+             DCL        VAR(&BANDID) TYPE(*CHAR) LEN(6)
+             DCL        VAR(&BANDDO) TYPE(*CHAR) LEN(7) VALUE(DAILY)
+             DCL        VAR(&DATUM) TYPE(*CHAR) LEN(6)
+             DCL        VAR(&DATUMC) TYPE(*CHAR) LEN(6)
+             DCL        VAR(&DATUMS) TYPE(*DEC) LEN(6 0)
+             DCL        VAR(&TIME) TYPE(*CHAR) LEN(6)
+             DCL        VAR(&LAUFTAG) TYPE(*CHAR) LEN(4)
+             DCL        VAR(&IPL) TYPE(*CHAR) LEN(2)
+             DCL        VAR(&BANDUNLOAD) TYPE(*CHAR) LEN(10)
+             DCL        VAR(&LOKATION) TYPE(*CHAR) LEN(3)
+             DCL        VAR(&FIRMA) TYPE(*CHAR) LEN(2) VALUE('  ')
+
+/*           GOTO       CMDLBL(TEST)                            */
+
+             CHGJOB     LOG(4 00 *SECLVL) LOGCLPGM(*YES) +
+                          LOGOUTPUT(*JOBEND)
+
+/*___   ermitteln firma ____________________________________________________ */
+             CALL       PGM(TVRELWAECO/DOWR000) PARM(&LOKATION &FIRMA)
+
+             CHGDTAARA  DTAARA(BAR_VERT/SICHERUNG (1 500)) VALUE(' ')
+             CHGDTAARA  DTAARA(BAR_VERT/SICHERUNG (1 30)) +
+                          VALUE('Beginn Routinejobs:          |')
+             RTVSYSVAL  SYSVAL(QDAYOFWEEK) RTNVAR(&LAUFTAG)
+             RTVSYSVAL  SYSVAL(QTIME) RTNVAR(&TIME)
+             RTVSYSVAL  SYSVAL(QDATE) RTNVAR(&DATUM)
+             RTVJOBA    DATE(&DATUMC)
+             CHGVAR     VAR(&DATUMS) VALUE(&DATUMC)
+             CHGDTAARA  DTAARA(BAR_VERT/SICHERUNG (24 6)) VALUE(&DATUM)
+             CHGDTAARA  DTAARA(BAR_VERT/SICHERUNG (31 6)) VALUE(&TIME)
+
+
+/*___auslesen datei kalender und felder vorbelegen _________________   _______*/
+ LOOP:       RCVF       OPNID(A)
+             MONMSG     MSGID(CPF0864) EXEC(GOTO CMDLBL(WEITER))
+             IF         COND(&DATUMS *EQ &A_KALDAT2 *AND &A_KALFIRM +
+                          *EQ &FIRMA) THEN(DO)
+             CHGVAR     VAR(&BANDID) VALUE(&A_KALBANDI)
+             CHGVAR     VAR(&BANDDO) VALUE(&A_KALBANDS)
+             CHGVAR     VAR(&IPL) VALUE(&A_KALSICH)
+             ENDDO
+             GOTO       CMDLBL(LOOP)
+/*___________________________________________________________________  _______*/
+
+ weiter:     IF         COND(&BANDDO *EQ '   ') THEN(CHGVAR +
+                          VAR(&BANDDO) VALUE('DAILY'))
+
+/*             abfrage ipl-lauf                                              */
+             IF         COND(&IPL *EQ 'SI' *OR &IPL *EQ 'SR') +
+                          THEN(GOTO CMDLBL(GESAMT))
+
+
+/*             täglicher lauf mo - fr                                        */
+             IF         COND(&LAUFTAG *NE *SAT *AND &LAUFTAG *NE +
+                          *SUN) THEN(DO)
+             CHGDTAARA  DTAARA(BAR_VERT/SICHERUNG (40 7)) +
+                          VALUE(&BANDDO)
+
+
+/*___________________________________________________________________  _______*/
+/*  warten bis versand fertig ist  derzeit 00:05 uhr                   -------*/
+
+             DLYJOB     RSMTIME('00:05')
+
+             RTVSYSVAL  SYSVAL(QTIME) RTNVAR(&TIME)
+             RTVSYSVAL  SYSVAL(QDATE) RTNVAR(&DATUM)
+             CHGDTAARA  DTAARA(BAR_VERT/SICHERUNG (24 6)) VALUE(&DATUM)
+             CHGDTAARA  DTAARA(BAR_VERT/SICHERUNG (31 6)) VALUE(&TIME)
+/*___________________________________________________________________  _______*/
+/*  beenden subsysteme trend und LFS über subroutine                   -------*/
+
+             CALLSUBR   SUBR(TRDSBSEND)
+             DLYJOB     DLY(60)
+             CALLSUBR   SUBR(LFSSBSEND)
+             DLYJOB     DLY(60)
+/*___________________________________________________________________  _______*/
+
+             SNDMSG     MSG('Beginn Sicherungslauf') TOUSR(*SYSOPR)
+
+/*___scherung _______________________________________________________  _______*/
+             STRBKUBRM  CTLGRP(&BANDDO) SBMJOB(*CTLSBS) +
+                          RETENTION(*CTLGRPATR 10) DEV(TAPMLB01) +
+                          PRLRSC(1 *AVAIL) MOVPCY(&BANDDO)
+             MONMSG     MSGID(CPF0000)
+
+             CHGDTAARA  DTAARA(BAR_VERT/SICHERUNG (101 28)) +
+                          VALUE('Start:SAVE(*ALLUSR)         ')
+             MONMSG     MSGID(CPF0000)
+             RTVSYSVAL  SYSVAL(QDATE) RTNVAR(&DATUM)
+             MONMSG     MSGID(CPF0000)
+             CHGDTAARA  DTAARA(BAR_VERT/SICHERUNG (135 6)) +
+                          VALUE(&DATUM)
+             MONMSG     MSGID(CPF0000)
+             RTVSYSVAL  SYSVAL(QTIME) RTNVAR(&TIME)
+             MONMSG     MSGID(CPF0000)
+             CHGDTAARA  DTAARA(BAR_VERT/SICHERUNG (141 1)) VALUE('|')
+             MONMSG     MSGID(CPF0000)
+             CHGDTAARA  DTAARA(BAR_VERT/SICHERUNG (142 6)) VALUE(&TIME)
+             MONMSG     MSGID(CPF0000)
+             SNDMSG     MSG('Sicherung Bibliotheken durchgeführt.') +
+                          TOUSR(*SYSOPR)
+
+/*___________________________________________________________________  _______*/
+             CALLSUBR   SUBR(ROUTINE) /* Routineaufgaben */
+/*___________________________________________________________________  _______*/
+
+             CHGDTAARA  DTAARA(BAR_VERT/SICHERUNG (151 28)) +
+                          VALUE('erledigt:Routine/Reorg      ')
+             MONMSG     MSGID(CPF0000)
+             RTVSYSVAL  SYSVAL(QDATE) RTNVAR(&DATUM)
+             MONMSG     MSGID(CPF0000)
+             CHGDTAARA  DTAARA(BAR_VERT/SICHERUNG (185 6)) +
+                          VALUE(&DATUM)
+             MONMSG     MSGID(CPF0000)
+             RTVSYSVAL  SYSVAL(QTIME) RTNVAR(&TIME)
+             MONMSG     MSGID(CPF0000)
+             CHGDTAARA  DTAARA(BAR_VERT/SICHERUNG (191 1)) VALUE('|')
+             MONMSG     MSGID(CPF0000)
+             CHGDTAARA  DTAARA(BAR_VERT/SICHERUNG (192 6)) VALUE(&TIME)
+             MONMSG     MSGID(CPF0000)
+/*___________________________________________________________________  _______*/
+/*  starten subsysteme trend,LFS wenn notwendig                        -------*/
+/*___________________________________________________________________  _______*/
+
+/*           CALL       PGM(BAR_VERT/SBSCHK)                                  */
+/*           DLYJOB     DLY(60)                                               */
+/*           CALL       PGM(BAR_VERT/SBSCHKLFS)                               */
+/*___________________________________________________________________  _______*/
+
+             GOTO       CMDLBL(ENDE)
+             ENDDO
+
+/*============================================================================*/
+
+/*___________________________________________________________________  _______*/
+/*    routinelauf mit ipl (gesteuert über parameter &IPL)              -------*/
+/*___________________________________________________________________  _______*/
+
+ GESAMT:     IF         COND(&IPL *EQ 'SI' *OR &IPL *EQ 'SR') THEN(DO)
+
+/*___________routinelauf, wenn komplettsich innerhalb der woche_______________*/
+/*           IF         COND(&LAUFTAG *NE *SAT *AND &LAUFTAG *NE +  */
+/*                        *SUN) THEN(DO)                            */
+/*           CALLSUBR   SUBR(ROUTINE)                               */
+/*           DLYJOB     DLY(900)                                    */
+/*           ENDDO                                                  */
+
+             DLYJOB     RSMTIME('00:01')
+
+/*___________________________________________________________________  _______*/
+/*  beenden subsysteme trend und LFS über subroutine                   -------*/
+
+             CALLSUBR   SUBR(TRDSBSEND)
+             DLYJOB     DLY(60)
+             CALLSUBR   SUBR(LFSSBSEND)
+             DLYJOB     DLY(60)
+/*___________________________________________________________________  _______*/
+
+             CHGDTAARA  DTAARA(BAR_VERT/SICHERUNG (40 7)) +
+                          VALUE(&BANDDO)
+
+/*           ENDSBS     SBS(*ALL) OPTION(*IMMED) +                            */
+/*                        ENDSBSOPT(*NOJOBLOG) BCHTIMLMT(*NOMAX)              */
+/*           MONMSG     MSGID(CPF0000) EXEC(GOTO CMDLBL(CTL))                 */
+/*           DLYJOB     DLY(1000)                                             */
+/*___   checken, ob sbs noch aktiv___QPDSPSBS__Schritt 1____________________ */
+             WRKSBS     OUTPUT(*)
+             MONMSG     MSGID(CPF0000)
+/*___   ____________________________________________________________________ */
+
+/*___________reorg div. dateien aus datei #reorgpf ___________________________*/
+             IF         COND(&IPL *EQ 'SR') THEN(DO)
+ LOOP3:      RCVF       OPNID(C)
+             MONMSG     MSGID(CPF0864) EXEC(GOTO CMDLBL(REORGEND))
+             RGZPFM     FILE(&C_LIB/&C_DATEI)
+             MONMSG     MSGID(CPF0000) EXEC(GOTO CMDLBL(LOOP3))
+             GOTO       CMDLBL(LOOP3)
+ REORGEND:   CHGDTAARA  DTAARA(BAR_VERT/SICHERUNG (51 15)) +
+                          VALUE('erledigt:RGZPFM')
+             MONMSG     MSGID(CPF0000)
+             RTVSYSVAL  SYSVAL(QTIME) RTNVAR(&TIME)
+             MONMSG     MSGID(CPF0000)
+             CHGDTAARA  DTAARA(BAR_VERT/SICHERUNG (81 1)) VALUE('|')
+             MONMSG     MSGID(CPF0000)
+             CHGDTAARA  DTAARA(BAR_VERT/SICHERUNG (82 6)) VALUE(&TIME)
+             MONMSG     MSGID(CPF0000)
+             SNDMSG     MSG('RGZPFM durchgeführt.') +
+                          TOUSR(*SYSOPR)
+             MONMSG     MSGID(CPF0000)
+
+
+/*___________sicherung in Cloud ab 26.7.26         ___________________________*/
+
+             STRBKUBRM  CTLGRP(&BANDDO) SBMJOB(*CTLSBS) +
+                          RETENTION(*CTLGRPATR 10) DEV(TAPMLB01) +
+                          PRLRSC(1 *AVAIL) MOVPCY(&BANDDO)
+             MONMSG     MSGID(CPF0000)
+
+             CHGDTAARA  DTAARA(BAR_VERT/SICHERUNG (151 19)) +
+                          VALUE('erledigt:Sicherung')
+             MONMSG     MSGID(CPF0000)
+             RTVSYSVAL  SYSVAL(QDATE) RTNVAR(&DATUM)
+             MONMSG     MSGID(CPF0000)
+             CHGDTAARA  DTAARA(BAR_VERT/SICHERUNG (185 6)) +
+                          VALUE(&DATUM)
+             MONMSG     MSGID(CPF0000)
+             RTVSYSVAL  SYSVAL(QTIME) RTNVAR(&TIME)
+             MONMSG     MSGID(CPF0000)
+             CHGDTAARA  DTAARA(BAR_VERT/SICHERUNG (191 1)) VALUE('|')
+             MONMSG     MSGID(CPF0000)
+             CHGDTAARA  DTAARA(BAR_VERT/SICHERUNG (192 6)) VALUE(&TIME)
+             MONMSG     MSGID(CPF0000)
+             SNDMSG     MSG('Sicherung SAVSECDTA durchgeführt.') +
+                          TOUSR(*SYSOPR)
+             ENDDO
+
+ CTL:        STRSBS     SBSD(QCTL)
+             MONMSG     MSGID(CPF0000)
+             DLYJOB     DLY(60)
+
+/*___________vorübergehend ausgeschaltet bis endgültige lösung 30.7.26________*/
+
+/*           CHGDTAARA  DTAARA(BAR_VERT/SICHERUNG (351 13)) +                 */
+/*                        VALUE('erledigt:IPL')                               */
+/*           MONMSG     MSGID(CPF0000)                                        */
+/*                                                                            */
+/*___________durchführen ipl _________________________________________________*/
+/*           ENDSBS     SBS(*ALL) OPTION(*IMMED) +                            */
+/*                        ENDSBSOPT(*NOJOBLOG) BCHTIMLMT(*NOMAX)              */
+/*           MONMSG     MSGID(CPF0000) EXEC(GOTO CMDLBL(CTL2))                */
+/*           DLYJOB     DLY(1000)                                             */
+/*                                                                            */
+/*           PWRDWNSYS  OPTION(*IMMED) RESTART(*YES) CONFIRM(*NO)             */
+/*                                                                            */
+ CTL2:       STRSBS     SBSD(QCTL)
+             MONMSG     MSGID(CPF0000)
+             DLYJOB     DLY(60)
+
+             ENDDO
+/*____________________________________________________________________________*/
+
+             GOTO       CMDLBL(ENDE)
+
+ FEHLER:     SNDMSG     MSG('Achtung: keine Sicherung, da kein Band +
+                          eingelegt war!!') TOUSR(*SYSOPR)
+             SNDMSG     MSG('Achtung: keine Sicherung, da kein Band +
+                          eingelegt war!!') TOUSR(BARENKAMP)
+             IF         COND(&LAUFTAG *NE *SAT *AND &LAUFTAG *NE +
+                          *SUN) THEN(CALLSUBR SUBR(ROUTINE))
+
+/******************************************************************************/
+/*____________________________________________________________________________*/
+             SUBR       SUBR(ROUTINE) /* Routineaufgaben */
+/*___________________________________________________________________  _______*/
+/*    *-aufruf von programmen aus datei #pgmaufr in bar_vert           -------*/
+/*    *-wenn parameter "&lauf" in datei = "N", kein aufruf             -------*/
+/*    *-wenn parameter "&batch" in datei = "J", batchaufruf            -------*/
+/*    *-kann bei bedarf genutzt werden                                 -------*/
+/*___________________________________________________________________  _______*/
+ LOOP2:      RCVF       OPNID(B)
+             MONMSG     MSGID(CPF0864) EXEC(GOTO CMDLBL(ENDROUT))
+
+             IF         COND(&B_JOB *EQ '          ') THEN(CHGVAR +
+                          VAR(&B_JOB) VALUE('ROUTINE_3'))
+/*___________________________________________________________________  _______*/
+/*    interaktiv mit parameterübergabe                                 -------*/
+/*___________________________________________________________________  _______*/
+             IF         COND(&B_LAUF *EQ 'J' *AND &B_BATCH *EQ 'N' +
+                          *AND &B_PARA_AUSG *EQ 'J') THEN(DO)
+             CALL       PGM(&B_LIB/&B_PROGRAMM) PARM(&B_PARAMETER +
+                          &B_PARAMETER2 &B_PARAMETER3 &B_PARAMETER4 +
+                          &B_PARAMETER5 &B_PARAMETER6 &B_PARAMETER7 +
+                          &B_PARAMETER8 &B_PARAMETER9 &B_PARAMETE10)
+             MONMSG     MSGID(CPF0000)
+  /*         MONMSG     MSGID(CPF9801)  EXEC(GOTO NOTFOUND)    */
+             ENDDO
+/*___________________________________________________________________  _______*/
+/*    interaktiv ohne parameterübergabe                                -------*/
+/*___________________________________________________________________  _______*/
+             IF         COND(&B_LAUF *EQ 'J' *AND &B_BATCH *EQ 'N' +
+                          *AND &B_PARA_AUSG *EQ 'N') THEN(DO)
+             CALL       PGM(&B_LIB/&B_PROGRAMM)
+             MONMSG     MSGID(CPF0000)
+             ENDDO
+/*___________________________________________________________________  _______*/
+/*    batch programm mit parameterübergabe                             -------*/
+/*___________________________________________________________________  _______*/
+             IF         COND(&B_LAUF *EQ 'J' *AND &B_BATCH *EQ 'J' +
+                          *AND &B_BEFEHL *EQ 'N') THEN(DO)
+             SBMJOB     CMD(CALL PGM(&B_LIB/&B_PROGRAMM) +
+                          PARM(&B_PARAMETER &B_PARAMETER2 +
+                          &B_PARAMETER3 &B_PARAMETER4 &B_PARAMETER5 +
+                          &B_PARAMETER6 &B_PARAMETER7 &B_PARAMETER8 +
+                          &B_PARAMETER9 &B_PARAMETE10)) +
+                          JOB(&B_JOB) JOBD(BAR_VERT/SICHERUNG) +
+                          JOBQ(&B_JOBQ) LOGCLPGM(*YES)
+             MONMSG     MSGID(CPF0000)
+             ENDDO
+
+/*___________________________________________________________________  _______*/
+/*    batch cmd oder befehls-string                                    -------*/
+/*___________________________________________________________________  _______*/
+             IF         COND(&B_LAUF *EQ 'J' *AND &B_BATCH *EQ 'J' +
+                          *AND &B_BEFEHL *EQ 'J') THEN(DO)
+             SBMJOB     JOB(&B_JOB) JOBD(BAR_VERT/SICHERUNG) +
+                          JOBQ(&B_JOBQ) RQSDTA(&B_INHALT_B) +
+                          LOGCLPGM(*YES)
+             MONMSG     MSGID(CPF0000)
+             ENDDO
+
+ NOTFOUND:   GOTO       CMDLBL(LOOP2)
+
+ ENDROUT:    ENDSUBR
+
+/*____________________________________________________________________________*/
+             SUBR       SUBR(TRDSBSEND) /* beenden sbs trend  */
+             CALL       PGM(BAR_VERT/SBSTRDEND)
+             ENDSUBR
+/*____________________________________________________________________________*/
+             SUBR       SUBR(LFSSBSEND) /* beenden sbs LFS    */
+             CALL       PGM(BAR_VERT/SBSLFSEND)
+             ENDSUBR
+/*____________________________________________________________________________*/
+
+
+ ENDE:       ENDPGM

@@ -1,0 +1,8 @@
+winadmin   3veKhCMZ
+LCD GANG
+ascii
+NAMEFMT 0
+cd domains/dometic-group.com/public_ftp/dwfr/rcv
+APPEND OBSOLETE OBSOLETE.TXT
+PUT OBSOLETE OA20110307.TXT
+quit

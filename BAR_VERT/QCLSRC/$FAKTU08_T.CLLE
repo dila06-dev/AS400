@@ -1,0 +1,111 @@
+/*    * PROGRAMMNAME.:$FAKTU08_T                                             */
+/*    * FUNKTION.....:...                                                    */
+/*    * 27.09.12       schneider                                              */
+/*    *                                                                       */
+/*    * Änderung:                                                             */
+/*    *                                                                       */
+/*    *                                                                       */
+/*    *-start tagesrechnung über kalenderdatei                               */
+/*    *-parameter: &JOBQ = J=steurung jobq , N=keine steuerung jobq          */
+/*    *                                                                      */
+/*    * Hinweis:                                                             */
+/*    * sind in der kalenderdatei (bar_vert/kalendern) keine einträge        */
+/*    * in den zeiten vorhanden, wird die jeweilige standardzeit             */
+/*    * aus dtaara bar_vert/tagesrg vorbelegt                                */
+/*    *                                                                      */
+/*    * bei änderungen der standardzeiten,diese in dtaara                    */
+/*    * bar_vert/tagesrg ändern!                                             */
+/*    * !!!!!!!!!!!!!!!!                                                     */
+/*    * prüfen mit programmen von hr. gang (ablaufsteuerung)                 */
+/*    * bei änderung der zeiten für export                                   */
+/*    * !!!!!!!!!!!!!!!!                                                     */
+/*    * dieses programm wird über scde derzeit um 16:30h im sbs qsyswrk      */
+/*    * täglich gestartet ($FAKTU08_T) mit parameter &JOBQ                   */
+/*    *                                                                       */
+/******************************************************************************/
+             PGM        PARM(&JOBQ &LOKATION)
+
+             DCLF       FILE(BAR_VERT/KALENDERN) OPNID(A)
+             DCL        VAR(&FIRMA) TYPE(*CHAR) LEN(2)
+             DCL        VAR(&DATUMC) TYPE(*CHAR) LEN(6)
+             DCL        VAR(&DATUMS) TYPE(*DEC) LEN(6 0)
+             DCL        VAR(&QTIME) TYPE(*CHAR) LEN(6)
+             DCL        VAR(&TIME08) TYPE(*CHAR) LEN(6) /* Fa 08 */
+             DCL        VAR(&TIME08V) TYPE(*CHAR) LEN(6) /* Fa 08 +
+                          Vorbelegung */
+             DCL        VAR(&TAG) TYPE(*CHAR) LEN(4)
+             DCL        VAR(&JOBQ) TYPE(*CHAR) LEN(1)
+             DCL        VAR(&LOKATION) TYPE(*CHAR) LEN(3)
+             DCL        VAR(&FIRMA) TYPE(*CHAR) LEN(2) VALUE('  ')
+
+             CHGJOB     LOG(4 00 *SECLVL) LOGCLPGM(*YES) +
+                          LOGOUTPUT(*JOBEND)
+
+             ADDLIBLE   LIB(TVRELWAECO) POSITION(*LAST)
+             MONMSG     MSGID(CPF0000)
+
+             RTVJOBA    DATE(&DATUMC) DAYOFWEEK(&TAG)
+             CHGVAR     VAR(&DATUMS) VALUE(&DATUMC)
+
+/*___   ermitteln firma ____________________________________________________ */
+             CALL       PGM(TVRELWAECO/DOWR000) PARM(&LOKATION &FIRMA)
+
+/*___   standardzeiten für faktura vorbelegen aus dtaara bar_vert/tagesrg___ */
+             RTVDTAARA  DTAARA(BAR_VERT/TAGESRG (151 6)) +
+                          RTNVAR(&TIME08V)
+
+/*___nicht an samstagen und sonntagen ________________________________________*/
+             IF         COND(&TAG *NE '*SAT' *OR &TAG *NE '*SUN') +
+                          THEN(DO)
+
+/*___auslesen datei kalender _________________________________________________*/
+ LOOP:       RCVF       OPNID(A)
+             MONMSG     MSGID(CPF0864) EXEC(GOTO CMDLBL(WEITER))
+             IF         COND(&DATUMS *EQ &A_KALDAT2 *AND &A_KALFIRM +
+                          *EQ &FIRMA) THEN(CHGVAR VAR(&TIME08) +
+                          VALUE(&A_KALRGZEITI))
+             GOTO       CMDLBL(LOOP)
+/*____________________________________________________________________________*/
+
+/*___   zeiten für faktura vorbelegen, falls in der datei leer _____________ */
+/*___   vorbelegung aus dtaara bar_vert/tagesrg ____________________________ */
+ WEITER:     IF         COND(&TIME08 *EQ '      ') THEN(CHGVAR +
+                          VAR(&TIME08) VALUE(&TIME08V))
+/*____________________________________________________________________________*/
+
+
+/*___   durchführen rechnungslauf Fa. 08 ___________________________________ */
+
+ LOOP08:     RTVSYSVAL  SYSVAL(QTIME) RTNVAR(&QTIME)
+             IF         COND(&QTIME *GE &TIME08) THEN(GOTO +
+                          CMDLBL(RGLAUF08))
+             DLYJOB     DLY(300)
+             GOTO       CMDLBL(LOOP08)
+/*____________________________________________________________________________*/
+
+/*___   steuerung jobq für druckaufträge JQPRTSVR01 ________________________ */
+ RGLAUF08:   IF         COND(&JOBQ = 'J') THEN(DO)
+             SBMJOB     CMD(CALL PGM(TVRELWAECO/#RLSJOBQ)) +
+                          JOB(JBQSTEUERG) JOBQ(QSYS/QSYSNOMAX)
+             ENDDO
+/*____________________________________________________________________________*/
+
+             SBMJOB     CMD(CALL PGM(MODWAO/TRAB50SJ) PARM('MODWAO' +
+                          '08' '   ' '   ' '   ' '001')) +
+                          JOB(FAKTURA08E) JOBD(MODWAO/JDFIB08) +
+                          USER(FAKTURA08) LOGCLPGM(*YES) /* +
+                          'tägliche Rg Einzel Fa. 08            */
+/*____________________________________________________________________________*/
+
+             DLYJOB     DLY(180)
+
+             SBMJOB     CMD(CALL PGM(MODWAO/TRAB53SJ) PARM('MODWAO' +
+                          '08' '2' '   ' '   ' '001')) +
+                          JOB(FAKTURA08S) JOBD(MODWAO/JDFIB08) +
+                          USER(FAKTURA08) LOGCLPGM(*YES) /* +
+                          'tägliche Rg Sammel Fa. 08            */
+/*____________________________________________________________________________*/
+
+             ENDDO
+
+             ENDPGM

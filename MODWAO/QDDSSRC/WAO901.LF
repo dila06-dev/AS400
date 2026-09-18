@@ -1,0 +1,18 @@
+     A**************************************************************************
+     A*  Copyright 2000 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Matrix Konto/Kostenstellen                                            *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: SZ 21.12.2010 Projekt Vertrieb                              *
+     A*                                                                        *
+     A**************************************************************************
+     A          R WAO91                     PFILE(WAO9)
+     A*
+     A          K WAO9FIRM
+     A          K WAO9AFAT
+     A          K WAO9PRGR
+     A          K WAO9KONT
+     A          K WAO9KSST

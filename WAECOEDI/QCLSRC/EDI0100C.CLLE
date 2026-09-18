@@ -1,0 +1,16 @@
+/*-------------------------------------------------*/
+/* Verwalten EDI-Aufträge - Aufrufprogramm         */
+/*-------------------------------------------------*/
+             PGM
+
+             ADDLIBLE   LIB(WAECOEDI)
+             MONMSG     MSGID(CPF2103)
+             ADDLIBLE   LIB(BAR_FTP)
+             MONMSG     MSGID(CPF2103)
+
+             CALL       PGM(EDI0100) /* EDI0100 aufrufen */
+
+ NEXT2:      RMVLIBLE   LIB(WAECOEDI)
+             RMVLIBLE   LIB(BAR_FTP)
+
+             ENDPGM

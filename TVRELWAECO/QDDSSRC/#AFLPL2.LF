@@ -1,0 +1,13 @@
+      * Physische Datei: AFLP
+      * ANLEGEDATUM: OKTOBER 2010
+      *SORT:        FÜR RHENANIA GEFAHRGUTÜBERGABE
+      * ÄNDERUNGEN:
+      * AUSSCHLUSS:  ...
+     A
+     A**********                            UNIQUE
+     A          R AFLP1                     PFILE(AFLP)
+     A
+     A          K ALFIRM
+     A          K ALKMJJ
+     A          K ALKMNR
+     A          K ALTENR

@@ -1,0 +1,16 @@
+     A*
+     A*         DATUM IMMER TT.MM.JJJJ
+     A*         ZEIT  IMMER HH:MM
+     A*
+     A*CPYFRMIMPF FROMFILE(TVRELWAECO/FROM_EXCEX)
+     A*              TOFILE(TVRELWAECO/FROM_EXCEL)
+     A*               MBROPT(*REPLACE) FLDDLM(';')
+     A*                        RPLNULLVAL(*FLDDFT)
+     A*
+     A*
+     A*
+     A          R SKUTRANSFR                TEXT('SKU#')
+     A*****************************************************************
+     A            ITEM          15A         COLHDG('ITEM#')
+     A            ITEM2        200A         COLHDG('ITEM#')
+     A            ITEM3        200A         COLHDG('ITEM#')

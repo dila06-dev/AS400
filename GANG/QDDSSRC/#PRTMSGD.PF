@@ -1,0 +1,2 @@
+     A          R #PRTMSGR                  TEXT('CPYF DSPMSGF')
+     A            INHALT       132A         COLHDG('INHALT')

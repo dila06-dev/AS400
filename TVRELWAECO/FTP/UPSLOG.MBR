@@ -1,0 +1,248 @@
+2020-02-12-14.10.40.147155   12.02.2020   14.10.40
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp2.dmz-gslb.UPS.COM, Adresse
+ 153.2.232.19 über Port 21 herzustellen.
+220-
+220-        ATTENTION!!!     ATTENTION!!!     ATTENTION!!!
+220-
+220-	The non-secure FTP protocol has been disabled.
+220-
+220-	In order to continue connecting, switch to a Secure Protocol - SFTP, FTPS,
+ or HTTPS.
+220-
+220-	For SFTP connections, use port 10022.
+220-
+220-	Examples:
+220-	https://ftp2.ups.com
+220-	sftp -oport=10022 login_id@ftp2.ups.com
+220-
+220-	Note: UPS customers can contact their UPS representative or their
+220-	pre-defined UPS first level support helpdesk for additional information.
+220-
+220-
+220-
+220 Secure FTP Server ready.
+Anmelde-ID (gang) eingeben:
+530 SSL is mandatory.
+ User login failed
+Einen FTP-Unterbefehl eingeben.
+> ascii
+530 SSL is mandatory.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 1
+530 SSL is mandatory.
+Client NAMEFMT ist 1.
+Einen FTP-Unterbefehl eingeben.
+> cd /invoice
+Zuerst muss Unterbefehl USER abgesetzt werden.
+Einen FTP-Unterbefehl eingeben.
+> SYSCMD CHGCURLIB TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> rem ****** **** ************************ ************
+Unterbefehl 'rem' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP
+ eingeben.
+Einen FTP-Unterbefehl eingeben.
+> GET Q3502INV*.*       /Lager/UPS_Abrechnungen
+Zuerst muss Unterbefehl USER abgesetzt werden.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2020-02-12-14.13.55.041941   12.02.2020   14.13.55
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp2.dmz-gslb.UPS.COM, Adresse
+ 153.2.232.19 über Port 10022 herzustellen.
+SSH-2.0-SSHD
+2020-02-12-14.31.22.020310   12.02.2020   14.31.22
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp2.dmz-gslb.ups.com, Adresse
+ 153.2.232.19 über Port 20 herzustellen.
+2020-02-12-14.35.40.155740   12.02.2020   14.35.40
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp2.dmz-gslb.ups.com, Adresse
+ 153.2.232.19 über Port 21 herzustellen.
+220-
+220-        ATTENTION!!!     ATTENTION!!!     ATTENTION!!!
+220-
+220-	The non-secure FTP protocol has been disabled.
+220-
+220-	In order to continue connecting, switch to a Secure Protocol - SFTP, FTPS,
+ or HTTPS.
+220-
+220-	For SFTP connections, use port 10022.
+220-
+220-	Examples:
+220-	https://ftp2.ups.com
+220-	sftp -oport=10022 login_id@ftp2.ups.com
+220-
+220-	Note: UPS customers can contact their UPS representative or their
+220-	pre-defined UPS first level support helpdesk for additional information.
+220-
+220-
+220-
+220 Secure FTP Server ready.
+Anmelde-ID (gang) eingeben:
+530 SSL is mandatory.
+ User login failed
+Einen FTP-Unterbefehl eingeben.
+> ascii
+530 SSL is mandatory.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 1
+530 SSL is mandatory.
+Client NAMEFMT ist 1.
+Einen FTP-Unterbefehl eingeben.
+> cd /invoice
+Zuerst muss Unterbefehl USER abgesetzt werden.
+Einen FTP-Unterbefehl eingeben.
+> SYSCMD CHGCURLIB TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> rem ****** **** ************************ ************
+Unterbefehl 'rem' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP
+ eingeben.
+Einen FTP-Unterbefehl eingeben.
+> GET Q3502INV*.*       /Lager/UPS_Abrechnungen
+Zuerst muss Unterbefehl USER abgesetzt werden.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2020-02-13-10.15.21.357252   13.02.2020   10.15.21
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Host-Name dometic1219@ftp2.ups.com nicht gefunden.
+Einen FTP-Unterbefehl eingeben.
+> dometic1219 ********
+Unterbefehl 'dometic1219' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP
+ eingeben.
+Einen FTP-Unterbefehl eingeben.
+> ascii
+Es muss zuerst eine Verbindung hergestellt werden.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 1
+Client NAMEFMT ist 1.
+Einen FTP-Unterbefehl eingeben.
+> cd /invoice
+Es muss zuerst eine Verbindung hergestellt werden.
+Einen FTP-Unterbefehl eingeben.
+> SYSCMD CHGCURLIB TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> rem ****** **** ************************ ************
+Unterbefehl 'rem' nicht gültig.
+Einen FTP-Unterbefehl eingeben.
+> GET Q3502INV*.*       /Lager/UPS_Abrechnungen
+Es muss zuerst eine Verbindung hergestellt werden.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+2020-02-13-10.22.52.461816   13.02.2020   10.22.52
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp2.dmz-gslb.ups.com, Adresse
+ 153.2.232.19 über Port 21 herzustellen.
+220-
+220-        ATTENTION!!!     ATTENTION!!!     ATTENTION!!!
+220-
+220-	The non-secure FTP protocol has been disabled.
+220-
+220-	In order to continue connecting, switch to a Secure Protocol - SFTP, FTPS,
+ or HTTPS.
+220-
+220-	For SFTP connections, use port 10022.
+220-
+220-	Examples:
+220-	https://ftp2.ups.com
+220-	sftp -oport=10022 login_id@ftp2.ups.com
+220-
+220-	Note: UPS customers can contact their UPS representative or their
+220-	pre-defined UPS first level support helpdesk for additional information.
+220-
+220-
+220-
+220 Secure FTP Server ready.
+Anmelde-ID (gang) eingeben:
+530 SSL is mandatory.
+ User login failed
+Einen FTP-Unterbefehl eingeben.
+> ascii
+530 SSL is mandatory.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 1
+530 SSL is mandatory.
+Client NAMEFMT ist 1.
+Einen FTP-Unterbefehl eingeben.
+> cd /invoice
+Zuerst muss Unterbefehl USER abgesetzt werden.
+Einen FTP-Unterbefehl eingeben.
+> SYSCMD CHGCURLIB TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> rem ****** **** ************************ ************
+Unterbefehl 'rem' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP
+ eingeben.
+Einen FTP-Unterbefehl eingeben.
+> GET Q3502INV*.*       /Lager/UPS_Abrechnungen
+Zuerst muss Unterbefehl USER abgesetzt werden.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2020-02-13-10.55.08.266426   13.02.2020   10.55.08
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp2.dmz-gslb.ups.com, Adresse
+ 153.2.232.19 über Port 21 herzustellen.
+220-
+220-        ATTENTION!!!     ATTENTION!!!     ATTENTION!!!
+220-
+220-	The non-secure FTP protocol has been disabled.
+220-
+220-	In order to continue connecting, switch to a Secure Protocol - SFTP, FTPS,
+ or HTTPS.
+220-
+220-	For SFTP connections, use port 10022.
+220-
+220-	Examples:
+220-	https://ftp2.ups.com
+220-	sftp -oport=10022 login_id@ftp2.ups.com
+220-
+220-	Note: UPS customers can contact their UPS representative or their
+220-	pre-defined UPS first level support helpdesk for additional information.
+220-
+220-
+220-
+220 Secure FTP Server ready.
+Anmelde-ID (gang) eingeben:
+530 SSL is mandatory.
+ User login failed
+Einen FTP-Unterbefehl eingeben.
+> ascii
+530 SSL is mandatory.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 1
+530 SSL is mandatory.
+Client NAMEFMT ist 1.
+Einen FTP-Unterbefehl eingeben.
+> cd /invoice
+Zuerst muss Unterbefehl USER abgesetzt werden.
+Einen FTP-Unterbefehl eingeben.
+> SYSCMD CHGCURLIB TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> rem ****** **** ************************ ************
+Unterbefehl 'rem' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP
+ eingeben.
+Einen FTP-Unterbefehl eingeben.
+> GET Q3502INV*.*       /Lager/UPS_Abrechnungen
+Zuerst muss Unterbefehl USER abgesetzt werden.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.

@@ -1,0 +1,8 @@
+      * Physische Datei:
+      * ANLEGEDATUM:
+      * ÄNDERUNGEN:
+      *
+     A                                      UNIQUE
+     A          R CALENDER                  PFILE(CALENDER)
+     A
+     A          K $CDATEISO

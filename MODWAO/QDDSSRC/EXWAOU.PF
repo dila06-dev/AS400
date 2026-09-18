@@ -1,0 +1,43 @@
+     A**************************************************************************
+     A*  Copyright 2014 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------- *
+     A*  Kommunikationsbereich SDB pro Land, Artikel                           *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: MG 14.01.2014 Projekt 9787                                  *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R EXWAOU1
+     A*-------------------------------------------------------------------------
+     A* Programmstatus
+     A*-------------------------------------------------------------------------
+     A            EXWAOUPGSTR               REFFLD(##PGST)
+     A            EXWAOUPROGR               REFFLD(##PROG)
+     A            EXWAOUFLDNR               REFFLD(##FLDN)
+     A*-------------------------------------------------------------------------
+     A* ON/OFF KZ für Prüfungen
+     A*-------------------------------------------------------------------------
+     A            EXWAOUIFKZR               REFFLD(##IFKZ)
+     A            EXWAOUFR01R               REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* Key-Felder
+     A*-------------------------------------------------------------------------
+     A            EXWAOUTENRR               REFFLD(WAOU1/WAOUTENR *LIBL/WAOU)
+     A            EXWAOULANDR               REFFLD(WAOU1/WAOULAND *LIBL/WAOU)
+     A            EXWAOUFR02R  256          REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* Kopier-Begriff NACH
+     A*-------------------------------------------------------------------------
+     A            EXWAOUNTENR               REFFLD(WAOU1/WAOUTENR *LIBL/WAOU)
+     A            EXWAOUNLNDR               REFFLD(WAOU1/WAOULAND *LIBL/WAOU)
+     A            EXWAOUFR03R  256          REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* evt. weitere Felder für Update oder Prüfungen
+     A*-------------------------------------------------------------------------
+     A            EXWAOUWEBSR               REFFLD(WAOU1/WAOUWEBS *LIBL/WAOU)
+     A            EXWAOUTSTPR               REFFLD(WAOU1/WAOUTSTP *LIBL/WAOU)
+     A            EXWAOUERUSR               REFFLD(WAOU1/WAOUERUS *LIBL/WAOU)
+     A            EXWAOUFR04R  328          REFFLD(##FREI)

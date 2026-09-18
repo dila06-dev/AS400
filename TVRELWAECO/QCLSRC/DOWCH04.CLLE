@@ -1,0 +1,41 @@
+/*____________________________________________________________________________*/
+/*    * Programmname.:DOWCH04                                                */
+/*    * Funktion.....:update status in lbak, wenn status 10 statt 90         */
+/*    *               update status in afkm, wenn status 20 statt 40         */
+/*    *               .                                                      */
+/*    *               .                                                      */
+/*    * 08/2013        SCHNEIDER                                              */
+/*    *                                                                       */
+/*    *-Änderungsdienst-------------------------------------------------------*/
+/*    * 15.07.14 erweiterung auf afkm                         PGMR.....       */
+/*____________________________________________________________________________*/
+             PGM
+
+             DCL        VAR(&ANZN1) TYPE(*DEC) LEN(10 0)
+
+             RUNQRY     QRY(TVRELWAECO/Q_XX_001) /* ermitteln +
+                          falschen status lbak in datei QO_XX_001 +
+                          als basis für sql */
+             MONMSG     MSGID(CPF0000)
+
+/* -------------------------------------------------------------------------- */
+/*  Prüfung, ob Aufruf notwendig                                              */
+/* -------------------------------------------------------------------------- */
+             RTVMBRD    FILE(TVRELWAECO/QO_XX_001) NBRCURRCD(&ANZN1)
+             IF         COND(&ANZN1 = 0) THEN(GOTO +
+                          CMDLBL(ENDE))
+
+             RUNSQLSTM  SRCFILE(DOWSRC/QSQLSRC) SRCMBR(UPLBAKSQL) +
+                          COMMIT(*NONE)
+             MONMSG     MSGID(CPF0000)
+
+             RUNSQLSTM  SRCFILE(DOWSRC/QSQLSRC) SRCMBR(UPAFKMSQL) +
+                          COMMIT(*NONE)
+             MONMSG     MSGID(CPF0000)
+
+             CPYF       FROMFILE(TVRELWAECO/QO_XX_001) +
+                          TOFILE(TVRELWAECO/QO_XX_001S) +
+                          MBROPT(*ADD) CRTFILE(*NO) FMTOPT(*MAP *DROP)
+             MONMSG     MSGID(CPF0000)
+
+ ENDE:       ENDPGM

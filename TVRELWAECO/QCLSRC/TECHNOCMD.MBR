@@ -1,0 +1,7 @@
+mapco Y5rT7p1hKPjFB3gGxLAh
+LCD TVRELWAECO
+ascii
+NAMEFMT 0
+cd /transfer/incoming
+APPEND EDI_TECHP TE260911_1836.txt
+QUIT

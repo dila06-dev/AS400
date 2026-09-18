@@ -1,0 +1,6 @@
+FTP FTP
+NA 1
+CD /TREND/echt/edi/out/desadv
+MDEL DE_*
+
+QUIT

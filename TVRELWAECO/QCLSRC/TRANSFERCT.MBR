@@ -1,0 +1,54 @@
+2015-06-16-13.12.21.971226   16.06.2015   13.12.21
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+Anzahl Argumente in Bedienerführung für Anmelden beim Server ist nicht korrekt.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+530 Not logged in.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+530 Not logged in.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> rem ** ******************
+Unterbefehl 'rem' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND TRANSFERP# DE411A_TP_150616.CSV
+Zuerst muss Unterbefehl USER abgesetzt werden.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!
+2015-06-18-12.21.10.682728   18.06.2015   12.21.10
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+Anzahl Argumente in Bedienerführung für Anmelden beim Server ist nicht korrekt.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+530 Not logged in.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+530 Not logged in.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> rem ** ******************
+Unterbefehl 'rem' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND TRANSFERP# DE411_TP_150618.CSV
+Zuerst muss Unterbefehl USER abgesetzt werden.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!

@@ -1,0 +1,10 @@
+     A                                      UNIQUE
+     A          R FRACHTF0
+     A            LNLDNR         3A         TEXT('LAND')
+     A            LNLBEZ        30A         TEXT('LANDBEZEICHNUNG')
+     A            LNAMKZ         3A         TEXT('AMKZ')
+     A            LNZLKZ         3A         TEXT('ZLKZ')
+     A            LNLISO         2A         TEXT('LISO')
+     A            LNISO3         3A         TEXT('ISO3')
+     A            SATZ          18S 2       TEXT('FRACHTSATZ')
+     A          K LNLISO

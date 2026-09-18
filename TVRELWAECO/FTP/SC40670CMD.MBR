@@ -1,0 +1,9 @@
+winadmin   gbjYzXrqX44T6bZV
+ascii
+NAMEFMT 1
+REM ASCII
+cd domains/dometic-group.com/public_ftp/dwuk2/rcv
+REM lcd   domains/dometic-group.com/public_ftp/dwru/snd
+SYSCMD CHGCURLIB TVRELWAECO
+APPEND PAKE40670E.file PAKE40670E-20260915.csv
+QUIT

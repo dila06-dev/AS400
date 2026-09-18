@@ -1,0 +1,56 @@
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.dethleffs.de, Adresse
+ 217.237.186.110 über Port 21 herzustellen.
+Zum Host ftp.dethleffs.de mit Adresse 217.237.186.110 kann keine Verbindung
+ hergestellt werden. Später erneut versuchen.
+Einen FTP-Unterbefehl eingeben.
+> DomeEmsD *********
+Unterbefehl 'DomeEmsD' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP
+ eingeben.
+Einen FTP-Unterbefehl eingeben.
+> NA 1
+Client NAMEFMT ist 1.
+Einen FTP-Unterbefehl eingeben.
+> CD DomeEmsD_50000432/AVIS
+Es muss zuerst eine Verbindung hergestellt werden.
+Einen FTP-Unterbefehl eingeben.
+> LCD /TREND/ECHT/EDI/OUT/DESADV
+Das lokale Arbeitsverzeichnis ist /TREND/ECHT/EDI/OUT/DESADV
+Einen FTP-Unterbefehl eingeben.
+> MPUT DE_*
+Es muss zuerst eine Verbindung hergestellt werden.
+Einen FTP-Unterbefehl eingeben.
+>
+Einen FTP-Unterbefehl eingeben.
+> quit
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Versuch, eine Verbindung zum fernen Host 172.16.100.1 über Port 21
+ herzustellen.
+220-QTCP at IBM01EMSPROD01.
+220 Connection will close if idle more than 5 minutes.
+Anmelde-ID (bari) eingeben:
+331 Enter password.
+230 FTP logged on.
+ OS/400 is the remote operating system. The TCP/IP version is "V7R4M0".
+250  Now using naming format "0".
+257 "QGPL" is current library.
+Einen FTP-Unterbefehl eingeben.
+> NA 1
+250  Now using naming format "1".
+Server NAMEFMT ist 1.
+Client NAMEFMT ist 1.
+Einen FTP-Unterbefehl eingeben.
+> CD /TREND/echt/edi/out/desadv
+250 "/TREND/echt/edi/out/desadv" is current directory.
+Einen FTP-Unterbefehl eingeben.
+> MDEL DE_*
+229 Entering Extended Passive Mode (!!!15628!).
+425 Not able to open data connection.
+Einen FTP-Unterbefehl eingeben.
+>
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 QUIT subcommand received.

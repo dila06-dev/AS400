@@ -1,0 +1,15 @@
+      * Physische Datei: IFAK
+      * ANLEGEDATUM: NOVEMBER 2010
+      *SORT:        ...
+      * ÄNDERUNGEN:
+      * AUSSCHLUSS:  ...
+     A
+     A**************                        UNIQUE
+     A          R ORT00R1                   PFILE(PWINORT)
+     A
+     A          K ORT010
+     A          K ORT020
+     A          K ORT030
+     A          K ORT040
+     A          K ORT045
+     A          K ORT050

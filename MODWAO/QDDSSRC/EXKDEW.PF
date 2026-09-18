@@ -1,0 +1,79 @@
+     A**************************************************************************
+     A*  Copyright 2010 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------- *
+     A*  Kommunikationsbereich Kundenstamm-Erweiterungen                       *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: RH 04.11.10                                                 *
+     A*  Änderung: MG 15.08.2011 Projekt 7668, Planungssystem                  *
+     A*            Neue Felder Planungskz, Kundenplanung                       *
+     A*  Änderung: ZG 20.08.2012 PROJEKT 8762 -                                *
+     A*            "Einzel-Picklistensteuerung" 0/1                            *
+     A*  Änderung: GS 11.11.2012 PROJEKT 9021 - "Konzernschlüßel" (KDEWKZKY)   *
+     A*  Änderung: ZG 02.05.2013 PROJEKT 9449 - "DRUCK USTIDBR"                *
+     A*  Änderung: PH 09.07.2014 Projekt 10655. Neue Felder KDEWRPMG "RPM-     *
+     A*            Gruppe", KDEWFL01...04 "KD-Steuerung 01...04"; alle 10A     *
+     A*  Änderung: PH 13.08.2015 Projekt 11567. Neues Feld KDEWFGZT            *
+     A*            "F-Gas berechtigt"                                          *
+     A*  Änderung: PH 28.08.2015 Projekt 11427. Neues Feld KDEWSPTE "Kom-      *
+     A*            Schein verdichten"                                          *
+     A*  Änderung: PH 01.12.2022 Projekt 220562-01. Neue Felder KDEWFL05...09  *
+     A*            "KD-Steuerung 05...09", alle 20A.                           *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R EXKDEW1
+     A*-------------------------------------------------------------------------
+     A* Programmstatus
+     A*-------------------------------------------------------------------------
+     A            EXKDEWPGSTR               REFFLD(##PGST)
+     A            EXKDEWPROGR               REFFLD(##PROG)
+     A            EXKDEWFLDNR               REFFLD(##FLDN)
+     A*-------------------------------------------------------------------------
+     A* ON/OFF KZ für Prüfungen
+     A*-------------------------------------------------------------------------
+     A            EXKDEWIFKZR               REFFLD(##IFKZ)
+     A            EXKDEWYYKZR               REFFLD(##A001)
+     A                                      TEXT('ON/OFF-Feld für Prüfung 2')
+     A            EXKDEWFR01R               REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* Key-Felder
+     A*-------------------------------------------------------------------------
+     A            EXKDEWKDNRR               REFFLD(KDEW1/KDEWKDNR *LIBL/KDEW)
+     A            EXKDEWFR02R  256          REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* Kopier-Begriff NACH
+     A*-------------------------------------------------------------------------
+     A            EXKDEWNKDNR               REFFLD(KDEW1/KDEWKDNR *LIBL/KDEW)
+     A            EXKDEWFR03R  256          REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* evt. weitere Felder für Update oder Prüfungen
+     A*-------------------------------------------------------------------------
+     A            EXKDEWGSKZR               REFFLD(KDEW1/KDEWGSKZ *LIBL/KDEW)
+     A            EXKDEWBLKZR               REFFLD(KDEW1/KDEWBLKZ *LIBL/KDEW)
+     A            EXKDEWBVKGR               REFFLD(KDEW1/KDEWBVKG *LIBL/KDEW)
+     A            EXKDEWKSSTR               REFFLD(KDEW1/KDEWKSST *LIBL/KDEW)
+     A            EXKDEWKDKRR               REFFLD(KDEW1/KDEWKDKR *LIBL/KDEW)
+     A            EXKDEWZOTNR               REFFLD(KDEW1/KDEWZOTN *LIBL/KDEW)
+     A            EXKDEWZPURR               REFFLD(KDEW1/KDEWZPUR *LIBL/KDEW)
+     A            EXKDEWURLDR               REFFLD(KDEW1/KDEWURLD *LIBL/KDEW)
+     A            EXKDEWDAGBR               REFFLD(KDEW1/KDEWDAGB *LIBL/KDEW)
+     A            EXKDEWPLKZR               REFFLD(KDEW1/KDEWPLKZ *LIBL/KDEW)
+     A            EXKDEWKDPLR               REFFLD(KDEW1/KDEWKDPL *LIBL/KDEW)
+     A            EXKDEWEZPLR               REFFLD(KDEW1/KDEWEZPL *LIBL/KDEW)
+     A            EXKDEWKZKYR               REFFLD(KDEW1/KDEWKZKY *LIBL/KDEW)
+     A            EXKDEWDUSTR               REFFLD(KDEW1/KDEWDUST *LIBL/KDEW)
+     A            EXKDEWRPMGR               REFFLD(KDEW1/KDEWRPMG *LIBL/KDEW)
+     A            EXKDEWFL01R               REFFLD(KDEW1/KDEWFL01 *LIBL/KDEW)
+     A            EXKDEWFL02R               REFFLD(KDEW1/KDEWFL02 *LIBL/KDEW)
+     A            EXKDEWFL03R               REFFLD(KDEW1/KDEWFL03 *LIBL/KDEW)
+     A            EXKDEWFL04R               REFFLD(KDEW1/KDEWFL04 *LIBL/KDEW)
+     A            EXKDEWFGZTR               REFFLD(KDEW1/KDEWFGZT *LIBL/KDEW)
+     A            EXKDEWSPTER               REFFLD(KDEW1/KDEWSPTE *LIBL/KDEW)
+     A            EXKDEWFL05R               REFFLD(KDEW1/KDEWFL05 *LIBL/KDEW)
+     A            EXKDEWFL06R               REFFLD(KDEW1/KDEWFL06 *LIBL/KDEW)
+     A            EXKDEWFL07R               REFFLD(KDEW1/KDEWFL07 *LIBL/KDEW)
+     A            EXKDEWFL08R               REFFLD(KDEW1/KDEWFL08 *LIBL/KDEW)
+     A            EXKDEWFL09R               REFFLD(KDEW1/KDEWFL09 *LIBL/KDEW)
+     A            EXKDEWFR04R  854          REFFLD(##FREI)

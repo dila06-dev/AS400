@@ -1,0 +1,22 @@
+     A**************************************************************************
+     A*  Copyright 2005 by    trend SWM                                        *
+     A*                       Verwaltungs GmbH                                 *
+     A*                       Ziegelhofstr 210 A                               *
+     A*                       D-79110 Freiburg                                 *
+     A*  --------------------------------------------------------------------  *
+     A*  Feldreferenzdatei                                                     *
+     A*  --------------------------------------------------------------------  *
+     A*  automatisch generiert                                                 *
+     A*                                                                        *
+     A**************************************************************************
+     A*
+     A          R MODREF1
+     A*-------------------------------------------------------------------------
+     A            ##GSKZ         1A         TEXT('Gebietsschutz')
+     A                                      COLHDG('GS')
+     A            ##BLKZ         1A         TEXT('Brutto-Pr. aus Lieferschein')
+     A                                      COLHDG('BL')
+     A            ##BVKZ         3A         TEXT('BOVIS Kundengruppe')
+     A                                      COLHDG('BK')
+     A            ##GSKD        10A         TEXT('KD Gebietsschutz')
+     A                                      COLHDG('KD Geb-Schutz')

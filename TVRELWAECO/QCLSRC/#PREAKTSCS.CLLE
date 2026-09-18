@@ -1,0 +1,83 @@
+/*    * PROGRAMMNAME.:#PREAKTSCD                                             */
+/*    * FUNKTION.....:ERMITTELN PREISE IN DATEI #PREISAKT                    */
+/*    *               TEMPORÄRE DATEI VORGESCHALTET #KUND_T                  */
+/*    *               - batch ohne bildschirmauswahl im scde eingestellt     */
+/*    *               - lauf derzeit nur für samstage freigeschaltet         */
+/*    *               - (abfrage im programm), da langläufer                 */
+/*    *               - bei jahresechsel im  QRY(TVRELWAECO/KALKVJ)          */
+/*    *                 in datei kalkVJ die version ändern (erfragen)        */
+/*    *                 danach kann dass  QRY(TVRELWAECO/TRDCGQ4)            */
+/*    *                 korrekt laufen                                       */
+/*    *               - bei jahreswechsel im cl die vorbelegung für          */
+/*    *                 vorjahr ändern  VAR(&PDATUVJ)                        */
+/*    *               _                                                      */
+/*    * 01/2012        SCHNEIDER                                              */
+/*    *                                                                       */
+/*    *                                                                       */
+/*    *-ÄNDERUNGSDIENST-------------------------------------------------------*/
+/*    * XX.XX.XX                                          PGMR.....           */
+/******************************************************************************/
+             PGM
+
+
+             DCL        VAR(&DATUM) TYPE(*CHAR) LEN(6)
+             DCL        VAR(&LAUFDATUM) TYPE(*CHAR) LEN(6)
+             DCL        VAR(&LAUFZEIT) TYPE(*CHAR) LEN(6) +
+                          VALUE('020000')
+             DCL        VAR(&LAUFTAG) TYPE(*CHAR) LEN(4)
+             DCL        VAR(&PDATU) TYPE(*CHAR) LEN(8)
+             DCL        VAR(&PDATUVJ) TYPE(*CHAR) LEN(8) +
+                          VALUE('20111231')
+             DCL        VAR(&DATEI) TYPE(*CHAR) LEN(10) +
+                          VALUE('#KUND_T')
+             DCL        VAR(&LIB) TYPE(*CHAR) LEN(10) +
+                          VALUE('TVRELWAECO')
+             DCL        VAR(&DATEI2) TYPE(*CHAR) LEN(10) +
+                          VALUE('TEIL01')
+             DCL        VAR(&LIB2) TYPE(*CHAR) LEN(10) VALUE('TVPF')
+
+/*             protokollierung                                               */
+     /*      CHGJOB     LOG(4 00 *SECLVL) LOGCLPGM(*YES) +
+                          LOGOUTPUT(*JOBEND)                      */
+
+             RTVSYSVAL  SYSVAL(QDATE) RTNVAR(&DATUM)
+             RTVSYSVAL  SYSVAL(QTIME) RTNVAR(&LAUFZEIT)
+             RTVSYSVAL  SYSVAL(QDAYOFWEEK) RTNVAR(&LAUFTAG)
+
+             CVTDAT     DATE(&DATUM) TOVAR(&PDATU) FROMFMT(*DMY) +
+                          TOFMT(*YYMD) TOSEP(*NONE)
+
+/*----------------------------------------------------------------------------*/
+
+/*             batch                                                         */
+
+             IF         COND(&LAUFTAG *NE *SAT) THEN(GOTO +
+                          CMDLBL(ENDE))
+
+             DLTF       FILE(TVRELWAECO/#PREISAKTS)
+             MONMSG     MSGID(CPF0000)
+             CRTDUPOBJ  OBJ(#PREISAKT) FROMLIB(TVRELWAECO) +
+                          OBJTYPE(*FILE) TOLIB(TVRELWAECO) +
+                          NEWOBJ(#PREISAKTS) DATA(*YES)
+             MONMSG     MSGID(CPF0000)
+             CLRPFM     FILE(TVRELWAECO/#PREISAKT)
+             MONMSG     MSGID(CPF0000)
+
+             DLTF       FILE(TVRELWAECO/#PREISVJS)
+             MONMSG     MSGID(CPF0000)
+             CRTDUPOBJ  OBJ(#PREISVJ) FROMLIB(TVRELWAECO) +
+                          OBJTYPE(*FILE) TOLIB(TVRELWAECO) +
+                          NEWOBJ(#PREISVJS) DATA(*YES)
+             MONMSG     MSGID(CPF0000)
+             CLRPFM     FILE(TVRELWAECO/#PREISVJ)
+             MONMSG     MSGID(CPF0000)
+
+             SBMJOB     CMD(CALL PGM(TVRELWAECO/#PREIC2B1) +
+                          PARM(&PDATU &PDATUVJ &DATEI &LIB &DATEI2 +
+                          &LIB2)) JOB(PREIS_BLJ) +
+                          JOBD(MODWAO/JDTREND) JOBQ(QSYSNOMAX) +
+                          JOBMSGQFL(*WRAP)
+
+
+ ENDE:       RCLRSC
+             ENDPGM

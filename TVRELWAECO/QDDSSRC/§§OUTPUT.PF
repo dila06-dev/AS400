@@ -1,0 +1,38 @@
+     A*
+     A*         DATUM IMMER TT.MM.JJJJ
+     A*         ZEIT  IMMER HH:MM
+     A*
+     A*CPYFRMIMPF FROMFILE(TVRELWAECO/FROM_EXCEX)
+     A*              TOFILE(TVRELWAECO/SUN_ITEMS)
+     A*              MBROPT(*REPLACE) FLDDLM(';')
+     A*                       RPLNULLVAL(*FLDDFT)
+     A*
+     A*CPYFRMIMPF FROMFILE(TVRELWAECO/FROM_EXCEX)
+     A*           TOFILE(TVRELWAECO/SUN_ITEMS)
+     A*           MBROPT(*REPLACE) FLDDLM(';')
+     A*           DECPNT(*COMMA) RPLNULLVAL(*FLDDFT)
+     A*
+     A*
+     A          R SUN_ITEMSR                TEXT('SKU#')
+     A*****************************************************************
+     A            FIRMA         02A         COLHDG('FIRMA')
+     A            KUNDEN        10A         COLHDG('KUNDE')
+     A            GRUPPE        05A         COLHDG('KUNDENGRUPPE')
+     A            LISTE         10A         COLHDG('ELNR')
+     A            NAME          30A         COLHDG('NAME')
+     A            EMAIL        120A         COLHDG('EMAIL')
+     A            COMPANY      120A         COLHDG('COMPANY')
+     A            SHORTCUT      03A         COLHDG('SHORTCUT')
+     A            GROUPDOM      10A         COLHDG('GROUPDOM')
+     A            DAYOFW1       04A         COLHDG('DAYOFW1')
+     A            DAYOFW2       04A         COLHDG('DAYOFW2')
+     A            DAYOFW3       04A         COLHDG('DAYOFW3')
+     A            DAYOFW4       04A         COLHDG('DAYOFW4')
+     A            DAYOFW5       04A         COLHDG('DAYOFW5')
+     A            DAYOFW6       04A         COLHDG('DAYOFW6')
+     A            DAYOFW7       04A         COLHDG('DAYOFW7')
+     A            DAYUNTIL      02A         COLHDG('DAYUNTIL')
+     A            FREE         120A         COLHDG('FREE')
+     A            DATEINPUT       L         TEXT('Date of transmissing')
+     A            TSTAMP          Z         TEXT('TIMESTAMP')
+     A            AKTIV          1A         TEXT('AKTIV')

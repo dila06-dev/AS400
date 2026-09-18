@@ -1,0 +1,22 @@
+     A**************************************************************************
+     A*  Copyright 2011 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Absatz-Plan %-Sätze Jahresebene                                       *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: MG 28.08.2011 Projekt 7668, Planungssystem                  *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R UXWAOM1
+     A*
+     A            UXWAOMFIRMR               REFFLD(WAOM1/WAOMFIRM *LIBL/WAOM)
+     A            UXWAOMKSTCR               REFFLD(WAOM1/WAOMKSTC *LIBL/WAOM)
+     A            UXWAOMKDGRR               REFFLD(WAOM1/WAOMKDGR *LIBL/WAOM)
+     A            UXWAOMKDPLR               REFFLD(WAOM1/WAOMKDPL *LIBL/WAOM)
+     A            UXWAOMKDNRR               REFFLD(WAOM1/WAOMKDNR *LIBL/WAOM)
+     A            UXWAOMLDNRR               REFFLD(WAOM1/WAOMLDNR *LIBL/WAOM)
+     A            UXWAOMPRGRR               REFFLD(WAOM1/WAOMPRGR *LIBL/WAOM)
+     A            UXWAOMJAHRR               REFFLD(WAOM1/WAOMJAHR *LIBL/WAOM)

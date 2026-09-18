@@ -1,0 +1,26 @@
+      * Physische Datei: #LBLB
+      * ANLEGEDATUM: JUNI 2010
+      * ÄNDERUNGEN:
+      *
+      * SELECT #AELFNR, #AEBEJJ, #AEBENR, #LBLBBWMG, #LBLBTENR,#AEBEPO,
+      * EPBEDA,EPBETE,EPBEST,
+      * #WERTA, #LBLBFBNR , #LBLBLSTC,
+      * #LBLBBDAT,#LBLBBWMG,#LBLBBWME,#AEWENR, #LBLBTMST FROM #LBLBL5,
+      * BBEP01
+      * WHERE EPFIRM IN('01', '51') AND
+      *       EPBEJJ = #AEBEJJ AND EPBENR = #AEBENR AND EPBEPO =
+      * #AEBEPO
+      * DATEI HDXFORCAST IN TVRELWAECO WURDE ERSTELLT.
+      *
+      *
+      *
+     A
+     A          R #LBLBR                    PFILE(#LBLB)
+     A                                      TEXT('HDX BEWEGUNGSDATEN')
+     A          K #AEBEJJ
+     A          K #AEBENR
+     A          K #AEBEPO
+     A          K #LBLBLSTC
+     A          S #WERTA                    CMP(NE '         ')
+     A            #LBLBLSTC                 VALUES('825' '950')
+     A            #LBLBCONT                 CMP(EQ '         ')

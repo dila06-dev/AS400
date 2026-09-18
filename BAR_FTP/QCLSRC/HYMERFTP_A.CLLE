@@ -1,0 +1,10 @@
+/*-------------------------------------------------*/
+/* FTP Command zum senden von Files (Ba.2014)      */
+/*                                                */
+/*-------------------------------------------------*/
+             PGM
+             OVRDBF     FILE(INPUT) TOFILE(BAR_FTP/QCLSRC) MBR(HymerCMD)
+             OVRDBF     FILE(OUTPUT) TOFILE(BAR_FTP/QCLSRC) +
+                          MBR(HymerLOG)
+             FTP        RMTSYS('ftp.hymer.com')
+             ENDPGM

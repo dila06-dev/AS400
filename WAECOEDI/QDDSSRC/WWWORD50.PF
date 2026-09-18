@@ -1,0 +1,63 @@
+     A          R ORD00R1
+     A            ORD010         7S 0
+     A                                      TEXT('Mitglieds-Nr. Absender')
+     A                                      COLHDG('Mit' -
+     A                                      'gl.-' -
+     A                                      'Nr.')
+     A                                      EDTCDE(Z)
+     A            ORD020         7S 0
+     A                                      TEXT('Mitglieds-Nr. Empfänger')
+     A                                      COLHDG('Mit' -
+     A                                      'gl.-' -
+     A                                      'Nr.')
+     A                                      EDTCDE(Z)
+     A            ORD030         7S 0
+     A                                      TEXT('Kunden-Nr. beim Empf.')
+     A                                      COLHDG('Kd.Nr.' -
+     A                                      'beim ' -
+     A                                      'Empf.')
+     A                                      EDTCDE(Z)
+     A            ORD040         7S 0
+     A                                      TEXT('Auftr.Nr. beim Abs.')
+     A                                      COLHDG('Auft.Nr.' -
+     A                                      'beim ' -
+     A                                      'Abs.')
+     A                                      EDTCDE(Z)
+     A            ORD050         5S 0
+     A                                      TEXT('Positions-Nr. beim Abs.')
+     A                                      COLHDG('Pos..Nr.' -
+     A                                      'beim ' -
+     A                                      'Abs.')
+     A                                      EDTCDE(Z)
+     A            ORD060         8S 0
+     A                                      TEXT('Datum JJJJMMTT')
+     A                                      COLHDG('Datum ' -
+     A                                      'JJJJMMTT')
+     A            ORD070         6S 0
+     A                                      TEXT('Zeit')
+     A                                      COLHDG('Zeit')
+     A                                      EDTWRD('0 :  :  ')
+     A            ORD210         3A
+     A                                      TEXT('Art.Nr.-Präfix Empfänger')
+     A                                      COLHDG('Art' -
+     A                                      'Nr.' -
+     A                                      'Prfx')
+     A            ORD220        15A
+     A                                      TEXT('Art.Nr.-beim   Empfänger')
+     A                                      COLHDG('Art' -
+     A                                      'Nr.' -
+     A                                      'Empf')
+     A            ORD230        40A
+     A                                      TEXT('Art.Nr.-beim   Absender')
+     A                                      COLHDG('Art' -
+     A                                      'Nr.' -
+     A                                      'Abs.')
+     A            ORD240         8S 3
+     A                                      TEXT('Mengen  Bestellt')
+     A                                      COLHDG('Mengen' -
+     A                                      'bestellt')
+     A            ORD250         1A
+     A                                      TEXT('Kezi. Rückstand')
+     A                                      COLHDG('Kezi' -
+     A                                      'Rück-' -
+     A                                      'stand')

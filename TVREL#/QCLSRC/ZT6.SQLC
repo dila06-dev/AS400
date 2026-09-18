@@ -1,0 +1,1 @@
+delete FROM afpo WHERE ApKDNR = '99999' or ApKDNR = '99999'

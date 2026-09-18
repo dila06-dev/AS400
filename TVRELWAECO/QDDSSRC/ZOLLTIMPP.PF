@@ -1,0 +1,24 @@
+     A*
+     A*         DATUM IMMER TT.MM.JJJJ
+     A*         ZEIT  IMMER HH:MM
+     A          R ZOLLTIMPP                 TEXT('ZOLLTIMPP')
+     A*         SELECT KAZKFIRM, KAZKKASL, KAZKGADA, KAZKGBDA,KAZKBAWT, KAZKWTFL
+     A*         FROM KAZK01 WHERE KAZKZART ='ZKO' AND KAZKBEGR ='BG2'
+     A*****************************************************************
+     A            TEFIRM        02A         TEXT('FIRMA/MANDANT')
+     A            TETENR        15A         TEXT('ITEM')
+     A            ZOTNZOTN_A    11A         TEXT('TRAIFCODE ALT')
+     A            KAZKBAWT_A     5S 2       TEXT('TRAIFSATZ ALT')
+     A            ZOTNZOTN_N    11A         TEXT('TRAIFCODE NEU')
+     A            KAZKBAWT_N     5S 2       TEXT('TRAIFSATZ ALT')
+     A            KAZKGADA       8S 0       TEXT('GÜLTIGKEIT AB ')
+     A            KAZKGBDA       8S 0       TEXT('GÜLTIGKEIT BIS')
+     A            ZOTNABEZ     120A         TEXT('WARENBESCHREIBUNG')
+     A            STATUS_I       2A         TEXT('status')
+     A            DATE_I          L         TEXT('Date of transmissing')
+     A            TSTAMP_I        Z         TEXT('TIMESTAMP')
+     A            TEIL_INB      15A         TEXT('TEIL UPDATE')
+     A            ZOTN_INB      15A         TEXT('ZOTN UPDATE')
+     A            KAZK_INB      15A         TEXT('KAZK UPDATE')
+     A            DATE_INB        L         TEXT('Date of transmissing')
+     A            TSTAMP_INB      Z         TEXT('TIMESTAMP')

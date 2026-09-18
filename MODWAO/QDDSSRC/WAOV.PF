@@ -1,0 +1,36 @@
+     A**************************************************************************
+     A*  Copyright 2014 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Beschreibung                                                          *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: NI 15.10.2014                                               *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R WAOV1
+     A*-------------------------------------------------------------------------
+     A            WAOVFIRM  R               REFFLD(##FIRM)
+     A            WAOVWEJJ  R               REFFLD(##WEJJ)
+     A            WAOVWENR  R               REFFLD(##WENR)
+     A            WAOVBEJJ  R               REFFLD(##BEJJ)
+     A            WAOVBENR  R               REFFLD(##BENR)
+     A            WAOVBEPO  R               REFFLD(##BEPO)
+     A            WAOVWEDA  R               REFFLD(##WEDA)
+     A            WAOVTENR  R               REFFLD(##TENR)
+     A            WAOVBETE  R               REFFLD(##BETE)
+     A            WAOVWACD  R               REFFLD(##WACD)
+     A            WAOVLFNR  R               REFFLD(##LFNR)
+     A            WAO1EZPR  R               REFFLD(##EZPR)
+     A            WAO1PDIM  R               REFFLD(##PDIM)
+     A            WAO1WACD  R               REFFLD(##WACD)
+     A            WAOVKOLF  R               REFFLD(##LFNR)
+     A            WAO2EZPR  R               REFFLD(##EZPR)
+     A            WAO2PDIM  R               REFFLD(##PDIM)
+     A            WAO2WACD  R               REFFLD(##WACD)
+     A            WAOVSTLF  R               REFFLD(##LFNR)
+     A            WAO3EZPR  R               REFFLD(##EZPR)
+     A            WAO3PDIM  R               REFFLD(##PDIM)
+     A            WAO3WACD  R               REFFLD(##WACD)

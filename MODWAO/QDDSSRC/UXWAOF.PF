@@ -1,0 +1,18 @@
+     A**************************************************************************
+     A*  Copyright 2004 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Vorkalkulation Rechenschemaübersicht MC-Anzeige                       *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: HR 31.03.2011                                               *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R UXWAOF1
+     A*
+     A            UXWAOFFIRMR               REFFLD(WAOF1/WAOFFIRM *LIBL/WAOF)
+     A            UXWAOFKAJJR               REFFLD(WAOF1/WAOFKAJJ *LIBL/WAOF)
+     A            UXWAOFKANRR               REFFLD(WAOF1/WAOFKANR *LIBL/WAOF)
+     A            UXWAOFVEURR               REFFLD(WAOF1/WAOFVEUR *LIBL/WAOF)

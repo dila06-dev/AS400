@@ -1,0 +1,14 @@
+      * Physische Datei: ORDERH
+      * ANLEGEDATUM: OKTOBER 2010
+      *SORT:        SALESCOMPANY (88505), ORDER IN AXAPTA, PRIORITY
+      *SELECT:      STATUS (PRESELECTED)
+      * ÄNDERUNGEN:
+      * AUSSCHLUSS:  ...
+     A
+     A*                                     UNIQUE
+     A          R #VERLSCAN1                PFILE(#VERLSCAN)
+     A
+     A                                      TEXT('SCAN')
+     A          K PKVENR
+     A          K AKBST1
+     A          S STATUS                    CMP(EQ '  ' )

@@ -1,0 +1,20 @@
+     A*
+     A*         DATUM IMMER TT.MM.JJJJ
+     A*         ZEIT  IMMER HH:MM
+     A          R ORDERBYPAS                TEXT('____')
+     A*****************************************************************
+     A            F1            15A         COLHDG('ARTIKELNR LFR       ')
+     A            F2            15A         COLHDG('ARTIKEL             ')
+     A            F3            60A         COLHDG('BESCHREIBUNG        ')
+     A            F4            10A         COLHDG('AUFTRAGSNR          ')
+     A            F5             4S 0       COLHDG('POSITION AUFTRAG    ')
+     A            F6             8S 0       COLHDG('LIEFERDATUM         ')
+     A            F7             4S 2       COLHDG('MENGE               ')
+     A*****************************************************************
+     A            H1            10A         TEXT('status')
+     A            H2              L         TEXT('Date of transmissing')
+     A            H3              Z         TEXT('TIMESTAMP')
+     A            H4           256A         TEXT('statusII')
+     A            H5              L         TEXT('Date of UPLOAD      ')
+     A            H6              Z         TEXT('TIMESTAMP OF UPLOAD')
+     A

@@ -1,0 +1,64 @@
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Versuch, eine Verbindung zum fernen Host 172.16.100.51 über Port 22
+ herzustellen.
+220 Microsoft FTP Service
+Anmelde-ID (gang) eingeben:
+331 Password required for Axapta_ftp.
+230 User logged in.
+Windows_NT
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 'SITE NAMEFMT 0': command not understood
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /de411/snd
+250 CWD command successful.
+Einen FTP-Unterbefehl eingeben.
+> APPEND SUNSHINE_T ORDERINPUT.TXT
+229 Entering Extended Passive Mode (|||58193|)
+125 Data connection already open; Transfer starting.
+226 Transfer complete.
+ 11463 Byte in 0.002 Sekunden übertragen. Übertragungsgeschwindigkeit 5869.056
+ KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Versuch, eine Verbindung zum fernen Host 172.16.100.51 über Port 22
+ herzustellen.
+220 Microsoft FTP Service
+Anmelde-ID (gang) eingeben:
+331 Password required for Axapta_ftp.
+230 User logged in.
+Windows_NT
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 'SITE NAMEFMT 0': command not understood
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /nl411a/snd
+250 CWD command successful.
+Einen FTP-Unterbefehl eingeben.
+> APPEND SUNSHINE_T ORDERINPUT.TXT
+229 Entering Extended Passive Mode (|||58231|)
+125 Data connection already open; Transfer starting.
+226 Transfer complete.
+  8830 Byte in 0.001 Sekunden übertragen. Übertragungsgeschwindigkeit 9041.920
+ KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.

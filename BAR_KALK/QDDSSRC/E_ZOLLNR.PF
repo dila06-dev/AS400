@@ -1,0 +1,11 @@
+     A*                                     UNIQUE
+     A          R E_ZOLLNR
+     A            #PRS010        2S 0       TEXT('FIRMA')
+     A            #PRS030        3A         TEXT('LIEFNR')
+     A            #PRS040       15A         TEXT('ARTIKEL')
+     A            #PRS220       12A         TEXT('NEUE ZOLL#')
+     A            #PRS220A      12A         TEXT('ALTE ZOLLNR')
+     A            #GEBUCHT       6S 0       TEXT('GEBUCHT')
+     A            #MODUS         1A         TEXT('MODUS UPDATE/NEW')
+     A            #VERSION      20A         TEXT('VERSION')
+

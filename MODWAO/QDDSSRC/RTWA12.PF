@@ -1,0 +1,53 @@
+     A**************************************************************************
+     A*  Copyright 2016 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------- *
+     A*  Rückgabebereich Ausnahmen von der STK3-Preisprüfung                   *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: PH 29.01.2016 DOMETIC Projekt 11363                         *
+     A*  Änderung: XX XX.XX.XXXX                                               *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R RTWA121
+     A*-------------------------------------------------------------------------
+     A* allgemeine Rückgabe
+     A*-------------------------------------------------------------------------
+     A            RTWA12PROGR               REFFLD(##PROG)
+     A            RTWA12DANAR               REFFLD(##DANA)
+     A            RTWA12RTCDR               REFFLD(##RTCD)
+     A            RTWA12FFLDR               REFFLD(##FFLD)
+     A            RTWA12FENRR               REFFLD(##FENR)
+     A            RTWA12PA03R               REFFLD(##A010)
+     A                                      TEXT('Parameter 3 bei Fehler')
+     A            RTWA12PA04R               REFFLD(##A010)
+     A                                      TEXT('Parameter 4 bei Fehler')
+     A            RTWA12PA05R               REFFLD(##A010)
+     A                                      TEXT('Parameter 5 bei Fehler')
+     A            RTWA12PA06R               REFFLD(##A010)
+     A                                      TEXT('Parameter 6 bei Fehler')
+     A            RTWA12PA07R               REFFLD(##A010)
+     A                                      TEXT('Parameter 7 bei Fehler')
+     A*-------------------------------------------------------------------------
+     A* ON/OFF Rückgabe KZ für Prüfungen
+     A*-------------------------------------------------------------------------
+     A            RTWA12QQKZR               REFFLD(##A001)
+     A                                      TEXT('ON/OFF-Feld für Prüfung 1')
+     A            RTWA12YYKZR               REFFLD(##A001)
+     A                                      TEXT('ON/OFF-Feld für Prüfung 2')
+     A            RTWA12FR01R               REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* Key-Felder
+     A*-------------------------------------------------------------------------
+     A            RTWA12AFATR               REFFLD(WA121/WA12AFAT *LIBL/WA12)
+     A            RTWA12KDNRR               REFFLD(WA121/WA12KDNR *LIBL/WA12)
+     A            RTWA12PRGRR               REFFLD(WA121/WA12PRGR *LIBL/WA12)
+     A            RTWA12TENRR               REFFLD(WA121/WA12TENR *LIBL/WA12)
+     A            RTWA12FR02R  256          REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* evt. weitere Felder nach Ermittlung
+     A*-------------------------------------------------------------------------
+     A            RTWA12TSTPR               REFFLD(WA121/WA12TSTP *LIBL/WA12)
+     A            RTWA12ERUSR               REFFLD(WA121/WA12ERUS *LIBL/WA12)
+     A            RTWA12FR03R  593          REFFLD(##FREI)

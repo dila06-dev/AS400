@@ -1,0 +1,47 @@
+2026-09-18-10.19.09.067971   18.09.2026   10.19.09
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host w00a916b.kasserver.com, Adresse
+ 85.13.148.190 über Port 21 herzustellen.
+220 FTP on dd34312.kasserver.com ready
+Anmelde-ID (gang) eingeben:
+331 Password required for F0157106
+230 User F0157106 logged in
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> REM **********************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP
+ eingeben.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 'SITE NAMEFMT' not understood
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Einen FTP-Unterbefehl eingeben.
+> cd /Dometic_DE/Preisliste
+250 CWD command successful
+Einen FTP-Unterbefehl eingeben.
+> mdelete *
+229 Entering Extended Passive Mode (|||50401|)
+150 Opening ASCII mode data connection for file list
+226 Transfer complete
+250 DELE command successful
+Einen FTP-Unterbefehl eingeben.
+> APPEND KOBERGER_D KOBERGERR-20260918101908.csv
+229 Entering Extended Passive Mode (|||50235|)
+150 Opening ASCII mode data connection for KOBERGERR-20260918101908.csv
+226 Transfer complete
+211187 Byte in 0.105 Sekunden übertragen. Übertragungsgeschwindigkeit 2002.366
+ KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.

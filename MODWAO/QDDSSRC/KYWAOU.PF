@@ -1,0 +1,23 @@
+     A**************************************************************************
+     A*  Copyright 2014 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Sicherheitsdatenblätter pro Land, Artikel                             *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: MG 14.01.2014 Projekt 9787                                  *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(WAOU)
+     A          R KYWAOU1
+     A*-------------------------------------------------------------------------
+     A            KYWAOUFIRMR               REFFLD(WAOUFIRM)
+     A            KYWAOUTENRR               REFFLD(WAOUTENR)
+     A            KYWAOULANDR               REFFLD(WAOULAND)
+     A            KYWAOUTSTPR               REFFLD(WAOUTSTP)
+     A            KWAOU$FREI    30
+     A            K#WAOULOCKR               REFFLD(WAOULOCK)
+     A            K#WAOUFIRMR               REFFLD(WAOUFIRM)
+     A            K#WAOUTENRR               REFFLD(WAOUTENR)
+     A            K#WAOULANDR               REFFLD(WAOULAND)

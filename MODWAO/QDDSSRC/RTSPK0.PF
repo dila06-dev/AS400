@@ -1,0 +1,48 @@
+     A**************************************************************************
+     A*  Copyright 2013 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------- *
+     A*  Rückgabebereich Schnittstelle Loxx                                    *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: SZ 24.04.2013 Projekt 9228                                  *
+     A*  Änderung:                                                             *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R RTSPK01
+     A*-------------------------------------------------------------------------
+     A* allgemeine Rückgabe
+     A*-------------------------------------------------------------------------
+     A            RTSPK0PROGR               REFFLD(##PROG)
+     A            RTSPK0DANAR               REFFLD(##DANA)
+     A            RTSPK0RTCDR               REFFLD(##RTCD)
+     A            RTSPK0FFLDR               REFFLD(##FFLD)
+     A            RTSPK0FENRR               REFFLD(##FENR)
+     A            RTSPK0PA03R               REFFLD(##A010)
+     A                                      TEXT('Parameter 3 bei Fehler')
+     A            RTSPK0PA04R               REFFLD(##A010)
+     A                                      TEXT('Parameter 4 bei Fehler')
+     A            RTSPK0PA05R               REFFLD(##A010)
+     A                                      TEXT('Parameter 5 bei Fehler')
+     A            RTSPK0PA06R               REFFLD(##A010)
+     A                                      TEXT('Parameter 6 bei Fehler')
+     A            RTSPK0PA07R               REFFLD(##A010)
+     A                                      TEXT('Parameter 7 bei Fehler')
+     A*-------------------------------------------------------------------------
+     A* ON/OFF Rückgabe KZ für Prüfungen
+     A*-------------------------------------------------------------------------
+     A            RTSPK001KZR               REFFLD(##A001)
+     A                                      TEXT('ON/OFF-Feld für Prüfung 1')
+     A            RTSPK002KZR               REFFLD(##A001)
+     A                                      TEXT('ON/OFF-Feld für Prüfung 2')
+     A            RTSPK0FR01R               REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* Key-Felder
+     A*-------------------------------------------------------------------------
+     A            RTSPK0X020R               REFFLD(SPEDK01/LOX020 *LIBL/SPEDK0)
+     A            RTSPK0FR02R  256          REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* evt. weitere Felder nach Ermittlung
+     A*-------------------------------------------------------------------------
+     A            RTSPK0FR03R  646          REFFLD(##FREI)

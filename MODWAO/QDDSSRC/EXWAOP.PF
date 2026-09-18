@@ -1,0 +1,101 @@
+     A**************************************************************************
+     A*  Copyright 2012 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------- *
+     A*  Kommunikationsbereich Absatz/Umsatz-Plan Planungs-KD/Artikel          *
+     A*  --------------------------------------------------------------------- *
+     A*  Erstellt: MG 24.08.2011 Projekt 8559, Planungssystem                  *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R EXWAOP1
+     A*-------------------------------------------------------------------------
+     A* Programmstatus
+     A*-------------------------------------------------------------------------
+     A            EXWAOPPGSTR               REFFLD(##PGST)
+     A            EXWAOPPROGR               REFFLD(##PROG)
+     A            EXWAOPFLDNR               REFFLD(##FLDN)
+     A*-------------------------------------------------------------------------
+     A* ON/OFF KZ für Prüfungen
+     A*-------------------------------------------------------------------------
+     A            EXWAOPIFKZR               REFFLD(##IFKZ)
+     A            EXWAOPFR01R               REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* Key-Felder
+     A*-------------------------------------------------------------------------
+     A            EXWAOPPLATR               REFFLD(WAOP1/WAOPPLAT *LIBL/WAOP)
+     A            EXWAOPWKNRR               REFFLD(WAOP1/WAOPWKNR *LIBL/WAOP)
+     A            EXWAOPKSTCR               REFFLD(WAOP1/WAOPKSTC *LIBL/WAOP)
+     A            EXWAOPKDGRR               REFFLD(WAOP1/WAOPKDGR *LIBL/WAOP)
+     A            EXWAOPKDPLR               REFFLD(WAOP1/WAOPKDPL *LIBL/WAOP)
+     A            EXWAOPKDNRR               REFFLD(WAOP1/WAOPKDNR *LIBL/WAOP)
+     A            EXWAOPLDNRR               REFFLD(WAOP1/WAOPLDNR *LIBL/WAOP)
+     A            EXWAOPTENRR               REFFLD(WAOP1/WAOPTENR *LIBL/WAOP)
+     A            EXWAOPJAHRR               REFFLD(WAOP1/WAOPJAHR *LIBL/WAOP)
+     A            EXWAOPFR02R  128          REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* Kopier-Begriff NACH
+     A*-------------------------------------------------------------------------
+     A            EXWAOPNPLAR               REFFLD(WAOP1/WAOPPLAT *LIBL/WAOP)
+     A            EXWAOPNWKNR               REFFLD(WAOP1/WAOPWKNR *LIBL/WAOP)
+     A            EXWAOPNKSTR               REFFLD(WAOP1/WAOPKSTC *LIBL/WAOP)
+     A            EXWAOPNKDGR               REFFLD(WAOP1/WAOPKDGR *LIBL/WAOP)
+     A            EXWAOPNKDPR               REFFLD(WAOP1/WAOPKDPL *LIBL/WAOP)
+     A            EXWAOPNKDNR               REFFLD(WAOP1/WAOPKDNR *LIBL/WAOP)
+     A            EXWAOPNLDNR               REFFLD(WAOP1/WAOPLDNR *LIBL/WAOP)
+     A            EXWAOPNTENR               REFFLD(WAOP1/WAOPTENR *LIBL/WAOP)
+     A            EXWAOPNJAHR               REFFLD(WAOP1/WAOPJAHR *LIBL/WAOP)
+     A            EXWAOPFR03R  128          REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* evt. weitere Felder für Update oder Prüfungen
+     A*-------------------------------------------------------------------------
+     A            EXWAOPPLMGR               REFFLD(WAOP1/WAOPPLMG *LIBL/WAOP)
+     A            EXWAOPPLUMR               REFFLD(WAOP1/WAOPPLUM *LIBL/WAOP)
+     A            EXWAOPSTPRR               REFFLD(WAOP1/WAOPSTPR *LIBL/WAOP)
+     A            EXWAOPPDAVR               REFFLD(WAOP1/WAOPPDAV *LIBL/WAOP)
+     A            EXWAOPERTRR               REFFLD(WAOP1/WAOPERTR *LIBL/WAOP)
+     A            EXWAOPMG01R               REFFLD(WAOP1/WAOPMG01 *LIBL/WAOP)
+     A            EXWAOPMG02R               REFFLD(WAOP1/WAOPMG02 *LIBL/WAOP)
+     A            EXWAOPMG03R               REFFLD(WAOP1/WAOPMG03 *LIBL/WAOP)
+     A            EXWAOPMG04R               REFFLD(WAOP1/WAOPMG04 *LIBL/WAOP)
+     A            EXWAOPMG05R               REFFLD(WAOP1/WAOPMG05 *LIBL/WAOP)
+     A            EXWAOPMG06R               REFFLD(WAOP1/WAOPMG06 *LIBL/WAOP)
+     A            EXWAOPMG07R               REFFLD(WAOP1/WAOPMG07 *LIBL/WAOP)
+     A            EXWAOPMG08R               REFFLD(WAOP1/WAOPMG08 *LIBL/WAOP)
+     A            EXWAOPMG09R               REFFLD(WAOP1/WAOPMG09 *LIBL/WAOP)
+     A            EXWAOPMG10R               REFFLD(WAOP1/WAOPMG10 *LIBL/WAOP)
+     A            EXWAOPMG11R               REFFLD(WAOP1/WAOPMG11 *LIBL/WAOP)
+     A            EXWAOPMG12R               REFFLD(WAOP1/WAOPMG12 *LIBL/WAOP)
+     A            EXWAOPUM01R               REFFLD(WAOP1/WAOPUM01 *LIBL/WAOP)
+     A            EXWAOPUM02R               REFFLD(WAOP1/WAOPUM02 *LIBL/WAOP)
+     A            EXWAOPUM03R               REFFLD(WAOP1/WAOPUM04 *LIBL/WAOP)
+     A            EXWAOPUM04R               REFFLD(WAOP1/WAOPUM03 *LIBL/WAOP)
+     A            EXWAOPUM05R               REFFLD(WAOP1/WAOPUM05 *LIBL/WAOP)
+     A            EXWAOPUM06R               REFFLD(WAOP1/WAOPUM06 *LIBL/WAOP)
+     A            EXWAOPUM07R               REFFLD(WAOP1/WAOPUM07 *LIBL/WAOP)
+     A            EXWAOPUM08R               REFFLD(WAOP1/WAOPUM08 *LIBL/WAOP)
+     A            EXWAOPUM09R               REFFLD(WAOP1/WAOPUM09 *LIBL/WAOP)
+     A            EXWAOPUM10R               REFFLD(WAOP1/WAOPUM10 *LIBL/WAOP)
+     A            EXWAOPUM11R               REFFLD(WAOP1/WAOPUM11 *LIBL/WAOP)
+     A            EXWAOPUM12R               REFFLD(WAOP1/WAOPUM12 *LIBL/WAOP)
+     A            EXWAOPER01R               REFFLD(WAOP1/WAOPER01 *LIBL/WAOP)
+     A            EXWAOPER02R               REFFLD(WAOP1/WAOPER02 *LIBL/WAOP)
+     A            EXWAOPER03R               REFFLD(WAOP1/WAOPER04 *LIBL/WAOP)
+     A            EXWAOPER04R               REFFLD(WAOP1/WAOPER03 *LIBL/WAOP)
+     A            EXWAOPER05R               REFFLD(WAOP1/WAOPER05 *LIBL/WAOP)
+     A            EXWAOPER06R               REFFLD(WAOP1/WAOPER06 *LIBL/WAOP)
+     A            EXWAOPER07R               REFFLD(WAOP1/WAOPER07 *LIBL/WAOP)
+     A            EXWAOPER08R               REFFLD(WAOP1/WAOPER08 *LIBL/WAOP)
+     A            EXWAOPER09R               REFFLD(WAOP1/WAOPER09 *LIBL/WAOP)
+     A            EXWAOPER10R               REFFLD(WAOP1/WAOPER10 *LIBL/WAOP)
+     A            EXWAOPER11R               REFFLD(WAOP1/WAOPER11 *LIBL/WAOP)
+     A            EXWAOPER12R               REFFLD(WAOP1/WAOPER12 *LIBL/WAOP)
+     A            EXWAOPWACDR               REFFLD(WAOP1/WAOPWACD *LIBL/WAOP)
+     A            EXWAOPPLKZR               REFFLD(WAOP1/WAOPPLKZ *LIBL/WAOP)
+     A            EXWAOPSTKDR               REFFLD(WAOP1/WAOPSTKD *LIBL/WAOP)
+     A            EXWAOPKSSTR               REFFLD(KDEW1/KDEWKSST *LIBL/KDEW)
+     A            EXWAOPGEBTR               REFFLD(LAND1/LNGEBT   *LIBL/LAND)
+     A            EXWAOPPRGRR               REFFLD(TEIL1/TEPRGR   *LIBL/TEIL)
+     A            EXWAOPFR04R  152          REFFLD(##FREI)

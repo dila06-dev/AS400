@@ -1,0 +1,27 @@
+     A**************************************************************************
+     A*  Copyright 2010 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Hellmann Connect Empfangsdatei                                        *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: SZ 05.03.2011 Projekt 7190                                  *
+     A*                                                                        *
+     A**************************************************************************
+     A          R SPED02R
+     A*-------------------------------------------------------------------------
+     A            SPED02KDBL    10A         ALWNULL
+     A            SPED02FR01    10A         ALWNULL
+     A            SPED02FRAN     2A         ALWNULL
+     A            SPED02DPDN    20A         ALWNULL
+     A            SPED02DATE    10A         ALWNULL
+     A            SPED02GW01    10A         ALWNULL
+     A            SPED02FR02    10A         ALWNULL
+     A            SPED02FR03    10A         ALWNULL
+     A            SPED02FR04    10A         ALWNULL
+     A            SPED02ANZA     2A         ALWNULL
+     A            SPED02VPCD     2A         ALWNULL
+     A            SPED02GW02     8A         ALWNULL
+     A            SPED02PAKN    20A         ALWNULL
+     A            SPED02FR05    10A         ALWNULL

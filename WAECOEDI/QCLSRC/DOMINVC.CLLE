@@ -1,0 +1,86 @@
+/*-------------------------------------------------*/
+/* Dometic invoice Schnittstellen füllen           */
+/*-------------------------------------------------*/
+             PGM
+
+             ADDLIBLE   LIB(WAECOEDI)
+             MONMSG     MSGID(CPF2103)
+             ADDLIBLE   LIB(BAR_FTP)
+             MONMSG     MSGID(CPF2103)
+
+
+/* Dometic Denmark */
+             CLRPFM     FILE(DOMINV_DK)
+             RUNQRY     QRY(WAECOQRY/FAKWAEDKH)
+             RUNQRY     QRY(WAECOQRY/FAKWAEDKL)
+             RUNQRY     QRY(WAECOQRY/FAKWAEDKT)
+             CALL       PGM(DOMINV_DK)
+
+             CPYF       FROMFILE(WAECOEDI/DOMINV_DK) +
+                          TOFILE(WAECOEDI/DOMINVCHCK) +
+                          MBROPT(*REPLACE) CRTFILE(*NO)
+             MONMSG     MSGID(CPF2817) EXEC(GOTO CMDLBL(NEXT0))
+             MONMSG     MSGID(CPF2869) EXEC(GOTO CMDLBL(NEXT0))
+
+             CALL       PGM(BAR_FTP/GFTPINV) PARM('dk') /* DOMINV_DK +
+                          per FTP senden */
+
+/* Dometic France  */
+ NEXT0:      CLRPFM     FILE(DOMINV_FR)
+             RUNQRY     QRY(WAECOQRY/FAKWAEFRH)
+             RUNQRY     QRY(WAECOQRY/FAKWAEFRL)
+             RUNQRY     QRY(WAECOQRY/FAKWAEFRT)
+
+             CALL       PGM(DOMINV_FR)
+
+             CPYF       FROMFILE(WAECOEDI/DOMINV_FR) +
+                          TOFILE(WAECOEDI/DOMINVCHCK) +
+                          MBROPT(*REPLACE) CRTFILE(*NO)
+             MONMSG     MSGID(CPF2817) EXEC(GOTO CMDLBL(NEXT1))
+             MONMSG     MSGID(CPF2869) EXEC(GOTO CMDLBL(NEXT1))
+
+             CALL       PGM(BAR_FTP/GFTPINV) PARM('fr') /* DOMINV_FR +
+                          per FTP senden */
+
+
+/* Dometic UK      */
+ NEXT1:      CLRPFM     FILE(DOMINV_UK)
+             RUNQRY     QRY(WAECOQRY/FAKWAEUKH)
+             RUNQRY     QRY(WAECOQRY/FAKWAEUKL)
+             RUNQRY     QRY(WAECOQRY/FAKWAEUKT)
+
+             CALL       PGM(DOMINV_UK)
+
+             CPYF       FROMFILE(WAECOEDI/DOMINV_UK) +
+                          TOFILE(WAECOEDI/DOMINVCHCK) +
+                          MBROPT(*REPLACE) CRTFILE(*NO)
+             MONMSG     MSGID(CPF2817) EXEC(GOTO CMDLBL(NEXT2))
+             MONMSG     MSGID(CPF2869) EXEC(GOTO CMDLBL(NEXT2))
+
+             CALL       PGM(BAR_FTP/GFTPINV) PARM('uk') /* DOMINV_UK +
+                          per FTP senden */
+
+/* Dometic ES      */
+ NEXT2:      CLRPFM     FILE(DOMINV_ES)
+             RUNQRY     QRY(WAECOQRY/FAKWAEESH)
+             RUNQRY     QRY(WAECOQRY/FAKWAEESL)
+             RUNQRY     QRY(WAECOQRY/FAKWAEEST)
+
+             CALL       PGM(DOMINV_ES)
+
+             CPYF       FROMFILE(WAECOEDI/DOMINV_ES) +
+                          TOFILE(WAECOEDI/DOMINVCHCK) +
+                          MBROPT(*REPLACE) CRTFILE(*NO)
+             MONMSG     MSGID(CPF2817) EXEC(GOTO CMDLBL(NEXT3))
+             MONMSG     MSGID(CPF2869) EXEC(GOTO CMDLBL(NEXT3))
+
+             CALL       PGM(BAR_FTP/GFTPINV) PARM('es') /* DOMINV_ES +
+                          per FTP senden */
+
+ NEXT3:      RMVLIBLE   LIB(WAECOEDI)
+             RMVLIBLE   LIB(BAR_FTP)
+
+/* Format IVEAS Schnittstelle sichern und dann clearen */
+             CALL       PGM(HASCHEX/FORMATC_CL)
+
+             ENDPGM

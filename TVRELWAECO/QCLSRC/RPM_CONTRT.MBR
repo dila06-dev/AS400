@@ -1,0 +1,33 @@
+2015-05-19-10.10.22.250144   19.05.2015   10.10.22
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftp.seit.dometic.com, Adresse 193.243.145.204 über Port 21 herzustellen.
+220 Dometic private ftp server
+Anmelde-ID (gang) eingeben:
+331 User name okay, need password.
+230 User logged in, proceed.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+501 SITE option not supported.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> APPEND RPMIIPC DE411A_AC_150519.txt
+500 'EPSV': command not understood.
+227 Entering Passive Mode (193,243,145,204,17,33)
+150 Opening ASCII mode data connection for DE411A_AC_150519.txt.
+226 Transfer complete.
+437400 Byte in 0.536 Sekunden übertragen. Übertragungsgeschwindigkeit 815.843 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye!

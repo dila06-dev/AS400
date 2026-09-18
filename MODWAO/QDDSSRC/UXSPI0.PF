@@ -1,0 +1,15 @@
+     A**************************************************************************
+     A*  Copyright 2013 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Schnittstelle TNT                                                     *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: PH 19.02.2013 Projekt 8997                                  *
+     A*  Änderung: XX XX.XX.XXXX                                               *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R UXSPI01
+     A*
+     A            UXSPI0T020R               REFFLD(SPEDI01/TNT020 *LIBL/SPEDI0)

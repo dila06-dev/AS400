@@ -1,0 +1,67 @@
+     A*%%TS  SD  20121123  113856  SCHNEIDE    REL-V6R1M0  5761-WDS
+     A*  92/06/04  16:13:18    BARENKAMP   REL-R03M00  5728-PW1
+     A*%%EC
+     A                                      DSPSIZ(24 80 *DS3)
+     A                                      PRINT
+     A*  97/12/17  16:13:18    BARENKAMP   REL-V4R1M0  5728-PW1
+     A          R FMT010
+     A*%%TS  SD  20121123  113856  SCHNEIDE    REL-V6R1M0  5761-WDS
+     A                                      CF03(03)
+     A                                      CF12(03)
+     A                                  1  2'#PREAKTDS'
+     A                                      COLOR(BLU)
+     A                                  1 27'Ermitteln Preise in Datei'
+     A                                      DSPATR(HI)
+     A                                      DSPATR(UL)
+     A                                  1 65'Datum:'
+     A                                      COLOR(BLU)
+     A                                  1 72DATE
+     A                                      EDTCDE(Y)
+     A                                      COLOR(BLU)
+     A                                  2  2USER
+     A                                      COLOR(BLU)
+     A                                  2 65'Zeit :'
+     A                                      COLOR(BLU)
+     A                                  2 72TIME
+     A                                      COLOR(BLU)
+     A                                  3  2'Bitte eingeben......:'
+     A                                      DSPATR(HI)
+     A                                      DSPATR(UL)
+     A                                  3 65SYSNAME
+     A                                      COLOR(BLU)
+     A                                  4  2'-----------------------------------
+     A                                      ------------------------------------
+     A                                      ---------'
+     A                                      COLOR(BLU)
+     A                                  6  3'Eingabe Such-String:'
+     A            DSPFLD1       30   B  6 24DSPATR(CS)
+     A                                  9  3'-----------------------------------
+     A                                      ------------------------------------
+     A                                      -------'
+     A                                 11 38'                                '
+     A                                 20 76' '
+     A                                 20 78' '
+     A                                 20 80' '
+     A                                 21  2'-----------------------------------
+     A                                      ------------------------------------
+     A                                      -------  '
+     A                                      COLOR(BLU)
+     A                                 22 14' '
+     A                                 22 16' '
+     A                                 22 18' '
+     A                                 22 76' '
+     A                                 22 78' '
+     A                                 22 80' '
+     A                                 23  2'F3=Verlasen'
+     A                                      COLOR(BLU)
+     A                                 23 16'F12=zurück'
+     A                                      COLOR(BLU)
+     A                                 23 28' '
+     A                                 23 30' '
+     A                                 23 32' '
+     A                                 24 32' '
+     A                                 24 34' '
+     A                                 24 36' '
+     A                                 24 38' '
+     A                                 24 53'(c)WAE International        '
+     A                                      DSPATR(HI)

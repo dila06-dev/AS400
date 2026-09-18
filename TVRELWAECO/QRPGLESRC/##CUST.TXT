@@ -1,0 +1,51 @@
+     C*Ausgabe CUSTID     - 1 -
+     c/exec sql
+     C+ update einvoice/CUSTID
+     4+ set ID_ID =  ' ', INVOICEID = :INVOICEID
+     c/end-exec
+     C*
+     c/exec sql
+     C+ update einvoice/CUSTID
+mg   C+ set id_id      =(select distinct
+mg   C+                         substr("LegalEntityUniqueID", 1, 30)
+     C+                  from einvoice/idnumbers
+     C+                  where WAECONR = :kunde     and
+     C+                  "LogicalID"      is not null and
+     C+                  substr(COMPA00001, 1, 2) = :RKFIRM    and
+     C+                  COMPA00001 is not null  )
+     C+ where            SCHEMENAME='LegalEntityUniqueID'
+     c/end-exec
+     C*
+     C*Ausgabe CUSTTAXID     -2 -
+     c/exec sql
+     C+ update einvoice/CUSTTAXID
+     4+ set SCHEMEAGEN = ' ', TAXID_TAXI = ' ', INVOICEID = :INVOICEID
+     c/end-exec
+     C*
+     c/exec sql
+     C+ update einvoice/CUSTTAXID
+     C+ set SCHEMEAGEN =(select distinct
+     C+                         substr("LogicalID", 1, 2)
+     C+                  from einvoice/idnumbers
+     C+                  where WAECONR = :kunde     and
+     C+                  "LogicalID"      is not null and
+     C+                  substr(COMPA00001, 1, 2) = :RKFIRM    and
+     C+                  COMPA00001 is not null  )
+     C+ where            SCHEMENAME='TypeOfVAT          '
+     c/end-exec
+     C*
+     c/exec sql
+     C+ update einvoice/CUSTTAXID
+     C+ set TAXID_TAXI =(select distinct
+     C+                         substr("CompanyTaxNumber", 1, 30)
+     C+                  from einvoice/idnumbers
+     C+                  where WAECONR = :kunde     and
+     C+                  "CompanyTaxNumber"         is not null and
+     C+                  substr(COMPA00001, 1, 2) = :RKFIRM    and
+     C+                  COMPA00001 is not null  )
+     4+ where
+     4+ SCHEMENAME like ('%TaxNumber%') or
+     4+ SCHEMENAME =    ('           ') or
+     4+ (SCHEMENAME =    ('TypeOfVAT  ') and rrn(CUSTTAXID) < 3 )
+     c/end-exec
+     C*

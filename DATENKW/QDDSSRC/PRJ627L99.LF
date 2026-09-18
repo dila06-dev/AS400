@@ -1,0 +1,9 @@
+      * Physische Datei: PRJ627P
+      * ANLEGEDATUM: AUG 2010
+      * ÄNDERUNGEN:
+      * AUSSCHLUSS: POSITIONEN
+     A
+     A          R PRJ627F                   PFILE(PRJ627P)
+     A                                      TEXT('RECHNUNGSPOSI.')
+     A          K BSTNUM
+     A          K BSTPOS

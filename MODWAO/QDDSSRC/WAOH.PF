@@ -1,0 +1,27 @@
+     A**************************************************************************
+     A*  Copyright 2010 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  PLZ Schenker                                                          *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: SZ 07.06.2011 Projekt 7485                                  *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R WAOH1
+     A*-------------------------------------------------------------------------
+     A            WAOHLOCK  R               REFFLD(##LOCK)
+     A            WAOHJNAM  R               REFFLD(##JNAM)
+     A            WAOHJDAT  R               REFFLD(##JDAT)
+     A            WAOHJZEI  R               REFFLD(##JZEI)
+     A            WAOHUSER  R               REFFLD(##USER)
+     A            WAOHPROG  R               REFFLD(##PROG)
+     A            WAOHBIBL  R               REFFLD(##BIBL)
+     A            WAOHFIRM  R               REFFLD(##FIRM)
+     A            WAOHPOLZ  R               REFFLD(##POLZ)
+     A                                      COLHDG('PLZ')
+     A                                      TEXT('PLZ')
+     A            WAOHFREI  R  100          REFFLD(##FREI)
+     A*

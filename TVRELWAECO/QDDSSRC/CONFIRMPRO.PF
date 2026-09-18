@@ -1,0 +1,40 @@
+     A          R CONFIRMPF
+     A
+      * :CONFIRMATION
+     A            C010           7S 0
+     A                                      TEXT('SC id static')
+     A                                      COLHDG('sales company')
+     A                                      EDTCDE(Z)
+     A            C020          10A
+     A                                      TEXT('SC order number')
+     A                                      COLHDG('sales company')
+     A            C030           5S 0
+     A                                      TEXT('POSITION IN ORDER')
+     A                                      COLHDG('delivery id')
+     A                                      EDTCDE(Z)
+     A
+     A            C040            L         TEXT('Date confirmed')
+     A
+     A            C050           8S 3
+     A                                      TEXT('Quantity confirmed')
+     A                                      COLHDG('Quantity')
+     A                                      EDTCDE(Z)
+     A
+     A            C060          60A         TEXT('comment')
+     A                                      COLHDG('comment')
+     A
+     A            C070          20A         TEXT('EDC order number')
+     A                                      COLHDG('EDC order number')
+     A
+     A            C080           1A         TEXT('confirmation type')
+     A                                      COLHDG('confirmation type')
+     A
+     A            C090            Z         TEXT('TIMESTAMP')
+     A
+     A            C100         100A         TEXT('for future functionality')
+     A                                      COLHDG('for future function')
+     A
+     A            C110           2A         TEXT('STATUS')
+     A                                      COLHDG('STATUS')
+     A
+     A            C120            Z         TEXT('ÜBERGABE')

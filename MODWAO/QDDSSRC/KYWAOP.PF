@@ -1,0 +1,36 @@
+     A**************************************************************************
+     A*  Copyright 2012 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Absatz/Umsatz-Plan Planungs-KD/Artikel                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: MG 24.08.2011 Projekt 8559, Planungssystem                  *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(WAOP)
+     A          R KYWAOP1
+     A*-------------------------------------------------------------------------
+     A            KYWAOPFIRMR               REFFLD(WAOPFIRM)
+     A            KYWAOPPLATR               REFFLD(WAOPPLAT)
+     A            KYWAOPWKNRR               REFFLD(WAOPWKNR)
+     A            KYWAOPKSTCR               REFFLD(WAOPKSTC)
+     A            KYWAOPKDGRR               REFFLD(WAOPKDGR)
+     A            KYWAOPKDPLR               REFFLD(WAOPKDPL)
+     A            KYWAOPKDNRR               REFFLD(WAOPKDNR)
+     A            KYWAOPLDNRR               REFFLD(WAOPLDNR)
+     A            KYWAOPTENRR               REFFLD(WAOPTENR)
+     A            KYWAOPJAHRR               REFFLD(WAOPJAHR)
+     A            K$WAOPFREI    30
+     A            K#WAOPLOCKR               REFFLD(WAOPLOCK)
+     A            K#WAOPFIRMR               REFFLD(WAOPFIRM)
+     A            K#WAOPPLATR               REFFLD(WAOPPLAT)
+     A            K#WAOPWKNRR               REFFLD(WAOPWKNR)
+     A            K#WAOPKSTCR               REFFLD(WAOPKSTC)
+     A            K#WAOPKDGRR               REFFLD(WAOPKDGR)
+     A            K#WAOPKDPLR               REFFLD(WAOPKDPL)
+     A            K#WAOPKDNRR               REFFLD(WAOPKDNR)
+     A            K#WAOPLDNRR               REFFLD(WAOPLDNR)
+     A            K#WAOPTENRR               REFFLD(WAOPTENR)
+     A            K#WAOPJAHRR               REFFLD(WAOPJAHR)

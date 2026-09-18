@@ -1,0 +1,16 @@
+     A**************************************************************************
+     A*  Copyright 2011 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Absatz/Umsatz-Statistik                                               *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: MG 24.08.2011 Projekt 7668, Planungssystem                  *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R UXKDEW1
+     A*
+     A            UXKDEWFIRMR               REFFLD(KDEW1/KDEWFIRM *LIBL/KDEW)
+     A            UXKDEWKDNRR               REFFLD(KDEW1/KDEWKDNR *LIBL/KDEW)

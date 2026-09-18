@@ -1,0 +1,56 @@
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Versuch, eine Verbindung zum fernen Host 10.90.6.119 über Port 21 herzustellen.
+220 Microsoft FTP Service
+Anmelde-ID (bari) eingeben:
+331 Password required
+230 User logged in.
+Windows_NT
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A.
+Einen FTP-Unterbefehl eingeben.
+> NA 1
+500 'SITE': command not understood
+Client NAMEFMT ist 1.
+Einen FTP-Unterbefehl eingeben.
+> lcd /TECCOM
+Das lokale Arbeitsverzeichnis ist /TECCOM
+Einen FTP-Unterbefehl eingeben.
+> cd PrefileTEST
+250 CWD command successful.
+Einen FTP-Unterbefehl eingeben.
+> cd import
+250 CWD command successful.
+Einen FTP-Unterbefehl eingeben.
+> PUT INVENTORY.dat INVENTORY.DAT
+229 Entering Extended Passive Mode (|||40026|)
+125 Data connection already open; Transfer starting.
+226 Transfer complete.
+528431 Byte in 0,200 Sekunden übertragen. Übertragungsgeschwindigkeit 2639,577
+ KB/s.
+Einen FTP-Unterbefehl eingeben.
+> PUT MATERIAL.dat MATERIAL.DAT
+229 Entering Extended Passive Mode (|||40027|)
+125 Data connection already open; Transfer starting.
+226 Transfer complete.
+880788 Byte in 0,213 Sekunden übertragen. Übertragungsgeschwindigkeit 4137,279
+ KB/s.
+Einen FTP-Unterbefehl eingeben.
+> PUT MATPRICE.dat MATPRICE.DAT
+229 Entering Extended Passive Mode (|||40028|)
+125 Data connection already open; Transfer starting.
+226 Transfer complete.
+1103939 Byte in 0,265 Sekunden übertragen. Übertragungsgeschwindigkeit 4171,341
+ KB/s.
+Einen FTP-Unterbefehl eingeben.
+>
+Einen FTP-Unterbefehl eingeben.
+>
+Einen FTP-Unterbefehl eingeben.
+>
+Einen FTP-Unterbefehl eingeben.
+>
+Einen FTP-Unterbefehl eingeben.
+> quit
+221 Goodbye.

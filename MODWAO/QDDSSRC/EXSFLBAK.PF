@@ -1,0 +1,17 @@
+     A**************************************************************************
+     A*  Copyright 2011 by    trend SWM                                        *
+     A*                       Verwaltungs GmbH                                 *
+     A*                       Ziegelhofstraße 210a                             *
+     A*                       DE 79110 Freiburg                                *
+     A*  --------------------------------------------------------------------- *
+     A*  Kommunikationsbereich MOLBAK                                          *
+     A*  --------------------------------------------------------------------  *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R EXSFLBAK1
+     A            ##PCNR    R   10          REFFLD(##PCNR)
+     A            ##PROZ    R               REFFLD(##PROZ)
+     A            ##USER    R               REFFLD(##USER)
+     A            ##PPKL    R    3          REFFLD(##PCNR)
+     A            ##LORT    R               REFFLD(##LORT)
+     A            EXSFLBFR04R  988          REFFLD(##FREX)

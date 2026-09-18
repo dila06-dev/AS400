@@ -1,0 +1,16 @@
+     A*
+     A*         DATUM IMMER TT.MM.JJJJ
+     A*         ZEIT  IMMER HH:MM
+     A*           ORDANLORT     = EMSDETTEN
+     A          R WORKISTINB                TEXT('WORKISTINB')
+     A*****************************************************************
+     A            H050          10A         COLHDG('WORKISTINB ORDER')
+     A            H240          21A         COLHDG('BESTELLNUM KUNDE')
+     A            H040          10S 0       COLHDG('KUNDEN##')
+     A            L080          15A         COLHDG('ARTIKEL# TREND')
+     A            L100           8S 3       COLHDG('MENGE')
+     A            L060            L         COLHDG('LIEFERDATUM')
+     A*****************************************************************
+     A            H360            L          COLHDG('Date of transmissing')
+     A            H370            Z          COLHDG('TIMESTAMP')
+     A*           L050          05S 0        COLHDG('LINE#')

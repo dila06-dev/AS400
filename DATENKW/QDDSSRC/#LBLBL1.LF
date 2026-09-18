@@ -1,0 +1,12 @@
+      * Physische Datei: #LBLB
+      * ANLEGEDATUM: JUNI 2010
+      * ÄNDERUNGEN:
+      * AUSSCHLUSS: NUR SÄTZE OHNE RECHNUNG
+     A
+     A          R #LBLBR                    PFILE(#LBLB)
+     A                                      TEXT('BEWEGUNGSDATEN')
+     A          K #AEFIRM
+     A          K #AEBEJJ
+     A          K #AEBENR
+     A          K #AEBEPO
+     A          O #RWERT                    CMP(NE 0   )

@@ -1,0 +1,48 @@
+     A**************************************************************************
+     A*  Copyright 2012 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------- *
+     A*  Rückgabebereich Schittstelle BRT Italien                              *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: PH 20.12.2012 Projekt 9128                                  *
+     A*  Änderung: XX XX.XX.XXXX                                               *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R RTSPH01
+     A*-------------------------------------------------------------------------
+     A* allgemeine Rückgabe
+     A*-------------------------------------------------------------------------
+     A            RTSPH0PROGR               REFFLD(##PROG)
+     A            RTSPH0DANAR               REFFLD(##DANA)
+     A            RTSPH0RTCDR               REFFLD(##RTCD)
+     A            RTSPH0FFLDR               REFFLD(##FFLD)
+     A            RTSPH0FENRR               REFFLD(##FENR)
+     A            RTSPH0PA03R               REFFLD(##A010)
+     A                                      TEXT('Parameter 3 bei Fehler')
+     A            RTSPH0PA04R               REFFLD(##A010)
+     A                                      TEXT('Parameter 4 bei Fehler')
+     A            RTSPH0PA05R               REFFLD(##A010)
+     A                                      TEXT('Parameter 5 bei Fehler')
+     A            RTSPH0PA06R               REFFLD(##A010)
+     A                                      TEXT('Parameter 6 bei Fehler')
+     A            RTSPH0PA07R               REFFLD(##A010)
+     A                                      TEXT('Parameter 7 bei Fehler')
+     A*-------------------------------------------------------------------------
+     A* ON/OFF Rückgabe KZ für Prüfungen
+     A*-------------------------------------------------------------------------
+     A            RTSPH001KZR               REFFLD(##A001)
+     A                                      TEXT('ON/OFF-Feld für Prüfung 1')
+     A            RTSPH002KZR               REFFLD(##A001)
+     A                                      TEXT('ON/OFF-Feld für Prüfung 2')
+     A            RTSPH0FR01R               REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* Key-Felder
+     A*-------------------------------------------------------------------------
+     A            RTSPH0B020R               REFFLD(SPEDH01/BRT020 *LIBL/SPEDH0)
+     A            RTSPH0FR02R  256          REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* evt. weitere Felder nach Ermittlung
+     A*-------------------------------------------------------------------------
+     A            RTSPH0FR03R  646          REFFLD(##FREI)

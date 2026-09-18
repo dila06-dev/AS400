@@ -1,0 +1,24 @@
+     A          R EMAILF0
+     A            EKFIRMA   R               REFFLD(FIRMA FLDREF)
+     A                                      TEXT('FIRMA')
+     A                                      COLHDG('FA')
+     A            EKKUNDE   R               REFFLD(KUNDENNR FLDREF)
+     A                                      TEXT('KUNDEN-NR.')
+     A                                      COLHDG('KUNDEN' -
+     A                                      'NUMMER')
+     A            EKNAME    R               REFFLD(NAME25 FLDREF)
+     A                                      TEXT('Name')
+     A                                      COLHDG('Name')
+     A            EKEMAIL       40A         TEXT('E-Mail Adresse')
+     A                                      COLHDG('E-Mail ' -
+     A                                      'Adresse')
+     A            EKEMAILCC     40A         TEXT('E-Mail Adresse CC')
+     A                                      COLHDG('E-Mail ' -
+     A                                      'Adresse CC')
+     A            EKEMAILBCC    40A         TEXT('E-Mail Adresse BCC')
+     A                                      COLHDG('E-Mail ' -
+     A                                      'Adresse BCC')
+     A            EKAPARTNER    40A         TEXT('Ansprechpartner')
+     A                                      COLHDG('Ansprechpartner')
+     A          K EKFIRMA
+     A          K EKKUNDE

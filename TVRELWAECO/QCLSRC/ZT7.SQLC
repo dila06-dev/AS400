@@ -1,0 +1,1 @@
+delete from orderh WHERE H030 = 99999 or H030 = 99999

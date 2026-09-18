@@ -1,0 +1,60 @@
+     A**************************************************************************
+     A*  Copyright 2011 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------- *
+     A*  Kommunikationsbereich Absatz/Umsatz-Statistik                         *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: MG 24.08.2011 Projekt 7668, Planungssystem                  *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R EXWAOL1
+     A*-------------------------------------------------------------------------
+     A* Programmstatus
+     A*-------------------------------------------------------------------------
+     A            EXWAOLPGSTR               REFFLD(##PGST)
+     A            EXWAOLPROGR               REFFLD(##PROG)
+     A            EXWAOLFLDNR               REFFLD(##FLDN)
+     A*-------------------------------------------------------------------------
+     A* ON/OFF KZ für Prüfungen
+     A*-------------------------------------------------------------------------
+     A            EXWAOLIFKZR               REFFLD(##IFKZ)
+     A            EXWAOLFR01R               REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* Key-Felder
+     A*-------------------------------------------------------------------------
+     A            EXWAOLPLATR               REFFLD(WAOL1/WAOLPLAT *LIBL/WAOL)
+     A            EXWAOLWKNRR               REFFLD(WAOL1/WAOLWKNR *LIBL/WAOL)
+     A            EXWAOLKSTCR               REFFLD(WAOL1/WAOLKSTC *LIBL/WAOL)
+     A            EXWAOLKDGRR               REFFLD(WAOL1/WAOLKDGR *LIBL/WAOL)
+     A            EXWAOLKDPLR               REFFLD(WAOL1/WAOLKDPL *LIBL/WAOL)
+     A            EXWAOLKDNRR               REFFLD(WAOL1/WAOLKDNR *LIBL/WAOL)
+     A            EXWAOLPRGRR               REFFLD(WAOL1/WAOLPRGR *LIBL/WAOL)
+     A            EXWAOLJAHRR               REFFLD(WAOL1/WAOLJAHR *LIBL/WAOL)
+     A            EXWAOLMONAR               REFFLD(WAOL1/WAOLMONA *LIBL/WAOL)
+     A            EXWAOLFR02R  256          REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* Kopier-Begriff NACH
+     A*-------------------------------------------------------------------------
+     A            EXWAOLNPLAR               REFFLD(WAOL1/WAOLPLAT *LIBL/WAOL)
+     A            EXWAOLNWKNR               REFFLD(WAOL1/WAOLWKNR *LIBL/WAOL)
+     A            EXWAOLNKSTR               REFFLD(WAOL1/WAOLKSTC *LIBL/WAOL)
+     A            EXWAOLNKDGR               REFFLD(WAOL1/WAOLKDGR *LIBL/WAOL)
+     A            EXWAOLNKDPR               REFFLD(WAOL1/WAOLKDPL *LIBL/WAOL)
+     A            EXWAOLNKDNR               REFFLD(WAOL1/WAOLKDNR *LIBL/WAOL)
+     A            EXWAOLNPRGR               REFFLD(WAOL1/WAOLPRGR *LIBL/WAOL)
+     A            EXWAOLNJAHR               REFFLD(WAOL1/WAOLJAHR *LIBL/WAOL)
+     A            EXWAOLNMONR               REFFLD(WAOL1/WAOLMONA *LIBL/WAOL)
+     A            EXWAOLFR03R  256          REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* evt. weitere Felder für Update oder Prüfungen
+     A*-------------------------------------------------------------------------
+     A            EXWAOLPLMGR               REFFLD(WAOL1/WAOLPLMG *LIBL/WAOL)
+     A            EXWAOLPLPRR               REFFLD(WAOL1/WAOLPLPR *LIBL/WAOL)
+     A            EXWAOLPDIMR               REFFLD(WAOL1/WAOLPDIM *LIBL/WAOL)
+     A            EXWAOLPLUMR               REFFLD(WAOL1/WAOLPLUM *LIBL/WAOL)
+     A            EXWAOLWACDR               REFFLD(WAOL1/WAOLWACD *LIBL/WAOL)
+     A            EXWAOLPLKZR               REFFLD(WAOL1/WAOLPLKZ *LIBL/WAOL)
+     A            EXWAOLFR04R  353          REFFLD(##FREI)

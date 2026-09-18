@@ -1,0 +1,23 @@
+     A**************************************************************************
+     A*  Copyright 2001 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Ident-Nr/LG-Platz-Typ-Zuordnung                                       *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: ZG 21.07.2010 Projekt 6231                                  *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(WAO6)
+     A          R KYWAO61
+     A*-------------------------------------------------------------------------
+     A            KYWAO6FIRMR               REFFLD(WAO6FIRM)
+     A            KYWAO6TENRR               REFFLD(WAO6TENR)
+     A            KYWAO6LPTYR               REFFLD(WAO6LPTY)
+     A            KYWAO6BZMGR               REFFLD(WAO6BZMG)
+     A            K$WAO6FREI    30
+     A            K#WAO6LOCKR               REFFLD(WAO6LOCK)
+     A            K#WAO6FIRMR               REFFLD(WAO6FIRM)
+     A            K#WAO6TENRR               REFFLD(WAO6TENR)
+     A            K#WAO6LPTYR               REFFLD(WAO6LPTY)

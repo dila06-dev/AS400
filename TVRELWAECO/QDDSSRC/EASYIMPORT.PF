@@ -1,0 +1,15 @@
+     A*
+     A*         DATUM IMMER TT.MM.JJJJ
+     A*         ZEIT  IMMER HH:MM
+     A*           ORDANLORT     = EMSDETTEN
+     A          R EASYIMPORT                TEXT('EASYIMPORT')
+     A*****************************************************************
+     A            H050          10A         COLHDG('EASYIMPORT ORDER')
+     A            H040          10S 0       COLHDG('KUNDEN##')
+     A            L080          15A         COLHDG('ARTIKEL# TREND')
+     A            L060            L         COLHDG('LIEFERDATUM')
+     A            L100           8S 3       COLHDG('MENGE')
+     A*****************************************************************
+     A            H360            L          COLHDG('Date of transmissing')
+     A            H370            Z          COLHDG('TIMESTAMP')
+     A*           L050          05S 0        COLHDG('LINE#')

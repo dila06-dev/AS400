@@ -1,0 +1,51 @@
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host DOMETIC-GROUP.COM, Adresse 193.84.54.32 über Port 21 herzustellen.
+220 ProFTPD Server ready.
+Anmelde-ID (gang) eingeben:
+331 Password required for winadmin
+230 User winadmin logged in
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 1
+500 'SITE NAMEFMT' not understood
+Client NAMEFMT ist 1.
+Einen FTP-Unterbefehl eingeben.
+> REM *****
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> cd domains/dometic-group.com/public_ftp/dwat/snd
+250 CWD command successful
+Einen FTP-Unterbefehl eingeben.
+> REM ***   *********************************************
+Unterbefehl 'REM' nicht gültig.
+Einen FTP-Unterbefehl eingeben.
+> REM ****** ************** ***************
+Unterbefehl 'REM' nicht gültig.
+Einen FTP-Unterbefehl eingeben.
+> SYSCMD CHGCURLIB TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> SYSCMD RMVM FILE(TVRELWAECO/ORDERINPUT) MBR(TXT)
+Beim Versuch, den CL-Befehl abzusetzen, ist ein Fehler aufgetreten.
+Fehlernachrichten-ID = CPF7310.
+Teildatei TXT aus Datei ORDERINPUT in TVRELWAECO nicht entfernt.
+Einen FTP-Unterbefehl eingeben.
+> GET ORDERINPUT.TXT
+229 Entering Extended Passive Mode (|||35857|)
+550 ORDERINPUT.TXT: No such file or directory
+Einen FTP-Unterbefehl eingeben.
+> REM  *** **************    **** *********
+Unterbefehl 'REM' nicht gültig.
+Einen FTP-Unterbefehl eingeben.
+> RENAME ORDERINPUT.TXT #ORDERINPUT.TXT
+550 ORDERINPUT.TXT: No such file or directory
+Einen FTP-Unterbefehl eingeben.
+> SYSCMD CALL PGM(TVRELWAECO/ORDERIN_C) PARM('0054939')
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.

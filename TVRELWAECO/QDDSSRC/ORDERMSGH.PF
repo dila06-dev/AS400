@@ -1,0 +1,32 @@
+     A          R ORDERMSGHF
+     A
+      * :HeaderInfos
+     A            H010           1A
+     A                                      TEXT('Order line type,static value')
+     A                                      COLHDG('Ordertype')
+     A            H020           7S 0
+     A                                      EDTCDE(Z)
+     A                                      TEXT('customer of SC')
+     A                                      COLHDG('customer of SC')
+     A            H030           7S 0
+     A                                      TEXT('SC id static')
+     A                                      COLHDG('sales company')
+     A                                      EDTCDE(Z)
+     A            H040          10S 0
+     A                                      TEXT('delivery id customer')
+     A                                      COLHDG('delivery id')
+     A                                      EDTCDE(Z)
+     A            H050          10A
+     A                                      TEXT('SC order number')
+     A                                      COLHDG('SC order number')
+     A            H060            L
+     A                                      TEXT('order creation /change date')
+     A                                      COLHDG('SC order date')
+     A            H070            T
+     A                                      TEXT('order creation/change time ')
+     A                                      COLHDG('SC order time')
+     A            H360            L         TEXT('Date of transmissing')
+     A            H370            Z         TEXT('TIMESTAMP')
+     A            H600X         10A         TEXT('KIND OF MESSAGE')
+     A            H610X        120A         TEXT('MESSAGE')
+     A

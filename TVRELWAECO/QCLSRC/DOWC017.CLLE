@@ -1,0 +1,87 @@
+/******************************************************************************/
+/*  Copyright 2011 by                                                         */
+/*                                                                            */
+/* -------------------------------------------------------------------------- */
+/*  vorlaufprogramm für auswertungen über qry-manager im client               */
+/*  dieses programm kann für mehrere abfragen genutzt werden,                 */
+/*  da mittels übergebenen parameter eigene läufe.                            */
+/*  für firma: 52                                                             */
+/*                                                                            */
+/*  parameter:  '01' = Vorlauf Ermitllung Preise aus TEIL, PREI TEEW          */
+/*                                                                            */
+/*                                                                            */
+/*                                                                            */
+/*                                                                            */
+/*                                                                            */
+/*                                                                            */
+/* -------------------------------------------------------------------------- */
+/*  Erstellt: Schneider 18.6.13                                               */
+/*  Änderung:                                                                 */
+/*                                                                            */
+/******************************************************************************/
+             PGM        PARM(&PARA)
+/* -------------------------------------------------------------------------- */
+/*  Definieren Programmvariable                                               */
+/* -------------------------------------------------------------------------- */
+             DCL        VAR(&PARA) TYPE(*CHAR) LEN(2)
+             DCL        VAR(&DATUM) TYPE(*CHAR) LEN(6)
+             DCL        VAR(&TIME) TYPE(*CHAR) LEN(6)
+             DCL        VAR(&USER) TYPE(*CHAR) LEN(10)
+
+/* -------------------------------------------------------------------------- */
+/*  Prüfung, ob Aufruf notwendig                                              */
+/* -------------------------------------------------------------------------- */
+             IF         COND(&PARA = '  ') THEN(GOTO CMDLBL(ENDE))
+/* -------------------------------------------------------------------------- */
+/*  abfrage auf gefüllte parameter                                            */
+/* -------------------------------------------------------------------------- */
+             IF         COND(&PARA = '01') THEN(DO)
+
+             CPYF       FROMFILE(TVPF/TEIL) TOFILE(QTEMP/TEIL52) +
+                          MBROPT(*REPLACE) CRTFILE(*YES) +
+                          INCREL((*IF TEFIRM *EQ '52'))
+
+             CPYF       FROMFILE(TVPF/PREI) TOFILE(QTEMP/PREI52) +
+                          MBROPT(*REPLACE) CRTFILE(*YES) +
+                          INCREL((*IF PRFIRM *EQ '52') (*AND PRBEGR +
+                          *EQ 'PVK'))
+
+             CPYF       FROMFILE(MODWAO/TEEW) TOFILE(QTEMP/TEEW52) +
+                          MBROPT(*REPLACE) CRTFILE(*YES) +
+                          INCREL((*IF TEEWFIRM *EQ '52'))
+
+
+             RUNQRY     QRY(TVRELWAECO/Q_52_001) /* Ausgabe QO1 */
+             RUNQRY     QRY(TVRELWAECO/Q_52_002) /* Ausgabe QO2 */
+             RUNQRY     QRY(TVRELWAECO/Q_52_003) /* Ausgabe QO3 */
+
+             DLTF       FILE(MODWNL/QO_52_001) /* löschen +
+                          Arbeitsdatei für Fa. 52 */
+             MONMSG     MSGID(CPF0000)
+
+             CPYF       FROMFILE(QTEMP/QO1) +
+                          TOFILE(MODWNL/QO_52_001) +
+                          MBROPT(*REPLACE) CRTFILE(*YES)
+             MONMSG     MSGID(CPF0000)
+
+             CPYF       FROMFILE(QTEMP/QO3) +
+                          TOFILE(MODWNL/QO_52_001) MBROPT(*ADD) +
+                          FMTOPT(*MAP *DROP)
+             MONMSG     MSGID(CPF0000)
+
+             DLTF       FILE(TVRELWAECO/QO_52_001) /* löschen +
+                          Arbeitsdatei für Fa. 52 */
+             MONMSG     MSGID(CPF0000)
+
+             CPYF       FROMFILE(MODWNL/QO_52_001) +
+                          TOFILE(TVRELWAECO/QO_52_001) +
+                          MBROPT(*REPLACE) CRTFILE(*YES) FMTOPT(*NONE)
+             MONMSG     MSGID(CPF0000)
+
+             ENDDO
+
+/* -------------------------------------------------------------------------- */
+/*  Programmende                                                              */
+/* -------------------------------------------------------------------------- */
+ ENDE:       RCLRSC
+             ENDPGM

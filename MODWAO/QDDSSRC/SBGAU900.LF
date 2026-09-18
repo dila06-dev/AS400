@@ -1,0 +1,13 @@
+     A*****************************************************************
+     A*  Copyright 2003 by    trend SWM                               *
+     A*                       Verwaltungs-GmbH                        *
+     A*                       Bötzinger Strasse 36                    *
+     A*                       D-79111 Freiburg                        *
+     A*****************************************************************
+     A*
+     A          R PCLB1                     PFILE(PCLB)
+     A*
+     A          K PCLBFIRM
+     A          K PCLBSEDA
+     A          K PCLBSEZT
+     A          K PCLBLFIX

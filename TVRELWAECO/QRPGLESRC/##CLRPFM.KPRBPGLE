@@ -1,0 +1,86 @@
+     C**************************************************************************
+     C*command Dateien bereinigen
+     C*-------------------------------------------------------------------------
+
+     C     srclrpfm      BEGSR
+     C*
+      /free
+       MONITOR;
+       Wrk.var1 =
+           'CLRPFM' + ' ' +
+           'EINVOICE/CUSTID';
+         cmd = %TrimR(Wrk.Var1);
+
+         L      = %Len(Cmd);
+         QCMDEXC(cmd: %len(cmd));
+       on-error;
+       endmon;
+      /End-Free
+
+      /free
+       MONITOR;
+       Wrk.var1 =
+           'CLRPFM' + ' ' +
+           'EINVOICE/CUSTTAXID';
+         cmd = %TrimR(Wrk.Var1);
+
+         L      = %Len(Cmd);
+         QCMDEXC(cmd: %len(cmd));
+       on-error;
+       endmon;
+      /End-Free
+
+      /free
+       MONITOR;
+       Wrk.var1 =
+           'CLRPFM' + ' ' +
+           'EINVOICE/INVOICEHEA';
+         cmd = %TrimR(Wrk.Var1);
+
+         L      = %Len(Cmd);
+         QCMDEXC(cmd: %len(cmd));
+       on-error;
+       endmon;
+      /End-Free
+
+      /free
+       MONITOR;
+       Wrk.var1 =
+           'CLRPFM' + ' ' +
+           'EINVOICE/INVOICEPOS';
+         cmd = %TrimR(Wrk.Var1);
+
+         L      = %Len(Cmd);
+         QCMDEXC(cmd: %len(cmd));
+       on-error;
+       endmon;
+      /End-Free
+
+      /free
+       MONITOR;
+       Wrk.var1 =
+           'CLRPFM' + ' ' +
+           'EINVOICE/SUPPID';
+         cmd = %TrimR(Wrk.Var1);
+
+         L      = %Len(Cmd);
+         QCMDEXC(cmd: %len(cmd));
+       on-error;
+       endmon;
+      /End-Free
+
+      /free
+       MONITOR;
+       Wrk.var1 =
+           'CLRPFM' + ' ' +
+           'EINVOICE/SUPPTAXID';
+         cmd = %TrimR(Wrk.Var1);
+
+         L      = %Len(Cmd);
+         QCMDEXC(cmd: %len(cmd));
+       on-error;
+       endmon;
+      /End-Free
+     C
+     C     ##clrpfm      ENDSR
+

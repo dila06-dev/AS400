@@ -1,0 +1,72 @@
+     A*
+     A*CRTSRCPF FILE(TVRELWAECO/IVEAS_I) RCDLEN(2400)
+     A*TEXT('DATA STREAM FOR IVEAS 2400 BYTES')
+     A*
+     A*CPYFRMSTMF FROMSTMF('/IVEAS/478451.BAK')
+     A*TOMBR('/QSYS.LIB/TVRELWAECO.LIB/IVEAS_I.FILE/IVEASI.MBR')
+     A*MBROPT(*REPLACE)
+     A*
+     A*SELECT SUBSTR( SRCDTA , 1, 1810) FROM TVRELWAECO/IVEAS_I WHERE
+     A*SUBSTR( SRCDTA , 1, 1) = '1'
+     A*DATEI IVEAS_I1 IN TVRELWAECO WURDE ERSTELLT.
+     A*
+     A*CPYF FROMFILE(IVEAS_I1) TOFILE(IVEAS_SA1) MBROPT(*REPLACE) FMTOPT(*NOCHK)
+     A*
+     A*
+     A*
+     A          R IMPKS_SA1                 TEXT('IVEAS')
+     A********************************************************************
+     A            SATZART        1A         COLHDG('SATZART1    100    1')
+     A            COM           12A         COLHDG('COM         101   12')
+     A            PLAN          12A         COLHDG('PLAN        102   12')
+     A            REFNO         35A         COLHDG('REFNO       103   13')
+     A            PREPREPARE     1A         COLHDG('PREPREPARE  104   63')
+     A            DECL           3A         COLHDG('DECL        105   71')
+     A            AGTREL         1A         COLHDG('AGTREL      106   74')
+     A            LOCGOODS      25A         COLHDG('LOCGOODS    107  124')
+     A            COUD           2A         COLHDG('COUD        108  134')
+     A            COUT           2A         COLHDG('COUT        109  139')
+     A            TOWNUNLOAD    35A         COLHDG('TOWNUNLOAD  110  141')
+     A            CTRNR         11A         COLHDG('CTRNR       111  144')
+     A            EPAPERTYPE     6A         COLHDG('EPAPERTYPE 5112  158')
+     A            EPAPERNO      28A         COLHDG('EPAPERNO   5113  159')
+     A            INCOTERM       3A         COLHDG('INCOTERM   5114  173')
+     A            TOWNINCO      35A         COLHDG('TOWNINCO   5115  223')
+     A            FRPAID         1A         COLHDG('FRPAID     5116  229')
+     A            CURRINV        3A         COLHDG('CURRINV    5117  279')
+     A            EXCRATE       12A         COLHDG('EXCRATE    5118  329')
+     A            EXCRATEAGR     1A         COLHDG('EXCRATEAGR 5119  379')
+     A            STATSTATUS     2A         COLHDG('STATSTATUS 5120  429')
+     A            TRANSTYPE      2A         COLHDG('TRANSTYPE  5121  479')
+     A            OFFICENOE      4A         COLHDG('OFFICENOE   122  489')
+     A            TRANSMOCOU     2A         COLHDG('TRANSMOCOU  123  539')
+     A            TRANSMOTYP     2A         COLHDG('TRANSMOTYP  124  589')
+     A            TRANSMODES    17A         COLHDG('TRANSMODES  125  592')
+     A            TRANSMONOB    30A         COLHDG('TRANSMONOB  126  642')
+     A            TRANSMONOA    30A         COLHDG('TRANSMONOA  127  692')
+     A            TRANSMODEB     1A         COLHDG('TRANSMODEB  128  742')
+     A            TRANSMODEI     1A         COLHDG('TRANSMODEI  129  792')
+     A            OUTAIRPORT     3A         COLHDG('OUTAIRPORT  130  842')
+     A            FRFACTOR       5A         COLHDG('FRFACTOR    131  892')
+     A            FRFCVAL       12A         COLHDG('FRFCVAL     132  902')
+     A            FRCURR         3A         COLHDG('FRCURR      133  952')
+     A            FREXCRATE     12A         COLHDG('FREXCRATE   134 1002')
+     A            FREXCRATED     8A         COLHDG('FREXCRATED  135 1005')
+     A            FREXCRATEA     1A         COLHDG('FREXCRATEA  136 1019')
+     A            FRISIATA       1A         COLHDG('FRISIATA   5137 1033')
+     A            FRCALCMETH     1A         COLHDG('FRCALCMETH 5138 1034')
+     A            DV1            1A         COLHDG('DV1        5139 1036')
+     A            INVNO         20A         COLHDG('INVNO      5140 1086')
+     A            INVDT          8A         COLHDG('INVDT      5141 1087')
+     A            REFNO2        50A         COLHDG('REFNO2     5142 1088')
+     A*****************************************************************
+     A*
+     A*****************************************************************
+     A            H1              L         TEXT('Date of transmissing')
+     A            H2              Z         TEXT('TIMESTAMP')
+     A            MANDANT        3A         COLHDG('MANDANT  ')
+     A            KJAHR          4S 0       COLHDG('JAHR     ')
+     A            KRL            1A         COLHDG('R=RECHNUNG, L=LIEF.')
+     A            KRECHLIEF     10A         COLHDG('RECHNUNG ODER LIEF.')
+     A            VERABKZ        1A         COLHDG('VERARBEITUNGSKZ')
+     A*****************************************************************

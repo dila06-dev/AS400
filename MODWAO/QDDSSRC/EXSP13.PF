@@ -1,0 +1,92 @@
+     A**************************************************************************
+     A*  Copyright 2001 by    trend SWM                                        *
+     A*                       Verwaltungs GmbH                                 *
+     A*                       Ziegelhofstraße 210a                             *
+     A*                       DE 79110 Freiburg                                *
+     A*  --------------------------------------------------------------------- *
+     A*  Kommunikationsbereich Speditionsdatei Danzas                          *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: SZ 28.02.2001                                               *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R EXSP131
+     A*-------------------------------------------------------------------------
+     A* Programmstatus
+     A*-------------------------------------------------------------------------
+     A            EXSP13PGSTR               REFFLD(##PGST)
+     A            EXSP13PROGR               REFFLD(##PROG)
+     A*-------------------------------------------------------------------------
+     A* Übergabefelder
+     A*-------------------------------------------------------------------------
+     A            EXSP13ZEZAR               REFFLD(SWMREF1/##ZEZA *LIBL/SWMREF)
+     A            EXSP13BOKZR               REFFLD(SWMREF1/##JNKZ *LIBL/SWMREF)
+     A            EXSP13WPNRR               REFFLD(SWMREF1/##A012 *LIBL/SWMREF)
+     A            EXSP13GADAR               REFFLD(SWMREF1/##GADA *LIBL/SWMREF)
+     A            EXSP13DWKZR               REFFLD(SWMREF1/##JNKZ *LIBL/SWMREF)
+     A            EXSP13SBKZR               REFFLD(SWMREF1/##JNKZ *LIBL/SWMREF)
+     A            EXSP13WKNRR               REFFLD(AFKO1/AKWKNR *LIBL/AFKO)
+     A            EXSP13SPE1R               REFFLD(LIEF1/LFLFNR *LIBL/LIEF)
+     A            EXSP13SPE2R               REFFLD(LIEF1/LFLFNR *LIBL/LIEF)
+     A            EXSP13SPE3R               REFFLD(LIEF1/LFLFNR *LIBL/LIEF)
+     A            EXSP13AJ10R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP13AN10R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP13AJ11R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP13AN11R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP13AJ12R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP13AN12R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP13AJ13R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP13AN13R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP13AJ14R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP13AN14R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP13AJ15R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP13AN15R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP13AJ16R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP13AN16R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP13AJ17R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP13AN17R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP13AJ18R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP13AN18R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP13AJ19R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP13AN19R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP13AJ20R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP13AN20R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP13AJ21R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP13AN21R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP13AJ22R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP13AN22R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP13AJ23R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP13AN23R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP13AJ24R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP13AN24R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP13AJ25R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP13AN25R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP13AJ26R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP13AN26R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP13AJ27R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP13AN27R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP13AJ28R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP13AN28R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP13AJ29R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP13AN29R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP13AJ30R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP13AN30R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP13AJ31R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP13AN31R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP13AJ32R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP13AN32R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP13AJ33R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP13AN33R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP13AJ34R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP13AN34R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP13AJ35R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP13AN35R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP13AJ36R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP13AN36R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP13AJ37R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP13AN37R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP13AJ38R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP13AN38R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP13AJ39R               REFFLD(AFKO1/AKAFJJ *LIBL/AFKO)
+     A            EXSP13AN39R               REFFLD(AFKO1/AKAFNR *LIBL/AFKO)
+     A            EXSP13FREIR  649          REFFLD(##FREI)

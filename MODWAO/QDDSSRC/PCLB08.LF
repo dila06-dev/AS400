@@ -1,0 +1,25 @@
+     A*****************************************************************
+     A*  Copyright 1997 by    trend SWM                               *
+     A*                       Verwaltungs-GmbH                        *
+     A*                       Bötzinger Strasse 36                    *
+     A*                       D-79111 Freiburg                        *
+     A*  -----------------------------------------------------------  *
+     A*  Schnittstellendatei für Lagerleitrechner                     *
+     A*  -----------------------------------------------------------  *
+     A*                                                               *
+     A*  Schlüsselbeschreibung                                        *
+     A*  ---------------------                                        *
+     A*  Firmennummer                  KYPCLBFIRM   PCLBFIRM  K       *
+     A*  Status                        KYPCLBSTAT   PCLBSTAT  K       *
+     A*  Dateiname                     KYPCLBDANA   PCLBDANA  K       *
+     A*  Timestamp                     KYPCLBTMST   PCLBTMST  K       *
+     A*  -----------------------------------------------------------  *
+     A*                                                               *
+     A*****************************************************************
+     A*
+     A          R PCLB1                     PFILE(PCLB)
+     A*
+     A          K PCLBFIRM
+     A          K PCLBSTAT
+     A          K PCLBDANA
+     A          K PCLBTMST

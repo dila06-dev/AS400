@@ -1,0 +1,41 @@
+     A          R EDIMPF0
+     A            EDIM010        7S 0
+     A                                      TEXT('Mitglieds-Nr. Absender')
+     A                                      COLHDG('Mit' -
+     A                                      'glied ' -
+     A                                      'Abs.')
+     A                                      EDTCDE(Z)
+     A            EDIM020        7S 0
+     A                                      TEXT('Mitglieds-Nr. Empfänger')
+     A                                      COLHDG('Mit' -
+     A                                      'glied' -
+     A                                      'Empf.')
+     A                                      EDTCDE(Z)
+     A            EDIM030        7S 0
+     A                                      TEXT('Kunden-Nr. beim Empf.')
+     A                                      COLHDG('Kd.Nr.' -
+     A                                      'beim ' -
+     A                                      'Empf.')
+     A                                      EDTCDE(Z)
+     A            EDIM040        7S 0
+     A                                      TEXT('Auftr.Nr. beim Abs.')
+     A                                      COLHDG('Auft.Nr.' -
+     A                                      'beim ' -
+     A                                      'Abs.')
+     A                                      EDTCDE(Z)
+     A            EDIM050        7S 0
+     A                                      TEXT('Auftr.Nr. bei WAECO')
+     A                                      COLHDG('Auft.Nr.' -
+     A                                      'bei ' -
+     A                                      'WAECO')
+     A                                      EDTCDE(Z)
+     A            EDIM060        3A
+     A                                      TEXT('Auftrags-Bearbeiter WAECO')
+     A                                      COLHDG('Auft.SaBe' -
+     A                                      'bei ' -
+     A                                      'WAECO')
+     A**
+     A          K EDIM010
+     A          K EDIM020
+     A          K EDIM030
+     A          K EDIM040

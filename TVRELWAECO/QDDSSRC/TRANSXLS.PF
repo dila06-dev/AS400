@@ -1,0 +1,20 @@
+     A*
+     A*         DATUM IMMER TT.MM.JJJJ
+     A*         ZEIT  IMMER HH:MM
+     A*           ORDANLORT     = EMSDETTEN
+     A          R TRANSXLSR                 TEXT('____')
+     A*****************************************************************
+     A            I1            50A         COLHDG('I1  ')
+     A            I2            50A         COLHDG('I2  ')
+     A            I3            50A         COLHDG('I3  ')
+     A            I4            50A         COLHDG('I4  ')
+     A            I5            08S 2       COLHDG('I5  ')
+     A            I6            50A         COLHDG('I6  ')
+     A*****************************************************************
+     A            H1            10A         TEXT('status')
+     A            H2              L         TEXT('Date of transmissing')
+     A            H3              Z         TEXT('TIMESTAMP')
+     A            H4           256A         TEXT('statusII')
+     A            H5              L         TEXT('Date of UPLOAD      ')
+     A            H6              Z         TEXT('TIMESTAMP OF UPLOAD')
+     A

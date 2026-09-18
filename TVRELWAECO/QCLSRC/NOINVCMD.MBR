@@ -1,0 +1,7 @@
+winadmin   gbjYzXrqX44T6bZV
+ascii
+NAMEFMT 0
+cd domains/dometic-group.com/public_ftp/dwno/rcv
+lcd TVRELWAECO
+PUT DOMINV_NO NOI260204_1847.TXT
+quit

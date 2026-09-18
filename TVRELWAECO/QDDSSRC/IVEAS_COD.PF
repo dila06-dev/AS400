@@ -1,0 +1,8 @@
+     A*
+     A          R IVEAS_COD                 TEXT('Codierungsbeschreibung')
+     A********************************************************************
+     A            IVSCCODE      50A         COLHDG('Unterl-Kodierung    ')
+     A            IVSCCBZ1     256A         COLHDG('Kodierungsbezeich   ')
+     A*****************************************************************
+     A*
+     A*****************************************************************

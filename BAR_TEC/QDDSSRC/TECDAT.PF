@@ -1,0 +1,39 @@
+     A********************************************************************
+     A**
+     A**    TECDAT                                                      **
+     A**    TEMPORÄRE AUFTRÄGE ZUR ÜBERNAHME NACH BGFS                  **
+     A**                                                                **
+     A********************************************************************
+     A*
+     A* PHYSISCHE DATEI -TECDAT
+     A          R TECDATF0                  TEXT('TECCOM AUFTRÄGE')
+     A            THORDR         6  0       COLHDG('ORDER NUMMER.....')
+     A            THKDNR         6          COLHDG('KUNDENNUMMER.....')
+     A            THNAME        35          COLHDG('NAME.............')
+     A            THORT         35          COLHDG('ORT..............')
+     A            THDATE        20          COLHDG('BEST.DATUM.......')
+     A            THBEST         8          COLHDG('BESTELLER........')
+     A            TIBEST        15          COLHDG('KD BESTELLKZ.....')
+     A            TIPOS          3          COLHDG('POSITION.........')
+     A            THART         20          COLHDG('ARTIKEL..........')
+     A            THMNG          6          COLHDG('MENGE............')
+     A            TIUNIT         3          COLHDG('EINHEIT..........')
+     A            TSNAME1       25          COLHDG('SHIP NAME........')
+     A            TSNAME2       25          COLHDG('SHIP NAME2.......')
+     A            TSPLZ          6          COLHDG('SHIP PLZ.........')
+     A            TSORT         25          COLHDG('SHIP ORT.........')
+     A            TSSTR         25          COLHDG('SHIP STRASSE.....')
+     A            TSREEM         6          COLHDG('SHIP RE.NR.......')
+     A            TTSTATUS       1          COLHDG('STATUS...........')
+     A*STATUS BLANK = UNGELESEN NACH VERARBEITUNG STATUS AUF 2 SETZEN
+     A*
+     A*FELDER ZUR FREIEN VERWENDUNG IN PROGRAMMEN
+     A            TTFREI1       15          COLHDG('FREI 1...........')
+     A            TTFREI2        6  0       COLHDG('FREI 2...........')
+     A            TTFREI3       10  0       COLHDG('FREI 3...........')
+     A            TTFREI4        7  2       COLHDG('FREI 4...........')
+     A            TTFREI5       10          COLHDG('FREI 5...........')
+     A            TTFREI6       25          COLHDG('FREI 6...........')
+     A            TTFREI7       30          COLHDG('FREI 7...........')
+     A
+     A

@@ -1,0 +1,15 @@
+      * Physische Datei: ORDERL
+      * ANLEGEDATUM: OKTOBER 2010
+      *SORT:        SALESCOMPANY (88505), ORDER IN AXAPTA, PRIORITY
+      *SELECT:      STATUS (PRESELECTED)
+      * ÄNDERUNGEN:
+      * AUSSCHLUSS:  ...
+     A
+     A*                                     UNIQUE
+     A          R ORDERLPF                  PFILE(ORDERL)
+     A
+     A                                      TEXT('POSITIONSSÄTZE')
+     A          K L250
+     A          K L040
+     A          K L050
+     A          S L240                      CMP(EQ '          ' )

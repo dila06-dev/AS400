@@ -1,0 +1,23 @@
+     A**************************************************************************
+     A*                                                                        *
+     A*  Copyright 2005 by    trend SWM                                        *
+     A*                       EDV-Beratung GmbH                                *
+     A*                       Ziegelhofstr. 210a                               *
+     A*                       D-79112 Freiburg                                 *
+     A*  --------------------------------------------------------------------- *
+     A*                                                                        *
+     A*  ----------------------------------------------------------------------*
+     A*  Erstellt: ZG 24.05.2005 PROJEKT 2984 PICKLISTE 2                      *
+     A*                                                                        *
+     A**************************************************************************
+     A*
+     A          R WAO11                     PFILE(WAO1)
+     A*
+     A          K WAO1FIRM
+     A          K WAO1DANA
+     A          K WAO1JAHR
+     A          K WAO1NMKR
+     A          K WAO1POSI
+     A          K WAO1LIJJ
+     A          K WAO1LINR
+     A          K WAO1RALP

@@ -1,0 +1,25 @@
+     A**************************************************************************
+     A*  Copyright 2000 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Leitgebiete Boll/Unitrans                                             *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: SZ 20.01.2011 WAECO, Projekt Vertrieb                       *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(WAOB)
+     A          R KYWAOB1
+     A*
+     A            KYWAOBFIRMR               REFFLD(WAOBFIRM)
+     A            KYWAOBPLZBR               REFFLD(WAOBPLZB)
+     A            KYWAOBPLZVR               REFFLD(WAOBPLZV)
+     A            KYWAOBLGEBR               REFFLD(WAOBLGEB)
+     A*
+     A            K$WAOB        30
+     A            K#WAOBLOCKR               REFFLD(WAOBLOCK)
+     A*
+     A            K#WAOBFIRMR               REFFLD(WAOBFIRM)
+     A            K#WAOBPLZBR               REFFLD(WAOBPLZB)
+     A*

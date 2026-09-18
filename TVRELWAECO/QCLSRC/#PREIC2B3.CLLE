@@ -1,0 +1,26 @@
+/*    * PROGRAMMNAME.:#PREIC2B3                                              */
+/*    * FUNKTION.....:erstellen basisdatei für trend abfrage                 */
+/*    *               preise                                                 */
+/*    *               batchjob                                               */
+/*    *                                                                       */
+/*    *                                                                       */
+/*    * 04/2012        SCHNEIDER                                              */
+/*    *                                                                       */
+/*    *                                                                       */
+/*    *-ÄNDERUNGSDIENST-------------------------------------------------------*/
+/*    * XX.XX.XX                                          PGMR.....           */
+/******************************************************************************/
+             PGM
+
+
+             RUNQRY     QRY(TVRELWAECO/TRDCGQ4) /* Erstellen Datei +
+                          #TRDCGP2 */
+             RUNQRY     QRY(TVRELWAECO/TRDCGQ4_2) /* Erstellen Datei +
+                          #TRDCGP2 in QTEMP */
+             CPYF       FROMFILE(QTEMP/#TRDCGP2) +
+                          TOFILE(TVRELWAECO/#TRDCGP2) MBROPT(*ADD)
+
+
+ ENDE:       RCLRSC
+             ENDPGM
+

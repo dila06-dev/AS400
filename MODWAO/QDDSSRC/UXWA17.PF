@@ -1,0 +1,17 @@
+     A**************************************************************************
+     A*  Copyright 2024 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Jechtinger Straße 9                              *
+     A*                       DE 79111 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Zuordnung Kundengruppe <- Produktgruppe                               *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: PH 05.11.2024 Case #03895676                                *
+     A*  Änderung: XX XX.XX.XXXX                                               *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R UXWA171
+     A*
+     A            UXWA17FIRMR               REFFLD(WA171/WA17FIRM *LIBL/WA17)
+     A            UXWA17KDGRR               REFFLD(WA171/WA17KDGR *LIBL/WA17)
+     A            UXWA17PRGRR               REFFLD(WA171/WA17PRGR *LIBL/WA17)

@@ -1,0 +1,25 @@
+     A**************************************************************************
+     A*  Copyright 2013 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Schnittstelle TNT Schlüsselaufbau                                     *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: SZ 17.02.2013 Projekt 8997                                  *
+     A*  Änderung:                                                             *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R KYSPI01
+     A*-------------------------------------------------------------------------
+     A            KYSPI0T020R               REFFLD(SPEDI01/TNT020 *LIBL/SPEDI0)
+     A            KYSPI0FREI    30
+     A            K#SPI0LOCKR               REFFLD(##LOCK)
+     A            K#SPI0T020R               REFFLD(SPEDI01/TNT020 *LIBL/SPEDI0)
+     A            SPI0LOCK  R               REFFLD(##LOCK)
+     A            SPI0JNAM  R               REFFLD(##JNAM)
+     A            SPI0JDAT  R               REFFLD(##JDAT)
+     A            SPI0JZEI  R               REFFLD(##JZEI)
+     A            SPI0USER  R               REFFLD(##USER)
+     A            SPI0PROG  R               REFFLD(##PROG)
+     A            SPI0BIBL  R               REFFLD(##BIBL)

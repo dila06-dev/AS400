@@ -1,0 +1,17 @@
+     A*
+     A*         DATUM IMMER TT.MM.JJJJ
+     A*         ZEIT  IMMER HH:MM
+     A*           ORDANLORT     = EMSDETTEN
+     A          R KALKINPUT                 TEXT('KALKINPUT')
+     A*****************************************************************
+     A            ARTNR         15A
+     A            EKPR          11S 3
+     A            FRACHT01      11S 3
+     A            ZOLL01        11S 3
+     A            VERS          11S 3
+     A            BEZK          11S 3
+     A            LOHN          11S 3
+     A            STK1          11S 3
+     A            FGK           11S 3
+     A            MGK           11S 3
+     A            STK3          11S 3

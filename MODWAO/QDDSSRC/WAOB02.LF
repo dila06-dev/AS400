@@ -1,0 +1,15 @@
+     A**************************************************************************
+     A*  Copyright 2000 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Leitgebiete Boll/Unitrans                                             *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: SZ 20.01.2011 Projekt Vertrieb                              *
+     A*                                                                        *
+     A**************************************************************************
+     A          R WAOB1                     PFILE(WAOB)
+     A*
+     A          K WAOBFIRM
+     A          K WAOBPLZV

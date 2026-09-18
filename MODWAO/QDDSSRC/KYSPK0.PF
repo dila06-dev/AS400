@@ -1,0 +1,25 @@
+     A**************************************************************************
+     A*  Copyright 2013 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Schnittstelle Loxx Schlüsselaufbau                                    *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: SZ 24.04.2013 Projekt 9228                                  *
+     A*  Änderung:                                                             *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R KYSPK01
+     A*-------------------------------------------------------------------------
+     A            KYSPK0X020R               REFFLD(SPEDK01/LOX020 *LIBL/SPEDK0)
+     A            KYSPK0FREI    30
+     A            K#SPK0LOCKR               REFFLD(##LOCK)
+     A            K#SPK0X020R               REFFLD(SPEDK01/LOX020 *LIBL/SPEDK0)
+     A            SPK0LOCK  R               REFFLD(##LOCK)
+     A            SPK0JNAM  R               REFFLD(##JNAM)
+     A            SPK0JDAT  R               REFFLD(##JDAT)
+     A            SPK0JZEI  R               REFFLD(##JZEI)
+     A            SPK0USER  R               REFFLD(##USER)
+     A            SPK0PROG  R               REFFLD(##PROG)
+     A            SPK0BIBL  R               REFFLD(##BIBL)

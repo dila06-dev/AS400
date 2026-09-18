@@ -1,0 +1,21 @@
+     A*
+     A*         DATUM IMMER TT.MM.JJJJ
+     A*         ZEIT  IMMER HH:MM
+     A          R TEILUPDOUT                TEXT('____')
+     A*****************************************************************
+     A            ITEM          15A         COLHDG('ITEM      ')
+     A            DESCRIPT     100A         COLHDG('DESCRIPTION')
+     A            STATUSITEM    02A         COLHDG('STATUSITEM')
+     A            ABC            1A         COLHDG('ABC       ')
+     A            BIRTHDATE     08S 0       COLHDG('BIRTHDATE ')
+     A            DISPONENT      5A         COLHDG('DISPONENT' )
+     A            FIL1           1A         COLHDG('FIL1      ')
+     A            FIL2           1A         COLHDG('FIL2      ')
+     A*****************************************************************
+     A            H1            10A         TEXT('status')
+     A            H2              L         TEXT('Date of transmissing')
+     A            H3              Z         TEXT('TIMESTAMP')
+     A            H4           256A         TEXT('statusII')
+     A            H5              L         TEXT('Date of UPLOAD      ')
+     A            H6              Z         TEXT('TIMESTAMP OF UPLOAD')
+     A

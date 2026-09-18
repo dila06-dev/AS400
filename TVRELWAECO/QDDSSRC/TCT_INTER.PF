@@ -1,0 +1,62 @@
+     A*
+     A*
+     A*
+     A          R TCT_INTER                 TEXT('TCTIN')
+     A********************************************************************
+     A            FA             2A         COLHDG('FIRMEN-NR           ')
+     A            IDENT_NR      15A         COLHDG('IDENT-NR            ')
+     A            BEZEICHN_1   255A         COLHDG('BEZEICHNUNG-1       ')
+     A            BEZEICHN_2   255A         COLHDG('BEZEICHNUNG-2       ')
+     A            KURZBESCHR   255A         COLHDG('KURZBESCHREIBUNG    ')
+     A            ZOLLBESCHR   255A         COLHDG('ZOLLBESCHREIBUNG    ')
+     A            TARIFNUMMR    11A         COLHDG('FRACHT-TARIFNUMMER  ')
+     A            CODE          10A         COLHDG('KODIERUNGEN         ')
+     A            CODE_BEZEI   500A         COLHDG('KODIERUNG BEZEICHNUN')
+     A            ME             1A         COLHDG('MENGEN-EINHEIT      ')
+     A            GWD            1A         COLHDG('GEWICHTS-DIM        ')
+     A            EAN_NR        13A         COLHDG('EAN-NR              ')
+     A            EMBARGO        1A         COLHDG('EMBARGO             ')
+     A            URSPR_LAND     3A         COLHDG('URSPR-LAND          ')
+     A            FAKTOR_BMA     3A         COLHDG('FAKTOR BMA          ')
+     A            BEZEICHN      30A         COLHDG('BEZEICHNUNG         ')
+     A            PLZ_LAND       3A         COLHDG('POSTAL. LAND        ')
+     A            URSPREGION     2A         COLHDG('URSPR-REGION        ')
+     A            ANMELDZOLL     1A         COLHDG('ANMELDEPF.ZOLL      ')
+     A            ZOLLPRAEFR     2A         COLHDG('ZOLLPRAEFERENZ      ')
+     A            GEW_NET_KG     9S         COLHDG('GW. NETTO KG        ')
+     A            GEW_BRT_KG     9S         COLHDG('GW. BRUTTO KG       ')
+     A            SACHBRB_AV     3A         COLHDG('SACHBEARB. AV       ')
+     A            DISPONT_AV     3A         COLHDG('DISPONENT AV        ')
+     A            SACHBRB_EK     3A         COLHDG('SACHBEARB. EK       ')
+     A            DISPONT_EK     3A         COLHDG('DISPONENT EK        ')
+     A            LIEFR_NR      10A         COLHDG('LIEFERANTEN-NR      ')
+     A            NAME_1        30A         COLHDG('NAME 1              ')
+     A            PLZ           10A         COLHDG('PLZ                 ')
+     A            ORT           30A         COLHDG('ORT                 ')
+     A            WERKS_NR       2S         COLHDG('WERKS-NR            ')
+     A            ZOLLPRBSCH   255A         COLHDG('ZOLL PRAEFER BESCHR ')
+     A            ZOLL_KENNZ    10S         COLHDG('ZOLLPRAEFERZ KENZAHL')
+     A            PRODGRP       50A         COLHDG('PRODUKT GRUPPE      ')
+     A            BEMESSUNG     50A         COLHDG('BEMESSUNGEN         ')
+     A            USER          50A         COLHDG('USER                ')
+     A            LAND          50A         COLHDG('GS1 LANDKENNUNG     ')
+     A            HME           50A         COLHDG('GS1 MAßEINHEIT      ')
+     A            HWARE          1S         COLHDG('HANDELSWARE         ')
+     A            IMPORT         1S         COLHDG('IMPORT_EXPORT KENNUN')
+     A            DATUM_AB      08S 0       COLHDG('GUELTIG AB          ')
+     A            DATUM_BIS     08S 0       COLHDG('GUELTIG BIS         ')
+     A            WZS            1S         COLHDG('WARE ZUSAMMENSTELLUN')
+     A            STATUS         2S         COLHDG('STATUS              ')
+     A*****************************************************************
+     A            H1              L         TEXT('DATE OF TRANSMISSING')
+     A            H2              Z         TEXT('TIMESTAMP')
+     A            H3              L         TEXT('DATE OF INPUT')
+     A            H4              Z         TEXT('TIMESTAMP INPUT')
+     A            H5              T         TEXT('TIME      INPUT')
+     A*****************************************************************
+     A*
+     A*
+     A*
+     A*
+     A*
+     A*****************************************************************

@@ -1,0 +1,89 @@
+/*       PROGRAMMNAME:  SBTRDEND                                     */
+/*       VERFASSER   :  Schneider    STAND:09.28.2014                */
+/*       BESCHREIBUNG:  beenden trend-sbs kontrolliert               */
+/*                      (starten über programm sbschk)               */
+/*                                                                   */
+/*                                                                   */
+/*                                                                   */
+/*********************************************************************/
+             PGM
+
+             DCL        VAR(&RC) TYPE(*CHAR) LEN(1) /* return code +
+                          ('1' = job is active; '0' = job is not +
+                          active) */
+
+             CHGJOB     LOG(4 00 *SECLVL) LOGCLPGM(*YES) +
+                          LOGOUTPUT(*JOBEND)
+
+             ADDLIBLE   LIB(MODWAO) POSITION(*LAST)
+             MONMSG     MSGID(CPF0000)
+
+/* ----beenden subsysteme ----------------------------------------------------*/
+
+             CALL       PGM(CHKACTJOB) PARM('TRDMDE' &RC)
+             IF         COND(&RC *EQ '1') THEN(DO)
+             ENDSBS     SBS(TRDMDE) OPTION(*IMMED) ENDSBSOPT(*NOJOBLOG)
+             MONMSG     MSGID(CPF0000)
+             DLYJOB     DLY(30)
+             ENDDO
+
+             CALL       PGM(*LIBL/CHKACTJOB) PARM('TRBATCH' &RC)
+             IF         COND(&RC *EQ '1') THEN(DO)
+             ENDSBS     SBS(TRBATCH) OPTION(*IMMED) +
+                          ENDSBSOPT(*NOJOBLOG)
+             MONMSG     MSGID(CPF0000)
+             DLYJOB     DLY(30)
+             ENDDO
+
+             CALL       PGM(CHKACTJOB) PARM('TRXCALP' &RC)
+             IF         COND(&RC *EQ '1') THEN(DO)
+             ENDSBS     SBS(TRXCALP) OPTION(*IMMED) +
+                          ENDSBSOPT(*NOJOBLOG)
+             MONMSG     MSGID(CPF0000)
+             DLYJOB     DLY(30)
+             ENDDO
+
+             CALL       PGM(CHKACTJOB) PARM('TRWEB' &RC)
+             IF         COND(&RC *EQ '1') THEN(DO)
+             ENDSBS     SBS(TRWEB) OPTION(*IMMED) ENDSBSOPT(*NOJOBLOG)
+             MONMSG     MSGID(CPF0000)
+             DLYJOB     DLY(120)
+             ENDSBS     SBS(TRWEB) ENDSBSOPT(*NOJOBLOG)
+             MONMSG     MSGID(CPF0000)
+             DLYJOB     DLY(30)
+             ENDDO
+
+             CALL       PGM(CHKACTJOB) PARM('TRXCALW' &RC)
+             IF         COND(&RC *EQ '1') THEN(DO)
+             ENDSBS     SBS(TRXCALW) OPTION(*IMMED) +
+                          ENDSBSOPT(*NOJOBLOG)
+             MONMSG     MSGID(CPF0000)
+             DLYJOB     DLY(30)
+             ENDDO
+
+             CALL       PGM(CHKACTJOB) PARM('TREDI' &RC)
+             IF         COND(&RC *EQ '1') THEN(DO)
+             ENDSBS     SBS(TREDI) OPTION(*IMMED) +
+                          ENDSBSOPT(*NOJOBLOG)
+             MONMSG     MSGID(CPF0000)
+             DLYJOB     DLY(30)
+             ENDDO
+
+             CALL       PGM(CHKACTJOB) PARM('TREDITEST' &RC)
+             IF         COND(&RC *EQ '1') THEN(DO)
+             ENDSBS     SBS(TREDITEST) OPTION(*IMMED) +
+                          ENDSBSOPT(*NOJOBLOG)
+             MONMSG     MSGID(CPF0000)
+             DLYJOB     DLY(30)
+             ENDDO
+
+             CALL       PGM(CHKACTJOB) PARM('TRWRFP' &RC)
+             IF         COND(&RC *EQ '1') THEN(DO)
+             ENDSBS     SBS(TRWRFP) OPTION(*IMMED) +
+                          ENDSBSOPT(*NOJOBLOG)
+             MONMSG     MSGID(CPF0000)
+             DLYJOB     DLY(30)
+             ENDDO
+
+
+             ENDPGM

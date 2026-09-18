@@ -1,0 +1,27 @@
+     A                                      UNIQUE
+     A          R KALPF
+     A            KALFIRM        2A         TEXT('Firma')
+     A                                      COLHDG('Firma')
+     A            KALDAT1        8S 0       TEXT('JJJJMMTT')
+     A                                      COLHDG('JJJJMMTT')
+     A            KALDAT2        6S 0       TEXT('TTMMJJ')
+     A                                      COLHDG('TTMMJJ')
+     A            KALWOTAG       2A         TEXT('Wochentag')
+     A                                      COLHDG('Wochentag')
+     A            KALBANDI       6A         TEXT('Bandname')
+     A                                      COLHDG('Bandname')
+     A            KALBANDS       7A         TEXT('Bandstueerung')
+     A                                      COLHDG('Bandsteuerung')
+     A            KALRGPARA      2A         TEXT('RG-Parameter')
+     A                                      COLHDG('RG-Parameter')
+     A            KALSICH        2A         TEXT('Gesamt-Sich')
+     A                                      COLHDG('Gesamt-Sich')
+     A            KALRGZEIT      6A         TEXT('RG-Zeit-WochRG')
+     A                                      COLHDG('RG-Zeit-WochRG')
+     A            KALRGZEITE     6A         TEXT('RG-Zeit_Export')
+     A                                      COLHDG('RG-Zeit_Export')
+     A            KALRGZEITI     6A         TEXT('RG-Zeit-Inland')
+     A                                      COLHDG('RG-Zeit-Inland')
+
+     A          K KALFIRM
+     A          K KALDAT1

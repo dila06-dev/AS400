@@ -1,0 +1,18 @@
+     A********************                  UNIQUE
+     A          R PGRUPPENR
+     A            ID             9S 0       TEXT('LAUFENDE#')
+     A            BESCHREI1     50A         TEXT('BESCHREIBUNG1')
+     A            BESCHREI2     50A         TEXT('BESCHREIBUNG2')
+     A            WINSTATNR      3A         TEXT('WAECO STATNR')
+     A            DOMETICKZ     25A         TEXT('DOMETIC-KZ')
+     A            DOMSTATNR      3A         TEXT('DOMETIC-NR')
+     A            KALKSCHEM      2S 0       TEXT('KALKULATIONSSCHEMA')
+     A            KALKARTIK     50A         TEXT('ARTIKELKALKULATION')
+     A            VERANTWOR     50A         TEXT('VERATNWORTLICHER')
+     A            WDKZ           1A         TEXT('WAECO DOMETIC KZ')
+     A            JAHR           4S 0       TEXT('JAHR')
+     A            KZAI           1A         TEXT('KENNZEICHEN A/I')
+
+     A          K JAHR
+     A          K WINSTATNR
+     A          K DOMSTATNR

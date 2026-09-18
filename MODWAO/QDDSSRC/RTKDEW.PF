@@ -1,0 +1,85 @@
+     A**************************************************************************
+     A*  Copyright 2010 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------- *
+     A*  Rückgabebereich Kundenstamm-Erweiterungen                             *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: RH 04.11.2010                                               *
+     A*  Änderung: MG 15.08.2011 Projekt 7668, Planungssystem                  *
+     A*            Neue Felder Planungskz, Kundenplanung                       *
+     A*  Änderung: ZG 20.08.2012 PROJEKT 8762 -                                *
+     A*            "Einzel-Picklistensteuerung" 0/1.                           *
+     A*  Änderung: ZG 02.05.2013 PROJEKT 9449 - "DRUCK USTIDBR"                *
+     A*  Änderung: PH 09.07.2014 Projekt 10655. Neue Felder KDEWRPMG "RPM-     *
+     A*            Gruppe", KDEWFL01...04 "KD-Steuerung 01...04"; alle 10A     *
+     A*  Änderung: PH 13.08.2015 Projekt 11567. Neues Feld KDEWFGZT            *
+     A*            "F-Gas berechtigt"                                          *
+     A*  Änderung: PH 28.08.2015 Projekt 11427. Neues Feld KDEWSPTE "Kom-      *
+     A*            Schein verdichten"                                          *
+     A*  Änderung: PH 01.12.2022 Projekt 220562-01. Neue Felder KDEWFL05...09  *
+     A*            "KD-Steuerung 05...09", alle 20A.                           *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R RTKDEW1
+     A*-------------------------------------------------------------------------
+     A* allgemeine Rückgabe
+     A*-------------------------------------------------------------------------
+     A            RTKDEWPROGR               REFFLD(##PROG)
+     A            RTKDEWDANAR               REFFLD(##DANA)
+     A            RTKDEWRTCDR               REFFLD(##RTCD)
+     A            RTKDEWFFLDR               REFFLD(##FFLD)
+     A            RTKDEWFENRR               REFFLD(##FENR)
+     A            RTKDEWPA03R               REFFLD(##A010)
+     A                                      TEXT('Parameter 3 bei Fehler')
+     A            RTKDEWPA04R               REFFLD(##A010)
+     A                                      TEXT('Parameter 4 bei Fehler')
+     A            RTKDEWPA05R               REFFLD(##A010)
+     A                                      TEXT('Parameter 5 bei Fehler')
+     A            RTKDEWPA06R               REFFLD(##A010)
+     A                                      TEXT('Parameter 6 bei Fehler')
+     A            RTKDEWPA07R               REFFLD(##A010)
+     A                                      TEXT('Parameter 7 bei Fehler')
+     A*-------------------------------------------------------------------------
+     A* ON/OFF Rückgabe KZ für Prüfungen
+     A*-------------------------------------------------------------------------
+     A            RTKDEWQQKZR               REFFLD(##A001)
+     A                                      TEXT('ON/OFF-Feld für Prüfung 1')
+     A            RTKDEWYYKZR               REFFLD(##A001)
+     A                                      TEXT('ON/OFF-Feld für Prüfung 2')
+     A            RTKDEWFR01R               REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* Key-Felder
+     A*-------------------------------------------------------------------------
+     A            RTKDEWKDNRR               REFFLD(KDEW1/KDEWKDNR *LIBL/KDEW)
+     A            RTKDEWFR02R  256          REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* evt. weitere Felder nach Ermittlung
+     A*-------------------------------------------------------------------------
+     A            RTKDEWGSKZR               REFFLD(KDEW1/KDEWGSKZ *LIBL/KDEW)
+     A            RTKDEWBLKZR               REFFLD(KDEW1/KDEWBLKZ *LIBL/KDEW)
+     A            RTKDEWBVKGR               REFFLD(KDEW1/KDEWBVKG *LIBL/KDEW)
+     A            RTKDEWKSSTR               REFFLD(KDEW1/KDEWKSST *LIBL/KDEW)
+     A            RTKDEWKDKRR               REFFLD(KDEW1/KDEWKDKR *LIBL/KDEW)
+     A            RTKDEWZOTNR               REFFLD(KDEW1/KDEWZOTN *LIBL/KDEW)
+     A            RTKDEWZPURR               REFFLD(KDEW1/KDEWZPUR *LIBL/KDEW)
+     A            RTKDEWURLDR               REFFLD(KDEW1/KDEWURLD *LIBL/KDEW)
+     A            RTKDEWDAGBR               REFFLD(KDEW1/KDEWDAGB *LIBL/KDEW)
+     A            RTKDEWPLKZR               REFFLD(KDEW1/KDEWPLKZ *LIBL/KDEW)
+     A            RTKDEWKDPLR               REFFLD(KDEW1/KDEWKDPL *LIBL/KDEW)
+     A            RTKDEWEZPLR               REFFLD(KDEW1/KDEWEZPL *LIBL/KDEW)
+     A            RTKDEWDUSTR               REFFLD(KDEW1/KDEWDUST *LIBL/KDEW)
+     A            RTKDEWRPMGR               REFFLD(KDEW1/KDEWRPMG *LIBL/KDEW)
+     A            RTKDEWFL01R               REFFLD(KDEW1/KDEWFL01 *LIBL/KDEW)
+     A            RTKDEWFL02R               REFFLD(KDEW1/KDEWFL02 *LIBL/KDEW)
+     A            RTKDEWFL03R               REFFLD(KDEW1/KDEWFL03 *LIBL/KDEW)
+     A            RTKDEWFL04R               REFFLD(KDEW1/KDEWFL04 *LIBL/KDEW)
+     A            RTKDEWFGZTR               REFFLD(KDEW1/KDEWFGZT *LIBL/KDEW)
+     A            RTKDEWSPTER               REFFLD(KDEW1/KDEWSPTE *LIBL/KDEW)
+     A            RTKDEWFL05R               REFFLD(KDEW1/KDEWFL05 *LIBL/KDEW)
+     A            RTKDEWFL06R               REFFLD(KDEW1/KDEWFL06 *LIBL/KDEW)
+     A            RTKDEWFL07R               REFFLD(KDEW1/KDEWFL07 *LIBL/KDEW)
+     A            RTKDEWFL08R               REFFLD(KDEW1/KDEWFL08 *LIBL/KDEW)
+     A            RTKDEWFL09R               REFFLD(KDEW1/KDEWFL09 *LIBL/KDEW)
+     A            RTKDEWFR03R  857          REFFLD(##FREI)

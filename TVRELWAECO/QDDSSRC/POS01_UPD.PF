@@ -1,0 +1,159 @@
+     A*CRTSRCPF FILE(TVRELWAECO/IMPORT240) RCDLEN(240) TEXT('DATA STREAM FOR IMP
+     A*ORT 240 BYTES')
+     A*
+     A*CPYFRMSTMF FROMSTMF('/LAGER/SCM/POS.CSV')
+     A*TOMBR('/QSYS.LIB/TVRELWAECO.LIB/IMPORT240.FILE/IMPORT240.MBR')
+     A*MBROPT(*REPLACE)
+     A*
+     A*CPYFRMIMPF FROMFILE(TVRELWAECO/IMPORT240)
+     A*TOFILE(TVRELWAECO/POS01_UPD) MBROPT(*REPLACE)
+     A*FLDDLM(';') DECPNT(*COMMA)
+     A*FROMRCD(1) RPLNULLVAL(*FLDDFT)
+     A*
+     A*_____________________________PRÜFUNG DOPPELTE INPUT
+     A*SELECT SKU, PO_NR, COUNT(*)
+     A*FROM POS01_UPD GROUP BY SKU, PO_NR
+     A*HAVING COUNT(*) > 1
+     A*DATEI P IN QTEMP WURDE ERSTELLT.
+     A*
+     A*UPDATE POS01_UPD A SET REPORT = 'DUPLIKATE'
+     A*WHERE A.SKU IN (SELECT B.SKU FROM P B WHERE A.PO_NR=B.PO_NR)
+     A*_____________________________PRÜFUNG DOPPELTE TREND
+     A*
+     A*SELECT EPBEJJ, EPBENR, EPTENR, COUNT(*) FROM BBEP WHERE EPFIRM =
+     A*'01' AND EPBENR IN (SELECT SUBSTR(PO_NR, 9, 4) FROM POS01_UPD WHERE
+     A*SUBSTR(PO_NR, 4, 4) =EPBEJJ AND EPGLMG = 0) GROUP BY EPBEJJ,
+     A*EPBENR, EPTENR HAVING COUNT(*) > 1
+     A*DATEI P2 IN QTEMP WURDE ERSTELLT.
+     A*
+     A*UPDATE POS01_UPD   SET REPORT = SUBSTR(REPORT, 1, 10) CONCAT
+     A*'BEREITS BELIEFERT: ' WHERE SUBSTR(PO_NR, 9, 4) IN
+     A*(SELECT EPBENR FROM BBEP WHERE EPFIRM='01' AND
+     A* SUBSTR(PO_NR, 4, 4) =EPBEJJ AND EPGLMG <> 0 AND
+     A* EPTENR=SKU)
+     A*
+     A*UPDATE POS01_UPD  SET REPORT=SUBSTR(REPORT, 1, 40) CONCAT '*'
+     A*WHERE SKU IN (SELECT EPTENR FROM P2 WHERE
+     A*SUBSTR(PO_NR, 9, 4)= EPBENR AND SUBSTR(PO_NR, 4, 4) =EPBEJJ)
+     A*_____________________________
+     A*
+     A*_____________________________ SICHERUNG ORIGINALDATEN
+     A*
+     A*EPVSTE  ETD                 VERSCHIFF-TERM
+     A*EPMENG  QUANT               BESTELL-MENGE
+     A*EPBETE  ETA                 LIEFER-TERMIN
+     A*
+     A*
+     A* UPDATE POS01_UPD SET QUANT_A =
+     A* (SELECT EPMENG FROM BBEP WHERE EPFIRM = '01' AND
+     A* SUBSTR(PO_NR, 9, 4) = EPBENR AND SKU=EPTENR  AND
+     A* SUBSTR(PO_NR, 4, 4) =EPBEJJ AND EPGLMG =  0  AND
+     A* REPORT = ' ')
+     A* WHERE EXISTS
+     A* (SELECT EPMENG FROM BBEP WHERE EPFIRM = '01' AND
+     A* SUBSTR(PO_NR, 9, 4) = EPBENR AND SKU=EPTENR  AND
+     A* SUBSTR(PO_NR, 4, 4) =EPBEJJ AND EPGLMG =  0  AND
+     A* REPORT = ' ')
+     A*
+     A* UPDATE POS01_UPD SET QUANT_A =
+     A* (SELECT EPMENG FROM BBEP WHERE EPFIRM = '01' AND
+     A* SUBSTR(PO_NR, 9, 4) = EPBENR AND SKU=EPTENR  AND
+     A* SUBSTR(PO_NR, 4, 4) =EPBEJJ AND EPGLMG =  0  AND
+     A* REPORT = ' ')
+     A* WHERE EXISTS
+     A* (SELECT EPMENG FROM BBEP WHERE EPFIRM = '01' AND
+     A* SUBSTR(PO_NR, 9, 4) = EPBENR AND SKU=EPTENR  AND
+     A* SUBSTR(PO_NR, 4, 4) =EPBEJJ AND EPGLMG =  0  AND
+     A* REPORT = ' ')
+     A*
+     A* UPDATE POS01_UPD SET ETD_A =
+     A* (SELECT EPVSTE FROM BBEP WHERE EPFIRM = '01' AND
+     A* SUBSTR(PO_NR, 9, 4) = EPBENR AND SKU=EPTENR  AND
+     A* SUBSTR(PO_NR, 4, 4) =EPBEJJ AND EPGLMG =  0  AND
+     A* REPORT = ' ')
+     A* WHERE EXISTS
+     A* (SELECT EPVSTE FROM BBEP WHERE EPFIRM = '01' AND
+     A* SUBSTR(PO_NR, 9, 4) = EPBENR AND SKU=EPTENR  AND
+     A* SUBSTR(PO_NR, 4, 4) =EPBEJJ AND EPGLMG =  0  AND
+     A* REPORT = ' ')
+     A*
+     A* UPDATE POS01_UPD SET ETA_A =
+     A* (SELECT EPBETE FROM BBEP WHERE EPFIRM = '01' AND
+     A* SUBSTR(PO_NR, 9, 4) = EPBENR AND SKU=EPTENR  AND
+     A* SUBSTR(PO_NR, 4, 4) =EPBEJJ AND EPGLMG =  0  AND
+     A* REPORT = ' ')
+     A* WHERE EXISTS
+     A* (SELECT EPBETE FROM BBEP WHERE EPFIRM = '01' AND
+     A* SUBSTR(PO_NR, 9, 4) = EPBENR AND SKU=EPTENR  AND
+     A* SUBSTR(PO_NR, 4, 4) =EPBEJJ AND EPGLMG =  0  AND
+     A* REPORT = ' ')
+     A* __________________________________________
+     A* __________________________________________UPDATE
+     A* __________________________________________
+     A*
+     A*EPMENG  QUANT               BESTELL-MENGE
+     A* UPDATE BBEP01 SET EPMENG=
+     A* (SELECT QUANT FROM POS01_UPD WHERE EPFIRM = '01' AND
+     A* SUBSTR(PO_NR, 9, 4) = EPBENR AND SKU=EPTENR  AND
+     A* SUBSTR(PO_NR, 4, 4) =EPBEJJ AND EPGLMG =  0  AND
+     A* REPORT = ' ' AND EPBENR ='XXXXXX')
+     A* WHERE EXISTS
+     A* (SELECT QUANT FROM POS01_UPD WHERE EPFIRM = '01' AND
+     A* SUBSTR(PO_NR, 9, 4) = EPBENR AND SKU=EPTENR  AND
+     A* SUBSTR(PO_NR, 4, 4) =EPBEJJ AND EPGLMG =  0  AND
+     A* REPORT = ' ' AND EPBENR ='XXXXXX')
+     A*
+     A*EPVSTE  ETD                 VERSCHIFF-TERM
+     A* UPDATE BBEP01 SET EPVSTE=
+     A* (SELECT SUBSTR(ETD, 1, 4) CONCAT SUBSTR(ETD, 6, 2)
+     A* CONCAT SUBSTR(ETD, 9, 4) FROM POS01_UPD
+     A* WHERE EPFIRM = '01' AND
+     A* SUBSTR(PO_NR, 9, 4) = EPBENR AND SKU=EPTENR  AND
+     A* SUBSTR(PO_NR, 4, 4) =EPBEJJ AND EPGLMG =  0  AND
+     A* REPORT = ' ' AND EPBENR ='XXXXXX')
+     A* WHERE EXISTS
+     A* (SELECT SUBSTR(ETD, 1, 4) CONCAT SUBSTR(ETD, 6, 2)
+     A* CONCAT SUBSTR(ETD, 9, 4) FROM POS01_UPD
+     A* WHERE EPFIRM = '01' AND
+     A* SUBSTR(PO_NR, 9, 4) = EPBENR AND SKU=EPTENR  AND
+     A* SUBSTR(PO_NR, 4, 4) =EPBEJJ AND EPGLMG =  0  AND
+     A* REPORT = ' ' AND EPBENR ='XXXXXX')
+     A*
+     A*EPBETE  ETA                 LIEFER-TERMIN
+     A* UPDATE BBEP01 SET EPBETE=
+     A* (SELECT SUBSTR(ETA, 1, 4) CONCAT SUBSTR(ETA, 6, 2)
+     A* CONCAT SUBSTR(ETA, 9, 4) FROM POS01_UPD
+     A* WHERE EPFIRM = '01' AND
+     A* SUBSTR(PO_NR, 9, 4) = EPBENR AND SKU=EPTENR  AND
+     A* SUBSTR(PO_NR, 4, 4) =EPBEJJ AND EPGLMG =  0  AND
+     A* REPORT = ' ' AND EPBENR ='XXXXXX')
+     A* WHERE EXISTS
+     A* (SELECT SUBSTR(ETA, 1, 4) CONCAT SUBSTR(ETA, 6, 2)
+     A* CONCAT SUBSTR(ETA, 9, 4) FROM POS01_UPD
+     A* WHERE EPFIRM = '01' AND
+     A* SUBSTR(PO_NR, 9, 4) = EPBENR AND SKU=EPTENR  AND
+     A* SUBSTR(PO_NR, 4, 4) =EPBEJJ AND EPGLMG =  0  AND
+     A* REPORT = ' ' AND EPBENR ='XXXXXX')
+     A*
+     A*
+     A*
+     A          R POS01_UPDR                TEXT('POS01_UPD')
+     A*****************************************************************
+     A            ##IM1         40A         COLHDG('DELIVERY NAME')
+     A            ##IM2         20A         COLHDG('SALES ORDER')
+     A            ##IM3          4S 0       COLHDG('LINE NO')
+     A            SKU           15A         COLHDG('SKU')
+     A            ##IM4          6S 0       COLHDG('QUANTITY')
+     A            QUANT          6S 0       COLHDG('NEW ADJUSTED QTY')
+     A            ETD           10A         COLHDG('ETD')
+     A            ##IM5         10A         COLHDG('MONTH')
+     A            PO_NR         16A         COLHDG('CUSTOMER PO')
+     A            ETA           10A         COLHDG('ETA')
+     A*****************************************************************
+     A            H1              L         TEXT('Date of transmissing')
+     A            H2              Z         TEXT('TIMESTAMP')
+     A*****************************************************************
+     A            QUANT_A        6S 0       COLHDG('NEW ADJUSTED QTY')
+     A            ETD_A         10A         COLHDG('ETD')
+     A            ETA_A         10A         COLHDG('ETA')
+     A            REPORT        60A         COLHDG('REPORT')

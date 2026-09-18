@@ -1,0 +1,49 @@
+     A*
+     A*CRTSRCPF FILE(TVRELWAECO/IVEAS_I) RCDLEN(2400)
+     A*TEXT('DATA STREAM FOR IVEAS 2400 BYTES')
+     A*
+     A*CPYFRMSTMF FROMSTMF('/IVEAS/478451.BAK')
+     A*TOMBR('/QSYS.LIB/TVRELWAECO.LIB/IVEAS_I.FILE/IVEASI.MBR')
+     A*MBROPT(*REPLACE)
+     A*
+     A*SELECT SUBSTR( SRCDTA , 1, 1810) FROM TVRELWAECO/IVEAS_I WHERE
+     A*SUBSTR( SRCDTA , 1, 1) = '1'
+     A*DATEI IVEAS_I1 IN TVRELWAECO WURDE ERSTELLT.
+     A*
+     A*CPYF FROMFILE(IVEAS_I1) TOFILE(IVEAS_SA1) MBROPT(*REPLACE) FMTOPT(*NOCHK)
+     A*
+     A*
+     A*
+     A          R IMPKS_SA2                 TEXT('IVEAS')
+     A********************************************************************
+     A            COM           12A         COLHDG('COM         101   12')
+     A            REFNO         35A         COLHDG('REFNO       103   13')
+     A            SATZART        1A         COLHDG('SATZART2    100    1')
+     A            ATYP           1A         COLHDG('ATYP        102   12')
+     A            PARKEY        12A         COLHDG('PARKEY      104   63')
+     A            CNO            7A         COLHDG('CNO         105   71')
+     A            NAME          90A         COLHDG('NAME        106   74')
+     A            COU            2A         COLHDG('COU         107  124')
+     A            STREET        30A         COLHDG('STREET      108  134')
+     A            POSTC          6A         COLHDG('POSTC       109  139')
+     A            TOWN1         35A         COLHDG('TOWN1       110  141')
+     A            TOWN2         30A         COLHDG('TOWN2       111  144')
+     A            POBOX         20A         COLHDG('POBOX       112  158')
+     A            POPOSTC        6A         COLHDG('POPOSTC     113  159')
+     A            POTOWN        35A         COLHDG('POTOWN      114  173')
+     A            VATID         30A         COLHDG('VATID       115  223')
+     A            FINOFFNO       4A         COLHDG('FINOFFNO    116  229')
+     A            DESTREGION     2A         COLHDG('DESTREGION  117  279')
+     A            IMPLOC         1A         COLHDG('IMPLOC      118  329')
+     A            TOWNDEC       35A         COLHDG('TOWNDEC    5119  379')
+     A*****************************************************************
+     A*
+     A*****************************************************************
+     A            H1              L         TEXT('Date of transmissing')
+     A            H2              Z         TEXT('TIMESTAMP')
+     A            MANDANT        3A         COLHDG('MANDANT  ')
+     A            KJAHR          4S 0       COLHDG('JAHR     ')
+     A            KRL            1A         COLHDG('R=RECHNUNG, L=LIEF.')
+     A            KRECHLIEF     10A         COLHDG('RECHNUNG ODER LIEF.')
+     A            VERABKZ        1A         COLHDG('VERARBEITUNGSKZ')
+     A*****************************************************************

@@ -1,0 +1,31 @@
+/*********************************************************************/
+/*  BESCHREIBUNG:                                                    */
+/*                                                                   */
+/*                                                                   */
+/*  M.Gang                                                           */
+/*  Änderungsprotokoll                                               */
+/*********************************************************************/
+      PGM
+
+             DCL        VAR(&ERROR1) TYPE(*LGL) VALUE('0')
+             DCL        VAR(&ERROR2) TYPE(*LGL) VALUE('0')
+             DCL        VAR(&ERROR3) TYPE(*LGL) VALUE('0')
+
+/*  SBGN.MON  enthält alle Rechnungen Archiv des Jahres              */
+/*  COPY.FORD enthält alle Rechnungen Ford zum Übertragen            */
+/*  SBGN.FAK  enthält alle Rechnungen lfd Tages                      */
+/*  WAEFSEND  enthält alle Rechnungen Aufbereitet zur Übertragung    */
+/*  WAEFSD09  enthält alle Rechnungen Aufbereitet Archiv 2009        */
+             CPYF       FROMFILE(*LIBL/SBGN.MON) TOFILE(COPY.FORD) +
+                          MBROPT(*ADD) INCCHAR(*RCD 251 *EQ +
+                          'Rechn#') FMTOPT(*NOCHK)
+
+             CPYF       FROMFILE(SBGN.FAK) TOFILE(COPY.FORD) +
+                          MBROPT(*REPLACE) FROMRCD(2355) +
+                          INCCHAR(*RCD 14 *NE '11') FMTOPT(*NOCHK)
+
+             IF         COND(&ERROR1 *EQ '0') THEN(RMVLIBLE +
+                          LIB(GANG))
+             ENDPGM
+
+ ENDE:       RCLRSC

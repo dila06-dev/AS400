@@ -1,0 +1,13 @@
+      * Physische Datei: ZKUN
+      * ANLEGEDATUM: OKTOBER 2010
+      *SORT:        ...
+      * ÄNDERUNGEN:
+      * AUSSCHLUSS:  ...
+     A
+     A*                                     UNIQUE
+     A          R ZKUN1                     PFILE(ZKUN)
+     A
+     A                                      TEXT('..........')
+     A          K KZFIRM
+     A          K KZKDNR
+     A          K KZEDIB

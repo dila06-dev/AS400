@@ -1,0 +1,47 @@
+     A**************************************************************************
+     A*  Copyright 2012 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------- *
+     A*  Kommunikationsparameter Generieren Absatz/Umsatz-Plan                 *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: MG 11.06.2012 Projekt 8559 Dometic                          *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R E1WAOP1
+     A*-------------------------------------------------------------------------
+     A* Programmstatus
+     A*-------------------------------------------------------------------------
+     A            E1WAOPPGSTR               REFFLD(##PGST)
+     A            E1WAOPPROGR               REFFLD(##PROG)
+     A            E1WAOPLOKZR               REFFLD(##LOKZ)
+     A*-------------------------------------------------------------------------
+     A* Übergabewerte
+     A*-------------------------------------------------------------------------
+     A            E1WAOPPLATR               REFFLD(WAOP1/WAOPPLAT *LIBL/WAOP)
+     A            E1WAOPWKNRR               REFFLD(WAOP1/WAOPWKNR *LIBL/WAOP)
+     A            E1WAOPKSTCR               REFFLD(WAOP1/WAOPKSTC *LIBL/WAOP)
+     A            E1WAOPKDGRR               REFFLD(WAOP1/WAOPKDGR *LIBL/WAOP)
+     A            E1WAOPKDPLR               REFFLD(WAOP1/WAOPKDPL *LIBL/WAOP)
+     A            E1WAOPKDNRR               REFFLD(WAOP1/WAOPKDNR *LIBL/WAOP)
+     A            E1WAOPPRGRR               REFFLD(TEIL1/TEPRGR   *LIBL/TEIL)
+     A            E1WAOPTENRR               REFFLD(WAOP1/WAOPTENR *LIBL/WAOP)
+     A            E1WAOPJAHRR               REFFLD(WAOP1/WAOPJAHR *LIBL/WAOP)
+     A*
+     A            E1TVAMBEGRR               REFFLD(TVAM1/VMBEGR   *LIBL/TVAM)
+     A            E1TVAMWKNRR               REFFLD(TVAM1/VMWKNR   *LIBL/TVAM)
+     A            E1TVAMKDNRR               REFFLD(TVAM1/VMKDNR   *LIBL/TVAM)
+     A            E1TVAMTENRR               REFFLD(TVAM1/VMTENR   *LIBL/TVAM)
+     A            E1TVAMVJHJR               REFFLD(TVAM1/VMJHJJ   *LIBL/TVAM)
+     A            E1TVAMVMONR               REFFLD(TVAM1/VMMONA   *LIBL/TVAM)
+     A            E1TVAMBJHJR               REFFLD(TVAM1/VMJHJJ   *LIBL/TVAM)
+     A            E1TVAMBMONR               REFFLD(TVAM1/VMMONA   *LIBL/TVAM)
+     A*
+     A            E1WAOPDANAR               REFFLD(##DANA)
+     A            E1WAOPMGPZR               REFFLD(##JNKZ)
+     A            E1WAOPPRPZR               REFFLD(##JNKZ)
+     A            E1WAOPVPLAR               REFFLD(WAOP1/WAOPPLAT *LIBL/WAOP)
+     A            E1WAOPKSSTR               REFFLD(KDEW1/KDEWKSST *LIBL/KDEW)
+     A            E1WAOPFREIR  889          REFFLD(##FREI)

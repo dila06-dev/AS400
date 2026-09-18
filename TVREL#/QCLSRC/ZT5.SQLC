@@ -1,0 +1,1 @@
+delete FROM afko WHERE AKKDNR = '99999' or AKKDNR = '99999'

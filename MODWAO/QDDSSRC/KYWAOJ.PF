@@ -1,0 +1,23 @@
+     A**************************************************************************
+     A*  Copyright 2000 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Schlüsselaufbau HUB-Ketten-Datei für Schenker                         *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: VU 10.06.2011 Projekt 7485                                  *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(WAOJ)
+     A          R KYWAOJ1
+     A*
+     A            KYWAOJFIRMR               REFFLD(WAOJFIRM)
+     A            KYWAOJGENRR               REFFLD(WAOJGENR)
+     A*
+     A            K$WAOJ        30
+     A            K#WAOJLOCKR               REFFLD(WAOJLOCK)
+     A*
+     A            K#WAOJFIRMR               REFFLD(WAOJFIRM)
+     A            K#WAOJGENRR               REFFLD(WAOJGENR)
+     A*

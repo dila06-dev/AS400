@@ -1,0 +1,30 @@
+      * Physische Datei: KUND, KPIF, TEIL
+      * ANLEGEDATUM: 06/11
+      *SORT:        ...
+      * ÄNDERUNGEN:
+      * AUSSCHLUSS:  ...
+     A
+     A          R KUNDJ1                    JFILE(KUND KPIF TEIL)
+     A          J                           JOIN(KUND KPIF)
+     A                                      JFLD(KDKDNR KPKDNR)
+     A          J                           JOIN(KPIF TEIL)
+     A                                      JFLD(KPTENR TETENR)
+     A
+     A            KDKDNR
+     A            KPKDNR
+     A            KDNAM1
+     A            KPTENR
+     A            KPGADA
+     A            KPIDEN
+     A            KPIBZ1
+     A            KPSTAT
+     A            TEFIRM
+     A            TEPRGR
+     A            TETENR
+     A            TETBZ1
+     A            TEVPEI
+     A            TEVIKZ
+     A            TEABC1
+     A            TETEST
+     A            TEERTE
+     A          K KDKDNR

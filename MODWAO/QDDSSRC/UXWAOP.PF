@@ -1,0 +1,24 @@
+     A**************************************************************************
+     A*  Copyright 2012 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Absatz/Umsatz-Plan Planungs-KD/Artikel                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: MG 24.08.2011 Projekt 8559, Planungssystem                  *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R UXWAOP1
+     A*
+     A            UXWAOPFIRMR               REFFLD(WAOP1/WAOPFIRM *LIBL/WAOP)
+     A            UXWAOPPLATR               REFFLD(WAOP1/WAOPPLAT *LIBL/WAOP)
+     A            UXWAOPWKNRR               REFFLD(WAOP1/WAOPWKNR *LIBL/WAOP)
+     A            UXWAOPKSTCR               REFFLD(WAOP1/WAOPKSTC *LIBL/WAOP)
+     A            UXWAOPKDGRR               REFFLD(WAOP1/WAOPKDGR *LIBL/WAOP)
+     A            UXWAOPKDPLR               REFFLD(WAOP1/WAOPKDPL *LIBL/WAOP)
+     A            UXWAOPKDNRR               REFFLD(WAOP1/WAOPKDNR *LIBL/WAOP)
+     A            UXWAOPLDNRR               REFFLD(WAOP1/WAOPLDNR *LIBL/WAOP)
+     A            UXWAOPTENRR               REFFLD(WAOP1/WAOPTENR *LIBL/WAOP)
+     A            UXWAOPJAHRR               REFFLD(WAOP1/WAOPJAHR *LIBL/WAOP)

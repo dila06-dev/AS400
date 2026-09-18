@@ -1,0 +1,144 @@
+     A          R D_RECORD
+     A
+      * :HeaderInfos
+     A            H010           1A
+     A                                      TEXT('Order line type,static value')
+     A                                      COLHDG('Ordertype')
+     A            H020           7A
+     A                                      TEXT('customer of SC')
+     A                                      COLHDG('customer of SC')
+     A            H030           7A
+     A                                      TEXT('SC id static')
+     A                                      COLHDG('sales company')
+     A            H040           7A
+     A                                      TEXT('delivery id customer')
+     A                                      COLHDG('delivery id')
+     A            H050          10A
+     A                                      TEXT('SC order number')
+     A                                      COLHDG('SC order number')
+     A            H060          10A
+     A                                      TEXT('order creation /change date')
+     A                                      COLHDG('SC order date')
+     A            H070           8A
+     A                                      TEXT('order creation/change time ')
+     A                                      COLHDG('SC order time')
+     A            H080           1A
+     A                                      TEXT('SC status field (N/U/C)    ')
+     A                                      COLHDG('SC status field')
+     A            H090           1A
+     A                                      TEXT('Hold / Release             ')
+     A                                      COLHDG('Hold / Release')
+     A            H100          30A
+     A                                      TEXT('Order Tex')
+     A                                      COLHDG('Order Text')
+     A            H110          30A
+     A                                      TEXT('Delivery address Name1')
+     A            H120          30A
+     A                                      TEXT('Delivery address Name2')
+     A            H130          30A
+     A                                      TEXT('Delivery address Name3')
+     A            H140          30A
+     A                                      TEXT('Delivery address Street')
+     A            H150           3A
+     A                                      TEXT('Delivery address Country')
+     A            H160           5A
+     A                                      TEXT('Delivery address Zip Code')
+     A            H170          30A
+     A                                      TEXT('Delivery address City')
+     A            H180         100A
+     A                                      TEXT('Head Text 1')
+     A            H181           1A
+     A                                      TEXT('HEAD (H);FEED(F),LINE(L)')
+     A            H190         100A
+     A                                      TEXT('Head Text 2')
+     A            H191           1A
+     A                                      TEXT('HEAD (H);FEED(F),LINE(L)')
+     A            H200         100A
+     A                                      TEXT('Head Text 3')
+     A            H201           1A
+     A                                      TEXT('HEAD (H);FEED(F),LINE(L)')
+     A            H210           2A
+     A                                      TEXT('Shipping Type')
+     A                                      COLHDG('Shipping Type')
+     A            H220          21A
+     A                                      TEXT('Customer order reference')
+     A                                      COLHDG('Customer order ref')
+     A            H230           1A
+     A                                      TEXT('OEM  Priority')
+     A                                      COLHDG('OEM  Priority')
+     A            H240           1A
+     A                                      TEXT('Full/partial delivery')
+     A                                      COLHDG('delivery code')
+     A            H241           1A
+     A                                      TEXT('SINGLE/BULK INVOICE')
+     A                                      COLHDG('SINGLE/BULK INVOICE')
+     A            H250         100A
+     A                                      TEXT('Forwarder text 1')
+     A                                      COLHDG('Forwarder text 1')
+     A            H260         200A
+     A                                      TEXT('Forwarder text 2')
+     A                                      COLHDG('Forwarder text 2')
+     A            H270          60A
+     A                                      TEXT('Name order responsible SC')
+     A                                      COLHDG('responsible SC')
+     A            H280         512A
+     A                                      TEXT('Message')
+     A                                      COLHDG('Message')
+     A            H290          10A         TEXT('booked')
+     A            H300          10A         TEXT('user')
+     A            H310           1A         TEXT('function')
+     A            H320          10A         TEXT('status')
+     A            H330          10A         TEXT('Date of transmissing')
+     A            H340          26A         TEXT('TIMESTAMP')
+     A
+      * :LineInfos
+     A            L010           1A
+     A                                      TEXT('Order line type,static value')
+     A                                      COLHDG('Ordertype')
+     A            L020           4A
+     A                                      TEXT('EDC order# part 1 (YEAR)')
+     A                                      COLHDG('EDC part 1 (YEAR)')
+     A            L021           6A
+     A                                      TEXT('EDC order# part 2 (#)')
+     A                                      COLHDG('EDC part 2 (#)')
+     A            L030           5A
+     A                                      TEXT('Line identity on the order')
+     A                                      COLHDG('Postion No.')
+     A            L040          10A
+     A                                      TEXT('Customer Delivery date')
+     A                                      COLHDG('Customer Delivery d.')
+     A            L050           1A
+     A                                      TEXT('Byte 3 Fixed delivery date ')
+     A                                      COLHDG('delivery date')
+     A            L060          15A
+     A                                      TEXT('SKU/article')
+     A                                      COLHDG('SKU/article')
+     A            L070          40A
+     A                                      TEXT('Part Description document')
+     A                                      COLHDG('Description')
+     A            L080           8A
+     A                                      TEXT('Quantity')
+     A                                      COLHDG('Quantity')
+     A            L090          20A
+     A                                      TEXT('Customer item referens')
+     A                                      COLHDG('Cust. item referens')
+     A            L100          30A
+     A                                      TEXT('Customer item description')
+     A                                      COLHDG('Customer description')
+     A            L130           1A
+     A                                      TEXT('SC status field (N/U/C)    ')
+     A                                      COLHDG('SC status field')
+     A            L140           1A
+     A                                      TEXT('Hold / Release             ')
+     A                                      COLHDG('Hold / Release')
+     A            L150         512A
+     A                                      TEXT('Message')
+     A                                      COLHDG('Message')
+     A            L160          10A         TEXT('booked')
+     A            L170           1A         TEXT('function')
+     A            L180          10A         TEXT('status position')
+     A
+     A            L230          10A         TEXT('Date of transmissing')
+     A            L240          26A         TEXT('TIMESTAMP')
+     A            L250          10A         TEXT('dispatch date')
+     A            L260           8A         TEXT('amount')

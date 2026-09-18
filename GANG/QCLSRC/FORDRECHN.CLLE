@@ -1,0 +1,19 @@
+/*-------------------------------------------------*/
+/* Ford Rechnungsdatei erstellen                   */
+/*-------------------------------------------------*/
+             PGM
+
+             CPYF       FROMFILE(QS36F/FORDINVI1) +
+                          TOFILE(QS36F/FORDINVI2) MBROPT(*REPLACE) +
+                          FMTOPT(*CVTSRC)
+
+             CPYF       FROMFILE(QS36F/FORDINVI2) +
+                          TOFILE(QS36F/WAEFVIR0) MBROPT(*REPLACE) +
+                          FMTOPT(*NOCHK)
+
+             RUNSQLSTM  SRCFILE(POHL/QCLSRC) SRCMBR(FORDSQL1) +
+                          COMMIT(*NONE)
+
+             RUNQRY     QRY(WAECOQRY/FORDZAHLG)
+
+             ENDPGM

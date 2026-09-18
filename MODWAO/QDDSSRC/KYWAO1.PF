@@ -1,0 +1,29 @@
+     A**************************************************************************
+     A*  Copyright 2003 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Ziegelhofstraße 210a                             *
+     A*                       DE 79110 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Schnittstelle Lieferscheine                                           *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: TB 15.10.2003                                               *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(WAO1)
+     A          R KYWAO11
+     A*-------------------------------------------------------------------------
+     A            KYWAO1FIRMR               REFFLD(WAO1FIRM)
+     A            KYWAO1LIJJR               REFFLD(WAO1LIJJ)
+     A            KYWAO1LINRR               REFFLD(WAO1LINR)
+     A            KYWAO1RALPR               REFFLD(WAO1RALP)
+     A            KYWAO1UESTR               REFFLD(WAO1UEST)
+     A            KYWAO1DANAR               REFFLD(WAO1DANA)
+     A            KYWAO1JAHRR               REFFLD(WAO1JAHR)
+     A            KYWAO1NMKRR               REFFLD(WAO1NMKR)
+     A            KYWAO1POSIR               REFFLD(WAO1POSI)
+     A            K$WAO1FREIR  -23          REFFLD(WAO1FREI)
+     A            K#WAO1LOCKR               REFFLD(WAO1LOCK)
+     A            K#WAO1FIRMR               REFFLD(WAO1FIRM)
+     A            K#WAO1LIJJR               REFFLD(WAO1LIJJ)
+     A            K#WAO1LINRR               REFFLD(WAO1LINR)
+     A            K#WAO1RALPR               REFFLD(WAO1RALP)

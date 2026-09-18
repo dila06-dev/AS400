@@ -1,0 +1,67 @@
+/*       PROGRAMMNAME:  SAVETEST                                     */
+/*       VERFASSER   :  Schneider                                    */
+/*       BESCHREIBUNG:  SICHERN ALLER USER-BIBLIOTHEKEN TÄGLICH AUF  */
+/*                      ULTRIUM-4 MAGNETBAND                         */
+/*                                                                   */
+/*********************************************************************/
+             PGM        PARM(&LOKATION)
+
+             DCL        VAR(&BANDID) TYPE(*CHAR) LEN(6)
+             DCL        VAR(&BANDDO) TYPE(*CHAR) LEN(7) VALUE(*LEAVE)
+             DCL        VAR(&DATUM) TYPE(*CHAR) LEN(6)
+             DCL        VAR(&DATUMC) TYPE(*CHAR) LEN(6)
+             DCL        VAR(&DATUMS) TYPE(*DEC) LEN(6 0)
+             DCL        VAR(&TIME) TYPE(*CHAR) LEN(6)
+             DCL        VAR(&LAUFTAG) TYPE(*CHAR) LEN(4)
+             DCL        VAR(&IPL) TYPE(*CHAR) LEN(2)
+             DCL        VAR(&BANDUNLOAD) TYPE(*CHAR) LEN(10)
+             DCL        VAR(&LOKATION) TYPE(*CHAR) LEN(3)
+             DCL        VAR(&FIRMA) TYPE(*CHAR) LEN(2) VALUE('  ')
+
+
+             CHGJOB     LOG(4 00 *SECLVL) LOGCLPGM(*YES) +
+                          LOGOUTPUT(*JOBEND)
+
+/*___   ermitteln firma ____________________________________________________ */
+             CALL       PGM(TVRELWAECO/DOWR000) PARM(&LOKATION &FIRMA)
+
+/*___________________________________________________________________  _______*/
+
+             INZTAP     DEV(TAP01) NEWVOL(DWI) NEWOWNID(WAECO) +
+                          CHECK(*NO) DENSITY(*CTGTYPE)
+
+/*___________________________________________________________________  _______*/
+
+/*___bibliotheken____________________________________________________  _______*/
+             SAVLIB     LIB(DOM* TMNP MODWAO TEVMF TEVMP TAMF TAMP +
+                          TVPF TVPP TVRELW DOMDTA EDIFAC SASF SAS +
+                          SFBF SFB SFBA TVRELWAECO) DEV(TAP01) +
+                          ENDOPT(*LEAVE) SAVACT(*LIB) +
+                          SAVACTWAIT(60) ACCPTH(*YES) +
+                          OUTPUT(*OUTFILE) +
+                          OUTFILE(WAECOLOG/LOG_TEST) OUTMBR(*FIRST +
+                          *REPLACE) INFTYPE(*ERR)
+
+/*___sicherheitsdaten________________________________________________  _______*/
+             SAVSECDTA  DEV(TAP01) ENDOPT(*LEAVE) OUTPUT(*OUTFILE) +
+                          OUTFILE(WAECOLOG/LOG) OUTMBR(LOG_SEC +
+                          *REPLACE)
+
+/*___dlo_____________________________________________________________  _______*/
+             SAVDLO     DLO(*ALL) DEV(TAP01) ENDOPT(*LEAVE) +
+                          OUTPUT(*NONE) DTACPR(*NO) COMPACT(*DEV) +
+                          SAVACT(*YES) SAVACTWAIT(0)
+
+/*___ifs_____________________________________________________________  _______*/
+             SAV        DEV('QSYS.LIB/TAP01.DEVD') OBJ(('/*' +
+                          *INCLUDE) ('/QSYS.LIB' *OMIT) ('/QDLS' +
+                          *OMIT) ('/QIBM' *OMIT) +
+                          ('/TRENDJAVA/PRINTJOBS' *OMIT) +
+                          ('/TRENDJAVA/PRINTJOBSTEST' *OMIT) +
+                          ('/eupdomv7/domsysv7/common/files/dataLocks+
+                          ' *OMIT) +
+                          ('/eupdomv7/domsysv7/common/files/socket' +
+                          *OMIT)) SAVACT(*YES) ENDOPT(&BANDUNLOAD) +
+                          UPDHST(*YES) DTACPR(*NO)
+
+ ENDE:       ENDPGM

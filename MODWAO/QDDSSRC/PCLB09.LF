@@ -1,0 +1,19 @@
+     A**************************************************************************
+     A*  Copyright 1997 by    trend SWM                                        *
+     A*                       Verwaltungs-GmbH                                 *
+     A*                       Bötzinger Strasse 36                             *
+     A*                       D-79111 Freiburg                                 *
+     A*  --------------------------------------------------------------------  *
+     A*  Schnittstellendatei für Lagerleitrechner                              *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: SZ 17.06.1997                                               *
+     A*  Änderung: SZ 08.07.2000 BUKZ zusätzlich wegen Einlagerung             *
+     A*            in HRL und Auslagerung auf Rollenbahn gleichzeitig          *
+     A*                                                                        *
+     A**************************************************************************
+     A*
+     A          R PCLB1                     PFILE(PCLB)
+     A*
+     A          K PCLBFIRM
+     A          K PCLBBHNR
+     A          K PCLBBUKZ

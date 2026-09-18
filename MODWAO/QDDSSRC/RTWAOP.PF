@@ -1,0 +1,96 @@
+     A**************************************************************************
+     A*  Copyright 2012 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------- *
+     A*  Rückgabebereich Absatz/Umsatz-Plan Planungs-KD/Artikel                *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: MG 24.08.2011 Projekt 8559, Planungssystem                  *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R RTWAOP1
+     A*-------------------------------------------------------------------------
+     A* allgemeine Rückgabe
+     A*-------------------------------------------------------------------------
+     A            RTWAOPPROGR               REFFLD(##PROG)
+     A            RTWAOPDANAR               REFFLD(##DANA)
+     A            RTWAOPRTCDR               REFFLD(##RTCD)
+     A            RTWAOPFFLDR               REFFLD(##FFLD)
+     A            RTWAOPFENRR               REFFLD(##FENR)
+     A            RTWAOPPA03R               REFFLD(##A010)
+     A                                      TEXT('Parameter 3 bei Fehler')
+     A            RTWAOPPA04R               REFFLD(##A010)
+     A                                      TEXT('Parameter 4 bei Fehler')
+     A            RTWAOPPA05R               REFFLD(##A010)
+     A                                      TEXT('Parameter 5 bei Fehler')
+     A            RTWAOPPA06R               REFFLD(##A010)
+     A                                      TEXT('Parameter 6 bei Fehler')
+     A            RTWAOPPA07R               REFFLD(##A010)
+     A                                      TEXT('Parameter 7 bei Fehler')
+     A*-------------------------------------------------------------------------
+     A* ON/OFF Rückgabe KZ für Prüfungen
+     A*-------------------------------------------------------------------------
+     A            RTWAOPFR01R               REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* Key-Felder
+     A*-------------------------------------------------------------------------
+     A            RTWAOPPLATR               REFFLD(WAOP1/WAOPPLAT *LIBL/WAOP)
+     A            RTWAOPWKNRR               REFFLD(WAOP1/WAOPWKNR *LIBL/WAOP)
+     A            RTWAOPKSTCR               REFFLD(WAOP1/WAOPKSTC *LIBL/WAOP)
+     A            RTWAOPKDGRR               REFFLD(WAOP1/WAOPKDGR *LIBL/WAOP)
+     A            RTWAOPKDPLR               REFFLD(WAOP1/WAOPKDPL *LIBL/WAOP)
+     A            RTWAOPKDNRR               REFFLD(WAOP1/WAOPKDNR *LIBL/WAOP)
+     A            RTWAOPLDNRR               REFFLD(WAOP1/WAOPLDNR *LIBL/WAOP)
+     A            RTWAOPTENRR               REFFLD(WAOP1/WAOPTENR *LIBL/WAOP)
+     A            RTWAOPJAHRR               REFFLD(WAOP1/WAOPJAHR *LIBL/WAOP)
+     A            RTWAOPFR02R  256          REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* evt. weitere Felder nach Ermittlung
+     A*-------------------------------------------------------------------------
+     A            RTWAOPPLMGR               REFFLD(WAOP1/WAOPPLMG *LIBL/WAOP)
+     A            RTWAOPPLUMR               REFFLD(WAOP1/WAOPPLUM *LIBL/WAOP)
+     A            RTWAOPSTPRR               REFFLD(WAOP1/WAOPSTPR *LIBL/WAOP)
+     A            RTWAOPPDAVR               REFFLD(WAOP1/WAOPPDAV *LIBL/WAOP)
+     A            RTWAOPERTRR               REFFLD(WAOP1/WAOPERTR *LIBL/WAOP)
+     A            RTWAOPMG01R               REFFLD(WAOP1/WAOPMG01 *LIBL/WAOP)
+     A            RTWAOPMG02R               REFFLD(WAOP1/WAOPMG02 *LIBL/WAOP)
+     A            RTWAOPMG03R               REFFLD(WAOP1/WAOPMG03 *LIBL/WAOP)
+     A            RTWAOPMG04R               REFFLD(WAOP1/WAOPMG04 *LIBL/WAOP)
+     A            RTWAOPMG05R               REFFLD(WAOP1/WAOPMG05 *LIBL/WAOP)
+     A            RTWAOPMG06R               REFFLD(WAOP1/WAOPMG06 *LIBL/WAOP)
+     A            RTWAOPMG07R               REFFLD(WAOP1/WAOPMG07 *LIBL/WAOP)
+     A            RTWAOPMG08R               REFFLD(WAOP1/WAOPMG08 *LIBL/WAOP)
+     A            RTWAOPMG09R               REFFLD(WAOP1/WAOPMG09 *LIBL/WAOP)
+     A            RTWAOPMG10R               REFFLD(WAOP1/WAOPMG10 *LIBL/WAOP)
+     A            RTWAOPMG11R               REFFLD(WAOP1/WAOPMG11 *LIBL/WAOP)
+     A            RTWAOPMG12R               REFFLD(WAOP1/WAOPMG12 *LIBL/WAOP)
+     A            RTWAOPUM01R               REFFLD(WAOP1/WAOPUM01 *LIBL/WAOP)
+     A            RTWAOPUM02R               REFFLD(WAOP1/WAOPUM02 *LIBL/WAOP)
+     A            RTWAOPUM03R               REFFLD(WAOP1/WAOPUM03 *LIBL/WAOP)
+     A            RTWAOPUM04R               REFFLD(WAOP1/WAOPUM04 *LIBL/WAOP)
+     A            RTWAOPUM05R               REFFLD(WAOP1/WAOPUM05 *LIBL/WAOP)
+     A            RTWAOPUM06R               REFFLD(WAOP1/WAOPUM06 *LIBL/WAOP)
+     A            RTWAOPUM07R               REFFLD(WAOP1/WAOPUM07 *LIBL/WAOP)
+     A            RTWAOPUM08R               REFFLD(WAOP1/WAOPUM08 *LIBL/WAOP)
+     A            RTWAOPUM09R               REFFLD(WAOP1/WAOPUM09 *LIBL/WAOP)
+     A            RTWAOPUM10R               REFFLD(WAOP1/WAOPUM10 *LIBL/WAOP)
+     A            RTWAOPUM11R               REFFLD(WAOP1/WAOPUM11 *LIBL/WAOP)
+     A            RTWAOPUM12R               REFFLD(WAOP1/WAOPUM12 *LIBL/WAOP)
+     A            RTWAOPER01R               REFFLD(WAOP1/WAOPER01 *LIBL/WAOP)
+     A            RTWAOPER02R               REFFLD(WAOP1/WAOPER02 *LIBL/WAOP)
+     A            RTWAOPER03R               REFFLD(WAOP1/WAOPER03 *LIBL/WAOP)
+     A            RTWAOPER04R               REFFLD(WAOP1/WAOPER04 *LIBL/WAOP)
+     A            RTWAOPER05R               REFFLD(WAOP1/WAOPER05 *LIBL/WAOP)
+     A            RTWAOPER06R               REFFLD(WAOP1/WAOPER06 *LIBL/WAOP)
+     A            RTWAOPER07R               REFFLD(WAOP1/WAOPER07 *LIBL/WAOP)
+     A            RTWAOPER08R               REFFLD(WAOP1/WAOPER08 *LIBL/WAOP)
+     A            RTWAOPER09R               REFFLD(WAOP1/WAOPER09 *LIBL/WAOP)
+     A            RTWAOPER10R               REFFLD(WAOP1/WAOPER10 *LIBL/WAOP)
+     A            RTWAOPER11R               REFFLD(WAOP1/WAOPER11 *LIBL/WAOP)
+     A            RTWAOPER12R               REFFLD(WAOP1/WAOPER12 *LIBL/WAOP)
+     A            RTWAOPWACDR               REFFLD(WAOP1/WAOPWACD *LIBL/WAOP)
+     A            RTWAOPPLKZR               REFFLD(WAOP1/WAOPPLKZ *LIBL/WAOP)
+     A            RTWAOPSTKDR               REFFLD(WAOP1/WAOPSTKD *LIBL/WAOP)
+     A            RTWAOPFR03R  159          REFFLD(##FREI)

@@ -1,0 +1,110 @@
+     A          R ORDERTPF
+     A
+      * :HeaderInfos
+     A            T010           1A
+     A                                      TEXT('Order line type,static value')
+     A                                      COLHDG('Ordertype')
+     A            T020           7S 0
+     A                                      TEXT('SC id static')
+     A                                      COLHDG('sales company')
+     A                                      EDTCDE(Z)
+     A            T030          10A
+     A                                      TEXT('SC order number')
+     A                                      COLHDG('SC order number')
+     A            T040            L
+     A                                      TEXT('order creation /change date')
+     A                                      COLHDG('SC order date')
+     A            T050            T
+     A                                      TEXT('order creation/change time ')
+     A                                      COLHDG('SC order time')
+     A            T060T1         1A
+     A                                      TEXT('FLAG')
+     A                                      COLHDG('FLAG')
+     A            T070T1        10A
+     A                                      TEXT('DOKUMENT')
+     A                                      COLHDG('DOKUMENT')
+     A            T080T1       132A
+     A                                      TEXT('TEXT')
+     A                                      COLHDG('TEXT')
+     A            T060T2         1A
+     A                                      TEXT('FLAG')
+     A                                      COLHDG('FLAG')
+     A            T070T2        10A
+     A                                      TEXT('DOKUMENT')
+     A                                      COLHDG('DOKUMENT')
+     A            T080T2       132A
+     A                                      TEXT('TEXT')
+     A                                      COLHDG('TEXT')
+     A            T060T3         1A
+     A                                      TEXT('FLAG')
+     A                                      COLHDG('FLAG')
+     A            T070T3        10A
+     A                                      TEXT('DOKUMENT')
+     A                                      COLHDG('DOKUMENT')
+     A            T080T3       132A
+     A                                      TEXT('TEXT')
+     A                                      COLHDG('TEXT')
+     A            T060T4         1A
+     A                                      TEXT('FLAG')
+     A                                      COLHDG('FLAG')
+     A            T070T4        10A
+     A                                      TEXT('DOKUMENT')
+     A                                      COLHDG('DOKUMENT')
+     A            T080T4       132A
+     A                                      TEXT('TEXT')
+     A                                      COLHDG('TEXT')
+     A            T060T5         1A
+     A                                      TEXT('FLAG')
+     A                                      COLHDG('FLAG')
+     A            T070T5        10A
+     A                                      TEXT('DOKUMENT')
+     A                                      COLHDG('DOKUMENT')
+     A            T080T5       132A
+     A                                      TEXT('TEXT')
+     A                                      COLHDG('TEXT')
+     A            T060T6         1A
+     A                                      TEXT('FLAG')
+     A                                      COLHDG('FLAG')
+     A            T070T6        10A
+     A                                      TEXT('DOKUMENT')
+     A                                      COLHDG('DOKUMENT')
+     A            T080T6       132A
+     A                                      TEXT('TEXT')
+     A                                      COLHDG('TEXT')
+     A            T060T7         1A
+     A                                      TEXT('FLAG')
+     A                                      COLHDG('FLAG')
+     A            T070T7        10A
+     A                                      TEXT('DOKUMENT')
+     A                                      COLHDG('DOKUMENT')
+     A            T080T7       132A
+     A                                      TEXT('TEXT')
+     A                                      COLHDG('TEXT')
+     A            T060T8         1A
+     A                                      TEXT('FLAG')
+     A                                      COLHDG('FLAG')
+     A            T070T8        10A
+     A                                      TEXT('DOKUMENT')
+     A                                      COLHDG('DOKUMENT')
+     A            T080T8       132A
+     A                                      TEXT('TEXT')
+     A                                      COLHDG('TEXT')
+     A            T060T9         1A
+     A                                      TEXT('FLAG')
+     A                                      COLHDG('FLAG')
+     A            T070T9        10A
+     A                                      TEXT('DOKUMENT')
+     A                                      COLHDG('DOKUMENT')
+     A            T080T9       132A
+     A                                      TEXT('TEXT')
+     A                                      COLHDG('TEXT')
+     A            T060           1A
+     A                                      TEXT('FREE')
+     A                                      COLHDG('FREE')
+     A
+     A            T330          10A         TEXT('user')
+     A            T340           1A         TEXT('function')
+     A            T350          10A         TEXT('status')
+     A            T360            L         TEXT('Date of transmissing')
+     A            T370            Z         TEXT('TIMESTAMP')
+     A

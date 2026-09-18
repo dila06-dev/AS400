@@ -1,0 +1,25 @@
+/*       PROGRAMMNAME:  datumcl                                      */
+/*       VERFASSER   :  Schneider    STAND:18.09.2012                */
+/*       BESCHREIBUNG:  aufruf mit datum für neuen eintrag in        */
+/*                      datei bar_vert/kalender                      */
+/*                      format für parameteringabe: ttmmjj (alpha)   */
+/*                      für ganzes jahr letzten tag des vorhandenen  */
+/*                      jahres eingeben 3112XX                       */
+/*                                                                   */
+/*                                                                   */
+/*********************************************************************/
+             PGM        PARM(&FIRM &PARA)
+
+             DCL        VAR(&FIRM) TYPE(*CHAR) LEN(2)
+             DCL        VAR(&PARA) TYPE(*CHAR) LEN(6)
+
+
+/* ----programmaufruf --------------------------------------------------------*/
+
+             ADDLIBLE   LIB(BAR_VERT) POSITION(*LAST)
+             MONMSG     MSGID(CPF0000)
+
+             CALL       PGM(DATUMN) PARM(&FIRM &PARA)
+
+
+             ENDPGM

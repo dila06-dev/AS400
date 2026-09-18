@@ -1,0 +1,30 @@
+     A**************************************************************************
+     A*  Copyright 2016 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Ausnahmen von der STK3-Preisprüfung                                   *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: PH 29.01.2016 DOMETIC Projekt 11363                         *
+     A*  Änderung: XX XX.XX.XXXX                                               *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R WA121
+     A*-------------------------------------------------------------------------
+     A            WA12LOCK  R               REFFLD(##LOCK)
+     A            WA12JNAM  R               REFFLD(##JNAM)
+     A            WA12JDAT  R               REFFLD(##JDAT)
+     A            WA12JZEI  R               REFFLD(##JZEI)
+     A            WA12USER  R               REFFLD(##USER)
+     A            WA12PROG  R               REFFLD(##PROG)
+     A            WA12BIBL  R               REFFLD(##BIBL)
+     A            WA12FIRM  R               REFFLD(##FIRM)
+     A*
+     A            WA12AFAT  R               REFFLD(##AFAT)
+     A            WA12KDNR  R               REFFLD(##KDNR)
+     A            WA12PRGR  R               REFFLD(##PRGR)
+     A            WA12TENR  R               REFFLD(##TENR)
+     A            WA12TSTP  R               REFFLD(##TSTP)
+     A            WA12ERUS  R               REFFLD(##ERUS)
+     A            WA12FREI  R  100          REFFLD(##FREI)

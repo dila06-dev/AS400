@@ -1,0 +1,241 @@
+     A*%%TS  SD  20090327  125645  POHL        REL-V5R4M0  5722-WDS
+     A*%%EC
+     A                                      DSPSIZ(24 80 *DS3)
+     A                                      PRINT
+     A          R PROMPT
+     A*%%TS  SD  20020522  203724  POHL        REL-V4R4M0  5769-PW1
+     A                                 22  2'-----------------------------------
+     A                                      ------------------------------------
+     A                                      ---------'
+     A                                      COLOR(BLU)
+     A                                 23  2'F3/F12=Verlassen  F5=Aktualisieren-
+     A                                        F10=erw. Anzeige  F16=Sortieren  -
+     A                                         '
+     A                                      COLOR(BLU)
+     A                                 24 43'(c) WAECO, Emsdetten 2009'
+     A                                      DSPATR(HI)
+     A          R SUBFILE                   SFL
+     A*%%TS  SD  20090219  112601  POHL        REL-V5R4M0  5722-WDS
+     A            SUBINPUT       2A  I 10  2DSPATR(PC)
+     A            SUBKDNR   R        O 10  5REFFLD(EDILPF0/EDIL010 *LIBL/WAEEDI-
+     A                                      L)
+     A            SUBLIEF   R        O 10 13REFFLD(EDILPF0/EDIL210 *LIBL/WAEEDI-
+     A                                      L)
+     A            SUBARTNR  R        O 10 17REFFLD(EDILPF0/EDIL220 *LIBL/WAEEDI-
+     A                                      L)
+     A            SUBMENGE  R        O 10 33REFFLD(EDILPF0/EDIL240 *LIBL/WAEEDI-
+     A                                      L)
+     A            SUBLDATUM R        O 10 57REFFLD(EDILPF0/EDIL060 *LIBL/WAEEDI-
+     A                                      L)
+     A            SUBRUECKKZR        O 10 74REFFLD(EDILPF0/EDIL250 *LIBL/WAEEDI-
+     A                                      L)
+     A            SUBSTATUS R        O 10 76REFFLD(EDILPF0/EDIL320 *LIBL/WAEEDI-
+     A                                      L)
+     A                                 11  5'Kopf:'
+     A                                      COLOR(BLU)
+     A            SUBVERS1  R   15   O 11 11REFFLD(EDIHPF0/EDIH210 *LIBL/WAEEDI-
+     A                                      H)
+     A            SUBLAND   R        O 11 28REFFLD(EDIHPF0/EDIH250 *LIBL/WAEEDI-
+     A                                      H)
+     A            SUBPLZ    R        O 11 33REFFLD(EDIHPF0/EDIH260 *LIBL/WAEEDI-
+     A                                      H)
+     A            SUBORT    R   15   O 11 40REFFLD(EDIHPF0/EDIH270 *LIBL/WAEEDI-
+     A                                      H)
+     A            SUBKLDATUMR        O 11 57REFFLD(EDIHPF0/EDIH090 *LIBL/WAEEDI-
+     A                                      H)
+     A            SUBTEILLIER        O 11 76REFFLD(EDIHPF0/EDIH340 *LIBL/WAEEDI-
+     A                                      H)
+     A                                 11 72'TL:'
+     A                                      COLOR(BLU)
+     A            SUBWANR   R        O 10 43REFFLD(EDIHPF0/EDIH380 *LIBL/WAEEDI-
+     A                                      H)
+     A          R SUBCTL                    SFLCTL(SUBFILE)
+     A*%%TS  SD  20090327  125645  POHL        REL-V5R4M0  5722-WDS
+     A                                      SFLSIZ(0007)
+     A                                      SFLPAG(0006)
+     A                                      CF03
+     A                                      CF05
+     A                                      CF12
+     A                                      CF16
+     A N70                                  ROLLUP
+     A                                      RTNCSRLOC(&XXFMT &XXVAR &XXPOS)
+     A                                      CSRLOC(CSRZE      CSRSP)
+     A                                      OVERLAY
+     A  10                                  SFLDSP
+     A                                      SFLDSPCTL
+     A  12                                  SFLCLR
+     A  70                                  SFLEND
+     A                                      SFLDROP(CF10)
+     A  44                                  SFLMSG('Verarbeitungsart ungültig')
+     A            XXFMT         10A  H
+     A            XXVAR         10A  H
+     A            XXPOS          4S 0H
+     A            CSRZE          3S 0H
+     A            CSRSP          3S 0H
+     A            SFLPOS         4S 0H      SFLRCDNBR(*TOP)
+     A                                  1  3'EDI0100'
+     A                                      COLOR(BLU)
+     A                                  1 27'Anzeige der EDI-Aufträge'
+     A                                      DSPATR(HI)
+     A                                      DSPATR(UL)
+     A                                  1 63'Datum:'
+     A                                      COLOR(BLU)
+     A                                  1 70DATE
+     A                                      EDTCDE(Y)
+     A                                      COLOR(BLU)
+     A                                  2 63'Zeit :'
+     A                                      COLOR(BLU)
+     A                                  2 70TIME
+     A                                      COLOR(BLU)
+     A                                  3  3'KundenNr :'
+     A                                      COLOR(BLU)
+     A            SCKDNR    R        B  3 14REFFLD(EDILPF0/EDIL010 WAECOEDI/WAE-
+     A                                      EDIL)
+     A                                      DLTEDT
+     A                                      EDTCDE(4)
+     A                                      DSPATR(UL)
+     A                                      CHECK(RB)
+     A                                      DSPATR(PC)
+     A                                  3 25'Kunden ANR:'
+     A                                      COLOR(BLU)
+     A            SCKANR    R        B  3 37REFFLD(EDIHPF0/EDIH080 WAECOEDI/WAE-
+     A                                      EDIH)
+     A                                      DLTEDT
+     A                                      DSPATR(UL)
+     A                                      CHECK(RB)
+     A                                      DSPATR(PC)
+     A                                  4  3'Status   :'
+     A                                      COLOR(BLU)
+     A            SCSTATUS  R        B  4 14REFFLD(EDILPF0/EDIL320 WAECOEDI/WAE-
+     A                                      EDIL)
+     A                                      DLTEDT
+     A                                      EDTCDE(4)
+     A                                      DSPATR(UL)
+     A                                  4 25'WAECO  ANR:'
+     A                                      COLOR(BLU)
+     A            SCWANR    R        B  4 37REFFLD(EDIHPF0/EDIH380 WAECOEDI/WAE-
+     A                                      EDIH)
+     A                                      DLTEDT
+     A                                      EDTCDE(4)
+     A                                      DSPATR(UL)
+     A                                      CHECK(RB)
+     A                                      DSPATR(PC)
+     A                                  6  3'Auswahl .:'
+     A                                      COLOR(BLU)
+     A                                  6 15'5=Anzeigen'
+     A                                      COLOR(BLU)
+     A                                  8  2'Op KDNR    LIE ARTNR           Men-
+     A                                      ge                   Lieferdatum   -
+     A                                         R ST'
+     A                                      COLOR(BLU)
+     A                                  9  2'-----------------------------------
+     A                                      ------------------------------------
+     A                                      --------'
+     A                                      COLOR(BLU)
+     A                                  6 27'6=Übernahme  7=Sperren'
+     A                                      COLOR(RED)
+     A          R FMT010
+     A*%%TS  SD  20090325  140442  POHL        REL-V5R4M0  5722-WDS
+     A                                      CF03
+     A                                      CF12
+     A                                      CF07
+     A                                      CF06
+     A                                  1 33'Auftragsanzeige'
+     A                                      DSPATR(HI)
+     A                                      DSPATR(UL)
+     A                                  2  2'Kopfdaten'
+     A                                      COLOR(BLU)
+     A                                  3  3'KDNR        :'
+     A                                      COLOR(BLU)
+     A            EDIH010   R        O  3 17REFFLD(EDIHPF0/EDIH010 *LIBL/WAEEDI-
+     A                                      H)
+     A                                  3 49'Kunden ANR :'
+     A                                      COLOR(BLU)
+     A            EDIH040   R        O  3 62REFFLD(EDIHPF0/EDIH040 *LIBL/WAEEDI-
+     A                                      H)
+     A            EDIH050   R        O  3 66REFFLD(EDIHPF0/EDIH050 *LIBL/WAEEDI-
+     A                                      H)
+     A                                  4  3'Versanddaten:'
+     A                                      COLOR(BLU)
+     A            EDIH210   R        O  4 17REFFLD(EDIHPF0/EDIH210 *LIBL/WAEEDI-
+     A                                      H)
+     A                                  4 49'WAECO ANR  :'
+     A                                      COLOR(BLU)
+     A            EDIH380   R        O  4 62REFFLD(EDIHPF0/EDIH380 *LIBL/WAEEDI-
+     A                                      H)
+     A            EDIH220   R        O  5 17REFFLD(EDIHPF0/EDIH220 *LIBL/WAEEDI-
+     A                                      H)
+     A            EDIH230   R        O  6 17REFFLD(EDIHPF0/EDIH230 *LIBL/WAEEDI-
+     A                                      H)
+     A                                  6 49'Lieferdatum:'
+     A                                      COLOR(BLU)
+     A            EDIH060   R        O  6 62REFFLD(EDIHPF0/EDIH060 *LIBL/WAEEDI-
+     A                                      H)
+     A                                  7  3'Land        :'
+     A                                      COLOR(BLU)
+     A            EDIH250   R        O  7 17REFFLD(EDIHPF0/EDIH250 *LIBL/WAEEDI-
+     A                                      H)
+     A                                  7 49'Teilliefrng:'
+     A                                      COLOR(BLU)
+     A            EDIH340   R        O  7 62REFFLD(EDIHPF0/EDIH340 *LIBL/WAEEDI-
+     A                                      H)
+     A                                  8  3'Postleitzahl:'
+     A                                      COLOR(BLU)
+     A            EDIH260   R        O  8 17REFFLD(EDIHPF0/EDIH260 *LIBL/WAEEDI-
+     A                                      H)
+     A                                  9  3'Ort         :'
+     A                                      COLOR(BLU)
+     A            EDIH270   R        O  9 17REFFLD(EDIHPF0/EDIH270 *LIBL/WAEEDI-
+     A                                      H)
+     A                                 11  2'-----------------------------------
+     A                                      ------------------------------------
+     A                                      ---------'
+     A                                      COLOR(BLU)
+     A                                 13  2'Positionsdaten'
+     A                                      COLOR(BLU)
+     A                                 14  3'Lieferant   :'
+     A                                      COLOR(BLU)
+     A            EDIL210   R        O 14 17REFFLD(EDILPF0/EDIL210 *LIBL/WAEEDI-
+     A                                      L)
+     A                                 14 49'WAECO ANR  :'
+     A                                      COLOR(BLU)
+     A                                 15  3'Artikel-Nr. :'
+     A                                      COLOR(BLU)
+     A            EDIL220   R        O 15 17REFFLD(EDILPF0/EDIL220 *LIBL/WAEEDI-
+     A                                      L)
+     A                                 15 49'WAECO APOS :'
+     A                                      COLOR(BLU)
+     A                                 16  3'Menge       :'
+     A                                      COLOR(BLU)
+     A            EDIL240   R        O 16 17REFFLD(EDILPF0/EDIL240 *LIBL/WAEEDI-
+     A                                      L)
+     A                                 16 49'Bediener   :'
+     A                                      COLOR(BLU)
+     A                                 17  3'Lieferdatum :'
+     A                                      COLOR(BLU)
+     A            EDIL060   R        O 17 17REFFLD(EDILPF0/EDIL060 *LIBL/WAEEDI-
+     A                                      L)
+     A                                 18  3'RückstellKZ :'
+     A                                      COLOR(BLU)
+     A            EDIL250   R        O 18 17REFFLD(EDILPF0/EDIL250 *LIBL/WAEEDI-
+     A                                      L)
+     A                                 19  3'Status      :'
+     A                                      COLOR(BLU)
+     A            EDIL320   R        O 19 17REFFLD(EDILPF0/EDIL320 *LIBL/WAEEDI-
+     A                                      L)
+     A                                 22  2'-----------------------------------
+     A                                      ------------------------------------
+     A                                      ---------'
+     A                                      COLOR(BLU)
+     A                                 23  2'F3/F12=Verlassen  F6=Übernahme  F7-
+     A                                      =Sperren   Bild auf/ab=Blättern    -
+     A                                               '
+     A                                      COLOR(BLU)
+     A                                 24 43'(c) WAECO, Emsdetten 2009'
+     A                                      DSPATR(HI)
+     A            EDIL330   R        O 16 62REFFLD(EDILPF0/EDIL330 *LIBL/WAEEDI-
+     A                                      L)
+     A            EDIL340   R        O 14 62REFFLD(EDILPF0/EDIL340 *LIBL/WAEEDI-
+     A                                      L)
+     A            EDIL350   R        O 15 62REFFLD(EDILPF0/EDIL350 *LIBL/WAEEDI-
+     A                                      L)

@@ -1,0 +1,12 @@
+      * Physische Datei: IFAK
+      * ANLEGEDATUM: OKTOBER 2010
+      *SORT:        FIRMEN#, AUFTRAG# DES KUNDEN
+      * ÄNDERUNGEN:
+      * AUSSCHLUSS:  ...
+     A
+     A                                      UNIQUE
+     A          R IFAK1                     PFILE(IFAK)
+     A
+     A                                      TEXT('KOPFSÄTZE')
+     A          K IFAKIFFI
+     A          K IFAKIFNR

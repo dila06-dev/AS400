@@ -1,0 +1,32 @@
+     A**************************************************************************
+     A*  Copyright 2011 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Absatz-Plan Erhöhungstabelle                                          *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: MG 15.08.2011 Projekt 7668, Planungssystem                  *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(WAOK)
+     A          R KYWAOK1
+     A*-------------------------------------------------------------------------
+     A            KYWAOKFIRMR               REFFLD(WAOKFIRM)
+     A            KYWAOKKSTCR               REFFLD(WAOKKSTC)
+     A            KYWAOKKDGRR               REFFLD(WAOKKDGR)
+     A            KYWAOKKDPLR               REFFLD(WAOKKDPL)
+     A            KYWAOKKDNRR               REFFLD(WAOKKDNR)
+     A            KYWAOKLDNRR               REFFLD(WAOKLDNR)
+     A            KYWAOKPRGRR               REFFLD(WAOKPRGR)
+     A            KYWAOKJAHRR               REFFLD(WAOKJAHR)
+     A            K$WAOKFREI    30
+     A            K#WAOKLOCKR               REFFLD(WAOKLOCK)
+     A            K#WAOKFIRMR               REFFLD(WAOKFIRM)
+     A            K#WAOKKSTCR               REFFLD(WAOKKSTC)
+     A            K#WAOKKDGRR               REFFLD(WAOKKDGR)
+     A            K#WAOKKDPLR               REFFLD(WAOKKDPL)
+     A            K#WAOKKDNRR               REFFLD(WAOKKDNR)
+     A            K#WAOKLDNRR               REFFLD(WAOKLDNR)
+     A            K#WAOKPRGRR               REFFLD(WAOKPRGR)
+     A            K#WAOKJAHRR               REFFLD(WAOKJAHR)

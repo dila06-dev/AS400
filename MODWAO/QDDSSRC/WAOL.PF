@@ -1,0 +1,39 @@
+     A**************************************************************************
+     A*  Copyright 2011 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Absatz/Umsatz-Statistik                                               *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: MG 24.08.2011 Projekt 7668, Planungssystem                  *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R WAOL1
+     A*-------------------------------------------------------------------------
+     A            WAOLLOCK  R               REFFLD(##LOCK)
+     A            WAOLJNAM  R               REFFLD(##JNAM)
+     A            WAOLJDAT  R               REFFLD(##JDAT)
+     A            WAOLJZEI  R               REFFLD(##JZEI)
+     A            WAOLUSER  R               REFFLD(##USER)
+     A            WAOLPROG  R               REFFLD(##PROG)
+     A            WAOLBIBL  R               REFFLD(##BIBL)
+     A            WAOLFIRM  R               REFFLD(##FIRM)
+     A            WAOLPLAT  R               REFFLD(##PLAT)
+     A            WAOLWKNR  R               REFFLD(##WKNR)
+     A            WAOLKSTC  R               REFFLD(##KSTC)
+     A            WAOLKDGR  R               REFFLD(##KDGR)
+     A            WAOLKDPL  R               REFFLD(KDEW1/KDEWKDPL *LIBL/KDEW)
+     A            WAOLKDNR  R               REFFLD(##KDNR)
+     A            WAOLPRGR  R               REFFLD(##PRGR)
+     A            WAOLJAHR  R               REFFLD(##JAHR)
+     A            WAOLMONA  R               REFFLD(##MONA)
+     A            WAOLPLMG  R               REFFLD(##PLMG)
+     A            WAOLPLPR  R               REFFLD(##PLPR)
+     A            WAOLPDIM  R               REFFLD(##PDIM)
+     A            WAOLPLUM  R               REFFLD(##PLUM)
+     A            WAOLWACD  R               REFFLD(##WACD)
+     A            WAOLPLKZ       1A         TEXT('Planungskz')
+     A                                      COLHDG('Planungskz')
+     A            WAOLFREI  R  100          REFFLD(##FREI)

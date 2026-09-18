@@ -1,0 +1,46 @@
+     A**************************************************************************
+     A*  Copyright 2016 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------- *
+     A*  Kommunikationsbereich Ausnahmen von der STK3-Preisprüfung             *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: PH 29.01.2016 DOMETIC Projekt 11363                         *
+     A*  Änderung: XX XX.XX.XXXX                                               *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R EXWA121
+     A*-------------------------------------------------------------------------
+     A* Programmstatus
+     A*-------------------------------------------------------------------------
+     A            EXWA12PGSTR               REFFLD(##PGST)
+     A            EXWA12PROGR               REFFLD(##PROG)
+     A            EXWA12FLDNR               REFFLD(##FLDN)
+     A*-------------------------------------------------------------------------
+     A* ON/OFF KZ für Prüfungen
+     A*-------------------------------------------------------------------------
+     A            EXWA12IFKZR               REFFLD(##IFKZ)
+     A            EXWA12FR01R               REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* Key-Felder
+     A*-------------------------------------------------------------------------
+     A            EXWA12AFATR               REFFLD(WA121/WA12AFAT *LIBL/WA12)
+     A            EXWA12KDNRR               REFFLD(WA121/WA12KDNR *LIBL/WA12)
+     A            EXWA12PRGRR               REFFLD(WA121/WA12PRGR *LIBL/WA12)
+     A            EXWA12TENRR               REFFLD(WA121/WA12TENR *LIBL/WA12)
+     A            EXWA12FR02R  256          REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* Kopier-Begriff NACH
+     A*-------------------------------------------------------------------------
+     A            EXWA12NAFAR               REFFLD(WA121/WA12AFAT *LIBL/WA12)
+     A            EXWA12NKDNR               REFFLD(WA121/WA12KDNR *LIBL/WA12)
+     A            EXWA12NPRGR               REFFLD(WA121/WA12PRGR *LIBL/WA12)
+     A            EXWA12NTENR               REFFLD(WA121/WA12TENR *LIBL/WA12)
+     A            EXWA12FR03R  256          REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* evt. weitere Felder für Update oder Prüfungen
+     A*-------------------------------------------------------------------------
+     A            EXWA12TSTPR               REFFLD(WA121/WA12TSTP *LIBL/WA12)
+     A            EXWA12ERUSR               REFFLD(WA121/WA12ERUS *LIBL/WA12)
+     A            EXWA12FR04R  365          REFFLD(##FREI)

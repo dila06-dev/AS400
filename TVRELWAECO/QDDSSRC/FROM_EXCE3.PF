@@ -1,0 +1,23 @@
+     A*
+     A*         DATUM IMMER TT.MM.JJJJ
+     A*         ZEIT  IMMER HH:MM
+     A*
+     A*CPYFRMIMPF FROMFILE(TVRELWAECO/FROM_EXCEX)
+     A*              TOFILE(TVRELWAECO/FROM_EXCE3)
+     A*               MBROPT(*REPLACE) FLDDLM(';')
+     A*                        RPLNULLVAL(*FLDDFT)
+     A*
+     A*
+     A*
+     A          R INPUT                     TEXT('INPUT')
+     A*****************************************************************
+     A            I01          060A         COLHDG('I01  ')
+     A            I02          060A         COLHDG('I02  ')
+     A            I03          060A         COLHDG('I03  ')
+     A            I04          060A         COLHDG('I04  ')
+     A            I05          060A         COLHDG('I05  ')
+     A            I06          060A         COLHDG('I06  ')
+     A            I07          060A         COLHDG('I07  ')
+     A            I08          060A         COLHDG('I08  ')
+     A            I09          060A         COLHDG('I09  ')
+     A            I10          060A         COLHDG('I10  ')

@@ -1,0 +1,19 @@
+     A*
+     A*         DATUM IMMER TT.MM.JJJJ
+     A*         ZEIT  IMMER HH:MM
+     A          R RABATTE_O                 TEXT('____')
+     A*****************************************************************
+     A            MANDANT        3A         COLHDG('MANDANT   ')
+     A            ITEM          15A         COLHDG('ITEM      ')
+     A            INP1           9S 2       COLHDG('INPUT 1   ')
+     A            INP2          20A         COLHDG('INPUT 2   ')
+     A            INP3          20A         COLHDG('INPUT 3   ')
+     A            INP4          20A         COLHDG('INPUT 4   ')
+     A*****************************************************************
+     A            H1            10A         TEXT('status')
+     A            H2              L         TEXT('Date of transmissing')
+     A            H3              Z         TEXT('TIMESTAMP')
+     A            H4           256A         TEXT('statusII')
+     A            H5              L         TEXT('Date of UPLOAD      ')
+     A            H6              Z         TEXT('TIMESTAMP OF UPLOAD')
+     A

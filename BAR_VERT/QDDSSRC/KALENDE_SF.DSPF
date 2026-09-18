@@ -1,0 +1,118 @@
+     A*%%TS  SD  20140414  173725  SCHNEIDE    REL-V6R1M0  5761-WDS
+     A*%%EC
+     A                                      DSPSIZ(24 80 *DS3)
+     A                                      REF(BAR_VERT/KALENDER KALPF)
+     A                                      CA03(03)
+     A                                      CA05(05)
+     A                                      CA06(06)
+     A                                      CA07(07)
+     A          R KALEND2SF                 SFL
+     A*%%TS  SD  20140414  173725  SCHNEIDE    REL-V6R1M0  5761-WDS
+     A            KALDAT1   R        O  5  3REFFLD(KALDAT1)
+     A                                      EDTCDE(W)
+     A                                  5 14'|'
+     A            KALWOTAG  R        O  5 16
+     A                                  5 19'|'
+     A            KALRGZEIT R        O  5 21REFFLD(KALRGZEIT)
+     A                                  5 28'|'
+     A            KALRGZEITE     6A  O  5 30
+     A                                  5 37'|'
+     A            KALRGZEITI     6A  O  5 39
+     A                                  5 46'|'
+     A            KALBANDI  R        O  5 48
+     A                                  5 53'|'
+     A                                      COLOR(WHT)
+     A                                  5 63'|'
+     A            KALBANDS       7A  O  5 57
+     A            KALSICH        2A  O  5 67TEXT('Sicherungsparameter')
+     A                                  5 70'|'
+     A                                      COLOR(WHT)
+     A            KALRGPARA R        O  5 72COLOR(YLW)
+     A                                  5 75'|'
+     A                                      COLOR(WHT)
+     A            KALFIRMS       2A  O  5 77
+     A                                  5 80'|'
+     A                                      COLOR(WHT)
+     A                                  5 65'|'
+     A                                  5 55'|'
+     A          R KALEND2CTL                SFLCTL(KALEND2SF)
+     A*%%TS  SD  20140414  172014  SCHNEIDE    REL-V6R1M0  5761-WDS
+     A                                      SFLSIZ(0032)
+     A                                      SFLPAG(0016)
+     A  90                                  SFLDSPCTL
+     A  92                                  SFLDSP
+     A  91                                  SFLCLR
+     A                                      OVERLAY
+     A                                  1  3DATE
+     A                                      EDTCDE(Y)
+     A                                      COLOR(TRQ)
+     A                                  1 25'SICHERUNGS/FAKTURA-KALENDER'
+     A                                      DSPATR(UL)
+     A                                      COLOR(WHT)
+     A                                  1 54'Firma:'
+     A                                      DSPATR(UL)
+     A                                      COLOR(WHT)
+     A            KALFIRMS       2   O  1 62DSPATR(UL)
+     A                                      COLOR(YLW)
+     A                                  1 70USER
+     A                                      COLOR(TRQ)
+     A                                  2 54'Land: '
+     A                                      DSPATR(UL)
+     A                                      COLOR(WHT)
+     A            KALLOKS        3A  O  2 62DSPATR(UL)
+     A                                      COLOR(YLW)
+     A                                  2 70SYSNAME
+     A                                      COLOR(TRQ)
+     A                                  3  3'Datum: '
+     A                                      COLOR(WHT)
+     A                                      DSPATR(UL)
+     A                                  3 15'Tag'
+     A                                      COLOR(WHT)
+     A                                      DSPATR(UL)
+     A                                  3 19'|'
+     A                                      COLOR(WHT)
+     A            TIMEWOV        4A  O  3 22COLOR(WHT)
+     A                                      DSPATR(UL)
+     A                                  3 28'|'
+     A                                      COLOR(WHT)
+     A            TIMEEXV        4A  O  3 31DSPATR(UL)
+     A                                      COLOR(WHT)
+     A                                  3 37'|'
+     A                                      COLOR(WHT)
+     A            TIMEINV        4A  O  3 40COLOR(WHT)
+     A                                      DSPATR(UL)
+     A                                  3 46'|'
+     A                                      COLOR(WHT)
+     A                                  3 48'Band-'
+     A                                      COLOR(WHT)
+     A                                  3 55'|'
+     A                                      COLOR(WHT)
+     A                                  3 57'Band-'
+     A                                      COLOR(WHT)
+     A                                  3 65'|'
+     A                                      COLOR(WHT)
+     A                                  3 72'RG'
+     A                                      COLOR(WHT)
+     A                                      DSPATR(UL)
+     A                                  3 70'|'
+     A                                      COLOR(WHT)
+     A                                  3 75'|'
+     A                                      COLOR(WHT)
+     A                                  3 80'|'
+     A                                      COLOR(WHT)
+     A                                  4  4'          |    |Zeit-WO |Zeit-Ex |-
+     A                                       Zeit-In| Name   | strg.   | SI | K-
+     A                                      Z | FA |'
+     A                                      COLOR(WHT)
+     A                                      DSPATR(UL)
+     A          R KEYS
+     A*%%TS  SD  20111010  174620  SCHNEIDE    REL-V6R1M0  5761-WDS
+     A                                      OVERLAY
+     A                                 23  5'F3=Verlassen'
+     A                                      COLOR(BLU)
+     A                                 23 19'F5=Sortierung Datum '
+     A                                      COLOR(BLU)
+     A                                 23 41'F6=Sortierung RG '
+     A                                      COLOR(BLU)
+     A                                 23 59'F7=Sortierung Tag     '
+     A                                      COLOR(BLU)

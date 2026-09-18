@@ -1,0 +1,24 @@
+     A*
+     A*         DATUM IMMER TT.MM.JJJJ
+     A*         ZEIT  IMMER HH:MM
+     A*
+     A          R SIEVDSPMR                 TEXT('    ')
+     A*****************************************************************
+     A            DCC            6A         COLHDG('DCC')
+     A            SUPPLIER      10A         COLHDG('SUPPLIER')
+     A            SUPPLNAME    100A         COLHDG('SUPPLNAME PE')
+     A            PUNUMBE       10A         COLHDG('PUNUMBE')
+     A            LINE           4A         COLHDG('LINE')
+     A            STATUSORD     10A         COLHDG('STATUSORD')
+     A            ITEM          20A         COLHDG('ITEM')
+     A            ITEMDESC      60A         COLHDG('ITEMDESC')
+     A            REQUESTED      8S 0       COLHDG('REQUESTED')
+     A            CONFIRMED      8S 0       COLHDG('CONFIRMED')
+     A            QREQUESTED    11S 0       COLHDG('QREQUESTED')
+     A            QCONFIRMED    11S 0       COLHDG('QCONFIRMED')
+     A            UNITITEM       3A         COLHDG('UNITITEM')
+     A            IDCO           5A         COLHDG('IDCO')
+     A            INCOTERMS      3A         COLHDG('INCOTERMS')
+     A            INTDCC         6A         COLHDG('INTDCC')
+     A            STATUS         2A         COLHDG('STATUS')
+     A            TSTAMP          Z         TEXT('TITSTAMP')

@@ -1,0 +1,54 @@
+     I* INFORMATIONSDATENSTRUKTUR BILDSCHIRMDATEI
+     I              X'31'                 C         BT01
+     I              X'32'                 C         BT02
+     I              X'33'                 C         BT03
+     I              X'34'                 C         BT04
+     I              X'35'                 C         BT05
+     I              X'36'                 C         BT06
+     I              X'37'                 C         BT07
+     I              X'38'                 C         BT08
+     I              X'39'                 C         BT09
+     I              X'3A'                 C         BT10
+     I              X'3B'                 C         BT11
+     I              X'3C'                 C         BT12
+     I              X'B1'                 C         BT13
+     I              X'B2'                 C         BT14
+     I              X'B3'                 C         BT15
+     I              X'B4'                 C         BT16
+     I              X'B5'                 C         BT17
+     I              X'B6'                 C         BT18
+     I              X'B7'                 C         BT19
+     I              X'B8'                 C         BT20
+     I              X'B9'                 C         BT21
+     I              X'BA'                 C         BT22
+     I              X'BB'                 C         BT23
+     I              X'BC'                 C         BT24
+     I              X'BD'                 C         FCLEAR
+     I              X'F1'                 C         FENTER
+     I              X'F3'                 C         FHELP
+     I              X'F4'                 C         FAUF
+     I              X'F5'                 C         FUNTEN
+     I              X'F6'                 C         FPRINT
+     I              X'F8'                 C         FRCDBK
+     I              X'3F'                 C         FAUTEN
+     IDSDSPF      DS
+     I                                      369 369 §§§CFK
+     I                                      370 371 §§§CLC
+     I                                      370 370 §§§L
+     I                                      371 371 §§§C
+     I                                    B 372 3750§§§DLA
+     I                                    B 374 3750§§§SFP
+     I                                    B 376 3770§§§SFL
+     I                                    B 378 3790§§§SFR
+     I                                      380 381 §§§CLW
+     I                                      380 380 §§§LW
+     I                                      381 381 §§§CW
+     ICURNUM      DS
+     I                                        1   20§§CLIN
+     I                                        3   50§§CCOL
+     I                                        6   7 §§CPOS
+     I            DS
+     I                                    B   1   20§§§LIN
+     I                                        2   2 §§§B
+     I                                    B   3   40§§§COL
+     I                                        4   4 §§§D

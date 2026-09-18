@@ -1,0 +1,9 @@
+     A*********                             UNIQUE
+     A          R PRJ994F                   TEXT('STEUERUNGSDATEI')
+     A            USR           10A         COLHDG('USER             ')
+     A            BSTNUM        10S 0       COLHDG('BESTELL#         ')
+     A            ZEILE         10S 0       COLHDG('ZEILE            ')
+     A            TXT          512A         COLHDG('TEXT             ')
+     A          K USR
+     A          K BSTNUM
+     A          K ZEILE

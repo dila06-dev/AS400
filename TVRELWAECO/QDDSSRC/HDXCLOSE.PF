@@ -1,0 +1,13 @@
+     A*
+     A*         DATUM IMMER TT.MM.JJJJ
+     A*         ZEIT  IMMER HH:MM
+     A*           ORDANLORT     = EMSDETTEN
+     A          R HDXCLOSE                  TEXT('HDXCLOSE')
+     A*****************************************************************
+     A            H050          10A         COLHDG('LIEFERSCHEIN#')
+     A            H030           7S 0       TEXT('KUNDEN##')
+     A            TRANSFER        L         TEXT('DATE OF TRANSMISSING')
+     A            BUCHUNG         L         TEXT('DATE OF TRANSMISSING')
+     A************************** **************************************
+     A            H370            Z         TEXT('TIMESTAMP')
+     A*           L050          05S 0       COLHDG('LINE#')

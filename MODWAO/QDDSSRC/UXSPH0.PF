@@ -1,0 +1,15 @@
+     A**************************************************************************
+     A*  Copyright 2012 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Schnittstelle BRT Italien                                             *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: PH 20.12 2012 Projekt 9128                                  *
+     A*  Änderung: XX XX.XX.XXXX                                               *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R UXSPH01
+     A*
+     A            UXSPH0B020R               REFFLD(SPEDH01/BRT020 *LIBL/SPEDH0)

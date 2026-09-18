@@ -1,0 +1,7 @@
+     A          R SALESCOMP                 TEXT('SALES COMPANIES    ')
+     A*****************************************************************
+     A            SALES#         6A         COLHDG('#                   ')
+     A            SALESNAME     50A         COLHDG('NAME             ')
+     A            EMAIL        252A         COLHDG('EMAILD              ')
+     A
+     A          K SALES#

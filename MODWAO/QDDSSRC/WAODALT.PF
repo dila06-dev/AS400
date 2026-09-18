@@ -1,0 +1,62 @@
+     A**************************************************************************
+     A*  Copyright 2009 by    trend SWM                                        *
+     A*                       Verwaltungs GmbH                                 *
+     A*                       Ziegelhofstraße 210a                             *
+     A*                       DE 79110 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Margenmatrix                                                          *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: HR 03.02.2011 Projekt 7120 für Kunde Dometec                *
+     A*  Änderung: XX XX.XX.XXXX                                               *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R WAOD1
+     A*-------------------------------------------------------------------------
+     A            WAODLOCK  R               REFFLD(##LOCK)
+     A            WAODJNAM  R               REFFLD(##JNAM)
+     A            WAODJDAT  R               REFFLD(##JDAT)
+     A            WAODJZEI  R               REFFLD(##JZEI)
+     A            WAODUSER  R               REFFLD(##USER)
+     A            WAODPROG  R               REFFLD(##PROG)
+     A            WAODBIBL  R               REFFLD(##BIBL)
+     A*
+     A            WAODFIRM  R               REFFLD(##FIRM)
+     A            WAODRSBE  R               REFFLD(##RSBEKVKK)
+     A            WAODRICS  R               REFFLD(##RBFK)
+     A                                      TEXT('RB-Faktor ICS')
+     A                                      COLHDG('RB-Faktor ICS')
+     A            WAODRICN  R               REFFLD(##RBFK)
+     A                                      TEXT('RB-Faktor ICN')
+     A                                      COLHDG('RB-Faktor ICN')
+     A            WAODREXS  R               REFFLD(##RBFK)
+     A                                      TEXT('RB-Faktor EXS')
+     A                                      COLHDG('RB-Faktor EXS')
+     A            WAODREXN  R               REFFLD(##RBFK)
+     A                                      TEXT('RB-Faktor EXN')
+     A                                      COLHDG('RB-Faktor EXN')
+     A            WAODROEM  R               REFFLD(##RBFK)
+     A                                      TEXT('RB-Faktor OEM')
+     A                                      COLHDG('RB-Faktor OEM')
+     A            WAODGHNT  R               REFFLD(##RBFK)
+     A                                      TEXT('RB-Faktor GHnetto')
+     A                                      COLHDG('RB-Faktor GHnetto')
+     A            WAODGHRB  R               REFFLD(##RBFK)
+     A                                      TEXT('RB-Faktor GH Rabatt')
+     A                                      COLHDG('RB-Faktor GH Rabatt')
+     A            WAODICSE  R               REFFLD(##RBFK)
+     A                                      TEXT('RB-Faktor ICS EMEA')
+     A                                      COLHDG('RB-Faktor ICS EMEA')
+     A            WAODICSA  R               REFFLD(##RBFK)
+     A                                      TEXT('RB-Faktor ICS APAC')
+     A                                      COLHDG('RB-Faktor ICS APAC')
+     A            WAODICSU  R               REFFLD(##RBFK)
+     A                                      TEXT('RB-Faktor ICS US')
+     A                                      COLHDG('RB-Faktor ICS US')
+     A            WAODICSN  R               REFFLD(##RBFK)
+     A                                      TEXT('RB-Faktor ICS NL')
+     A                                      COLHDG('RB-Faktor ICS NL')
+     A            WAODVPAB  R               REFFLD(##RBFK)
+     A                                      TEXT('EVP-ABSCHLAG EMEA')
+     A                                      COLHDG('EVP-ABSCHLAG EMEA')
+     A            WAODFREI  R   75          REFFLD(##FREI)

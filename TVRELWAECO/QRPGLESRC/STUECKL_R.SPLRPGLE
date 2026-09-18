@@ -1,0 +1,527 @@
+
+      //************************************************************************
+      //
+      //      Programmname       Stueckl_r
+      //      Erstellt  am       30.06.2016
+      //      Erstellt von       M.Gang
+      //
+      //      Beschreibung       ...
+      //
+      // ----------------------------------+------------------------------------
+      // Geändert am Kürzel Name           ! Anfo-Nr. (Zeile 1) + Beschreibung
+      // ----------------------------------+------------------------------------
+      //                                   !
+      //  tt.mm.jjjj  xx01  .............. !
+      //                                   !
+      //************************************************************************
+      // Übersetzungshinweise:
+      //
+      //
+      //
+      //
+      //
+      // Referenzsatz
+      //
+      //************************************************************************
+
+      //------------------------------------------------------------------------
+      //    S T E U E R - B E S T I M M U N G E N
+      //------------------------------------------------------------------------
+     h datfmt(*EUR)
+     h datedit(*DMY.)
+     h timfmt(*HMS:)
+     h decedit('0,')
+     h langid('DE')
+     h option(*SRCSTMT:*NoDebugIO)
+     h dftactgrp(*NO) actgrp(*CALLER)
+
+      //------------------------------------------------------------------------
+      //    D A T E I - D E F I N I T I O N E N
+      //------------------------------------------------------------------------
+
+
+      //------------------------------------------------------------------------
+      //    D A T E N S T R U K T U R E N
+      //------------------------------------------------------------------------
+
+      // System-Datenstruktur
+
+      // dsSystem       sds
+      //  aThisProgramm          1     10
+      //  aThisWorkStn         244    253
+      //  aThisUser            254    263
+     d DSPGM          SDS
+     d  §§§PGM                 1     10
+     d  §§§STS                11     15
+     d  §§§SEQ                21     28
+     d  §§§SR                 29     36
+     d  §§§MSG                40     46
+     d  §§§LIB                81     90
+     d  §§§MTX                91    170
+     d  §§§FIL               201    208
+     d  §§§FST               209    243
+     d  §§§JOB               244    253
+     d  §§§USR               254    263
+     d  §§§JNO               264    269  0
+     d  §§§SDT               276    281  0
+     d  §§§STM               282    287  0
+
+
+     D MD#2            S              1    DIM(512)
+     D ATR             S              1    DIM(63)
+     D ATTS            S              1    DIM(1)
+     D ATTK            S              1    DIM(1)
+     D ATTO            S              1    DIM(1)
+     D KEY             S              2    DIM(24)
+     D FKTTST          S              1    DIM(6)
+
+       // ______________________________________________________________________
+       // qmhsndpm
+       // ______________________________________________________________________
+     D QMHSNDPM        PR                  ExtPgm('QMHSNDPM')
+     D   MessageID                    7A   Const
+     D   QualMsgF                    20A   Const
+     D   MsgData                    256A   Const
+     D   MsgDtaLen                   10I 0 Const
+     D   MsgType                     10A   Const
+     D   CallStkEnt                  10A   Const
+     D   CallStkCnt                  10I 0 Const
+     D   MessageKey                   4A
+     D   ErrorCode                    1A
+
+       // ______________________________________________________________________
+       // dummy512
+       // ______________________________________________________________________
+     D DUMMY512        PR                  ExtPgm('DUMMY512')
+       //p_md                         001a   DIM(256)
+     D p_md                         256a
+     D p_MSG                          7a
+     D p_MSGF                        10a
+     D p_PRINT                       10a
+     D p_OUTFIL                      10a
+     D p_LIB                         10a
+     D P_REPADD                      10a
+
+       // ______________________________________________________________________
+       // STR_STUECK Stücklistenaufruf
+       // ______________________________________________________________________
+     d TRDV00ST        PR                  ExtPgm('TRDV00ST')
+     D p_pgm                         10a
+       // ______________________________________________________________________
+       // ______________________________________________________________________
+       // STR_STUECK Stücklistenaufruf
+       // ______________________________________________________________________
+     d STR_STUECK      PR                  ExtPgm('STR_STUECK')
+       // ______________________________________________________________________
+       // define data areas
+       // ______________________________________________________________________
+     D #swapc          s             08a   dtaara
+     D JOB_R_run       s             01a   dtaara
+
+       //           ... Grunddaten
+      //------------------------------------------------------------------------
+      //------------------------------------------------------------------------
+      //    V A R I A B L E N
+      //------------------------------------------------------------------------
+
+      // qcmdexc
+      //------------------------------------------------------------------------
+     D Wrk             DS                  Qualified inz
+     D Var1                         460A   inz(' ')
+     D L               s              9  0
+     D
+     D QCMDEXC         PR                  ExtPgm('QCMDEXC')
+     D cmd                        32702A   const options(*varsize)
+     D len                           15P 5 const
+
+     D cmd             s            460A   varying
+
+      // dummy512
+      //------------------------------------------------------------------------
+      // p_md            s            001a   inz
+      //                                     dim(256)
+     D p_md            s            256a   inz
+     D p_MSG           s              7a   inz
+     D p_MSGF          s             10a   inz
+     D p_PRINT         s             10a   inz
+     D p_OUTFIL        s             10a   inz
+     D p_LIB           s             10a   inz
+     D P_REPADD        s             10a   inz
+
+     D §records        s              9s 0 inz
+
+      // qmhsndpm
+      // ______________________________________________________________________
+     D MessageID       s              7A   inz
+     D QualMsgF        s             20A   inz
+     D MsgData         s            256A   inz
+     D MsgDtaLen       s             10I 0 inz
+     D MsgType         s             10A   inz
+
+
+      // internal
+      // ______________________________________________________________________
+     D status          s            132A   inz
+     D err_msg         s              1a   inz
+     D #error          s              1a   inz
+     D #openquan       s             13s 4 inz
+     D #division       s             10a   inz
+     D #expected       s             13s 4 inz
+     D #run            s              1a   inz
+     D #dirmail        s              1a   inz
+     D checkd          s              8s 0 inz
+     D checkx          s              8s 0 inz
+     D p               s             15p 0
+     D p_pgm           s             10a   inz
+
+     D suffix          s              6A   inz
+     D transfer        s             30A   inz
+     D string_file     s             60A   inz
+     d NumSysTime      s              6s 0
+     d myDate          s               d
+     d tomorrow        s               d
+     d twechsel        s               d
+     d days            s              2s 0
+     d months          s              2s 0
+     d years           s              4s 0
+     d tommonths       s              2s 0
+     d eofyear         s              8s 0
+     d nowdate         s              8s 0
+     Dweek             s              1s 0
+     DGoodDateV        S              1a
+     DGoodDateB        S              1a
+     Derror1           s              1a   inz
+     Derror2           s              1a   inz
+     Derror3           s              1a   inz
+     Derror4           s              1a   inz
+     Derror5           s              1a   inz
+     D#ERRORS          s             60a
+     DDate_in_V        S               D   DATFMT(*iso)
+     DDate_in_B        S               D   DATFMT(*iso)
+     D p_inFIL         s             24a
+
+     D §search         s              1a   inz
+     D §string         s            100a   inz
+     D §replace        s              1a   inz
+     D §pos            s              3s 0 inz
+
+      // Überschreibungen
+      // ______________________________________________________________________
+      /eject
+      //************************************************************************
+      //          -----------------
+      //          M A I N - L I N E
+      //          -----------------
+      //************************************************************************
+
+
+      /FREE
+
+       §records=*zero;
+       exec sql
+          select count(*) into :§records
+                 FROM  bar_kalk/SLAZS;
+
+       eval status ='Start STUECKL_R               ' + %char(§records);
+       exsr      SR_log;
+
+
+       exsr  srinit;
+       exsr  sr_stueckl;
+
+       err_msg   = '0';
+
+       if §records <> *zero;
+       endif;
+
+       // ______________________________________________________________________
+
+       if error1 =  '0';
+       //liblist
+          MONITOR;
+             Wrk.var1 =
+                 'RMVLIBLE LIB(GANG)';
+             cmd = %TrimR(Wrk.Var1);
+             L      = %Len(Cmd);
+             QCMDEXC(cmd: %len(cmd));
+                error1 ='0';
+             on-error;
+                status='error  RMVLIBLE LIB(GANG)                       ';
+                exsr      SR_log;
+                error1 ='1';
+          endmon;
+       endif;
+
+       if error2 =  '0';
+       //liblist
+          MONITOR;
+             Wrk.var1 =
+                 'RMVLIBLE LIB(BAR_KALK)';
+             cmd = %TrimR(Wrk.Var1);
+             L      = %Len(Cmd);
+             QCMDEXC(cmd: %len(cmd));
+                error1 ='0';
+             on-error;
+                status='error  RMVLIBLE LIB(BAR_KALK)                   ';
+                exsr      SR_log;
+                error1 ='1';
+          endmon;
+       endif;
+
+       eval status ='Ende  STUECKL_R               ' + %char(§records);
+
+       exsr      SR_log;
+
+       *inlr = *on;
+
+      /eject
+       //***********************************************************************
+       //    ---------------------
+       //    S U B R O U T I N E S
+       //    ---------------------
+       //***********************************************************************
+
+
+       //-----------------------------------------------------------------------
+       //
+       //    %dec(Datum:*iso) => JJJJMMTT
+       //    %dec(Datum:*eur) => TTMMJJJJ
+       //    %dec(Datum:*jul) => JJJJTTT
+       //-----------------------------------------------------------------------
+
+       begsr srinit;
+
+       //liblist
+       MONITOR;
+          Wrk.var1 =
+              'ADDLIBLE LIB(GANG) POSITION(*LAST) ';
+          cmd = %TrimR(Wrk.Var1);
+          L      = %Len(Cmd);
+          QCMDEXC(cmd: %len(cmd));
+             error1 ='0';
+          on-error;
+             status='error ADDLIBLE LIB(GANG) POSITION(*LAST)        ';
+             exsr      SR_log;
+             error1 ='1';
+       endmon;
+
+       MONITOR;
+          Wrk.var1 =
+              'ADDLIBLE LIB(BAR_KALK) POSITION(*LAST) ';
+          cmd = %TrimR(Wrk.Var1);
+          L      = %Len(Cmd);
+          QCMDEXC(cmd: %len(cmd));
+             error2 ='0';
+          on-error;
+             status='error ADDLIBLE LIB(BAR_KALK) POSITION(*LAST)    ';
+             exsr      SR_log;
+             error2 ='1';
+       endmon;
+
+       MONITOR;
+       Wrk.var1 =
+           'CLRPFM FILE(bar_kalk/SLAZS)';
+         cmd = %TrimR(Wrk.Var1);
+         L      = %Len(Cmd);
+         QCMDEXC(cmd: %len(cmd));
+          status='CLRPFM successful FILE(bar_kalk/SLAZS)           ';
+          exsr      SR_log;
+       on-error;
+          status='Error by clrpfm object bar_kalk/SLAZS            ';
+          exsr      SR_log;
+       endmon;
+
+       MONITOR;
+       Wrk.var1 =
+           'DLTF FILE(QTEMP/SLAZS)';
+         cmd = %TrimR(Wrk.Var1);
+         L      = %Len(Cmd);
+         QCMDEXC(cmd: %len(cmd));
+          status='successful DLTF FILE(QTEMP/SLAZS)                ';
+       on-error;
+          status='Error by DLTF FILE(QTEMP/SLAZS)                  ';
+       endmon;
+
+       //*************************************************************************************************************
+       err_msg     = '1';
+       NumSysTime = %Dec(%Time(): *ISO);
+       //  If MyNumTime = NumSysTime;
+       //  //2. Convert numeric Time (HHMMSS) into a real time
+       //  RealTime = %Time(MyNumTime: *ISO);
+       //  If RealTime = %Time();
+
+       mydate  = %date();
+       days    = %subdt( %date(): *days );
+       months  = %subdt( %date(): *months );
+       years   = %subdt( %date(): *years );
+       eofyear = years*10000+12*100+31;
+       nowdate = (%dec(%char(%date()- %days(1):*iso0):8:0));
+
+       tomorrow  = %date() +  %days(01);
+       twechsel  = %date() +  %days(01);
+       tommonths = %subdt( %date() + %days(01): *months );
+
+       //      1...
+       exec sql
+         insert into TVRELWAECO/xxxxx
+         SELECT *
+         FROM lbbs WHERE LBBSFIRM = '01';
+
+
+         §records=*zero;
+       exec sql
+         select count(*) into :§records
+                FROM  TVRELWAECO/xxxxx;
+
+       if §records <> *zero;
+       endif;
+
+       exec sql
+         select  dec(DAYOFWEEK_iso(current date ), 1, 0)
+                 into            :week
+                 from   qsys2/qsqptabl;
+
+       err_msg   = '0';
+
+       //sql handling
+         exec sql
+                  whenever not found continue;
+         exec sql
+                  WHENEVER SQLWARNING continue;
+         exec sql
+                  WHENEVER SQLERROR  continue;
+
+       endsr;
+
+       //*************************************************************************
+       //vorher Stücklistenkalkulation
+       //-------------------------------------------------------------------------
+
+       begsr sr_stueckl;
+
+       status=*blank;
+       p_pgm = 'STR_STUECK';
+       callP TRDV00ST  (p_pgm);
+       callP STR_STUECK();
+
+        §records=*zero;
+        exec sql
+           select count(*) into :§records
+                  FROM  bar_kalk/SLAZS;
+       eval status ='check STR_STUECK Ergebnis     ' + %char(§records);
+       exsr      SR_log;
+
+       MONITOR;
+       Wrk.var1 =
+           'DSPJOBLOG OUTPUT(*PRINT)';
+         cmd = %TrimR(Wrk.Var1);
+         L      = %Len(Cmd);
+         QCMDEXC(cmd: %len(cmd));
+          status='successful DSPJOBLOG OUTPUT(*PRINT)              ';
+       on-error;
+          status='Error by DSPJOBLOG OUTPUT(*PRINT)                ';
+       endmon;
+
+       exec sql
+        update  bar_kalk/SLAZS set SLAZJZEI = 010101;
+
+       MONITOR;
+       Wrk.var1 =
+           'CRTDUPOBJ OBJ(SLAZS) FROMLIB(BAR_KALK) OBJTYPE(*FILE)' +
+           ' TOLIB(QTEMP) NEWOBJ(SLAZS) DATA(*NO)';
+         cmd = %TrimR(Wrk.Var1);
+         L      = %Len(Cmd);
+         QCMDEXC(cmd: %len(cmd));
+          status='CRTDUPOBJ successful SLAZS                       ';
+          exsr      SR_log;
+       on-error;
+          status='Error by CRTDUPOBJ for SLAZS                     ';
+          exsr      SR_log;
+       endmon;
+
+       exec sql
+         insert into qtemp/SLAZS
+         SELECT DISTINCT * FROM bar_kalk/SLAZS;
+
+       exec sql
+         delete FROM bar_kalk/SLAZS;
+
+       exec sql
+         insert into bar_kalk/SLAZS
+         select * FROM qtemp/SLAZS;
+
+       //Beistellung
+       exec sql
+         update bar_kalk/SLAZSLF set SLAZAUWT= SLAZEIMG*
+        ( select ek from tvrelwaeco/RPMKALKul
+           where WAOFVEUR=SLAZKOTE )
+         where exists
+        ( select ek from tvrelwaeco/RPMKALKul
+           where WAOFVEUR=SLAZKOTE );
+
+       //exec sql
+       //  update TVRELWAECO/RPMKALKELP   set beistell =
+       // ( select sum(SLAZAUWT) from bar_kalk/SLAZSLF
+       //    where WAOFVEUR=SLAZTENR group by SLAZTENR )
+       //  where exists
+       // ( select sum(SLAZAUWT) from bar_kalk/SLAZSLF
+       //    where WAOFVEUR=SLAZTENR group by SLAZTENR );
+
+       //Initialisieren
+       exec sql
+        update        bar_kalk/SLAZS
+              set SLAZVFBE = 0,00;
+
+       //Protokoll
+       exec sql
+        update        bar_kalk/SLAZS
+              set SLAZFREX = current timestamp;
+
+        §records=*zero;
+        exec sql
+           select count(*) into :§records
+                  FROM  bar_kalk/SLAZS;
+
+       exec sql
+        whenever not found continue;
+       exec sql
+        WHENEVER SQLWARNING CONTINUE;
+       exec sql
+        WHENEVER SQLERROR  CONTINUE;
+
+       endsr;
+
+       //-----------------------------------------------------------------------
+       //log report
+       //-----------------------------------------------------------------------
+
+       begsr sr_log;
+
+         clear p_md;
+       //  %Subarr(p_md:01)  = 'AT_item   ';
+       //  %Subarr(p_md:11:10)  = §§§JOB;
+       //  %Subarr(p_md:22:10)  = §§§USR;
+       //  %Subarr(p_md:33:132) = status;
+         eval p_md      =  §§§PGM         +
+                           §§§JOB         +
+                           §§§USR         +
+                           status;
+
+         eval p_msg     =  '#DC0002';
+         eval p_msgf    =  *blank;
+         eval p_print   =  *blank;
+         eval p_outfil  =  'JOB_RUN   ';
+         eval p_lib     =  'TVRELWAECO';
+         eval p_repadd  =  '*ADD';
+
+         callP DUMMY512(p_md:     p_msg:    p_msgf:     p_print:
+                        p_outfil: p_lib:    p_repadd);
+         clear status;
+
+       //callP     QMHSNDPM('CPF9897': 'QCPFMSG   *LIBL':
+       //            Msg: MsgLen: '*ESCAPE':
+       //            '*': 3: TheKey: dsEC);
+
+       endsr;
+
+

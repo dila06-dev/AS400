@@ -1,0 +1,68 @@
+     * PROGRAMM-STATUS-DATENSTRUKTUR
+     IDSPGM      SDS
+     I                                        1  10 §§§PGM
+     I                                       11  150§§§STS
+     I                                       21  28 §§§SEQ
+     I                                       29  36 §§§SR
+     I                                       40  46 §§§MSG
+     I                                       81  90 §§§LIB
+     I                                       91 170 §§§MTX
+     I                                      201 208 §§§FIL
+     I                                      209 243 §§§FST
+     I                                      244 253 §§§JOB
+     I                                      254 263 §§§USR
+     I                                      264 2690§§§JNO
+     I                                      276 2810§§§SDT
+     I                                      282 2870§§§STM
+     * LOCAL DATA AEREA (LDA)
+     ILDA        UDS
+     I* FREIER PRAGRAMMBEREICH
+     I                                      002 256 LDABER
+     I* AKTIVE PROGRAMME
+     I* DRUCKER-PROGRAMME/STEUERUNGEN FELDER
+     I                                      400 407 DHTSYS
+     I                                      408 415 DHTDOK
+     I                                      416 423 DHTPGM
+     I                                      424 427 DHTVTL
+     I                                      428 433 DHTDAT
+     I                                      434 439 DHTTIM
+     I                                      440 445 DHTPAG
+     I                                      446 446 DHFLIN
+     I                                      447 447 DHELIN
+     I* DRUCKER-ZEILENMAXIMAL-STANDARD/FORM/DEVICE/DEVICE-ÜBER RTVJOB
+     I                                      480 4820DHZL1
+     I                                      507 510 DHFORM
+     I                                      511 512 DHDEV
+     I                                      520 530 DHPRT1
+     I* DATENÜBERGABEBEREICH VON 256BYTES (Z.B. AREA MD)
+     I                                      601 856 DATEN1
+     I* RELATIVE SATZNUMMER BEI Z.B F4 MATCHCODE ODER READ FIRST
+     I                                      875 8890FXRRN
+     I* MESSAGE-FILE
+     I                                      890 899 MSGF
+     I* MENÜ-PROGRAMM
+     I* COMITSTEUERUNG
+     I                                      900 900 E1COM
+     I* DATEIMODIFIZIERUNGEN
+     I                                      902 9130E1CRT
+     I                                      914 9250E1MOD
+     I                                      926 9370E1DLT
+     I* FUNKTIONSTASTERÜCKKEHR
+     I                                      950 951 CTLTST
+     I* CONDECODE
+     I                                      952 953 RC
+     I* PROGRAMM, WELCHE NACHRICHT ERHALTEN SOLL
+     I                                      954 963 MSGPGM
+     I* DATUMSANGABEN
+     I* DATUM UND ZEIT *EUR
+     I                                      975 984 E1DEUR
+     I                                      985 992 E1ZEUR
+     I*
+     I* DATUM 8-STELLIG (FORMAT: LDADTP-HHJJMMTT, LDADTD-TTMMHHJJ)
+     I                                     100910120LDAHJ
+     I                                     100910160LDADTP
+     I                                     100910100LDADTH
+     I                                     101110120LDADTJ
+     I                                     101310140LDADTM
+     I                                     101510160LDADTT
+     I                                     101710240LDADTD

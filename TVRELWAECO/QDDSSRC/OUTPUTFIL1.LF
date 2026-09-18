@@ -1,0 +1,14 @@
+      * Physische Datei: SUNSHINE
+      * ANLEGEDATUM: MAI     2012
+      *SORT:        SALESCOMPANY (88505), ORDER IN AXAPTA, PRIORITY
+      *SELECT:      STATUS (PRESELECTED)
+      * ÄNDERUNGEN:
+      * AUSSCHLUSS:  ...
+     A
+     A*
+     A          R OUTPUTFILE                PFILE(OUTPUTFILE)
+     A
+     A                                      TEXT('_____       ')
+     A          K PGM
+     A          K KUNDEN
+     A          K LFD

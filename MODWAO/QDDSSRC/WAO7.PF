@@ -1,0 +1,27 @@
+     A**************************************************************************
+     A*  Copyright 2010 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Beschreibung                                                          *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: ZG 05.10.2010 Lager-Platz/Typ-Zuordnung (Pick-Liste)        *
+     A*                          Besuch im Emsdetten                           *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R WAO71
+     A*-------------------------------------------------------------------------
+     A            WAO7LOCK  R               REFFLD(##LOCK)
+     A            WAO7JNAM  R               REFFLD(##JNAM)
+     A            WAO7JDAT  R               REFFLD(##JDAT)
+     A            WAO7JZEI  R               REFFLD(##JZEI)
+     A            WAO7USER  R               REFFLD(##USER)
+     A            WAO7PROG  R               REFFLD(##PROG)
+     A            WAO7BIBL  R               REFFLD(##BIBL)
+     A            WAO7FIRM  R               REFFLD(##FIRM)
+     A            WAO7LANR  R               REFFLD(##LANR)
+     A            WAO7LORT  R               REFFLD(##LORT)
+     A            WAO7LPTY  R    1          REFFLD(##LPTY)
+     A            WAO7ERUS  R               REFFLD(##ERUS)
+     A            WAO7FREI  R  100          REFFLD(##FREI)

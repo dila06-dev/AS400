@@ -1,0 +1,26 @@
+     A**************************************************************************
+     A*  Copyright 2014 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Beschreibung                                                          *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: RE 18.11.2014 PROJEKT 11070                                 *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(WAOW)
+     A          R KYWAOW1
+     A*-------------------------------------------------------------------------
+     A            KYWAOWFIRMR               REFFLD(WAOWFIRM)
+     A            KYWAOWRGJJR               REFFLD(WAOWRGJJ)
+     A            KYWAOWRGNRR               REFFLD(WAOWRGNR)
+     A            KYWAOWLIJJR               REFFLD(WAOWLIJJ)
+     A            KYWAOWLINRR               REFFLD(WAOWLINR)
+     A            KWAOW$FREI    30
+     A            K#WAOWLOCKR               REFFLD(WAOWLOCK)
+     A            K#WAOWFIRMR               REFFLD(WAOWFIRM)
+     A            K#WAOWRGJJR               REFFLD(WAOWRGJJ)
+     A            K#WAOWRGNRR               REFFLD(WAOWRGNR)
+     A            K#WAOWLIJJR               REFFLD(WAOWLIJJ)
+     A            K#WAOWLINRR               REFFLD(WAOWLINR)

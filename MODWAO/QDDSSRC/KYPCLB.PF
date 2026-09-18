@@ -1,0 +1,38 @@
+     A*****************************************************************
+     A*  Copyright 1997 by    trend SWM                               *
+     A*                       Verwaltungs-GmbH                        *
+     A*                       Bötzinger Strasse 36                    *
+     A*                       D-79111 Freiburg                        *
+     A*  -----------------------------------------------------------  *
+     A*  Schnittstellendatei für Lagerbewegung                        *
+     A*  -----------------------------------------------------------  *
+     A*  Erstellt: SZ 17.06.1997                                      *
+     A*                                                               *
+     A*****************************************************************
+     A                                      REF(PCLB)
+     A          R KYPCLB1
+     A*
+     A            KYPCLBFIRMR               REFFLD(PCLBFIRM)
+     A            KYPCLBSEDAR               REFFLD(PCLBSEDA)
+     A            KYPCLBSEZTR               REFFLD(PCLBSEZT)
+     A            KYPCLBLFIXR               REFFLD(PCLBLFIX)
+     A            KYPCLBSTATR               REFFLD(PCLBSTAT)
+     A            KYPCLBDANAR               REFFLD(PCLBDANA)
+     A            KYPCLBTMSTR               REFFLD(PCLBTMST)
+     A            KYPCLBJAHRR               REFFLD(PCLBJAHR)
+     A            KYPCLBNMKRR               REFFLD(PCLBNMKR)
+     A            KYPCLBPOSIR               REFFLD(PCLBPOSI)
+     A            KYPCLBAFDNR               REFFLD(PCLBAFDN)
+     A            KYPCLBAFJJR               REFFLD(PCLBAFJJ)
+     A            KYPCLBAFNRR               REFFLD(PCLBAFNR)
+     A            KYPCLBAFPOR               REFFLD(PCLBAFPO)
+     A            KYPCLBAFUPR               REFFLD(PCLBAFUP)
+     A            KYPCLBBHNRR               REFFLD(PCLBBHNR)
+     A            KYPCLBBUKZR               REFFLD(PCLBBUKZ)
+     A            K$PCLB        27          TEXT('Freifeld')
+     A*
+     A            K#PCLBLOCKR               REFFLD(PCLBLOCK)
+     A            K#PCLBFIRMR               REFFLD(PCLBFIRM)
+     A            K#PCLBSEDAR               REFFLD(PCLBSEDA)
+     A            K#PCLBSEZTR               REFFLD(PCLBSEZT)
+     A            K#PCLBLFIXR               REFFLD(PCLBLFIX)

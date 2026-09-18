@@ -1,0 +1,4814 @@
+221 Goodbye
+2023-08-04-18.34.00.449592   04.08.2023   18.34.00
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 213.209.110.100 über Port 21 herzustellen.
+220 FileZilla Server 0.9.60 beta
+Anmelde-ID (gang) eingeben:
+331 Password required for mapco
+230 Logged on
+UNIX emulated by FileZilla
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+504 Naming format not implemented
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 CWD failed. "/transfer/incoming": directory not found.
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE230804_1833.txt
+229 Entering Extended Passive Mode (|||40004|)
+150 Opening data channel for file upload to server of "/TE230804_1833.txt"
+226 Successfully transferred "/TE230804_1833.txt"
+ 12532 Byte in 0.004 Sekunden übertragen. Übertragungsgeschwindigkeit 3208.192 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye
+2023-08-11-18.38.35.499224   11.08.2023   18.38.35
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 213.209.110.100 über Port 21 herzustellen.
+220 FileZilla Server 0.9.60 beta
+Anmelde-ID (gang) eingeben:
+331 Password required for mapco
+230 Logged on
+UNIX emulated by FileZilla
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+504 Naming format not implemented
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 CWD failed. "/transfer/incoming": directory not found.
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE230811_1838.txt
+229 Entering Extended Passive Mode (|||40010|)
+150 Opening data channel for file upload to server of "/TE230811_1838.txt"
+226 Successfully transferred "/TE230811_1838.txt"
+  5672 Byte in 0.001 Sekunden übertragen. Übertragungsgeschwindigkeit 5808.128 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye
+2023-08-18-18.35.15.496542   18.08.2023   18.35.15
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 213.209.110.100 über Port 21 herzustellen.
+220 FileZilla Server 0.9.60 beta
+Anmelde-ID (gang) eingeben:
+331 Password required for mapco
+230 Logged on
+UNIX emulated by FileZilla
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+504 Naming format not implemented
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 CWD failed. "/transfer/incoming": directory not found.
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE230818_1835.txt
+229 Entering Extended Passive Mode (|||40001|)
+150 Opening data channel for file upload to server of "/TE230818_1835.txt"
+226 Successfully transferred "/TE230818_1835.txt"
+  8564 Byte in 0.002 Sekunden übertragen. Übertragungsgeschwindigkeit 4384.768 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye
+2023-08-25-18.37.38.271574   25.08.2023   18.37.38
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 213.209.110.100 über Port 21 herzustellen.
+220 FileZilla Server 0.9.60 beta
+Anmelde-ID (gang) eingeben:
+331 Password required for mapco
+230 Logged on
+UNIX emulated by FileZilla
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+504 Naming format not implemented
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 CWD failed. "/transfer/incoming": directory not found.
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE230825_1837.txt
+229 Entering Extended Passive Mode (|||40004|)
+150 Opening data channel for file upload to server of "/TE230825_1837.txt"
+226 Successfully transferred "/TE230825_1837.txt"
+ 17128 Byte in 0.010 Sekunden übertragen. Übertragungsgeschwindigkeit 1753.907 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye
+2023-09-01-18.36.37.230484   01.09.2023   18.36.37
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 213.209.110.100 über Port 21 herzustellen.
+220 FileZilla Server 0.9.60 beta
+Anmelde-ID (gang) eingeben:
+331 Password required for mapco
+230 Logged on
+UNIX emulated by FileZilla
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+504 Naming format not implemented
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 CWD failed. "/transfer/incoming": directory not found.
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE230901_1836.txt
+229 Entering Extended Passive Mode (|||40009|)
+150 Opening data channel for file upload to server of "/TE230901_1836.txt"
+226 Successfully transferred "/TE230901_1836.txt"
+ 10604 Byte in 0.001 Sekunden übertragen. Übertragungsgeschwindigkeit 10858.496 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye
+2023-09-08-18.35.10.583599   08.09.2023   18.35.10
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 213.209.110.100 über Port 21 herzustellen.
+220 FileZilla Server 0.9.60 beta
+Anmelde-ID (gang) eingeben:
+331 Password required for mapco
+230 Logged on
+UNIX emulated by FileZilla
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+504 Naming format not implemented
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 CWD failed. "/transfer/incoming": directory not found.
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE230908_1835.txt
+229 Entering Extended Passive Mode (|||40003|)
+150 Opening data channel for file upload to server of "/TE230908_1835.txt"
+226 Successfully transferred "/TE230908_1835.txt"
+  5672 Byte in 0.002 Sekunden übertragen. Übertragungsgeschwindigkeit 2904.064 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye
+2023-09-15-18.35.38.256342   15.09.2023   18.35.38
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 213.209.110.100 über Port 21 herzustellen.
+220 FileZilla Server 0.9.60 beta
+Anmelde-ID (gang) eingeben:
+331 Password required for mapco
+230 Logged on
+UNIX emulated by FileZilla
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+504 Naming format not implemented
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 CWD failed. "/transfer/incoming": directory not found.
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE230915_1835.txt
+229 Entering Extended Passive Mode (|||40005|)
+150 Opening data channel for file upload to server of "/TE230915_1835.txt"
+226 Successfully transferred "/TE230915_1835.txt"
+  9584 Byte in 0.002 Sekunden übertragen. Übertragungsgeschwindigkeit 4907.008 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye
+2023-09-22-18.36.06.072232   22.09.2023   18.36.06
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 213.209.110.100 über Port 21 herzustellen.
+220 FileZilla Server 0.9.60 beta
+Anmelde-ID (gang) eingeben:
+331 Password required for mapco
+230 Logged on
+UNIX emulated by FileZilla
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+504 Naming format not implemented
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 CWD failed. "/transfer/incoming": directory not found.
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE230922_1836.txt
+229 Entering Extended Passive Mode (|||40007|)
+150 Opening data channel for file upload to server of "/TE230922_1836.txt"
+226 Successfully transferred "/TE230922_1836.txt"
+ 14460 Byte in 0.002 Sekunden übertragen. Übertragungsgeschwindigkeit 7403.520 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye
+2023-09-29-18.38.16.388955   29.09.2023   18.38.16
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 213.209.110.100 über Port 21 herzustellen.
+220 FileZilla Server 0.9.60 beta
+Anmelde-ID (gang) eingeben:
+331 Password required for mapco
+230 Logged on
+UNIX emulated by FileZilla
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+504 Naming format not implemented
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 CWD failed. "/transfer/incoming": directory not found.
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE230929_1838.txt
+229 Entering Extended Passive Mode (|||40007|)
+150 Opening data channel for file upload to server of "/TE230929_1838.txt"
+226 Successfully transferred "/TE230929_1838.txt"
+  7544 Byte in 0.002 Sekunden übertragen. Übertragungsgeschwindigkeit 3862.528 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye
+2023-10-06-18.35.31.561506   06.10.2023   18.35.31
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 213.209.110.100 über Port 21 herzustellen.
+220 FileZilla Server 0.9.60 beta
+Anmelde-ID (gang) eingeben:
+331 Password required for mapco
+230 Logged on
+UNIX emulated by FileZilla
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+504 Naming format not implemented
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 CWD failed. "/transfer/incoming": directory not found.
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE231006_1835.txt
+229 Entering Extended Passive Mode (|||40010|)
+150 Opening data channel for file upload to server of "/TE231006_1835.txt"
+226 Successfully transferred "/TE231006_1835.txt"
+  6580 Byte in 0.006 Sekunden übertragen. Übertragungsgeschwindigkeit 1122.987 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye
+2023-10-13-18.35.43.911663   13.10.2023   18.35.43
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 213.209.110.100 über Port 21 herzustellen.
+220 FileZilla Server 0.9.60 beta
+Anmelde-ID (gang) eingeben:
+331 Password required for mapco
+230 Logged on
+UNIX emulated by FileZilla
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+504 Naming format not implemented
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 CWD failed. "/transfer/incoming": directory not found.
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE231013_1835.txt
+229 Entering Extended Passive Mode (|||40004|)
+150 Opening data channel for file upload to server of "/TE231013_1835.txt"
+226 Successfully transferred "/TE231013_1835.txt"
+  8564 Byte in 0.001 Sekunden übertragen. Übertragungsgeschwindigkeit 8769.536 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye
+2023-10-20-18.35.20.687652   20.10.2023   18.35.20
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 213.209.110.100 über Port 21 herzustellen.
+220 FileZilla Server 0.9.60 beta
+Anmelde-ID (gang) eingeben:
+331 Password required for mapco
+230 Logged on
+UNIX emulated by FileZilla
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+504 Naming format not implemented
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 CWD failed. "/transfer/incoming": directory not found.
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE231020_1835.txt
+229 Entering Extended Passive Mode (|||40007|)
+150 Opening data channel for file upload to server of "/TE231020_1835.txt"
+226 Successfully transferred "/TE231020_1835.txt"
+ 10380 Byte in 0.003 Sekunden übertragen. Übertragungsgeschwindigkeit 3543.040 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye
+2023-10-27-18.34.46.645193   27.10.2023   18.34.46
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 213.209.110.100 über Port 21 herzustellen.
+220 FileZilla Server 0.9.60 beta
+Anmelde-ID (gang) eingeben:
+331 Password required for mapco
+230 Logged on
+UNIX emulated by FileZilla
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+504 Naming format not implemented
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 CWD failed. "/transfer/incoming": directory not found.
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE231027_1834.txt
+229 Entering Extended Passive Mode (|||40003|)
+150 Opening data channel for file upload to server of "/TE231027_1834.txt"
+226 Successfully transferred "/TE231027_1834.txt"
+ 13328 Byte in 0.002 Sekunden übertragen. Übertragungsgeschwindigkeit 6823.936 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye
+2023-11-03-18.36.37.184957   03.11.2023   18.36.37
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 213.209.110.100 über Port 21 herzustellen.
+220 FileZilla Server 0.9.60 beta
+Anmelde-ID (gang) eingeben:
+331 Password required for mapco
+230 Logged on
+UNIX emulated by FileZilla
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+504 Naming format not implemented
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 CWD failed. "/transfer/incoming": directory not found.
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE231103_1836.txt
+229 Entering Extended Passive Mode (|||40003|)
+150 Opening data channel for file upload to server of "/TE231103_1836.txt"
+226 Successfully transferred "/TE231103_1836.txt"
+  1928 Byte in 0.004 Sekunden übertragen. Übertragungsgeschwindigkeit 493.568 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye
+2023-11-10-18.35.23.540590   10.11.2023   18.35.23
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 213.209.110.100 über Port 21 herzustellen.
+220 FileZilla Server 0.9.60 beta
+Anmelde-ID (gang) eingeben:
+331 Password required for mapco
+230 Logged on
+UNIX emulated by FileZilla
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+504 Naming format not implemented
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 CWD failed. "/transfer/incoming": directory not found.
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE231110_1835.txt
+229 Entering Extended Passive Mode (|||40003|)
+150 Opening data channel for file upload to server of "/TE231110_1835.txt"
+226 Successfully transferred "/TE231110_1835.txt"
+ 17016 Byte in 0.001 Sekunden übertragen. Übertragungsgeschwindigkeit 17424.385 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye
+2023-11-17-18.36.29.019288   17.11.2023   18.36.29
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 213.209.110.100 über Port 21 herzustellen.
+220 FileZilla Server 0.9.60 beta
+Anmelde-ID (gang) eingeben:
+331 Password required for mapco
+230 Logged on
+UNIX emulated by FileZilla
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+504 Naming format not implemented
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 CWD failed. "/transfer/incoming": directory not found.
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE231117_1836.txt
+229 Entering Extended Passive Mode (|||40005|)
+150 Opening data channel for file upload to server of "/TE231117_1836.txt"
+226 Successfully transferred "/TE231117_1836.txt"
+  4820 Byte in 0.001 Sekunden übertragen. Übertragungsgeschwindigkeit 4935.680 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye
+2023-11-24-18.37.48.079560   24.11.2023   18.37.48
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 213.209.110.100 über Port 21 herzustellen.
+220 FileZilla Server 0.9.60 beta
+Anmelde-ID (gang) eingeben:
+331 Password required for mapco
+230 Logged on
+UNIX emulated by FileZilla
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+504 Naming format not implemented
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 CWD failed. "/transfer/incoming": directory not found.
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE231124_1837.txt
+229 Entering Extended Passive Mode (|||40005|)
+150 Opening data channel for file upload to server of "/TE231124_1837.txt"
+226 Successfully transferred "/TE231124_1837.txt"
+ 13384 Byte in 0.001 Sekunden übertragen. Übertragungsgeschwindigkeit 13705.216 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye
+2023-12-01-18.34.17.081503   01.12.2023   18.34.17
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 213.209.110.100 über Port 21 herzustellen.
+220 FileZilla Server 0.9.60 beta
+Anmelde-ID (gang) eingeben:
+331 Password required for mapco
+230 Logged on
+UNIX emulated by FileZilla
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+504 Naming format not implemented
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 CWD failed. "/transfer/incoming": directory not found.
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE231201_1834.txt
+229 Entering Extended Passive Mode (|||40006|)
+150 Opening data channel for file upload to server of "/TE231201_1834.txt"
+226 Successfully transferred "/TE231201_1834.txt"
+  3856 Byte in 0.001 Sekunden übertragen. Übertragungsgeschwindigkeit 3948.544 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye
+2023-12-08-18.35.35.980340   08.12.2023   18.35.35
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 213.209.110.100 über Port 21 herzustellen.
+220 FileZilla Server 0.9.60 beta
+Anmelde-ID (gang) eingeben:
+331 Password required for mapco
+230 Logged on
+UNIX emulated by FileZilla
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+504 Naming format not implemented
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 CWD failed. "/transfer/incoming": directory not found.
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE231208_1835.txt
+229 Entering Extended Passive Mode (|||40003|)
+150 Opening data channel for file upload to server of "/TE231208_1835.txt"
+226 Successfully transferred "/TE231208_1835.txt"
+  6524 Byte in 0.002 Sekunden übertragen. Übertragungsgeschwindigkeit 3340.288 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye
+2023-12-15-18.39.55.259005   15.12.2023   18.39.55
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 213.209.110.100 über Port 21 herzustellen.
+220 FileZilla Server 0.9.60 beta
+Anmelde-ID (gang) eingeben:
+331 Password required for mapco
+230 Logged on
+UNIX emulated by FileZilla
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+504 Naming format not implemented
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 CWD failed. "/transfer/incoming": directory not found.
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE231215_1839.txt
+229 Entering Extended Passive Mode (|||40001|)
+150 Opening data channel for file upload to server of "/TE231215_1839.txt"
+226 Successfully transferred "/TE231215_1839.txt"
+ 14047 Byte in 0.001 Sekunden übertragen. Übertragungsgeschwindigkeit 14384.128 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye
+2023-12-22-18.36.06.804561   22.12.2023   18.36.06
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 213.209.110.100 über Port 21 herzustellen.
+220 FileZilla Server 0.9.60 beta
+Anmelde-ID (gang) eingeben:
+331 Password required for mapco
+230 Logged on
+UNIX emulated by FileZilla
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+504 Naming format not implemented
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 CWD failed. "/transfer/incoming": directory not found.
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE231222_1836.txt
+229 Entering Extended Passive Mode (|||40003|)
+150 Opening data channel for file upload to server of "/TE231222_1836.txt"
+226 Successfully transferred "/TE231222_1836.txt"
+ 26712 Byte in 0.001 Sekunden übertragen. Übertragungsgeschwindigkeit 27353.088 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye
+2024-01-05-18.41.14.747264   05.01.2024   18.41.14
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 213.209.110.100 über Port 21 herzustellen.
+220 FileZilla Server 0.9.60 beta
+Anmelde-ID (gang) eingeben:
+331 Password required for mapco
+230 Logged on
+UNIX emulated by FileZilla
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+504 Naming format not implemented
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 CWD failed. "/transfer/incoming": directory not found.
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE240105_1841.txt
+229 Entering Extended Passive Mode (|||40005|)
+150 Opening data channel for file upload to server of "/TE240105_1841.txt"
+226 Successfully transferred "/TE240105_1841.txt"
+  4708 Byte in 0.006 Sekunden übertragen. Übertragungsgeschwindigkeit 803.499 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye
+2024-01-12-18.36.27.296218   12.01.2024   18.36.27
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 213.209.110.100 über Port 21 herzustellen.
+220 FileZilla Server 0.9.60 beta
+Anmelde-ID (gang) eingeben:
+331 Password required for mapco
+230 Logged on
+UNIX emulated by FileZilla
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+504 Naming format not implemented
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 CWD failed. "/transfer/incoming": directory not found.
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE240112_1836.txt
+229 Entering Extended Passive Mode (|||40007|)
+150 Opening data channel for file upload to server of "/TE240112_1836.txt"
+226 Successfully transferred "/TE240112_1836.txt"
+ 21724 Byte in 0.001 Sekunden übertragen. Übertragungsgeschwindigkeit 22245.377 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye
+2024-01-19-18.36.29.149789   19.01.2024   18.36.29
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 213.209.110.100 über Port 21 herzustellen.
+220 FileZilla Server 0.9.60 beta
+Anmelde-ID (gang) eingeben:
+331 Password required for mapco
+230 Logged on
+UNIX emulated by FileZilla
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+504 Naming format not implemented
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 CWD failed. "/transfer/incoming": directory not found.
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE240119_1836.txt
+229 Entering Extended Passive Mode (|||40006|)
+150 Opening data channel for file upload to server of "/TE240119_1836.txt"
+226 Successfully transferred "/TE240119_1836.txt"
+ 13956 Byte in 0.001 Sekunden übertragen. Übertragungsgeschwindigkeit 14290.944 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye
+2024-01-26-18.37.27.734886   26.01.2024   18.37.27
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 213.209.110.100 über Port 21 herzustellen.
+220 FileZilla Server 0.9.60 beta
+Anmelde-ID (gang) eingeben:
+331 Password required for mapco
+230 Logged on
+UNIX emulated by FileZilla
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+504 Naming format not implemented
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 CWD failed. "/transfer/incoming": directory not found.
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE240126_1837.txt
+229 Entering Extended Passive Mode (|||40007|)
+150 Opening data channel for file upload to server of "/TE240126_1837.txt"
+226 Successfully transferred "/TE240126_1837.txt"
+ 24147 Byte in 0.004 Sekunden übertragen. Übertragungsgeschwindigkeit 6181.632 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye
+2024-02-02-18.41.52.197076   02.02.2024   18.41.52
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 213.209.110.100 über Port 21 herzustellen.
+220 FileZilla Server 0.9.60 beta
+Anmelde-ID (gang) eingeben:
+331 Password required for mapco
+230 Logged on
+UNIX emulated by FileZilla
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+504 Naming format not implemented
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 CWD failed. "/transfer/incoming": directory not found.
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE240202_1841.txt
+229 Entering Extended Passive Mode (|||40010|)
+150 Opening data channel for file upload to server of "/TE240202_1841.txt"
+226 Successfully transferred "/TE240202_1841.txt"
+  7488 Byte in 0.002 Sekunden übertragen. Übertragungsgeschwindigkeit 3833.856 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye
+2024-02-09-18.36.55.651056   09.02.2024   18.36.55
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 213.209.110.100 über Port 21 herzustellen.
+220 FileZilla Server 0.9.60 beta
+Anmelde-ID (gang) eingeben:
+331 Password required for mapco
+230 Logged on
+UNIX emulated by FileZilla
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+504 Naming format not implemented
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 CWD failed. "/transfer/incoming": directory not found.
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE240209_1836.txt
+229 Entering Extended Passive Mode (|||40009|)
+150 Opening data channel for file upload to server of "/TE240209_1836.txt"
+226 Successfully transferred "/TE240209_1836.txt"
+ 20480 Byte in 0.006 Sekunden übertragen. Übertragungsgeschwindigkeit 3495.253 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye
+2024-02-16-18.44.38.718089   16.02.2024   18.44.38
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 213.209.110.100 über Port 21 herzustellen.
+220 FileZilla Server 0.9.60 beta
+Anmelde-ID (gang) eingeben:
+331 Password required for mapco
+230 Logged on
+UNIX emulated by FileZilla
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+504 Naming format not implemented
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 CWD failed. "/transfer/incoming": directory not found.
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE240216_1844.txt
+229 Entering Extended Passive Mode (|||40010|)
+150 Opening data channel for file upload to server of "/TE240216_1844.txt"
+226 Successfully transferred "/TE240216_1844.txt"
+ 10212 Byte in 0.002 Sekunden übertragen. Übertragungsgeschwindigkeit 5228.544 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye
+2024-02-23-18.36.35.572262   23.02.2024   18.36.35
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 213.209.110.100 über Port 21 herzustellen.
+220 FileZilla Server 0.9.60 beta
+Anmelde-ID (gang) eingeben:
+331 Password required for mapco
+230 Logged on
+UNIX emulated by FileZilla
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+504 Naming format not implemented
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 CWD failed. "/transfer/incoming": directory not found.
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE240223_1836.txt
+229 Entering Extended Passive Mode (|||40002|)
+150 Opening data channel for file upload to server of "/TE240223_1836.txt"
+226 Successfully transferred "/TE240223_1836.txt"
+ 13956 Byte in 0.010 Sekunden übertragen. Übertragungsgeschwindigkeit 1429.094 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye
+2024-03-01-18.34.52.678883   01.03.2024   18.34.52
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 213.209.110.100 über Port 21 herzustellen.
+220 FileZilla Server 0.9.60 beta
+Anmelde-ID (gang) eingeben:
+331 Password required for mapco
+230 Logged on
+UNIX emulated by FileZilla
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+504 Naming format not implemented
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 CWD failed. "/transfer/incoming": directory not found.
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE240301_1834.txt
+229 Entering Extended Passive Mode (|||40005|)
+150 Opening data channel for file upload to server of "/TE240301_1834.txt"
+226 Successfully transferred "/TE240301_1834.txt"
+  9248 Byte in 0.010 Sekunden übertragen. Übertragungsgeschwindigkeit 946.995 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye
+2024-03-08-18.37.23.697757   08.03.2024   18.37.23
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 213.209.110.100 über Port 21 herzustellen.
+220 FileZilla Server 0.9.60 beta
+Anmelde-ID (gang) eingeben:
+331 Password required for mapco
+230 Logged on
+UNIX emulated by FileZilla
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+504 Naming format not implemented
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 CWD failed. "/transfer/incoming": directory not found.
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE240308_1837.txt
+229 Entering Extended Passive Mode (|||40010|)
+150 Opening data channel for file upload to server of "/TE240308_1837.txt"
+226 Successfully transferred "/TE240308_1837.txt"
+ 19684 Byte in 0.008 Sekunden übertragen. Übertragungsgeschwindigkeit 2519.552 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye
+2024-03-15-18.36.09.507572   15.03.2024   18.36.09
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 213.209.110.100 über Port 21 herzustellen.
+220 FileZilla Server 0.9.60 beta
+Anmelde-ID (gang) eingeben:
+331 Password required for mapco
+230 Logged on
+UNIX emulated by FileZilla
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+504 Naming format not implemented
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 CWD failed. "/transfer/incoming": directory not found.
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE240315_1836.txt
+229 Entering Extended Passive Mode (|||40002|)
+150 Opening data channel for file upload to server of "/TE240315_1836.txt"
+226 Successfully transferred "/TE240315_1836.txt"
+ 19663 Byte in 0.001 Sekunden übertragen. Übertragungsgeschwindigkeit 20134.912 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye
+2024-03-22-18.35.18.984534   22.03.2024   18.35.18
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 213.209.110.100 über Port 21 herzustellen.
+220 FileZilla Server 0.9.60 beta
+Anmelde-ID (gang) eingeben:
+331 Password required for mapco
+230 Logged on
+UNIX emulated by FileZilla
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+504 Naming format not implemented
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 CWD failed. "/transfer/incoming": directory not found.
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE240322_1835.txt
+229 Entering Extended Passive Mode (|||40010|)
+150 Opening data channel for file upload to server of "/TE240322_1835.txt"
+226 Successfully transferred "/TE240322_1835.txt"
+ 19516 Byte in 0.008 Sekunden übertragen. Übertragungsgeschwindigkeit 2498.048 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye
+2024-03-29-18.36.18.907286   29.03.2024   18.36.18
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.8.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Couldn't open the file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE240329_1836.txt
+229 Entering Extended Passive Mode (|||40006|)
+150 Starting data transfer.
+226 Operation successful
+ 12084 Byte in 0.001 Sekunden übertragen. Übertragungsgeschwindigkeit 12374.016 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2024-04-05-18.35.28.983525   05.04.2024   18.35.28
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.8.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Couldn't open the file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE240405_1835.txt
+229 Entering Extended Passive Mode (|||40033|)
+150 Starting data transfer.
+226 Operation successful
+  4652 Byte in 0.008 Sekunden übertragen. Übertragungsgeschwindigkeit 595.456 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2024-04-12-18.35.44.875744   12.04.2024   18.35.44
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.8.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Couldn't open the file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE240412_1835.txt
+229 Entering Extended Passive Mode (|||40009|)
+150 Starting data transfer.
+226 Operation successful
+ 18608 Byte in 0.002 Sekunden übertragen. Übertragungsgeschwindigkeit 9527.296 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2024-04-19-18.36.18.214192   19.04.2024   18.36.18
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.8.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Couldn't open the file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE240419_1836.txt
+229 Entering Extended Passive Mode (|||40017|)
+150 Starting data transfer.
+226 Operation successful
+ 20536 Byte in 0.003 Sekunden übertragen. Übertragungsgeschwindigkeit 7009.621 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2024-04-26-18.40.14.719724   26.04.2024   18.40.14
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.8.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Couldn't open the file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE240426_1840.txt
+229 Entering Extended Passive Mode (|||40011|)
+150 Starting data transfer.
+226 Operation successful
+ 12196 Byte in 0.007 Sekunden übertragen. Übertragungsgeschwindigkeit 1784.101 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2024-05-03-18.37.00.639624   03.05.2024   18.37.00
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.8.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Couldn't open the file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE240503_1836.txt
+229 Entering Extended Passive Mode (|||40038|)
+150 Starting data transfer.
+226 Operation successful
+ 11176 Byte in 0.002 Sekunden übertragen. Übertragungsgeschwindigkeit 5722.112 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2024-05-10-18.36.47.243491   10.05.2024   18.36.47
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.8.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Couldn't open the file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE240510_1836.txt
+229 Entering Extended Passive Mode (|||40002|)
+150 Starting data transfer.
+226 Operation successful
+ 10212 Byte in 0.001 Sekunden übertragen. Übertragungsgeschwindigkeit 10457.088 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2024-05-17-18.37.35.732231   17.05.2024   18.37.35
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.8.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Couldn't open the file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE240517_1837.txt
+229 Entering Extended Passive Mode (|||40005|)
+150 Starting data transfer.
+226 Operation successful
+ 34380 Byte in 0.010 Sekunden übertragen. Übertragungsgeschwindigkeit 3520.512 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2024-05-24-18.36.54.210487   24.05.2024   18.36.54
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.8.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Couldn't open the file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE240524_1836.txt
+229 Entering Extended Passive Mode (|||40019|)
+150 Starting data transfer.
+226 Operation successful
+ 14864 Byte in 0.004 Sekunden übertragen. Übertragungsgeschwindigkeit 3805.184 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2024-05-31-18.35.15.495808   31.05.2024   18.35.15
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.8.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Couldn't open the file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE240531_1835.txt
+229 Entering Extended Passive Mode (|||40008|)
+150 Starting data transfer.
+226 Operation successful
+ 26836 Byte in 0.005 Sekunden übertragen. Übertragungsgeschwindigkeit 5496.013 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2024-06-07-18.35.52.747431   07.06.2024   18.35.52
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.8.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Couldn't open the file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE240607_1835.txt
+229 Entering Extended Passive Mode (|||40022|)
+150 Starting data transfer.
+226 Operation successful
+ 15660 Byte in 0.005 Sekunden übertragen. Übertragungsgeschwindigkeit 3207.168 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2024-06-14-18.36.37.931444   14.06.2024   18.36.37
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.8.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Couldn't open the file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE240614_1836.txt
+229 Entering Extended Passive Mode (|||40020|)
+150 Starting data transfer.
+226 Operation successful
+ 25076 Byte in 0.004 Sekunden übertragen. Übertragungsgeschwindigkeit 6419.456 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2024-06-21-18.35.41.850247   21.06.2024   18.35.41
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.8.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Couldn't open the file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE240621_1835.txt
+229 Entering Extended Passive Mode (|||40032|)
+150 Starting data transfer.
+226 Operation successful
+  9416 Byte in 0.002 Sekunden übertragen. Übertragungsgeschwindigkeit 4820.992 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2024-06-28-18.36.25.007046   28.06.2024   18.36.25
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.8.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Couldn't open the file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE240628_1836.txt
+229 Entering Extended Passive Mode (|||40001|)
+150 Starting data transfer.
+226 Operation successful
+ 11176 Byte in 0.006 Sekunden übertragen. Übertragungsgeschwindigkeit 1907.371 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2024-07-05-18.38.02.476699   05.07.2024   18.38.02
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.8.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Couldn't open the file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE240705_1837.txt
+229 Entering Extended Passive Mode (|||40036|)
+150 Starting data transfer.
+226 Operation successful
+ 12992 Byte in 0.002 Sekunden übertragen. Übertragungsgeschwindigkeit 6651.904 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2024-07-12-18.39.43.891373   12.07.2024   18.39.43
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+Zum Host FTP.TIBSONLINE.DE mit Adresse 89.63.13.39 kann keine Verbindung hergestellt werden. Später erneut versuchen.
+Einen FTP-Unterbefehl eingeben.
+> mapco ********************
+Unterbefehl 'mapco' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+Es muss zuerst eine Verbindung hergestellt werden.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+Es muss zuerst eine Verbindung hergestellt werden.
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE240712_1839.txt
+Es muss zuerst eine Verbindung hergestellt werden.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+2024-07-19-18.37.16.123249   19.07.2024   18.37.16
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.8.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Couldn't open the file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE240719_1837.txt
+229 Entering Extended Passive Mode (|||40016|)
+150 Starting data transfer.
+226 Operation successful
+ 11120 Byte in 0.001 Sekunden übertragen. Übertragungsgeschwindigkeit 11386.880 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2024-07-26-18.37.53.657161   26.07.2024   18.37.53
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.8.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Couldn't open the file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE240726_1837.txt
+229 Entering Extended Passive Mode (|||40026|)
+150 Starting data transfer.
+226 Operation successful
+ 31600 Byte in 0.003 Sekunden übertragen. Übertragungsgeschwindigkeit 10786.134 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2024-08-02-18.37.08.674477   02.08.2024   18.37.08
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.8.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Couldn't open the file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE240802_1837.txt
+229 Entering Extended Passive Mode (|||40041|)
+150 Starting data transfer.
+226 Operation successful
+ 36252 Byte in 0.007 Sekunden übertragen. Übertragungsgeschwindigkeit 5303.150 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2024-08-09-18.37.05.332277   09.08.2024   18.37.05
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.8.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Couldn't open the file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE240809_1837.txt
+229 Entering Extended Passive Mode (|||40018|)
+150 Starting data transfer.
+226 Operation successful
+ 28596 Byte in 0.002 Sekunden übertragen. Übertragungsgeschwindigkeit 14641.152 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2024-08-16-18.36.18.896049   16.08.2024   18.36.18
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.8.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Couldn't open the file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE240816_1836.txt
+229 Entering Extended Passive Mode (|||40033|)
+150 Starting data transfer.
+226 Operation successful
+ 19572 Byte in 0.007 Sekunden übertragen. Übertragungsgeschwindigkeit 2863.104 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2024-08-23-18.38.01.918853   23.08.2024   18.38.01
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.8.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Couldn't open the file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE240823_1838.txt
+229 Entering Extended Passive Mode (|||40032|)
+150 Starting data transfer.
+226 Operation successful
+  6524 Byte in 0.002 Sekunden übertragen. Übertragungsgeschwindigkeit 3340.288 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2024-08-30-18.36.10.937873   30.08.2024   18.36.10
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.8.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Couldn't open the file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE240830_1836.txt
+229 Entering Extended Passive Mode (|||40045|)
+150 Starting data transfer.
+226 Operation successful
+ 27835 Byte in 0.001 Sekunden übertragen. Übertragungsgeschwindigkeit 28503.039 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2024-09-06-18.37.24.620871   06.09.2024   18.37.24
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.8.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Couldn't open the file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE240906_1837.txt
+229 Entering Extended Passive Mode (|||40036|)
+150 Starting data transfer.
+226 Operation successful
+ 13104 Byte in 0.002 Sekunden übertragen. Übertragungsgeschwindigkeit 6709.248 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2024-09-13-18.36.25.534811   13.09.2024   18.36.25
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.8.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Couldn't open the file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE240913_1836.txt
+229 Entering Extended Passive Mode (|||40022|)
+150 Starting data transfer.
+226 Operation successful
+ 14808 Byte in 0.002 Sekunden übertragen. Übertragungsgeschwindigkeit 7581.696 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2024-09-20-18.37.26.123643   20.09.2024   18.37.26
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.8.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Couldn't open the file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE240920_1837.txt
+229 Entering Extended Passive Mode (|||40001|)
+150 Starting data transfer.
+226 Operation successful
+ 29672 Byte in 0.001 Sekunden übertragen. Übertragungsgeschwindigkeit 30384.129 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2024-09-27-18.36.49.282901   27.09.2024   18.36.49
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.8.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Couldn't open the file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE240927_1836.txt
+229 Entering Extended Passive Mode (|||40051|)
+150 Starting data transfer.
+226 Operation successful
+  8396 Byte in 0.002 Sekunden übertragen. Übertragungsgeschwindigkeit 4298.752 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2024-10-04-18.35.33.719634   04.10.2024   18.35.33
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.8.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Couldn't open the file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE241004_1835.txt
+229 Entering Extended Passive Mode (|||40002|)
+150 Starting data transfer.
+226 Operation successful
+ 15898 Byte in 0.004 Sekunden übertragen. Übertragungsgeschwindigkeit 4069.888 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2024-10-18-18.36.08.814001   18.10.2024   18.36.08
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.8.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Couldn't open the file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE241018_1836.txt
+229 Entering Extended Passive Mode (|||40039|)
+150 Starting data transfer.
+226 Operation successful
+ 27004 Byte in 0.001 Sekunden übertragen. Übertragungsgeschwindigkeit 27652.096 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2024-10-25-18.40.06.075330   25.10.2024   18.40.06
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.8.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Couldn't open the file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE241025_1840.txt
+229 Entering Extended Passive Mode (|||40013|)
+150 Starting data transfer.
+226 Operation successful
+ 13048 Byte in 0.001 Sekunden übertragen. Übertragungsgeschwindigkeit 13361.152 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2024-11-01-18.37.10.991141   01.11.2024   18.37.10
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.8.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Couldn't open the file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE241101_1837.txt
+229 Entering Extended Passive Mode (|||40026|)
+150 Starting data transfer.
+226 Operation successful
+ 11064 Byte in 0.010 Sekunden übertragen. Übertragungsgeschwindigkeit 1132.954 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2024-11-08-18.37.11.992672   08.11.2024   18.37.11
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.8.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Couldn't open the file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE241108_1837.txt
+229 Entering Extended Passive Mode (|||40048|)
+150 Starting data transfer.
+226 Operation successful
+ 15884 Byte in 0.007 Sekunden übertragen. Übertragungsgeschwindigkeit 2323.602 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2024-11-15-18.36.59.895912   15.11.2024   18.36.59
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.8.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Couldn't open the file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE241115_1836.txt
+229 Entering Extended Passive Mode (|||40012|)
+150 Starting data transfer.
+226 Operation successful
+ 14068 Byte in 0.010 Sekunden übertragen. Übertragungsgeschwindigkeit 1440.563 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2024-11-22-18.38.01.304998   22.11.2024   18.38.01
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.8.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Couldn't open the file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE241122_1837.txt
+229 Entering Extended Passive Mode (|||40014|)
+150 Starting data transfer.
+226 Operation successful
+ 12028 Byte in 0.002 Sekunden übertragen. Übertragungsgeschwindigkeit 6158.336 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2024-11-29-18.35.51.814808   29.11.2024   18.35.51
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.8.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Couldn't open the file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE241129_1835.txt
+229 Entering Extended Passive Mode (|||40005|)
+150 Starting data transfer.
+226 Operation successful
+  8396 Byte in 0.001 Sekunden übertragen. Übertragungsgeschwindigkeit 8597.504 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2024-12-06-18.37.33.067792   06.12.2024   18.37.33
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.8.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Couldn't open the file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE241206_1837.txt
+229 Entering Extended Passive Mode (|||40044|)
+150 Starting data transfer.
+226 Operation successful
+ 18552 Byte in 0.008 Sekunden übertragen. Übertragungsgeschwindigkeit 2374.656 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2024-12-13-18.36.44.278373   13.12.2024   18.36.44
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.8.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Couldn't open the file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE241213_1836.txt
+229 Entering Extended Passive Mode (|||40051|)
+150 Starting data transfer.
+226 Operation successful
+ 17644 Byte in 0.001 Sekunden übertragen. Übertragungsgeschwindigkeit 18067.455 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2024-12-20-18.36.54.970407   20.12.2024   18.36.54
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.8.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Couldn't open the file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE241220_1836.txt
+229 Entering Extended Passive Mode (|||40048|)
+150 Starting data transfer.
+226 Operation successful
+  9360 Byte in 0.006 Sekunden übertragen. Übertragungsgeschwindigkeit 1597.440 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2025-01-10-18.37.40.935935   10.01.2025   18.37.40
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.9.4
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Unknown error
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE250110_1837.txt
+229 Entering Extended Passive Mode (|||40002|)
+150 Starting data transfer.
+226 Operation successful
+ 12084 Byte in 0.002 Sekunden übertragen. Übertragungsgeschwindigkeit 6187.008 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2025-01-17-18.38.16.187031   17.01.2025   18.38.16
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.9.4
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Unknown error
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE250117_1838.txt
+229 Entering Extended Passive Mode (|||40028|)
+150 Starting data transfer.
+226 Operation successful
+  5616 Byte in 0.007 Sekunden übertragen. Übertragungsgeschwindigkeit 821.541 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2025-01-24-18.41.10.746715   24.01.2025   18.41.10
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.9.4
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Unknown error
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE250124_1841.txt
+229 Entering Extended Passive Mode (|||40018|)
+150 Starting data transfer.
+226 Operation successful
+  7488 Byte in 0.002 Sekunden übertragen. Übertragungsgeschwindigkeit 3833.856 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2025-01-31-18.37.36.865092   31.01.2025   18.37.36
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.9.4
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Unknown error
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE250131_1837.txt
+229 Entering Extended Passive Mode (|||40020|)
+150 Starting data transfer.
+226 Operation successful
+ 12196 Byte in 0.001 Sekunden übertragen. Übertragungsgeschwindigkeit 12488.704 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2025-02-07-18.37.46.682989   07.02.2025   18.37.46
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.9.4
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Unknown error
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE250207_1837.txt
+229 Entering Extended Passive Mode (|||40023|)
+150 Starting data transfer.
+226 Operation successful
+ 12084 Byte in 0.002 Sekunden übertragen. Übertragungsgeschwindigkeit 6187.008 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2025-02-14-18.38.15.311769   14.02.2025   18.38.15
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.9.4
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Unknown error
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE250214_1838.txt
+229 Entering Extended Passive Mode (|||40020|)
+150 Starting data transfer.
+226 Operation successful
+ 19796 Byte in 0.008 Sekunden übertragen. Übertragungsgeschwindigkeit 2533.888 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2025-02-21-18.37.43.607680   21.02.2025   18.37.43
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.9.4
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Unknown error
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE250221_1837.txt
+229 Entering Extended Passive Mode (|||40031|)
+150 Starting data transfer.
+226 Operation successful
+ 15940 Byte in 0.002 Sekunden übertragen. Übertragungsgeschwindigkeit 8161.280 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2025-03-07-01.45.44.669937   07.03.2025   01.45.44
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.9.4
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Unknown error
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE250307_0145.txt
+229 Entering Extended Passive Mode (|||40035|)
+150 Starting data transfer.
+226 Operation successful
+ 15088 Byte in 0.008 Sekunden übertragen. Übertragungsgeschwindigkeit 1931.264 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2025-03-14-18.38.47.249699   14.03.2025   18.38.47
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.9.4
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Unknown error
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE250314_1838.txt
+229 Entering Extended Passive Mode (|||40047|)
+150 Starting data transfer.
+226 Operation successful
+ 27228 Byte in 0.010 Sekunden übertragen. Übertragungsgeschwindigkeit 2788.147 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2025-03-28-18.38.34.978615   28.03.2025   18.38.34
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.9.4
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Unknown error
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE250328_1838.txt
+229 Entering Extended Passive Mode (|||40033|)
+150 Starting data transfer.
+226 Operation successful
+  2724 Byte in 0.001 Sekunden übertragen. Übertragungsgeschwindigkeit 2789.376 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2025-04-04-18.38.01.955313   04.04.2025   18.38.01
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.9.4
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Unknown error
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE250404_1837.txt
+229 Entering Extended Passive Mode (|||40004|)
+150 Starting data transfer.
+226 Operation successful
+  6580 Byte in 0.001 Sekunden übertragen. Übertragungsgeschwindigkeit 6737.920 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2025-04-11-18.36.36.900226   11.04.2025   18.36.36
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.9.4
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Unknown error
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE250411_1836.txt
+229 Entering Extended Passive Mode (|||40038|)
+150 Starting data transfer.
+226 Operation successful
+  7432 Byte in 0.002 Sekunden übertragen. Übertragungsgeschwindigkeit 3805.184 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2025-04-18-18.39.00.036766   18.04.2025   18.39.00
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.9.4
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Unknown error
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE250418_1838.txt
+229 Entering Extended Passive Mode (|||40035|)
+150 Starting data transfer.
+226 Operation successful
+ 14068 Byte in 0.006 Sekunden übertragen. Übertragungsgeschwindigkeit 2400.939 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2025-05-09-02.25.29.700856   09.05.2025   02.25.29
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.9.4
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Unknown error
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE250509_0225.txt
+229 Entering Extended Passive Mode (|||40048|)
+150 About to start data transfer.
+226 Operation successful
+  3800 Byte in 0.002 Sekunden übertragen. Übertragungsgeschwindigkeit 1945.600 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2025-05-16-18.37.07.881548   16.05.2025   18.37.07
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.9.4
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Unknown error
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE250516_1837.txt
+229 Entering Extended Passive Mode (|||40032|)
+150 Starting data transfer.
+226 Operation successful
+ 25356 Byte in 0.009 Sekunden übertragen. Übertragungsgeschwindigkeit 2884.949 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2025-05-23-18.38.06.261143   23.05.2025   18.38.06
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.9.4
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Unknown error
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE250523_1838.txt
+229 Entering Extended Passive Mode (|||40022|)
+150 Starting data transfer.
+226 Operation successful
+  2836 Byte in 0.007 Sekunden übertragen. Übertragungsgeschwindigkeit 414.866 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2025-06-06-18.44.16.419882   06.06.2025   18.44.16
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.9.4
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Unknown error
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE250606_1844.txt
+229 Entering Extended Passive Mode (|||40004|)
+150 Starting data transfer.
+226 Operation successful
+ 17868 Byte in 0.005 Sekunden übertragen. Übertragungsgeschwindigkeit 3659.366 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2025-06-13-18.37.50.179420   13.06.2025   18.37.50
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.9.4
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Unknown error
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE250613_1837.txt
+229 Entering Extended Passive Mode (|||40021|)
+150 Starting data transfer.
+226 Operation successful
+ 12196 Byte in 0.006 Sekunden übertragen. Übertragungsgeschwindigkeit 2081.451 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2025-06-20-18.42.22.168431   20.06.2025   18.42.22
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.9.4
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Unknown error
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE250620_1842.txt
+229 Entering Extended Passive Mode (|||40009|)
+150 Starting data transfer.
+226 Operation successful
+  4708 Byte in 0.002 Sekunden übertragen. Übertragungsgeschwindigkeit 2410.496 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2025-06-27-18.38.55.080609   27.06.2025   18.38.55
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.9.4
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Unknown error
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE250627_1838.txt
+229 Entering Extended Passive Mode (|||40037|)
+150 Starting data transfer.
+226 Operation successful
+  6412 Byte in 0.008 Sekunden übertragen. Übertragungsgeschwindigkeit 820.736 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2025-07-04-18.39.58.839847   04.07.2025   18.39.58
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.9.4
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Unknown error
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE250704_1839.txt
+229 Entering Extended Passive Mode (|||40043|)
+150 Starting data transfer.
+226 Operation successful
+ 21444 Byte in 0.010 Sekunden übertragen. Übertragungsgeschwindigkeit 2195.865 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2025-07-11-18.36.42.762291   11.07.2025   18.36.42
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.9.4
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Unknown error
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE250711_1836.txt
+229 Entering Extended Passive Mode (|||40034|)
+150 Starting data transfer.
+226 Operation successful
+ 16680 Byte in 0.001 Sekunden übertragen. Übertragungsgeschwindigkeit 17080.320 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2025-07-18-02.16.51.710874   18.07.2025   02.16.51
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.9.4
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Unknown error
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE250718_0216.txt
+229 Entering Extended Passive Mode (|||40048|)
+150 About to start data transfer.
+226 Operation successful
+  2724 Byte in 0.007 Sekunden übertragen. Übertragungsgeschwindigkeit 398.482 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2025-07-25-02.17.51.176930   25.07.2025   02.17.51
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.9.4
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Unknown error
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE250725_0217.txt
+229 Entering Extended Passive Mode (|||40009|)
+150 Starting data transfer.
+226 Operation successful
+  6580 Byte in 0.005 Sekunden übertragen. Übertragungsgeschwindigkeit 1347.584 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2025-08-01-18.41.34.805629   01.08.2025   18.41.34
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.9.4
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Unknown error
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE250801_1841.txt
+229 Entering Extended Passive Mode (|||40003|)
+150 Starting data transfer.
+226 Operation successful
+  9360 Byte in 0.008 Sekunden übertragen. Übertragungsgeschwindigkeit 1198.080 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2025-08-08-01.56.47.189982   08.08.2025   01.56.47
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.10.3
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Unknown error
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE250808_0156.txt
+229 Entering Extended Passive Mode (|||40042|)
+150 Starting data transfer.
+226 Operation successful
+  2724 Byte in 0.002 Sekunden übertragen. Übertragungsgeschwindigkeit 1394.688 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2025-08-15-18.37.24.396994   15.08.2025   18.37.24
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.10.3
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Unknown error
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE250815_1837.txt
+229 Entering Extended Passive Mode (|||40023|)
+150 Starting data transfer.
+226 Operation successful
+ 22478 Byte in 0.004 Sekunden übertragen. Übertragungsgeschwindigkeit 5754.368 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2025-08-22-18.38.56.273263   22.08.2025   18.38.56
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.10.3
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Unknown error
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE250822_1838.txt
+229 Entering Extended Passive Mode (|||40015|)
+150 Starting data transfer.
+226 Operation successful
+  8284 Byte in 0.007 Sekunden übertragen. Übertragungsgeschwindigkeit 1211.831 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2025-08-29-18.37.40.458530   29.08.2025   18.37.40
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.10.3
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Unknown error
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE250829_1837.txt
+229 Entering Extended Passive Mode (|||40002|)
+150 Starting data transfer.
+226 Operation successful
+  2836 Byte in 0.010 Sekunden übertragen. Übertragungsgeschwindigkeit 290.406 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2025-09-05-18.37.38.451312   05.09.2025   18.37.38
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.10.3
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Unknown error
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE250905_1837.txt
+229 Entering Extended Passive Mode (|||40011|)
+150 Starting data transfer.
+226 Operation successful
+ 15179 Byte in 0.009 Sekunden übertragen. Übertragungsgeschwindigkeit 1727.033 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2025-09-12-18.37.36.235650   12.09.2025   18.37.36
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.10.3
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Unknown error
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE250912_1837.txt
+229 Entering Extended Passive Mode (|||40035|)
+150 Starting data transfer.
+226 Operation successful
+ 16624 Byte in 0.002 Sekunden übertragen. Übertragungsgeschwindigkeit 8511.488 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2025-09-19-01.20.27.033045   19.09.2025   01.20.27
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.10.3
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Unknown error
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE250919_0120.txt
+229 Entering Extended Passive Mode (|||40020|)
+150 Starting data transfer.
+226 Operation successful
+  1872 Byte in 0.002 Sekunden übertragen. Übertragungsgeschwindigkeit 958.464 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2025-09-26-18.37.41.641005   26.09.2025   18.37.41
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.10.3
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Unknown error
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE250926_1837.txt
+229 Entering Extended Passive Mode (|||40025|)
+150 Starting data transfer.
+226 Operation successful
+ 17644 Byte in 0.001 Sekunden übertragen. Übertragungsgeschwindigkeit 18067.455 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2025-10-03-01.19.53.327301   03.10.2025   01.19.53
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.10.3
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Unknown error
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE251003_0119.txt
+229 Entering Extended Passive Mode (|||40051|)
+150 Starting data transfer.
+226 Operation successful
+  8228 Byte in 0.006 Sekunden übertragen. Übertragungsgeschwindigkeit 1404.245 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2025-10-10-18.37.23.600456   10.10.2025   18.37.23
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.10.3
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Unknown error
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE251010_1837.txt
+229 Entering Extended Passive Mode (|||40043|)
+150 Starting data transfer.
+226 Operation successful
+ 13104 Byte in 0.001 Sekunden übertragen. Übertragungsgeschwindigkeit 13418.496 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2025-10-17-18.41.22.521944   17.10.2025   18.41.22
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.10.3
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Unknown error
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE251017_1841.txt
+229 Entering Extended Passive Mode (|||40048|)
+150 Starting data transfer.
+226 Operation successful
+  5560 Byte in 0.002 Sekunden übertragen. Übertragungsgeschwindigkeit 2846.720 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2025-10-24-18.38.30.739422   24.10.2025   18.38.30
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.10.3
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Unknown error
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE251024_1838.txt
+229 Entering Extended Passive Mode (|||40035|)
+150 About to start data transfer.
+226 Operation successful
+  8340 Byte in 0.005 Sekunden übertragen. Übertragungsgeschwindigkeit 1708.032 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2025-10-31-18.40.39.291399   31.10.2025   18.40.39
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.10.3
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Unknown error
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE251031_1840.txt
+229 Entering Extended Passive Mode (|||40041|)
+150 Starting data transfer.
+226 Operation successful
+ 16624 Byte in 0.007 Sekunden übertragen. Übertragungsgeschwindigkeit 2431.854 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2025-11-07-18.39.32.005690   07.11.2025   18.39.32
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.10.3
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 Unknown error
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE251107_1839.txt
+229 Entering Extended Passive Mode (|||40040|)
+150 Starting data transfer.
+226 Operation successful
+ 18608 Byte in 0.006 Sekunden übertragen. Übertragungsgeschwindigkeit 3175.765 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2025-11-14-18.36.05.628525   14.11.2025   18.36.05
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.11.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 No such file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE251114_1836.txt
+229 Entering Extended Passive Mode (|||40010|)
+150 Starting data transfer.
+226 Operation successful
+  2836 Byte in 0.006 Sekunden übertragen. Übertragungsgeschwindigkeit 484.011 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2025-11-21-18.37.23.291954   21.11.2025   18.37.23
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.11.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 No such file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE251121_1837.txt
+229 Entering Extended Passive Mode (|||40045|)
+150 Starting data transfer.
+226 Operation successful
+ 12196 Byte in 0.008 Sekunden übertragen. Übertragungsgeschwindigkeit 1561.088 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2025-11-28-19.33.06.387139   28.11.2025   19.33.06
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.11.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 No such file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE251128_1933.txt
+229 Entering Extended Passive Mode (|||40007|)
+150 Starting data transfer.
+226 Operation successful
+ 15884 Byte in 0.003 Sekunden übertragen. Übertragungsgeschwindigkeit 5421.739 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2025-12-05-02.02.34.561840   05.12.2025   02.02.34
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.11.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 No such file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE251205_0202.txt
+229 Entering Extended Passive Mode (|||40030|)
+150 Starting data transfer.
+226 Operation successful
+  1872 Byte in 0.006 Sekunden übertragen. Übertragungsgeschwindigkeit 319.488 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2025-12-12-18.38.03.910684   12.12.2025   18.38.03
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.11.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 No such file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE251212_1838.txt
+229 Entering Extended Passive Mode (|||40039|)
+150 Starting data transfer.
+226 Operation successful
+ 19740 Byte in 0.004 Sekunden übertragen. Übertragungsgeschwindigkeit 5053.440 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2025-12-19-18.39.41.231626   19.12.2025   18.39.41
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.11.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 No such file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE251219_1839.txt
+229 Entering Extended Passive Mode (|||40009|)
+150 Starting data transfer.
+226 Operation successful
+ 19628 Byte in 0.002 Sekunden übertragen. Übertragungsgeschwindigkeit 10049.536 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2025-12-26-18.37.43.773572   26.12.2025   18.37.43
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.11.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 No such file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE251226_1837.txt
+229 Entering Extended Passive Mode (|||40009|)
+150 Starting data transfer.
+226 Operation successful
+  3744 Byte in 0.002 Sekunden übertragen. Übertragungsgeschwindigkeit 1916.928 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2026-01-09-18.37.26.828385   09.01.2026   18.37.26
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.11.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 No such file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE260109_1837.txt
+229 Entering Extended Passive Mode (|||40004|)
+425 Use PORT, PASV or EPSV first.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2026-01-16-18.38.32.600416   16.01.2026   18.38.32
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.11.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 No such file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE260116_1838.txt
+229 Entering Extended Passive Mode (|||40015|)
+150 About to start data transfer.
+425 Unable to build data connection: EINVAL - Invalid argument passed
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2026-01-23-18.41.26.058370   23.01.2026   18.41.26
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.11.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 No such file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE260123_1841.txt
+229 Entering Extended Passive Mode (|||40027|)
+150 About to start data transfer.
+425 Unable to build data connection: EINVAL - Invalid argument passed
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2026-01-30-18.39.17.372045   30.01.2026   18.39.17
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.11.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 No such file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE260130_1839.txt
+229 Entering Extended Passive Mode (|||40021|)
+150 About to start data transfer.
+226 Operation successful
+  7488 Byte in 0.007 Sekunden übertragen. Übertragungsgeschwindigkeit 1095.387 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2026-02-06-18.37.27.590149   06.02.2026   18.37.27
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.11.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 No such file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE260206_1837.txt
+229 Entering Extended Passive Mode (|||40009|)
+150 About to start data transfer.
+226 Operation successful
+  4652 Byte in 0.017 Sekunden übertragen. Übertragungsgeschwindigkeit 280.215 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2026-02-13-18.37.58.584057   13.02.2026   18.37.58
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.11.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 No such file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE260213_1837.txt
+229 Entering Extended Passive Mode (|||40040|)
+150 About to start data transfer.
+226 Operation successful
+  8452 Byte in 0.009 Sekunden übertragen. Übertragungsgeschwindigkeit 961.650 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2026-02-20-18.43.07.075805   20.02.2026   18.43.07
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.11.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 No such file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE260220_1843.txt
+229 Entering Extended Passive Mode (|||40014|)
+150 Starting data transfer.
+226 Operation successful
+ 30176 Byte in 0.003 Sekunden übertragen. Übertragungsgeschwindigkeit 10300.074 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2026-02-27-18.39.58.635678   27.02.2026   18.39.58
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.11.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 No such file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE260227_1839.txt
+229 Entering Extended Passive Mode (|||40034|)
+425 Use PORT, PASV or EPSV first.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2026-03-06-18.37.48.886739   06.03.2026   18.37.48
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.11.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 No such file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE260306_1837.txt
+229 Entering Extended Passive Mode (|||40016|)
+150 Starting data transfer.
+226 Operation successful
+  9360 Byte in 0.002 Sekunden übertragen. Übertragungsgeschwindigkeit 4792.320 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2026-03-13-18.41.29.368540   13.03.2026   18.41.29
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.11.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 No such file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE260313_1841.txt
+229 Entering Extended Passive Mode (|||40049|)
+150 About to start data transfer.
+226 Operation successful
+  9528 Byte in 0.003 Sekunden übertragen. Übertragungsgeschwindigkeit 3252.224 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2026-03-20-18.37.30.553689   20.03.2026   18.37.30
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.11.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 No such file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE260320_1837.txt
+229 Entering Extended Passive Mode (|||40021|)
+150 Starting data transfer.
+226 Operation successful
+  6580 Byte in 0.009 Sekunden übertragen. Übertragungsgeschwindigkeit 748.658 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2026-03-27-18.37.28.346197   27.03.2026   18.37.28
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.11.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 No such file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE260327_1837.txt
+229 Entering Extended Passive Mode (|||40002|)
+150 Starting data transfer.
+226 Operation successful
+  5672 Byte in 0.002 Sekunden übertragen. Übertragungsgeschwindigkeit 2904.064 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2026-04-03-18.39.15.437297   03.04.2026   18.39.15
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.11.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 No such file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE260403_1839.txt
+229 Entering Extended Passive Mode (|||40002|)
+425 Use PORT, PASV or EPSV first.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2026-04-10-18.38.19.520787   10.04.2026   18.38.19
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.11.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 No such file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE260410_1838.txt
+229 Entering Extended Passive Mode (|||40019|)
+425 Use PORT, PASV or EPSV first.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2026-04-17-18.38.44.832506   17.04.2026   18.38.44
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.11.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 No such file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE260417_1838.txt
+229 Entering Extended Passive Mode (|||40035|)
+425 Use PORT, PASV or EPSV first.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2026-04-24-18.57.34.035293   24.04.2026   18.57.34
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.11.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 No such file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE260424_1857.txt
+229 Entering Extended Passive Mode (|||40023|)
+150 Starting data transfer.
+226 Operation successful
+ 14320 Byte in 0.005 Sekunden übertragen. Übertragungsgeschwindigkeit 2932.736 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2026-05-01-18.37.52.216237   01.05.2026   18.37.52
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.11.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 No such file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE260501_1837.txt
+229 Entering Extended Passive Mode (|||40047|)
+150 Starting data transfer.
+226 Operation successful
+ 14752 Byte in 0.007 Sekunden übertragen. Übertragungsgeschwindigkeit 2158.007 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2026-05-08-18.40.00.653267   08.05.2026   18.40.00
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.11.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 No such file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE260508_1839.txt
+229 Entering Extended Passive Mode (|||40026|)
+150 Starting data transfer.
+226 Operation successful
+  9528 Byte in 0.008 Sekunden übertragen. Übertragungsgeschwindigkeit 1219.584 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2026-05-15-18.38.51.941501   15.05.2026   18.38.51
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.11.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 No such file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE260515_1838.txt
+229 Entering Extended Passive Mode (|||40006|)
+150 About to start data transfer.
+226 Operation successful
+  2836 Byte in 0.003 Sekunden übertragen. Übertragungsgeschwindigkeit 968.021 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2026-05-22-18.41.59.192103   22.05.2026   18.41.59
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.11.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 No such file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE260522_1841.txt
+229 Entering Extended Passive Mode (|||40043|)
+150 Starting data transfer.
+226 Operation successful
+ 14124 Byte in 0.007 Sekunden übertragen. Übertragungsgeschwindigkeit 2066.139 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2026-05-29-18.38.09.813079   29.05.2026   18.38.09
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.11.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 No such file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE260529_1838.txt
+229 Entering Extended Passive Mode (|||40006|)
+150 Starting data transfer.
+226 Operation successful
+  2780 Byte in 0.004 Sekunden übertragen. Übertragungsgeschwindigkeit 711.680 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2026-06-05-18.38.31.189076   05.06.2026   18.38.31
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.11.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 No such file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE260605_1838.txt
+229 Entering Extended Passive Mode (|||40050|)
+150 About to start data transfer.
+226 Operation successful
+  6580 Byte in 0.005 Sekunden übertragen. Übertragungsgeschwindigkeit 1347.584 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2026-06-12-18.40.13.468420   12.06.2026   18.40.13
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.11.1
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 No such file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE260612_1840.txt
+229 Entering Extended Passive Mode (|||40014|)
+150 Starting data transfer.
+226 Operation successful
+ 27004 Byte in 0.006 Sekunden übertragen. Übertragungsgeschwindigkeit 4608.683 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2026-06-19-18.37.58.164245   19.06.2026   18.37.58
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.12.6
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 No such file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE260619_1837.txt
+229 Entering Extended Passive Mode (|||40043|)
+150 About to start data transfer.
+226 Operation successful
+ 15088 Byte in 0.006 Sekunden übertragen. Übertragungsgeschwindigkeit 2575.019 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2026-06-26-18.38.37.195279   26.06.2026   18.38.37
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.12.6
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 No such file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE260626_1838.txt
+229 Entering Extended Passive Mode (|||40014|)
+150 Starting data transfer.
+226 Operation successful
+  9192 Byte in 0.005 Sekunden übertragen. Übertragungsgeschwindigkeit 1882.522 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2026-07-03-18.39.16.856033   03.07.2026   18.39.16
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.12.6
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 No such file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE260703_1839.txt
+229 Entering Extended Passive Mode (|||40029|)
+150 About to start data transfer.
+226 Operation successful
+ 18720 Byte in 0.002 Sekunden übertragen. Übertragungsgeschwindigkeit 9584.640 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2026-07-17-18.37.18.435034   17.07.2026   18.37.18
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.12.6
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 No such file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE260717_1837.txt
+229 Entering Extended Passive Mode (|||40017|)
+150 Starting data transfer.
+226 Operation successful
+ 18384 Byte in 0.002 Sekunden übertragen. Übertragungsgeschwindigkeit 9412.608 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2026-07-24-18.37.22.534156   24.07.2026   18.37.22
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.12.6
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 No such file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE260724_1837.txt
+229 Entering Extended Passive Mode (|||40042|)
+150 Starting data transfer.
+226 Operation successful
+ 11232 Byte in 0.002 Sekunden übertragen. Übertragungsgeschwindigkeit 5750.784 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2026-07-31-18.36.27.588031   31.07.2026   18.36.27
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.12.6
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 No such file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE260731_1836.txt
+229 Entering Extended Passive Mode (|||40030|)
+150 Starting data transfer.
+226 Operation successful
+ 14920 Byte in 0.001 Sekunden übertragen. Übertragungsgeschwindigkeit 15278.080 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2026-08-07-18.35.58.290928   07.08.2026   18.35.58
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.12.6
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 No such file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE260807_1835.txt
+229 Entering Extended Passive Mode (|||40021|)
+150 Starting data transfer.
+226 Operation successful
+ 12084 Byte in 0.004 Sekunden übertragen. Übertragungsgeschwindigkeit 3093.504 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2026-08-14-18.35.20.327094   14.08.2026   18.35.20
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.12.6
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 No such file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE260814_1835.txt
+229 Entering Extended Passive Mode (|||40026|)
+150 Starting data transfer.
+226 Operation successful
+  7544 Byte in 0.001 Sekunden übertragen. Übertragungsgeschwindigkeit 7725.056 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2026-08-21-18.35.47.962075   21.08.2026   18.35.47
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.12.6
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 No such file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE260821_1835.txt
+229 Entering Extended Passive Mode (|||40037|)
+150 Starting data transfer.
+226 Operation successful
+ 14236 Byte in 0.002 Sekunden übertragen. Übertragungsgeschwindigkeit 7288.832 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2026-08-28-18.36.16.796011   28.08.2026   18.36.16
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.12.6
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 No such file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE260828_1836.txt
+229 Entering Extended Passive Mode (|||40024|)
+150 Starting data transfer.
+226 Operation successful
+  6468 Byte in 0.001 Sekunden übertragen. Übertragungsgeschwindigkeit 6623.232 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2026-09-04-18.39.36.015507   04.09.2026   18.39.36
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.12.6
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 No such file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE260904_1839.txt
+229 Entering Extended Passive Mode (|||40035|)
+150 Starting data transfer.
+226 Operation successful
+ 32956 Byte in 0.003 Sekunden übertragen. Übertragungsgeschwindigkeit 11248.981 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+2026-09-11-18.36.33.156830   11.09.2026   18.36.33
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host FTP.TIBSONLINE.DE, Adresse 89.63.13.39 über Port 21 herzustellen.
+220-FileZilla Server 1.12.6
+220 Please visit https://filezilla-project.org/
+Anmelde-ID (gang) eingeben:
+331 Please, specify the password.
+230 Login successful.
+UNIX emulated by FileZilla.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Wrong command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+550 No such file or directory
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE260911_1836.txt
+229 Entering Extended Passive Mode (|||40032|)
+150 Starting data transfer.
+226 Operation successful
+  8452 Byte in 0.001 Sekunden übertragen. Übertragungsgeschwindigkeit 8654.848 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.

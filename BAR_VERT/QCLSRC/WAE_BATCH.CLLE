@@ -1,0 +1,102 @@
+/*       PROGRAMMNAME:  WAE_BATCH                                    */
+/*       BESCHREIBUNG:                                               */
+/*                                                                   */
+/*                                                                   */
+/*                                                                   */
+/*  GEÄNDERT:  7.12.12 SCHNEIDER  PRÜFUNG, OB BAND EINGELEGT         */
+/*********************************************************************/
+             PGM        PARM(&LOKATION)
+
+             DCLF       FILE(BAR_VERT/#PGMAUFR) OPNID(B)
+             DCL        VAR(&DATUM) TYPE(*CHAR) LEN(6)
+             DCL        VAR(&DATUMC) TYPE(*CHAR) LEN(6)
+             DCL        VAR(&DATUMS) TYPE(*DEC) LEN(6 0)
+             DCL        VAR(&TIME) TYPE(*CHAR) LEN(6)
+             DCL        VAR(&LAUFTAG) TYPE(*CHAR) LEN(4)
+             DCL        VAR(&LOKATION) TYPE(*CHAR) LEN(3)
+             DCL        VAR(&FIRMA) TYPE(*CHAR) LEN(2) VALUE('  ')
+
+/*           GOTO       CMDLBL(TEST)                            */
+
+             CHGJOB     LOG(4 00 *SECLVL) LOGCLPGM(*YES) +
+                          LOGOUTPUT(*JOBEND)
+
+/*___   ermitteln firma ____________________________________________________ */
+             CALL       PGM(TVRELWAECO/DOWR000) PARM(&LOKATION &FIRMA)
+
+/*___________________________________________________________________  _______*/
+             CALLSUBR   SUBR(ROUTINE) /* Routineaufgaben */
+
+
+/******************************************************************************/
+/*____________________________________________________________________________*/
+             SUBR       SUBR(ROUTINE) /* Routineaufgaben */
+/*___________________________________________________________________  _______*/
+/*    *-aufruf von programmen aus datei #pgmaufr in bar_vert           -------*/
+/*    *-wenn parameter "&lauf" in datei = "N", kein aufruf             -------*/
+/*    *-wenn parameter "&batch" in datei = "J", batchaufruf            -------*/
+/*    *-kann bei bedarf genutzt werden                                 -------*/
+/*___________________________________________________________________  _______*/
+ LOOP2:      RCVF       OPNID(B)
+             MONMSG     MSGID(CPF0864) EXEC(GOTO CMDLBL(ENDROUT))
+
+             IF         COND(&B_JOB *EQ '          ') THEN(CHGVAR +
+                          VAR(&B_JOB) VALUE('ROUTINE_3'))
+/*___________________________________________________________________  _______*/
+/*    interaktiv mit parameterübergabe                                 -------*/
+/*___________________________________________________________________  _______*/
+             IF         COND(&B_LAUF *EQ 'J' *AND &B_BATCH *EQ 'N' +
+                          *AND &B_PARA_AUSG *EQ 'J') THEN(DO)
+             CALL       PGM(&B_LIB/&B_PROGRAMM) PARM(&B_PARAMETER +
+                          &B_PARAMETER2 &B_PARAMETER3 &B_PARAMETER4 +
+                          &B_PARAMETER5 &B_PARAMETER6 &B_PARAMETER7 +
+                          &B_PARAMETER8 &B_PARAMETER9 &B_PARAMETE10)
+             MONMSG     MSGID(CPF0000)
+  /*         MONMSG     MSGID(CPF9801)  EXEC(GOTO NOTFOUND)    */
+             ENDDO
+/*___________________________________________________________________  _______*/
+/*    interaktiv ohne parameterübergabe                                -------*/
+/*___________________________________________________________________  _______*/
+             IF         COND(&B_LAUF *EQ 'J' *AND &B_BATCH *EQ 'N' +
+                          *AND &B_PARA_AUSG *EQ 'N') THEN(DO)
+             CALL       PGM(&B_LIB/&B_PROGRAMM)
+             MONMSG     MSGID(CPF0000)
+             ENDDO
+/*___________________________________________________________________  _______*/
+/*    batch programm mit parameterübergabe                             -------*/
+/*___________________________________________________________________  _______*/
+             IF         COND(&B_LAUF *EQ 'J' *AND &B_BATCH *EQ 'J' +
+                          *AND &B_BEFEHL *EQ 'N') THEN(DO)
+             SBMJOB     CMD(CALL PGM(&B_LIB/&B_PROGRAMM) +
+                          PARM(&B_PARAMETER &B_PARAMETER2 +
+                          &B_PARAMETER3 &B_PARAMETER4 &B_PARAMETER5 +
+                          &B_PARAMETER6 &B_PARAMETER7 &B_PARAMETER8 +
+                          &B_PARAMETER9 &B_PARAMETE10)) +
+                          JOB(&B_JOB) JOBD(BAR_VERT/SICHERUNG) +
+                          JOBQ(&B_JOBQ) LOGCLPGM(*YES)
+             MONMSG     MSGID(CPF0000)
+             ENDDO
+
+/*___________________________________________________________________  _______*/
+/*    batch cmd oder befehls-string                                    -------*/
+/*___________________________________________________________________  _______*/
+             IF         COND(&B_LAUF *EQ 'J' *AND &B_BATCH *EQ 'J' +
+                          *AND &B_BEFEHL *EQ 'J') THEN(DO)
+             SBMJOB     JOB(&B_JOB) JOBD(BAR_VERT/SICHERUNG) +
+                          JOBQ(&B_JOBQ) RQSDTA(&B_INHALT_B) +
+                          LOGCLPGM(*YES)
+             MONMSG     MSGID(CPF0000)
+             ENDDO
+
+ NOTFOUND:   GOTO       CMDLBL(LOOP2)
+
+ ENDROUT:    ENDSUBR
+
+/*____________________________________________________________________________*/
+             SUBR       SUBR(TRDSBSEND) /* beenden sbs trend  */
+             CALL       PGM(BAR_VERT/SBSTRDEND)
+             ENDSUBR
+/*____________________________________________________________________________*/
+
+
+ ENDE:       ENDPGM

@@ -1,0 +1,14 @@
+AS400 chiton73Cause61Blinding
+ascii
+NA 1
+lcd /TECCOM
+cd PrefileTEST
+cd import
+PUT INVENTORY.dat INVENTORY.DAT
+PUT MATERIAL.dat MATERIAL.DAT
+PUT MATPRICE.dat MATPRICE.DAT
+
+
+
+
+quit

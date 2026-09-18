@@ -1,0 +1,34 @@
+/*-------------------------------------------------*/
+/* Order Dateien kopieren                          */
+/*-------------------------------------------------*/
+             PGM        PARM(&SUBSIDIARY &HEADERFILE &LINEFILE)
+
+             DCL        VAR(&SUBSIDIARY) TYPE(*CHAR) LEN(2)
+             DCL        VAR(&HEADERFILE) TYPE(*CHAR) LEN(20)
+             DCL        VAR(&LINEFILE) TYPE(*CHAR) LEN(20)
+             DCL        VAR(&FILE) TYPE(*CHAR) LEN(45)
+             DCL        VAR(&ORDDIR) TYPE(*CHAR) LEN(45)
+             DCL        VAR(&ORDDIRARCH) TYPE(*CHAR) LEN(45)
+
+             CHGVAR     VAR(&ORDDIR) VALUE('/waecoedi/' *TCAT +
+                          &subsidiary)
+             CHGVAR     VAR(&ORDDIRARCH) VALUE(&ORDDIR *TCAT '/Archiv')
+
+/* Header-Datei kopieren */
+             CHGVAR     VAR(&FILE) VALUE(&ORDDIR *TCAT '/' *TCAT +
+                          &HEADERFILE)
+             MOV        OBJ(&FILE) TODIR(&ORDDIRARCH)
+             MONMSG     MSGID(CPF0000)
+             RMVLNK     OBJLNK(&FILE)
+             MONMSG     MSGID(CPF0000)
+
+/* Line-Datei kopieren */
+             CHGVAR     VAR(&FILE) VALUE(&ORDDIR *TCAT '/' *TCAT +
+                          &LINEFILE)
+             MOV        OBJ(&FILE) TODIR(&ORDDIRARCH)
+             MONMSG     MSGID(CPF0000)
+             RMVLNK     OBJLNK(&FILE)
+             MONMSG     MSGID(CPF0000)
+
+
+             ENDPGM

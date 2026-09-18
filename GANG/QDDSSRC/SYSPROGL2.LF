@@ -1,0 +1,9 @@
+      * Physische Datei: SYSPROGPF
+      * ANLEGEDATUM: OKTOBER 2009
+      * ÄNDERUNGEN:
+      *
+     A          R SYSPROGPFR                PFILE(SYSPROGPF)
+     A                                      TEXT('PARAMETER')
+     A          K S4USRP
+     A          K S4OPT
+     A          S S4OPT                     COMP(NE '  ')

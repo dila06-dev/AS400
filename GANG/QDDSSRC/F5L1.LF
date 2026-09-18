@@ -1,0 +1,16 @@
+      * Physische Datei: F5 STRUKTUR
+      * ANLEGEDATUM: FEBRUAR 2010
+      * ÄNDERUNGEN:
+      *
+     A****************                      UNIQUE
+     A          R F5                        PFILE(F5)
+     A                                      TEXT('STRUKTUR F5')
+     A          K FAK1010
+     A          K FAK1020
+     A          K FAK1030
+     A          K FAK1040
+     A          K FAK1050
+     A          K FAK1060
+     A          K FAK1070
+     A          K FAK1750
+     A          S FAK1730                   CMP(EQ '0')

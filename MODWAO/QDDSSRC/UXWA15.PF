@@ -1,0 +1,17 @@
+     A**************************************************************************
+     A*  Copyright 2021 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Jechtinger Straße 9                              *
+     A*                       DE 79111 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Lieferant/Versandbedingung                                            *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: JK 31.08.2021 DOMETIC Projekt 16637                         *
+     A*  Änderung: XX XX.XX.XXXX                                               *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R UXWA151
+     A*
+     A            UXWA15FIRMR               REFFLD(WA151/WA15FIRM *LIBL/WA15)
+     A            UXWA15LFNRR               REFFLD(WA151/WA15LFNR *LIBL/WA15)
+     A            UXWA15VSBDR               REFFLD(WA151/WA15VSBD *LIBL/WA15)

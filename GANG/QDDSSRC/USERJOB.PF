@@ -1,0 +1,12 @@
+     A                                      UNIQUE
+     A          R USERJOBR
+     A            #FIRMA         1A         TEXT('FIRMA')
+     A            #USER         10A         TEXT('USER')
+     A            #WSTATION     10A         TEXT('WORKSTATION')
+     A            #MSGF         10A         TEXT('MESSAGEFILE')
+     A            #PRINTER      10A         TEXT('PRINTER')
+     A            #ZEILEN        3S 0       TEXT('ZEILEN')
+     A            #AKTIV         1A         TEXT('AKTIV')
+     A
+     A          K #FIRMA
+     A          K #USER

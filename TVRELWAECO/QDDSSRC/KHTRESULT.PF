@@ -1,0 +1,50 @@
+     A*
+     A*         DATUM IMMER TT.MM.JJJJ
+     A*         ZEIT  IMMER HH:MM
+     A          R KHTRESULTR                TEXT('____')
+     A*****************************************************************
+     A            ITEM          15A         COLHDG('ITEM    ')
+     A            FUNKTION       3A         COLHDG('FUNKTION')
+     A            DESCRIPT      30A         COLHDG('DESCRIPT')
+     A            TEAN          15A         COLHDG('T_EAN    ')
+     A            TLENGTH       11S 4       COLHDG('T_LENGTH ')
+     A            TWIDTH        11S 4       COLHDG('T_WIDTH  ')
+     A            THEIGHT       11S 4       COLHDG('T_HEIGHT ')
+     A            TQUANT        11S 4       COLHDG('T_QUANT  ')
+     A
+     A            TVOLUME       11S 4       COLHDG('T_VOLUME ')
+     A            TCROSS_W      11S 4       COLHDG('T_CROSS_W')
+     A            TNETT_W       11S 4       COLHDG('T_NETT_W ')
+     A            TLADEM         3A         COLHDG('T_LADEM  ')
+     A************
+     A            LEAN          15A         COLHDG('L_EAN    ')
+     A            LLENGTH       11S 4       COLHDG('L_LENGTH ')
+     A            LWIDTH        11S 4       COLHDG('L_WIDTH  ')
+     A            LHEIGHT       11S 4       COLHDG('L_HEIGHT ')
+     A            LQUANT        11S 4       COLHDG('L_QUANT  ')
+     A
+     A            LVOLUME       11S 4       COLHDG('L_VOLUME ')
+     A            LCROSS_W      11S 4       COLHDG('L_CROSS_W')
+     A            LNETT_W       11S 4       COLHDG('L_NETT_W ')
+     A            LLADEM         3A         COLHDG('L_LADEM  ')
+     A*****************************************************************
+     A            BMORT          3A         COLHDG('LAGER- ORT')
+     A            BMBER          2A         COLHDG('LAGER- BER.')
+     A            BMGNGE         4S 0       COLHDG('GANG-NR EINLAG.')
+     A            BMGANG         4S 0       COLHDG('GANG- NR')
+     A            BMREG          4S 0       COLHDG('REGAL')
+     A            BMHOR          3S 0       COLHDG('HORIZ.')
+     A            BMVER          2S 0       COLHDG('VERT.')
+     A            BMANZV         2S 0       COLHDG('ANZAHL VERTIKALE')
+     A            BMFACH         2S 0       COLHDG('FACH- GROESSE')
+     A            BMRGKY         4S 0       COLHDG('REGAL/GANG KEY')
+     A            BMEGEW        14S 5       COLHDG('GEWICHT       ')
+     A            ALAERT        12A         COLHDG('ALERT         ')
+     A*****************************************************************
+     A            H1            10A         TEXT('status')
+     A            H2              L         TEXT('Date of transmissing')
+     A            H3              Z         TEXT('TIMESTAMP')
+     A            H4           256A         TEXT('statusII')
+     A            H5              L         TEXT('Date of UPLOAD      ')
+     A            H6              Z         TEXT('TIMESTAMP OF UPLOAD')
+     A

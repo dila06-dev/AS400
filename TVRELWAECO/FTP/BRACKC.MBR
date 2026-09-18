@@ -1,0 +1,11 @@
+A5363     kK#3dz6glIQcEiJL
+REM  sftp://files.competec.ch/pricelistimport
+REM  files.competec.ch
+LCD TVRELWAECO
+ASCII
+NAMEFMT 0
+REM CD /TRANSFER/INCOMING
+REM cd /PRICELISTIMPORT
+mdelete *
+APPEND BRACK_P BRACK-20260918101907.csv
+QUIT

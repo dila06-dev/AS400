@@ -1,0 +1,17 @@
+      * Physische Datei: KOND
+      * ANLEGEDATUM: OKTOBER 2010
+      *SORT:        ...
+      * ÄNDERUNGEN:
+      * AUSSCHLUSS:  ...
+     A
+     A*                                     UNIQUE
+     A          R PREI1                     PFILE(PREI)
+     A
+     A                                      TEXT('PREISDATEI')
+     A          K PRFIRM
+     A          K PRBEGR
+     A          K PRKDLI
+     A          K PRTENR
+     A          K PRWACD
+     A          K PRGADA
+     A          S PRBEGR                    CMP(EQ 'LS1')

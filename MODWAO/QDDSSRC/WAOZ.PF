@@ -1,0 +1,38 @@
+     A**************************************************************************
+     A*  Copyright 2013 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Lagerkennzahlen                                                       *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: SC 02.05.2013 Mail Herr Bley/Herr Bartelt 20130502-006      *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R WAOZ1
+     A*-------------------------------------------------------------------------
+     A            WAOZFIRM  R               REFFLD(##FIRM)
+     A            WAOZTENR  R               REFFLD(##TENR)
+     A            WAOZTBZ1  R               REFFLD(##BEZ1)
+     A            WAOZLAG1  R               REFFLD(##LAGB)
+     A                                      COLHDG('Bestand Lager 001')
+     A                                      TEXT('Bestand Lager 001')
+     A            WAOZLAG2  R               REFFLD(##LAGB)
+     A                                      COLHDG('Bestand Lager 002')
+     A                                      TEXT('Bestand Lager 002')
+     A            WAOZSTPR  R               REFFLD(##PREI)
+     A                                      COLHDG('Standardpreis')
+     A                                      TEXT('Standardpreis')
+     A            WAOZBDA1  R               REFFLD(##BDAT)
+     A                                      COLHDG('Ltz Ent Lager 001')
+     A                                      TEXT('Letzte Entnahme 001')
+     A            WAOZBDA2  R               REFFLD(##BDAT)
+     A                                      COLHDG('Ltz Ent Lager 002')
+     A                                      TEXT('Letzte Entnahme 002')
+     A            WAOZVBR1  R               REFFLD(##BDAT)
+     A                                      COLHDG('Verbrauch 001')
+     A                                      TEXT('Verbrauch 001')
+     A            WAOZVBR2  R               REFFLD(##BDAT)
+     A                                      COLHDG('Verbrauch 002')
+     A                                      TEXT('Verbrauch 002')

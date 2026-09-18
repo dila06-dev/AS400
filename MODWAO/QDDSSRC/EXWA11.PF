@@ -1,0 +1,42 @@
+     A**************************************************************************
+     A*  Copyright 2022 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Jechtinger Straße 9                              *
+     A*                       DE 79111 Freiburg                                *
+     A*  --------------------------------------------------------------------- *
+     A*  Kommunikationsbereich Zuordnung Auftragswerk <- Artikel-Werk          *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: PH 08.12.2022 Projekt 220567-02                             *
+     A*  Änderung: XX XX.XX.XXXX                                               *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R EXWA111
+     A*-------------------------------------------------------------------------
+     A* Programmstatus
+     A*-------------------------------------------------------------------------
+     A            EXWA11PGSTR               REFFLD(##PGST)
+     A            EXWA11PROGR               REFFLD(##PROG)
+     A            EXWA11FLDNR               REFFLD(##FLDN)
+     A*-------------------------------------------------------------------------
+     A* ON/OFF KZ für Prüfungen
+     A*-------------------------------------------------------------------------
+     A            EXWA11IFKZR               REFFLD(##IFKZ)
+     A            EXWA11FR01R               REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* Key-Felder
+     A*-------------------------------------------------------------------------
+     A            EXWA11WKNRR               REFFLD(WA111/WA11WKNR *LIBL/WA11)
+     A            EXWA11TEWKR               REFFLD(WA111/WA11TEWK *LIBL/WA11)
+     A            EXWA11FR02R  256          REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* Kopier-Begriff NACH
+     A*-------------------------------------------------------------------------
+     A            EXWA11NWKNR               REFFLD(WA111/WA11WKNR *LIBL/WA11)
+     A            EXWA11NTEWR               REFFLD(WA111/WA11TEWK *LIBL/WA11)
+     A            EXWA11FR03R  256          REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* evt. weitere Felder für Update oder Prüfungen
+     A*-------------------------------------------------------------------------
+     A            EXWA11TSTPR               REFFLD(WA111/WA11TSTP *LIBL/WA11)
+     A            EXWA11ERUSR               REFFLD(WA111/WA11ERUS *LIBL/WA11)
+     A            EXWA11FR04R  417          REFFLD(##FREI)

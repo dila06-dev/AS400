@@ -1,0 +1,48 @@
+/*-------------------------------------------------*/
+/*    * PROGRAMMNAME.:SBGPRS00_P                                             */
+/*    * FUNKTION.....:CALL SBGPRS00_C VERBUCHUNG PREISE IN SBGPRS00          */
+/*    * OKTOBER 2009                                                          */
+/*    *                                                                       */
+/*    *                                                                       */
+/*    *-ÄNDERUNGSDIENST-------------------------------------------------------*/
+/*    * XX.XX.XX                                              PGMR.....       */
+/******************************************************************************/
+
+             PGM
+
+             DCL        VAR(&PARM)    TYPE(*CHAR) LEN(05)
+             DCL        VAR(&MD)      TYPE(*CHAR) LEN(256) VALUE(' ')
+
+             DCL        VAR(&ERROR1)  TYPE(*CHAR) LEN(01) VALUE('0')
+             DCL        VAR(&ERROR2)  TYPE(*CHAR) LEN(01) VALUE('0')
+             DCL        VAR(&RCD)     TYPE(*CHAR) LEN(01) VALUE('0')
+             DCL        VAR(&NBRCURRCD) TYPE(*DEC) LEN(10)
+
+             ADDLIBLE   LIB(BAR_KALK) POSITION(*LAST)
+             MONMSG     MSGID(CPF0000) EXEC(CHGVAR VAR(&ERROR1) +
+                          VALUE('1'))
+             ADDLIBLE   LIB(GANG) POSITION(*LAST)
+             MONMSG     MSGID(CPF0000) EXEC(CHGVAR VAR(&ERROR2) +
+                          VALUE('1'))
+
+/*    *SIND SÄTZE IN ÜBERGABE VORHANDEN??                                    */
+/*    *WENN JA, IN ÜBERGABEDATEI BRINGEN, VERARBEITUNGSROUTINE               */
+/*    *AUFRUFEN UND ÜBERGABEDATEI LÖSCHEN                                    */
+             QSYS/RTVMBRD FILE(GANG/E_PREISE#1) NBRCURRCD(&NBRCURRCD)
+             IF         COND(&NBRCURRCD *NE 0) THEN(DO)
+                CALL       PGM(DUMMY512) PARM(&MD '#PR0100' ' ' ' ' +
+                             'E_PREIS' 'BAR_KALK' '*ADD')
+                MONMSG     MSGID(CPF0000)
+                CALL       PGM(SBGPRS00_C) PARM(&PARM)
+                DLTF       FILE(GANG/E_PREISE#1)
+                MONMSG     MSGID(CPF0000)
+             ENDDO
+ ENDPGM:
+             IF         COND(&ERROR1 = '0') THEN(DO)
+                RMVLIBLE   LIB(BAR_KALK)
+             ENDDO
+             IF         COND(&ERROR2 = '0') THEN(DO)
+                RMVLIBLE   LIB(GANG)
+             ENDDO
+
+             ENDPGM

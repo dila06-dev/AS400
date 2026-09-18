@@ -1,0 +1,36 @@
+/*    * PROGRAMMNAME.:kalendercl                                             */
+/*    * FUNKTION.....:...                                                    */
+/*    * 11.03.13       schneider                                              */
+/*    *                                                                       */
+/*    * Änderung:                                                             */
+/*    *                                                                       */
+/*    *                                                                       */
+/*    *-aufruf sicherungdkalenderdatei                                       */
+/*    *                                                                      */
+/*    * Hinweis:                                                             */
+/*    * sind in der kalenderdatei (bar_vert/kalender) keine einträge         */
+/*    * in den zeiten vorhanden, wird die jeweilige standardzeit             */
+/*    * aus dtaara bar_vert/tagesrg vorbelegt                                */
+/*    *                                                                       */
+/******************************************************************************/
+             PGM
+
+             DCL        VAR(&TIMEEXV) TYPE(*CHAR) LEN(4)
+             DCL        VAR(&TIMEINV) TYPE(*CHAR) LEN(4)
+             DCL        VAR(&DATVOR) TYPE(*CHAR) LEN(1) VALUE('J')
+
+
+             ADDLIBLE   LIB(BAR_VERT) POSITION(*LAST)
+             MONMSG     MSGID(CPF0000)
+
+/*___   standardzeiten für faktura vorbelegen aus dtaara bar_vert/tagesrg___ */
+             RTVDTAARA  DTAARA(BAR_VERT/TAGESRG (1 4)) RTNVAR(&TIMEEXV)
+             RTVDTAARA  DTAARA(BAR_VERT/TAGESRG (51 4)) +
+                          RTNVAR(&TIMEINV)
+
+
+             CALL       PGM(BAR_VERT/KALENDERR) PARM(&DATVOR +
+                          &TIMEEXV &TIMEINV)
+
+
+             ENDPGM

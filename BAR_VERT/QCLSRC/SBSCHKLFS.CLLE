@@ -1,0 +1,29 @@
+/*       PROGRAMMNAME:  SBSCHKLFS                                    */
+/*       VERFASSER   :  Schneider    STAND:24.07.2026                */
+/*       BESCHREIBUNG:  Prüfung, ob trend-SBS aktiv. Wenn nein, dann */
+/*                      Starten ausgewählter SBS                     */
+/*                                                                   */
+/*                                                                   */
+/*                                                                   */
+/*********************************************************************/
+             PGM
+
+             DCL        VAR(&RC) TYPE(*CHAR) LEN(1) /* return code +
+                          ('1' = job is active; '0' = job is not +
+                          active) */
+
+             CHGJOB     LOG(4 00 *SECLVL) LOGCLPGM(*YES) +
+                          LOGOUTPUT(*JOBEND)
+
+/* ----starten subsysteme ----------------------------------------------------*/
+
+             CALL       PGM(MODWAO/CHKACTJOB) PARM(('DOMPGMV7') (&RC))
+             IF         COND(&RC *EQ '0') THEN(DO)
+             CALL       PGM(DOMPGMV7/LGPGM0020) PARM(('BATSTR')) /* +
+                          LFD starten */
+             MONMSG     MSGID(CPF0000)
+             DLYJOB     DLY(15)
+             ENDDO
+
+
+             ENDPGM

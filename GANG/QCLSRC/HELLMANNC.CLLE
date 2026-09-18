@@ -1,0 +1,38 @@
+/*********************************************************************/
+/*  BESCHREIBUNG:  Übergabe Kundenstamm nach Hellman-Interface       */
+/*                 restartfähig (Programm generiert Zwischendatei    */
+/*                 neu)                                              */
+/*  M.Gang                                                           */
+/*  Änderungsprotokoll                                               */
+/*********************************************************************/
+      PGM
+
+             DCL        VAR(&ERROR1) TYPE(*LGL) VALUE('0')
+             DCL        VAR(&ERROR2) TYPE(*LGL) VALUE('0')
+             DCL        VAR(&ERROR3) TYPE(*LGL) VALUE('0')
+
+             ADDLIBLE   LIB(GANG)
+             MONMSG     MSGID(CPF0000) EXEC(CHGVAR VAR(&ERROR1) +
+                          VALUE('0'))
+             MONMSG     MSGID(CPF2103) EXEC(CHGVAR VAR(&ERROR1) +
+                          VALUE('1'))
+             MONMSG     MSGID(CPF2106 CPF2110) EXEC(GOTO CMDLBL(ENDE))
+
+             CLRPFM     FILE(*LIBL/HELLADRPF)
+             MONMSG     MSGID(CPF0000) EXEC(GOTO CMDLBL(ENDE))
+
+             CALL       PGM(HELLADR)
+ /* Hier Ausgabe zwischen den Feldern Semikolon und am Satzende  */
+ /* CARRIAGE RETURN BZW. LINE FEED HEX'0D25'                     */
+
+             QSYS/CPYTOIMPF FROMFILE(*LIBL/HELLADRPF) +
+                          TOFILE(*LIBL/INTERF1024) MBROPT(*REPLACE) +
+                          RCDDLM(*CRLF) STRDLM(*NONE) +
+                          RMVBLANK(*BOTH) FLDDLM(';') DECPNT(*COMMA)
+             MONMSG     MSGID(CPF2817) EXEC(GOTO CMDLBL(ENDE))
+
+             IF         COND(&ERROR1 *EQ '0') THEN(RMVLIBLE +
+                          LIB(GANG))
+             ENDPGM
+
+ ENDE:       RCLRSC

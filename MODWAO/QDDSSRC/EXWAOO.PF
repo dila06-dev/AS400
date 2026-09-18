@@ -1,0 +1,53 @@
+     A**************************************************************************
+     A*  Copyright 2011 by    trend SWM                                        *
+     A*                       Verwaltungs GmbH                                 *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------- *
+     A*  Lagerzugang Fehler-Code                                               *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: RE 23.01.2012 DOMETIC Projekt 7558                          *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R EXWAOO1
+     A*-------------------------------------------------------------------------
+     A* Programmstatus
+     A*-------------------------------------------------------------------------
+     A            EXWAOOPGSTR               REFFLD(##PGST)
+     A            EXWAOOPROGR               REFFLD(##PROG)
+     A            EXWAOOFLDNR               REFFLD(##FLDN)
+     A*-------------------------------------------------------------------------
+     A* ON/OFF KZ für Prüfungen
+     A*-------------------------------------------------------------------------
+     A            EXWAOOIFKZR               REFFLD(##IFKZ)
+     A            EXWAOOYYKZR               REFFLD(##A001)
+     A                                      TEXT('ON/OFF-Feld für Prüfung 2')
+     A            EXWAOOFR01R               REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* Key-Felder
+     A*-------------------------------------------------------------------------
+     A            EXWAOOLGJJR               REFFLD(WAOO1/WAOOLGJJ *LIBL/WAOO)
+     A            EXWAOOLGNRR               REFFLD(WAOO1/WAOOLGNR *LIBL/WAOO)
+     A            EXWAOOLGPOR               REFFLD(WAOO1/WAOOLGPO *LIBL/WAOO)
+     A            EXWAOOFBNRR               REFFLD(WAOO1/WAOOFBNR *LIBL/WAOO)
+     A            EXWAOOTSTPR               REFFLD(WAOO1/WAOOTSTP *LIBL/WAOO)
+     A            EXWAOOFR02R  100          REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* Kopier-Begriff NACH
+     A*-------------------------------------------------------------------------
+     A            EXWAOONLGJR               REFFLD(WAOO1/WAOOLGJJ *LIBL/WAOO)
+     A            EXWAOONLGNR               REFFLD(WAOO1/WAOOLGNR *LIBL/WAOO)
+     A            EXWAOONLGPR               REFFLD(WAOO1/WAOOLGPO *LIBL/WAOO)
+     A            EXWAOONFBNR               REFFLD(WAOO1/WAOOFBNR *LIBL/WAOO)
+     A            EXWAOONTSTR               REFFLD(WAOO1/WAOOTSTP *LIBL/WAOO)
+     A            EXWAOOFR03R  100          REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* evt. weitere Felder für Update oder Prüfungen
+     A*-------------------------------------------------------------------------
+     A            EXWAOOERUSR               REFFLD(WAOO1/WAOOERUS *LIBL/WAOO)
+     A            EXWAOOFEATR               REFFLD(WAOO1/WAOOFEAT *LIBL/WAOO)
+     A            EXWAOOFEARR               REFFLD(WAOO1/WAOOFEAR *LIBL/WAOO)
+     A            EXWAOOFEUSR               REFFLD(WAOO1/WAOOFEUS *LIBL/WAOO)
+     A            EXWAOOFEBMR               REFFLD(WAOO1/WAOOFEBM *LIBL/WAOO)
+     A            EXWAOOPERGR               REFFLD(WAOO1/WAOOPERG *LIBL/WAOO)
+     A            EXWAOOFR04R  597          REFFLD(##FREI)

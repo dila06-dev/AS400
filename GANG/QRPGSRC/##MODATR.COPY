@@ -1,0 +1,42 @@
+     C* PROGRAMMNAME.:##MODATR                                                
+     C* FUNKTION.....:AUFRUF ATTRIBUTE-FELDGRUPPE
+     C* OKTOBER 2009   GANG, MANFRED
+     C**************************************************************************
+     C* SRATTR: ZUORDNUNGEN
+     C**************************************************************************
+     C*
+     C           SRATTR    BEGSR
+     C*
+     C                     MOVEAATR,33    ATTS             STANDARDFELD
+     C                     MOVEAATR,33    ATTK             KEY-FELDER
+     C                     MOVEAATR,33    ATTO             OP-CODE
+     C                     MOVEAATR,40    §§KW             KENNWORT
+     C*
+     C   82                MOVEAATR,7     ATTS
+     C   83                MOVEAATR,7     ATTS
+     C   81                MOVEAATR,7     ATTK
+     C   82                MOVEAATR,7     ATTK
+     C   83                MOVEAATR,7     ATTK
+     C   82                MOVEAATR,7     ATTO
+     C   83                MOVEAATR,7     ATTO
+     C   84                MOVEAATR,7     ATTO
+     C   82                MOVEAATR,24    §§KW
+     C   83                MOVEAATR,24    §§KW
+     C   84                MOVEAATR,24    §§KW
+     C*
+     C   86                MOVEAATR,41    ATTS             LÖSCH. SATZ
+     C   86                MOVEAATR,41    ATTK             LÖSCH. SATZ
+     C   86                MOVEAATR,41    ATTO             LÖSCH. SATZ
+     C*
+     C           ##ATTR    ENDSR
+     C*
+     C**************************************************************************
+     C* MODATR: VARIABLE STEUERUNG DER FELDATTRIBUTE/FELDGRUPPE FÜLLEN
+     C**************************************************************************
+     C*
+     C           MODATR    BEGSR
+     C                     CLEARATR
+     C                     CALL '#MODATR'              97
+     C                     PARM           ATR
+     C                     ENDSR
+     C*

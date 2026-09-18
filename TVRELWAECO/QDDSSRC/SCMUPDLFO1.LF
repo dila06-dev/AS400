@@ -1,0 +1,11 @@
+      * Physische Datei: SCMUPD1
+      * ANLEGEDATUM: ____
+      *SORT:        ...
+      * ÄNDERUNGEN:
+      * AUSSCHLUSS:  ...
+     A
+     A**********                            UNIQUE
+     A          R SCMUPDLFO                 PFILE(SCMUPDLFO)
+     A
+     A          K H2
+     A          S STATE                     CMP(EQ ' ' )

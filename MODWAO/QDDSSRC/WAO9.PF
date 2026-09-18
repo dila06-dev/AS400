@@ -1,0 +1,43 @@
+     A**************************************************************************
+     A*  Copyright 2010 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Matrix Konto/Kostenstellen                                            *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: SZ 21.12.2010 Projekt Vertrieb                              *
+     A*  Erstellt: RE 27.08.2013 Projekt 9822                                  *
+     A*            neues Feld Projekt-Nr WAO9PJNR                             *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R WAO91
+     A*-------------------------------------------------------------------------
+     A            WAO9LOCK  R               REFFLD(##LOCK)
+     A            WAO9JNAM  R               REFFLD(##JNAM)
+     A            WAO9JDAT  R               REFFLD(##JDAT)
+     A            WAO9JZEI  R               REFFLD(##JZEI)
+     A            WAO9USER  R               REFFLD(##USER)
+     A            WAO9PROG  R               REFFLD(##PROG)
+     A            WAO9BIBL  R               REFFLD(##BIBL)
+     A            WAO9FIRM  R               REFFLD(##FIRM)
+     A            WAO9BEGR  R    4          REFFLD(##BEGR)
+     A            WAO9AFAT  R               REFFLD(##AFAT)
+     A            WAO9PRGR  R               REFFLD(##PRGR)
+     A            WAO9KONT  R               REFFLD(##KONT)
+     A            WAO9KSST  R               REFFLD(##KSST)
+     A            WAO9ERKS  R               REFFLD(##KSST)
+     A                                      COLHDG('Ersatz Kst')
+     A                                      TEXT('Ersatz Kostenstelle')
+     A            WAO9WBKT  R               REFFLD(##WBKT)
+     A            WAO9EBKT  R               REFFLD(##EBKT)
+     A            WAO9ERUS  R               REFFLD(##ERUS)
+     A            WAO9ERDA  R               REFFLD(##ERDA)
+     A            WAO9ERZT  R               REFFLD(##ERZT)
+     A            WAO9WEKS  R               REFFLD(##KSST)
+     A                                      COLHDG('Wein Kst')
+     A                                      TEXT('Wareneinsatz Kst')
+     A            WAO9SPLT       1          COLHDG('Sp')
+     A                                      TEXT('Splitbuchung')
+     A            WAO9PJNR  R               REFFLD(##PJNR)
+     A            WAO9FREI  R   79          REFFLD(##FREI)

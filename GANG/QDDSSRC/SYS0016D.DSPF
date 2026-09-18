@@ -1,0 +1,243 @@
+     A*%%TS  SD  19990601  112137  GANG        REL-V4R2M0  5769-PW1
+     A*------------------------------------------------------------------------
+     A*GANG, MANFRED                                                  ---------
+     A*-------------                                                  ---------
+     A*VARIABLER BILDSCHIRMDEFINITION DS3/DS4                         ---------
+     A*WINDOW-FUNKTION                                                ---------
+     A*MESSAGES ÜBER SUBFILE                                          ---------
+     A*BERECHTIGUNGSPLAUSIBILITÄT                                     ---------
+     A*------------------------------------------------------------------------
+     A*%%EC
+     A                                      DSPSIZ(24 80 *DS3                  -
+     A                                             27 132 *DS4)
+     A                                      CHGINPDFT
+     A                                      PRINT
+     A  35                                  CF01
+     A  82                                  CF02
+     A                                      CA03
+     A                                      CF04
+     A                                      CF05
+     A  83                                  CF06
+     A  36                                  CF07
+     A  36                                  CF08
+     A  40                                  CF09
+     A                                      CF10
+     A  37                                  CF11
+     A                                      CA12
+     A  82
+     AO 83                                  CF14
+     A  83                                  CF15
+     A  82
+     AO 83                                  CF16
+     A  39                                  CF17
+     A  39                                  CF18
+     A  38                                  CF19
+     A  38                                  CF20
+     A  85                                  CF21
+     A  87                                  CF22
+     A  84                                  CF23
+     A  29                                  CF24
+     A                                      ROLLUP(99)
+     A                                      ROLLDOWN(99)
+     A                                      HELP(01)
+     A                                      VLDCMDKEY(99)
+     A*------------------------------------------------------------------------
+     A*PSEUDO-SATZ                                                    ---------
+     A*------------------------------------------------------------------------
+     A          R SYS0016D0
+     A*%%TS  SD  19940626  083756  GANG        REL-V2R2M0  5738-PW1
+     A                                      TEXT('Pseudo-Satz')
+     A                                      ASSUME
+     A                                      OVERLAY
+     A  33                                  DSPMOD(*DS4)
+     A                                 24 80' '
+     A  *DS4                           27132
+     A*------------------------------------------------------------------------
+     A*KOPFBEREICH-D1                                                 ---------
+     A*------------------------------------------------------------------------
+     A          R SYS0016D1
+     A*%%TS  SD  19981203  113533  GANG        REL-V4R2M0  5769-PW1
+     A  *DS3                                WINDOW(&§§YP &§§XP 21 70)
+     A  *DS4                                WINDOW(&§§YP &§§XP 21 70)
+     A                                      TEXT('Window')
+     A                                      RTNCSRLOC(&§§CRR &§§CRF &§§CRP)
+     A  33                                  DSPMOD(*DS4)
+     A                                      CSRLOC(§§CRLN     §§CRCL)
+     A                                      WDWBORDER((*DSPATR RI) (*CHAR '    -
+     A                                          '))
+     A                                      OVERLAY
+     A            §§XP           3S 0P
+     A            §§YP           2S 0P
+     A            §§CRLN         3S 0H
+     A            §§CRCL         3S 0H
+     A            §§CRR         10A  H
+     A            §§CRF         10A  H
+     A            §§CRP          4S 0H
+     A            §§§JOB        10A  O  1  1TEXT('Jobname')
+     A                                      COLOR(BLU)
+     A N82N83N84                        1 23' Anzeige Auswahl Profiles '
+     A                                      DSPATR(RI)
+     A  82
+     AO 83
+     AO 84                              1 24' Pflege Auswahl Profiles '
+     A                                      DSPATR(HI)
+     A                                      DSPATR(RI)
+     A            §§§PGM        10A  O  1 61TEXT('Programmname')
+     A                                      COLOR(BLU)
+     A                                  2  1USER
+     A                                      COLOR(BLU)
+     A            LDADTD         8Y 0O  2 61EDTWRD('  .  .    ')
+     A                                      COLOR(BLU)
+     A*------------------------------------------------------------------------
+     A*FUßBEREICH D2  WINDOWDEFINTION                                 ---------
+     A*------------------------------------------------------------------------
+     A          R SYS0016D2
+     A*%%TS  SD  19961113  135453  TF          REL-V2R3M0  5738-PW1
+     A  *DS3                                WINDOW(SYS0016D1)
+     A  *DS4                                WINDOW(SYS0016D1)
+     A  33                                  DSPMOD(*DS4)
+     A                                      OVERLAY
+     A            D2FT01        69   O 19  1COLOR(BLU)
+     A*------------------------------------------------------------------------
+     A*VERARBEITUNGSSATZ-D3                                           ---------
+     A*------------------------------------------------------------------------
+     A          R SYS0016D3
+     A*%%TS  SD  19990601  112137  GANG        REL-V4R2M0  5769-PW1
+     A  *DS3                                WINDOW(SYS0016D1)
+     A  *DS4                                WINDOW(SYS0016D1)
+     A                                      RTNCSRLOC(&§§CRR &§§CRF &§§CRP)
+     A                                      INVITE
+     A  33                                  DSPMOD(*DS4)
+     A                                      OVERLAY
+     A            §§CRR         10A  H
+     A            §§CRF         10A  H
+     A            §§CRP          4S 0H
+     A            §§OP           1A  P
+     A            §§KW           1A  P
+     A            §§KY01         1A  P
+     A            §§KY02         1A  P
+     A            §§DESC         1A  P
+     A            §§BERE         1A  P
+     A            §§AKT          1A  P
+     A            §§EDAT         1A  P
+     A            §§ADAT         1A  P
+     A            §§USR          1A  P
+     A            §§STEP         1A  P
+     A            S1F1RR        15S 0H
+     A            H1USRP    R        H      REFFLD(SYSPROFPFR/S5USRP *LIBL/SYSP-
+     A                                      ROFPF)
+     A            H1PRF     R        H      REFFLD(SYSPROFPFR/S5PRF *LIBL/SYSPR-
+     A                                      OFPF)
+     A            H1DESC    R        H      REFFLD(SYSPROFPFR/S5DESC *LIBL/SYSP-
+     A                                      ROFPF)
+     A            H1BERE    R        H      REFFLD(SYSPROFPFR/S5DESC *LIBL/SYSP-
+     A                                      ROFPF)
+     A            H1AKT     R        H      REFFLD(SYSPROFPFR/S5AKT *LIBL/SYSPR-
+     A                                      OFPF)
+     A            H1EDAT    R        H      REFFLD(SYSPROFPFR/S5EDAT *LIBL/SYSP-
+     A                                      ROFPF)
+     A            H1ADAT    R        H      REFFLD(SYSPROFPFR/S5ADAT *LIBL/SYSP-
+     A                                      ROFPF)
+     A            H1USR     R        H      REFFLD(SYSPROFPFR/S5USR *LIBL/SYSPR-
+     A                                      OFPF)
+     A            H1STEP    R        H      REFFLD(SYSPROFPFR/S5STEP *LIBL/SYSP-
+     A                                      ROFPF)
+     A                                  3 61TIME
+     A                                      COLOR(BLU)
+     A                                  4 22'(N=Neu Ä=Aen L=Loe A=Enter/Anz)'
+     A                                  4  1' Operations-Schl. '
+     A N82N83N84                            DSPATR(ND)
+     A            D3OP           1A  B  4 20DSPATR(&§§OP)
+     A  60                                  DSPATR(PC)
+     A                                  4 55' Kennwort '
+     A N82N83N84                            DSPATR(ND)
+     A            D3KW           4A  B  4 66DSPATR(&§§KW)
+     A  61                                  DSPATR(PC)
+     A                                      DSPATR(CS)
+     A                                  6  1' Profile/Menü:  '
+     A            D3PRF     R        B  6 18REFFLD(SYSPROFPFR/S5PRF *LIBL/SYSPR-
+     A                                      OFPF)
+     A  62
+     AON82N83N84                            DSPATR(PC)
+     A                                      DSPATR(&§§KY01)
+     A                                      CHANGE(26)
+     A                                  7  1' Anwender     : '
+     A            D3USRP    R        B  7 18REFFLD(SYSPROFPFR/S5USRP *LIBL/SYSP-
+     A                                      ROFPF)
+     A  62                                  DSPATR(PC)
+     A                                      DSPATR(&§§KY02)
+     A                                      CHANGE(26)
+     A                                  8  1' Beschreibung : '
+     A            D3DESC    R        B  9  6REFFLD(SYSPROFPFR/S5DESC *LIBL/SYSP-
+     A                                      ROFPF)
+     A  71                                  DSPATR(PC)
+     A                                      DSPATR(&§§DESC)
+     A                                      CHECK(LC)
+     A                                  8  1' Beschreibung : '
+     A            D3BERE    R        B 11 18REFFLD(SYSPROFPFR/S5BERE *LIBL/SYSP-
+     A                                      ROFPF)
+     A  72                                  DSPATR(PC)
+     A                                      DSPATR(&§§BERE)
+     A                                 13  1' aktiv/inaktiv: '
+     A            D3AKT     R        B 13 18REFFLD(SYSPROFPFR/S5AKT *LIBL/SYSPR-
+     A                                      OFPF)
+     A  73                                  DSPATR(PC)
+     A                                      DSPATR(&§§AKT)
+     A                                 13 21'A=aktiv/I=inaktiv'
+     A                                 15  1' Änderungsdatum:'
+     A            D3EDAT    R        B 15 18REFFLD(SYSPROFPFR/S5EDAT *LIBL/SYSP-
+     A                                      ROFPF)
+     A  76                                  DSPATR(PC)
+     A                                      DSPATR(&§§EDAT)
+     A                                      EDTCDE(3)
+     A                                 16  1' Anlagedatum :  '
+     A            D3ADAT    R        B 16 18REFFLD(SYSPROFPFR/S5ADAT *LIBL/SYSP-
+     A                                      ROFPF)
+     A  77                                  DSPATR(PC)
+     A                                      DSPATR(&§§ADAT)
+     A                                      EDTCDE(3)
+     A                                 17  1' Eintrag von :  '
+     A            D3USR     R        B 17 18REFFLD(SYSPROFPFR/S5USR *LIBL/SYSPR-
+     A                                      OFPF)
+     A  78                                  DSPATR(PC)
+     A                                      DSPATR(&§§USR)
+     A                                  7 25'/'
+     A                                 11  1' Berechtigung : '
+     A                                 13 42' Menü=JOBSTEP J/N: '
+     A            D3STEP    R        B 13 62REFFLD(SYSPROFPFR/S5STEP *LIBL/SYSP-
+     A                                      ROFPF)
+     A  79                                  DSPATR(PC)
+     A                                      DSPATR(&§§STEP)
+     A*------------------------------------------------------------------------
+     A*MESSAGE-SUBFILE                                                ---------
+     A*------------------------------------------------------------------------
+     A* NACHRICHTEN-SUBFILE
+     A          R MSGSFL                    SFL
+     A*%%TS  SD  19980717  135441  GANG        REL-V3R2M0  5763-PW1
+     A                                      TEXT('Nachrichten-Subfile')
+     A  *DS3                                SFLMSGRCD(20)
+     A  *DS4                                SFLMSGRCD(20)
+     A            §§§MKY                    SFLMSGKEY
+     A            §§§PGQ                    SFLPGMQ(10)
+     A*
+     A*-------------------------------------------------------------------------
+     A*
+     A          R MSGSFLC                   SFLCTL(MSGSFL)
+     A*%%TS  SD  19980717  131740  GANG        REL-V3R2M0  5763-PW1
+     A  33                                  DSPMOD(*DS4)
+     A                                      OVERLAY
+     A                                      PUTOVR
+     A                                      OVRDTA
+     A                                      OVRATR
+     A                                      SFLDSP
+     A                                      SFLDSPCTL
+     A                                      SFLINZ
+     A  99
+     AON99                                  SFLEND
+     A  *DS3                                SFLSIZ(0002)
+     A  *DS4                                SFLSIZ(0002)
+     A  *DS3                                SFLPAG(0001)
+     A  *DS4                                SFLPAG(0001)
+     A  *DS3                                WINDOW(SYS0016D1)
+     A  *DS4                                WINDOW(SYS0016D1)
+     A            §§§PGQ                    SFLPGMQ(10)

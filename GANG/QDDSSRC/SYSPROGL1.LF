@@ -1,0 +1,11 @@
+      * Physische Datei: SYSPROGPF
+      * ANLEGEDATUM: OKTOBER 2009
+      * ÄNDERUNGEN:
+      *
+     A                                      UNIQUE
+     A          R SYSPROGPFR                PFILE(SYSPROGPF)
+     A                                      TEXT('PARAMETER')
+     A          K S4USRP
+     A          K S4LFD#
+     A          K S4PGM
+     A          S S4AKT                     VALUES('A')

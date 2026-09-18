@@ -1,0 +1,10 @@
+/*-------------------------------------------------*/
+/* FTP Command zum senden von Files (Ba.2014)      */
+/* i5 - Teccom Server 10.90.6.119 - 08.04.2021   */
+/*-------------------------------------------------*/
+             PGM
+             OVRDBF     FILE(INPUT) TOFILE(BAR_FTP/QCLSRC) MBR(TECCMD)
+             OVRDBF     FILE(OUTPUT) TOFILE(BAR_FTP/QCLSRC) +
+                          MBR(TECLOG)
+             FTP        RMTSYS('10.90.6.119')
+             ENDPGM

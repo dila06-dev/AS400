@@ -1,0 +1,10 @@
+/*-------------------------------------------------*/
+/* FTP Command zum senden von Files (Ba.2014)      */
+/* i5 - Consid B2B Server                          */
+/*-------------------------------------------------*/
+             PGM
+             OVRDBF     FILE(INPUT) TOFILE(BAR_FTP/QCLSRC) MBR(B2BCMD)
+             OVRDBF     FILE(OUTPUT) TOFILE(BAR_FTP/QCLSRC) +
+                          MBR(B2BLOG)
+             FTP        RMTSYS('10.91.134.241')
+             ENDPGM

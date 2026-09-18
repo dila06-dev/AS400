@@ -1,0 +1,10 @@
+/*-------------------------------------------------*/
+/* FTP Command zum senden von Files (Ba.2009)      */
+/* dometic-group.com                               */
+/* /domains/dometic-group.com/public_ftp           */
+/*-------------------------------------------------*/
+             PGM
+             OVRDBF     FILE(INPUT) TOFILE(bar_ftp/FTPCMD2)
+             OVRDBF     FILE(OUTPUT) TOFILE(bar_ftp/FTPLOG2)
+             FTP        RMTSYS('dometic-group.com')
+             ENDPGM

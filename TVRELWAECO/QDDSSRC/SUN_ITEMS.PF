@@ -1,0 +1,36 @@
+     A*
+     A*         DATUM IMMER TT.MM.JJJJ
+     A*         ZEIT  IMMER HH:MM
+     A*
+     A*CPYFRMIMPF FROMFILE(TVRELWAECO/FROM_EXCEX)
+     A*              TOFILE(TVRELWAECO/SUN_ITEMS)
+     A*              MBROPT(*REPLACE) FLDDLM(';')
+     A*                       RPLNULLVAL(*FLDDFT)
+     A*
+     A*CPYFRMIMPF FROMFILE(TVRELWAECO/FROM_EXCEX)
+     A*           TOFILE(TVRELWAECO/SUN_ITEMS)
+     A*           MBROPT(*REPLACE) FLDDLM(';')
+     A*           DECPNT(*COMMA) RPLNULLVAL(*FLDDFT)
+     A*
+     A*
+     A          R SUN_ITEMSR                TEXT('SKU#')
+     A*****************************************************************
+     A            ITEM#         15A         COLHDG('ITEM#')
+     A            DESC2         60A         COLHDG('DESC2')
+     A            DESC3         60A         COLHDG('DESC3')
+     A            DESC4         60A         COLHDG('DESC4')
+     A            BREITEMM      09S 3       COLHDG('BREITEMM ')
+     A            ABC            5A         COLHDG('ABS  ')
+     A            DISPON        20A         COLHDG('DISPO')
+     A            EAN           20A         COLHDG('EAN  ')
+     A            GEWBRUTTO     09S 3       COLHDG('GEWICHBRUTTO')
+     A            GEWBNETTO     09S 3       COLHDG('GEWICHNETTO ')
+     A            STAMMLFR      10A         COLHDG('STAMMLFR ')
+     A            LANGEMM       09S 3       COLHDG('LAENGEMM ')
+     A            HOEHEMM       09S 3       COLHDG('HOEHEMM ')
+     A            MATCHCODE     30A         COLHDG('MATCHCODE')
+     A            STK           09S 3       COLHDG('STK3')
+     A            VOLUMEN       09S 4       COLHDG('VOLUMEN')
+     A            ITEMSS        15A         COLHDG('SUNSHINE#')
+     A            DATEINPUT       L         TEXT('Date of transmissing')
+     A            TSTAMP          Z         TEXT('TIMESTAMP')

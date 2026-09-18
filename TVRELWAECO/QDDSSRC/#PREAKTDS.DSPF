@@ -1,0 +1,143 @@
+     A*%%TS  SD  20141016  145758  SCHNEIDE    REL-V6R1M0  5761-WDS
+     A*  92/06/04  16:13:18    BARENKAMP   REL-R03M00  5728-PW1
+     A*%%EC
+     A                                      DSPSIZ(24 80 *DS3)
+     A                                      PRINT
+     A*  97/12/17  16:13:18    BARENKAMP   REL-V4R1M0  5728-PW1
+     A          R FMT010
+     A*%%TS  SD  20141016  145758  SCHNEIDE    REL-V6R1M0  5761-WDS
+     A                                      CF03(03)
+     A                                      CF12(03)
+     A                                  1  2'#PREAKTDS'
+     A                                      COLOR(BLU)
+     A                                  1 27'Ermitteln Preise in Datei'
+     A                                      DSPATR(HI)
+     A                                      DSPATR(UL)
+     A                                  1 65'Datum:'
+     A                                      COLOR(BLU)
+     A                                  1 72DATE
+     A                                      EDTCDE(Y)
+     A                                      COLOR(BLU)
+     A                                  2  2USER
+     A                                      COLOR(BLU)
+     A                                  2 65'Zeit :'
+     A                                      COLOR(BLU)
+     A                                  2 72TIME
+     A                                      COLOR(BLU)
+     A                                  3  2'Bitte eingeben......:'
+     A                                      DSPATR(HI)
+     A                                      DSPATR(UL)
+     A                                  3 65SYSNAME
+     A                                      COLOR(BLU)
+     A                                  4  2'-----------------------------------
+     A                                      ------------------------------------
+     A                                      ---------'
+     A                                      COLOR(BLU)
+     A                                  5  3'Eingabe Lokation (EDC,NL,BE,CH)..:'
+     A            FLDLOK         3A  B  5 40DSPATR(UL)
+     A                                      COLOR(WHT)
+     A                                  6  3'Eingabe Datum Preise Folgejahr...:'
+     A            FLDAT1         8A  B  6 40DSPATR(UL)
+     A                                      COLOR(WHT)
+     A****                                  CHECK(ME)
+     A                                  6 51'(JJJJMMTT)'
+     A                                  7  3'Eingabe Datum Preise Vorjahr.....:'
+     A            FLDAT2         8A  B  7 40DSPATR(UL)
+     A                                      COLOR(WHT)
+     A****                                  CHECK(ME)
+     A                                  7 51'(JJJJMMTT)'
+     A                                  8  3'vorheriges Löschen Preisdateien  J-
+     A                                      /N ..........:'
+     A            FLDLOE         1A  I  8 54DSPATR(UL)
+     A                                      DFT('N')
+     A                                      VALUES('J' 'N')
+     A                                      COLOR(WHT)
+     A                                  9  3'nur'
+     A                                  9  7'aktive'
+     A                                  9 14'Artikel?'
+     A                                  9 23'J/N........................:'
+     A            FLDAKT         1A  I  9 54DSPATR(UL)
+     A                                      COLOR(WHT)
+     A                                      VALUES('N' 'J')
+     A                                      DFT('J')
+     A                                 10  3'-----------------------------------
+     A                                      ------------------------------------
+     A                                      -------'
+     A                                 11  3'Eingabe Überschreibungsdatei Kunde-
+     A                                      ..............:'
+     A            FLDATEI       10A  I 11 54DSPATR(UL)
+     A                                      DFT('#KUND_T')
+     A                                      COLOR(WHT)
+     A                                 12  3'Eingabe Bibliothek der Überschreib-
+     A                                      ungsdatei.....:'
+     A            FLDLIB        10A  I 12 54DSPATR(UL)
+     A                                      COLOR(WHT)
+     A                                      DFT('TVRELWAECO')
+     A                                 13  1' '
+     A                                 13  3'-----------------------------------
+     A                                      ------------------------------------
+     A                                      ------ '
+     A                                 14  3'Eingabe Überschreibungsdatei TEIL0-
+     A                                      1 ............:'
+     A            FLDATEI2      10A  I 14 54DSPATR(UL)
+     A                                      COLOR(WHT)
+     A                                      DFT('TEIL01')
+     A                                 15  3'Eingabe Bibliothek der Überschreib-
+     A                                      ungsdatei.....:'
+     A            FLDLIB2       10A  I 15 54DSPATR(UL)
+     A                                      DFT('TVPF')
+     A                                      COLOR(WHT)
+     A                                 16  3'Eingabe Prüfung auf Produktgruppe -
+     A                                      J/N...........:'
+     A            FLDPRODG       1A  I 16 54DSPATR(UL)
+     A                                      DFT('J')
+     A                                      COLOR(WHT)
+     A                                      VALUES('J' 'N')
+     A                                 17  1' '
+     A                                 17  3'-----------------------------------
+     A                                      ------------------------------------
+     A                                      ------ '
+     A                                 18  3'Aufruf im Batch oder interaktiv (B-
+     A                                       oder I)......:'
+     A            FLDAT3         1A  I 18 54DFT('I')
+     A                                      COLOR(WHT)
+     A                                      VALUES('I' 'B')
+     A                                 19  3'Wenn Auswahl B, ggf. Angabe von La-
+     A                                      ufdatum und Uhrzeit'
+     A                                 20 20'Datum:'
+     A            FLDLDAT        6A  B 20 27DSPATR(UL)
+     A                                      COLOR(WHT)
+     A                                 20 34'(TMMJJ) '
+     A                                 20 45'Uhrzeit:'
+     A            FLDLZEIT       6A  B 20 54DSPATR(UL)
+     A                                      COLOR(WHT)
+     A                                 20 61'(SMMSS) '
+     A                                 20 74' '
+     A                                 20 76' '
+     A                                 20 78' '
+     A                                 20 80' '
+     A                                 21  2'-----------------------------------
+     A                                      ------------------------------------
+     A                                      ------   '
+     A                                      COLOR(BLU)
+     A                                 22 12' '
+     A                                 22 14' '
+     A                                 22 16' '
+     A                                 22 18' '
+     A                                 22 74' '
+     A                                 22 76' '
+     A                                 22 78' '
+     A                                 22 80' '
+     A                                 23  2'F3=Verlasen'
+     A                                      COLOR(BLU)
+     A                                 23 16'F12=zurück'
+     A                                      COLOR(BLU)
+     A                                 23 28' '
+     A                                 23 30' '
+     A                                 23 32' '
+     A                                 24 32' '
+     A                                 24 34' '
+     A                                 24 36' '
+     A                                 24 38' '
+     A                                 24 53'(c)WAE International        '
+     A                                      DSPATR(HI)

@@ -1,0 +1,41 @@
+     A**************************************************************************
+     A*  Copyright 2010 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Schnittstelle zum QS-System PDAP7 für die Rückmeldung                 *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: PH 14.01.2010 Projekt 5309 für Kunde WAECO                  *
+     A*  Änderung: XX XX.XX.XXXX                                               *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R WAO41
+     A*-------------------------------------------------------------------------
+     A            WAO4WENR  R   30A         REFFLD(##WENR)
+     A            WAO4EZNR  R   30A         REFFLD(##EZNR)
+     A            WAO4EZIX  R               REFFLD(##A004)
+     A                                      TEXT('Erzeugnis-Nr Index')
+     A                                      COLHDG('Erzeugnis-Nr Index')
+     A            WAO4LFNR  R   30A         REFFLD(##LFNR)
+     A            WAO4BENR  R   15A         REFFLD(##BENR)
+     A            WAO4STAT  R    1A         REFFLD(##STAT)
+     A                                      TEXT('Status Kennzeichen')
+     A                                      COLHDG('Status Kennzeichen')
+     A            WAO4WEDA  R   10A         REFFLD(##WEDA)
+     A            WAO4WEMG  R               REFFLD(##WEMG)
+     A                                      TEXT('WE-Liefermenge')
+     A                                      COLHDG('WE-Liefermenge')
+     A            WAO4GSTZ  R               REFFLD(##N134)
+     A                                      TEXT('Gutstückzahl')
+     A                                      COLHDG('Gutstückzahl')
+     A            WAO4SSTZ  R               REFFLD(##N134)
+     A                                      TEXT('Schlechttückzahl')
+     A                                      COLHDG('Schlechttückzahl')
+     A            WAO4SAPT  R               REFFLD(##A030)
+     A                                      TEXT('SAP-TL11')
+     A                                      COLHDG('SAP-TL11')
+     A            WAO4PRZL  R               REFFLD(##N050)
+     A                                      TEXT('Prüf-Zähler')
+     A                                      COLHDG('Prüf-Zähler')

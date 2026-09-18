@@ -1,0 +1,66 @@
+     A**************************************************************************
+     A*  Copyright 2011 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------- *
+     A*  Kommunikationsbereich Absatz-Plan %-Sätze Jahresebene                 *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: MG 28.08.2011 Projekt 7668, Planungssystem                  *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R EXWAOM1
+     A*-------------------------------------------------------------------------
+     A* Programmstatus
+     A*-------------------------------------------------------------------------
+     A            EXWAOMPGSTR               REFFLD(##PGST)
+     A            EXWAOMPROGR               REFFLD(##PROG)
+     A            EXWAOMFLDNR               REFFLD(##FLDN)
+     A*-------------------------------------------------------------------------
+     A* ON/OFF KZ für Prüfungen
+     A*-------------------------------------------------------------------------
+     A            EXWAOMIFKZR               REFFLD(##IFKZ)
+     A            EXWAOMFR01R               REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* Key-Felder
+     A*-------------------------------------------------------------------------
+     A            EXWAOMKSTCR               REFFLD(WAOM1/WAOMKSTC *LIBL/WAOM)
+     A            EXWAOMKDGRR               REFFLD(WAOM1/WAOMKDGR *LIBL/WAOM)
+     A            EXWAOMKDPLR               REFFLD(WAOM1/WAOMKDPL *LIBL/WAOM)
+     A            EXWAOMKDNRR               REFFLD(WAOM1/WAOMKDNR *LIBL/WAOM)
+     A            EXWAOMLDNRR               REFFLD(WAOM1/WAOMLDNR *LIBL/WAOM)
+     A            EXWAOMPRGRR               REFFLD(WAOM1/WAOMPRGR *LIBL/WAOM)
+     A            EXWAOMJAHRR               REFFLD(WAOM1/WAOMJAHR *LIBL/WAOM)
+     A            EXWAOMFR02R  253          REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* Kopier-Begriff NACH
+     A*-------------------------------------------------------------------------
+     A            EXWAOMNKSTR               REFFLD(WAOM1/WAOMKSTC *LIBL/WAOM)
+     A            EXWAOMNKDGR               REFFLD(WAOM1/WAOMKDGR *LIBL/WAOM)
+     A            EXWAOMNKDPR               REFFLD(WAOM1/WAOMKDPL *LIBL/WAOM)
+     A            EXWAOMNKDNR               REFFLD(WAOM1/WAOMKDNR *LIBL/WAOM)
+     A            EXWAOMNLDNR               REFFLD(WAOM1/WAOMLDNR *LIBL/WAOM)
+     A            EXWAOMNPRGR               REFFLD(WAOM1/WAOMPRGR *LIBL/WAOM)
+     A            EXWAOMNJAHR               REFFLD(WAOM1/WAOMJAHR *LIBL/WAOM)
+     A            EXWAOMFR03R  253          REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* evt. weitere Felder für Update oder Prüfungen
+     A*-------------------------------------------------------------------------
+     A            EXWAOMPZ01R               REFFLD(WAOM1/WAOMPZ01 *LIBL/WAOM)
+     A            EXWAOMPZ02R               REFFLD(WAOM1/WAOMPZ02 *LIBL/WAOM)
+     A            EXWAOMPZ03R               REFFLD(WAOM1/WAOMPZ03 *LIBL/WAOM)
+     A            EXWAOMPZ04R               REFFLD(WAOM1/WAOMPZ04 *LIBL/WAOM)
+     A            EXWAOMPZ05R               REFFLD(WAOM1/WAOMPZ05 *LIBL/WAOM)
+     A            EXWAOMPZ06R               REFFLD(WAOM1/WAOMPZ06 *LIBL/WAOM)
+     A            EXWAOMPZ07R               REFFLD(WAOM1/WAOMPZ07 *LIBL/WAOM)
+     A            EXWAOMPZ08R               REFFLD(WAOM1/WAOMPZ08 *LIBL/WAOM)
+     A            EXWAOMPZ09R               REFFLD(WAOM1/WAOMPZ09 *LIBL/WAOM)
+     A            EXWAOMPZ10R               REFFLD(WAOM1/WAOMPZ10 *LIBL/WAOM)
+     A            EXWAOMPZ11R               REFFLD(WAOM1/WAOMPZ11 *LIBL/WAOM)
+     A            EXWAOMPZ12R               REFFLD(WAOM1/WAOMPZ12 *LIBL/WAOM)
+     A            EXWAOMPLKZR               REFFLD(WAOM1/WAOMPLKZ *LIBL/WAOM)
+     A            EXWAOMSTKDR               REFFLD(WAOM1/WAOMSTKD *LIBL/WAOM)
+     A            EXWAOMKSSTR               REFFLD(KDEW1/KDEWKSST *LIBL/KDEW)
+     A            EXWAOMGEBTR               REFFLD(LAND1/LNGEBT   *LIBL/LAND)
+     A            EXWAOMFR04R  324          REFFLD(##FREI)

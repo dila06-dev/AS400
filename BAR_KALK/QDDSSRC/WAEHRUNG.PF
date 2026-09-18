@@ -1,0 +1,8 @@
+     A                                      UNIQUE
+     A          R WAEHRUNGP
+     A            JAHR           4S 0       TEXT('JAHR')
+     A            WACDEK         3A         TEXT('WACDEK')
+     A            KWAKURS        8S 4       TEXT('KURS')
+
+     A          K JAHR
+     A          K WACDEK

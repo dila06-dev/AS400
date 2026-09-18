@@ -1,0 +1,13 @@
+      * Physische Datei: IAWR
+      * ANLEGEDATUM: MAI     2026
+      *SORT:        ...
+      * ÄNDERUNGEN:
+      * AUSSCHLUSS:  ...
+     A
+     A                                      UNIQUE
+     A          R IAWR1                     PFILE(IAWR)
+     A
+     A                                      TEXT('AUSSENWIRTSCHAFTSRECHT')
+     A          K IAWRFIRM
+     A          K IAWRCODE
+     A          K IAWRGADA                  DESCEND

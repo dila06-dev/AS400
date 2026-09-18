@@ -1,0 +1,17 @@
+     A**************************************************************************
+     A*  Copyright 2004 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  LG-Platz/Typ-Zuordnung                                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: ZG 05.10.2010 BESUCH                                        *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R UXWAO71
+     A*
+     A            UXWAO7FIRMR               REFFLD(WAO71/WAO7FIRM *LIBL/WAO7)
+     A            UXWAO7LANRR               REFFLD(WAO71/WAO7LANR *LIBL/WAO7)
+     A            UXWAO7LORTR               REFFLD(WAO71/WAO7LORT *LIBL/WAO7)

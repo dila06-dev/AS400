@@ -1,0 +1,59 @@
+/******************************************************************************/
+/*  Copyright 2011 by                                                         */
+/*                                                                            */
+/* -------------------------------------------------------------------------- */
+/*  vorlaufprogramm für auswertungen über qry-manager im client               */
+/*  dieses programm kann für mehrere abfragen genutzt werden,                 */
+/*  da mittels übergebenen parameter eigene läufe.                            */
+/*                                                                            */
+/*  parameter:  '01' = Vorlauf Teile-Dispo für Produktion (Hoffmann)          */
+/*                     (im Menü #AVBE02 Punkt 30)                             */
+/*                                                                            */
+/*                                                                            */
+/*                                                                            */
+/*                                                                            */
+/*                                                                            */
+/* -------------------------------------------------------------------------- */
+/*  Erstellt: Schneider  7.9.11                                               */
+/*  Änderung:                                                                 */
+/*                                                                            */
+/******************************************************************************/
+             PGM        PARM(&PARA)
+/* -------------------------------------------------------------------------- */
+/*  Definieren Programmvariable                                               */
+/* -------------------------------------------------------------------------- */
+             DCL        VAR(&PARA) TYPE(*CHAR) LEN(2)
+             DCL        VAR(&DATUM) TYPE(*CHAR) LEN(6)
+             DCL        VAR(&TIME) TYPE(*CHAR) LEN(6)
+             DCL        VAR(&USER) TYPE(*CHAR) LEN(10)
+
+/* -------------------------------------------------------------------------- */
+/*  Prüfung, ob Aufruf notwendig                                              */
+/* -------------------------------------------------------------------------- */
+             IF         COND(&PARA = '  ') THEN(GOTO CMDLBL(ENDE))
+/* -------------------------------------------------------------------------- */
+/*  abfrage auf gefüllte parameter                                            */
+/* -------------------------------------------------------------------------- */
+             IF         COND(&PARA = '01') THEN(DO)
+
+             CHGDTAARA  DTAARA(DOWC016 (50 100)) VALUE(' ')
+             RTVSYSVAL  SYSVAL(QTIME) RTNVAR(&TIME)
+             RTVSYSVAL  SYSVAL(QDATE) RTNVAR(&DATUM)
+             RTVJOBA    USER(&USER)
+             CHGDTAARA  DTAARA(DOWC016 (59 10)) VALUE(&USER)
+             CHGDTAARA  DTAARA(DOWC016 (70 6)) VALUE(&DATUM)
+             CHGDTAARA  DTAARA(DOWC016 (80 6)) VALUE(&TIME)
+             CHGDTAARA  DTAARA(DOWC016 (90 2)) VALUE(&PARA)
+
+             RUNQRY     QRY(TVRELWAECO/QRY001SC)
+             RUNQRY     QRY(TVRELWAECO/QRY002SC)
+             RUNQRY     QRY(TVRELWAECO/QRY003SC)
+             RUNQRY     QRY(TVRELWAECO/QRY004SC)
+             RUNQRY     QRY(TVRELWAECO/QRY005SC)
+             RUNQRY     QRY(TVRELWAECO/QRY006SC)
+             ENDDO
+/* -------------------------------------------------------------------------- */
+/*  Programmende                                                              */
+/* -------------------------------------------------------------------------- */
+ ENDE:       RCLRSC
+             ENDPGM

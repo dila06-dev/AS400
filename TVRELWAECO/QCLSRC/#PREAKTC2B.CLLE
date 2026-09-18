@@ -1,0 +1,69 @@
+/*    * PROGRAMMNAME.:#PREAKTC2B                                             */
+/*    * FUNKTION.....:ERMITTELN PREISE IN DATEI #PREISAKT                    */
+/*    *               TEMPORÄRE DATEI VORGESCHALTET #KUND_T                  */
+/*    *               batchjob                                               */
+/*    * 11/2011        SCHNEIDER                                              */
+/*    *                                                                       */
+/*    *                                                                       */
+/*    *-ÄNDERUNGSDIENST-------------------------------------------------------*/
+/*    * XX.XX.XX                                          PGMR.....           */
+/******************************************************************************/
+             PGM        PARM(&PDATU &PDATUVJ &DATEI &LIB &DATEI2 &LIB2)
+
+             DCL        VAR(&PDATU) TYPE(*CHAR) LEN(8)
+             DCL        VAR(&PDATUVJ) TYPE(*CHAR) LEN(8)
+             DCL        VAR(&DATEI) TYPE(*CHAR) LEN(10)
+             DCL        VAR(&LIB) TYPE(*CHAR) LEN(10)
+             DCL        VAR(&DATEI2) TYPE(*CHAR) LEN(10)
+             DCL        VAR(&LIB2) TYPE(*CHAR) LEN(10)
+
+/*             Protokollierung                                               */
+             CHGJOB     LOG(4 00 *SECLVL) LOGCLPGM(*YES) +
+                          LOGOUTPUT(*JOBEND)
+
+             OVRDBF     FILE(#KUND_T) TOFILE(&LIB/&DATEI) MBR(*FIRST)
+             OVRDBF     FILE(TEIL01) TOFILE(&LIB2/&DATEI2) MBR(*FIRST)
+
+             CLRPFM     FILE(TVRELWAECO/#PREISLJT)
+             OVRDBF     FILE(#PREISAKT) TOFILE(TVRELWAECO/#PREISLJT) +
+                          MBR(*FIRST)
+
+
+/*             PROGRAMMAUFRUF                                                */
+             CALL       PGM(TVRELWAECO/#PREAKTR2) PARM(&PDATU) /* +
+                                     */
+             MONMSG     MSGID(CPF0000)
+
+             DLTOVR     FILE(*ALL)
+/*----------------------------------------------------------------------------*/
+
+             CLRPFM     FILE(TVRELWAECO/#PREISVJT)
+
+             OVRDBF     FILE(#KUND_T) TOFILE(&LIB/&DATEI) MBR(*FIRST)
+             OVRDBF     FILE(TEIL01) TOFILE(&LIB2/&DATEI2) MBR(*FIRST)
+             OVRDBF     FILE(#PREISAKT) TOFILE(TVRELWAECO/#PREISVJT) +
+                          MBR(*FIRST)
+
+/*             PROGRAMMAUFRUF                                                */
+             CALL       PGM(TVRELWAECO/#PREAKTR2) PARM(&PDATUVJ) /* +
+                                     */
+             MONMSG     MSGID(CPF0000)
+
+             DLTOVR     FILE(*ALL)
+/*----------------------------------------------------------------------------*/
+
+             CPYF       FROMFILE(TVRELWAECO/#PREISLJT) +
+                          TOFILE(TVRELWAECO/#PREISAKT) MBROPT(*UPDADD)
+
+             CPYF       FROMFILE(TVRELWAECO/#PREISVJT) +
+                          TOFILE(TVRELWAECO/#PREISVJ) MBROPT(*UPDADD)
+
+             RUNQRY     QRY(TVRELWAECO/TRDCGQ4) /* Erstellen Datei +
+                          #TRDCGP2 */
+
+             CLRPFM     FILE(TVRELWECO/#PREISLJT)
+             CLRPFM     FILE(TVRELWECO/#PREISVJT)
+
+ ENDE:       RCLRSC
+             ENDPGM
+

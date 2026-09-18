@@ -1,0 +1,20 @@
+     A**************************************************************************
+     A*  Copyright 2025 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Jechtinger Straße 9                              *
+     A*                       DE 79111 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  B2B Interface                                                         *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: MG 15.07.2025 Case #04264118 Integration Siegen             *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(W017)
+     A          R KYW0171
+     A*-------------------------------------------------------------------------
+     A            KYW017FIRMR               REFFLD(W017FIRM)
+     A            KYW017TSTPR               REFFLD(W017TSTP)
+     A            K$W017FREI   100
+     A            K#W017LOCKR               REFFLD(W017LOCK)
+     A            K#W017FIRMR               REFFLD(W017FIRM)
+     A            K#W017TSTPR               REFFLD(W017TSTP)

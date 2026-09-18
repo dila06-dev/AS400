@@ -1,0 +1,277 @@
+     A*%%TS  SD  20091103  101535  GANG        REL-V5R4M0  5722-WDS
+     A*------------------------------------------------------------------------
+     A*GANG, MANFRED                                                  ---------
+     A*-------------                                                  ---------
+     A*SUBFILESTEUERUNG                                               ---------
+     A*VARIABLER BILDSCHIRMDEFINITION DS3/DS4                         ---------
+     A*WINDOW-FUNKTION                                                ---------
+     A*MESSAGES ÜBER SUBFILE                                          ---------
+     A*BERECHTIGUNGSPLAUSIBILITÄT                                     ---------
+     A*------------------------------------------------------------------------
+     A*%%EC
+     A                                      DSPSIZ(24 80 *DS3                  -
+     A                                             27 132 *DS4)
+     A                                      PRINT
+     A  35                                  CF01
+     A  82                                  CF02
+     A                                      CA03
+     A                                      CF04
+     A                                      CF05
+     A  83                                  CF06
+     A  36                                  CF07
+     A  36                                  CF08
+     A  40                                  CF09
+     A  37                                  CF11
+     A                                      CF10
+     A                                      CA12
+     A                                      CF13
+     A  82
+     AO 83                                  CF14
+     A  83                                  CF15
+     A  82
+     AO 83                                  CF16
+     A  39                                  CF17
+     A  39                                  CF18
+     A  38                                  CF19
+     A  38                                  CF20
+     A  85                                  CF21
+     A  87                                  CF22
+     A  84                                  CF23
+     A  29                                  CF24
+     A                                      HELP(01)
+     A                                      VLDCMDKEY(99)
+     A*------------------------------------------------------------------------
+     A*PSEUDO-SATZ                                                    ---------
+     A*------------------------------------------------------------------------
+     A          R SYS0005D0
+     A*%%TS  SD  19990420  162614  GANG        REL-V4R2M0  5769-PW1
+     A                                      TEXT('Pseudo-Satz')
+     A                                      ASSUME
+     A  33                                  DSPMOD(*DS4)
+     A                                      OVERLAY
+     A                                 24 80' '
+     A  *DS4                           27132
+     A*------------------------------------------------------------------------
+     A*WINDOWDEFINITION + FUßFORMATE                                  ---------
+     A*------------------------------------------------------------------------
+     A          R SYS0005D1
+     A*%%TS  SD  19990420  162614  GANG        REL-V4R2M0  5769-PW1
+     A                                      TEXT('Window')
+     A                                      RTNCSRLOC(&§§CRR &§§CRF &§§CRP)
+     A  33                                  DSPMOD(*DS4)
+     A                                      CSRLOC(§§CRLN §§CRCL)
+     A                                      OVERLAY
+     A                                      PUTOVR
+     A                                      OVRDTA
+     A                                      OVRATR
+     A  *DS3                                WINDOW(&§§YP &§§XP 20 74)
+     A  *DS4                                WINDOW(&§§YP &§§XP 20 74)
+     A                                      WDWBORDER((*DSPATR RI) (*CHAR '    -
+     A                                          '))
+     A            §§CRLN         3  0H
+     A            §§CRCL         3  0H
+     A            §§XP           3S 0P
+     A            §§YP           2S 0P
+     A            §§CRR         10A  H
+     A            §§CRF         10A  H
+     A            §§CRP          4S 0H
+     A            D2FT01        74A  O 18  1COLOR(BLU)
+     A*------------------------------------------------------------------------
+     A*SUBFILESATZ-STRUKTUR                                           ---------
+     A*------------------------------------------------------------------------
+     A          R SYS0005S1                 SFL
+     A*%%TS  SD  20091103  101535  GANG        REL-V5R4M0  5722-WDS
+     A                                      TEXT('Subfile Dateifelder für Kondi-
+     A                                      tionendatei')
+     A  34                                  SFLNXTCHG
+     A            §§OP           1A  P
+     A            §§LFD#         1A  P
+     A            §§DESC         1A  P
+     A            §§PGMK         1A  P
+     A            S1RRN         15S 0H
+     A            S1F1RR        15S 0H
+     A            H1USRP    R        H      REFFLD(SYSPROGPFR/S4USRP *LIBL/SYSP-
+     A                                      ROGPF)
+     A            H1LFD#    R        H      REFFLD(SYSPROGPFR/S4LFD# *LIBL/SYSP-
+     A                                      ROGPF)
+     A            H1PGM     R        H      REFFLD(SYSPROGPFR/S4PGM *LIBL/SYSPR-
+     A                                      OGPF)
+     A            H1LIB     R        H      REFFLD(SYSPROGPFR/S4LIB *LIBL/SYSPR-
+     A                                      OGPF)
+     A            H1DESC    R        H      REFFLD(SYSPROGPFR/S4DESC *LIBL/SYSP-
+     A                                      ROGPF)
+     A            H1PGMV    R        H      REFFLD(SYSPROGPFR/S4PGMV *LIBL/SYSP-
+     A                                      ROGPF)
+     A            H1LIBV    R        H      REFFLD(SYSPROGPFR/S4LIBV *LIBL/SYSP-
+     A                                      ROGPF)
+     A            H1PGMC    R        H      REFFLD(SYSPROGPFR/S4PGMC *LIBL/SYSP-
+     A                                      ROGPF)
+     A            H1CALL    R        H      REFFLD(SYSPROGPFR/S4CALL *LIBL/SYSP-
+     A                                      ROGPF)
+     A            H1PGMK    R        H      REFFLD(SYSPROGPFR/S4PGMK *LIBL/SYSP-
+     A                                      ROGPF)
+     A            H1OPT     R        H      REFFLD(SYSPROGPFR/S4OPT *LIBL/SYSPR-
+     A                                      OGPF)
+     A            S1OP           2A  B  8  1
+     A  60                                  DSPATR(PC)
+     A                                      DSPATR(&§§OP)
+     A            S1USRP    R        H      REFFLD(SYSPROGPFR/S4USRP *LIBL/SYSP-
+     A                                      ROGPF)
+     A            S1LFD#    R        B  8  4REFFLD(SYSPROGPFR/S4LFD# *LIBL/SYSP-
+     A                                      ROGPF)
+     A                                      EDTCDE(3)
+     A  62                                  DSPATR(PC)
+     A                                      DSPATR(&§§LFD#)
+     A            S1PGM     R        H      REFFLD(SYSPROGPFR/S4PGM *LIBL/SYSPR-
+     A                                      OGPF)
+     A            S1DESC    R        B  8 10REFFLD(SYSPROGPFR/S4DESC *LIBL/SYSP-
+     A                                      ROGPF)
+     A  70                                  DSPATR(PC)
+     A                                      DSPATR(&§§DESC)
+     A                                      CHECK(LC)
+     A            S1PGMK    R        B  8 72REFFLD(SYSPROGPFR/S4PGMK *LIBL/SYSP-
+     A                                      ROGPF)
+     A  71                                  DSPATR(PC)
+     A                                      DSPATR(&§§PGMK)
+     A                                      CHECK(LC)
+     A*------------------------------------------------------------------------
+     A*SUBFILE-CONTROL-SATZ                                           ---------
+     A*------------------------------------------------------------------------
+     A          R SYS0005C1                 SFLCTL(SYS0005S1)
+     A*%%TS  SD  20091103  101535  GANG        REL-V5R4M0  5722-WDS
+     A  *DS3                                SFLSIZ(0010)
+     A  *DS4                                SFLSIZ(0010)
+     A  *DS3                                SFLPAG(0009)
+     A  *DS4                                SFLPAG(0009)
+     A  *DS3                                WINDOW(SYS0005D1)
+     A  *DS4                                WINDOW(SYS0005D1)
+     A                                      CHANGE(34)
+     A                                      RTNCSRLOC(&§§CRR &§§CRF &§§CRP)
+     A  33                                  DSPMOD(*DS4)
+     A                                      CSRLOC(§§CRLN     §§CRCL)
+     A                                      OVERLAY
+     A                                      PUTOVR
+     A                                      OVRDTA
+     A                                      OVRATR
+     A                                      SFLCSRRRN(&§§CRN)
+     A  31                                  SFLDSP
+     A  31                                  SFLDSPCTL
+     A N31                                  SFLCLR
+     A  99
+     AON99                                  SFLEND(*MORE)
+     A            §§CRLN         3S 0H
+     A            §§CRCL         3S 0H
+     A            §§CRR         10A  H
+     A            §§CRF         10A  H
+     A            §§CRP          4S 0H
+     A            §§CRN          5S 0H
+     A            §§KW           1A  P
+     A            §§§S02         1A  P
+     A            §§§V01         1A  P
+     A            §§F            1A  P
+     A            §§FTXT         1A  P
+     A            §§T            1A  P
+     A            §§TTXT         1A  P
+     A            §§MELD         1A  P
+     A            §§M1           1A  P
+     A            §§M2           1A  P
+     A            §§DRUCKER      1A  P
+     A            §§BATCH        1A  P
+     A            SFLDR1         4S 0H      SFLRCDNBR(CURSOR)
+     A            KEYS01    R        H      REFFLD(SYSPROGPFR/S4USRP *LIBL/SYSP-
+     A                                      ROGPF)
+     A            KEYS03    R        H      REFFLD(SYSPROGPFR/S4PGM *LIBL/SYSPR-
+     A                                      OGPF)
+     A            KEYV02    R        H      REFFLD(SYSPROGPFR/S4LFD# *LIBL/SYSP-
+     A                                      ROGPF)
+     A            KEYV03    R        H      REFFLD(SYSPROGPFR/S4PGM *LIBL/SYSPR-
+     A                                      OGPF)
+     A            KEYB01    R        H      REFFLD(SYSPROGPFR/S4USRP *LIBL/SYSP-
+     A                                      ROGPF)
+     A            KEYB02    R        H      REFFLD(SYSPROGPFR/S4LFD# *LIBL/SYSP-
+     A                                      ROGPF)
+     A            KEYB03    R        H      REFFLD(SYSPROGPFR/S4PGM *LIBL/SYSPR-
+     A                                      OGPF)
+     A            §§§JOB        10A  O  1  1TEXT('Jobname')
+     A                                      COLOR(BLU)
+     A N82N83N84                        1 25' Anzeige Auswahl Programme '
+     A                                      DSPATR(RI)
+     A  82
+     AO 83
+     AO 84                              1 26' Pflege Auswahl Programme '
+     A                                      DSPATR(HI)
+     A                                      DSPATR(RI)
+     A            §§§PGM        10A  O  1 65TEXT('Programmname')
+     A                                      COLOR(BLU)
+     A                                  2  1USER
+     A                                      COLOR(BLU)
+     A            LDADTD         8Y 0O  2 65EDTWRD('  .  .    ')
+     A                                      COLOR(BLU)
+     A                                  3  1'Firma: '
+     A            C1F            1Y 0B  3  9EDTCDE(3)
+     A                                      DSPATR(&§§F)
+     A  59                                  DSPATR(PC)
+     A            C1FTXT        30A  B  3 11DSPATR(&§§FTXT)
+     A            C1KW           4A  B  3 59DSPATR(&§§KW)
+     A  61                                  DSPATR(PC)
+     A            TIMEX          6Y 0O  3 65EDTWRD('  :  :  ')
+     A                                      COLOR(BLU)
+     A            C1MELD        74A  B  4  1DSPATR(&§§MELD)
+     A            C1M1          21A  B  5 32DSPATR(&§§M1)
+     A            C1M2          21A  B  5 54DSPATR(&§§M2)
+     A                                  6  1' Programm ab: '
+     A            KEYS02    R        B  6 16REFFLD(SYSPROGPFR/S4LFD# *LIBL/SYSP-
+     A                                      ROGPF)
+     A                                      DSPATR(&§§§S02)
+     A N82N83N84                            DSPATR(PC)
+     A                                      CHANGE(26)
+     A                                      EDTCDE(3)
+     A                                  6 31' Kennwort:'
+     A N82N83N84                            DSPATR(ND)
+     A                                  6 48' Profile: '
+     A            KEYV01    R        B  6 59REFFLD(SYSPROGPFR/S4USRP *LIBL/SYSP-
+     A                                      ROGPF)
+     A                                      DSPATR(&§§§V01)
+     A N82N83N84                            DSPATR(PC)
+     A                                  7  1'  P-Nr. Programmfunktion          -
+     A                                                                         -
+     A                                           '
+     A                                      DSPATR(UL)
+     A            C1T            1A  B  3 43DSPATR(&§§T)
+     A            C1TTXT        12A  B  3 45DSPATR(&§§TTXT)
+     A            C1DRUCKER     10A  B  5 10DSPATR(&§§DRUCKER)
+     A            C1BATCH        1A  B  5 21DSPATR(&§§BATCH)
+     A                                  5  1'Drucker:'
+     A*------------------------------------------------------------------------
+     A*MESSAGE-SUBFILE                                                ---------
+     A*------------------------------------------------------------------------
+     A* NACHRICHTEN-SUBFILE
+     A          R MSGSFL                    SFL
+     A*%%TS  SD  19980717  135441  GANG        REL-V3R2M0  5763-PW1
+     A                                      TEXT('Nachrichten-Subfile')
+     A  *DS3                                SFLMSGRCD(19)
+     A  *DS4                                SFLMSGRCD(19)
+     A            §§§MKY                    SFLMSGKEY
+     A            §§§PGQ                    SFLPGMQ(10)
+     A*
+     A*-------------------------------------------------------------------------
+     A*
+     A          R MSGSFLC                   SFLCTL(MSGSFL)
+     A*%%TS  SD  19980717  131740  GANG        REL-V3R2M0  5763-PW1
+     A  33                                  DSPMOD(*DS4)
+     A                                      OVERLAY
+     A                                      PUTOVR
+     A                                      OVRDTA
+     A                                      OVRATR
+     A                                      SFLDSP
+     A                                      SFLDSPCTL
+     A                                      SFLINZ
+     A  99
+     AON99                                  SFLEND
+     A  *DS3                                SFLSIZ(0002)
+     A  *DS4                                SFLSIZ(0002)
+     A  *DS3                                SFLPAG(0001)
+     A  *DS4                                SFLPAG(0001)
+     A  *DS3                                WINDOW(SYS0005D1)
+     A  *DS4                                WINDOW(SYS0005D1)
+     A            §§§PGQ                    SFLPGMQ(10)

@@ -1,0 +1,35 @@
+     A**************************************************************************
+     A*  Copyright 2025 by                                                     *
+     A*                                                                        *
+     A*                                                                        *
+     A*                                                                        *
+     A*  --------------------------------------------------------------------  *
+     A*  Beschreibung: Erweiterung Identstamm um IVEAS Kodierungen auf Basis   *
+     A*                der Zolltarifnummer                                     *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: MG 03.07.2025                                               *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R ZOTX1
+     A*-------------------------------------------------------------------------
+     A            ZOTNLOCK  R               REFFLD(##LOCK)
+     A            ZOTNJNAM  R               REFFLD(##JNAM)
+     A            ZOTNJDAT  R               REFFLD(##JDAT)
+     A            ZOTNJZEI  R               REFFLD(##JZEI)
+     A            ZOTNUSER  R               REFFLD(##USER)
+     A            ZOTNPROG  R               REFFLD(##PROG)
+     A            ZOTNBIBL  R               REFFLD(##BIBL)
+     A            ZOTNCODN      11A         TEXT('CODENUMMER')
+     A                                      COLHDG('CODENUMMER')
+     A            ZOTNABEZ     256A         TEXT('BEZEICHNUNG')
+     A                                      COLHDG('BEZEICHNUNG')
+     A
+     A*****       IVSCIMEX       1A         TEXT('Import I Export E')
+     A*****                                 COLHDG('Import I Export E')
+     A
+     A            ZOTNGADA  R               REFFLD(##GADA)
+     A*****       ZOTNGBDA  R               REFFLD(##GBDA)
+     A            ZOTNERUS  R               REFFLD(##ERUS)
+     A            ZOTNFREI     120A         TEXT('FREIFELD')
+     A                                      COLHDG('FREIFELD')
+     A*****

@@ -1,0 +1,63 @@
+     A*****************************************************************
+     A*                                                               *
+     A*  Copyright 1991 by    trend SWM                               *
+     A*                       Verwaltungs GmbH                        *
+     A*                       Ziegelhofstraße 210a                    *
+     A*                       DE 79110 Freiburg                       *
+     A*  -----------------------------------------------------------  *
+     A*                                                               *
+     A*  Workfile Kommissionierung (Kopie AB64)                       *
+     A*  -----------------------------------------------------------  *
+     A*  Erstellt: ZG 17.01.2017 Dometic Projket 12747                *
+     A*****************************************************************
+     A                                      REF(SWMREF)
+     A          R WA641
+     A*
+     A            WA64FIRM  R               REFFLD(##FIRM)
+     A            WA64AFAT  R               REFFLD(##AFAT)
+     A            WA64AFJJ  R               REFFLD(##AFJJ)
+     A            WA64AFNR  R               REFFLD(##AFNR)
+     A            WA64AFPO  R               REFFLD(##AFPO)
+     A            WA64UPOS  R               REFFLD(##AFPO)
+     A            WA64KDNR  R               REFFLD(##KDNR)
+     A            WA64VSBD  R               REFFLD(##VSBD)
+     A            WA64LIBD  R               REFFLD(##LIBD)
+     A            WA64VPEI  R               REFFLD(##VPEI)
+     A            WA64LANR  R               REFFLD(##LANR)
+     A            WA64LORT  R               REFFLD(##LORT)
+     A            WA64KMJK  R               REFFLD(AB641/SQKMJK AB64)
+     A            WA64KMTE  R               REFFLD(##KMTE)
+     A            WA64TENR  R               REFFLD(##TENR)
+     A            WA64MEIN  R               REFFLD(##MEIN)
+     A            WA64TART  R               REFFLD(##IART)
+     A            WA64OFMG  R               REFFLD(##RSMG)
+     A            WA64LAMG  R               REFFLD(##LAGB)
+     A            WA64UMMG  R               REFFLD(##RSMG)
+     A            WA64FWMG  R               REFFLD(##LAGB)
+     A            WA64KMLA  R               REFFLD(##LANR)
+     A            WA64LMLO  R               REFFLD(##LORT)
+     A            WA64LIAR  R               REFFLD(AB641/SQLIAR AB64)
+     A            WA64SABE  R               REFFLD(##SABE)
+     A            WA64GWNT  R               REFFLD(##GEWT)
+     A            WA64VOLU  R               REFFLD(##VPVO)
+     A            WA64WKNR  R               REFFLD(##WKNR)
+     A            WA64A115  R               REFFLD(##A015)
+     A            WA64A215  R               REFFLD(##A015)
+     A            WA64A315  R               REFFLD(##A015)
+     A            WA64A415  R               REFFLD(##A015)
+     A            WA64A515  R               REFFLD(##A015)
+     A            WA64KMJJ  R               REFFLD(##KMJJ)
+     A            WA64KMNR  R               REFFLD(##KMNR)
+     A            WA64STAT  R               REFFLD(##STAT)
+     A            WA64LFTE  R               REFFLD(##LFTE)
+     A            WA64DRKZ  R               REFFLD(##DRKZ)
+     A            WA64FREI  R   19          REFFLD(##FREI)
+     A            WA64LOCK  R               REFFLD(##LOCK)
+     A            WA64JNAM  R               REFFLD(##JNAM)
+     A            WA64JDAT  R               REFFLD(##JDAT)
+     A            WA64JZEI  R               REFFLD(##JZEI)
+     A            WA64USER  R               REFFLD(##USER)
+     A            WA64PROG  R               REFFLD(##PROG)
+     A            WA64BIBL  R               REFFLD(##BIBL)
+     A            WA64TSTP  R               REFFLD(##TSTP)
+     A            WA64ERUS  R               REFFLD(##ERUS)

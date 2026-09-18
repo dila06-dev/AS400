@@ -1,0 +1,58 @@
+     C**************************************************************************
+     C* PROGRAMMNAME.:##D3OPTA                                                
+     C* FUNKTION.....:STEUERUNGSROUTINEN OPTIONEN
+     C* OKTOBER 2009   GANG, MANFRED
+     C*-------------------------------------------------------------------------
+     C**************************************************************************
+     C* SR1401: AUSWAHL BEARBEITEN FÜR FORMAT D3
+     C*-------------------------------------------------------------------------
+     C*
+     C           SR1401    BEGSR
+     C*
+     C                     Z-ADD*ZERO     CRTREC
+     C                     Z-ADD*ZERO     MODREC
+     C                     Z-ADD*ZERO     DLTREC
+     C*
+     C                     MOVE 'N'       CTLVLD  1
+     C                     EXSR SR1501                     PRÜFUNGEN
+     C*
+     C           CTLVLD    IFEQ 'N'                        ERROR ?
+     C                     MOVE 'J'       CTLCHG
+     C                     SELEC                           START SELECT
+     C* SÄTZE KOPIEREN
+     C           D3OP      WHEQ 'K'
+     C           §§§CFK    OREQ BT15
+     C                     EXSR SR1601
+     C* AUSWAHL SATZ DRUCKEN
+     C           D3OP      WHEQ 'D'
+     C           §§§CFK    OREQ BT21
+     C                     EXSR SR1701
+     C* AUSWAHL SATZ MODIF.
+     C           D3OP      WHEQ 'N'
+     C           §§§CFK    OREQ BT06
+     C                     CLEARS1F1RR
+     C                     EXSR SR1801
+     C* AUSWAHL SATZ MODIF.
+     C           D3OP      WHEQ 'Ä'
+     C           §§§CFK    OREQ BT02
+     C                     EXSR SR1801
+     C* LÖSCHEN SÄTZE
+     C           D3OP      WHEQ 'L'
+     C           §§§CFK    OREQ BT23
+     C                     EXSR SR1901
+     C* KEINE OPTION
+     C           D3OP      WHEQ ' '
+     C                     MOVE 'N'       CTLCHG
+     C*                    MOVE 'J'       CTLLD
+     C* FALSCHE FUNKTION ODER CODE
+     C                     OTHER
+     C                     MOVE '1'       *IN60
+     C                     MOVEL'AL00024' MSG
+     C                     EXSR SNDMSG
+     C                     MOVE 'F'       CTLVLD
+     C*
+     C                     ENDSL                           END SELECT
+     C*
+     C                     ENDIF
+     C*
+     C           ##1401    ENDSR

@@ -1,0 +1,17 @@
+     A**************************************************************************
+     A*  Copyright 2009 by    Hawa AG                                          *
+     A*                       Untere Fischbachstrasse 4                        *
+     A*                       CH 8932 Mettmenstetten                           *
+     A*  --------------------------------------------------------------------  *
+     A*  Matchcode-Routine für Anzeige offene Posten                           *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: GD 27.04.2009                                               *
+     A*                                                                        *
+     A**************************************************************************
+     A          R UXH0421
+     A*
+     A            UXH042OPFAR               REFFLD(OPSATZ/OPFA *LIBL/FOPPK)
+     A            UXH042OPKTR               REFFLD(OPSATZ/OPKTO *LIBL/FOPPK)
+     A            UXH042OPNRR               REFFLD(OPSATZ/OPOPNR *LIBL/FOPPK)
+     A            UXH042OPNUR               REFFLD(OPSATZ/OPOPUN *LIBL/FOPPK)
+     A            UXH042OPARR               REFFLD(OPSATZ/OPOPAR *LIBL/FOPPK)

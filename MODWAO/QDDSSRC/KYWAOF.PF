@@ -1,0 +1,24 @@
+     A**************************************************************************
+     A*  Copyright 2001 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Beschreibung                                                          *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: SZ 02.03.2001                                               *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(WAOF)
+     A          R KYWAOF1
+     A*-------------------------------------------------------------------------
+     A            KYWAOFFIRMR               REFFLD(WAOFFIRM)
+     A            KYWAOFKAJJR               REFFLD(WAOFKAJJ)
+     A            KYWAOFKANRR               REFFLD(WAOFKANR)
+     A            KYWAOFVEURR               REFFLD(WAOFVEUR)
+     A            KWAOF$FREI    30
+     A            K#WAOFLOCKR               REFFLD(WAOFLOCK)
+     A            K#WAOFFIRMR               REFFLD(WAOFFIRM)
+     A            K#WAOFKAJJR               REFFLD(WAOFKAJJ)
+     A            K#WAOFKANRR               REFFLD(WAOFKANR)
+     A            K#WAOFVEURR               REFFLD(WAOFVEUR)

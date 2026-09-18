@@ -1,0 +1,1862 @@
+
+      //************************************************************************
+      //
+      //      Programmname       BACKORDERR
+      //      Erstellt  am       30.06.2016
+      //      Erstellt von       M.Gang
+      //
+      //      Beschreibung       ...
+      //      Sicherung älterer Daten:BACKORDER#
+      // ----------------------------------+------------------------------------
+      // Geändert am Kürzel Name           ! Anfo-Nr. (Zeile 1) + Beschreibung
+      // ----------------------------------+------------------------------------
+      //                                   !
+      //  tt.mm.jjjj  xx01  .............. !
+      //                                   !
+      //************************************************************************
+      // Übersetzungshinweise:
+      //
+      //
+      //
+      //
+      //
+      // Referenzsatz
+      //
+      //************************************************************************
+
+      //------------------------------------------------------------------------
+      //    S T E U E R - B E S T I M M U N G E N
+      //------------------------------------------------------------------------
+     h datfmt(*EUR)
+     h datedit(*DMY.)
+     h timfmt(*HMS:)
+     h decedit('0,')
+     h langid('DE')
+     h option(*SRCSTMT:*NoDebugIO)
+     h dftactgrp(*NO) actgrp(*CALLER)
+
+      //------------------------------------------------------------------------
+      //    D A T E I - D E F I N I T I O N E N
+      //------------------------------------------------------------------------
+
+
+      //------------------------------------------------------------------------
+      //    D A T E N S T R U K T U R E N
+      //------------------------------------------------------------------------
+
+      // System-Datenstruktur
+
+      // dsSystem       sds
+      //  aThisProgramm          1     10
+      //  aThisWorkStn         244    253
+      //  aThisUser            254    263
+     d DSPGM          SDS
+     d  §§§PGM                 1     10
+     d  §§§STS                11     15
+     d  §§§SEQ                21     28
+     d  §§§SR                 29     36
+     d  §§§MSG                40     46
+     d  §§§LIB                81     90
+     d  §§§MTX                91    170
+     d  §§§FIL               201    208
+     d  §§§FST               209    243
+     d  §§§JOB               244    253
+     d  §§§USR               254    263
+     d  §§§JNO               264    269  0
+     d  §§§SDT               276    281  0
+     d  §§§STM               282    287  0
+
+
+     D MD#2            S              1    DIM(512)
+     D ATR             S              1    DIM(63)
+     D ATTS            S              1    DIM(1)
+     D ATTK            S              1    DIM(1)
+     D ATTO            S              1    DIM(1)
+     D KEY             S              2    DIM(24)
+     D FKTTST          S              1    DIM(6)
+
+       // ______________________________________________________________________
+       // qmhsndpm
+       // ______________________________________________________________________
+     D QMHSNDPM        PR                  ExtPgm('QMHSNDPM')
+     D   MessageID                    7A   Const
+     D   QualMsgF                    20A   Const
+     D   MsgData                    256A   Const
+     D   MsgDtaLen                   10I 0 Const
+     D   MsgType                     10A   Const
+     D   CallStkEnt                  10A   Const
+     D   CallStkCnt                  10I 0 Const
+     D   MessageKey                   4A
+     D   ErrorCode                    1A
+
+       // ______________________________________________________________________
+       // dummy512
+       // ______________________________________________________________________
+     D DUMMY512        PR                  ExtPgm('DUMMY512')
+       //p_md                         001a   DIM(256)
+     D p_md                         256a
+     D p_MSG                          7a
+     D p_MSGF                        10a
+     D p_PRINT                       10a
+     D p_OUTFIL                      10a
+     D p_LIB                         10a
+     D P_REPADD                      10a
+
+       //           ... Grunddaten
+       // ______________________________________________________________________
+       // Sicherung PBESTLO_R
+     d RPMEXPECM       PR                  ExtPgm('RPMEXPECM')
+       // ______________________________________________________________________
+       // Sicherung WE_CHECK
+     d WE_CHECK        PR                  ExtPgm('WE_CHECK')
+       // ______________________________________________________________________
+       // BACKORDERR      PR                  ExtPgm('BACKORDERR')
+       // ______________________________________________________________________
+       // define data areas
+       // ______________________________________________________________________
+     D #swapc          s             08a   dtaara
+     D JOB_R_run       s             01a   dtaara
+
+      //------------------------------------------------------------------------
+      //------------------------------------------------------------------------
+      //    V A R I A B L E N
+      //------------------------------------------------------------------------
+
+      // qcmdexc
+      //------------------------------------------------------------------------
+     D Wrk             DS                  Qualified inz
+     D Var1                         460A   inz(' ')
+     D L               s              9  0
+     D
+     D QCMDEXC         PR                  ExtPgm('QCMDEXC')
+     D cmd                        32702A   const options(*varsize)
+     D len                           15P 5 const
+
+     D cmd             s            460A   varying
+
+      // dummy512
+      //------------------------------------------------------------------------
+      // p_md            s            001a   inz
+      //                                     dim(256)
+     D p_md            s            256a   inz
+     D p_MSG           s              7a   inz
+     D p_MSGF          s             10a   inz
+     D p_PRINT         s             10a   inz
+     D p_OUTFIL        s             10a   inz
+     D p_LIB           s             10a   inz
+     D P_REPADD        s             10a   inz
+
+     D §records        s              9s 0 inz
+     D §records2       s              9s 0 inz
+     D §quantity1      s             10s 3 inz
+     D §quantity2      s             10s 3 inz
+     D §calc           s              6s 3 inz
+     D ##week          s              2s 0 inz
+     D ##month         s              2s 0 inz
+
+      // qmhsndpm
+      // ______________________________________________________________________
+     D MessageID       s              7A   inz
+     D QualMsgF        s             20A   inz
+     D MsgData         s            256A   inz
+     D MsgDtaLen       s             10I 0 inz
+     D MsgType         s             10A   inz
+
+
+      // internal
+      // ______________________________________________________________________
+     D status          s            132A   inz
+     D err_msg         s              1a   inz
+     D #error          s              1a   inz
+     D #openquan       s             13s 4 inz
+     D #division       s             10a   inz
+     D #expected       s             13s 4 inz
+     D #run            s              1a   inz
+     D #dirmail        s              1a   inz
+     D checkd          s              8s 0 inz
+     D checkx          s              8s 0 inz
+     D p               s             15p 0
+
+     D suffix          s              6A   inz
+     D transfer        s             30A   inz
+     D string_file     s             60A   inz
+     d NumSysTime      s              6s 0
+     d myDate          s               d
+     d tomorrow        s               d
+     d twechsel        s               d
+     d days            s              2s 0
+     d months          s              2s 0
+     d years           s              4s 0
+     d tommonths       s              2s 0
+     d eofyear         s              8s 0
+     d nowdate         s              8s 0
+     Dweek             s              1s 0
+     DGoodDateV        S              1a
+     DGoodDateB        S              1a
+     Derror1           s              1a   inz
+     Derror2           s              1a   inz
+     Derror3           s              1a   inz
+     Derror4           s              1a   inz
+     Derror5           s              1a   inz
+     Dpstamp           s               z   inz
+     D#ERRORS          s             60a
+     DDate_in_V        S               D   DATFMT(*iso)
+     DDate_in_B        S               D   DATFMT(*iso)
+     D p_inFIL         s             24a
+     d curweek         s              2s 0
+     d maxweek         s              2s 0
+     d curyear         s              4s 0
+     d maxyear         s              4s 0
+     d curdate         s              6s 0
+     d maxdate         s              6s 0
+     d nextweek        s              2s 0
+     d nextyear        s              6s 0
+     d parm1           s              6s 0
+     d parm2           s              6s 0
+     d parm3           s              6s 0
+     d parm4           s              6s 0
+     d parm5           s              6s 0
+     d parm6           s              6s 0
+
+     D §search         s              1a   inz
+     D §string         s            100a   inz
+     D §replace        s              1a   inz
+     D §pos            s              3s 0 inz
+
+      // Überschreibungen
+      // ______________________________________________________________________
+      /eject
+      //************************************************************************
+      //          -----------------
+      //          M A I N - L I N E
+      //          -----------------
+      //************************************************************************
+
+
+      /FREE
+
+       §records=*zero;
+
+       eval status ='Start BACKORDERR              ' ;
+       exsr      SR_log;
+
+
+       exsr  srinit;
+       exsr  sr_BACKORD;
+       exsr  SR_output;
+       err_msg   = '0';
+
+       if §records <> *zero;
+       endif;
+
+       // ______________________________________________________________________
+       if error1 =  '0';
+       //liblist
+          MONITOR;
+             Wrk.var1 =
+                 'RMVLIBLE LIB(DOMDATV7)';
+             cmd = %TrimR(Wrk.Var1);
+             L      = %Len(Cmd);
+             QCMDEXC(cmd: %len(cmd));
+                error1 ='0';
+             on-error;
+                status='error  RMVLIBLE LIB(DOMDATV7)                   ';
+                exsr      SR_log;
+                error1 ='1';
+          endmon;
+       endif;
+
+       if error2 =  '0';
+       //liblist
+          MONITOR;
+             Wrk.var1 =
+                 'RMVLIBLE LIB(DOMCOMV7)';
+             cmd = %TrimR(Wrk.Var1);
+             L      = %Len(Cmd);
+             QCMDEXC(cmd: %len(cmd));
+                error2 ='0';
+             on-error;
+                status='error  RMVLIBLE LIB(DOMCOMV7)                   ';
+                exsr      SR_log;
+                error2 ='1';
+          endmon;
+       endif;
+
+
+
+       eval status ='Ende  BACKORDERR              ';
+
+       exsr      SR_log;
+
+       *inlr = *on;
+
+      /eject
+       //***********************************************************************
+       //    ---------------------
+       //    S U B R O U T I N E S
+       //    ---------------------
+       //***********************************************************************
+
+
+       //-----------------------------------------------------------------------
+       //
+       //    %dec(Datum:*iso) => JJJJMMTT
+       //    %dec(Datum:*eur) => TTMMJJJJ
+       //    %dec(Datum:*jul) => JJJJTTT
+       //    select current timestamp, current date, current date -365 day,
+       //           current time, dec(DAYOFWEEK_iso(current date ), 1, 0),
+       //                         dec(week_iso(current date ), 2, 0),
+       //                         dec(week(current date ), 2, 0)
+       //-----------------------------------------------------------------------
+
+       begsr srinit;
+
+       exec sql
+         select  dec (week_iso(current date-07  day ), 2, 0)
+                 into            :curweek
+                 from   qsys2/qsqptabl;
+       exec sql
+         select  dec (week_iso(current date+42  day ), 2, 0)
+                 into            :maxweek
+                 from   qsys2/qsqptabl;
+       exec sql
+         select  dec (year(current date-07  day ), 4, 0)
+                 into            :curyear
+                 from   qsys2/qsqptabl;
+       exec sql
+         select  dec (year(current date+42  day ), 4, 0)
+                 into            :maxyear
+                 from   qsys2/qsqptabl;
+        eval     maxdate = maxyear *100 + maxweek;
+        eval     curdate = curyear *100 + curweek;
+
+
+       //parm1
+       exec sql
+         select  dec (week_iso(current date+00  day ), 2, 0)
+                 into            :nextweek
+                 from   qsys2/qsqptabl;
+       exec sql
+         select  dec (year(current date+00  day ), 4, 0)
+                 into            :nextyear
+                 from   qsys2/qsqptabl;
+        eval     parm1   = nextyear*100 + nextweek;
+       //parm2
+       exec sql
+         select  dec (week_iso(current date+07  day ), 2, 0)
+                 into            :nextweek
+                 from   qsys2/qsqptabl;
+       exec sql
+         select  dec (year(current date+07  day ), 4, 0)
+                 into            :nextyear
+                 from   qsys2/qsqptabl;
+        eval     parm2   = nextyear*100 + nextweek;
+
+       //parm3
+       exec sql
+         select  dec (week_iso(current date+14  day ), 2, 0)
+                 into            :nextweek
+                 from   qsys2/qsqptabl;
+       exec sql
+         select  dec (year(current date+14  day ), 4, 0)
+                 into            :nextyear
+                 from   qsys2/qsqptabl;
+        eval     parm3   = nextyear*100 + nextweek;
+
+       //parm4
+       exec sql
+         select  dec (week_iso(current date+21  day ), 2, 0)
+                 into            :nextweek
+                 from   qsys2/qsqptabl;
+       exec sql
+         select  dec (year(current date+21  day ), 4, 0)
+                 into            :nextyear
+                 from   qsys2/qsqptabl;
+        eval     parm4   = nextyear*100 + nextweek;
+
+       //parm5
+       exec sql
+         select  dec (week_iso(current date+28  day ), 2, 0)
+                 into            :nextweek
+                 from   qsys2/qsqptabl;
+       exec sql
+         select  dec (year(current date+28  day ), 4, 0)
+                 into            :nextyear
+                 from   qsys2/qsqptabl;
+        eval     parm5   = nextyear*100 + nextweek;
+
+       //parm6
+       exec sql
+         select  dec (week_iso(current date+35  day ), 2, 0)
+                 into            :nextweek
+                 from   qsys2/qsqptabl;
+       exec sql
+         select  dec (year(current date+35  day ), 4, 0)
+                 into            :nextyear
+                 from   qsys2/qsqptabl;
+        eval     parm6   = nextyear*100 + nextweek;
+       //liblist
+
+       //Version V2  back03v2    heir raus später
+       MONITOR;
+       Wrk.var1 =
+           'CLRPFM FILE(GANG/back03v2)';
+         cmd = %TrimR(Wrk.Var1);
+         L      = %Len(Cmd);
+         QCMDEXC(cmd: %len(cmd));
+          status='CLRPFM successful FILE(GANG/back03v2)            ';
+          exsr      SR_log;
+       on-error;
+          status='Error by clrpfm object (GANG/back03v2)           ';
+          exsr      SR_log;
+       endmon;
+
+       //Version V2  back03v2    heir raus später
+       exec sql
+          CREATE TABLE gang/back03v2
+          (ident     CHAR(15) CCSID 273,
+           lieferant CHAR(10) CCSID 273,
+           yearweek##  decimal(06, 0) ,
+           value     decimal(12, 2))        ;
+       //offene Bestellungen
+       exec sql
+           inserT into gang/back03v2
+           SELECT eptenr, epLFNR ,
+                  decimal(decimal(year
+                   ( date(substr(EPBETE, 1, 4) concat '-' concat
+                     substr(EPBETE, 5, 2) concat '-' concat
+                     substr(EPBETE, 7, 2)) )), 4, 0) *100 +
+                  decimal(decimal(week_iso
+                     ( date(substr(EPBETE, 1, 4) concat '-' concat
+                       substr(EPBETE, 5, 2) concat '-' concat
+                       substr(EPBETE, 7, 2)) )), 2, 0),
+                  sum(epmeng)
+           FROM bbep01     WHERE epfirm='01' and epbete > 0 and
+           ( decimal(decimal(year
+              ( date(substr(EPBETE, 1, 4) concat '-' concat
+                substr(EPBETE, 5, 2) concat '-' concat
+                substr(EPBETE, 7, 2)) )), 4, 0) *100 +
+             decimal(decimal(week_iso
+                ( date(substr(EPBETE, 1, 4) concat '-' concat
+                  substr(EPBETE, 5, 2) concat '-' concat
+                  substr(EPBETE, 7, 2)) )), 2, 0) > :curdate)
+                           and
+              ( decimal(decimal(year
+                 ( date(substr(EPBETE, 1, 4) concat '-' concat
+                   substr(EPBETE, 5, 2) concat '-' concat
+                   substr(EPBETE, 7, 2)) )), 4, 0) *100 +
+                decimal(decimal(week_iso
+                   ( date(substr(EPBETE, 1, 4) concat '-' concat
+                     substr(EPBETE, 5, 2) concat '-' concat
+                     substr(EPBETE, 7, 2)) )), 2, 0) < :maxdate)
+                           and
+             EPBEJJ not in (select #aebejj from we_checktr where
+                            epbenr=#aebenr and epbepo=#aebepo)
+           GROUP BY eptenr, epLFNR ,
+                  decimal(decimal(year
+                     ( date(substr(EPBETE, 1, 4) concat '-' concat
+                     substr(EPBETE, 5, 2) concat '-' concat
+                     substr(EPBETE, 7, 2)) )), 4, 0) *100 +
+                  decimal(decimal(week_iso
+                     ( date(substr(EPBETE, 1, 4) concat '-' concat
+                     substr(EPBETE, 5, 2) concat '-' concat
+                     substr(EPBETE, 7, 2)) )), 2, 0);
+
+
+       MONITOR;
+       Wrk.var1 =
+           'CLRPFM FILE(xxxxxxxxxx/available)';
+         cmd = %TrimR(Wrk.Var1);
+         L      = %Len(Cmd);
+         QCMDEXC(cmd: %len(cmd));
+          status='CLRPFM successful FILE(TVRELWAECO/availableR)    ';
+          exsr      SR_log;
+       on-error;
+          status='Error by clrpfm object (TVRELWAECO/availableR)   ';
+          exsr      SR_log;
+       endmon;
+
+
+
+       MONITOR;
+       Wrk.var1 =
+           'CLRPFM FILE(qtemp/back01)';
+         cmd = %TrimR(Wrk.Var1);
+         L      = %Len(Cmd);
+         QCMDEXC(cmd: %len(cmd));
+          status='CLRPFM successful FILE(qtemp/back01)             ';
+       on-error;
+          status='Error by clrpfm object (qtemp/back01)            ';
+       endmon;
+
+       MONITOR;
+       Wrk.var1 =
+           'CLRPFM FILE(qtemp/back01b)';
+         cmd = %TrimR(Wrk.Var1);
+         L      = %Len(Cmd);
+         QCMDEXC(cmd: %len(cmd));
+          status='CLRPFM successful FILE(qtemp/back01b)            ';
+       on-error;
+          status='Error by clrpfm object (qtemp/back01b)           ';
+       endmon;
+
+
+
+       MONITOR;
+       Wrk.var1 =
+           'CLRPFM FILE(qtemp/back02)';
+         cmd = %TrimR(Wrk.Var1);
+         L      = %Len(Cmd);
+         QCMDEXC(cmd: %len(cmd));
+          status='CLRPFM successful FILE(qtemp/back02)             ';
+       on-error;
+          status='Error by clrpfm object (qtemp/back02)            ';
+       endmon;
+
+
+
+       MONITOR;
+       Wrk.var1 =
+           'CLRPFM FILE(qtemp/back03)';
+         cmd = %TrimR(Wrk.Var1);
+         L      = %Len(Cmd);
+         QCMDEXC(cmd: %len(cmd));
+          status='CLRPFM successful FILE(qtemp/back03)             ';
+       on-error;
+          status='Error by clrpfm object (qtemp/back03)            ';
+       endmon;
+
+
+       MONITOR;
+       Wrk.var1 =
+           'CLRPFM FILE(qtemp/back04)';
+         cmd = %TrimR(Wrk.Var1);
+         L      = %Len(Cmd);
+         QCMDEXC(cmd: %len(cmd));
+          status='CLRPFM successful FILE(qtemp/back04)             ';
+       on-error;
+          status='Error by clrpfm object (qtemp/back04)            ';
+       endmon;
+
+       //liblist
+       MONITOR;
+          Wrk.var1 =
+              'ADDLIBLE LIB(DOMDATV7) POSITION(*LAST) ';
+          cmd = %TrimR(Wrk.Var1);
+          L      = %Len(Cmd);
+          QCMDEXC(cmd: %len(cmd));
+             error1 ='0';
+          on-error;
+             status='error ADDLIBLE LIB(DOMDATV7) POSITION(*LAST)        ';
+             exsr      SR_log;
+             error1 ='1';
+       endmon;
+
+       //liblist
+       MONITOR;
+          Wrk.var1 =
+              'ADDLIBLE LIB(DOMCOMV7) POSITION(*LAST) ';
+          cmd = %TrimR(Wrk.Var1);
+          L      = %Len(Cmd);
+          QCMDEXC(cmd: %len(cmd));
+             error2 ='0';
+          on-error;
+             status='error ADDLIBLE LIB(DOMCOMV7) POSITION(*LAST)        ';
+             exsr      SR_log;
+             error2 ='1';
+       endmon;
+
+
+
+       //*************************************************************************************************************
+       err_msg     = '1';
+       NumSysTime = %Dec(%Time(): *ISO);
+       //  If MyNumTime = NumSysTime;
+       //  //2. Convert numeric Time (HHMMSS) into a real time
+       //  RealTime = %Time(MyNumTime: *ISO);
+       //  If RealTime = %Time();
+
+       mydate  = %date();
+       days    = %subdt( %date(): *days );
+       months  = %subdt( %date(): *months );
+       years   = %subdt( %date(): *years );
+       eofyear = years*10000+12*100+31;
+       nowdate = (%dec(%char(%date()- %days(1):*iso0):8:0));
+
+       tomorrow  = %date() +  %days(01);
+       twechsel  = %date() +  %days(01);
+       tommonths = %subdt( %date() + %days(01): *months );
+
+       §records=*zero;
+       exec sql
+         select count(*) into :§records
+                FROM  TVRELWAECO/xxxxx;
+
+       if §records <> *zero;
+       endif;
+
+       exec sql
+         select  dec(DAYOFWEEK_iso(current date ), 1, 0)
+                 into            :week
+                 from   qsys2/qsqptabl;
+
+
+       err_msg   = '0';
+
+       //sql handling
+         exec sql
+                  whenever not found continue;
+         exec sql
+                  WHENEVER SQLWARNING continue;
+         exec sql
+                  WHENEVER SQLERROR  continue;
+
+       endsr;
+
+       //**************************************************************************
+       //*vorher Stücklistenkalkulation
+       //*-------------------------------------------------------------------------
+
+       begsr sr_BACKORD;
+
+         eval status ='Start callP RPMEXPECM                     ';
+         exsr      SR_log;
+         callP RPMEXPECM();
+         eval status ='Ende  callP RPMEXPECM                     ';
+         exsr      SR_log;
+
+         eval status ='Start callP WE_CHECK                      ';
+         exsr      SR_log;
+         callP WE_CHECK();
+         eval status ='Ende  callP WE_CHECK                      ';
+         exsr      SR_log;
+
+       //eval status ='Start callP EKBEST300C                    ';
+       //exsr      SR_log;
+       //callP EKBEST300C();
+       //eval status ='Ende  callP EKBEST300C                    ';
+       //exsr      SR_log;
+
+
+
+       status=*blank;
+       exec sql
+        delete   from tvrelwaeco/backorders
+        where tstamp > current timestamp -1 hour ;
+
+       exec sql
+          CREATE TABLE qtemp/back01
+          (item      CHAR(15) CCSID 273,
+           itemname  CHAR(40) CCSID 273,
+           value     decimal(12, 2) ,
+           pcs       decimal(12, 2))        ;
+
+       exec sql
+           inserT into qtemp/back01
+           select item, char(' ', 40) itemname,
+           dec(sum(wert), 12, 2 ) value,
+           dec(sum(APGLMG), 12, 2 ) pcs
+           FROM RPMEXPECM0
+           WHERE YEAR# =year(current date - 0 day) and
+                 ( week# =week(current date - 0 day) -1 or
+                   week# =week(current date - 0 day) -1)  and
+       //          week# =1                            )  and
+                 akfirm ='01' and APAFST ='17' GROUP BY item;
+       exec sql
+          CREATE TABLE qtemp/back02
+          (ident     CHAR(15) CCSID 273,
+           lieferant CHAR(10) CCSID 273,
+           year##    decimal(04, 0) ,
+           week##    decimal(02, 0) ,
+           value     decimal(12, 2))        ;
+
+       exec sql
+          CREATE TABLE qtemp/back01b
+          (item      CHAR(15) CCSID 273,
+           itemname  CHAR(40) CCSID 273,
+           customer# CHAR(15) CCSID 273,
+           customer  CHAR(40) CCSID 273,
+           value     decimal(12, 2) ,
+           pcs       decimal(12, 2))        ;
+
+       exec sql
+          CREATE TABLE qtemp/back03
+          (ident     CHAR(15) CCSID 273,
+           lieferant CHAR(10) CCSID 273,
+           year##    decimal(04, 0) ,
+           week##    decimal(02, 0) ,
+           value     decimal(12, 2))        ;
+
+       //Version V2  back03v2
+       exec sql
+          CREATE TABLE qtemp/back03v2
+          (ident     CHAR(15) CCSID 273,
+           lieferant CHAR(10) CCSID 273,
+           yearweek##  decimal(06, 0) ,
+           value     decimal(12, 2))        ;
+
+       //we_checktr
+       exec sql
+           inserT into qtemp/back02
+           SELECT #LBLBTENR, #AELFNR ,
+                  decimal(decimal(year(DATELFTERM)), 4, 0),
+                  decimal(decimal(week(DATELFTERM)), 2, 0),
+                  sum(#LBLBBWMG )
+           FROM we_checktr WHERE DAT001 = 0 and
+           ((week(DATELFTERM)=week(current date)+0 or
+             week(DATELFTERM)=week(current date)+1 or
+             week(DATELFTERM)=week(current date)+2 or
+             week(DATELFTERM)=week(current date)+3 or
+             week(DATELFTERM)=week(current date)+4 or
+             week(DATELFTERM)=week(current date)+5 or
+             week(DATELFTERM)=week(current date)+6 ) and
+            (year(DATELFTERM)=year(current date) or
+             year(DATELFTERM)>year(current date) ))
+            GROUP BY #LBLBTENR, #AELFNR,
+            decimal(decimal(year(DATELFTERM)), 4, 0),
+            decimal(decimal(week(DATELFTERM)), 2, 0);
+
+       //offene Bestellungen
+       exec sql
+           inserT into qtemp/back03
+           SELECT eptenr, epLFNR ,
+                  decimal(decimal(year
+                   ( date(substr(EPBETE, 1, 4) concat '-' concat
+                     substr(EPBETE, 5, 2) concat '-' concat
+                     substr(EPBETE, 7, 2)) )), 4, 0),
+                  decimal(decimal(week
+                     ( date(substr(EPBETE, 1, 4) concat '-' concat
+                       substr(EPBETE, 5, 2) concat '-' concat
+                       substr(EPBETE, 7, 2)) )), 2, 0),
+                  sum(epmeng)
+           FROM bbep01     WHERE epfirm='01' and epbete > 0 and
+           ((week( date(substr(EPBETE, 1, 4) concat '-' concat
+                    substr(EPBETE, 5, 2) concat '-' concat
+                    substr(EPBETE, 7, 2)) )  =week(current date)+0 or
+             week( date(substr(EPBETE, 1, 4) concat '-' concat
+                    substr(EPBETE, 5, 2) concat '-' concat
+                    substr(EPBETE, 7, 2)) )  =week(current date)+1 or
+             week( date(substr(EPBETE, 1, 4) concat '-' concat
+                    substr(EPBETE, 5, 2) concat '-' concat
+                    substr(EPBETE, 7, 2)) )  =week(current date)+2 or
+             week( date(substr(EPBETE, 1, 4) concat '-' concat
+                    substr(EPBETE, 5, 2) concat '-' concat
+                    substr(EPBETE, 7, 2)) )  =week(current date)+3 or
+             week( date(substr(EPBETE, 1, 4) concat '-' concat
+                    substr(EPBETE, 5, 2) concat '-' concat
+                    substr(EPBETE, 7, 2)) )  =week(current date)+4 or
+             week( date(substr(EPBETE, 1, 4) concat '-' concat
+                    substr(EPBETE, 5, 2) concat '-' concat
+                    substr(EPBETE, 7, 2)) )  =week(current date)+5 or
+             week( date(substr(EPBETE, 1, 4) concat '-' concat
+                    substr(EPBETE, 5, 2) concat '-' concat
+                    substr(EPBETE, 7, 2)) )  =week(current date)+6 ) and
+            (year( date(substr(EPBETE, 1, 4) concat '-' concat
+                    substr(EPBETE, 5, 2) concat '-' concat
+                    substr(EPBETE, 7, 2)) )  = year(current date) or
+             year( date(substr(EPBETE, 1, 4) concat '-' concat
+                    substr(EPBETE, 5, 2) concat '-' concat
+                    substr(EPBETE, 7, 2)))   > year(current date)))
+             and
+             EPBEJJ not in (select #aebejj from we_checktr where
+                            epbenr=#aebenr and epbepo=#aebepo)
+           GROUP BY eptenr, epLFNR ,
+                  decimal(decimal(year
+                     ( date(substr(EPBETE, 1, 4) concat '-' concat
+                     substr(EPBETE, 5, 2) concat '-' concat
+                     substr(EPBETE, 7, 2)) )), 4, 0),
+                  decimal(decimal(week
+                     ( date(substr(EPBETE, 1, 4) concat '-' concat
+                     substr(EPBETE, 5, 2) concat '-' concat
+                     substr(EPBETE, 7, 2)) )), 2, 0);
+
+       //offene Bestellungen
+       exec sql
+           inserT into qtemp/back03v2
+           SELECT eptenr, epLFNR ,
+                  decimal(decimal(year
+                   ( date(substr(EPBETE, 1, 4) concat '-' concat
+                     substr(EPBETE, 5, 2) concat '-' concat
+                     substr(EPBETE, 7, 2)) )), 4, 0) *100 +
+                  decimal(decimal(week_iso
+                     ( date(substr(EPBETE, 1, 4) concat '-' concat
+                       substr(EPBETE, 5, 2) concat '-' concat
+                       substr(EPBETE, 7, 2)) )), 2, 0),
+                  sum(epmeng)
+           FROM bbep01     WHERE epfirm='01' and epbete > 0 and
+           ( decimal(decimal(year
+              ( date(substr(EPBETE, 1, 4) concat '-' concat
+                substr(EPBETE, 5, 2) concat '-' concat
+                substr(EPBETE, 7, 2)) )), 4, 0) *100 +
+             decimal(decimal(week_iso
+                ( date(substr(EPBETE, 1, 4) concat '-' concat
+                  substr(EPBETE, 5, 2) concat '-' concat
+                  substr(EPBETE, 7, 2)) )), 2, 0) > :curdate)
+                           and
+              ( decimal(decimal(year
+                 ( date(substr(EPBETE, 1, 4) concat '-' concat
+                   substr(EPBETE, 5, 2) concat '-' concat
+                   substr(EPBETE, 7, 2)) )), 4, 0) *100 +
+                decimal(decimal(week_iso
+                   ( date(substr(EPBETE, 1, 4) concat '-' concat
+                     substr(EPBETE, 5, 2) concat '-' concat
+                     substr(EPBETE, 7, 2)) )), 2, 0) < :maxdate)
+                           and
+             EPBEJJ not in (select #aebejj from we_checktr where
+                            epbenr=#aebenr and epbepo=#aebepo)
+           GROUP BY eptenr, epLFNR ,
+                  decimal(decimal(year
+                     ( date(substr(EPBETE, 1, 4) concat '-' concat
+                     substr(EPBETE, 5, 2) concat '-' concat
+                     substr(EPBETE, 7, 2)) )), 4, 0) *100 +
+                  decimal(decimal(week_iso
+                     ( date(substr(EPBETE, 1, 4) concat '-' concat
+                     substr(EPBETE, 5, 2) concat '-' concat
+                     substr(EPBETE, 7, 2)) )), 2, 0);
+
+       //für offene Produktionsaufträge
+       exec sql
+          CREATE TABLE qtemp/back04
+          (ident     CHAR(15) CCSID 273,
+           lieferant CHAR(10) CCSID 273,
+           year##    decimal(04, 0) ,
+           week##    decimal(02, 0) ,
+           value     decimal(12, 2))        ;
+
+       //offene Produktionsaufträge
+       exec sql
+           inserT into qtemp/back04
+           SELECT UKtenr, '000000    ' uklfr,
+                  decimal(decimal(year
+                   ( date(substr(UKPREN, 1, 4) concat '-' concat
+                     substr(UKPREN, 5, 2) concat '-' concat
+                     substr(UKPREN, 7, 2)) )), 4, 0),
+                  decimal(decimal(week
+                     ( date(substr(UKPREN, 1, 4) concat '-' concat
+                       substr(UKPREN, 5, 2) concat '-' concat
+                       substr(UKPREN, 7, 2)) )), 2, 0),
+                  sum(UKPPMG - UKRMMG)
+           FROM pauk01     WHERE ukfirm='01' and
+                           UKPPAT='300' and UKppst<>'28' and UKPRE1=0 and
+           ((week( date(substr(UKPREN, 1, 4) concat '-' concat
+                    substr(UKPREN, 5, 2) concat '-' concat
+                    substr(UKPREN, 7, 2)) )  =week(current date)+0 or
+             week( date(substr(UKPREN, 1, 4) concat '-' concat
+                    substr(UKPREN, 5, 2) concat '-' concat
+                    substr(UKPREN, 7, 2)) )  =week(current date)+1 or
+             week( date(substr(UKPREN, 1, 4) concat '-' concat
+                    substr(UKPREN, 5, 2) concat '-' concat
+                    substr(UKPREN, 7, 2)) )  =week(current date)+2 or
+             week( date(substr(UKPREN, 1, 4) concat '-' concat
+                    substr(UKPREN, 5, 2) concat '-' concat
+                    substr(UKPREN, 7, 2)) )  =week(current date)+3 or
+             week( date(substr(UKPREN, 1, 4) concat '-' concat
+                    substr(UKPREN, 5, 2) concat '-' concat
+                    substr(UKPREN, 7, 2)) )  =week(current date)+4 or
+             week( date(substr(UKPREN, 1, 4) concat '-' concat
+                    substr(UKPREN, 5, 2) concat '-' concat
+                    substr(UKPREN, 7, 2)) )  =week(current date)+5 or
+             week( date(substr(UKPREN, 1, 4) concat '-' concat
+                    substr(UKPREN, 5, 2) concat '-' concat
+                    substr(UKPREN, 7, 2)) )  =week(current date)+6 ) and
+            (year( date(substr(UKPREN, 1, 4) concat '-' concat
+                    substr(UKPREN, 5, 2) concat '-' concat
+                    substr(UKPREN, 7, 2)) )  = year(current date) or
+             year( date(substr(UKPREN, 1, 4) concat '-' concat
+                    substr(UKPREN, 5, 2) concat '-' concat
+                    substr(UKPREN, 7, 2)))   > year(current date)))
+           GROUP BY uktenr,
+                  decimal(decimal(year
+                     ( date(substr(UKPREN, 1, 4) concat '-' concat
+                     substr(UKPREN, 5, 2) concat '-' concat
+                     substr(UKPREN, 7, 2)) )), 4, 0),
+                  decimal(decimal(week
+                     ( date(substr(UKPREN, 1, 4) concat '-' concat
+                     substr(UKPREN, 5, 2) concat '-' concat
+                     substr(UKPREN, 7, 2)) )), 2, 0);
+
+
+       pstamp = %timestamp('2016-03-14-23.00.34.125492');
+
+       if %char(pstamp) < '2017-01-01-00.00.00.000001';
+       //Aufbau
+        exec sql
+           insert into tvrelwaeco/backorders
+           SELECT char(' ', 1) fkt, ITEM, ITEMNAME,' ', ' ', ' ',
+                  decimal(0, 12, 2) backcurv,
+                  decimal(0, 12, 0) backcurp,   decimal(0, 12, 2) maxstock,
+                                     char(' ', 40 ) rootcause,
+           char(' ', 10 ) lieferant,char(' ', 40 ) supname,
+           decimal(0, 12, 0) forecast,  decimal(0, 12, 2) onstock,
+           decimal(0, 10, 0) arrivalw1, decimal(0, 10, 0) arrivalw2,
+           decimal(0, 10, 0) arrivalw3, decimal(0, 10, 0) arrivalw4,
+           decimal(0, 10, 0) arrivalw5, decimal(0, 10, 0) arrivalw6,
+           char(' ', 5) disponent, char(' ', 5), 0,00 , 0 , char(' ', 60) info,
+           current timestamp tstamp, 0
+           from qtemp/back01;
+
+       //supplier code
+        exec sql
+           update TVRELWAECO/backorders a set a.lieferant =
+           (select b.lieferant  from qtemp/back02 b where ident =item and
+           (( week##=week(current date)+0 ) and
+             (year##=year(current date) or
+              year##=year(current date) +1 ))
+            and tstamp > current timestamp -1 hour)
+           where exists
+           (select b.lieferant  from qtemp/back02 b where ident =item and
+           (( week##=week(current date)+0 ) and
+             (year##=year(current date) or
+              year##=year(current date) +1 ))
+            and tstamp > current timestamp -1 hour);
+
+        exec sql
+           update TVRELWAECO/backorders a set a.lieferant =
+           (select b.lieferant  from qtemp/back02 b where ident =item and
+           (( week##=week(current date)+1 ) and
+             (year##=year(current date) or
+              year##=year(current date) +1 ))
+            and tstamp > current timestamp -1 hour)
+           where exists
+           (select b.lieferant  from qtemp/back02 b where ident =item and
+           (( week##=week(current date)+1 ) and
+             (year##=year(current date) or
+              year##=year(current date) +1 ))
+            and tstamp > current timestamp -1 hour);
+
+        exec sql
+           update TVRELWAECO/backorders a set a.lieferant =
+           (select b.lieferant  from qtemp/back02 b where ident =item and
+           (( week##=week(current date)+2 ) and
+             (year##=year(current date) or
+              year##=year(current date) +1 ))
+            and tstamp > current timestamp -1 hour)
+           where exists
+           (select b.lieferant  from qtemp/back02 b where ident =item and
+           (( week##=week(current date)+2 ) and
+             (year##=year(current date) or
+              year##=year(current date) +1 ))
+            and tstamp > current timestamp -1 hour);
+
+        exec sql
+           update TVRELWAECO/backorders a set a.lieferant =
+           (select b.lieferant  from qtemp/back02 b where ident =item and
+           (( week##=week(current date)+3 ) and
+             (year##=year(current date) or
+              year##=year(current date) +1 ))
+            and tstamp > current timestamp -1 hour)
+           where exists
+           (select b.lieferant  from qtemp/back02 b where ident =item and
+           (( week##=week(current date)+3 ) and
+             (year##=year(current date) or
+              year##=year(current date) +1 ))
+            and tstamp > current timestamp -1 hour);
+
+        exec sql
+           update TVRELWAECO/backorders a set a.lieferant =
+           (select b.lieferant  from qtemp/back02 b where ident =item and
+           (( week##=week(current date)+4 ) and
+             (year##=year(current date) or
+              year##=year(current date) +1 ))
+            and tstamp > current timestamp -1 hour)
+           where exists
+           (select b.lieferant  from qtemp/back02 b where ident =item and
+           (( week##=week(current date)+4 ) and
+             (year##=year(current date) or
+              year##=year(current date) +1 ))
+            and tstamp > current timestamp -1 hour);
+
+        exec sql
+           update TVRELWAECO/backorders a set a.lieferant =
+           (select b.lieferant  from qtemp/back02 b where ident =item and
+           (( week##=week(current date)+5 ) and
+             (year##=year(current date) or
+              year##=year(current date) +1 ))
+            and tstamp > current timestamp -1 hour)
+           where exists
+           (select b.lieferant  from qtemp/back02 b where ident =item and
+           (( week##=week(current date)+5 ) and
+             (year##=year(current date) or
+              year##=year(current date) +1 ))
+            and tstamp > current timestamp -1 hour);
+
+        exec sql
+           update TVRELWAECO/backorders a set a.lieferant =
+           (select b.lieferant  from qtemp/back02 b where ident =item and
+           (( week##=week(current date)+6 ) and
+             (year##=year(current date) or
+              year##=year(current date) +1 ))
+            and tstamp > current timestamp -1 hour)
+           where exists
+           (select b.lieferant  from qtemp/back02 b where ident =item and
+           (( week##=week(current date)+6 ) and
+             (year##=year(current date) or
+              year##=year(current date) +1 ))
+            and tstamp > current timestamp -1 hour);
+
+       //supplier code
+        exec sql
+           update TVRELWAECO/backorders a set a.lieferant =
+           (select b.lieferant  from qtemp/back03 b where ident =item and
+           (( week##=week(current date)+0 ) and
+             (year##=year(current date) or
+              year##=year(current date) +1 ))
+            and tstamp > current timestamp -1 hour)
+           where exists
+           (select b.lieferant  from qtemp/back03 b where ident =item and
+           (( week##=week(current date)+0 ) and
+             (year##=year(current date) or
+              year##=year(current date) +1 ))
+            and tstamp > current timestamp -1 hour);
+
+        exec sql
+           update TVRELWAECO/backorders a set a.lieferant =
+           (select b.lieferant  from qtemp/back03 b where ident =item and
+           (( week##=week(current date)+1 ) and
+             (year##=year(current date) or
+              year##=year(current date) +1 ))
+            and tstamp > current timestamp -1 hour)
+           where exists
+           (select b.lieferant  from qtemp/back03 b where ident =item and
+           (( week##=week(current date)+1 ) and
+             (year##=year(current date) or
+              year##=year(current date) +1 ))
+            and tstamp > current timestamp -1 hour);
+
+        exec sql
+           update TVRELWAECO/backorders a set a.lieferant =
+           (select b.lieferant  from qtemp/back03 b where ident =item and
+           (( week##=week(current date)+2 ) and
+             (year##=year(current date) or
+              year##=year(current date) +1 ))
+            and tstamp > current timestamp -1 hour)
+           where exists
+           (select b.lieferant  from qtemp/back03 b where ident =item and
+           (( week##=week(current date)+2 ) and
+             (year##=year(current date) or
+              year##=year(current date) +1 ))
+            and tstamp > current timestamp -1 hour);
+
+        exec sql
+           update TVRELWAECO/backorders a set a.lieferant =
+           (select b.lieferant  from qtemp/back03 b where ident =item and
+           (( week##=week(current date)+3 ) and
+             (year##=year(current date) or
+              year##=year(current date) +1 ))
+            and tstamp > current timestamp -1 hour)
+           where exists
+           (select b.lieferant  from qtemp/back03 b where ident =item and
+           (( week##=week(current date)+3 ) and
+             (year##=year(current date) or
+              year##=year(current date) +1 ))
+            and tstamp > current timestamp -1 hour);
+
+        exec sql
+           update TVRELWAECO/backorders a set a.lieferant =
+           (select b.lieferant  from qtemp/back03 b where ident =item and
+           (( week##=week(current date)+4 ) and
+             (year##=year(current date) or
+              year##=year(current date) +1 ))
+            and tstamp > current timestamp -1 hour)
+           where exists
+           (select b.lieferant  from qtemp/back03 b where ident =item and
+           (( week##=week(current date)+4 ) and
+             (year##=year(current date) or
+              year##=year(current date) +1 ))
+            and tstamp > current timestamp -1 hour);
+
+        exec sql
+           update TVRELWAECO/backorders a set a.lieferant =
+           (select b.lieferant  from qtemp/back03 b where ident =item and
+           (( week##=week(current date)+5 ) and
+             (year##=year(current date) or
+              year##=year(current date) +1 ))
+            and tstamp > current timestamp -1 hour)
+           where exists
+           (select b.lieferant  from qtemp/back03 b where ident =item and
+           (( week##=week(current date)+5 ) and
+             (year##=year(current date) or
+              year##=year(current date) +1 ))
+            and tstamp > current timestamp -1 hour);
+
+        exec sql
+           update TVRELWAECO/backorders a set a.lieferant =
+           (select b.lieferant  from qtemp/back03 b where ident =item and
+           (( week##=week(current date)+6 ) and
+             (year##=year(current date) or
+              year##=year(current date) +1 ))
+            and tstamp > current timestamp -1 hour)
+           where exists
+           (select b.lieferant  from qtemp/back03 b where ident =item and
+           (( week##=week(current date)+6 ) and
+             (year##=year(current date) or
+              year##=year(current date) +1 ))
+            and tstamp > current timestamp -1 hour);
+
+       //week +1
+
+        exec sql
+           update TVRELWAECO/backorders a set a.SUPNAME   =
+           (select lfnam1 from lief01 where LFFIRM='01' and LFLFNR=LIEFERANT
+            and tstamp > current timestamp -36 hour)
+            where exists
+            (select lfnam1 from lief01 where LFFIRM='01' and LFLFNR=LIEFERANT
+             and tstamp > current timestamp -36 hour);
+
+       //week +1
+        exec sql
+           update TVRELWAECO/backorders set arrivalw1 = arrivalw1 +
+           (select "VALUE" from qtemp/back02  where ident =item and
+            ((week##=week(current date)+0 ) and
+             (year##=year(current date) or
+              year##>year(current date) ))
+            and tstamp > current timestamp -1 hour)
+           where exists
+           (select "VALUE" from qtemp/back02  where ident =item and
+            ((week##=week(current date)+0 ) and
+             (year##=year(current date) or
+              year##>year(current date) ))
+            and tstamp > current timestamp -1 hour);
+
+       //week +2
+        exec sql
+           update TVRELWAECO/backorders set arrivalw2 = arrivalw2 +
+           (select "VALUE" from qtemp/back02  where ident =item and
+            ((week##=week(current date)+1 ) and
+             (year##=year(current date) or
+              year##>year(current date) ))
+            and tstamp > current timestamp -1 hour)
+           where exists
+           (select "VALUE" from qtemp/back02  where ident =item and
+            ((week##=week(current date)+1 ) and
+             (year##=year(current date) or
+              year##>year(current date) ))
+            and tstamp > current timestamp -1 hour);
+
+       //week +3
+        exec sql
+           update TVRELWAECO/backorders set arrivalw3 = arrivalw3 +
+           (select "VALUE" from qtemp/back02  where ident =item and
+            ((week##=week(current date)+2 ) and
+             (year##=year(current date) or
+              year##>year(current date) ))
+            and tstamp > current timestamp -1 hour)
+           where exists
+           (select "VALUE" from qtemp/back02  where ident =item and
+            ((week##=week(current date)+2 ) and
+             (year##=year(current date) or
+              year##>year(current date) ))
+            and tstamp > current timestamp -1 hour);
+
+       //week +4
+        exec sql
+           update TVRELWAECO/backorders set arrivalw4 = arrivalw4 +
+           (select "VALUE" from qtemp/back02  where ident =item and
+            ((week##=week(current date)+3 ) and
+             (year##=year(current date) or
+              year##>year(current date) ))
+            and tstamp > current timestamp -1 hour)
+           where exists
+           (select "VALUE" from qtemp/back02  where ident =item and
+            ((week##=week(current date)+3 ) and
+             (year##=year(current date) or
+              year##>year(current date) ))
+            and tstamp > current timestamp -1 hour);
+
+       //week +5
+        exec sql
+           update TVRELWAECO/backorders set arrivalw5 = arrivalw5 +
+           (select "VALUE" from qtemp/back02  where ident =item and
+            ((week##=week(current date)+4 ) and
+             (year##=year(current date) or
+              year##>year(current date) ))
+            and tstamp > current timestamp -1 hour)
+           where exists
+           (select "VALUE" from qtemp/back02  where ident =item and
+            ((week##=week(current date)+4 ) and
+             (year##=year(current date) or
+              year##>year(current date) ))
+            and tstamp > current timestamp -1 hour);
+
+       //week +6
+        exec sql
+           update TVRELWAECO/backorders set arrivalw6 = arrivalw6 +
+           (select "VALUE" from qtemp/back02  where ident =item and
+            ((week##=week(current date)+5 ) and
+             (year##=year(current date) or
+              year##>year(current date) ))
+            and tstamp > current timestamp -1 hour)
+           where exists
+           (select "VALUE" from qtemp/back02  where ident =item and
+            ((week##=week(current date)+5 ) and
+             (year##=year(current date) or
+              year##>year(current date) ))
+            and tstamp > current timestamp -1 hour);
+
+       //week +1 v2  YEARWEEK##=Parm1
+       //exec sql
+       //   update TVRELWAECO/backorders set arrivalw1 = arrivalw1 +
+       //   (select "VALUE" from qtemp/back03  where ident =item and
+       //    ((week##=week(current date)+0 ) and
+       //     (year##=year(current date) or
+       //      year##>year(current date) ))
+       //    and tstamp > current timestamp -1 hour)
+       //   where exists
+       //   (select "VALUE" from qtemp/back03  where ident =item and
+       //    ((week##=week(current date)+0 ) and
+       //     (year##=year(current date) or
+       //      year##>year(current date) ))
+       //    and tstamp > current timestamp -1 hour);
+         exec sql
+            update TVRELWAECO/backorders set arrivalw1 = arrivalw1 +
+            (select "VALUE" from qtemp/back03v2 where ident =item and
+                    YEARWEEK##=:Parm1
+             and tstamp > current timestamp -1 hour)
+            where exists
+            (select "VALUE" from qtemp/back03v2 where ident =item and
+                    YEARWEEK##=:Parm1
+             and tstamp > current timestamp -1 hour);
+
+
+
+       //week +2
+       //exec sql
+       //   update TVRELWAECO/backorders set arrivalw2 = arrivalw2 +
+       //   (select "VALUE" from qtemp/back03  where ident =item and
+       //    ((week##=week(current date)+1 ) and
+       //     (year##=year(current date) or
+       //      year##>year(current date) ))
+       //    and tstamp > current timestamp -1 hour)
+       //   where exists
+       //   (select "VALUE" from qtemp/back03  where ident =item and
+       //    ((week##=week(current date)+1 ) and
+       //     (year##=year(current date) or
+       //      year##>year(current date) ))
+       //    and tstamp > current timestamp -1 hour);
+         exec sql
+            update TVRELWAECO/backorders set arrivalw2 = arrivalw2 +
+            (select "VALUE" from qtemp/back03v2 where ident =item and
+                    YEARWEEK##=:Parm2
+             and tstamp > current timestamp -1 hour)
+            where exists
+            (select "VALUE" from qtemp/back03v2 where ident =item and
+                    YEARWEEK##=:Parm2
+             and tstamp > current timestamp -1 hour);
+
+
+
+
+       //week +3
+       //exec sql
+       //   update TVRELWAECO/backorders set arrivalw3 = arrivalw3 +
+       //   (select "VALUE" from qtemp/back03  where ident =item and
+       //    ((week##=week(current date)+2 ) and
+       //     (year##=year(current date) or
+       //      year##>year(current date) ))
+       //    and tstamp > current timestamp -1 hour)
+       //   where exists
+       //   (select "VALUE" from qtemp/back03  where ident =item and
+       //    ((week##=week(current date)+2 ) and
+       //     (year##=year(current date) or
+       //      year##>year(current date) ))
+       //    and tstamp > current timestamp -1 hour);
+         exec sql
+            update TVRELWAECO/backorders set arrivalw3 = arrivalw3 +
+            (select "VALUE" from qtemp/back03v2 where ident =item and
+                    YEARWEEK##=:Parm3
+             and tstamp > current timestamp -1 hour)
+            where exists
+            (select "VALUE" from qtemp/back03v2 where ident =item and
+                    YEARWEEK##=:Parm3
+             and tstamp > current timestamp -1 hour);
+
+
+
+
+
+
+       //week +4
+       //exec sql
+       //   update TVRELWAECO/backorders set arrivalw4 = arrivalw4 +
+       //   (select "VALUE" from qtemp/back03  where ident =item and
+       //    ((week##=week(current date)+3 ) and
+       //     (year##=year(current date) or
+       //      year##>year(current date) ))
+       //    and tstamp > current timestamp -1 hour)
+       //   where exists
+       //   (select "VALUE" from qtemp/back03  where ident =item and
+       //    ((week##=week(current date)+3 ) and
+       //     (year##=year(current date) or
+       //      year##>year(current date) ))
+       //    and tstamp > current timestamp -1 hour);
+         exec sql
+            update TVRELWAECO/backorders set arrivalw4 = arrivalw4 +
+            (select "VALUE" from qtemp/back03v2 where ident =item and
+                    YEARWEEK##=:Parm4
+             and tstamp > current timestamp -1 hour)
+            where exists
+            (select "VALUE" from qtemp/back03v2 where ident =item and
+                    YEARWEEK##=:Parm4
+             and tstamp > current timestamp -1 hour);
+
+
+
+
+
+
+
+       //week +5
+       //exec sql
+       //   update TVRELWAECO/backorders set arrivalw5 = arrivalw5 +
+       //   (select "VALUE" from qtemp/back03  where ident =item and
+       //    ((week##=week(current date)+4 ) and
+       //     (year##=year(current date) or
+       //      year##>year(current date) ))
+       //    and tstamp > current timestamp -1 hour)
+       //   where exists
+       //   (select "VALUE" from qtemp/back03  where ident =item and
+       //    ((week##=week(current date)+4 ) and
+       //     (year##=year(current date) or
+       //      year##>year(current date) ))
+       //    and tstamp > current timestamp -1 hour);
+         exec sql
+            update TVRELWAECO/backorders set arrivalw5 = arrivalw5 +
+            (select "VALUE" from qtemp/back03v2 where ident =item and
+                    YEARWEEK##=:Parm5
+             and tstamp > current timestamp -1 hour)
+            where exists
+            (select "VALUE" from qtemp/back03v2 where ident =item and
+                    YEARWEEK##=:Parm5
+             and tstamp > current timestamp -1 hour);
+
+
+
+
+
+
+
+       //week +6
+       //exec sql
+       //   update TVRELWAECO/backorders set arrivalw6 = arrivalw6 +
+       //   (select "VALUE" from qtemp/back03  where ident =item and
+       //    ((week##=week(current date)+5 ) and
+       //     (year##=year(current date) or
+       //      year##>year(current date) ))
+       //    and tstamp > current timestamp -1 hour)
+       //   where exists
+       //   (select "VALUE" from qtemp/back03  where ident =item and
+       //    ((week##=week(current date)+5 ) and
+       //     (year##=year(current date) or
+       //      year##>year(current date) ))
+       //    and tstamp > current timestamp -1 hour);
+         exec sql
+            update TVRELWAECO/backorders set arrivalw6 = arrivalw6 +
+            (select "VALUE" from qtemp/back03v2 where ident =item and
+                    YEARWEEK##=:Parm6
+             and tstamp > current timestamp -1 hour)
+            where exists
+            (select "VALUE" from qtemp/back03v2 where ident =item and
+                    YEARWEEK##=:Parm6
+             and tstamp > current timestamp -1 hour);
+
+       //week +1  Produktionsaufträge  ===>  hier
+
+
+       //week +1
+        exec sql
+           update TVRELWAECO/backorders set arrivalw1 = arrivalw1 +
+           (select "VALUE" from qtemp/back04  where ident =item and
+            ((week##=week(current date)+0 ) and
+             (year##=year(current date) or
+              year##>year(current date) ))
+            and tstamp > current timestamp -1 hour)
+           where exists
+           (select "VALUE" from qtemp/back04  where ident =item and
+            ((week##=week(current date)+0 ) and
+             (year##=year(current date) or
+              year##>year(current date) ))
+            and tstamp > current timestamp -1 hour);
+
+       //week +2
+        exec sql
+           update TVRELWAECO/backorders set arrivalw2 = arrivalw2 +
+           (select "VALUE" from qtemp/back04  where ident =item and
+            ((week##=week(current date)+1 ) and
+             (year##=year(current date) or
+              year##>year(current date) ))
+            and tstamp > current timestamp -1 hour)
+           where exists
+           (select "VALUE" from qtemp/back04  where ident =item and
+            ((week##=week(current date)+1 ) and
+             (year##=year(current date) or
+              year##>year(current date) ))
+            and tstamp > current timestamp -1 hour);
+
+       //week +3
+        exec sql
+           update TVRELWAECO/backorders set arrivalw3 = arrivalw3 +
+           (select "VALUE" from qtemp/back04  where ident =item and
+            ((week##=week(current date)+2 ) and
+             (year##=year(current date) or
+              year##>year(current date) ))
+            and tstamp > current timestamp -1 hour)
+           where exists
+           (select "VALUE" from qtemp/back04  where ident =item and
+            ((week##=week(current date)+2 ) and
+             (year##=year(current date) or
+              year##>year(current date) ))
+            and tstamp > current timestamp -1 hour);
+
+       //week +4
+        exec sql
+           update TVRELWAECO/backorders set arrivalw4 = arrivalw4 +
+           (select "VALUE" from qtemp/back04  where ident =item and
+            ((week##=week(current date)+3 ) and
+             (year##=year(current date) or
+              year##>year(current date) ))
+            and tstamp > current timestamp -1 hour)
+           where exists
+           (select "VALUE" from qtemp/back04  where ident =item and
+            ((week##=week(current date)+3 ) and
+             (year##=year(current date) or
+              year##>year(current date) ))
+            and tstamp > current timestamp -1 hour);
+
+       //week +5
+        exec sql
+           update TVRELWAECO/backorders set arrivalw5 = arrivalw5 +
+           (select "VALUE" from qtemp/back04  where ident =item and
+            ((week##=week(current date)+4 ) and
+             (year##=year(current date) or
+              year##>year(current date) ))
+            and tstamp > current timestamp -1 hour)
+           where exists
+           (select "VALUE" from qtemp/back04  where ident =item and
+            ((week##=week(current date)+4 ) and
+             (year##=year(current date) or
+              year##>year(current date) ))
+            and tstamp > current timestamp -1 hour);
+
+       //week +6
+        exec sql
+           update TVRELWAECO/backorders set arrivalw6 = arrivalw6 +
+           (select "VALUE" from qtemp/back04  where ident =item and
+            ((week##=week(current date)+5 ) and
+             (year##=year(current date) or
+              year##>year(current date) ))
+            and tstamp > current timestamp -1 hour)
+           where exists
+           (select "VALUE" from qtemp/back04  where ident =item and
+            ((week##=week(current date)+5 ) and
+             (year##=year(current date) or
+              year##>year(current date) ))
+            and tstamp > current timestamp -1 hour);
+
+       //Korrekturen Roloff Liefertermin bis current date
+        exec sql
+           update tvrelwaeco/backorders b set backcurv  =
+           (select dec(sum(wert), 12, 2 ) fROM RPMEXPECM0 a WHERE a.YEAR#
+           =year(current date - 0 day) and
+           (a.week# =week(current date - 0 day)-1              )
+       //  (a.week# =week(current date - 0 day)-1 or a.week# =1)
+           and a.akfirm ='01' and a.APAFST ='17' and a.item=b.item and
+           date(substr(a.PLANKUNDE, 1, 4) concat '-' concat
+                substr(a.PLANKUNDE, 5, 2) concat '-' concat
+                substr(a.PLANKUNDE, 7, 2) ) < current date +0 day
+                and b.tstamp > current timestamp -1 hour group by a.item)
+           where exists
+           (select dec(sum(wert), 12, 2 ) fROM RPMEXPECM0 a WHERE a.YEAR#
+           =year(current date - 0 day) and
+           (a.week# =week(current date - 0 day)-1              )
+       //  (a.week# =week(current date - 0 day)-1 or a.week# =1)
+           and a.akfirm ='01' and a.APAFST ='17' and a.item=b.item and
+           date(substr(a.PLANKUNDE, 1, 4) concat '-' concat
+                substr(a.PLANKUNDE, 5, 2) concat '-' concat
+                substr(a.PLANKUNDE, 7, 2) ) < current date +0 day
+                and b.tstamp > current timestamp -1 hour group by a.item);
+
+       //Korrekturen Roloff Liefertermin bis current date
+        exec sql
+           update tvrelwaeco/backorders b set backcurp  =
+           (select dec(sum(apglmg), 12, 2 ) fROM RPMEXPECM0 a WHERE a.YEAR#
+           =year(current date - 0 day) and
+           (a.week# =week(current date - 0 day)-1              )
+       //  (a.week# =week(current date - 0 day)-1 or a.week# =1)
+           and a.akfirm ='01' and a.APAFST ='17' and a.item=b.item and
+           date(substr(a.PLANKUNDE, 1, 4) concat '-' concat
+                substr(a.PLANKUNDE, 5, 2) concat '-' concat
+                substr(a.PLANKUNDE, 7, 2) ) < current date +0 day
+                and b.tstamp > current timestamp -1 hour group by a.item)
+           where exists
+           (select dec(sum(apglmg), 12, 2 ) fROM RPMEXPECM0 a WHERE a.YEAR#
+           =year(current date - 0 day) and
+           (a.week# =week(current date - 0 day)-1              )
+       //  (a.week# =week(current date - 0 day)-1 or a.week# =1)
+           and a.akfirm ='01' and a.APAFST ='17' and a.item=b.item and
+           date(substr(a.PLANKUNDE, 1, 4) concat '-' concat
+                substr(a.PLANKUNDE, 5, 2) concat '-' concat
+                substr(a.PLANKUNDE, 7, 2) ) < current date +0 day
+                and b.tstamp > current timestamp -1 hour group by a.item);
+
+        exec sql
+           inserT into qtemp/back01b
+           SELECT item,                     ITEMDESC          itemname,
+                 CUSTOMER# ,CUSTOMER ,
+           dec(sum(wert), 12, 2 ) value,
+           dec(sum(APGLMG), 12, 2 ) pcs
+           from RPMEXPECM0
+           WHERE YEAR# =year(current date - 0 day) and week#
+           =week(current date - 0 day) and akfirm ='01' and APAFST ='17' and
+           date(substr(PLANKUNDE, 1, 4) concat '-' concat
+                substr(PLANKUNDE, 5, 2) concat '-' concat
+                substr(PLANKUNDE, 7, 2) ) < current date +0 day
+           group BY item,ITEMDESC, CUSTOMER#,CUSTOMER;
+
+        exec sql
+           insert into tvrelwaeco/backorders
+           SELECT char('2', 1) fkt, ITEM, ITEMNAME,
+             CUSTOMER# ,CUSTOMER, ' ', value backcurv,
+             pcs  backcurp,   decimal(0, 12, 2) maxstock,
+                                     char(' ', 40 ) rootcause,
+           char(' ', 10 ) lieferant,char(' ', 40 ) supname,
+           decimal(0, 12, 0) forecast,  decimal(0, 12, 2) onstock,
+           decimal(0, 10, 0) arrivalw1, decimal(0, 10, 0) arrivalw2,
+           decimal(0, 10, 0) arrivalw3, decimal(0, 10, 0) arrivalw4,
+           decimal(0, 10, 0) arrivalw5, decimal(0, 10, 0) arrivalw6,
+           char(' ', 5) disponent, char(' ', 5), 0,00 , 0 , char(' ', 60) info,
+           current timestamp tstamp , 0
+           from qtemp/back01b;
+
+       MONITOR;
+       Wrk.var1 =
+           'CLRPFM FILE(qtemp/back01b)';
+         cmd = %TrimR(Wrk.Var1);
+         L      = %Len(Cmd);
+         QCMDEXC(cmd: %len(cmd));
+          status='CLRPFM successful FILE(qtemp/back01b)            ';
+       on-error;
+          status='Error by clrpfm object (qtemp/back01b)           ';
+       endmon;
+
+        exec sql
+           inserT into qtemp/back01b
+           SELECT item,                     ITEMDESC          itemname,
+                 CUSTOMER# ,CUSTOMER ,
+           dec(sum(wert), 12, 2 ) value,
+           dec(sum(APGLMG), 12, 2 ) pcs
+           from RPMEXPECM0
+           WHERE YEAR# =year(current date - 0 day) and week#
+           =week(current date - 0 day) and akfirm ='01' and APAFST ='17' and
+           date(substr(PLANKUNDE, 1, 4) concat '-' concat
+                substr(PLANKUNDE, 5, 2) concat '-' concat
+                substr(PLANKUNDE, 7, 2) ) > current date -1 day
+           group BY item, ITEMDESC,  CUSTOMER#,CUSTOMER;
+
+        exec sql
+           insert into tvrelwaeco/backorders
+           SELECT char('3', 1) fkt, ITEM, ITEMNAME,
+             CUSTOMER# ,CUSTOMER, ' ', value backcurv,
+             pcs  backcurp,   decimal(0, 12, 2) maxstock,
+                                     char(' ', 40 ) rootcause,
+           char(' ', 10 ) lieferant,char(' ', 40 ) supname,
+           decimal(0, 12, 0) forecast,  decimal(0, 12, 2) onstock,
+           decimal(0, 10, 0) arrivalw1, decimal(0, 10, 0) arrivalw2,
+           decimal(0, 10, 0) arrivalw3, decimal(0, 10, 0) arrivalw4,
+           decimal(0, 10, 0) arrivalw5, decimal(0, 10, 0) arrivalw6,
+           char(' ', 5) disponent, char(' ', 5), 0,00 , 0 , char(' ', 60) info,
+           current timestamp tstamp , 0
+           from qtemp/back01b;
+
+        exec sql
+       //  update backorders set CUSTOMER = '==>' concat
+           update backorders set CUSTOMER =
+           (select kdnam1 from kund01 where kdfirm='01' and
+            CUSTOMER#               =kdkdnr  and (fkt='2' or fkt='3'))
+           where exists
+           (select kdnam1 from kund01 where kdfirm='01' and
+            CUSTOMER#               =kdkdnr  and (fkt='2' or fkt='3'));
+
+       //*all
+       //name/beschreibung
+        exec sql
+           update TVRELWAECO/backorders set ITEMNAME  =
+           (select TETBZ1  from teil01   where tefirm='01' and tetenr=item
+            and tstamp > current timestamp -1 hour)
+           where exists
+           (select TETBZ1  from teil01   where tefirm='01' and tetenr=item
+            and tstamp > current timestamp -1 hour);
+
+       //dispo/beschreibung
+        exec sql
+           update TVRELWAECO/backorders set disponent =
+           (select TEDIEK  from teil01   where tefirm='01' and tetenr=item
+            and tstamp > current timestamp -1 hour)
+           where exists
+           (select TEDIEK  from teil01   where tefirm='01' and tetenr=item
+            and tstamp > current timestamp -1 hour);
+
+       //eink/beschreibung
+        exec sql
+           update TVRELWAECO/backorders set eink      =
+           (select TESAEK  from teil01   where tefirm='01' and tetenr=item
+            and tstamp > current timestamp -1 hour)
+           where exists
+           (select TESAEK  from teil01   where tefirm='01' and tetenr=item
+            and tstamp > current timestamp -1 hour);
+
+       //update Gleichheit Division
+       exec sql
+          update TVRELWAECO/backorders set division  =
+          (select KDEWKSST from kdew01 where kdewfirm='01'
+           and kdewkdnr=CUSTOMER#)
+          where exists
+          (select KDEWKSST from kdew01 where kdewfirm='01'
+           and kdewkdnr=CUSTOMER#);
+
+       //update Gleichheit Division
+       exec sql
+          update TVRELWAECO/backorders set division  = case
+          When division = '1001      ' then 'RVOEM     '
+          When division = '1002      ' then 'RVAM      '
+          When division = '1003      ' then 'RETL      '
+          When division = '1004      ' then 'LODG      '
+          When division = '1005      ' then 'CPVOEM    '
+          When division = '1006      ' then 'CPVAM     '
+          When division = '1007      ' then 'MAOEM     '
+          When division = '1008      ' then 'MAAM      '
+          When division = '1009      ' then 'MEDI      '
+          When division = '1015      ' then 'GROUP     '
+          When division = '1020      ' then 'OTHER 1020'
+          When division = '6050      ' then 'OTHER 6050'
+          else 'undefined'
+          end;
+
+       //Sicherheitsbestand
+        exec sql
+           update TVRELWAECO/backorders set SAFETY    =
+           (select TEsibe  from teil01   where tefirm='01' and tetenr=item
+            and tstamp > current timestamp -1 hour)
+           where exists
+           (select TESibe  from teil01   where tefirm='01' and tetenr=item
+            and tstamp > current timestamp -1 hour);
+
+       //Vorlaufzeit
+        exec sql
+           update TVRELWAECO/backorders set lead      =
+           (select TEVOZ1  from teil01   where tefirm='01' and tetenr=item
+            and tstamp > current timestamp -1 hour)
+           where exists
+           (select TEVOZ1  from teil01   where tefirm='01' and tetenr=item
+            and tstamp > current timestamp -1 hour);
+
+       //Mindestbestand problematisch
+        exec sql
+           insert into tvrelwaeco/backorders
+           SELECT char('4', 1) fkt, tetenr, TETBZ1,
+             ' ',       ' ',      ' ',  0            ,
+             0    backcurp,   decimal(0, 12, 2) maxstock,
+                                     char(' ', 40 ) rootcause,
+           char(' ', 10 ) lieferant,char(' ', 40 ) supname,
+           decimal(0, 12, 0) forecast,  decimal(0, 12, 2) onstock,
+           decimal(0, 10, 0) arrivalw1, decimal(0, 10, 0) arrivalw2,
+           decimal(0, 10, 0) arrivalw3, decimal(0, 10, 0) arrivalw4,
+           decimal(0, 10, 0) arrivalw5, decimal(0, 10, 0) arrivalw6,
+           TEDIEK, TESAEK ,TESibe,TEVOZ1 , char(' ', 60) info,
+           current timestamp tstamp , 0
+           from teil01 b where tefirm = '01' and TETEST<>'90' and TESibe <
+           (select bestand from abestand a where
+                 a.tetenr=b.tetenr and lager='001') and
+           b.tetenr not in (select item from backorders);
+
+       //update aktueller Bestand
+        exec sql
+           update TVRELWAECO/backorders set onstock   =
+           (select bestand from abestand where tetenr=item   and lager='001'
+            and tstamp > current timestamp -1 hour)
+           where exists
+           (select bestand from abestand where tetenr=item   and lager='001'
+            and tstamp > current timestamp -1 hour);
+
+        exec sql
+           update           backorders set info =
+           'other orders available for this item' where fkt ='4 '
+           and item in ( select aptenr from afpo01 where apfirm='01'
+           and APAFST  < '80' and apafst <> '17');
+       endif;
+
+       //update
+       exec sql
+        whenever not found continue;
+       exec sql
+        WHENEVER SQLWARNING CONTINUE;
+       exec sql
+        WHENEVER SQLERROR  CONTINUE;
+
+       endsr;
+
+       //-----------------------------------------------------------------------
+       //report
+       //-----------------------------------------------------------------------
+
+       begsr SR_output;
+
+
+       MONITOR;
+       Wrk.var1 =
+           'CLRPFM FILE(tvrelwaeco/backordero)';
+         cmd = %TrimR(Wrk.Var1);
+         L      = %Len(Cmd);
+         QCMDEXC(cmd: %len(cmd));
+          status='CLRPFM successful FILE(tvrelwaeco/backordero)    ';
+       on-error;
+          status='Error by clrpfm object (tvrelwaeco/backordero)   ';
+       endmon;
+
+
+
+       //exec sql
+       //  insert into tvrelwaeco/backordero
+       //  select * from  backorders
+       //  where tstamp > current timestamp -1 hour
+       //               and FKT =' ';
+
+       exec sql
+         insert into tvrelwaeco/backordero
+         SELECT FKT, ITEM, ITEMNAME, BACKCURV, BACKCURP, ROOTCAUSE,
+         LIEFERANT, SUPNAME, FORECAST, ONSTOCK, ARRIVALW1, ARRIVALW2,
+         ARRIVALW3, ARRIVALW4, ARRIVALW5, ARRIVALW6, DISPONENT, INFO,
+         TSTAMP, RRN# FROM backorders
+         WHERE tstamp > current timestamp -02 hour;
+       //                                          and FKT =' ';
+
+         eval p_infil   =  'BACKORDERO'        +
+                        %char(%dec(%char(%date():*iso0):8:0)) +
+                        %char(%dec(%char(%time():*iso0):8:0));
+         eval p_outfil =  'BACKORDERO';
+
+         eval p_msgf    =  *blank;
+         eval p_print   =  *blank;
+         eval p_lib     =  'TVRELWAECO';
+
+         clear     Wrk.var1;
+         clear     status;
+
+       MONITOR;
+       Wrk.var1 =
+           'RMVLNK OBJLNK(''/LAGER/BACKORDERO*'')';
+         cmd = %TrimR(Wrk.Var1);
+         l      = %Len(Cmd);
+         QCMDEXC(cmd: %len(cmd));
+          status='rmvlnk successful removed BACKORDERO*            ';
+          exsr      SR_log;
+       on-error;
+          status='Error by rmvlnk object BACKORDERO*               ';
+          exsr      SR_log;
+       endmon;
+
+       eval p_outfil  =  'BACKORDERO';
+
+       MONITOR;
+       Wrk.var1 =
+           'CVTDBF OBJ(''/LAGER/'+ p_infil +''  +
+                      '.csv'') ' +
+           'DBFILE(TVRELWAECO/'+ p_outfil +') DBOUTFMT(*CSV) '  +
+           'DBFLDDSC(*YES)';
+         cmd = %TrimR(Wrk.Var1);
+         l      = %Len(Cmd);
+         QCMDEXC(cmd: %len(cmd));
+          status='CVTDBF successful done                           ';
+          exsr      SR_log;
+       on-error;
+          status='Error by CVTDBF object BACKORDERO                ';
+          exsr      SR_log;
+       endmon;
+       eval p_outfil  =  'BACKORDERO';
+
+       MONITOR;
+       Wrk.var1 =
+           'CHGAUT OBJ(''/Lager/'+ p_infil +''  +
+                      '.csv'') ' +
+           'USER(*PUBLIC) DTAAUT(*RWX)                   ' +
+           'OBJAUT(*OBJMGT *OBJEXIST *OBJALTER *OBJREF)';
+         cmd = %TrimR(Wrk.Var1);
+         L      = %Len(Cmd);
+         QCMDEXC(cmd: %len(cmd));
+          status='chgaut successful FILE(TVRELWAECO/BACKORDERO)    ';
+       on-error;
+          status='Error by chgaut object (TVRELWAECO/BACKORDERO)   ';
+       endmon;
+
+       //...
+       //'TOFILE(*LIBL/QPQXPRTF) DEV(PRT55) '  +
+       MONITOR;
+       Wrk.var1 =
+           'OVRPRTF FILE(QPQXPRTF) '  +
+           'TOFILE(*LIBL/QPQXPRTF) DEV(PRT10) '  +
+           'FORMTYPE(''BACKORDERO'') OVRSCOPE(*JOB)';
+         cmd = %TrimR(Wrk.Var1);
+         l      = %Len(Cmd);
+         QCMDEXC(cmd: %len(cmd));
+          status='OVRPRTF successful done                          ';
+          exsr      SR_log;
+       on-error;
+          status='Error by OVRPRTF object ' +
+                         p_outfil +'csv';
+          exsr      SR_log;
+       endmon;
+       eval p_outfil  =  'BACKORDERO';
+
+       //-----------------------------------------------------------------------
+       //'CALL  PGM(DUMMY512) PARM('' '' ''#DC0001'' '' '' ''PRT55'' ' +
+       //''' '' '' '' '' '')';
+       //-----------------------------------------------------------------------
+       MONITOR;
+       Wrk.var1 =
+           'CALL  PGM(DUMMY512) PARM('' '' ''#DC0001'' '' '' ''PRT10'' ' +
+           ''' '' '' '' '' '')';
+         cmd = %TrimR(Wrk.Var1);
+         l      = %Len(Cmd);
+         QCMDEXC(cmd: %len(cmd));
+          status='OVRPRTF successful done                          ';
+          exsr      SR_log;
+       on-error;
+          status='Error by DUMMY512                        ';
+          exsr      SR_log;
+       endmon;
+
+       endsr;
+
+       //-----------------------------------------------------------------------
+       //log report
+       //-----------------------------------------------------------------------
+
+       begsr sr_log;
+
+         clear p_md;
+       //  %Subarr(p_md:01)  = 'AT_item   ';
+       //  %Subarr(p_md:11:10)  = §§§JOB;
+       //  %Subarr(p_md:22:10)  = §§§USR;
+       //  %Subarr(p_md:33:132) = status;
+         eval p_md      =  §§§PGM         +
+                           §§§JOB         +
+                           §§§USR         +
+                           status;
+
+         eval p_msg     =  '#DC0002';
+         eval p_msgf    =  *blank;
+         eval p_print   =  *blank;
+         eval p_outfil  =  'JOB_RUN   ';
+         eval p_lib     =  'TVRELWAECO';
+         eval p_repadd  =  '*ADD';
+
+         callP DUMMY512(p_md:     p_msg:    p_msgf:     p_print:
+                        p_outfil: p_lib:    p_repadd);
+         clear status;
+
+       //callP     QMHSNDPM('CPF9897': 'QCPFMSG   *LIBL':
+       //            Msg: MsgLen: '*ESCAPE':
+       //            '*': 3: TheKey: dsEC);
+
+       endsr;
+
+

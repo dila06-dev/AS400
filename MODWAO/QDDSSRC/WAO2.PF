@@ -1,0 +1,35 @@
+     A**************************************************************************
+     A*  Copyright 2007 by    trend SWM                                        *
+     A*                       Verwaltungs GmbH                                 *
+     A*                       Ziegelhofstraße 210a                             *
+     A*                       DE 79110 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Serien-Nr                                                             *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: MG 06.02.2007 Projekt-Nr 4200                               *
+     A*            Vergabe von Serien-Nr in der Bestell-Abwicklung             *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R WAO21
+     A*-------------------------------------------------------------------------
+     A            WAO2LOCK  R               REFFLD(##LOCK)
+     A            WAO2JNAM  R               REFFLD(##JNAM)
+     A            WAO2JDAT  R               REFFLD(##JDAT)
+     A            WAO2JZEI  R               REFFLD(##JZEI)
+     A            WAO2USER  R               REFFLD(##USER)
+     A            WAO2PROG  R               REFFLD(##PROG)
+     A            WAO2BIBL  R               REFFLD(##BIBL)
+     A            WAO2FIRM  R               REFFLD(##FIRM)
+     A            WAO2BEJJ  R               REFFLD(##BEJJ)
+     A            WAO2BENR  R               REFFLD(##BENR)
+     A            WAO2BEPO  R               REFFLD(##BEPO)
+     A            WAO2SENV  R   14A         REFFLD(##SENR)
+     A                                      TEXT('Serien-Nr von')
+     A                                      COLHDG('Serien-Nr von')
+     A            WAO2SENB  R   14A         REFFLD(##SENR)
+     A                                      TEXT('Serien-Nr bis')
+     A                                      COLHDG('Serien-Nr bis')
+     A            WAO2TSTP  R               REFFLD(##TSTP)
+     A            WAO2ERUS  R               REFFLD(##ERUS)
+     A            WAO2FREI  R  100          REFFLD(##FREI)

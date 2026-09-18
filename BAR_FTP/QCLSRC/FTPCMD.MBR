@@ -1,0 +1,7 @@
+service@dometic-group.com  upload
+ascii
+NAMEFMT 1
+cd /export
+lcd /DOMRRA
+GET export.csv (REPLACE
+quit

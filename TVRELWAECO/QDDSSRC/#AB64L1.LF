@@ -1,0 +1,14 @@
+      * Physische Datei: #AB64L1
+      * ANLEGEDATUM: ____
+      *SORT:        FIRMA, AUFTRAG UND POSITION
+      * ÄNDERUNGEN:
+      * AUSSCHLUSS:  ...
+     A
+     A**********                            UNIQUE
+     A          R #AB64                     PFILE(#AB64)
+     A
+     A          K SQFIRM
+     A          K SQAFJJ
+     A          K SQAFNR
+     A          K SQAFPO
+     A          S SQSTATUS                  CMP(EQ ' ' )

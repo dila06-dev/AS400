@@ -1,0 +1,8 @@
+rpmupload  !rpm1016
+LCD TVRELWAECO
+ascii
+NAMEFMT 0
+cd /customers
+rem cd /transfer/incoming
+APPEND RPMCCH412 Customers-CH412-20260918.csv
+QUIT

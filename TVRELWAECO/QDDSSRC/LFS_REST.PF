@@ -1,0 +1,23 @@
+     A          R LFS_RESTR
+      * :LADEMITTEL
+     A            S1            28A         COLHDG('ARTIKELNUMMER')
+     A            S2            25A         COLHDG('                ')
+     A            S3            25A         COLHDG('                ')
+     A            S4            25A         COLHDG('                ')
+     A            S5            25A         COLHDG('                ')
+     A            S6            25A         COLHDG('                ')
+     A            S7            25A         COLHDG('                ')
+     A            S8            25A         COLHDG('                ')
+     A            S9            25A         COLHDG('                ')
+     A            S10           25A         COLHDG('                ')
+     A            S11           25A         COLHDG('                ')
+     A            S12           25A         COLHDG('                ')
+     A            S13           25A         COLHDG('                ')
+     A            S14           25A         COLHDG('                ')
+     A            S15           25A         COLHDG('                ')
+     A            S16           25A         COLHDG('                ')
+     A            S17           25A         COLHDG('                ')
+     A            S18           25A         COLHDG('                ')
+     A            S19           25A         COLHDG('                ')
+     A            S20           25A         COLHDG('                ')
+     A*

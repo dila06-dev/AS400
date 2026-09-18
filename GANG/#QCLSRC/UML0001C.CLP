@@ -1,0 +1,96 @@
+/*    * PROGRAMMNAME.:KTR0001C                                               */
+/*    * FUNKTION.....:CALL ...                                               */
+/*    *               KTR                                                    */
+/*    * NOVEMBER 2000                                                         */
+/*    *                                                                       */
+/*    * FASERWERKE-LINGEN GMBH                                                */
+/*    * DARMER ESCH 75                                                        */
+/*    * 49811 LINGEN                                                          */
+/*    *                                                                       */
+/*    *-ÄNDERUNGSDIENST-------------------------------------------------------*/
+/*    * XX.XX.XX                                              PGMR.....       */
+/******************************************************************************/
+             PGM
+
+/*----------------------------------------------------------------------------*/
+             DCL        VAR(&MD) TYPE(*CHAR) LEN(256) VALUE(' ')
+
+             DCL        VAR(&MSGPGM) TYPE(*CHAR) LEN(10)
+             DCL        VAR(&LDAS)   TYPE(*CHAR) LEN(1) VALUE(' ')
+             DCL        VAR(&ERROR1)  TYPE(*CHAR) LEN(01) VALUE('0')
+             DCL        VAR(&ERROR2)  TYPE(*CHAR) LEN(01) VALUE('0')
+/*                                                              */
+             DCL        VAR(&MODUS)   TYPE(*CHAR) LEN(1)
+             DCL        VAR(&DATMOD)  TYPE(*CHAR) LEN(5)
+             DCL        VAR(&RTNCOD)  TYPE(*CHAR) LEN(1) VALUE('0')
+             DCL        VAR(&SYSGES)  TYPE(*CHAR) LEN(26)
+             DCL        VAR(&SYSDAT)  TYPE(*CHAR) LEN(10)
+             DCL        VAR(&SYSZEI)  TYPE(*CHAR) LEN(8)
+             DCL        VAR(&FWLFIRM) TYPE(*CHAR) LEN(01)
+/*----------------------------------------------------------------------------*/
+             RTVDTAARA  DTAARA(FWLFIRM (1 1)) RTNVAR(&FWLFIRM)
+             MONMSG     MSGID(CPF0000) EXEC(DO)
+             GOTO       CMDLBL(ENDE)
+             ENDDO
+             IF         COND(&FWLFIRM *EQ 'D') THEN(DO)
+             ENDDO
+             IF         COND(&FWLFIRM *EQ 'L') THEN(DO)
+                   GOTO       CMDLBL(ENDE)
+             ENDDO
+/*-ENVIRONMENT ANPASSEN BZW ERSTELLEN-----------------------------------------*/
+             ADDLIBLE   LIB(FWLFR) POSITION(*LAST)
+             MONMSG     MSGID(CPF0000) EXEC(CHGVAR VAR(&ERROR2) +
+                          VALUE('1'))
+/*----------------------------------------------------------------------------*/
+/*    *     SYSGES: 22032005090226                                           */
+/*    *     SYSDAT: 22032005                                                 */
+/*    *     SYSZEI: 090226                                                   */
+             CHGVAR     VAR(&DATMOD) VALUE('*TMJ4')
+             CALL       PGM(SUBR36/#DATAKTR) PARM(&DATMOD &RTNCOD +
+                          &SYSGES &SYSDAT &SYSZEI)
+/*    *     SYSGES: 22.03.200509.02.26                                       */
+/*    *     SYSDAT: 22.03.2005                                               */
+/*    *     SYSZEI: 09.02.26                                                 */
+             CHGVAR     VAR(&DATMOD) VALUE('*EUR ')
+             CALL       PGM(SUBR36/#DATAKTR) PARM(&DATMOD &RTNCOD +
+                          &SYSGES &SYSDAT &SYSZEI)
+/*    *     SYSGES: 20050322090226                                           */
+/*    *     SYSDAT: 20050322                                                 */
+/*    *     SYSZEI: 090226                                                   */
+             CHGVAR     VAR(&DATMOD) VALUE('*JMT4')
+             CALL       PGM(SUBR36/#DATAKTR) PARM(&DATMOD &RTNCOD +
+                          &SYSGES &SYSDAT &SYSZEI)
+/*----------------------------------------------------------------------------*/
+/*           KTR110-ALTDATEN                      */
+             CALL       PGM(KTR0001C)
+/*                                                */
+             CHGVAR     VAR(%SST(&MD 1 06))   VALUE(%SST(&SYSDAT 1 6))
+             CHGVAR     VAR(%SST(&MD 1 06))   VALUE('200409')
+             CALL       PGM(DUMMY512) PARM(&MD 'UML0001' ' ' ' ' +
+                          'UML0001' 'QTEMP' '*REPLACE')
+             MONMSG     MSGID(CPF0000)
+
+             CHGVAR     VAR(%SST(&MD 1 06))   VALUE('200504')
+             CALL       PGM(DUMMY512) PARM(&MD 'UML0003' ' ' ' ' +
+                          'UML0003' 'QTEMP' '*REPLACE')
+             MONMSG     MSGID(CPF0000)
+
+             CPYF       FROMFILE(QTEMP/UML0003) +
+                          TOFILE(QTEMP/UML0001) MBROPT(*ADD) +
+                          FMTOPT(*NOCHK)
+             MONMSG     MSGID(CPF0000)
+
+             CALL       PGM(UML0001R)
+             MONMSG     MSGID(CPF0000)
+
+             CALL       PGM(DUMMY512) PARM(&MD 'UML0002' ' ' ' ' +
+                          'UML0002' 'QTEMP' '*REPLACE')
+             MONMSG     MSGID(CPF0000)
+
+             CALL       PGM(UML0002R)
+             MONMSG     MSGID(CPF0000)
+
+/*                                                */
+ENDE:
+             RCLRSC
+             ENDPGM

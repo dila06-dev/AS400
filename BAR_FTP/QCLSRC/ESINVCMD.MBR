@@ -1,0 +1,7 @@
+winadmin   3veKhCMZ
+ascii
+NAMEFMT 0
+cd domains/dometic-group.com/public_ftp/dwes/rcv
+lcd WAECOEDI
+PUT DOMINV_ES ESI101228_2000.TXT
+quit

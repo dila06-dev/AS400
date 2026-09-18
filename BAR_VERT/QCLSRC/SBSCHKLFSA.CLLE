@@ -1,0 +1,56 @@
+/*       PROGRAMMNAME:  SBSCHKLFS                                    */
+/*       VERFASSER   :  Schneider    STAND:24.07.2026                */
+/*       BESCHREIBUNG:  Prüfung, ob trend-SBS aktiv. Wenn nein, dann */
+/*                      Starten ausgewählter SBS                     */
+/*                                                                   */
+/*                                                                   */
+/*                                                                   */
+/*********************************************************************/
+             PGM
+
+             DCL        VAR(&RC) TYPE(*CHAR) LEN(1) /* return code +
+                          ('1' = job is active; '0' = job is not +
+                          active) */
+
+             CHGJOB     LOG(4 00 *SECLVL) LOGCLPGM(*YES) +
+                          LOGOUTPUT(*JOBEND)
+
+/* ----starten subsysteme ----------------------------------------------------*/
+
+             CALL       PGM(CHKACTJOB) PARM(('DOMPGMV7') (&RC))
+             IF         COND(&RC *EQ '0') THEN(DO)
+             STRSBS     SBSD(DOMPGMV7/DOMPGMV7)
+             MONMSG     MSGID(CPF0000)
+             DLYJOB     DLY(15)
+             ENDDO
+
+             CALL       PGM(CHKACTJOB) PARM(('DOMPRTV7') (&RC))
+             IF         COND(&RC *EQ '0') THEN(DO)
+             STRSBS     SBSD(DOMPGMV7/DOMPRTV7)
+             MONMSG     MSGID(CPF0000)
+             DLYJOB     DLY(15)
+             ENDDO
+
+             CALL       PGM(CHKACTJOB) PARM(('DOMUSRV7') (&RC))
+             IF         COND(&RC *EQ '0') THEN(DO)
+             STRSBS     SBSD(DOMPGMV7/DOMUSRV7)
+             MONMSG     MSGID(CPF0000)
+             DLYJOB     DLY(15)
+             ENDDO
+
+             CALL       PGM(CHKACTJOB) PARM(('TSTPGMV7') (&RC))
+             IF         COND(&RC *EQ '0') THEN(DO)
+             STRSBS     SBSD(TSTPGMV7/TSTPGMV7)
+             MONMSG     MSGID(CPF0000)
+             DLYJOB     DLY(15)
+             ENDDO
+
+             CALL       PGM(CHKACTJOB) PARM(('TSTUSRV7') (&RC))
+             IF         COND(&RC *EQ '0') THEN(DO)
+             STRSBS     SBSD(TSTPGMV7/TSTUSRV7)
+             MONMSG     MSGID(CPF0000)
+             DLYJOB     DLY(15)
+             ENDDO
+
+
+             ENDPGM

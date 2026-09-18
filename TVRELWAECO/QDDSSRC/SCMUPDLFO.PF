@@ -1,0 +1,17 @@
+     A*
+     A          R SCMUPDLFO                 TEXT('SCMUPDLFO')
+     A*****************************************************************
+     A            LFFIRM         2A         COLHDG('MADANT')
+     A            LFLFNR        10A         COLHDG('LIEFERANT')
+     A            LFVSTA         3S 0       COLHDG('VERSCHIFFTAGE LIEF')
+     A            LFSBAD         3A         COLHDG('SB ADMINISTRAT    ')
+     A            LFSBOP         3A         COLHDG('SB OPERATIV       ')
+     A*****************************************************************
+     A            H1              L         TEXT('Date of transmissing')
+     A            H2              Z         TEXT('TIMESTAMP')
+     A*****************************************************************
+     A            STATE          1A         COLHDG('1*DONE 0=NOT')
+     A            LFLFNR_       10A         COLHDG('LIEFERANT')
+     A            LFVSTA_        3S 0       COLHDG('VERSCHIFFTAGE LIEF')
+     A            LFSBAD_        3A         COLHDG('SB ADMINISTRAT    ')
+     A            LFSBOP_        3A         COLHDG('SB OPERATIV       ')

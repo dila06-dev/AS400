@@ -1,0 +1,68 @@
+     A**************************************************************************
+     A*  Copyright 2025 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Jechtinger Straße 9                              *
+     A*                       DE 79111 Freiburg                                *
+     A*  --------------------------------------------------------------------- *
+     A*  Kommunikationsbereich W017                                            *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: MG 15.07.2025 Case #04264118 Integration Siegen             *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R EXW0171
+     A*-------------------------------------------------------------------------
+     A* Programmstatus
+     A*-------------------------------------------------------------------------
+     A            EXW017PGSTR               REFFLD(##PGST)
+     A            EXW017PROGR               REFFLD(##PROG)
+     A            EXW017FLDNR               REFFLD(##FLDN)
+     A            EXW017RTCDR               REFFLD(##CHRT)
+     A*-------------------------------------------------------------------------
+     A* ON/OFF KZ für Prüfungen
+     A*-------------------------------------------------------------------------
+     A            EXW017IFKZR               REFFLD(##IFKZ)
+     A            EXW017PRRTR               REFFLD(##PRRT)
+     A            EXW017FR01R  100A         REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* Key-Felder
+     A*-------------------------------------------------------------------------
+     A            EXW017TSTPR               REFFLD(W0171/W017TSTP *LIBL/W017)
+     A            EXW017FR02R  100A         REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* Kopier-Begriff NACH
+     A*-------------------------------------------------------------------------
+     A            EXW017NTSTR               REFFLD(W0171/W017TSTP *LIBL/W017)
+     A            EXW017FR03R  100A         REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* evt. weitere Felder für Update oder Prüfungen
+     A*-------------------------------------------------------------------------
+     A            EXW017ERUSR               REFFLD(W0171/W017ERUS *LIBL/W017)
+     A            EXW017ERDAR               REFFLD(W0171/W017ERDA *LIBL/W017)
+     A            EXW017TDIRR               REFFLD(W0171/W017TDIR *LIBL/W017)
+     A            EXW017IDENR               REFFLD(W0171/W017IDEN *LIBL/W017)
+     A            EXW017LFTER               REFFLD(W0171/W017LFTE *LIBL/W017)
+     A            EXW017REFNR               REFFLD(W0171/W017REFN *LIBL/W017)
+     A            EXW017BEPOR               REFFLD(W0171/W017BEPO *LIBL/W017)
+     A            EXW017BEDAR               REFFLD(W0171/W017BEDA *LIBL/W017)
+     A            EXW017TEXTR               REFFLD(W0171/W017TEXT *LIBL/W017)
+     A            EXW017PLMGR               REFFLD(W0171/W017PLMG *LIBL/W017)
+     A            EXW017BSMGR               REFFLD(W0171/W017BSMG *LIBL/W017)
+     A            EXW017KDNRR               REFFLD(W0171/W017KDNR *LIBL/W017)
+     A            EXW017ABMAR               REFFLD(W0171/W017ABMA *LIBL/W017)
+     A            EXW017FRZOR               REFFLD(W0171/W017FRZO *LIBL/W017)
+     A            EXW017TENRR               REFFLD(W0171/W017TENR *LIBL/W017)
+     A            EXW017VWARR               REFFLD(W0171/W017VWAR *LIBL/W017)
+     A            EXW017WKNRR               REFFLD(W0171/W017WKNR *LIBL/W017)
+     A            EXW017AFATR               REFFLD(W0171/W017AFAT *LIBL/W017)
+     A            EXW017STATR               REFFLD(W0171/W017STAT *LIBL/W017)
+     A            EXW017FENRR               REFFLD(W0171/W017FENR *LIBL/W017)
+     A            EXW017FFLDR               REFFLD(W0171/W017FFLD *LIBL/W017)
+     A            EXW017IFFIR               REFFLD(W0171/W017IFFI *LIBL/W017)
+     A            EXW017IFNRR               REFFLD(W0171/W017IFNR *LIBL/W017)
+     A            EXW017IFPOR               REFFLD(W0171/W017IFPO *LIBL/W017)
+     A            EXW017AFJJR               REFFLD(W0171/W017AFJJ *LIBL/W017)
+     A            EXW017AFNRR               REFFLD(W0171/W017AFNR *LIBL/W017)
+     A            EXW017AFPOR               REFFLD(W0171/W017AFPO *LIBL/W017)
+     A            EXW017VSNRR               REFFLD(W0171/W017VSNR *LIBL/W017)
+     A            EXW017FR04R   92A         REFFLD(##FREI)

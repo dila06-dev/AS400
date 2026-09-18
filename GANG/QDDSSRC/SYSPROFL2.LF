@@ -1,0 +1,10 @@
+      * Physische Datei: SYSPROFPF
+      * ANLEGEDATUM: OKTOBER 2009
+      * ÄNDERUNGEN:
+      *
+     A                                      UNIQUE
+     A          R SYSPROFPFR                PFILE(SYSPROFPF)
+     A                                      TEXT('PARAMETER')
+     A          K S5USRP
+     A          K S5PRF
+     A          S S5AKT                     VALUES('A')

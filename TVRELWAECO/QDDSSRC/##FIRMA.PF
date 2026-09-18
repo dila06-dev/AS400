@@ -1,0 +1,6 @@
+     A*****************************************************************
+     A          R FIRMAF                    TEXT('AKTUELLE FIRMA')
+     A            LOKATION       3A         COLHDG('LOKATION')
+     A            FIRMA          2A         COLHDG('FIRMENNR')
+     A*****************************************************************
+     A          K LOKATION
