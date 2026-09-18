@@ -197,51 +197,48 @@ b
      c     #LBLBFIRM     orne      $LBLBFIRM
      C                   leave
      C                   else
-     C                   if        %subst(#ERRORTXT: 1: 19) =
+     C* 2026-09-18: Pro gelesenem Satz SR1000 nur einmal ausfuehren.
+     C* SR9820 aendert #ERRORTXT und fuehrt UPDATE #LBLBR aus.
+     C* Einzelne IFs konnten danach einen zweiten Aufruf ausloesen.
+     C* SELECT verhindert erneute Buchung ohne neues READ.
+     C* Kennzeichen vor jeder Verarbeitung neu setzen.
+     C                   movel     '0'           wewe
+     C                   select
+     C                   when      %subst(#ERRORTXT: 1: 19) =
      C                             'ARTIKEL FEHLT IN TB'
      C                   exsr      sr1000
-     C                   endif
-     C                   if        %subst(#ERRORTXT: 1: 20) =
+     C                   when      %subst(#ERRORTXT: 1: 20) =
      C                             'DISPOSTEUERUNG FEHLT'    or
      C                             %subst(#ERRORTXT: 1: 19) =
      C                             'DISPOSTEUERUNG FEHL'
      C                   exsr      sr1000
-     C                   endif
-     C                   if        %subst(#ERRORTXT: 1: 19) =
+     C                   when      %subst(#ERRORTXT: 1: 19) =
      C                             'DATUM ABGESCHLOSSEN'   and
      C                             #LBLBLSTC = '825'
      C                   exsr      sr1000
-     C                   endif
-     C                   if        %subst(#ERRORTXT: 1: 19) =
+     C                   when      %subst(#ERRORTXT: 1: 19) =
      C                             'UNGÜLTIGE BUCHUNG  '
      C                   exsr      sr1000
-     C                   endif
-     C                   if        %subst(#ERRORTXT: 1: 19) =
+     C                   when      %subst(#ERRORTXT: 1: 19) =
      C                             'LAGERORT 1 UNGÜLTIG'
      C                   exsr      sr1000
-     C                   endif
-     C                   if        %subst(#ERRORTXT: 1: 19) =
+     C                   when      %subst(#ERRORTXT: 1: 19) =
      C                             'LAGERORT 2 UNGÜLTIG'
      C                   exsr      sr1000
-     C                   endif
-     C                   if        %subst(#ERRORTXT: 1: 10) =
+     C                   when      %subst(#ERRORTXT: 1: 10) =
      C                             'EINHEITEN:'
      C                   exsr      sr1000
-     C                   endif
-     C                   if        %subst(#ERRORTXT: 1: 19) =
+     C                   when      %subst(#ERRORTXT: 1: 19) =
      C                             'Korrektur Inventur '
      C                   exsr      sr1000
-     C                   endif
-     C                   if        %subst(#ERRORTXT: 1: 19) =
+     C                   when      %subst(#ERRORTXT: 1: 19) =
      C                             '816 Korrektur      '
      C                   exsr      sr1000
-     C                   endif
-     C                   movel     '0'           wewe
-     C                   if        %subst(#ERRORTXT: 1: 19) =
+     C                   when      %subst(#ERRORTXT: 1: 19) =
      C                             'Korrektur Wareneing'
      C                   movel     '1'           wewe              1
      C                   exsr      sr1000
-     C                   endif
+     C                   endsl
      C                   endif
      C                   enddo
      C                   endif
