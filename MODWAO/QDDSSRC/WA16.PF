@@ -1,0 +1,27 @@
+     A**************************************************************************
+     A*  Copyright 2024 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Jechtinger Straße 9                              *
+     A*                       DE 79111 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Zuordnung Kunden-Nr <- Kundengruppe                                   *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: PH 04.11.2024 Case #03895676                                *
+     A*  Änderung: XX XX.XX.XXXX                                               *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R WA161
+     A*-------------------------------------------------------------------------
+     A            WA16LOCK  R               REFFLD(##LOCK)
+     A            WA16JNAM  R               REFFLD(##JNAM)
+     A            WA16JDAT  R               REFFLD(##JDAT)
+     A            WA16JZEI  R               REFFLD(##JZEI)
+     A            WA16USER  R               REFFLD(##USER)
+     A            WA16PROG  R               REFFLD(##PROG)
+     A            WA16BIBL  R               REFFLD(##BIBL)
+     A            WA16FIRM  R               REFFLD(##FIRM)
+     A            WA16KDNR  R               REFFLD(##KDNR)
+     A            WA16KDGR  R               REFFLD(##KDGR)
+     A            WA16TSTP  R               REFFLD(##TSTP)
+     A            WA16ERUS  R               REFFLD(##ERUS)
+     A            WA16FREI  R  100          REFFLD(##FREI)

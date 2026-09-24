@@ -1,0 +1,44 @@
+     A          R MBR00R1
+     A            MBR010         7S 0
+     A                                      TEXT('Mitglieds-Nr.')
+     A                                      COLHDG('Mit' -
+     A                                      'gl.-' -
+     A                                      'Nr.')
+     A                                      EDTCDE(Z)
+     A            MBR020        30A
+     A                                      TEXT('Name 1')
+     A                                      COLHDG('Name 1')
+     A            MBR030        30A
+     A                                      TEXT('Name 2')
+     A                                      COLHDG('Name 2')
+     A            MBR040        30A
+     A                                      TEXT('NAME 3 ')
+     A                                      COLHDG('NAME 3 ')
+     A            MBR050        30A
+     A                                      TEXT('Strasse')
+     A                                      COLHDG('Strasse')
+     A            MBR060         3A
+     A                                      TEXT('Land')
+     A                                      COLHDG('Land')
+     A            MBR070         5S 0
+     A                                      TEXT('PLZ')
+     A                                      EDTCDE(Z)
+     A                                      COLHDG('PLZ')
+     A            MBR080        30A
+     A                                      TEXT('Ort')
+     A                                      COLHDG('Ort')
+     A            MBR090         7S 0
+     A                                      TEXT('Kunden-Nr. beim Empf.')
+     A                                      COLHDG('Kd.Nr.' -
+     A                                      'beim ' -
+     A                                      'Empf.')
+     A                                      EDTCDE(Z)
+     A            MBR100    R               REFFLD(BENUTZER FELDER)
+     A                                      TEXT('Benutzer')
+     A                                      COLHDG('Benutzer')
+     A            MBR110         3A
+     A                                      TEXT('Invoice-Typ EDI')
+     A                                      COLHDG('Invoice' -
+     A                                      'Typ' -
+     A                                      'EDI')
+     A          K MBR010

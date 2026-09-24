@@ -1,0 +1,37 @@
+     A**************************************************************************
+     A*  Copyright 2011 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Lager-Zuganmg Fehler-Code                                             *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: RE 23.01.2012                            m                  *
+     A*  Erstellt: RE 27.08.2013 Projekt 9822                                  *
+     A*            neues Feld Projekt-Nr WAOOBGTE                             *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R WAOO1
+     A*-------------------------------------------------------------------------
+     A            WAOOLOCK  R               REFFLD(##LOCK)
+     A            WAOOJNAM  R               REFFLD(##JNAM)
+     A            WAOOJDAT  R               REFFLD(##JDAT)
+     A            WAOOJZEI  R               REFFLD(##JZEI)
+     A            WAOOUSER  R               REFFLD(##USER)
+     A            WAOOPROG  R               REFFLD(##PROG)
+     A            WAOOBIBL  R               REFFLD(##BIBL)
+     A            WAOOFIRM  R               REFFLD(##FIRM)
+     A            WAOOLGJJ  R               REFFLD(##LGJJ)
+     A            WAOOLGNR  R               REFFLD(##LGNR)
+     A            WAOOLGPO  R               REFFLD(##LGPO)
+     A            WAOOFBNR  R               REFFLD(##FBNR)
+     A            WAOOTSTP  R               REFFLD(##TSTP)
+     A            WAOOERUS  R               REFFLD(##ERUS)
+     A            WAOOFEAT  R               REFFLD(##FEAT)
+     A            WAOOFEAR  R               REFFLD(##FEAR)
+     A            WAOOFEUS  R               REFFLD(##FEAR)
+     A            WAOOFEBM  R               REFFLD(##FEBM)
+     A            WAOOPERG  R               REFFLD(##A002)
+     A            WAOOBGTE  R               REFFLD(##BGTE)
+     A            WAOOFREI  R   85          REFFLD(##FREI)

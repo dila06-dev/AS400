@@ -1,0 +1,24 @@
+/*-------------------------------------------------*/
+/* Dometic invoice Schnittstellen füllen           */
+/*-------------------------------------------------*/
+             PGM
+
+             ADDLIBLE   LIB(POHL)
+             MONMSG     MSGID(CPF2103)
+             ADDLIBLE   LIB(WAECOEDI)
+             MONMSG     MSGID(CPF2103)
+
+
+/* Dometic Denmark */
+             CLRPFM     FILE(DOMINV_XX)
+             RUNQRY     QRY(WAECOQRY/FAKWAE__H)
+             RUNQRY     QRY(WAECOQRY/FAKWAE__L)
+             RUNQRY     QRY(WAECOQRY/FAKWAE__T)
+
+             CALL       PGM(DOMINV_XX)
+
+
+             RMVLIBLE   LIB(POHL)
+             RMVLIBLE   LIB(WAECOEDI)
+
+             ENDPGM

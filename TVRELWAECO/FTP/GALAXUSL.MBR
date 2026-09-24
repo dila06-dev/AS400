@@ -1,0 +1,48 @@
+2026-09-18-10.19.04.013194   18.09.2026   10.19.04
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host
+ digitec-galaxus.eu-central-1.sftpcloud.io, Adresse 85.10.200.14 über Port 21
+ herzustellen.
+220 SFTPGo_2.6.1
+Anmelde-ID (gang) eingeben:
+331 OK
+230 Password ok, continue
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> REM **************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP
+ eingeben.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to ASCII
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 SITE support is disabled
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Einen FTP-Unterbefehl eingeben.
+> cd /Preisliste
+250 CD worked on /Preisliste
+Einen FTP-Unterbefehl eingeben.
+> mdelete *
+229 Entering Extended Passive Mode (|||50086|)
+150 Using transfer connection
+226 Closing transfer connection
+250 Removed file /Preisliste/GALAXUSCH-20260918100157.csv
+Einen FTP-Unterbefehl eingeben.
+> APPEND GALAXUSR_P GALAXUSCH-20260918101903.csv
+229 Entering Extended Passive Mode (|||50089|)
+150 Using transfer connection
+226 Closing transfer connection
+ 32170 Byte in 0.003 Sekunden übertragen. Übertragungsgeschwindigkeit 10980.693
+ KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye

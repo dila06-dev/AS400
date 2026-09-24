@@ -1,0 +1,29 @@
+     A          R UNFREEZEPF
+     A
+      * :CONFIRMATION
+     A            C010           7S 0
+     A                                      TEXT('SC id static')
+     A                                      COLHDG('sales company')
+     A                                      EDTCDE(Z)
+     A            C020          10A
+     A                                      TEXT('SC order number')
+     A                                      COLHDG('sales company')
+     A            C030           5S 0
+     A                                      TEXT('POSITION IN ORDER')
+     A                                      COLHDG('delivery id')
+     A                                      EDTCDE(Z)
+     A
+     A            C040           1A         TEXT('FREEZE/UNFREEZE')
+     A                                      COLHDG('FREEZE/UNFREEZE')
+     A
+     A            C050          20A         TEXT('EDC order number')
+     A                                      COLHDG('EDC order number')
+     A
+     A            C060            Z         TEXT('TIMESTAMP')
+     A
+     A            C070          15A         TEXT('SKU')
+     A                                      COLHDG('SKU')
+     A
+     A            C080           2A         TEXT('STATUS')
+     A                                      COLHDG('STATUS')
+     A

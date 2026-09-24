@@ -1,0 +1,30 @@
+     A*CRTSRCPF FILE(TVRELWAECO/SKUIDCOI) RCDLEN(350) TEXT('IMPORTING SKUIDCO DATA')
+     A*CPYFRMSTMF FROMSTMF('/LAGER/SCM/IDCO MASTERFILE V1.0.CSV')
+     A*          TOMBR('/QSYS.LIB/TVRELWAECO.LIB/SKUIDCOI.FILE/SKUIDCOI.MBR')
+     A*                  MBROPT(*REPLACE)
+     A*
+     A*CPYFRMIMPF FROMFILE(TVRELWAECO/SKUIDCOI)
+     A*      TOFILE(TVRELWAECO/SKUIDCO) MBROPT(*REPLACE)
+     A*            FLDDLM(';') DECPNT(*COMMA)
+     A*                   FROMRCD(1) RPLNULLVAL(*FLDDFT)
+     A*
+     A*UPDATE        SKUAEREA SET TYPE      =
+     A*(SELECT TEEWITTY FROM TEEW01 WHERE
+     A*       TEEWFIRM ='01' AND ITEM=TEEWTENR)
+     A*WHERE EXISTS
+     A*(SELECT TEEWITTY FROM TEEW01 WHERE
+     A*       TEEWFIRM ='01' AND ITEM=TEEWTENR)
+     A*
+     A*
+     A*
+     A          R SKUIDCOR                  TEXT('SKUIDCO')
+     A*****************************************************************
+     A            IDCO          05A         TEXT('IDCO')
+     A            L1            50A         TEXT('L1')
+     A            PGROUP        50A         TEXT('SKUPRODUCTGROUP')
+     A            L3            50A         TEXT('L3')
+     A            L4            50A         TEXT('L4')
+     A            DESCRIP       50A         TEXT('FINANCIALPG')
+     A*****************************************************************
+     A            H1              L         TEXT('DATE      ')
+     A            H2              Z         TEXT('TIMESTAMP')

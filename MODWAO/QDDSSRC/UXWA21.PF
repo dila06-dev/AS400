@@ -1,0 +1,18 @@
+     A**************************************************************************
+     A*  Copyright 2024 by    trend SWM EDV-Beratung GmbH & Co. KG             *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Jechtinger Straße 9                              *
+     A*                       DE 79111 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Preisdifferenz-Briefkasten-Position                                   *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: PH 29.11.2024 Case #03829427                                *
+     A*  Änderung: XX XX.XX.XXXX                                               *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R UXWA211
+     A*
+     A            UXWA21FIRMR               REFFLD(WA211/WA21FIRM *LIBL/WA21)
+     A            UXWA21BLJJR               REFFLD(WA211/WA21BLJJ *LIBL/WA21)
+     A            UXWA21BLNRR               REFFLD(WA211/WA21BLNR *LIBL/WA21)
+     A            UXWA21BLPOR               REFFLD(WA211/WA21BLPO *LIBL/WA21)

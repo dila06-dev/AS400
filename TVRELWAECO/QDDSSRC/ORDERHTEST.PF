@@ -1,0 +1,93 @@
+     A          R ORDERHPF
+     A
+      * :HeaderInfos
+     A            H010           1A
+     A                                      TEXT('Order line type,static value')
+     A                                      COLHDG('Ordertype')
+     A            H020           7S 0
+     A                                      EDTCDE(Z)
+     A                                      TEXT('customer of SC')
+     A                                      COLHDG('customer of SC')
+     A            H030           7S 0
+     A                                      TEXT('SC id static')
+     A                                      COLHDG('sales company')
+     A                                      EDTCDE(Z)
+     A            H040          10S 0
+     A                                      TEXT('delivery id customer')
+     A                                      COLHDG('delivery id')
+     A                                      EDTCDE(Z)
+     A            H050          10A
+     A                                      TEXT('SC order number')
+     A                                      COLHDG('SC order number')
+     A            H060            L
+     A                                      TEXT('order creation /change date')
+     A                                      COLHDG('SC order date')
+     A            H070            T
+     A                                      TEXT('order creation/change time ')
+     A                                      COLHDG('SC order time')
+     A            H080           1A
+     A                                      TEXT('SC status field (N/U/C)    ')
+     A                                      COLHDG('SC status field')
+     A            H090           1A
+     A                                      TEXT('Hold / Release             ')
+     A                                      COLHDG('Hold / Release')
+     A            H100          30A
+     A                                      TEXT('Delivery address Name1')
+     A            H110          30A
+     A                                      TEXT('Delivery address Name2')
+     A            H120          30A
+     A                                      TEXT('Delivery address Name3')
+     A            H130          30A
+     A                                      TEXT('Delivery address Street')
+     A            H140           3A
+     A                                      TEXT('Delivery address Country')
+     A            H150           5S 0
+     A                                      TEXT('Delivery address Zip Code')
+     A            H160          30A
+     A                                      TEXT('Delivery address City')
+     A            H170         100A
+     A                                      TEXT('Head Text 1')
+     A            H180           1A
+     A                                      TEXT('HEAD (H);FEED(F),LINE(L)')
+     A            H190         100A
+     A                                      TEXT('Head Text 2')
+     A            H200           1A
+     A                                      TEXT('HEAD (H);FEED(F),LINE(L)')
+     A            H210         100A
+     A                                      TEXT('Head Text 3')
+     A            H220           1A
+     A                                      TEXT('HEAD (H);FEED(F),LINE(L)')
+     A            H230           2A
+     A                                      TEXT('Shipping Type')
+     A                                      COLHDG('Shipping Type')
+     A            H240          21A
+     A                                      TEXT('Customer order reference')
+     A                                      COLHDG('Customer order ref')
+     A            H250           1A
+     A                                      TEXT('OEM  Priority')
+     A                                      COLHDG('OEM  Priority')
+     A            H260           1A
+     A                                      TEXT('Full/partial delivery')
+     A                                      COLHDG('delivery code')
+     A            H270           1A
+     A                                      TEXT('SINGLE/BULK INVOICE')
+     A                                      COLHDG('SINGLE/BULK INVOICE')
+     A            H280         100A
+     A                                      TEXT('Forwarder text 1')
+     A                                      COLHDG('Forwarder text 1')
+     A            H290         100A
+     A                                      TEXT('Forwarder text 2')
+     A                                      COLHDG('Forwarder text 2')
+     A            H300          60A
+     A                                      TEXT('Name order responsible SC')
+     A                                      COLHDG('responsible SC')
+     A            H310         512A
+     A                                      TEXT('Message')
+     A                                      COLHDG('Message')
+     A            H320          10A         TEXT('booked')
+     A            H330          10A         TEXT('user')
+     A            H340           1A         TEXT('function')
+     A            H350          10A         TEXT('status')
+     A            H360            L         TEXT('Date of transmissing')
+     A            H370            Z         TEXT('TIMESTAMP')
+     A

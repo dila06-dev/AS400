@@ -1,0 +1,58 @@
+     A* INSERT INTO KPIF
+     A* SELECT  CHAR(' ', 1)         KPLOCK,  CHAR('GANG#', 10)   KPJNAM,
+     A* ZONED(('20')
+     A* CONCAT  SUBSTR(CHAR(CURRENT DATE +0 DAY), 7, 2)  CONCAT
+     A* SUBSTR(CHAR(CURRENT DATE +0 DAY), 4, 2)  CONCAT
+     A* SUBSTR(CHAR(CURRENT DATE +0 DAY), 1, 2), 8, 0)   KPJDAT,
+     A* ZONED(SUBSTR(CHAR(CURRENT TIME), 1, 2)  CONCAT
+     A* SUBSTR(CHAR(CURRENT TIME), 7, 2), 6, 0)   KPJZEI,
+     A*         CHAR('GANG#', 10)         KPUSER,
+     A*         CHAR('KDPIF_SQL', 10)          KPPROG,
+     A*         CHAR('TVRELWAECO', 10)    KPBIBL,
+     A*         CHAR('01', 02)            KPFIRM,
+     A*         INP1                      KPKDNR,
+     A*         CHAR('  ', 03)            KPVSNR,
+     A*         ITEM  KPTENR , ZONED(0       , 8, 0)   KPGADA,
+     A*         CHAR(INP2   CONCAT '               ', 30) KPIDEN,
+     A*         CHAR(' ', 30) KPIBZ1,
+     A*         CHAR(' ', 30) KPIBZ2,   CHAR(' ', 25) KPZINR,
+     A*         ZONED(0, 11, 3) KPEZPR, CHAR('EUR', 3) KPWACD,
+     A*         ZONED(0, 8, 0) KPLFDA,  CHAR('N', 1) KPDRIB,
+     A*         CHAR(' ', 3) KPBSPL,    CHAR(' ', 1) KPMPVK,
+     A*         CHAR(' ', 1) KPMEBE,    CHAR(' ', 17) KPAEND,
+     A*         CHAR(' ', 15) KPBKNR,   CHAR(' ', 17) KPBKAE,
+     A*         CHAR(' ', 15) KPKPTE,   CHAR(' ', 1) KPPRKZ,
+     A*         ZONED(0, 11, 2) KPABMP, ZONED(0, 11, 2) KPABMG,
+     A*         CHAR(' ', 1) KPWKPZ,    CHAR('N', 1) KPDSKZ,
+     A*         CHAR(' ', 30) KPRFNR,   CHAR(' ', 8) KPCHAF,
+     A*         CHAR(' ', 10) KPLFNR,   ZONED( 0, 3, 0) KPLFKZ,
+     A*         CHAR(' ', 1) KPRLFA,    CHAR('N', 1) KPEGMD,
+     A*         CHAR('01', 2) KPSTAT,    CHAR(' ', 1) KPVWAR,
+     A*         CHAR('0', 1) KPEASC,    CHAR(' ', 202) KPFREX
+     A* FROM         ITEMS000_O          A
+     A* WHERE A.ITEM   <> ' ' AND
+     A*                                 A.INP1   NOT IN
+     A* ( SELECT KPTENR FROM KPIF01  WHERE  ITEM   =   KPTENR )
+     A* 3246 ZEILEN IN KPIF IN TVPF EINGEFÜGT.
+     A*         DATUM IMMER TT.MM.JJJJ
+     A*         ZEIT  IMMER HH:MM
+     A          R ORDER_O                   TEXT('____')
+     A*****************************************************************
+     A            F01            3A         COLHDG('MANDANT   ')
+     A            F02           15A         COLHDG('ITEM      ')
+     A            F03           20A         COLHDG('INPUT 1   ')
+     A            F04           20A         COLHDG('INPUT 2   ')
+     A            F05           20A         COLHDG('INPUT 3   ')
+     A            F06           20A         COLHDG('INPUT 4   ')
+     A            F07           20A         COLHDG('INPUT 5   ')
+     A            F08           20A         COLHDG('INPUT 6   ')
+     A            F09           20A         COLHDG('INPUT 7   ')
+     A            F10           20A         COLHDG('INPUT 8   ')
+     A*****************************************************************
+     A            H1            10A         TEXT('status')
+     A            H2              L         TEXT('Date of transmissing')
+     A            H3              Z         TEXT('TIMESTAMP')
+     A            H4           256A         TEXT('statusII')
+     A            H5              L         TEXT('Date of UPLOAD      ')
+     A            H6              Z         TEXT('TIMESTAMP OF UPLOAD')
+     A

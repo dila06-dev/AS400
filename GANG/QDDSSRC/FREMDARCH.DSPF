@@ -1,0 +1,26 @@
+     A*%%TS  SD  20090508  100152  SFBPGMR     REL-V5R4M0  5722-WDS
+     A*%%EC
+     A                                      DSPSIZ(24 80 *DS3)
+     A          R FMT01
+     A*%%TS  SD  20090508  100152  SFBPGMR     REL-V5R4M0  5722-WDS
+     A                                      WINDOW(8 20 12 42)
+     A                                  1  7'ANZEIGE ARCHIV AUS SCHILLING'
+     A                                      COLOR(WHT)
+     A                                  3  1'GEWÄHLTE SELEKTION NICHT MÖGLICH O-
+     A                                      DER DER'
+     A                                  4  1'CURSOR STEHT AN EINER FALSCHEN STE-
+     A                                      LLE.'
+     A                                 11  1'EINGABETASTE DRÜCKEN'
+     A                                      COLOR(BLU)
+     A                                  6  1'KONTO'
+     A                                  7  1'FUNKTION'
+     A  99                              8  1'RECHNUNG'
+     A            BFUNKT         7A  O  7 11
+     A            BKTOART        1A  O  6 11
+     A            BKTO           8A  O  6 13
+     A  99        BRGNR         10A  O  8 11
+     A  99                              8 23'NICHT ARCHIVIERT'
+     A                                      COLOR(WHT)
+     A  98                              9  1'AN DIESER STELLE IST KEINE ANZEIGE-
+     A                                       MÖGLICH'
+     A                                      COLOR(WHT)

@@ -1,0 +1,144 @@
+     A**************************************************************************
+     A*  Copyright 2001 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Beschreibung                                                          *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: ZG 16.11.2010                                               *
+     A*  Änderung: PH 13.07.2011 Projekt 7513. Neue Felder "Vorlauf-Zeit" und  *
+     A*            "Vorlauf-Art" (für QS-pflichtige Ident-Nr)                  *
+     A*  Änderung: GS 21.11.2012 PROJEKT 9021 - "Konzernschlüßel" für die      *
+     A*            Felder "Kz-Lieferant"/ "Kz-Hersteller" TEEWKZLF, TEEWKZHS   *
+     A*            sowie 5 Felder "Verkaufsgruppe 1-5"  TEEWVKG1-TEEWVKG5      *
+     A*  Änderung: MG 14.01.2014 Projekt 9787 Neues Feld "SDB Pflicht"         *
+     A*  Änderung: MG 12.06.2015 Projekt 10804 Neue Felder TEEWPRMG            *
+     A*            "Produktmanager", TEEWKATL "Katalogartikel", TEEWOEAT       *
+     A*            "OE-Artikel", TEEWEXSV "Exklusiv-Artikel", TEEWVRVM         *
+     A*            "Vorratsvermögen", TEEWTART "Artikel-Art", TEEWIDCO         *
+     A*            "IDCO-Materialgruppe"                                       *
+     A*  Änderung: PH 13.08.2015 Projekt 11567. Neue Felder TEEWFGVE           *
+     A*            "F-Gas Verordnung" und TEEWGFHR "Gefahrgut"                 *
+     A*  Änderung: PH 09.07.2018 Projekt 14116-01. Neue Felder TEEWPLTE        *
+     A*            "Plan-Artikel" (15A) und TEEWTEAK "Artikel-Aktuell" (1/0)   *
+     A*  Änderung: PH 12.08.2018 Projekt 14116-01. In Rücksprache mit IK       *
+     A*            wurde das Feld "Plan-Artikel" aus der Datei wieder entfernt *
+     A*  Änderung: JK 15.04.2019 DOMETIC PJ 14874 Neues Feld Production Area   *
+     A*            Code                                                        *
+     A*  Änderung: PH 24.03.2021 Projekt 16425-01. Neues Feld TEEWPACO         *
+     A*            "Lagercode"                                                 *
+     A*  Änderung: GS 27.01.2022 Projekt 16278-01. Neues Feld TEEWARKL         *
+     A*            "Artikelklasse"                                             *
+     A*  Änderung: PH 10.02.2022 Projekt 17051-01. Neues Feld TEEWITTY         *
+     A*            "Item-Type"                                                 *
+     A*  Änderung: PH 11.11.2022 Projekt 220527-01. Das Feld TEEWIDCO "IDCO"   *
+     A*            von 4 auf 5 Stellen erweitert und hinten eingefügt. Das     *
+     A*            alte TEEWIDCO in TEEWFR01 (4A, Freifeld) umbenannt.         *
+     A*  Änderung: PH 16.08.2024 Case #03813767. Neue Felder TEEWRFTY          *
+     A*            "Refrigerant type" (5A), TEEWRFQT "Refrigerant qty" (3,0)   *
+     A*            und TEEWGWPN "GWP" (4.0). TEEWGWPN wurden anstelle von      *
+     A*            TEEWFR01 platziert. In Rücksprache mit GS TEEWFREI auf 1000 *
+     A*            Stellen erweitert.                                          *
+     A*  Änderung: PH 09.09.2024 Case #03841288. Neue Felder TEEWEOPR "End of  *
+     A*            Pro" ("End of Production"), TEEWEOSP "End of SP" ("End of   *
+     A*            Spare Part").                                               *
+     A*  Änderung: PH 23.09.2024 Case #03841288. Neues separates Feld TEEWPCGR *
+     A*            "Product Group" (4A).                                       *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R TEEW1
+     A*-------------------------------------------------------------------------
+     A            TEEWLOCK  R               REFFLD(##LOCK)
+     A            TEEWJNAM  R               REFFLD(##JNAM)
+     A            TEEWJDAT  R               REFFLD(##JDAT)
+     A            TEEWJZEI  R               REFFLD(##JZEI)
+     A            TEEWUSER  R               REFFLD(##USER)
+     A            TEEWPROG  R               REFFLD(##PROG)
+     A            TEEWBIBL  R               REFFLD(##BIBL)
+     A            TEEWFIRM  R               REFFLD(##FIRM)
+     A            TEEWTENR  R               REFFLD(##TENR)
+     A            TEEWSKUN  R               REFFLD(##TENR)
+     A                                      TEXT('SKU')
+     A                                      COLHDG('SKU')
+     A            TEEWPNCN  R               REFFLD(##TENR)
+     A                                      TEXT('PNC')
+     A                                      COLHDG('PNC')
+     A            TEEWPRGR  R               REFFLD(##PRGR)
+     A                                      TEXT('Produktgruppe/DIM')
+     A                                      COLHDG('PRGR/DIM')
+     A            TEEWERUS  R               REFFLD(##ERUS)
+     A            TEEWLVZT  R               REFFLD(##LFZT)
+     A            TEEWLVZA  R               REFFLD(##LVA1)
+     A                                      TEXT('Vorlauf-Art')
+     A                                      COLHDG('VlA')
+     A            TEEWKZLF       3A         TEXT('Kz-Lieferant')
+     A                                      COLHDG('Kz-Lieferant')
+     A            TEEWKZHS       3A         TEXT('Kz-Hersteller')
+     A                                      COLHDG('Kz-Hersteller')
+     A            TEEWVKG1       2A         TEXT('Verkaufsgruppe')
+     A                                      COLHDG('Verkaufsgruppe')
+     A            TEEWVKG2       2A         TEXT('Verkaufsgruppe')
+     A                                      COLHDG('Verkaufsgruppe')
+     A            TEEWVKG3       2A         TEXT('Verkaufsgruppe')
+     A                                      COLHDG('Verkaufsgruppe')
+     A            TEEWVKG4       2A         TEXT('Verkaufsgruppe')
+     A                                      COLHDG('Verkaufsgruppe')
+     A            TEEWVKG5       2A         TEXT('Verkaufsgruppe')
+     A                                      COLHDG('Verkaufsgruppe')
+     A            TEEWVWIT      10A         TEXT('Verwitt-Betrag')
+     A                                      COLHDG('Verwitt-Betrag')
+     A            TEEWSDBP       1A         TEXT('SDB Pflicht')
+     A                                      COLHDG('SDB Pflicht')
+     A            TEEWPRMG       3A         TEXT('Produktmanager')
+     A                                      COLHDG('Produktmanager')
+     A            TEEWKATL       1A         TEXT('Katalogartikel')
+     A                                      COLHDG('Katalogartikel')
+     A            TEEWOEAT       2A         TEXT('OE-Artikel')
+     A                                      COLHDG('OE-Artikel')
+     A            TEEWEXSV       1A         TEXT('Exklusiv-Artikel')
+     A                                      COLHDG('Exklusiv-Artikel')
+     A            TEEWVRVM      10A         TEXT('Vorratsvermögen')
+     A                                      COLHDG('Vorratsvermögen')
+     A            TEEWTART       3A         TEXT('Artikel-Art')
+     A                                      COLHDG('Artikel-Art')
+     A            TEEWGWPN       4S 0
+     A                                      TEXT('GWP')
+     A                                      COLHDG('GWP')
+     A            TEEWFGVE  R               REFFLD(##A001)
+     A                                      TEXT('F-Gas Verordnun')
+     A                                      COLHDG('F-GVO')
+     A            TEEWGFHR  R               REFFLD(##GEBIGFHR)
+     A            TEEWTEAK  R               REFFLD(##A001)
+     A                                      TEXT('Artikel-Aktuell')
+     A                                      COLHDG('Artikel-Aktuell')
+     A            TEEWPACD      10
+     A                                      TEXT('Prod.Area Code')
+     A                                      COLHDG('Prod.Area Codl')
+     A            TEEWPACO      10
+     A                                      TEXT('Lagercode')
+     A                                      COLHDG('Lagercode')
+     A            TEEWARKL       4
+     A                                      TEXT('Artikelklasse')
+     A                                      COLHDG('Artikelklasse')
+     A            TEEWITTY       4
+     A                                      TEXT('Item-Type')
+     A                                      COLHDG('Item-Type')
+     A            TEEWIDCO       5A         TEXT('IDCO-Materialgruppe')
+     A                                      COLHDG('IDCO-Materialgruppe')
+     A            TEEWRFTY       5A
+     A                                      TEXT('Refrigerant type')
+     A                                      COLHDG('Refrigerant type')
+     A            TEEWRFQT       3S 0
+     A                                      TEXT('Refrigerant qty')
+     A                                      COLHDG('Refrigerant qty')
+     A            TEEWEOPR       8S 0
+     A                                      TEXT('End of Pro')
+     A                                      COLHDG('End of Pro')
+     A            TEEWEOSP       8S 0
+     A                                      TEXT('End of SP')
+     A                                      COLHDG('End of SP')
+     A            TEEWPCGR       4A
+     A                                      TEXT('Product Group')
+     A                                      COLHDG('PGrp')
+     A            TEEWFREI  R  980          REFFLD(##FREI)

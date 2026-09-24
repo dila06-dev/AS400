@@ -1,0 +1,13 @@
+      * Physische Datei: KOND
+      * ANLEGEDATUM: OKTOBER 2010
+      *SORT:        ...
+      * ÄNDERUNGEN:
+      * AUSSCHLUSS:  ...
+     A
+     A*                                     UNIQUE
+     A          R #LIBLIST                  PFILE(#LIBLIST)
+     A
+     A                                      TEXT('LIBLIST')
+     A*         K KEY                       DESCEND
+     A          K KEY
+     A          K LIB

@@ -1,0 +1,25 @@
+     A**************************************************************************
+     A*  Copyright 2000 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Schlüsselaufbau Routingdatei für Schenker                             *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: VU 10.06.2011 Projekt 7485                                  *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(WAOI)
+     A          R KYWAOI1
+     A*
+     A            KYWAOIFIRMR               REFFLD(WAOIFIRM)
+     A            KYWAOIGENRR               REFFLD(WAOIGENR)
+     A            KYWAOIPOLZR               REFFLD(WAOIPOLZ)
+     A*
+     A            K$WAOI        30
+     A            K#WAOILOCKR               REFFLD(WAOILOCK)
+     A*
+     A            K#WAOIFIRMR               REFFLD(WAOIFIRM)
+     A            K#WAOIGENRR               REFFLD(WAOIGENR)
+     A            K#WAOIPOLZR               REFFLD(WAOIPOLZ)
+     A*

@@ -1,0 +1,19 @@
+     A*
+     A*         DATUM IMMER TT.MM.JJJJ
+     A*         ZEIT  IMMER HH:MM
+     A*
+     A          R SIEVDSPMWR                TEXT('    ')
+     A*****************************************************************
+     A            DCC            6A         COLHDG('DCC')
+     A            RECEPTNOTE    20A         COLHDG('RECEPTNOTE')
+     A            DELIVERYD      8S 0       COLHDG('DELIVERYD')
+     A            PUNUMBE       10A         COLHDG('PUNUMBE')
+     A            LINE           4A         COLHDG('LINE')
+     A            ITEM          20A         COLHDG('ITEM')
+     A            ITEMDESC      60A         COLHDG('ITEMDESC')
+     A            QUANTITY      11S 0       COLHDG('QUANTITY')
+     A            UNITITEM       3A         COLHDG('UNITITEM')
+     A            STATUSORD     10A         COLHDG('STATUSORD')
+     A            #COMMENT     256A         COLHDG('COMMENT')
+     A            STATUS         2A         COLHDG('STATUS')
+     A            TSTAMP          Z         TEXT('TITSTAMP')

@@ -1,0 +1,41 @@
+     A**************************************************************************
+     A*  Copyright 2011 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Absatz-Plan Erhöhungstabelle                                          *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: MG 15.08.2011 Projekt 7668, Planungssystem                  *
+     A*  Änderung: MG 07.09.2012 Projekt 8886, Neues Feld WAOKSTKD "KD-Nr Stat"*
+     A*  Änderung: MG 09.10.2012 Telefonat Herr Schneider, Prozent-Sätze 4,2   *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R WAOK1
+     A*-------------------------------------------------------------------------
+     A            WAOKLOCK  R               REFFLD(##LOCK)
+     A            WAOKJNAM  R               REFFLD(##JNAM)
+     A            WAOKJDAT  R               REFFLD(##JDAT)
+     A            WAOKJZEI  R               REFFLD(##JZEI)
+     A            WAOKUSER  R               REFFLD(##USER)
+     A            WAOKPROG  R               REFFLD(##PROG)
+     A            WAOKBIBL  R               REFFLD(##BIBL)
+     A            WAOKFIRM  R               REFFLD(##FIRM)
+     A            WAOKKSTC  R               REFFLD(##KSTC)
+     A            WAOKKDGR  R               REFFLD(##KDGR)
+     A            WAOKKDPL  R               REFFLD(KDEW1/KDEWKDPL *LIBL/KDEW)
+     A            WAOKKDNR  R               REFFLD(##KDNR)
+     A            WAOKLDNR  R               REFFLD(##LDNR)
+     A            WAOKPRGR  R               REFFLD(##PRGR)
+     A            WAOKJAHR  R               REFFLD(##JAHR)
+     A            WAOKMGPZ  R    6S 2       REFFLD(##PROZ)
+     A                                      TEXT('Mengen-Erhöh. %')
+     A                                      COLHDG('MgeErh%')
+     A            WAOKPRPZ  R    6S 2       REFFLD(##PROZ)
+     A                                      TEXT('Preis-Erhöh. %')
+     A                                      COLHDG('PrErh%')
+     A            WAOKPLKZ       1A         TEXT('Planungskz')
+     A                                      COLHDG('Planungskz')
+     A            WAOKSTKD  R               REFFLD(##STKD)
+     A            WAOKFREI  R  100          REFFLD(##FREI)

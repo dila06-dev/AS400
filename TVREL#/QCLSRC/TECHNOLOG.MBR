@@ -1,0 +1,210 @@
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host MY.EDIEXPERTS.DE, Adresse 85.214.125.29 über Port 21 herzustellen.
+220 (vsFTPd 2.0.7)
+Anmelde-ID (gang) eingeben:
+331 Please specify the password.
+230 Login successful.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD GANG
+Das lokale Arbeitsverzeichnis ist GANG
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Switching to ASCII mode.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Unknown SITE command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+250 Directory successfully changed.
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE110121_1137.txt
+227 Entering Passive Mode (85,214,125,29,207,39)
+150 Ok to send data.
+226 File receive OK.
+ 65376 Byte in 0,037 Sekunden übertragen. Übertragungsgeschwindigkeit 1761,711 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host MY.EDIEXPERTS.DE, Adresse 85.214.125.29 über Port 21 herzustellen.
+220 (vsFTPd 2.0.7)
+Anmelde-ID (gang) eingeben:
+331 Please specify the password.
+230 Login successful.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD GANG
+Das lokale Arbeitsverzeichnis ist GANG
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Switching to ASCII mode.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Unknown SITE command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+250 Directory successfully changed.
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE110121_1520.txt
+227 Entering Passive Mode (85,214,125,29,236,145)
+150 Ok to send data.
+226 File receive OK.
+ 65376 Byte in 0,089 Sekunden übertragen. Übertragungsgeschwindigkeit 735,660 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host MY.EDIEXPERTS.DE, Adresse 85.214.125.29 über Port 21 herzustellen.
+220 (vsFTPd 2.0.7)
+Anmelde-ID (gang) eingeben:
+331 Please specify the password.
+230 Login successful.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Switching to ASCII mode.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Unknown SITE command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+250 Directory successfully changed.
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE110121_1524.txt
+227 Entering Passive Mode (85,214,125,29,233,53)
+150 Ok to send data.
+226 File receive OK.
+199760 Byte in 0,302 Sekunden übertragen. Übertragungsgeschwindigkeit 661,988 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host MY.EDIEXPERTS.DE, Adresse 85.214.125.29 über Port 21 herzustellen.
+220 (vsFTPd 2.0.7)
+Anmelde-ID (gang) eingeben:
+331 Please specify the password.
+230 Login successful.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Switching to ASCII mode.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Unknown SITE command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+250 Directory successfully changed.
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE110124_1554.txt
+227 Entering Passive Mode (85,214,125,29,204,189)
+150 Ok to send data.
+226 File receive OK.
+204300 Byte in 0,397 Sekunden übertragen. Übertragungsgeschwindigkeit 514,013 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host MY.EDIEXPERTS.DE, Adresse 85.214.125.29 über Port 21 herzustellen.
+220 (vsFTPd 2.0.7)
+Anmelde-ID (gang) eingeben:
+331 Please specify the password.
+230 Login successful.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Switching to ASCII mode.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Unknown SITE command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+250 Directory successfully changed.
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE110207_1110.txt
+227 Entering Passive Mode (85,214,125,29,144,130)
+150 Ok to send data.
+226 File receive OK.
+141394 Byte in 0,174 Sekunden übertragen. Übertragungsgeschwindigkeit 813,413 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host MY.EDIEXPERTS.DE, Adresse 85.214.125.29 über Port 21 herzustellen.
+220 (vsFTPd 2.0.7)
+Anmelde-ID (gang) eingeben:
+331 Please specify the password.
+230 Login successful.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Switching to ASCII mode.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Unknown SITE command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+250 Directory successfully changed.
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE110207_1133.txt
+227 Entering Passive Mode (85,214,125,29,174,30)
+150 Ok to send data.
+226 File receive OK.
+141394 Byte in 0,165 Sekunden übertragen. Übertragungsgeschwindigkeit 856,731 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host MY.EDIEXPERTS.DE, Adresse 85.214.125.29 über Port 21 herzustellen.
+220 (vsFTPd 2.0.7)
+Anmelde-ID (gang) eingeben:
+331 Please specify the password.
+230 Login successful.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Switching to ASCII mode.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Unknown SITE command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+250 Directory successfully changed.
+Einen FTP-Unterbefehl eingeben.
+> APPEND EDI_TECHP TE110210_1145.txt
+227 Entering Passive Mode (85,214,125,29,60,55)
+150 Ok to send data.
+226 File receive OK.
+141394 Byte in 0,166 Sekunden übertragen. Übertragungsgeschwindigkeit 851,691 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.

@@ -1,0 +1,40 @@
+     A                                      UNIQUE
+     A          R USR00R1
+     A            USR010    R               REFFLD(BENUTZER FELDER)
+     A                                      TEXT('Benutzer')
+     A                                      COLHDG('Benutzer')
+     A            USR020    R               REFFLD(KUNDENNR FELDER)
+     A                                      TEXT('Kunden-Nr.')
+     A                                      COLHDG('Kunden' -
+     A                                      'Nummer')
+     A            USR030    R               REFFLD(FIRMA FELDER)
+     A                                      TEXT('Firma')
+     A                                      COLHDG('Fa')
+     A            USR040    R               REFFLD(SPRACHE FELDER)
+     A                                      TEXT('Sprache')
+     A                                      COLHDG('Spra' -
+     A                                      'che')
+     A            USR050    R               REFFLD(LAND FELDER)
+     A                                      TEXT('Land')
+     A                                      COLHDG('Land')
+     A            USR060    R               REFFLD(BEZ17 FELDER)
+     A                                      TEXT('ISO-Text')
+     A                                      COLHDG('ISO-Text')
+     A            USR065    R               REFFLD(WORKSTAT FELDER)
+     A                                      TEXT('Workstation')
+     A                                      COLHDG('WS')
+     A            USR070    R               REFFLD(LANDKREIS FELDER)
+     A                                      TEXT('Landkreis')
+     A                                      COLHDG('Land' -
+     A                                      'kreis')
+     A            USR080    R               REFFLD(BEDIENER FELDER)
+     A                                      TEXT('Bediener')
+     A                                      COLHDG('Bed.')
+     A            USR090    R               REFFLD(KZ01 FELDER)
+     A                                      TEXT('Wechsel Firma')
+     A                                      COLHDG('Wechsel Firma')
+     A            USR999    R               REFFLD(STATUS FELDER)
+     A                                      TEXT('Status')
+     A                                      COLHDG('Sta' -
+     A                                      'tus')
+     A          K USR010

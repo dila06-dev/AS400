@@ -1,0 +1,63 @@
+     A**************************************************************************
+     A*  Copyright 2010 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Interface Auftrag Nachnahme                                           *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: SZ 02.11.2010 Projekt Vertrieb                              *
+     A*  Änderung: SZ 08.09.2011 Projekt 7761, eMail Adresse                   *
+     A*  Änderung: SZ 08.09.2011 Projekt 7189, Fixtermin                       *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R WAO81
+     A*-------------------------------------------------------------------------
+     A            WAO8LOCK  R               REFFLD(##LOCK)
+     A            WAO8JNAM  R               REFFLD(##JNAM)
+     A            WAO8JDAT  R               REFFLD(##JDAT)
+     A            WAO8JZEI  R               REFFLD(##JZEI)
+     A            WAO8USER  R               REFFLD(##USER)
+     A            WAO8PROG  R               REFFLD(##PROG)
+     A            WAO8BIBL  R               REFFLD(##BIBL)
+     A            WAO8FIRM  R               REFFLD(##FIRM)
+     A            WAO8IFFI  R               REFFLD(##IFFI)
+     A            WAO8IFNR  R               REFFLD(##IFNR)
+     A            WAO8BEGR  R               REFFLD(##BEGR)
+     A            WAO8IFPO  R               REFFLD(##IFPO)
+     A            WAO8IFST  R               REFFLD(##IFST)
+     A            WAO8FIXT  R               REFFLD(##FIXT)
+     A            WAO8ERUS  R               REFFLD(##ERUS)
+     A            WAO8ERDA  R               REFFLD(##ERDA)
+     A            WAO8ERZT  R               REFFLD(##ERZT)
+     A            WAO8AFJJ  R               REFFLD(##AFJJ)
+     A            WAO8AFNR  R               REFFLD(##AFNR)
+     A            WAO8AFPO  R               REFFLD(##AFPO)
+     A            WAO8SPWG       5A         COLHDG('SpWeg')
+     A                                      TEXT('Spediteurweg Tag/Nacht')
+     A            WAO8CODN       1A         COLHDG('N')
+     A                                      TEXT('COD N')
+     A            WAO8CODW       3A         COLHDG('Whrg')
+     A                                      TEXT('COD Währung')
+     A            WAO8CODS      11S 2       COLHDG('Skonto')
+     A                                      TEXT('Skonto')
+     A            WAO8CODM       9S 2       COLHDG('MWST')
+     A                                      TEXT('MWST')
+     A            WAO8CODB      11S 2       COLHDG('Betrag')
+     A                                      TEXT('Betrag gesamt')
+     A            WAO8CODV       9S 2       COLHDG('VersKo')
+     A                                      TEXT('Versandkosten')
+     A            WAO8CODK       9S 2       COLHDG('VpKo')
+     A                                      TEXT('Verpackungskosten')
+     A            WAO8CODI       9S 2       COLHDG('VsiKo')
+     A                                      TEXT('Versicherungskosten')
+     A            WAO8CODP      11S 2       COLHDG('Preis/Stück')
+     A                                      TEXT('Nettopreis p.Stück')
+     A            WAO8CODU      11S 2       COLHDG('Betrag/Stück')
+     A                                      TEXT('Betrag p.Stück')
+     A            WAO8KMJJ  R               REFFLD(##KMJJ)
+     A            WAO8KMNR  R               REFFLD(##KMNR)
+     A            WAO8MLNR  R               REFFLD(##MLNR)
+     A            WAO8LFTE  R               REFFLD(##LFTE)
+     A            WAO8FREI  R  100          REFFLD(##FREI)

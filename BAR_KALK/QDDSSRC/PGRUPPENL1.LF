@@ -1,0 +1,9 @@
+     A*****************************************************************
+     A* WAECO: LOGISCHE SICHT PRODUKTGRUPPENZUORDNUNGEN
+     A*****************************************************************
+     A                                      UNIQUE
+     A          R PGRUPPEN                  PFILE(BAR_KALK/PGRUPPEN)
+     A          K #JAHR
+     A          K #WINSTATNR
+     A          K #DOMSTATNR
+     A          S #KZAI                     COMP(EQ 'A')

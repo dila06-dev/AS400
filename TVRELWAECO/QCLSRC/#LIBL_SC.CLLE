@@ -1,0 +1,52 @@
+/*    * PROGRAMMNAME.:#libl_sc                                               */
+/*    * FUNKTION.....:erstellen libl für batchprogramme mit trend            */
+/*    * 02/2012        SCHNEIDER                                              */
+/*    *                                                                       */
+/*    *                                                                       */
+/*    *-ÄNDERUNGSDIENST-------------------------------------------------------*/
+/*    * XX.XX.XX                                          PGMR.....           */
+/******************************************************************************/
+             PGM
+
+
+/*             libl setzen                                                   */
+             ADDLIBLE   LIB(SHN_INDI)
+             MONMSG     MSGID(CPF0000)
+             ADDLIBLE   LIB(SFBA)
+             MONMSG     MSGID(CPF0000)
+             ADDLIBLE   LIB(SFB)
+             MONMSG     MSGID(CPF0000)
+             ADDLIBLE   LIB(SFBF)
+             MONMSG     MSGID(CPF0000)
+             ADDLIBLE   LIB(SAS)
+             MONMSG     MSGID(CPF0000)
+             ADDLIBLE   LIB(SASF)
+             MONMSG     MSGID(CPF0000)
+             ADDLIBLE   LIB(EDIFACT)
+             MONMSG     MSGID(CPF0000)
+             ADDLIBLE   LIB(TVRELWAECO)
+             MONMSG     MSGID(CPF0000)
+             ADDLIBLE   LIB(MODWAOQRY)
+             MONMSG     MSGID(CPF0000)
+             ADDLIBLE   LIB(SEAXCALP)
+             MONMSG     MSGID(CPF0000)
+             ADDLIBLE   LIB(TVPP)
+             MONMSG     MSGID(CPF0000)
+             ADDLIBLE   LIB(TVPF)
+             MONMSG     MSGID(CPF0000)
+             ADDLIBLE   LIB(TAMP)
+             MONMSG     MSGID(CPF0000)
+             ADDLIBLE   LIB(TAMF)
+             MONMSG     MSGID(CPF0000)
+             ADDLIBLE   LIB(TEVMP)
+             MONMSG     MSGID(CPF0000)
+             ADDLIBLE   LIB(TEVMF)
+             MONMSG     MSGID(CPF0000)
+             ADDLIBLE   LIB(MODWAO)
+             MONMSG     MSGID(CPF0000)
+             ADDLIBLE   LIB(TMNP)
+             MONMSG     MSGID(CPF0000)
+             ADDLIBLE   LIB(QTEMP)
+             MONMSG     MSGID(CPF0000)
+
+             ENDPGM

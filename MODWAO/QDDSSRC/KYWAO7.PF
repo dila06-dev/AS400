@@ -1,0 +1,22 @@
+     A**************************************************************************
+     A*  Copyright 2010 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  LG-Platz/Typ-Zuordnung                                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: ZG 05.10.2010 Besuch Emsdetten - Sortierung Pickliste       *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(WAO7)
+     A          R KYWAO71
+     A*-------------------------------------------------------------------------
+     A            KYWAO7FIRMR               REFFLD(WAO7FIRM)
+     A            KYWAO7LANRR               REFFLD(WAO7LANR)
+     A            KYWAO7LORTR               REFFLD(WAO7LORT)
+     A            K$WAO7FREI    30
+     A            K#WAO7LOCKR               REFFLD(WAO7LOCK)
+     A            K#WAO7FIRMR               REFFLD(WAO7FIRM)
+     A            K#WAO7LANRR               REFFLD(WAO7LANR)
+     A            K#WAO7LORTR               REFFLD(WAO7LORT)

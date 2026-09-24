@@ -1,0 +1,16 @@
+     A                                      UNIQUE
+     A          R TRVVP
+     A            ODLBNM        10A         TEXT('Lib')
+     A                                      COLHDG('Lib')
+     A            ODOBNM        10A         TEXT('Objekt')
+     A                                      COLHDG('Objekt')
+     A            ODOBTP         8A         TEXT('Objektart')
+     A                                      COLHDG('Objektart')
+     A            ODOBAT        10A         TEXT('Attribut')
+     A                                      COLHDG('Attribut')
+     A            TRTOLIB       10A         TEXT('nach Lib')
+     A                                      COLHDG('nach Lib')
+     A            TRUJN          1A         TEXT('Übertrag J/N')
+     A                                      COLHDG('Übertrag J/N')
+
+     A          K ODOBNM

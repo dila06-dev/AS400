@@ -1,0 +1,9 @@
+/*-------------------------------------------------*/
+/* FTP Command zum senden von Files (Ba.2007)      */
+/* 213.209.110.98 Techno Server                    */
+/*-------------------------------------------------*/
+             PGM
+             OVRDBF     FILE(INPUT) TOFILE(bar_ftp/FTPCMD)
+             OVRDBF     FILE(OUTPUT) TOFILE(bar_ftp/FTPLOG)
+             FTP        RMTSYS('213.209.110.98')
+             ENDPGM

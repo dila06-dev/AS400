@@ -1,0 +1,3 @@
+PGM
+             RUNQRY     QRY(BAR_FRA/LAGERB_NAV)
+ENDPGM

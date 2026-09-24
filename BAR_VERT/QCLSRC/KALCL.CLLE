@@ -1,0 +1,57 @@
+/*       PROGRAMMNAME:  kalcl                                        */
+/*       VERFASSER   :  Schneider    STAND:27.07.2012                */
+/*       BESCHREIBUNG:  aufruf kalenderdatei für sicherung           */
+/*                      parameter 'J' kalender setzt nicht auf       */
+/*                      tagesdatum                                   */
+/*                                                                   */
+/*                                                                   */
+/*********************************************************************/
+             PGM        PARM(&LOCATION)
+
+             DCL        VAR(&LOCATION) TYPE(*CHAR) LEN(3)
+             DCL        VAR(&FIRMA) TYPE(*CHAR) LEN(2)
+             DCL        VAR(&TIMEEXV) TYPE(*CHAR) LEN(4)
+             DCL        VAR(&TIMEINV) TYPE(*CHAR) LEN(4)
+             DCL        VAR(&TIMEWOV) TYPE(*CHAR) LEN(4)
+             DCL        VAR(&RC) TYPE(*CHAR) LEN(1) VALUE('N')
+             DCL        VAR(&DATVOR) TYPE(*CHAR) LEN(1) VALUE('N')
+
+
+/* ----programmaufruf --------------------------------------------------------*/
+
+             ADDLIBLE   LIB(BAR_VERT) POSITION(*LAST)
+             MONMSG     MSGID(CPF0000)
+
+/*___   standardzeiten für faktura vorbelegen aus dtaara bar_vert/tagesrg___ */
+             IF         COND(&LOCATION *EQ 'EDC') THEN(DO)
+             RTVDTAARA  DTAARA(BAR_VERT/TAGESRG (1 4)) RTNVAR(&TIMEEXV)
+             RTVDTAARA  DTAARA(BAR_VERT/TAGESRG (51 4)) +
+                          RTNVAR(&TIMEINV)
+             RTVDTAARA  DTAARA(BAR_VERT/TAGESRG (101 4)) +
+                          RTNVAR(&TIMEWOV)
+             ENDDO
+             IF         COND(&LOCATION *EQ 'BE') THEN(DO)
+             RTVDTAARA  DTAARA(BAR_VERT/TAGESRG (151 4)) +
+                          RTNVAR(&TIMEINV)
+             RTVDTAARA  DTAARA(BAR_VERT/TAGESRG (201 4)) +
+                          RTNVAR(&TIMEWOV)
+             ENDDO
+             IF         COND(&LOCATION *EQ 'NL') THEN(DO)
+             RTVDTAARA  DTAARA(BAR_VERT/TAGESRG (251 4)) +
+                          RTNVAR(&TIMEINV)
+             RTVDTAARA  DTAARA(BAR_VERT/TAGESRG (301 4)) +
+                          RTNVAR(&TIMEWOV)
+             ENDDO
+             IF         COND(&LOCATION *EQ 'CH') THEN(DO)
+             RTVDTAARA  DTAARA(BAR_VERT/TAGESRG (351 4)) +
+                          RTNVAR(&TIMEINV)
+             RTVDTAARA  DTAARA(BAR_VERT/TAGESRG (401 4)) +
+                          RTNVAR(&TIMEWOV)
+             ENDDO
+
+             CALL       PGM(DOWR000) PARM(&LOCATION &FIRMA)
+
+             CALL       PGM(BAR_VERT/KALENDERRN) PARM(&FIRMA +
+                          &TIMEEXV &TIMEINV &TIMEWOV &DATVOR &LOCATION)
+
+             ENDPGM

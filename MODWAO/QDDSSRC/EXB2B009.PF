@@ -1,0 +1,24 @@
+     A**************************************************************************
+     A*  Copyright 2026 by    trend SWM EDV-Beratung GmbH & Co. KG             *
+     A*                       Jechtinger Straße 9                              *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------- *
+     A*  Kommunikationsparameter B2B Kunden EXPORT                             *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: PH 06.02.2026 Projekt Dometic Germany - B2B (Case 03777387) *
+     A*  Änderung: XX XX.XX.XXXX                                               *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R EXB2B0091
+     A*-------------------------------------------------------------------------
+     A* Programmstatus
+     A*-------------------------------------------------------------------------
+     A            EXB009PGSTR               REFFLD(##PGST)
+     A            EXB009PROGR               REFFLD(##PROG)
+     A            EXB009SORTR               REFFLD(##SORT)
+     A*-------------------------------------------------------------------------
+     A* Übergabewerte
+     A*-------------------------------------------------------------------------
+     A            EXB009FIRMR               REFFLD(##FIRM)
+     A            EXB009TENRR               REFFLD(##TENR)
+     A            EXB009FREIR  983          REFFLD(##FREI)

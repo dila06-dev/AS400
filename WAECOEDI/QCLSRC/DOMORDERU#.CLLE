@@ -1,0 +1,22 @@
+/*-------------------------------------------------*/
+/* Dometic Order Schnittstellen abfragen           */
+/*-------------------------------------------------*/
+             PGM
+
+             ADDLIBLE   LIB(WAECOEDI)
+             MONMSG     MSGID(CPF2103)
+             ADDLIBLE   LIB(BAR_FTP)
+             MONMSG     MSGID(CPF2103)
+
+/* Dometic FR Aufträge in Übergabedateien stellen */
+/*update WAECOEDI/waeedih set edih390=0 WHERE EDIh040 ='45940'               */
+/*update WAECOEDI/waeedil set edil320=0 WHERE EDIl040 ='45940'               */
+             CALL       PGM(WAECOEDI/EDI0101C) PARM('40631')
+
+             RMVLIBLE   LIB(WAECOEDI)
+             RMVLIBLE   LIB(BAR_FTP)
+
+/* Dometic FR Aufträge in BGFS generieren */
+             STRS36PRC  PRC(WWWORDXM) PARM('XML,WAECOF,0')
+
+             ENDPGM

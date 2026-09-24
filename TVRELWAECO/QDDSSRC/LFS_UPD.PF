@@ -1,0 +1,20 @@
+     A          R LFS_UPD
+      * :STOCK
+     A*********   LKKONZ         3A         COLHDG('KONZERN')
+     A*********   LKFIRM         3A         COLHDG('FIRMA')
+     A            LKORT          3A         COLHDG('LAGER- ORT')
+     A            LKBER          2A         COLHDG('LAGER- BER.')
+     A**********  LKGNGE         4S 0       COLHDG('GANG-NR EINLAG.')
+     A**********  LKGANG         4S 0       COLHDG('GANG- NR')
+     A            LKREG          4S 0       COLHDG('REGAL')
+     A            LKHOR          3S 0       COLHDG('HORIZ.')
+     A            LKVER          2S 0       COLHDG('VERT.')
+     A
+     A            #SEGMENT       5S 0       COLHDG('SEGMENT')
+     A            LKIDEN        28A         COLHDG('ARTIKELNUMMER')
+     A            BST1          11S 3       COLHDG('BESTAND           ')
+     A            BST2          11S 3       COLHDG('VERF. BESTAND     ')
+     A            BMLMALT        3A         COLHDG('LADE- MITTEL ALT')
+     A            HAUFIGK        5S 0       COLHDG('HÄUFIGKEIT      ')
+     A            BMLMNEU        3A         COLHDG('LADE- MITTEL NEU')
+     A*

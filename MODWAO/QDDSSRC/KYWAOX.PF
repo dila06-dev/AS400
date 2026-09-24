@@ -1,0 +1,22 @@
+     A**************************************************************************
+     A*  Copyright 2015 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Ident-Nr -> Land                                                      *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: PH 13.08.2015 Projekt 11567                                 *
+     A*  Änderung: XX XX.XX.XXXX                                               *
+     A**************************************************************************
+     A                                      REF(WAOX)
+     A          R KYWAOX1
+     A*-------------------------------------------------------------------------
+     A            KYWAOXFIRMR               REFFLD(WAOXFIRM)
+     A            KYWAOXTENRR               REFFLD(WAOXTENR)
+     A            KYWAOXLANDR               REFFLD(WAOXLAND)
+     A            K$WAOXFREI    30
+     A            K#WAOXLOCKR               REFFLD(WAOXLOCK)
+     A            K#WAOXFIRMR               REFFLD(WAOXFIRM)
+     A            K#WAOXTENRR               REFFLD(WAOXTENR)
+     A            K#WAOXLANDR               REFFLD(WAOXLAND)

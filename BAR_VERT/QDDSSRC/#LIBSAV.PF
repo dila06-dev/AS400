@@ -1,0 +1,8 @@
+     A                                      UNIQUE
+     A          R LIBSAV
+     A            LIB           10A         TEXT('Lib')
+     A                                      COLHDG('Lib')
+     A            SICHERN        1A         TEXT('Ausführen J/N')
+     A                                      COLHDG('Ausführen J/N')
+
+     A          K LIB

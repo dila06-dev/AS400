@@ -1,0 +1,7 @@
+TP_uploader  25&nor)=
+LCD TVRELWAECO
+ascii
+NAMEFMT 0
+rem cd /transfer/incoming
+APPEND TRANSFERP# DE411_TP_150618.CSV
+QUIT

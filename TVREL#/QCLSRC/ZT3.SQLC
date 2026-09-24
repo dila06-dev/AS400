@@ -1,0 +1,1 @@
+delete FROM ifad WHERE IFAdIFFI = '99999' or IFAdIFFI = '99999'

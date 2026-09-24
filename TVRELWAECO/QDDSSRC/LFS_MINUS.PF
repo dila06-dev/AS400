@@ -1,0 +1,16 @@
+     A          R LFS_MINUS
+      * :STOCK
+     A            BMKONZ         3A         COLHDG('KONZERN')
+     A            BMFIRM         3A         COLHDG('FIRMA')
+     A            BMORT          3A         COLHDG('LAGER- ORT')
+     A            BMBER          2A         COLHDG('LAGER- BER.')
+     A            BMGANG         4S 0       COLHDG('GANG- NR')
+     A            BMREG          4S 0       COLHDG('REGAL')
+     A            BMHOR          3S 0       COLHDG('HORIZ.')
+     A            BMVER          2S 0       COLHDG('VERT.')
+     A            BMSEGM         4S 0       COLHDG('SEG- MENT ')
+     A            BMIDEN        28A         COLHDG('ARTIKELNUMMER')
+     A            BMLM           3A         COLHDG('LADE- MITTEL')
+     A            BMABKZ         1A         COLHDG('ANBRUCH- KZ')
+     A            BMBMEN        11S 3       COLHDG('BESTANDSMENGE')
+     A*

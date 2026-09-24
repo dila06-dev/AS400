@@ -1,0 +1,25 @@
+     A*
+     A*         DATUM IMMER TT.MM.JJJJ
+     A*         ZEIT  IMMER HH:MM
+     A*           ORDANLORT     = EMSDETTEN
+     A          R FACTORIESR                TEXT('ORDERS')
+     A*****************************************************************
+     A            ORDEMPF       20A         COLHDG('EMPFÄNGER')
+     A            MRDKDNART     15A         COLHDG('KDN-ART-NR')
+     A            ORDKDNBEZ     40A         COLHDG('KDN-BEZ')
+     A            ORDZU1        40A         COLHDG('ZUSATZFELD 1')
+     A            ORDLOSGR       3A         COLHDG('LOSGRÖßE')
+     A            MRDDATBES     10A         COLHDG('DATUM' 'BESTELLUNG')
+     A            MRDDATANL     10A         COLHDG('DATUM' 'ANLIEFERUNG')
+     A            MRDBESMNG     12A         COLHDG('BESTELL' 'MENGE 8,3')
+     A            MRDBESNR      13A         COLHDG('BESTELL-NR.')
+     A            MRDBESPOS      5A         COLHDG('BESTELL-POS.')
+     A            MRDBEDARF     12A         COLHDG('BEDARF 8,3')
+     A*****************************************************************
+     A            H1            10A         TEXT('status')
+     A            H2              L         TEXT('Date of transmissing')
+     A            H3              Z         TEXT('TIMESTAMP')
+     A            H4           256A         TEXT('statusII')
+     A            H5              L         TEXT('Date of UPLOAD      ')
+     A            H6              Z         TEXT('TIMESTAMP OF UPLOAD')
+     A

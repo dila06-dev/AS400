@@ -1,0 +1,27 @@
+     A**************************************************************************
+     A*  Copyright 2001 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Beschreibung                                                          *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: ZG 07.05.2014                                               *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R WAOQ1
+     A*-------------------------------------------------------------------------
+     A            WAOQLOCK  R               REFFLD(##LOCK)
+     A            WAOQJNAM  R               REFFLD(##JNAM)
+     A            WAOQJDAT  R               REFFLD(##JDAT)
+     A            WAOQJZEI  R               REFFLD(##JZEI)
+     A            WAOQUSER  R               REFFLD(##USER)
+     A            WAOQPROG  R               REFFLD(##PROG)
+     A            WAOQBIBL  R               REFFLD(##BIBL)
+     A            WAOQFIRM  R               REFFLD(##FIRM)
+     A            WAOQTENR  R               REFFLD(##TENR)
+     A            WAOQLANR  R               REFFLD(##LANR)
+     A            WAOQBZMG  R               REFFLD(##BZMG)
+     A            WAOQERUS  R               REFFLD(##ERUS)
+     A            WAOQFREI  R  100          REFFLD(##FREI)

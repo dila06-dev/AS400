@@ -1,0 +1,39 @@
+     A**************************************************************************
+     A*  Copyright 2010 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Leitgebiete Boll/Unitrans                                             *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: SZ 20.01.2011 Projekt Vertrieb                              *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R WAOB1
+     A*-------------------------------------------------------------------------
+     A            WAOBLOCK  R               REFFLD(##LOCK)
+     A            WAOBJNAM  R               REFFLD(##JNAM)
+     A            WAOBJDAT  R               REFFLD(##JDAT)
+     A            WAOBJZEI  R               REFFLD(##JZEI)
+     A            WAOBUSER  R               REFFLD(##USER)
+     A            WAOBPROG  R               REFFLD(##PROG)
+     A            WAOBBIBL  R               REFFLD(##BIBL)
+     A            WAOBFIRM  R               REFFLD(##FIRM)
+     A            WAOBPOLD  R               REFFLD(##POLD)
+     A            WAOBPLZB  R               REFFLD(##POLZ)
+     A                                      COLHDG('PLZ bis')
+     A                                      TEXT('PLZ bis')
+     A            WAOBPLZV  R               REFFLD(##POLZ)
+     A                                      COLHDG('PLZ von')
+     A                                      TEXT('PLZ von')
+     A            WAOBLGEB       2A         COLHDG('Leitgeb')
+     A                                      TEXT('Leitgebiet')
+     A            WAOBBERE       2A         COLHDG('Bereich')
+     A                                      TEXT('Bereich')
+     A            WAOBSORT      30A         COLHDG('Standort')
+     A                                      TEXT('Standort')
+     A            WAOBABFA       4A         COLHDG('AbFa')
+     A                                      TEXT('Abstellfach')
+     A            WAOBFREI  R  100          REFFLD(##FREI)
+     A*

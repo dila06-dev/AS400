@@ -1,0 +1,127 @@
+/*       PROGRAMMNAME:  SBSCHK                                       */
+/*       VERFASSER   :  Schneider    STAND:09.08.2011                */
+/*       BESCHREIBUNG:  Prüfung, ob trend-SBS aktiv. Wenn nein, dann */
+/*                      Starten ausgewählter SBS                     */
+/*                                                                   */
+/*                                                                   */
+/*                                                                   */
+/*********************************************************************/
+             PGM
+
+             DCL        VAR(&RC) TYPE(*CHAR) LEN(1) /* return code +
+                          ('1' = job is active; '0' = job is not +
+                          active) */
+
+             CHGJOB     LOG(4 00 *SECLVL) LOGCLPGM(*YES) +
+                          LOGOUTPUT(*JOBEND)
+
+/* ----starten subsysteme ----------------------------------------------------*/
+
+             CALL       PGM(MODWAO/CHKACTJOB) PARM(('TRDMDE') (&RC))
+             IF         COND(&RC *EQ '0') THEN(DO)
+             STRSBS     SBSD(MODWAO/TRDMDE)
+             MONMSG     MSGID(CPF0000)
+             DLYJOB     DLY(15)
+             ENDDO
+
+             CALL       PGM(MODWAO/CHKACTJOB) PARM(('TRBATCH') (&RC))
+             IF         COND(&RC *EQ '0') THEN(DO)
+             STRSBS     SBSD(TAMP/TRBATCH)
+             MONMSG     MSGID(CPF0000)
+             DLYJOB     DLY(15)
+             ENDDO
+
+             CALL       PGM(MODWAO/CHKACTJOB) PARM(('TRXCALP') (&RC))
+             IF         COND(&RC *EQ '0') THEN(DO)
+             STRSBS     SBSD(QGPL/TRXCALP)
+             MONMSG     MSGID(CPF0000)
+             DLYJOB     DLY(15)
+             ENDDO
+
+             CALL       PGM(MODWAO/CHKACTJOB) PARM(('TRWEB') (&RC))
+             IF         COND(&RC *EQ '0') THEN(DO)
+             ENDSBS     SBS(TRWEB) OPTION(*IMMED)
+             MONMSG     MSGID(CPF0000)
+             DLYJOB     DLY(120)
+             STRSBS     SBSD(QGPL/TRWEB)
+             MONMSG     MSGID(CPF0000)
+             DLYJOB     DLY(15)
+             ENDDO
+
+             CALL       PGM(MODWAO/CHKACTJOB) PARM(('TRXCALW') (&RC))
+             IF         COND(&RC *EQ '0') THEN(DO)
+             STRSBS     SBSD(QGPL/TRXCALW)
+             MONMSG     MSGID(CPF0000)
+             DLYJOB     DLY(15)
+             ENDDO
+
+
+             CALL       PGM(MODWAO/CHKACTJOB) PARM(('TREDI') (&RC))
+             IF         COND(&RC *EQ '0') THEN(DO)
+             STRSBS     SBSD(MODWAO/TREDI)
+             MONMSG     MSGID(CPF0000)
+             DLYJOB     DLY(15)
+             ENDDO
+
+             CALL       PGM(MODWAO/CHKACTJOB) PARM(('TREDITEST') (&RC))
+             IF         COND(&RC *EQ '0') THEN(DO)
+             STRSBS     SBSD(MODWAO/TREDITEST)
+             MONMSG     MSGID(CPF0000)
+             DLYJOB     DLY(15)
+             ENDDO
+
+             CALL       PGM(MODWAO/CHKACTJOB) PARM(('TRWRFP') (&RC))
+             IF         COND(&RC *EQ '0') THEN(DO)
+             STRSBS     SBSD(MODWAO/TRWRFP)
+             MONMSG     MSGID(CPF0000)
+             DLYJOB     DLY(15)
+             ENDDO
+
+/* ----starten picklistendrucker/div. Drucker ------------------------ -------*/
+
+             STRPRTWTR  DEV(PRTLAG21)
+             MONMSG     MSGID(CPF0000)
+
+             ENDWTR     WTR(PRTLAG01) OPTION(*IMMED)
+             MONMSG     MSGID(CPF0000)
+             DLYJOB     DLY(05)
+             STRPRTWTR  DEV(PRTLAG01)
+             MONMSG     MSGID(CPF0000)
+
+             ENDWTR     WTR(PRTLAG06) OPTION(*IMMED)
+             MONMSG     MSGID(CPF0000)
+             DLYJOB     DLY(05)
+             STRPRTWTR  DEV(PRTLAG06)
+             MONMSG     MSGID(CPF0000)
+
+             ENDWTR     WTR(PRTEIN02) OPTION(*IMMED)
+             MONMSG     MSGID(CPF0000)
+             DLYJOB     DLY(05)
+             STRPRTWTR  DEV(PRTEIN02)
+             MONMSG     MSGID(CPF0000)
+
+             ENDWTR     WTR(PRTPROD02) OPTION(*IMMED)
+             MONMSG     MSGID(CPF0000)
+             DLYJOB     DLY(05)
+             STRPRTWTR  DEV(PRTPROD02)
+             MONMSG     MSGID(CPF0000)
+
+             ENDWTR     WTR(PRTBU03) OPTION(*IMMED)
+             MONMSG     MSGID(CPF0000)
+             DLYJOB     DLY(05)
+             STRPRTWTR  DEV(PRTBU03)
+             MONMSG     MSGID(CPF0000)
+
+             ENDWTR     WTR(PRTAUT01) OPTION(*IMMED)
+             MONMSG     MSGID(CPF0000)
+             DLYJOB     DLY(05)
+             STRPRTWTR  DEV(PRTAUT01)
+             MONMSG     MSGID(CPF0000)
+
+             ENDWTR     WTR(PRTAUT02) OPTION(*IMMED)
+             MONMSG     MSGID(CPF0000)
+             DLYJOB     DLY(05)
+             STRPRTWTR  DEV(PRTAUT02)
+             MONMSG     MSGID(CPF0000)
+
+             ENDPGM

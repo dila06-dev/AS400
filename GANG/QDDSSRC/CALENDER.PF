@@ -1,0 +1,17 @@
+     A
+     A          R CALENDERR
+     A            #DATE           L
+     A            #TIMESTAMP      Z
+     A            #DAY           9S 0
+     A            #MONTH        10A
+     A            #YEAR         10A
+     A            #WEEK         10B
+     A            #WEEK_ISO     10A
+     A            #DAY_WEEK     10A
+     A            #DAY_WEEKI    10A
+     A            #ATTRC         2A
+     A            #TXT         256A
+     A            #STATUS        1A
+     A          K #MBR
+     A          K #FILE
+     A          K #LIBL

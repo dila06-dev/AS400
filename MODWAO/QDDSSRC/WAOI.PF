@@ -1,0 +1,28 @@
+     A**************************************************************************
+     A*  Copyright 2010 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Routingdatei für Schenker                                             *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: VU 10.06.2011 Projekt 7485                                  *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R WAOI1
+     A*-------------------------------------------------------------------------
+     A            WAOILOCK  R               REFFLD(##LOCK)
+     A            WAOIJNAM  R               REFFLD(##JNAM)
+     A            WAOIJDAT  R               REFFLD(##JDAT)
+     A            WAOIJZEI  R               REFFLD(##JZEI)
+     A            WAOIUSER  R               REFFLD(##USER)
+     A            WAOIPROG  R               REFFLD(##PROG)
+     A            WAOIBIBL  R               REFFLD(##BIBL)
+     A            WAOIFIRM  R               REFFLD(##FIRM)
+     A            WAOIGENR       2          COLHDG('Gesch-Nr')
+     A                                      TEXT('Gesch-Nr')
+     A            WAOIPOLZ  R               REFFLD(##POLZ)
+     A            WAOITOUR  R    3          REFFLD(##TOUR)
+     A            WAOIFREI  R  100          REFFLD(##FREI)
+     A*

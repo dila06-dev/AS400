@@ -1,0 +1,10 @@
+
+
+// CALL PGM(NAGEL/STRWIN95)
+**
+** TÄGLICHE DATENSICHERUNG FIBU VOR TAGENDE-LAUF                       F PLATTE
+**
+             INZTAP     DEV(TAP01) NEWVOL(IBMIRD) NEWOWNID(WAECO) +
+                          CHECK(*NO) DENSITY(*QIC2GB)
+**
+             SAVLIB     LIB(SASF SFBF) DEV(TAP01) ENDOPT(*REWIND)

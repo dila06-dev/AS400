@@ -1,0 +1,12 @@
+      * Physische Datei: WAEEDILP
+      * ANLEGEDATUM: FEBRUAR 2010
+      * ÄNDERUNGEN:
+      *
+     A          R EDILPF0                   PFILE(WAEEDILP)
+     A          K EDIL030
+     A          K EDIL040                   DESCEND
+     A          K EDIL050
+     A          K EDIL220
+     A          K EDIL220
+     A          K EDIL050
+     A*****     O XXXXUL                    VALUES('A')

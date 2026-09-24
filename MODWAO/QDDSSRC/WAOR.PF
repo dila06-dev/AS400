@@ -1,0 +1,47 @@
+     A**************************************************************************
+     A*  Copyright 2012 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Versandbedingung/Pickliste                                            *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: ZG 19.07.2012 Projekt 8587                                  *
+     A*  Änderung: ZG 16.08.2013 Projekt 9659 neues Feld Gewicht               *
+     A*  Änderung: ZG 16.05.2014 Projekt 10273 neues VSBD-Gruppe               *
+     A*  Änderung: ZG 10.07.2015 Projekt 11466 KZ Sortierung Anzahl Positionen.*
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R WAOR1
+     A*-------------------------------------------------------------------------
+     A            WAORLOCK  R               REFFLD(##LOCK)
+     A            WAORJNAM  R               REFFLD(##JNAM)
+     A            WAORJDAT  R               REFFLD(##JDAT)
+     A            WAORJZEI  R               REFFLD(##JZEI)
+     A            WAORUSER  R               REFFLD(##USER)
+     A            WAORPROG  R               REFFLD(##PROG)
+     A            WAORBIBL  R               REFFLD(##BIBL)
+     A            WAORFIRM  R               REFFLD(##FIRM)
+     A            WAORVSBD  R               REFFLD(##VSBD)
+     A            WAOREXPO  R               REFFLD(##KZMO)
+     A                                      COLHDG('Export')
+     A                                      TEXT('Export Kennzeichen')
+     A            WAORAZAF  R               REFFLD(##AZDR)
+     A                                      COLHDG('Anzahl AF')
+     A                                      TEXT('Anzahl AF')
+     A            WAORPOAZ  R               REFFLD(##POAZ)
+     A            WAORSTAZ  R               REFFLD(##POAZ)
+     A                                      COLHDG('Steuer Az-Pos')
+     A                                      TEXT('Steuerung Anzahl Positionen')
+     A            WAORERUS  R               REFFLD(##ERUS)
+     A            WAORERDA  R               REFFLD(##ERDA)
+     A            WAORERZT  R               REFFLD(##ERZT)
+     A            WAORGEWT  R    9S 1       REFFLD(##GEWT)
+     A            WAORVBGR  R               REFFLD(##VSBD)
+     A                                      COLHDG('Versand-Bed-Grp')
+     A                                      TEXT('Versand-Bed-Gruppe')
+     A            WAORSOPO  R               REFFLD(##SOKZ)
+     A                                      COLHDG('Sortierung AzPo')
+     A                                      TEXT('Sortierung AzPo')
+     A            WAORFREI  R   87          REFFLD(##FREI)

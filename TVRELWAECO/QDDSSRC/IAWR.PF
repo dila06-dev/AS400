@@ -1,0 +1,32 @@
+     A**************************************************************************
+     A*  Copyright 2025 by                                                     *
+     A*                                                                        *
+     A*                                                                        *
+     A*                                                                        *
+     A*  --------------------------------------------------------------------  *
+     A*  Beschreibung: Erweiterung Identstamm um IVEAS Kodierungen auf Basis   *
+     A*                der Zolltarifnummer                                     *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: MG 03.07.2025                                               *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R IAWR1
+     A*-------------------------------------------------------------------------
+     A            IAWRLOCK  R               REFFLD(##LOCK)
+     A            IAWRJNAM  R               REFFLD(##JNAM)
+     A            IAWRJDAT  R               REFFLD(##JDAT)
+     A            IAWRJZEI  R               REFFLD(##JZEI)
+     A            IAWRUSER  R               REFFLD(##USER)
+     A            IAWRPROG  R               REFFLD(##PROG)
+     A            IAWRBIBL  R               REFFLD(##BIBL)
+     A            IAWRFIRM  R               REFFLD(##FIRM)
+     A            IAWRZOTN  R               REFFLD(##ZOTN)
+     A            IAWRCODE      15A         TEXT('Exportkontrolle')
+     A                                      COLHDG('Aussenwirtschaftsr.')
+     A            IAWRWERT      60A         TEXT('Textwert des Keys')
+     A            IAWRGADA  R               REFFLD(##GADA)
+     A            IAWRGBDA  R               REFFLD(##GBDA)
+     A            IAWRERUS  R               REFFLD(##ERUS)
+     A            IAWRFREI     120A         TEXT('FREIFELD')
+     A                                      COLHDG('FREIFELD')
+     A*****

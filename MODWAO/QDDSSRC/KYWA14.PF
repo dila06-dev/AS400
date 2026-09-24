@@ -1,0 +1,20 @@
+     A**************************************************************************
+     A*  Copyright 2021 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Jechtinger Straße 9                              *
+     A*                       DE 79111 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Artikelausschluss                                                     *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: PH 30.04.2021 DOMETIC Projekt 16416-01                      *
+     A*  Änderung: XX XX.XX.XXXX                                               *
+     A**************************************************************************
+     A                                      REF(WA14)
+     A          R KYWA141
+     A*-------------------------------------------------------------------------
+     A            KYWA14FIRMR               REFFLD(WA14FIRM)
+     A            KYWA14TENRR               REFFLD(WA14TENR)
+     A            K$WA14FREI    30
+     A            K#WA14LOCKR               REFFLD(WA14LOCK)
+     A            K#WA14FIRMR               REFFLD(WA14FIRM)
+     A            K#WA14TENRR               REFFLD(WA14TENR)

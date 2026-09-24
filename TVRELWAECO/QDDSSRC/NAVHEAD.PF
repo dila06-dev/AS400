@@ -1,0 +1,63 @@
+     A          R NAVHEADR
+     A
+      * :HeaderInfos
+     A            EDIH010        7A
+     A                                      TEXT('Mitglieds-Nr. Absender')
+     A            EDIH020        7A
+     A                                      TEXT('Mitglieds-Nr. Empfänger')
+     A            EDIH030        7A
+     A                                      TEXT('Kunden-Nr. beim Empf.')
+     A            EDIH040        7A
+     A                                      TEXT('Auftr.Nr. beim Abs.')
+     A            EDIH050        5A
+     A                                      TEXT('Positions-Nr. beim Abs.')
+     A            EDIH060        8A
+     A                                      TEXT('Datum JJJJMMTT')
+     A            EDIH070        6A
+     A                                      TEXT('Zeit')
+     A            EDIH080       30A
+     A                                      TEXT('Bestellzeichen Abs.')
+     A            EDIH090        8A
+     A                                      TEXT('Termin JJJJMMTT')
+     A            EDIH100        1A
+     A                                      TEXT('Kezi. abw. Vers.Adr')
+     A            EDIH210       30A
+     A                                      TEXT('Vers.Adr.Name 1')
+     A            EDIH220       30A
+     A                                      TEXT('Vers.Adr.Name 2')
+     A            EDIH230       30A
+     A                                      TEXT('Vers.Adr.Name 3')
+     A            EDIH240       30A
+     A                                      TEXT('Vers.Adr.Strasse')
+     A            EDIH250        3A
+     A                                      TEXT('Vers.Adr. Land')
+     A            EDIH260        5A
+     A                                      TEXT('Vers.Adr. PLZ')
+     A            EDIH270       30A
+     A                                      TEXT('Vers.Adr. O r t')
+     A            EDIH280       60A
+     A                                      TEXT('Kopf-Text  1')
+     A            EDIH290       60A
+     A                                      TEXT('Kopf-Text  2')
+     A            EDIH300       60A
+     A                                      TEXT('Kopf-Text  3')
+     A            EDIH310        2A
+     A                                      TEXT('Versandart')
+     A            EDIH320       21A
+     A                                      TEXT('Kartentyp')
+     A            EDIH330       16A
+     A                                      TEXT('Kartennummer')
+     A            EDIH340        1A
+     A                                      TEXT('Teillieferung')
+     A            EDIH350       25A
+     A                                      TEXT('Karteninhaber')
+     A            EDIH360        7A
+     A                                      TEXT('Karten Gültigkeit')
+     A            EDIH370        3A
+     A                                      TEXT('Auftragsherkunft')
+     A            EDIH380        6A
+     A                                      TEXT('WAECO ANR')
+     A            EDIH390        2A
+     A                                      TEXT('Auftragsstatus')
+     A            EDIH990       81A
+     A                                      TEXT('REST')

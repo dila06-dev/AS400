@@ -1,0 +1,25 @@
+     A**************************************************************************
+     A*  Copyright 2001 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Schnittstelle Boll/Unitrans Schlüsselaufbau                           *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: SZ 27.06.2011                                               *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R KYSP601
+     A*-------------------------------------------------------------------------
+     A            KYSP60L020R               REFFLD(HEL60R1/HEL020 *LIBL/SPED60)
+     A            KYSP60FREI    30
+     A            K#SP60LOCKR               REFFLD(##LOCK)
+     A            K#SP60L020R               REFFLD(HEL60R1/HEL020 *LIBL/SPED60)
+     A            SP60LOCK  R               REFFLD(##LOCK)
+     A            SP60JNAM  R               REFFLD(##JNAM)
+     A            SP60JDAT  R               REFFLD(##JDAT)
+     A            SP60JZEI  R               REFFLD(##JZEI)
+     A            SP60USER  R               REFFLD(##USER)
+     A            SP60PROG  R               REFFLD(##PROG)
+     A            SP60BIBL  R               REFFLD(##BIBL)

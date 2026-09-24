@@ -1,0 +1,195 @@
+/*    * PROGRAMMNAME.:$FAKTU01_T                                             */
+/*    * FUNKTION.....:...                                                    */
+/*    * 27.12.11       schneider                                              */
+/*    *                                                                       */
+/*    * Änderung:                                                             */
+/*    * 23.05.12 umbau auf dtaara-abfrage standardzeiten                      */
+/*    * 14.02.13 einbau neue auftragsart A02 für export-rg einzel             */
+/*    * 14.03.13 einbau parametersteurung für jobqsteuerung                   */
+/*    * 31.01.16 einbau fakturaaufruf für hdx mit parameter X                 */
+/*    *          sammelrechnung getrennt nach referenz 1                      */
+/*    * 19.10.23 einbau Fakturalauf Igloo Werk 010                            */
+/*    *                                                                       */
+/*    *                                                                       */
+/*    *-start tagesrechnung über kalenderdatei                               */
+/*    *-parameter: &JOBQ = J=steurung jobq , N=keine steuerung jobq          */
+/*    *                                                                      */
+/*    * Hinweis:                                                             */
+/*    * sind in der kalenderdatei (bar_vert/kalendern) keine einträge        */
+/*    * in den zeiten vorhanden, wird die jeweilige standardzeit             */
+/*    * aus dtaara bar_vert/tagesrg vorbelegt                                */
+/*    *                                                                      */
+/*    * bei änderungen der standardzeiten,diese in dtaara                    */
+/*    * bar_vert/tagesrg ändern!                                             */
+/*    * !!!!!!!!!!!!!!!!                                                     */
+/*    * prüfen mit programmen von hr. gang (ablaufsteuerung)                 */
+/*    * bei änderung der zeiten für export                                   */
+/*    * !!!!!!!!!!!!!!!!                                                     */
+/*    * dieses programm wird über scde derzeit um 14:45h im sbs qsyswrk      */
+/*    * täglich gestartet ($FAKTURA_T) mit parameter &JOBQ                   */
+/*    *                                                                       */
+/******************************************************************************/
+             PGM        PARM(&JOBQ &LOKATION)
+
+             DCLF       FILE(BAR_VERT/KALENDERN) OPNID(A)
+             DCL        VAR(&DATUMC) TYPE(*CHAR) LEN(6)
+             DCL        VAR(&DATUMS) TYPE(*DEC) LEN(6 0)
+             DCL        VAR(&QTIME) TYPE(*CHAR) LEN(6)
+             DCL        VAR(&TIMEEX) TYPE(*CHAR) LEN(6)
+             DCL        VAR(&TIMEIN) TYPE(*CHAR) LEN(6)
+             DCL        VAR(&TIMEEXV) TYPE(*CHAR) LEN(6)
+             DCL        VAR(&TIMEINV) TYPE(*CHAR) LEN(6)
+             DCL        VAR(&TAG) TYPE(*CHAR) LEN(4)
+             DCL        VAR(&JOBQ) TYPE(*CHAR) LEN(1)
+             DCL        VAR(&LOKATION) TYPE(*CHAR) LEN(3)
+             DCL        VAR(&FIRMA) TYPE(*CHAR) LEN(2) VALUE('  ')
+
+             CHGJOB     LOG(4 00 *SECLVL) LOGCLPGM(*YES) +
+                          LOGOUTPUT(*JOBEND)
+
+             ADDLIBLE   LIB(TVRELWAECO) POSITION(*LAST)
+             MONMSG     MSGID(CPF0000)
+
+             RTVJOBA    DATE(&DATUMC) DAYOFWEEK(&TAG)
+             CHGVAR     VAR(&DATUMS) VALUE(&DATUMC)
+
+/*___   ermitteln firma ____________________________________________________ */
+             CALL       PGM(TVRELWAECO/DOWR000) PARM(&LOKATION &FIRMA)
+
+/*___   standardzeiten für faktura vorbelegen aus dtaara bar_vert/tagesrg___ */
+             RTVDTAARA  DTAARA(BAR_VERT/TAGESRG (1 6)) RTNVAR(&TIMEEXV)
+             RTVDTAARA  DTAARA(BAR_VERT/TAGESRG (51 6)) +
+                          RTNVAR(&TIMEINV)
+
+/*___nicht an samstagen und sonntagen ________________________________________*/
+             IF         COND(&TAG *NE '*SUN' *OR &TAG *NE '*SUN') +
+                          THEN(DO)
+
+/*___   MWST-Code ändern für Fa. 01 bei AA D55 _____________________________ */
+             RUNSQLSTM  SRCFILE(DOWSRC/QSQLSRC) SRCMBR(UP_01AFK01)
+             MONMSG     MSGID(CPF0000)
+
+
+/*___auslesen datei kalender _________________________________________________*/
+ LOOP:       RCVF       OPNID(A)
+             MONMSG     MSGID(CPF0864) EXEC(GOTO CMDLBL(WEITER))
+             IF         COND(&DATUMS *EQ &A_KALDAT2 *AND &A_KALFIRM +
+                          *EQ &FIRMA) THEN(CHGVAR VAR(&TIMEEX) +
+                          VALUE(&A_KALRGZEITE))
+             IF         COND(&DATUMS *EQ &A_KALDAT2 *AND &A_KALFIRM +
+                          *EQ &FIRMA) THEN(CHGVAR VAR(&TIMEIN) +
+                          VALUE(&A_KALRGZEITI))
+             GOTO       CMDLBL(LOOP)
+/*____________________________________________________________________________*/
+
+/*___   zeiten für faktura vorbelegen, falls in der datei leer _____________ */
+/*___   vorbelegung aus dtaara bar_vert/tagesrg ____________________________ */
+ WEITER:     IF         COND(&TIMEEX *EQ '      ') THEN(CHGVAR +
+                          VAR(&TIMEEX) VALUE(&TIMEEXV))
+             IF         COND(&TIMEIN *EQ '      ') THEN(CHGVAR +
+                          VAR(&TIMEIN) VALUE(&TIMEINV))
+/*____________________________________________________________________________*/
+
+/*           GOTO       CMDLBL(LOOP2)                                         */
+
+/*___   durchführen rechnungslauf export ___________________________________ */
+
+ LOOP1:      RTVSYSVAL  SYSVAL(QTIME) RTNVAR(&QTIME)
+             IF         COND(&QTIME *GE &TIMEEX) THEN(GOTO +
+                          CMDLBL(RGLAUF))
+             DLYJOB     DLY(300)
+             GOTO       CMDLBL(LOOP1)
+
+/*____________________________________________________________________________*/
+
+ RGLAUF:     SBMJOB     CMD(CALL PGM(MODWAO/TRAB50SJ) PARM('MODWAO' +
+                          '01' '08 ' 'D01' 'F01' '001')) +
+                          JOB(FAKTURA_EX) JOBD(MODWAO/JDFIB01) +
+                          USER(FAKTURAEX) LOGCLPGM(*YES) /* +
+                          tägliche Rg Export +
+                          Einzel                   */
+
+             DLYJOB     DLY(60)
+/*____________________________________________________________________________*/
+
+
+             SBMJOB     CMD(CALL PGM(MODWAO/TRAB50SJ) PARM('MODWAO' +
+                          '01' 'A02' 'D01' 'F01' '001')) +
+                          JOB(FAKTURA_EX) JOBD(MODWAO/JDFIB01) +
+                          USER(FAKTURAEX) LOGCLPGM(*YES) /* +
+                          tägliche Rg Export +
+                          Einzel                   */
+
+             DLYJOB     DLY(60)
+/*____________________________________________________________________________*/
+
+             SBMJOB     CMD(CALL PGM(MODWAO/TRAB53SJ) PARM('MODWAO' +
+                          '01' '2' 'D01' 'F01' '001')) +
+                          JOB(FAKTURA_SX) JOBD(MODWAO/JDFIB01) +
+                          USER(FAKTURAEX) LOGCLPGM(*YES) /* +
+                          tägliche Rg Export +
+                          Sammel                   */
+/*____________________________________________________________________________*/
+
+
+/*___   durchführen rechnungslauf inland und werk 010_______________________ */
+
+ LOOP2:      RTVSYSVAL  SYSVAL(QTIME) RTNVAR(&QTIME)
+             IF         COND(&QTIME *GE &TIMEIN) THEN(GOTO +
+                          CMDLBL(RGLAUF2))
+             DLYJOB     DLY(300)
+             GOTO       CMDLBL(LOOP2)
+/*____________________________________________________________________________*/
+
+/*___   steuerung jobq für druckaufträge JQPRTSVR01 ________________________ */
+ RGLAUF2:    IF         COND(&JOBQ = 'J') THEN(DO)
+             SBMJOB     CMD(CALL PGM(TVRELWAECO/#RLSJOBQ)) +
+                          JOB(JBQSTEUERG) JOBQ(QSYS/QSYSNOMAX)
+             ENDDO
+/*____________________________________________________________________________*/
+
+             SBMJOB     CMD(CALL PGM(MODWAO/TRAB50SJ) PARM('MODWAO' +
+                          '01' '   ' '   ' '   ' '001')) +
+                          JOB(FAKTURA_E) JOBD(MODWAO/JDFIB01) +
+                          USER(FAKTURA) LOGCLPGM(*YES) /* 'tägliche +
+                          Rg Inland Einzel                   */
+/*____________________________________________________________________________*/
+
+             DLYJOB     DLY(120)
+
+             SBMJOB     CMD(CALL PGM(MODWAO/TRAB50SJ) PARM('MODWAO' +
+                          '01' '   ' '   ' '   ' '010')) +
+                          JOB(FAKT010_E) JOBD(MODWAO/JDFIB01) +
+                          USER(FAKTURA) LOGCLPGM(*YES) /* 'tägliche +
+                          Rg Inland Einzel Werk 010          */
+/*____________________________________________________________________________*/
+
+             DLYJOB     DLY(60)
+
+             SBMJOB     CMD(CALL PGM(MODWAO/TRAB53SJ) PARM('MODWAO' +
+                          '01' '2' '   ' '   ' '001')) +
+                          JOB(FAKTURA_ES) JOBD(MODWAO/JDFIB01) +
+                          USER(FAKTURA) LOGCLPGM(*YES) /* 'tägliche +
+                          Rg Inland Sammel                   */
+/*____________________________________________________________________________*/
+
+             DLYJOB     DLY(120)
+
+             SBMJOB     CMD(CALL PGM(MODWAO/TRAB53SJ) PARM('MODWAO' +
+                          '01' '2' '   ' '   ' '010')) +
+                          JOB(FAKT010_ES) JOBD(MODWAO/JDFIB01) +
+                          USER(FAKTURA) LOGCLPGM(*YES) /* 'tägliche +
+                          Rg Inland Sammel Werk 010          */
+/*____________________________________________________________________________*/
+
+             DLYJOB     DLY(60)
+
+             SBMJOB     CMD(CALL PGM(MODWAO/TRAB53SJ) PARM('MODWAO' +
+                          '01' 'X' '   ' '   ' '001')) +
+                          JOB(FAKTUR_HDX) JOBD(MODWAO/JDFIB01) +
+                          USER(FAKTURA) LOGCLPGM(*YES) /* 'tägliche +
+                          Rg HDX Sammel                   */
+/*____________________________________________________________________________*/
+             ENDDO
+
+             ENDPGM

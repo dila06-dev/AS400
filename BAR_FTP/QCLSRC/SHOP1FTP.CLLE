@@ -1,0 +1,10 @@
+/*-------------------------------------------------*/
+/* FTP Command zum senden von Files (Ba.2014)      */
+/* Dometic Lagerbestand  - Shopsystem             */
+/*-------------------------------------------------*/
+             PGM
+             OVRDBF     FILE(INPUT) TOFILE(BAR_FTP/QCLSRC) MBR(SHOP1CMD)
+             OVRDBF     FILE(OUTPUT) TOFILE(BAR_FTP/QCLSRC) +
+                          MBR(SHOP1LOG)
+             FTP        RMTSYS('193.84.54.32')
+             ENDPGM

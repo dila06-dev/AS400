@@ -1,0 +1,80 @@
+     A*%%TS  SD  19980716  132521  GANG        REL-V3R2M0  5763-PW1
+     A*------------------------------------------------------------------------
+     A*GANG, MANFRED                                                  ---------
+     A*-------------                                                  ---------
+     A*FEHLERROUTINE                                                  ---------
+     A*VARIABLER BILDSCHIRMDEFINITION DS3/DS4                         ---------
+     A*WINDOW-FUNKTION                                                ---------
+     A*------------------------------------------------------------------------
+     A*%%EC
+     A                                      DSPSIZ(24 80 *DS3                  -
+     A                                             27 132 *DS4)
+     A                                      PRINT
+     A                                      CA01(01)
+     A                                      CF10(10)
+     A*------------------------------------------------------------------------
+     A*PSEUDO-SATZ                                                    ---------
+     A*------------------------------------------------------------------------
+     A          R DWEPSSR0
+     A*%%TS  SD  19940626  083756  GANG        REL-V2R2M0  5738-PW1
+     A                                      TEXT('Pseudo-Satz')
+     A                                      OVERLAY
+     A                                      ASSUME
+     A  33                                  DSPMOD(*DS4)
+     A                                 24 80' '
+     A  *DS4                           27132
+     A*------------------------------------------------------------------------
+     A*WINDOWDEFINITION + FUßFORMATE                                  ---------
+     A*------------------------------------------------------------------------
+     A          R DWEPSSR1
+     A*%%TS  SD  19980716  132521  GANG        REL-V3R2M0  5763-PW1
+     A  *DS3                                WINDOW(4 5 16 68)
+     A  *DS4                                WINDOW(4 5 16 68)
+     A  33                                  DSPMOD(*DS4)
+     A                                      WDWBORDER((*DSPATR RI) (*CHAR '    -
+     A                                          '))
+     A                                      OVERLAY
+     A            MSGF          10A  H
+     A N99        #MSG01        66   O  2  2MSGID(PS0 0001 &MSGF)
+     A                                  2  2'Während der Programmausführung ist-
+     A                                       ein Fehler aufgetreten!        '
+     A N99        #MSG02        66A  O  3  2MSGID(PS0 0002 &MSGF)
+     A                                  3  2'Drucken Sie diese Information aus -
+     A                                      (Druck-Taste)                   '
+     A N99        #MSG03        66A  O  4  2MSGID(PS0 0003 &MSGF)
+     A                                  4  2'und verständigen Sie den Systemver-
+     A                                      antwortlichen.             '
+     A N99        #MSG04        66A  O  5  2MSGID(PS0 0004 &MSGF)
+     A                                  5  2'Die von Ihnen erfassten/geänderten-
+     A                                       Daten gehen unter Umständen    '
+     A N99        #MSG05        66A  O  6  2MSGID(PS0 0005 &MSGF)
+     A                                  6  2'verloren.                         -
+     A                                                                      '
+     A N99        #MSG06        13A  O  8  2MSGID(PS0 0006 &MSGF)
+     A                                  8  2'Datum/Zeit..:'
+     A            §§§SDT         6Y 0O  8 16DSPATR(HI)
+     A                                      EDTWRD('  .  .  ')
+     A            §§§STM         6Y 0O  8 27DSPATR(HI)
+     A                                      EDTWRD('  :  :  ')
+     A N99        #MSG07        13A  O  9  2MSGID(PS0 0007 &MSGF)
+     A                                  9  2'Job.........:'
+     A            §§§USR        10A  O  9 16DSPATR(HI)
+     A            §§§JOB        10A  O  9 27DSPATR(HI)
+     A            §§§JNO         6S 0O  9 38DSPATR(HI)
+     A N99        #MSG08        13A  O 10  2MSGID(PS0 0008 &MSGF)
+     A                                 10  2'Programm....:'
+     A            §§§PGM        10A  O 10 16DSPATR(HI)
+     A            §§§LIB        10A  O 10 27DSPATR(HI)
+     A            §§§SEQ         8A  O 10 38DSPATR(HI)
+     A            §§§SR          8A  O 10 47DSPATR(HI)
+     A N99        #MSG09        13A  O 11  2MSGID(PS0 0009 &MSGF)
+     A                                 11  2'Fehlerstatus:'
+     A            D1STS          5A  O 11 16DSPATR(HI)
+     A N99        #MSG10        13A  O 12  2MSGID(PS0 0010 &MSGF)
+     A                                 12  2'Nachricht...:'
+     A            §§§MSG         7A  O 12 16DSPATR(HI)
+     A            D1MTX         52A  O 13 16DSPATR(HI)
+     A N99        #MSG11        13A  O 14  2MSGID(PS0 0011 &MSGF)
+     A                                 14  2'Datei.......:'
+     A            §§§FIL         8A  O 14 16DSPATR(HI)
+     A            §§§FST        35A  O 15 16DSPATR(HI)

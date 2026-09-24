@@ -1,0 +1,19 @@
+     A                                      UNIQUE
+     A          R KSCHEMA_F1
+     A            JAHR           4S 0       TEXT('JAHR')
+     A            SCHEMA         2S 0       TEXT('KALKULATIONSSCHEMA')
+     A            KURS           8S 4       TEXT('KURS')
+     A            ICS            8S 4       TEXT('ICS')
+     A            ICN            8S 4       TEXT('ICN')
+     A            EXS            8S 4       TEXT('EXS')
+     A            EXN            8S 4       TEXT('EXN')
+     A            OEM            8S 4       TEXT('OEM')
+     A            GHNETTO        8S 4       TEXT('GHNETTO')
+     A            GHRAB          8S 4       TEXT('GHRAB')
+     A            RISIKO         8S 4       TEXT('RISIKO')
+     A            GK             8S 4       TEXT('GK')
+     A            LIEFERANT     10A         TEXT('LIEFERANT')
+
+     A          K JAHR
+     A          K SCHEMA
+     A          K LIEFERANT

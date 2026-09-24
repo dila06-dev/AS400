@@ -1,0 +1,14 @@
+      * Physische Datei: IVSC
+      * ANLEGEDATUM: AUGUST  2025
+      *SORT:        ...
+      * ÄNDERUNGEN:
+      * AUSSCHLUSS:  ...
+     A
+     A                                      UNIQUE
+     A          R IVSC1                     PFILE(IVSC)
+     A
+     A                                      TEXT('KODIERUNGEN ZOLL')
+     A          K IVSCFIRM
+     A          K IVSCCODE
+     A          K IVSCIMEX
+     A          K IVSCGADA                  DESCEND

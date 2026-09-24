@@ -1,0 +1,9 @@
+webshop@oe-teile-katalog.de    webshop1!
+ascii
+NAMEFMT 1
+
+cd tecdoc
+LCD /BARENKAMP
+PUT DE411SHOP.CSV
+
+quit

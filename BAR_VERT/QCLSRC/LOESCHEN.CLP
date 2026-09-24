@@ -1,0 +1,46 @@
+PGM
+             DLTLIB     LIB(AL00AF140)
+             DLTLIB     LIB(AL00AF140)
+             DLTLIB     LIB(AL00C140)
+             DLTLIB     LIB(AL00P140)
+             DLTLIB     LIB(AL00PEL)
+             DLTLIB     LIB(AL00YF140)
+             DLTLIB     LIB(AL00YY140)
+             DLTLIB     LIB(AL51W140)
+             DLTLIB     LIB(AL51W140_O)
+             DLTLIB     LIB(AL53W140)
+             DLTLIB     LIB(AL99W140)
+             DLTLIB     LIB(ALELPEL)
+             DLTLIB     LIB(ALKOPEL)
+             DLTLIB     LIB(ALODP120)
+             DLTLIB     LIB(ANLUEBER)
+             DLTLIB     LIB(KL00PEX)
+             DLTLIB     LIB(KL14PEX)
+             DLTLIB     LIB(KL51W51)
+             DLTLIB     LIB(KONALT)
+             DLTLIB     LIB(KOSLIB)
+             DLTLIB     LIB(OSLCG5114D)
+             DLTLIB     LIB(OSLCGAY14D)
+             DLTLIB     LIB(OSLCGD14D)
+             DLTLIB     LIB(OSLCGF14D)
+             DLTLIB     LIB(OSLCGFY14D)
+             DLTLIB     LIB(OSLCGS14D)
+             DLTLIB     LIB(OSLCGYY14D)
+             DLTLIB     LIB(SMDDOK002)
+             DLTLIB     LIB(SMDIBS002)
+             DLTLIB     LIB(SMOIBS002)
+             DLTLIB     LIB(SMSIBS002)
+             DLTLIB     LIB(SMSIBSELU)
+             DLTLIB     LIB(SYL00AF140)
+             DLTLIB     LIB(SYL00C140)
+             DLTLIB     LIB(SYL00P140)
+             DLTLIB     LIB(SYL00W140)
+             DLTLIB     LIB(SYL00YF140)
+             DLTLIB     LIB(SYLAST140)
+
+
+
+
+
+
+ENDPGM

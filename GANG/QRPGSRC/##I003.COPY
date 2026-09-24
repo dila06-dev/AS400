@@ -1,0 +1,26 @@
+     I* INFORMATIONSTRUKTUREN
+     ICTL§§       DS
+     I I            'Schlüssel'               1  09 I§§001
+     I I            '"display"'              10  18 I§§002
+     I I            '"ÄNDERN"'               19  27 I§§003
+     I I            '"ANLEGEN"'              28  36 I§§004
+     I I            '"LÖSCHEN"'              37  45 I§§005
+     I I            '"DRUCKEN" '             46  55 I§§006
+     I I            '"KOPIEREN"'             56  65 I§§007
+     I I            'angezeigt'              66  75 I§§008
+     I I            'geändert'               76  83 I§§009
+     I I            'angelegt'               84  91 I§§010
+     I I            'gelöscht'               92  99 I§§011
+     I* DATUM
+     I           IDS
+     I                                        1   80TMHJ
+     I                                        1   20TMHJT
+     I                                        3   40TMHJM
+     I                                        5   60TMHJH
+     I                                        7   80TMHJJ
+     I           IDS
+     I                                        1   80HJMT
+     I                                        1   20HJMTH
+     I                                        3   40HJMTJ
+     I                                        5   60HJMTM
+     I                                        7   80HJMTT

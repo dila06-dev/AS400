@@ -1,0 +1,49 @@
+     A*
+     A*         DATUM IMMER TT.MM.JJJJ
+     A*         ZEIT  IMMER HH:MM
+     A*           ORDANLORT     = EMSDETTEN
+     A          R PORDB2B                   TEXT('ORDERS')
+     A*****************************************************************
+     A            MRDKDNART     15A         COLHDG('KDN-ART-NR')
+     A            ORDKDNBEZ     40A         COLHDG('KDN-BEZ')
+     A            ORDDSPART      3A         COLHDG('DISPO-ART')
+     A*****************************************************************
+     A            ORDAUFNR      15A         COLHDG('AUFTR-NR.' '/SERIE')
+     A            ORDPRDFOL      3A         COLHDG('PROD.FOLGE')
+     A            ORDTYPBEZ     40A         COLHDG('TYP-BEZEICHNUNG')
+     A            ORDLOSGR       3A         COLHDG('LOSGRÖßE')
+     A*****************************************************************
+     A            ORDDATBEL     10A         COLHDG('DATUM' 'BANDEINLAUF')
+     A            ORDTGEBIS      3A         COLHDG('TAGE BIS' 'BANDEINLAUF')
+     A            MRDDATANL     10A         COLHDG('DATUM' 'ANLIEFERUNG')
+     A            MRDBEDARF     12A         COLHDG('BEDARF 8,3')
+     A            MRDBESNR      13A         COLHDG('BESTELL-NR.')
+     A            MRDBESPOS      5A         COLHDG('BESTELL-POS.')
+     A            MRDDATBES     10A         COLHDG('DATUM' 'BESTELLUNG')
+     A*****************************************************************
+     A            ORDANLORT     60A         COLHDG('ANLIEFERORT')
+     A            MRDBESMNG     12A         COLHDG('BESTELL' 'MENGE 8,3')
+     A            ORDMEH         6A         COLHDG('MENGENEINHEIT')
+     A            ORDGELMNG     12A         COLHDG('GELIEFERTE' 'MENGE 8;3')
+     A            ORDOFFMNG     12A         COLHDG('OFFENE' 'MENGE 8,3')
+     A            ORDZUSTXT     40A         COLHDG('ZUSATZTEXT')
+     A            ORDARTNUM     25A         COLHDG('LIEFERANT TEILE-NR.')
+     A            ORDARTBEZ     30A         COLHDG('LIEFERANT' 'BEZ.')
+     A            ORDBANDNR      3A         COLHDG('BAND' '-NR')
+     A            ORDANDORT     20A         COLHDG('ANDIEN' '-ORT')
+     A            ORDVERMER     40A         COLHDG('VERBALE MERKMALE')
+     A            ORDANDTIM      5A         COLHDG('ANDIEN' '-ZEIT')
+     A
+     A*****************************************************************
+     A            ORDZU1        40A         COLHDG('ZUSATZFELD 1')
+     A            ORDZU2        40A         COLHDG('ZUSATZFELD 2')
+     A            ORDZU3        40A         COLHDG('ZUSATZFELD 3')
+     A*****************************************************************
+     A            ORDABS        20A         COLHDG('ABSENDER')
+     A            ORDEMPF       20A         COLHDG('EMPFÄNGER')
+     A            ORDDAT        16A         COLHDG('ERSTELLDATUM,-ZEIT')
+     A*****************************************************************
+     A          K MRDBESNR
+     A          K MRDBESPOS
+     A          K MRDKDNART
+     A

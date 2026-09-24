@@ -1,0 +1,63 @@
+     A          R ORDERLPF
+     A
+      * :LineInfos
+     A            L010           1A
+     A                                      TEXT('Order line type,static value')
+     A                                      COLHDG('Ordertype')
+     A            L020           4S 0
+     A                                      TEXT('EDC order# part 1 (YEAR)')
+     A                                      COLHDG('EDC part 1 (YEAR)')
+     A            L030           6S 0
+     A                                      TEXT('EDC order# part 2 (#)')
+     A                                      COLHDG('EDC part 2 (#)')
+     A            L040          10A
+     A                                      TEXT('SC order#            ')
+     A                                      COLHDG('SC order#     ')
+     A            L050           5S 0
+     A                                      TEXT('Line identity on the order')
+     A                                      COLHDG('Postion No.')
+     A            L060            L
+     A                                      TEXT('Customer Delivery date')
+     A                                      COLHDG('Customer Delivery d.')
+     A            L070           1A
+     A                                      TEXT('Byte 3 Fixed delivery date ')
+     A                                      COLHDG('delivery date')
+     A            L080          15A
+     A                                      TEXT('SKU/article')
+     A                                      COLHDG('SKU/article')
+     A            L090          40A
+     A                                      TEXT('Part Description document')
+     A                                      COLHDG('Description')
+     A            L100           8S 3
+     A                                      TEXT('Quantity')
+     A                                      COLHDG('Quantity')
+     A            L110          20A
+     A                                      TEXT('Customer item referens')
+     A                                      COLHDG('Cust. item referens')
+     A            L120          30A
+     A                                      TEXT('Customer item description')
+     A                                      COLHDG('Customer description')
+     A            L130           1A
+     A                                      TEXT('SC status field (N/U/C)    ')
+     A                                      COLHDG('SC status field')
+     A            L140           1A
+     A                                      TEXT('Hold / Release             ')
+     A                                      COLHDG('Hold / Release')
+     A            L150         512A
+     A                                      TEXT('Message')
+     A                                      COLHDG('Message')
+     A            L160          10A         TEXT('booked')
+     A            L170           1A         TEXT('function')
+     A            L180            L         TEXT('Date of transmissing')
+     A            L190            Z         TEXT('TIMESTAMP')
+     A            L200            L         TEXT('dispatch date')
+     A            L210           8S 3       TEXT('amount')
+     A            L220           4S 0       TEXT('EDC bill# YEAR')
+     A            L230           6S 0       TEXT('EDC bill# running#')
+     A
+     A            L240          10A         TEXT('STATUS')
+     A            L250           7S 0
+     A                                      TEXT('SC id static')
+     A                                      COLHDG('sales company')
+     A                                      EDTCDE(Z)
+     A            L990         625A         TEXT('FREE SPACE')

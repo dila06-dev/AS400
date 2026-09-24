@@ -1,0 +1,9 @@
+     A                                      UNIQUE
+     A          R REORGPF
+     A            DATEI         10A         TEXT('Datei')
+     A                                      COLHDG('Datei')
+     A            LIB           10A         TEXT('Lib')
+     A                                      COLHDG('Lib')
+
+     A          K DATEI
+     A          K LIB

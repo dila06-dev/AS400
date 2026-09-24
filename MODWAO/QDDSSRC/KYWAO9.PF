@@ -1,0 +1,31 @@
+     A**************************************************************************
+     A*  Copyright 2000 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Matrix Konto/Kostenstellen                                            *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: SZ 21.12.2010 WAECO, Projekt Vertrieb                       *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(WAO9)
+     A          R KYWAO91
+     A*
+     A            KYWAO9FIRMR               REFFLD(WAO9FIRM)
+     A            KYWAO9BEGRR               REFFLD(WAO9BEGR)
+     A            KYWAO9AFATR               REFFLD(WAO9AFAT)
+     A            KYWAO9PRGRR               REFFLD(WAO9PRGR)
+     A            KYWAO9KONTR               REFFLD(WAO9KONT)
+     A            KYWAO9KSSTR               REFFLD(WAO9KSST)
+     A            KYWAO9ERKSR               REFFLD(WAO9ERKS)
+     A*
+     A            K$WAO9        20
+     A            K#WAO9LOCKR               REFFLD(WAO9LOCK)
+     A*
+     A            K#WAO9FIRMR               REFFLD(WAO9FIRM)
+     A            K#WAO9AFATR               REFFLD(WAO9AFAT)
+     A            K#WAO9PRGRR               REFFLD(WAO9PRGR)
+     A            K#WAO9KONTR               REFFLD(WAO9KONT)
+     A            K#WAO9KSSTR               REFFLD(WAO9KSST)
+     A*

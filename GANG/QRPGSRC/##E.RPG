@@ -1,0 +1,11 @@
+     E* PROGRAMMNAME.:##E                                                     
+     E* FUNKTION.....:E-KARTEN
+     E* OKTOBER 2009   GANG, MANFRED
+     E**************************************************************************
+     E                    MD        256  1
+     E                    ATR        63  1               #MODATR
+     E                    ATTS        1  1               #MOD-STANDARD
+     E                    ATTK        1  1               #MOD-KEYFELD
+     E                    ATTO        1  1               #MOD-OP-CODE
+     E                    KEY        24  2               TASTATUR
+     E                    FKTTST      6  1               #BERECHTIGUNG

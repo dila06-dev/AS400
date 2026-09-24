@@ -1,0 +1,62 @@
+     A*****************************************************************
+     A*                                                               *
+     A*  Copyright 1991 by    trend SWM                               *
+     A*                       Verwaltungs GmbH                        *
+     A*                       Ziegelhofstraße 210a                    *
+     A*                       DE 79110 Freiburg                       *
+     A*  -----------------------------------------------------------  *
+     A*                                                               *
+     A*  Workfile Kommissionierung                                    *
+     A*  -----------------------------------------------------------  *
+     A*  Änderung: ZG 19.05.2004 AKZO Projekt 3298                    *
+     A*            Integration Gebindengrösse FF03                    *
+     A*  Änderung: ZG 05.09.2006 Börlind Projekt 3997 LFTE            *
+     A*  Änderung: ZG 16.11.2017 DOMETIC Projekt 12727 - STAT         *
+     A*            Das Feld FF03 surde durch STAT ersetzt             *
+     A*****************************************************************
+     A*
+     A                                      REF(SWMREF)
+     A          R #AB64
+     A*
+     A            SQFIRM    R               REFFLD(##FIRM)
+     A            SQAFAT    R               REFFLD(##AFAT)
+     A            SQAFJJ    R               REFFLD(##AFJJ)
+     A            SQAFNR    R               REFFLD(##AFNR)
+     A            SQAFPO    R               REFFLD(##AFPO)
+     A            SQUPOS    R               REFFLD(##AFPO)
+     A            SQKDNR    R               REFFLD(##KDNR)
+     A            SQVSBD    R               REFFLD(##VSBD)
+     A            SQLIBD    R               REFFLD(##LIBD)
+     A            SQVPEI    R               REFFLD(##VPEI)
+     A            SQLANR    R               REFFLD(##LANR)
+     A            SQLORT    R               REFFLD(##LORT)
+     A            SQKMJK    R               REFFLD(##N040)
+     A                                      TEXT('Kommiss.-JJ/KW')
+     A                                      COLHDG('Kommiss.-JJ/KW')
+     A            SQKMTE    R               REFFLD(##KMTE)
+     A            SQTENR    R               REFFLD(##TENR)
+     A            SQMEIN    R               REFFLD(##MEIN)
+     A            SQTART    R               REFFLD(##IART)
+     A            SQOFMG    R               REFFLD(##RSMG)
+     A            SQLAMG    R               REFFLD(##LAGB)
+     A            SQUMMG    R               REFFLD(##RSMG)
+     A            SQFWMG    R               REFFLD(##LAGB)
+     A            SQKMLA    R               REFFLD(##LANR)
+     A            SQLMLO    R               REFFLD(##LORT)
+     A            SQLIAR    R               REFFLD(##A001)
+     A                                      TEXT('Lieferart')
+     A                                      COLHDG('Lieferart')
+     A            SQSABE    R               REFFLD(##SABE)
+     A            SQGWNT    R               REFFLD(##GEWT)
+     A            SQVOLU    R               REFFLD(##VPVO)
+     A            SQWKNR    R               REFFLD(##WKNR)
+     A            SQA115    R               REFFLD(##A015)
+     A            SQA215    R               REFFLD(##A015)
+     A            SQA315    R               REFFLD(##A015)
+     A            SQA415    R               REFFLD(##A015)
+     A            SQA515    R               REFFLD(##A015)
+     A            SQKMJJ    R               REFFLD(##KMJJ)
+     A            SQKMNR    R               REFFLD(##KMNR)
+     A            SQSTAT    R               REFFLD(##STAT)
+     A            SQLFTE    R               REFFLD(##LFTE)
+     A            SQFREX    R               REFFLD(##FREI)

@@ -1,0 +1,30 @@
+     A*
+     A*         DATUM IMMER TT.MM.JJJJ
+     A*         ZEIT  IMMER HH:MM
+     A*           VERLSCAN      = EMSDETTEN
+     A          R VERLSCANR                 TEXT('PROTOKOLLDATEI')
+     A*****************************************************************
+     A            ARRIVALID     10A         COLHDG('UNIQUE ID TRANSPORT')
+     A            HDXDEL#       25A         COLHDG('HDX LIEFERSCHEINREF')
+     A            CUSTOMER      10A         COLHDG('KUNDEN#')
+     A            LINENUM        4S 0       COLHDG('LINEPOSITION')
+     A            PURCHID       10A         COLHDG('ORDERREFERENZ')
+     A            ITEMID        15A         COLHDG('ARTIKEL')
+     A            QTY           11S 0       COLHDG('DELIVERED QUANTITY')
+     A            NVE           46A         COLHDG('NVE')
+     A            VERLDAT        8A         COLHDG('VERLADEDATUM')
+     A            VERLZEIT       6A         COLHDG('VERLADEZEIT')
+     A            ##TSTAMP        Z         COLHDG('RUNTIME    ')
+     A            NURABSCHL      1A         COLHDG('NURABSCHL  ')
+     A            #AKFAHR       25A         COLHDG('FAHRER NAME')
+     A            #AKSPED       25A         COLHDG('SPEDITION  ')
+     A            #AKVHTY        3A         COLHDG('FARZEUGTYP ')
+     A            #AKVHLN       25A         COLHDG('KFZNUMMER  ')
+     A            #AKHAZG        1S 0       COLHDG('GEAGHRGUT  ')
+     A            #AKPNTH        8S 0       COLHDG('PUNKTE     ')
+     A            #AKHGRT        8S 0       COLHDG('GEFAHRGUT STRASSE   ')
+     A            #AKHGRW        8S 0       COLHDG('GEFAHRGUT BAHN      ')
+     A            #AKHGIW        8S 0       COLHDG('GEFAHRGUT BINNENSCH.')
+     A            #AKHGSS        8S 0       COLHDG('GEFAHRGUT SEESCHIFF ')
+     A            #AKHGAF        8S 0       COLHDG('GEFAHRGUT LUFTFRACHT')
+     A            #PKVLUS       10A         COLHDG('PKVLUS VERPACKER')

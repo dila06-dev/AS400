@@ -1,0 +1,30 @@
+     A**************************************************************************
+     A*  Copyright 2013 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Schilling-Buchhaltung Übergabeparameter Standard                      *
+     A*  Erstellt aus Copy-Strecke SFBS/X04SINP                                *
+     A*  Verwendet in Programm TRKUSC                                          *
+     A*  Die Kommentare stehen immer vor dem zugehörigen Feld                  *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: SZ 08.05.2013                                               *
+     A*                                                                        *
+     A**************************************************************************
+     A          R SINP1
+     A*-------------------------------------------------------------------------
+     A*                             'F' = FINANZ-BUCHHALTUNG
+     A            UIANWV         1A         COLHDG('Aw')
+     A                                      TEXT('Anwendung')
+     A            UIPROG        10A         COLHDG('Programm')
+     A            UISPCD         1A         COLHDG('Sp')
+     A                                      TEXT('Sprachcode')
+     A*                             IST HIER EIN BENUTZERPROFIL
+     A*                             EINGETRAGEN, WIRD DIESES FÜR
+     A*                             KONTROLLEN DER BERECHTIGUNG
+     A*                             IN DER FIBU VERWENDET, SONST
+     A*                             WIRD DAS DES AUFRUFENDEN JOBS
+     A*                             VERWENDET
+     A            UIUSER        10A         COLHDG('Benutzer')
+     A            UIFILL       106A         COLHDG('Leerfeld')

@@ -1,0 +1,66 @@
+/*       PROGRAMMNAME:  SBLFSEND                                     */
+/*       VERFASSER   :  Schneider    STAND:27.07.2026                */
+/*       BESCHREIBUNG:  beenden lfs-sbs kontrolliert                 */
+/*                                                                   */
+/*                                                                   */
+/*                                                                   */
+/*                                                                   */
+/*********************************************************************/
+             PGM
+
+             DCL        VAR(&RC) TYPE(*CHAR) LEN(1) /* return code +
+                          ('1' = job is active; '0' = job is not +
+                          active) */
+
+             CHGJOB     LOG(4 00 *SECLVL) LOGCLPGM(*YES) +
+                          LOGOUTPUT(*JOBEND)
+
+             ADDLIBLE   LIB(DOMPGMV7) POSITION(*LAST)
+             MONMSG     MSGID(CPF0000)
+             ADDLIBLE   LIB(TSTPGMV7) POSITION(*LAST)
+             MONMSG     MSGID(CPF0000)
+
+/* ----beenden subsysteme ----------------------------------------------------*/
+
+             CALL       PGM(CHKACTJOB) PARM(('DOMPGMV7') (&RC))
+             IF         COND(&RC *EQ '1') THEN(DO)
+             ENDSBS     SBS(DOMPGMV7) OPTION(*IMMED) +
+                          ENDSBSOPT(*NOJOBLOG)
+             MONMSG     MSGID(CPF0000)
+             DLYJOB     DLY(30)
+             ENDDO
+
+             CALL       PGM(*LIBL/CHKACTJOB) PARM(('DOMPRTV7') (&RC))
+             IF         COND(&RC *EQ '1') THEN(DO)
+             ENDSBS     SBS(DOMPRTV7) OPTION(*IMMED) +
+                          ENDSBSOPT(*NOJOBLOG)
+             MONMSG     MSGID(CPF0000)
+             DLYJOB     DLY(30)
+             ENDDO
+
+             CALL       PGM(CHKACTJOB) PARM(('DOMUSRV7') (&RC))
+             IF         COND(&RC *EQ '1') THEN(DO)
+             ENDSBS     SBS(DOMUSRV7) OPTION(*IMMED) +
+                          ENDSBSOPT(*NOJOBLOG)
+             MONMSG     MSGID(CPF0000)
+             DLYJOB     DLY(30)
+             ENDDO
+
+             CALL       PGM(CHKACTJOB) PARM(('TSTPGMV7') (&RC))
+             IF         COND(&RC *EQ '1') THEN(DO)
+             ENDSBS     SBS(TSTPGMV7) OPTION(*IMMED) +
+                          ENDSBSOPT(*NOJOBLOG)
+             MONMSG     MSGID(CPF0000)
+             DLYJOB     DLY(120)
+             ENDDO
+
+             CALL       PGM(CHKACTJOB) PARM(('TSTUSRV7') (&RC))
+             IF         COND(&RC *EQ '1') THEN(DO)
+             ENDSBS     SBS(TSTUSRV7) OPTION(*IMMED) +
+                          ENDSBSOPT(*NOJOBLOG)
+             MONMSG     MSGID(CPF0000)
+             DLYJOB     DLY(30)
+             ENDDO
+
+
+             ENDPGM

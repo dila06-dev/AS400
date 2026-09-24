@@ -1,0 +1,36 @@
+/*    * PROGRAMMNAME.:$FAKTURA_C                                             */
+/*    * FUNKTION.....:...                                                    */
+/*    * 05.09.17       schneider                                              */
+/*    *                                                                       */
+/*    *-start sammelrechnung CH für intercompany zoll-sammelrechnung         */
+/*    *                                                                      */
+/*    * Hinweis:                                                             */
+/*    * dieser aufruf muss vor dem automatischen gesamtaufruf                */
+/*    * sammelrechnugn erfolgen.                                             */
+/*    *                                                                      */
+/*    *                                                                       */
+/******************************************************************************/
+             PGM        PARM(&LOKATION)
+
+             DCL        VAR(&LOKATION) TYPE(*CHAR) LEN(3)
+             DCL        VAR(&FIRMA) TYPE(*CHAR) LEN(2) VALUE('  ')
+
+             CHGJOB     LOG(4 00 *SECLVL) LOGCLPGM(*YES) +
+                          LOGOUTPUT(*JOBEND)
+
+             ADDLIBLE   LIB(TVRELWAECO) POSITION(*LAST)
+             MONMSG     MSGID(CPF0000)
+
+/*___   ermitteln firma ____________________________________________________ */
+             CALL       PGM(TVRELWAECO/DOWR000) PARM(&LOKATION &FIRMA)
+
+             DLYJOB     DLY(5)
+/*_durchführen sammelrechnungslauf____________________________________________*/
+             SBMJOB     CMD(CALL PGM(MODWAO/TRAB53SJCH) +
+                          PARM('MODWAO' '01' '4' '   ' '   ' +
+                          '002921' 'A02')) JOB(FAKTURA_CH) +
+                          USER(FAKTURA_CH) /* 'Sammelrechnungen +
+                          Kz.4 CH erstellen/drucken' */
+/*____________________________________________________________________________*/
+
+             ENDPGM

@@ -1,0 +1,26 @@
+     A**************************************************************************
+     A*  Copyright 2001 by    trend SWM                                        *
+     A*                       Verwaltungs GmbH                                 *
+     A*                       Ziegelhofstraße 210a                             *
+     A*                       DE 79110 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Kunden-Auftrags-Art Parameter     Erweiterung                         *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: RE 13.09.2016                                               *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R WA131
+     A*-------------------------------------------------------------------------
+     A            WA13LOCK  R               REFFLD(##LOCK)
+     A            WA13JNAM  R               REFFLD(##JNAM)
+     A            WA13JDAT  R               REFFLD(##JDAT)
+     A            WA13JZEI  R               REFFLD(##JZEI)
+     A            WA13USER  R               REFFLD(##USER)
+     A            WA13PROG  R               REFFLD(##PROG)
+     A            WA13BIBL  R               REFFLD(##BIBL)
+     A            WA13FIRM  R               REFFLD(##FIRM)
+     A            WA13AFAT  R               REFFLD(##AFAT)
+     A            WA13TLKZ  R               REFFLD(##TLKZ)
+     A            WA13LORT  R    1          REFFLD(##LORT)
+     A            WA13FREI  R   99          REFFLD(##FREI)

@@ -1,0 +1,23 @@
+     A**************************************************************************
+     A*  Copyright 2012 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Absatz/Umsatz-Plan Planungs-KD/Artikel                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: MG 24.08.2011 Projekt 8559, Planungssystem                  *
+     A*                                                                        *
+     A**************************************************************************
+     A          R WAOP1                     PFILE(WAOP)
+     A*-------------------------------------------------------------------------
+     A          K WAOPFIRM
+     A          K WAOPPLAT
+     A          K WAOPWKNR
+     A          K WAOPKSTC
+     A          K WAOPKDGR
+     A          K WAOPKDPL
+     A          K WAOPKDNR
+     A          K WAOPLDNR
+     A          K WAOPTENR
+     A          K WAOPJAHR

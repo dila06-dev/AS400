@@ -1,0 +1,8 @@
+dometic1219@ftp2.ups.com  QjUb4rxy
+ascii
+NAMEFMT 1
+cd /invoice
+SYSCMD CHGCURLIB TVRELWAECO
+rem SYSCMD RMVM FILE(TVRELWAECO/BESTOCK) MBR(BESTOCK)
+GET Q3502INV*.*       /Lager/UPS_Abrechnungen
+QUIT

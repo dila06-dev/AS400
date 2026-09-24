@@ -1,0 +1,85 @@
+/*    * PROGRAMMNAME.:#PREIC2B1                                              */
+/*    * FUNKTION.....:ERMITTELN PREISE IN DATEI #PREISAKT  LJ                */
+/*    *               TEMPORÄRE DATEI VORGESCHALTET #KUND_T                  */
+/*    *               batchjob                                               */
+/*    *               abfrage dtaara für parallellauf lj und vj              */
+/*    *               in dtaara preisaktvj steht der status des laufes vj    */
+/*    *               L=läuft, R=fertig, _=komplette bearbeitung fertig      */
+/*    *                                                                       */
+/*    *                                                                       */
+/*    * 01/2012        SCHNEIDER                                              */
+/*    *                                                                       */
+/*    *                                                                       */
+/*    *-ÄNDERUNGSDIENST-------------------------------------------------------*/
+/*    * XX.XX.XX                                          PGMR.....           */
+/******************************************************************************/
+             PGM        PARM(&PDATU &PDATUVJ &DATEI &LIB &DATEI2 &LIB2)
+
+             DCL        VAR(&PDATU) TYPE(*CHAR) LEN(8)
+             DCL        VAR(&PDATUVJ) TYPE(*CHAR) LEN(8)
+             DCL        VAR(&DATEI) TYPE(*CHAR) LEN(10)
+             DCL        VAR(&LIB) TYPE(*CHAR) LEN(10)
+             DCL        VAR(&DATEI2) TYPE(*CHAR) LEN(10)
+             DCL        VAR(&LIB2) TYPE(*CHAR) LEN(10)
+             DCL        VAR(&READY) TYPE(*CHAR) LEN(1)
+
+/*             Protokollierung                                               */
+             CHGJOB     LOG(4 00 *SECLVL) LOGCLPGM(*YES) +
+                          LOGOUTPUT(*JOBEND)
+
+/*             libl setzen                                                   */
+             CALL       PGM(TVRELWAECO/#LIBL_SC)
+
+/*             PROGRAMMAUFRUF für parallelen batchlauf VJ                    */
+
+             SBMJOB     CMD(CALL PGM(TVRELWAECO/#PREIC2B2) +
+                          PARM(&PDATU &PDATUVJ &DATEI &LIB &DATEI2 +
+                          &LIB2)) JOB(PREIS_BVJ) +
+                          JOBD(MODWAO/JDTREND) JOBQ(QSYSNOMAX) +
+                          JOBMSGQFL(*WRAP)
+/*----------------------------------------------------------------------------*/
+
+             OVRDBF     FILE(#KUND_T) TOFILE(&LIB/&DATEI) MBR(*FIRST)
+             OVRDBF     FILE(TEIL01) TOFILE(&LIB2/&DATEI2) MBR(*FIRST)
+
+             CLRPFM     FILE(TVRELWAECO/#PREISLJT)
+             OVRDBF     FILE(#PREISAKT) TOFILE(TVRELWAECO/#PREISLJT) +
+                          MBR(*FIRST)
+
+
+/*             PROGRAMMAUFRUF                                                */
+             CALL       PGM(TVRELWAECO/#PREAKTR2) PARM(&PDATU)
+             MONMSG     MSGID(CPF0000)
+
+             DLTOVR     FILE(*ALL)
+/*----------------------------------------------------------------------------*/
+
+             CPYF       FROMFILE(TVRELWAECO/#PREISLJT) +
+                          TOFILE(TVRELWAECO/#PREISAKT) MBROPT(*UPDADD)
+
+             RTVDTAARA  DTAARA(TVRELWAECO/PREISAKTVJ (1 1)) +
+                          RTNVAR(&READY) /* Kontrolle, ob +
+                          paralleljob bereits fertig */
+
+ WARTEN:     IF         COND(&READY = 'L') THEN(DO)
+             DLYJOB     DLY(90)
+             RTVDTAARA  DTAARA(TVRELWAECO/PREISAKTVJ (1 1)) +
+                          RTNVAR(&READY)
+             GOTO       CMDLBL(WARTEN)
+             ENDDO
+
+             CHGDTAARA  DTAARA(TVRELWAECO/PREISAKTVJ (1 1)) VALUE('_')
+
+             RUNQRY     QRY(TVRELWAECO/TRDCGQ4) /* Erstellen Datei +
+                          #TRDCGP2 */
+             RUNQRY     QRY(TVRELWAECO/TRDCGQ4_2) /* Erstellen Datei +
+                          #TRDCGP2 in QTEMP */
+             CPYF       FROMFILE(QTEMP/#TRDCGP2) +
+                          TOFILE(TVRELWAECO/#TRDCGP2) MBROPT(*ADD)
+
+             CLRPFM     FILE(TVRELWAECO/#PREISLJT)
+             CLRPFM     FILE(TVRELWAECO/#PREISVJT)
+
+ ENDE:       RCLRSC
+             ENDPGM
+

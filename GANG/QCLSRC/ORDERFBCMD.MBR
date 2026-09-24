@@ -1,0 +1,9 @@
+winadmin   3veKhCMZ
+LCD TVRELWAECO
+ascii
+NAMEFMT 0
+SYSCMD CHGCURLIB TVRELWAECO
+cd domains/dometic-group.com/public_ftp/dwfr/test
+APPEND ORDERINPUT ORDERINPUT.TXT
+PUT ORDERINPUT XX20101022.TXT
+quit

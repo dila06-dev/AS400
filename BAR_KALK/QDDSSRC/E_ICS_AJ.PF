@@ -1,0 +1,10 @@
+     A                                      UNIQUE
+     A          R E_ICS_AJR
+     A            JAHR           4S 0       TEXT('JAHR')
+     A            LIEFERANT      3A         TEXT('LIEFERANT')
+     A            ARTIKEL       15A         TEXT('ARTIKEL')
+     A            #ICS_AJ       12S 4       TEXT('ICS_AJ')
+
+     A          K JAHR
+     A          K LIEFERANT
+     A          K ARTIKEL

@@ -1,0 +1,8 @@
+     A                                      UNIQUE
+     A          R #AUSWRF                   TEXT('STEUERUNGSDATEI')
+     A            #AUSBER        5A         COLHDG('BEREICH')
+     A            #AUSBWH       10A         COLHDG('BEREICHAUSWAHL')
+     A            #AUSWBZ      115A         COLHDG('BEZEICHNUNG')
+     A            #AUSBER2      10A         COLHDG('BEREICH2')
+     A          K #AUSBER
+     A          K #AUSBWH

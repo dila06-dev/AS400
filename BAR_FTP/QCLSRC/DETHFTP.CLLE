@@ -1,0 +1,33 @@
+/*-------------------------------------------------*/
+/* FTP Command zum senden von Files (Ba.2014)      */
+/* Dethleffs                                      */
+/*-------------------------------------------------*/
+             PGM
+
+             CALLSUBR   SUBR(FTP1) /* erstes FTP starten extern */
+             CALLSUBR   SUBR(FTP2) /* zweite FTP starten intern */
+
+/*____________________________________________________________________________*/
+             SUBR       SUBR(FTP1)
+
+             CLRPFM     FILE(BAR_FTP/QCLSRC) MBR(DETHLOG)
+
+             OVRDBF     FILE(INPUT) TOFILE(BAR_FTP/QCLSRC) +
+                          MBR(DETHCMD_1)
+             OVRDBF     FILE(OUTPUT) TOFILE(BAR_FTP/QCLSRC) +
+                          MBR(DETHLOG)
+             FTP        RMTSYS('ftp.dethleffs.de')
+
+             DLYJOB     DLY(60)
+             ENDSUBR
+/*____________________________________________________________________________*/
+             SUBR       SUBR(FTP2)
+             OVRDBF     FILE(INPUT) TOFILE(BAR_FTP/QCLSRC) +
+                          MBR(DETHCMD_2)
+             OVRDBF     FILE(OUTPUT) TOFILE(BAR_FTP/QCLSRC) +
+                          MBR(DETHLOG)
+             FTP        RMTSYS('172.16.100.1')
+             ENDSUBR
+/*____________________________________________________________________________*/
+
+             ENDPGM

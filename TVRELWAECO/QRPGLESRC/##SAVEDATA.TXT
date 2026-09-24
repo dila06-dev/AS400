@@ -1,0 +1,146 @@
+     C**************************************************************************
+     C*Funktion Aufbereitung der Inhalte hier Sicherung der Eingaben
+     C*current timestamp tstampi, char(' ', 20) keys, char(' ', 128)
+     C*
+     C*SELECT INVOICEID, SCHEMENAME, ID_ID,
+     C*current timestamp tstampi,
+     C*char(' ', 30) keys, char(' ', 128) FROM einvoice/custid
+     C*Datei CUSTID$ in EINVOICE wurde ersetzt.
+     C*
+     C*SELECT INVOICEID, SCHEMENAME, SCHEMEAGEN, TAXID_TAXI ,
+     C*current timestamp tstampi,
+     C*char(' ', 30) keys, char(' ', 128) FROM einvoice/CUSTTAXID
+     C*Datei CUSTTAXID$ in EINVOICE wurde ersetzt.
+     C*
+     C*SELECT XSI, GXSXTD, XMLNS, SCHEMALOCA, RELEASEID, LOGICALID,
+     C*RECEIVER_L, CREATIONDA, PROCESS, "TYPE", GXSTYPE, GXSDESC, ID,
+     C*DOCUMENTDA,CURRENCYID,TOTALAMOUN,QUALIFIEDA,AMOUNT,CHARGETYPE,
+     C*CHARGEAMT, CHARGEDATE, DISCOUNT, NAME, SUPPLIERPA, STREETNAME,
+     C*CITYNAME,COUNTRYCOD,POSTALCODE,CUSTOMERPA,CUSTOMID,CUSTOMSTR,
+     C*CUSTOMLIN1,CUSTOMNAME, CUSTOMCOUN, CUSTOMPLZ, SHIPFRNAME,
+     C*SHIPFRSTR,SHIPFRCITY,SHIPFRCOUN,SHIPFRPLZ,SHIPTONAME,SHIPTOID,
+     C*SHIPTOSTR, SHIPTOLIN1, SHIPTOCITY, SHIPTOCOUN, SHIPTOPLZ,
+     C*BILLTONAME, BILLTOID, BILLTOSTR, BILLTOLIN1, BILLTOCITY,
+     C*BILLTOCOUN,BILLTOPLZ,TYPE6,TAX_CURREN,BASISAMOUN,TAXABLECCY,
+     C*TAXABLEAMN, RATENUMERI, PROCESSINV, TAXAUTHORI, TAXAUT7,
+     C*AMOUNT_CUR, TAX_AMOUNT,
+     C*current timestamp tstampi,
+     C*char(' ', 30) keys, char(' ', 128)  FROM einvoice/INVOICEHEA
+     C*
+     C*SELECT INVOICEID,INVOICELIN,DESCRIPTIO,INVOIC8, QUANTITY,
+     C*UNITPRICE_,AMOUNT,UNITCODE,PERQUANTIT, AMOUNTRAB, INVOIC9,
+     C*TOTALAMOUN,TAXRATE,TAXAMOUNT,ORDERREF,POREF,SHPREF,current
+     C*timestamp tstampi, char(' ', 30) keys, char(' ', 128) FROM
+     C*einvoice/INVOICEPOS
+     C*Datei INVOICEPO$ in EINVOICE wurde ersetzt.
+     C*
+     C*SELECT INVOICEID, SCHEMENAME, ID_ID,
+     C*current timestamp tstampi,
+     C*char(' ', 30) keys, char(' ', 128) FROM einvoice/SUPPID
+     C*Datei SUPPID$ in EINVOICE wurde ersetzt.
+     C*
+     C*SELECT INVOICEID, SCHEMENAME, SCHEMEAGEN, TAXID_TAXI,
+     C*current timestamp tstampi,
+     C*char(' ', 30) keys, char(' ', 128) FROM einvoice/SUPPTAXID
+     C*Datei SUPPTAXID$ in EINVOICE wurde erstellt.
+     C*
+     C*CUSTID         CUSTID$
+     C*CUSTTAXID      CUSTTAXID$
+     C*INVOICEHEA     INVOICEHE$
+     C*INVOICEPOS     INVOICEPO$
+     C*SUPPID         SUPPID$
+     C*SUPPTAXID      SUPPTAXID$
+     C*-------------------------------------------------------------------------
+     C*
+     C     srSAVEDATA    BEGSR
+     C*
+
+     c/exec sql
+     c+ whenever SQLWARNING CONTINUE
+     c/end-exec
+     c/exec sql
+     c+ WHENEVER SQLWARNING CONTINUE
+     c/end-exec
+     c/exec sql
+     c+ WHENEVER SQLWARNING CONTINUE
+     c/end-exec
+
+     c/exec sql
+     C+ insert into einvoice/CUSTID$
+     C+ SELECT  INVOICEID,
+     C+         SCHEMENAME,
+     C+         ID_ID,
+     c+ :tstampi,
+     c+ :keys,
+     c+ :#protokoll
+     c+ FROM einvoice/CUSTID
+     c/end-exec
+
+     c/exec sql
+     C+ insert into einvoice/CUSTTAXID$
+     C+ SELECT INVOICEID,
+     C+        SCHEMENAME,
+     c+        SCHEMEAGEN,
+     c+        TAXID_TAXI,
+     c+ :tstampi,
+     c+ :keys,
+     c+ :#protokoll
+     c+ FROM einvoice/CUSTTAXID
+     c/end-exec
+
+     c/exec sql
+     C+ insert into einvoice/INVOICEHE$
+     C+ SELECT XSI, GXSXTD, XMLNS, SCHEMALOCA, RELEASEID, LOGICALID,
+     C+ RECEIVER_L, CREATIONDA, PROCESS, "TYPE", GXSTYPE, GXSDESC, ID,
+     C+ DOCUMENTDA,CURRENCYID,TOTALAMOUN,QUALIFIEDA,AMOUNT,CHARGETYPE,
+     C+ CHARGEAMT, CHARGEDATE, DISCOUNT, NAME, SUPPLIERPA, STREETNAME,
+     C+ CITYNAME,COUNTRYCOD,POSTALCODE,CUSTOMERPA,CUSTOMID,CUSTOMSTR,
+     C+ CUSTOMLIN1,CUSTOMNAME, CUSTOMCOUN, CUSTOMPLZ, SHIPFRNAME,
+     C+ SHIPFRSTR,SHIPFRCITY,SHIPFRCOUN,SHIPFRPLZ,SHIPTONAME,SHIPTOID,
+     C+ SHIPTOSTR, SHIPTOLIN1, SHIPTOCITY, SHIPTOCOUN, SHIPTOPLZ,
+     C+ BILLTONAME, BILLTOID, BILLTOSTR, BILLTOLIN1, BILLTOCITY,
+     C+ BILLTOCOUN,BILLTOPLZ,TYPE6,TAX_CURREN,BASISAMOUN,TAXABLECCY,
+     C+ TAXABLEAMN, RATENUMERI, PROCESSINV, TAXAUTHORI, TAXAUT7,
+     C+ AMOUNT_CUR, TAX_AMOUNT,
+     c+ :tstampi,
+     c+ :keys,
+     c+ :#protokoll
+     C+  FROM einvoice/INVOICEHEA
+     c/end-exec
+     C*
+     c/exec sql
+     C+ insert into einvoice/invoicepo$
+     C+ SELECT INVOICEID,INVOICELIN,DESCRIPTIO,INVOIC8, QUANTITY,
+     C+ UNITPRICE_,AMOUNT,UNITCODE,PERQUANTIT, AMOUNTRAB, INVOIC9,
+     C+ TOTALAMOUN,TAXRATE,TAXAMOUNT,ORDERREF,POREF,SHPREF,
+     c+ :tstampi,
+     c+ :keys,
+     c+ :#protokoll
+     c+ FROM einvoice/invoicepos
+     c/end-exec
+
+     c/exec sql
+     C+ insert into einvoice/SUPPID$
+     C+ SELECT INVOICEID,
+     C+        SCHEMENAME,
+     C+        ID_ID,
+     c+ :tstampi,
+     c+ :keys,
+     c+ :#protokoll
+     c+ FROM einvoice/SUPPID
+     c/end-exec
+
+     c/exec sql
+     C+ insert into einvoice/SUPPTAXID$
+     C+ SELECT INVOICEID,
+     C+        SCHEMENAME,
+     C+        SCHEMEAGEN,
+     C+        TAXID_TAXI,
+     c+ :tstampi,
+     c+ :keys,
+     c+ :#protokoll
+     c+ FROM einvoice/SUPPTAXID
+     c/end-exec
+
+     C     ##SAVEDATA    ENDSR
+

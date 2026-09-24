@@ -1,0 +1,25 @@
+     A**************************************************************************
+     A*  Copyright 2001 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Schenker Schnittstelle Schlüsselaufbau                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: SZ 25.06.2012 Projekt 8390                                  *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R KYSPG01
+     A*-------------------------------------------------------------------------
+     A            KYSPG02020R               REFFLD(SPEDG01/SC2020 *LIBL/SPEDG0)
+     A            KYSPG0FREI    30
+     A            K#SPG0LOCKR               REFFLD(##LOCK)
+     A            K#SPG02020R               REFFLD(SPEDG01/SC2020 *LIBL/SPEDG0)
+     A            SPG0LOCK  R               REFFLD(##LOCK)
+     A            SPG0JNAM  R               REFFLD(##JNAM)
+     A            SPG0JDAT  R               REFFLD(##JDAT)
+     A            SPG0JZEI  R               REFFLD(##JZEI)
+     A            SPG0USER  R               REFFLD(##USER)
+     A            SPG0PROG  R               REFFLD(##PROG)
+     A            SPG0BIBL  R               REFFLD(##BIBL)

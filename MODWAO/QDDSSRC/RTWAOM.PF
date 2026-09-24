@@ -1,0 +1,64 @@
+     A**************************************************************************
+     A*  Copyright 2011 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------- *
+     A*  Rückgabebereich Absatz-Plan %-Sätze Jahresebene                       *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: MG 28.08.2011 Projekt 7668, Planungssystem                  *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R RTWAOM1
+     A*-------------------------------------------------------------------------
+     A* allgemeine Rückgabe
+     A*-------------------------------------------------------------------------
+     A            RTWAOMPROGR               REFFLD(##PROG)
+     A            RTWAOMDANAR               REFFLD(##DANA)
+     A            RTWAOMRTCDR               REFFLD(##RTCD)
+     A            RTWAOMFFLDR               REFFLD(##FFLD)
+     A            RTWAOMFENRR               REFFLD(##FENR)
+     A            RTWAOMPA03R               REFFLD(##A010)
+     A                                      TEXT('Parameter 3 bei Fehler')
+     A            RTWAOMPA04R               REFFLD(##A010)
+     A                                      TEXT('Parameter 4 bei Fehler')
+     A            RTWAOMPA05R               REFFLD(##A010)
+     A                                      TEXT('Parameter 5 bei Fehler')
+     A            RTWAOMPA06R               REFFLD(##A010)
+     A                                      TEXT('Parameter 6 bei Fehler')
+     A            RTWAOMPA07R               REFFLD(##A010)
+     A                                      TEXT('Parameter 7 bei Fehler')
+     A*-------------------------------------------------------------------------
+     A* ON/OFF Rückgabe KZ für Prüfungen
+     A*-------------------------------------------------------------------------
+     A            RTWAOMFR01R               REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* Key-Felder
+     A*-------------------------------------------------------------------------
+     A            RTWAOMKSTCR               REFFLD(WAOM1/WAOMKSTC *LIBL/WAOM)
+     A            RTWAOMKDGRR               REFFLD(WAOM1/WAOMKDGR *LIBL/WAOM)
+     A            RTWAOMKDPLR               REFFLD(WAOM1/WAOMKDPL *LIBL/WAOM)
+     A            RTWAOMKDNRR               REFFLD(WAOM1/WAOMKDNR *LIBL/WAOM)
+     A            RTWAOMLDNRR               REFFLD(WAOM1/WAOMLDNR *LIBL/WAOM)
+     A            RTWAOMPRGRR               REFFLD(WAOM1/WAOMPRGR *LIBL/WAOM)
+     A            RTWAOMJAHRR               REFFLD(WAOM1/WAOMJAHR *LIBL/WAOM)
+     A            RTWAOMFR02R  253          REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* evt. weitere Felder nach Ermittlung
+     A*-------------------------------------------------------------------------
+     A            RTWAOMPZ01R               REFFLD(WAOM1/WAOMPZ01 *LIBL/WAOM)
+     A            RTWAOMPZ02R               REFFLD(WAOM1/WAOMPZ02 *LIBL/WAOM)
+     A            RTWAOMPZ03R               REFFLD(WAOM1/WAOMPZ03 *LIBL/WAOM)
+     A            RTWAOMPZ04R               REFFLD(WAOM1/WAOMPZ04 *LIBL/WAOM)
+     A            RTWAOMPZ05R               REFFLD(WAOM1/WAOMPZ05 *LIBL/WAOM)
+     A            RTWAOMPZ06R               REFFLD(WAOM1/WAOMPZ06 *LIBL/WAOM)
+     A            RTWAOMPZ07R               REFFLD(WAOM1/WAOMPZ07 *LIBL/WAOM)
+     A            RTWAOMPZ08R               REFFLD(WAOM1/WAOMPZ08 *LIBL/WAOM)
+     A            RTWAOMPZ09R               REFFLD(WAOM1/WAOMPZ09 *LIBL/WAOM)
+     A            RTWAOMPZ10R               REFFLD(WAOM1/WAOMPZ10 *LIBL/WAOM)
+     A            RTWAOMPZ11R               REFFLD(WAOM1/WAOMPZ11 *LIBL/WAOM)
+     A            RTWAOMPZ12R               REFFLD(WAOM1/WAOMPZ12 *LIBL/WAOM)
+     A            RTWAOMPLKZR               REFFLD(WAOM1/WAOMPLKZ *LIBL/WAOM)
+     A            RTWAOMSTKDR               REFFLD(WAOM1/WAOMSTKD *LIBL/WAOM)
+     A            RTWAOMFR03R  563          REFFLD(##FREI)

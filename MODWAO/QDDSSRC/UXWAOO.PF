@@ -1,0 +1,19 @@
+     A**************************************************************************
+     A*  Copyright 2011 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Lager-Zugang Fehler-Code                                              *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: RE 23.01.2012                                               *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R UXWAOO1
+     A*
+     A            UXWAOOFIRMR               REFFLD(WAOO1/WAOOFIRM *LIBL/WAOO)
+     A            UXWAOOLGJJR               REFFLD(WAOO1/WAOOLGJJ *LIBL/WAOO)
+     A            UXWAOOLGNRR               REFFLD(WAOO1/WAOOLGNR *LIBL/WAOO)
+     A            UXWAOOLGPOR               REFFLD(WAOO1/WAOOLGPO *LIBL/WAOO)
+     A            UXWAOOFBNRR               REFFLD(WAOO1/WAOOFBNR *LIBL/WAOO)
+     A            UXWAOOTSTPR               REFFLD(WAOO1/WAOOTSTP *LIBL/WAOO)

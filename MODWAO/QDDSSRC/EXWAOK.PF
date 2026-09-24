@@ -1,0 +1,58 @@
+     A**************************************************************************
+     A*  Copyright 2011 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------- *
+     A*  Kommunikationsbereich Absatz-Plan Erhöhungstabelle                    *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: MG 15.08.2011 Projekt 7668, Planungssystem                  *
+     A*  Änderung: MG 07.09.2012 Projekt 8886, Neues Feld WAOKSTKD "KD-Nr Stat"*
+     A*  Änderung: MG 09.10.2012 Telefonat Herr Schneider, Prozent-Sätze 4,2   *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R EXWAOK1
+     A*-------------------------------------------------------------------------
+     A* Programmstatus
+     A*-------------------------------------------------------------------------
+     A            EXWAOKPGSTR               REFFLD(##PGST)
+     A            EXWAOKPROGR               REFFLD(##PROG)
+     A            EXWAOKFLDNR               REFFLD(##FLDN)
+     A*-------------------------------------------------------------------------
+     A* ON/OFF KZ für Prüfungen
+     A*-------------------------------------------------------------------------
+     A            EXWAOKIFKZR               REFFLD(##IFKZ)
+     A            EXWAOKFR01R               REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* Key-Felder
+     A*-------------------------------------------------------------------------
+     A            EXWAOKKSTCR               REFFLD(WAOK1/WAOKKSTC *LIBL/WAOK)
+     A            EXWAOKKDGRR               REFFLD(WAOK1/WAOKKDGR *LIBL/WAOK)
+     A            EXWAOKKDPLR               REFFLD(WAOK1/WAOKKDPL *LIBL/WAOK)
+     A            EXWAOKKDNRR               REFFLD(WAOK1/WAOKKDNR *LIBL/WAOK)
+     A            EXWAOKLDNRR               REFFLD(WAOK1/WAOKLDNR *LIBL/WAOK)
+     A            EXWAOKPRGRR               REFFLD(WAOK1/WAOKPRGR *LIBL/WAOK)
+     A            EXWAOKJAHRR               REFFLD(WAOK1/WAOKJAHR *LIBL/WAOK)
+     A            EXWAOKFR02R  253          REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* Kopier-Begriff NACH
+     A*-------------------------------------------------------------------------
+     A            EXWAOKNKSTR               REFFLD(WAOK1/WAOKKSTC *LIBL/WAOK)
+     A            EXWAOKNKDGR               REFFLD(WAOK1/WAOKKDGR *LIBL/WAOK)
+     A            EXWAOKNKDPR               REFFLD(WAOK1/WAOKKDPL *LIBL/WAOK)
+     A            EXWAOKNKDNR               REFFLD(WAOK1/WAOKKDNR *LIBL/WAOK)
+     A            EXWAOKNLDNR               REFFLD(WAOK1/WAOKLDNR *LIBL/WAOK)
+     A            EXWAOKNPRGR               REFFLD(WAOK1/WAOKPRGR *LIBL/WAOK)
+     A            EXWAOKNJAHR               REFFLD(WAOK1/WAOKJAHR *LIBL/WAOK)
+     A            EXWAOKFR03R  253          REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* evt. weitere Felder für Update oder Prüfungen
+     A*-------------------------------------------------------------------------
+     A            EXWAOKMGPZR               REFFLD(WAOK1/WAOKMGPZ *LIBL/WAOK)
+     A            EXWAOKPRPZR               REFFLD(WAOK1/WAOKPRPZ *LIBL/WAOK)
+     A            EXWAOKPLKZR               REFFLD(WAOK1/WAOKPLKZ *LIBL/WAOK)
+     A            EXWAOKSTKDR               REFFLD(WAOK1/WAOKSTKD *LIBL/WAOK)
+     A            EXWAOKKSSTR               REFFLD(KDEW1/KDEWKSST *LIBL/KDEW)
+     A            EXWAOKGEBTR               REFFLD(LAND1/LNGEBT   *LIBL/LAND)
+     A            EXWAOKFR04R  372          REFFLD(##FREI)

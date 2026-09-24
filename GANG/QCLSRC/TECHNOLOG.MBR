@@ -1,0 +1,32 @@
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host MY.EDIEXPERTS.DE, Adresse
+ 85.214.125.29 über Port 21 herzustellen.
+220 (vsFTPd 2.0.7)
+Anmelde-ID (gang) eingeben:
+331 Please specify the password.
+230 Login successful.
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> LCD GANG
+Das lokale Arbeitsverzeichnis ist GANG
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Switching to ASCII mode.
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 Unknown SITE command.
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> cd /transfer/incoming
+250 Directory successfully changed.
+Einen FTP-Unterbefehl eingeben.
+> APPEND Edi_techp Edi_techp
+227 Entering Passive Mode (85,214,125,29,234,234)
+150 Ok to send data.
+226 File receive OK.
+ 65376 Byte in 0,009 Sekunden übertragen. Übertragungsgeschwindigkeit 7438,336
+ KB/s.
+Einen FTP-Unterbefehl eingeben.
+> quit
+221 Goodbye.

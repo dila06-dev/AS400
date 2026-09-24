@@ -1,0 +1,23 @@
+      * Physische Datei: KOND
+      * ANLEGEDATUM: FEBRUAR 2014
+      *SORT:        ...
+      * ÄNDERUNGEN:
+      * AUSSCHLUSS:  ...
+     A
+     A*                 APFIRM,APAFJJ,APAFNR,APAFPO,
+     A          R AFPO1                     PFILE(AFPO)
+     A
+     A          K APFIRM
+     A          K APAFJJ
+     A          K APAFNR
+     A          K APAFPO
+     A          S APTENR                    CMP(EQ '9102800004')
+     A          S APTENR                    CMP(EQ '9105302773')
+     A          S APTENR                    CMP(EQ '9103501043')
+     A          S APTENR                    CMP(EQ '9103500495')
+     A          S APTENR                    CMP(EQ '9103500714')
+     A          S APTENR                    CMP(EQ '9103500717')
+     A          S APTENR                    CMP(EQ '9103500794')
+     A          S APTENR                    CMP(EQ '9103500719')
+     A          S APTENR                    CMP(EQ '9103500818')
+     A          S APTENR                    CMP(EQ '9999Z-021360E3')

@@ -1,0 +1,79 @@
+/*-------------------------------------------------*/
+/* Generischen FTP Command erstellen               */
+/*-------------------------------------------------*/
+             PGM        PARM(&SUBSIDIARY)
+
+
+/*Variablen bestimmen */
+             DCL        VAR(&CMD) TYPE(*CHAR) LEN(3) VALUE('CMD')
+             DCL        VAR(&LOG) TYPE(*CHAR) LEN(3) VALUE('LOG')
+
+             DCL        VAR(&MBRNAMECMD) TYPE(*CHAR) LEN(10) VALUE(' ')
+             DCL        VAR(&MBRNAMELOG) TYPE(*CHAR) LEN(10) VALUE(' ')
+
+             DCL        VAR(&SYSTEMNAME) TYPE(*CHAR) LEN(32) VALUE('  ')
+             DCL        VAR(&Subsidiary) TYPE(*CHAR) LEN(2)
+             DCL        VAR(&FtpUser)    TYPE(*CHAR) LEN(10) VALUE('  ')
+             DCL        VAR(&Password)   TYPE(*CHAR) LEN(10) VALUE('  ')
+             DCL        VAR(&FtpMode)    TYPE(*CHAR) LEN(10) VALUE('  ')
+             DCL        VAR(&NameFormat) TYPE(*CHAR) LEN(1) VALUE('0')
+             DCL        VAR(&FtpCommand) TYPE(*CHAR) LEN(4 ) VALUE('  ')
+             DCL        VAR(&FromDir)   TYPE(*CHAR) LEN(80) VALUE('  ')
+             DCL        VAR(&FromFile)   TYPE(*CHAR) LEN(32) VALUE('  ')
+             DCL        VAR(&ToDir)     TYPE(*CHAR) LEN(80) VALUE('  ')
+             DCL        VAR(&Tofile)     TYPE(*CHAR) LEN(32) VALUE('  ')
+             DCL        VAR(&Wildcards)  TYPE(*CHAR) LEN(1) VALUE('*')
+             DCL        VAR(&SRCCOMMENT) TYPE(*CHAR) LEN(40) VALUE(' ')
+             DCL        VAR(&LOGCOMMENT) TYPE(*CHAR) LEN(40) VALUE(' ')
+
+/*Nur bei gefüllten Subsidiary ausführen */
+             CHGVAR     VAR(&SUBSIDIARY) VALUE(&SUBSIDIARY)
+             MONMSG     MSGID(MCH3601) EXEC(GOTO CMDLBL(ENDE))
+             IF         COND(&SUBSIDIARY *EQ '  ') THEN(GOTO +
+                          CMDLBL(ENDE))
+
+/* Fix-Felder belegen */
+             CHGVAR     VAR(&CMD) VALUE('CMD')
+             CHGVAR     VAR(&LOG) VALUE('LOG')
+             CHGVAR     VAR(&WILDCARDS) VALUE('*')
+             CHGVAR     VAR(&SYSTEMNAME) VALUE('dometic-group.com')
+             CHGVAR     VAR(&FtpUser) VALUE('winadmin')
+             CHGVAR     VAR(&Password) VALUE('3veKhCMZ')
+             CHGVAR     VAR(&FtpMode) VALUE('ascii')
+             CHGVAR     VAR(&NameFormat) VALUE('1')
+             CHGVAR     VAR(&FTPCOMMAND) VALUE('MGET')
+             CHGVAR     VAR(&FROMDIR) +
+                          VALUE('domains/dometic-group.com/public_ftp+
+                          /dw' *CAT &SUBSIDIARY *CAT '/snd')
+             CHGVAR     VAR(&FROMFILE) VALUE(&SUBSIDIARY *CAT +
+                          &WILDCARDS)
+             CHGVAR     VAR(&TODIR) VALUE('/WAECOEDI/' *CAT +
+                          &SUBSIDIARY)
+             CHGVAR     VAR(&ToFile) VALUE(' ')
+             CHGVAR     VAR(&SRCCOMMENT) VALUE('Orders ' *CAT +
+                          &SUBSIDIARY *CAT ' per FTP abholen')
+             CHGVAR     VAR(&LOGCOMMENT) VALUE('Protokoll - ' *CAT +
+                          &SRCComment)
+
+/* MBR-Files erstellen und clearen */
+             CHGVAR     VAR(&MBRNAMECMD) VALUE(&SUBSIDIARY *CAT +
+                          'ORD' *CAT &CMD)
+
+             CHGVAR     VAR(&MBRNAMELOG) VALUE(&SUBSIDIARY *CAT +
+                          'ORD' *CAT &LOG)
+
+             OVRDBF     FILE(INPUT) TOFILE(BAR_FTP/QCLSRC) +
+                          MBR(&MBRNAMECMD)
+             OVRDBF     FILE(OUTPUT) TOFILE(BAR_FTP/QCLSRC) +
+                          MBR(&MBRNAMELOG)
+
+             CLRPFM     FILE(BAR_FTP/QCLSRC) MBR(&MBRNAMELOG)
+             MONMSG     MSGID(CPF0000)
+
+/* Generischen Befehl ausführen */
+             FTP        RMTSYS(&SYSTEMNAME)
+
+             DLTOVR *ALL LVL(*JOB)
+
+
+ ENDE:       ENDPGM

@@ -1,0 +1,40 @@
+     A**************************************************************************
+     A*  Copyright 2012 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------- *
+     A*  Kommunikationsparameter für Schnittstelle BRT Italien                 *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: PH 20.12.2012 Projekt 9128                                  *
+     A*  Änderung: XX XX.XX.XXXX                                               *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R EXSPH01
+     A*-------------------------------------------------------------------------
+     A* Programmstatus
+     A*-------------------------------------------------------------------------
+     A            EXSPH0PGSTR               REFFLD(##PGST)
+     A            EXSPH0PROGR               REFFLD(##PROG)
+     A            EXSPH0FLDNR               REFFLD(##FLDN)
+     A*-------------------------------------------------------------------------
+     A* ON/OFF KZ für Prüfungen
+     A*-------------------------------------------------------------------------
+     A            EXSPH0IFKZR               REFFLD(##IFKZ)
+     A            EXSPH002KZR               REFFLD(##A001)
+     A                                      TEXT('ON/OFF-Feld für Prüfung 2')
+     A            EXSPH0FR01R               REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* Key-Felder
+     A*-------------------------------------------------------------------------
+     A            EXSPH0B020R               REFFLD(SPEDH01/BRT020 *LIBL/SPEDH0)
+     A            EXSPH0FR02R  256          REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* Kopier-Begriff NACH
+     A*-------------------------------------------------------------------------
+     A            EXSPH0NB02R               REFFLD(SPEDH01/BRT020 *LIBL/SPEDH0)
+     A            EXSPH0FR03R  256          REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* evt. weitere Felder für Update oder Prüfungen
+     A*-------------------------------------------------------------------------
+     A            EXSPH0FR04R  434          REFFLD(##FREI)

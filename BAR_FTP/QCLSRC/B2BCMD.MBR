@@ -1,0 +1,7 @@
+domtrend 7Rz9JK21H!
+
+ascii
+NAMEFMT 1
+lcd /SALESCOMPANY/B2B
+PUT WINARTNAV.TXT winartnav.txt
+quit

@@ -1,0 +1,26 @@
+     A**************************************************************************
+     A*  Copyright 2011 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------- *
+     A*  Schnittstelle Spedition Files aus DIR                                 *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: VU 05.08.2011 Projekt 7195                                  *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R IFLV1
+     A*-------------------------------------------------------------------------
+     A            IFLVLOCK  R               REFFLD(##LOCK)
+     A            IFLVJNAM  R               REFFLD(##JNAM)
+     A            IFLVJDAT  R               REFFLD(##JDAT)
+     A            IFLVJZEI  R               REFFLD(##JZEI)
+     A            IFLVUSER  R               REFFLD(##USER)
+     A            IFLVPROG  R               REFFLD(##PROG)
+     A            IFLVBIBL  R               REFFLD(##BIBL)
+     A            IFLVFIRM  R               REFFLD(##FIRM)
+     A            IFLVSTAT  R               REFFLD(##STAT)
+     A            IFLVNAME  R  128          REFFLD(##DTEI)
+     A            IFLVDATN  R               REFFLD(##FILE)
+     A            IFLVFREI  R               REFFLD(##FREI)

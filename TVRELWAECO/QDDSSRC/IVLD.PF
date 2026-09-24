@@ -1,0 +1,35 @@
+     A**************************************************************************
+     A*  Copyright 2025 by                                                     *
+     A*                                                                        *
+     A*                                                                        *
+     A*                                                                        *
+     A*  --------------------------------------------------------------------  *
+     A*  Beschreibung: Erweiterung Identstamm um IVEAS Kodierungen auf Basis   *
+     A*                der Zolltarifnummer                                     *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: MG 03.07.2025                                               *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R IVLD1
+     A*-------------------------------------------------------------------------
+     A            IVLDLOCK  R               REFFLD(##LOCK)
+     A            IVLDJNAM  R               REFFLD(##JNAM)
+     A            IVLDJDAT  R               REFFLD(##JDAT)
+     A            IVLDJZEI  R               REFFLD(##JZEI)
+     A            IVLDUSER  R               REFFLD(##USER)
+     A            IVLDPROG  R               REFFLD(##PROG)
+     A            IVLDBIBL  R               REFFLD(##BIBL)
+     A            IVSCCODE      11A         TEXT('CODENUMMER KEY')
+     A                                      COLHDG('CODENUMMER')
+     A            IVSCLAND       3A         TEXT('GS1 Landkennung')
+     A                                      COLHDG('GS1 Landkennung')
+     A            IVSCWANR       8S 0       TEXT('Warennummer Land')
+     A                                      COLHDG('Warennummer Land')
+     A            IVSCHMEH       4A         TEXT('Handelsmaßeinheit')
+     A                                      COLHDG('Handelsmaßeinheit')
+     A            IVSCGADA  R               REFFLD(##GADA)
+     A            IVSCGBDA  R               REFFLD(##GBDA)
+     A            IVSCERUS  R               REFFLD(##ERUS)
+     A            IVSCFREI     120A         TEXT('FREIFELD')
+     A                                      COLHDG('FREIFELD')
+     A*****

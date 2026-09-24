@@ -1,0 +1,7 @@
+DomeEmsD ms12+li#6
+NA 1
+CD DomeEmsD_50000432/AVIS
+LCD /TREND/ECHT/EDI/OUT/DESADV
+MPUT DE_*
+
+quit

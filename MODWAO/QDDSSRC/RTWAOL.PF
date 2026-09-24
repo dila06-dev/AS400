@@ -1,0 +1,58 @@
+     A**************************************************************************
+     A*  Copyright 2011 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------- *
+     A*  Rückgabebereich Absatz/Umsatz-Statistik                               *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: MG 24.08.2011 Projekt 7668, Planungssystem                  *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R RTWAOL1
+     A*-------------------------------------------------------------------------
+     A* allgemeine Rückgabe
+     A*-------------------------------------------------------------------------
+     A            RTWAOLPROGR               REFFLD(##PROG)
+     A            RTWAOLDANAR               REFFLD(##DANA)
+     A            RTWAOLRTCDR               REFFLD(##RTCD)
+     A            RTWAOLFFLDR               REFFLD(##FFLD)
+     A            RTWAOLFENRR               REFFLD(##FENR)
+     A            RTWAOLPA03R               REFFLD(##A010)
+     A                                      TEXT('Parameter 3 bei Fehler')
+     A            RTWAOLPA04R               REFFLD(##A010)
+     A                                      TEXT('Parameter 4 bei Fehler')
+     A            RTWAOLPA05R               REFFLD(##A010)
+     A                                      TEXT('Parameter 5 bei Fehler')
+     A            RTWAOLPA06R               REFFLD(##A010)
+     A                                      TEXT('Parameter 6 bei Fehler')
+     A            RTWAOLPA07R               REFFLD(##A010)
+     A                                      TEXT('Parameter 7 bei Fehler')
+     A*-------------------------------------------------------------------------
+     A* ON/OFF Rückgabe KZ für Prüfungen
+     A*-------------------------------------------------------------------------
+     A            RTWAOLFR01R               REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* Key-Felder
+     A*-------------------------------------------------------------------------
+     A            RTWAOLPLATR               REFFLD(WAOL1/WAOLPLAT *LIBL/WAOL)
+     A            RTWAOLWKNRR               REFFLD(WAOL1/WAOLWKNR *LIBL/WAOL)
+     A            RTWAOLKSTCR               REFFLD(WAOL1/WAOLKSTC *LIBL/WAOL)
+     A            RTWAOLKDGRR               REFFLD(WAOL1/WAOLKDGR *LIBL/WAOL)
+     A            RTWAOLKDPLR               REFFLD(WAOL1/WAOLKDPL *LIBL/WAOL)
+     A            RTWAOLKDNRR               REFFLD(WAOL1/WAOLKDNR *LIBL/WAOL)
+     A            RTWAOLPRGRR               REFFLD(WAOL1/WAOLPRGR *LIBL/WAOL)
+     A            RTWAOLJAHRR               REFFLD(WAOL1/WAOLJAHR *LIBL/WAOL)
+     A            RTWAOLMONAR               REFFLD(WAOL1/WAOLMONA *LIBL/WAOL)
+     A            RTWAOLFR02R  256          REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* evt. weitere Felder nach Ermittlung
+     A*-------------------------------------------------------------------------
+     A            RTWAOLPLMGR               REFFLD(WAOL1/WAOLPLMG *LIBL/WAOL)
+     A            RTWAOLPLPRR               REFFLD(WAOL1/WAOLPLPR *LIBL/WAOL)
+     A            RTWAOLPDIMR               REFFLD(WAOL1/WAOLPDIM *LIBL/WAOL)
+     A            RTWAOLPLUMR               REFFLD(WAOL1/WAOLPLUM *LIBL/WAOL)
+     A            RTWAOLWACDR               REFFLD(WAOL1/WAOLWACD *LIBL/WAOL)
+     A            RTWAOLPLKZR               REFFLD(WAOL1/WAOLPLKZ *LIBL/WAOL)
+     A            RTWAOLFR03R  588          REFFLD(##FREI)

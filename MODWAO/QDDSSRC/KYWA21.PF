@@ -1,0 +1,23 @@
+     A**************************************************************************
+     A*  Copyright 2024 by    trend SWM EDV-Beratung GmbH & Co. KG             *
+     A*                       Jechtinger Straße 9                              *
+     A*                       DE 79111 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Preisdifferenz-Briefkasten - Kopf                                     *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: PH 29.11.2024 Case #03829427                                *
+     A*  Änderung: XX XX.XX.XXXX                                               *
+     A**************************************************************************
+     A                                      REF(WA21)
+     A          R KYWA211
+     A*-------------------------------------------------------------------------
+     A            KYWA21FIRMR               REFFLD(WA21FIRM)
+     A            KYWA21BLJJR               REFFLD(WA21BLJJ)
+     A            KYWA21BLNRR               REFFLD(WA21BLNR)
+     A            KYWA21BLPOR               REFFLD(WA21BLPO)
+     A            K$WA21FREI    30
+     A            K#WA21LOCKR               REFFLD(WA21LOCK)
+     A            K#WA21FIRMR               REFFLD(WA21FIRM)
+     A            K#WA21BLJJR               REFFLD(WA21BLJJ)
+     A            K#WA21BLNRR               REFFLD(WA21BLNR)
+     A            K#WA21BLPOR               REFFLD(WA21BLPO)

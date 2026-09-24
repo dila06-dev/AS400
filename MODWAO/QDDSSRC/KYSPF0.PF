@@ -1,0 +1,25 @@
+     A**************************************************************************
+     A*  Copyright 2001 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Schlüsselaufbau SPEDF0                                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: SZ 29.02.2012 Projekt 8260                                  *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R KYSPF01
+     A*-------------------------------------------------------------------------
+     A            KYSPF0N020R               REFFLD(SPEDF01/KUN020 *LIBL/SPEDF0)
+     A            K$SPF0FREI    30
+     A            K#SPF0LOCKR               REFFLD(##LOCK)
+     A            K#SPF0N020R               REFFLD(SPEDF01/KUN020 *LIBL/SPEDF0)
+     A            SPF0LOCK  R               REFFLD(##LOCK)
+     A            SPF0JNAM  R               REFFLD(##JNAM)
+     A            SPF0JDAT  R               REFFLD(##JDAT)
+     A            SPF0JZEI  R               REFFLD(##JZEI)
+     A            SPF0USER  R               REFFLD(##USER)
+     A            SPF0PROG  R               REFFLD(##PROG)
+     A            SPF0BIBL  R               REFFLD(##BIBL)

@@ -1,0 +1,47 @@
+2026-09-18-10.19.12.079243   18.09.2026   10.19.12
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host providers.deporvillage.tech, Adresse
+ 54.74.102.198 über Port 21 herzustellen.
+220 FTP Server ready.
+Anmelde-ID (gang) eingeben:
+331 Password required for dometic
+230 User dometic logged in
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> REM ***************************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP
+ eingeben.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 'SITE NAMEFMT' not understood
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Einen FTP-Unterbefehl eingeben.
+> cd /
+250 CWD command successful
+Einen FTP-Unterbefehl eingeben.
+> mdelete *
+229 Entering Extended Passive Mode (|||10418|)
+150 Opening ASCII mode data connection for file list
+226 Transfer complete
+250 DELE command successful
+Einen FTP-Unterbefehl eingeben.
+> APPEND DEPORVIL_S DEPORVILL-20260918101912.csv
+229 Entering Extended Passive Mode (|||10553|)
+150 Opening ASCII mode data connection for DEPORVILL-20260918101912.csv
+226 Transfer complete
+101710 Byte in 0.004 Sekunden übertragen. Übertragungsgeschwindigkeit 26037.760
+ KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.

@@ -1,0 +1,137 @@
+     A          R ORH00R1
+     A            ORH010         7S 0
+     A                                      TEXT('Mitglieds-Nr. Absender')
+     A                                      COLHDG('Mit' -
+     A                                      'glied ' -
+     A                                      'Abs.')
+     A                                      EDTCDE(Z)
+     A            ORH020         7S 0
+     A                                      TEXT('Mitglieds-Nr. Empfänger')
+     A                                      COLHDG('Mit' -
+     A                                      'glied' -
+     A                                      'Empf.')
+     A                                      EDTCDE(Z)
+     A            ORH030         7S 0
+     A                                      TEXT('Kunden-Nr. beim Empf.')
+     A                                      COLHDG('Kd.Nr.' -
+     A                                      'beim ' -
+     A                                      'Empf.')
+     A                                      EDTCDE(Z)
+     A            ORH040         7S 0
+     A                                      TEXT('Auftr.Nr. beim Abs.')
+     A                                      COLHDG('Auft.Nr.' -
+     A                                      'beim ' -
+     A                                      'Abs.')
+     A                                      EDTCDE(Z)
+     A            ORH050         5S 0
+     A                                      TEXT('Positions-Nr. beim Abs.')
+     A                                      COLHDG('Pos..Nr.' -
+     A                                      'beim ' -
+     A                                      'Abs.')
+     A                                      EDTCDE(Z)
+     A            ORH060         8S 0
+     A                                      TEXT('Datum JJJJMMTT')
+     A                                      COLHDG('Datum ' -
+     A                                      'JJJJMMTT')
+     A                                      EDTWRD('    .  .  ')
+     A            ORH070         6S 0
+     A                                      TEXT('Zeit')
+     A                                      COLHDG('Zeit')
+     A                                      EDTWRD('0 :  :  ')
+     A            ORH080        30A
+     A                                      TEXT('Bestellzeichen Abs.')
+     A                                      COLHDG('Bestell-' -
+     A                                      'zeichen' -
+     A                                      'Abs.')
+     A            ORH090         8S 0
+     A                                      TEXT('Termin JJJJMMTT')
+     A                                      COLHDG('Datum ' -
+     A                                      'Termin' -
+     A                                      'JJJJMMTT')
+     A                                      EDTWRD('    .  .  ')
+     A            ORH200         1A
+     A                                      TEXT('Kezi. abw. Vers.Adr')
+     A                                      COLHDG('Kezi' -
+     A                                      'Vers.' -
+     A                                      'Adr.')
+     A            ORH210        30A
+     A                                      TEXT('Vers.Adr.Name 1')
+     A                                      COLHDG('abw.' -
+     A                                      'Vers.Adr.' -
+     A                                      'Name 1')
+     A            ORH220        30A
+     A                                      TEXT('Vers.Adr.Name 2')
+     A                                      COLHDG('abw.' -
+     A                                      'Vers.Adr.' -
+     A                                      'Name 2')
+     A            ORH230        30A
+     A                                      TEXT('Vers.Adr.Name 3')
+     A                                      COLHDG('abw.' -
+     A                                      'Vers.Adr.' -
+     A                                      'Name 3')
+     A            ORH240        30A
+     A                                      TEXT('Vers.Adr.Strasse')
+     A                                      COLHDG('abw.' -
+     A                                      'Vers.Adr.' -
+     A                                      'Strasse')
+     A            ORH250         3A
+     A                                      TEXT('Vers.Adr. Land')
+     A                                      COLHDG('abw.' -
+     A                                      'Vers.Adr.' -
+     A                                      'Land')
+     A            ORH260         5S 0
+     A                                      TEXT('Vers.Adr. PLZ')
+     A                                      COLHDG('abw.' -
+     A                                      'Vers.Adr.' -
+     A                                      'PLZ')
+     A            ORH270        30A
+     A                                      TEXT('Vers.Adr. O r t')
+     A                                      COLHDG('abw.' -
+     A                                      'Vers.Adr.' -
+     A                                      'O r t')
+     A            ORH280        60A
+     A                                      TEXT('Kopf-Text  1')
+     A                                      COLHDG('Kopf-' -
+     A                                      'text' -
+     A                                      '1')
+     A            ORH290        60A
+     A                                      TEXT('Kopf-Text  2')
+     A                                      COLHDG('Kopf-' -
+     A                                      'text' -
+     A                                      '2')
+     A            ORH300        60A
+     A                                      TEXT('Kopf-Text  3')
+     A                                      COLHDG('Kopf-' -
+     A                                      'text' -
+     A                                      '3')
+     A            ORH310         2A
+     A                                      TEXT('Versandart')
+     A                                      COLHDG('Versandart')
+     A            ORH320        21A
+     A                                      TEXT('Kartentyp')
+     A                                      COLHDG('Kartentyp')
+     A            ORH330        16A
+     A                                      TEXT('Kartennummer')
+     A                                      COLHDG('Karten -
+     A                                      nummer')
+     A            ORH340         1A
+     A                                      TEXT('Teillieferung')
+     A                                      COLHDG('Teill. J/N')
+     A            ORH350        25A
+     A                                      TEXT('Karteninhaber')
+     A                                      COLHDG('Karten -
+     A                                      inhaber')
+     A            ORH360         7A
+     A                                      TEXT('Karten Gültigkeit')
+     A                                      COLHDG('Karten -
+     A                                      gültigkeit')
+     A            ORH370    R               REFFLD(AUFTRAGSWG FELDER)
+     A                                      TEXT('Auftragsherkunft')
+     A                                      COLHDG('Auft-' -
+     A                                      'Her-' -
+     A                                      'kunft')
+     A**    EDI  - Edifact-orders
+     A**    WWW  - Internet
+     A**    TPO  - Toolpartner-Organisation
+     A**    WAE  - WAECO-Verbund
+     A**

@@ -1,0 +1,38 @@
+     A**************************************************************************
+     A*  Copyright 2024 by    trend SWM EDV-Beratung GmbH & Co. KG             *
+     A*                       Jechtinger Straße 9                              *
+     A*                       DE 79111 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Preisdifferenz-Briefkasten-Position                                   *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: PH 29.11.2024 Case #03829427                                *
+     A*  Änderung: XX XX.XX.XXXX                                               *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R WA211
+     A*-------------------------------------------------------------------------
+     A            WA21LOCK  R               REFFLD(##LOCK)
+     A            WA21JNAM  R               REFFLD(##JNAM)
+     A            WA21JDAT  R               REFFLD(##JDAT)
+     A            WA21JZEI  R               REFFLD(##JZEI)
+     A            WA21USER  R               REFFLD(##USER)
+     A            WA21PROG  R               REFFLD(##PROG)
+     A            WA21BIBL  R               REFFLD(##BIBL)
+     A            WA21FIRM  R               REFFLD(##FIRM)
+     A            WA21BLJJ  R               REFFLD(##BLJJ)
+     A            WA21BLNR  R               REFFLD(##BLNR)
+     A            WA21BLPO  R    4S 0       REFFLD(##BLPO)
+     A            WA21TENR  R               REFFLD(##TENR)
+     A            WA21PREI  R               REFFLD(##PREI)
+     A            WA21PDIM  R               REFFLD(##PDIM)
+     A            WA21STK1  R               REFFLD(##KLPR)
+     A            WA21KAJJ  R               REFFLD(##KAJJ)
+     A            WA21KANR  R               REFFLD(##KANR)
+     A            WA21TLKZ       1A         COLHDG('Tol-Ü')
+     A                                      TEXT('Tol-Überschreitung')
+     A            WA21AWPZ  R               REFFLD(##AWPZ)
+     A            WA21AWWT      11S 2       COLHDG('Abw-absolut')
+     A                                      TEXT('Abweichung abs')
+     A            WA21TSTP  R               REFFLD(##TSTP)
+     A            WA21ERUS  R               REFFLD(##ERUS)
+     A            WA21FREI  R  100          REFFLD(##FREI)

@@ -1,0 +1,10 @@
+     A                                      UNIQUE
+     A          R ARTNRKF0
+     A            JAHR           4S 0       TEXT('JAHR')
+     A            LIEFNR         3A         TEXT('LIEFERANTENNUMMER')
+     A            ARTNR         15A         TEXT('ARTIKELNUMMER')
+     A            SCHEMA         2S 0       TEXT('KALKULATIONSSCHEMA')
+
+     A          K JAHR
+     A          K LIEFNR
+     A          K ARTNR

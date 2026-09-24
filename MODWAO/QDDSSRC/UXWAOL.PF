@@ -1,0 +1,24 @@
+     A**************************************************************************
+     A*  Copyright 2011 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Absatz/Umsatz-Statistik                                               *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: MG 24.08.2011 Projekt 7668, Planungssystem                  *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R UXWAOL1
+     A*
+     A            UXWAOLFIRMR               REFFLD(WAOL1/WAOLFIRM *LIBL/WAOL)
+     A            UXWAOLPLATR               REFFLD(WAOL1/WAOLPLAT *LIBL/WAOL)
+     A            UXWAOLWKNRR               REFFLD(WAOL1/WAOLWKNR *LIBL/WAOL)
+     A            UXWAOLKSTCR               REFFLD(WAOL1/WAOLKSTC *LIBL/WAOL)
+     A            UXWAOLKDGRR               REFFLD(WAOL1/WAOLKDGR *LIBL/WAOL)
+     A            UXWAOLKDPLR               REFFLD(WAOL1/WAOLKDPL *LIBL/WAOL)
+     A            UXWAOLKDNRR               REFFLD(WAOL1/WAOLKDNR *LIBL/WAOL)
+     A            UXWAOLPRGRR               REFFLD(WAOL1/WAOLPRGR *LIBL/WAOL)
+     A            UXWAOLJAHRR               REFFLD(WAOL1/WAOLJAHR *LIBL/WAOL)
+     A            UXWAOLMONAR               REFFLD(WAOL1/WAOLMONA *LIBL/WAOL)

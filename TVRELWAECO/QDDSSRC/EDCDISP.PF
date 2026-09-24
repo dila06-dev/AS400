@@ -1,0 +1,14 @@
+     A          R EDCDISPR
+      * :EDCDISPLAY
+     A            SCREEN         1S 0
+     A            RRN            5S 0
+     A            ARG           20A
+     A            SOLL           5S 0
+     A            IST            5S 0
+     A            DELAY          5S 0
+     A            AKTIV          1A
+     A            #DATE           L         TEXT('Date of transmissing')
+     A            #TIMESTAMP      Z         TEXT('TIMESTAMP')
+     A
+     A          K SCREEN
+     A          K RRN

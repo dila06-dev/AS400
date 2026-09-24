@@ -1,0 +1,9 @@
+winadmin   3veKhCMZ
+LCD GANG
+ascii
+NAMEFMT 0
+cd domains/dometic-group.com/public_ftp/dwuk/rcv
+APPEND INVOICES INVOICES.TXT
+DELETE UK20110303.TXT
+PUT INVOICES UK20110303.TXT
+quit

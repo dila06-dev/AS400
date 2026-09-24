@@ -1,0 +1,13 @@
+      * Physische Datei: IFAK
+      * ANLEGEDATUM: OKTOBER 2010
+      *SORT:        FIRMEN#, AUFTRAG# DES KUNDEN
+      * ÄNDERUNGEN:
+      * AUSSCHLUSS:  ...
+     A
+     A          R TEOS1                     PFILE(TEOS)
+     A                                      TEXT('TEOSSÄTZE')
+     A
+     A          K TEOSFIRM
+     A          K TEOSKLCD
+     A          K TEOSMM01
+     A          S TEOSKLCD                  CMP(EQ 'SKU ')

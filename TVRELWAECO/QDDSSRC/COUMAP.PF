@@ -1,0 +1,6 @@
+     A*****************************************************************
+     A          R COUNTRYR                  TEXT('COUNTRIES')
+     A            LND_CODE       3A         COLHDG('LOKATION')
+     A            ISO_CODE       3A         COLHDG('FIRMENNR')
+     A*****************************************************************
+     A          K LND_CODE

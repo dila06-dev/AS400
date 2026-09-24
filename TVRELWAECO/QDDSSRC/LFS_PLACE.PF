@@ -1,0 +1,62 @@
+     A          R LFS_PLACE
+      * :STOCK
+     A            LOCATION      10A
+     A            ITEM          15A
+     A            LADEM          3A
+     A            LFSL           9P 3
+     A            LFSH           9P 3
+     A            LFSB           9P 3
+     A            LFSQ           9P 3
+     A            ABSATZ        12P 3
+     A            PICKS         12P 3
+     A            FACH          50A
+      * :_____
+     A            LPKONZ         3A         COLHDG('KONZERN')
+     A            LPFIRM         3A         COLHDG('FIRMA')
+     A            LPORT          3A         COLHDG('LAGER- ORT')
+     A            LPBER          2A         COLHDG('LAGER- BER.')
+      * :_____
+     A            LPGNGE         4S 0       COLHDG('GANG-NR EINLAG')
+     A            LPGANG         4S 0       COLHDG('GANG- NR')
+     A            LPTRPA         4S 0       COLHDG('GANG-NR ÜBERG.PKT')
+     A            LPREG          4S 0       COLHDG('REGAL')
+     A            LPHOR          3S 0       COLHDG('HORIZ.')
+     A            LPVER          2S 0       COLHDG('VERT.')
+     A            LPRFZ         10A         COLHDG('REGAL- FAHRZEUG')
+     A            LPFACH         2S 0       COLHDG('FACH- GROESSE')
+     A            LPASEG         4S 0       COLHDG('GES.ANZ. SEGMENTE')
+     A            LPFSEG         4S 0       COLHDG('ANZ.FREIE SEGMENTE ')
+     A            LPELM          3A         COLHDG('EINGEL.LM L-PLATZ')
+     A            LPSM          20A         COLHDG('SEGMENTE')
+     A            LPBMST        12A         COLHDG('BELEGUNGS MUSTER')
+     A            STATUS         1A         COLHDG('STATUS')
+     A            TSTAMP          Z         COLHDG('TIMESTAMP')
+      * :_____
+     A            BMIDEN        28A         COLHDG('ARTIKELNUMMER')
+     A            BMLENR         9S 0       COLHDG('LADE- EINHEIT')
+     A            BMZULE         9S 0       COLHDG('ZUGANGS- LADEEINHEIT')
+     A            BMBST1        25A         COLHDG('BESTELL-NR')
+     A            BMBSTP         6S 0       COLHDG('BESTELL- POS')
+     A            BMWENR        10A         COLHDG('WE-NUMMER')
+     A            BMWEPO         6S 0       COLHDG('WE-POS')
+     A            BMANR1        25A         COLHDG('AUFTRAGS-NR. KUNDE')
+     A            BMANRP         6S 0       COLHDG('AUFTRAGS-NR.KD POS')
+     A            BMTLM          3A         COLHDG('TRÄGER- LADEMITTEL')
+     A            BMBMEN        11S 3       COLHDG('BESTANDSMENGE')
+     A            BMVMEN        11S 3       COLHDG('VERFÜGBARE MENGE')
+      * :_____
+     A            AKTBMKONZ      3A         COLHDG('KONZERN      ')
+     A            AKTBMFIRM      3A         COLHDG('FIRMA        ')
+     A            AKTBMORT       3A         COLHDG('LAGER- ORT   ')
+     A            AKTBMBER       2A         COLHDG('LAGER- BER.  ')
+     A            AKTBMGANG      4S 0       COLHDG('GANG- NR     ')
+     A            AKTBMREG       4S 0       COLHDG('REGAL        ')
+     A            AKTBMHOR       3S 0       COLHDG('HORIZ.       ')
+     A            AKTBMVER       2S 0       COLHDG('VERT.        ')
+     A            AKTBMSEGM      4S 0       COLHDG('SEG- MENT    ')
+     A            AKTBMIDEN     28A         COLHDG('ARTIKELNUMMER')
+     A            AKTBMLM        3A         COLHDG('LADE- MITTEL ')
+     A            AKTBMABKZ      1A         COLHDG('ANBRUCH- KZ  ')
+     A            AKTBMBMEN     11S 3       COLHDG('BESTANDSMENGE')
+     A
+     A*

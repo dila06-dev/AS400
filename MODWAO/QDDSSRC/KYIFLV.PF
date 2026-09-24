@@ -1,0 +1,23 @@
+     A**************************************************************************
+     A*  Copyright 2011 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------- *
+     A*  Schnittstelle Spedition Files aus DIR                                 *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: VU 05.08.2011 Projekt 7195                                  *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(IFLV)
+     A          R KYIFLV1
+     A*-------------------------------------------------------------------------
+     A            KYIFLVFIRMR               REFFLD(IFLVFIRM)
+     A            KYIFLVSTATR               REFFLD(IFLVSTAT)
+     A            KYIFLVNAMER               REFFLD(IFLVNAME)
+     A            KYIFLVDATNR               REFFLD(IFLVDATN)
+     A            K$IFLV        30          TEXT('Freifeld')
+     A            K#IFLVLOCKR               REFFLD(IFLVLOCK)
+     A            K#IFLVFIRMR               REFFLD(IFLVFIRM)
+     A            K#IFLVSTATR               REFFLD(IFLVSTAT)
+     A            K#IFLVNAMER               REFFLD(IFLVNAME)

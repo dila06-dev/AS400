@@ -1,0 +1,325 @@
+     A*%%TS  SD  20161124  152749  GANG        REL-V7R2M0  5770-WDS
+     A*------------------------------------------------------------------------
+     A*GANG, MANFRED                                                  ---------
+     A*-------------                                                  ---------
+     A*VARIABLER BILDSCHIRMDEFINITION DS3/DS4                         ---------
+     A*WINDOW-FUNKTION                                                ---------
+     A*MESSAGES ÜBER SUBFILE                                          ---------
+     A*BERECHTIGUNGSPLAUSIBILITÄT                                     ---------
+     A*------------------------------------------------------------------------
+     A*%%EC
+     A                                      DSPSIZ(24 80 *DS3                  -
+     A                                             27 132 *DS4)
+     A                                      CHGINPDFT
+     A                                      PRINT
+     A  35                                  CF01(01)
+     A  82                                  CF02(02)
+     A                                      CA03(03)
+     A                                      CF04(04)
+     A                                      CF05(05)
+     A                                      CF10(10)
+     A                                      CF16(16)
+     A  83                                  CF06(06)
+     A  36                                  CF07(07)
+     A  36                                  CF08(08)
+     A  40                                  CF09(09)
+     A  37                                  CF11(11)
+     A                                      CA12(12)
+     A  82
+     AO 83                                  CA14(14)
+     A  83                                  CF15(15)
+     A  39                                  CA17(17)
+     A  39                                  CA18(18)
+     A  38                                  CA19(19)
+     A  38                                  CA20(20)
+     A  85                                  CF21(21)
+     A  87                                  CF22(22)
+     A  84                                  CF23(23)
+     A  29                                  CF24(24)
+     A                                      ROLLUP(99)
+     A                                      ROLLDOWN(99)
+     A                                      HELP(01)
+     A                                      VLDCMDKEY(99)
+     A*------------------------------------------------------------------------
+     A*PSEUDO-SATZ                                                    ---------
+     A*------------------------------------------------------------------------
+     A          R KHT001D0
+     A*%%TS  SD  19940626  083756  GANG        REL-V2R2M0  5738-PW1
+     A                                      TEXT('Pseudo-Satz')
+     A                                      ASSUME
+     A                                      OVERLAY
+     A  33                                  DSPMOD(*DS4)
+     A                                 24 80' '
+     A  *DS4                           27132
+     A*------------------------------------------------------------------------
+     A*KOPFBEREICH-D1                                                 ---------
+     A*------------------------------------------------------------------------
+     A          R KHT001D1
+     A*%%TS  SD  20161018  161545  GANG        REL-V7R2M0  5770-WDS
+     A  *DS3                                WINDOW(&§§YP &§§XP 18 70)
+     A  *DS4                                WINDOW(&§§YP &§§XP 18 70)
+     A                                      TEXT('Window')
+     A                                      RTNCSRLOC(&§§CRR &§§CRF &§§CRP)
+     A  33                                  DSPMOD(*DS4)
+     A                                      CSRLOC(§§CRLN     §§CRCL)
+     A                                      OVERLAY
+     A                                      WDWBORDER((*DSPATR RI) (*CHAR '    -
+     A                                          '))
+     A            §§XP           3S 0P
+     A            §§YP           2S 0P
+     A            §§CRLN         3S 0H
+     A            §§CRCL         3S 0H
+     A            §§CRR         10A  H
+     A            §§CRF         10A  H
+     A            §§CRP          4S 0H
+     A            §§§JOB        10A  O  1  1TEXT('Jobname')
+     A                                      COLOR(BLU)
+     A  82
+     AO 83
+     AO 84                              1 27' KHT - Multiscan  '
+     A                                      DSPATR(HI)
+     A                                      DSPATR(RI)
+     A                                  1 28' KHT - Multiscan  '
+     A                                      DSPATR(HI)
+     A                                      DSPATR(RI)
+     A            §§§PGM        10A  O  1 61TEXT('Programmname')
+     A                                      COLOR(BLU)
+     A                                  2  1USER
+     A                                      COLOR(BLU)
+     A            LDADTD         8Y 0O  2 61EDTWRD('  .  .    ')
+     A                                      COLOR(BLU)
+     A*------------------------------------------------------------------------
+     A*FUßBEREICH D2  WINDOWDEFINTION                                 ---------
+     A*------------------------------------------------------------------------
+     A          R KHT001D2
+     A*%%TS  SD  20161018  161545  GANG        REL-V7R2M0  5770-WDS
+     A  *DS3                                WINDOW(KHT001D1)
+     A  *DS4                                WINDOW(KHT001D1)
+     A                                      INVITE
+     A  33                                  DSPMOD(*DS4)
+     A                                      OVERLAY
+     A            D2FT01        60A  O 16  1COLOR(BLU)
+     A*------------------------------------------------------------------------
+     A*VERARBEITUNGSSATZ-D3                                           ---------
+     A*------------------------------------------------------------------------
+     A          R KHT001D3
+     A*%%TS  SD  20161124  152749  GANG        REL-V7R2M0  5770-WDS
+     A  *DS3                                WINDOW(KHT001D1)
+     A  *DS4                                WINDOW(KHT001D1)
+     A                                      RTNCSRLOC(&§§CRR &§§CRF &§§CRP)
+     A                                      INVITE
+     A  33                                  DSPMOD(*DS4)
+     A                                      OVERLAY
+     A            §§CRR         10A  H
+     A            §§CRF         10A  H
+     A            §§CRP          4S 0H
+     A            S1F1RR        15S 0H
+     A            §§O            1A  P
+     A*****       §§AUSGABE      1A  P
+     A            §§TENR         1A  P
+     A            §§QUAN         1A  P
+     A            §§EANR         1A  P
+     A            §§LANG         1A  P
+     A            §§BREI         1A  P
+     A            §§HOHE         1A  P
+     A            §§GWBR         1A  P
+     A            §§GWNT         1A  P
+     A            §§LM           1A  P
+     A            §§FKT          1A  P
+     A            XXEANR         1A  P
+     A            XXQUAN         1A  P
+     A            XXLANG         1A  P
+     A            XXBREI         1A  P
+     A            XXHOHE         1A  P
+     A            XXGWBR         1A  P
+     A            XXGWNT         1A  P
+     A            XXLM           1A  P
+     A            D3FKTHID       3A  H
+     A            D3TENRHID     15A  H
+     A*------------------------------                                 ---------
+     A            D3LCDDIV       2A  H
+     A            D3LTECU5      10A  H
+     A            D3LPRNBR       3S 0H
+     A*------------------------------                                 ---------
+     A            H1LCDDIV       2A  H
+     A            H1LCDORD       6A  H
+     A            H1LTECU5      10A  H
+     A            H1LPRNBR       3S 0H
+     A*------------------------------                                 ---------
+     A            H3OPT          1A  H
+     A                                  3 63TIME
+     A                                      COLOR(BLU)
+     A            D3TEXT        60A  B  4  1DSPATR(&§§O)
+     A                                  5  1'Funktion:'
+     A            D3FKT          3A  B  5 13
+     A  65                                  DSPATR(PC)
+     A  65                                  DSPATR(HI)
+     A                                      DSPATR(&§§FKT)
+     A            D3FKTB        54A  O  5 17
+     A  65                                  DSPATR(PC)
+     A  65                                  DSPATR(HI)
+     A                                      COLOR(BLU)
+     A                                  6  1'Artikel:  '
+     A            D3TENR        15A  B  6 13
+     A  64                                  DSPATR(PC)
+     A                                      DSPATR(&§§TENR)
+     A  64                                  DSPATR(HI)
+     A                                  6 35'Werte LFS'
+     A                                  6 56'Werte Trend'
+     A                                  7  1'EAN:'
+     A            D3EANR        15A  B  7 13
+     A  66                                  DSPATR(PC)
+     A                                      DSPATR(&§§EANR)
+     A  66                                  DSPATR(HI)
+     A            TZEAN         15A  O  7 35
+     A  66                                  DSPATR(PC)
+     A                                      DSPATR(&XXEANR)
+     A  66                                  DSPATR(HI)
+     A            TEEANR        15A  O  7 56
+     A  66                                  DSPATR(PC)
+     A                                      DSPATR(&XXEANR)
+     A  66                                  DSPATR(HI)
+     A                                  8  1'Menge:'
+     A            D3QUAN        11Y 2B  8 13DSPATR(&§§QUAN)
+     A  66                                  DSPATR(PC)
+     A  66                                  DSPATR(HI)
+     A                                      EDTCDE(3)
+     A            ZTZQ          11Y 2O  8 35DSPATR(&XXQUAN)
+     A  66                                  DSPATR(PC)
+     A  66                                  DSPATR(HI)
+     A                                      EDTCDE(3)
+     A            TEQUAN        11Y 2O  8 56DSPATR(&XXQUAN)
+     A  66                                  DSPATR(PC)
+     A  66                                  DSPATR(HI)
+     A                                      EDTCDE(3)
+     A                                  9  1'Länge:'
+     A            D3LANG        11Y 2B  9 13DSPATR(&§§LANG)
+     A  66                                  DSPATR(PC)
+     A  66                                  DSPATR(HI)
+     A                                      EDTCDE(3)
+     A                                  9 26'cm'
+     A            TZVLL         11Y 2O  9 35DSPATR(&XXLANG)
+     A  66                                  DSPATR(PC)
+     A  66                                  DSPATR(HI)
+     A                                      EDTCDE(3)
+     A                                  9 48'cm'
+     A            TELANG        11Y 2O  9 56DSPATR(&XXLANG)
+     A  66                                  DSPATR(PC)
+     A  66                                  DSPATR(HI)
+     A                                      EDTCDE(3)
+     A                                  9 69'cm'
+     A                                 10  1'Breite:'
+     A            D3BREI        11Y 2B 10 13DSPATR(&§§BREI)
+     A  66                                  DSPATR(PC)
+     A  66                                  DSPATR(HI)
+     A                                      EDTCDE(3)
+     A                                 10 26'cm'
+     A            TZVLB         11Y 2O 10 35DSPATR(&XXBREI)
+     A  66                                  DSPATR(PC)
+     A  66                                  DSPATR(HI)
+     A                                      EDTCDE(3)
+     A                                 10 48'cm'
+     A            TEBREI        11Y 2O 10 56DSPATR(&XXBREI)
+     A  66                                  DSPATR(PC)
+     A  66                                  DSPATR(HI)
+     A                                      EDTCDE(3)
+     A                                 10 69'cm'
+     A                                 11  1'Höhe:'
+     A            D3HOHE        11Y 2B 11 13DSPATR(&§§HOHE)
+     A  66                                  DSPATR(PC)
+     A  66                                  DSPATR(HI)
+     A                                      EDTCDE(3)
+     A                                 11 26'cm'
+     A            TZVLH         11Y 2O 11 35DSPATR(&XXHOHE)
+     A  66                                  DSPATR(PC)
+     A  66                                  DSPATR(HI)
+     A                                      EDTCDE(3)
+     A                                 11 48'cm'
+     A            TEHOHE        11Y 2O 11 56DSPATR(&XXHOHE)
+     A  66                                  DSPATR(PC)
+     A  66                                  DSPATR(HI)
+     A                                      EDTCDE(3)
+     A                                 11 69'cm'
+     A                                 12  1'BrtGewicht:'
+     A            D3GWBR        11Y 2B 12 13DSPATR(&§§GWBR)
+     A  66                                  DSPATR(PC)
+     A  66                                  DSPATR(HI)
+     A                                      EDTCDE(3)
+     A                                 12 26'kg'
+     A            TZBRUT        11Y 2O 12 35DSPATR(&XXGWBR)
+     A  66                                  DSPATR(PC)
+     A  66                                  DSPATR(HI)
+     A                                      EDTCDE(3)
+     A                                 12 48'kg'
+     A            TEGWBR        11Y 2O 12 56DSPATR(&XXGWBR)
+     A  66                                  DSPATR(PC)
+     A  66                                  DSPATR(HI)
+     A                                      EDTCDE(3)
+     A                                 12 69'kg'
+     A                                 13  1'NetGewicht:'
+     A            D3GWNT        11Y 2B 13 13DSPATR(&§§GWNT)
+     A  66                                  DSPATR(PC)
+     A  66                                  DSPATR(HI)
+     A                                      EDTCDE(3)
+     A                                 13 26'kg'
+     A            TZNETT        11Y 2O 13 35DSPATR(&XXGWNT)
+     A  66                                  DSPATR(PC)
+     A  66                                  DSPATR(HI)
+     A                                      EDTCDE(3)
+     A                                 13 48'kg'
+     A            TEGWNT        11Y 2O 13 56DSPATR(&XXGWNT)
+     A  66                                  DSPATR(PC)
+     A  66                                  DSPATR(HI)
+     A                                      EDTCDE(3)
+     A                                 14  1'Lademittel:'
+     A            D3LM           3A  B 14 13
+     A  66                                  DSPATR(PC)
+     A                                      DSPATR(&§§LM)
+     A  66                                  DSPATR(HI)
+     A            TZLM           3A  O 14 35
+     A  66                                  DSPATR(PC)
+     A                                      DSPATR(&XXLM)
+     A  66                                  DSPATR(HI)
+     A            TELM           3A  O 14 56
+     A  66                                  DSPATR(PC)
+     A                                      DSPATR(&XXLM)
+     A  66                                  DSPATR(HI)
+     A                                 15  1'Übergabe an die Systeme mit F02:'
+     A***         D3AUSGABE      1A  B 15 35DSPATR(&§§AUSGABE)
+     A            D3AUSGABE      1A  B 15 35
+     A                                      DSPATR(ND)
+     A                                      DSPATR(PR)
+     A                                 13 69'kg'
+     A*------------------------------------------------------------------------
+     A*MESSAGE-SUBFILE                                                ---------
+     A*------------------------------------------------------------------------
+     A* NACHRICHTEN-SUBFILE
+     A          R MSGSFL                    SFL
+     A*%%TS  SD  19980717  135441  GANG        REL-V3R2M0  5763-PW1
+     A                                      TEXT('Nachrichten-Subfile')
+     A  *DS3                                SFLMSGRCD(17)
+     A  *DS4                                SFLMSGRCD(17)
+     A            §§§MKY                    SFLMSGKEY
+     A            §§§PGQ                    SFLPGMQ(10)
+     A*
+     A*-------------------------------------------------------------------------
+     A*
+     A          R MSGSFLC                   SFLCTL(MSGSFL)
+     A*%%TS  SD  19980717  131740  GANG        REL-V3R2M0  5763-PW1
+     A  33                                  DSPMOD(*DS4)
+     A                                      OVERLAY
+     A                                      PUTOVR
+     A                                      OVRDTA
+     A                                      OVRATR
+     A                                      SFLDSP
+     A                                      SFLDSPCTL
+     A                                      SFLINZ
+     A  99
+     AON99                                  SFLEND
+     A  *DS3                                SFLSIZ(0002)
+     A  *DS4                                SFLSIZ(0002)
+     A  *DS3                                SFLPAG(0001)
+     A  *DS4                                SFLPAG(0001)
+     A  *DS3                                WINDOW(KHT001D1)
+     A  *DS4                                WINDOW(KHT001D1)
+     A            §§§PGQ                    SFLPGMQ(10)

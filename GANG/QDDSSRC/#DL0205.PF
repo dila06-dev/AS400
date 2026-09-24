@@ -1,0 +1,23 @@
+     A**                                    UNIQUE
+     A          R #DL0100R
+     A            KUNDE          5S 0       TEXT(' ')
+     A            NAME_1        25A         TEXT(' ')
+     A            NAME_2        25A         TEXT(' ')
+     A            NAME_3        25A         TEXT(' ')
+     A            PLZ            5S 0       TEXT(' ')
+     A            ORT           25A         TEXT(' ')
+     A            VT1            2S 0       TEXT(' ')
+     A            BRANCHE        2S 0       TEXT(' ')
+     A            KGRUPPE        2S 0       TEXT(' ')
+     A            MC             7A         TEXT(' ')
+     A            STATNR         3A         TEXT(' ')
+     A            LIEF           3A         TEXT(' ')
+     A            ARTIKEL       15A         TEXT(' ')
+     A            ARTBEZEICH    30A         TEXT(' ')
+     A            ART_GRP        3A         TEXT(' ')
+     A            PREIS1         9S 2       TEXT(' ')
+     A            PREIS2         9S 2       TEXT(' ')
+     A**                                    UNIQUE
+     A            ABSATZVJ      13S 2       TEXT(' ')
+     A            UMSATZVJ      13S 2       TEXT(' ')
+     A            ROHVJ         13S 2       TEXT(' ')

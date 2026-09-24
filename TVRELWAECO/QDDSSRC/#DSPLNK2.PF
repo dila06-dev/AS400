@@ -1,0 +1,16 @@
+     A          R #DSPLNKR
+     A
+     A            A              1A         TEXT('ZEICHEN')
+     A            P              8P 2       TEXT('GEPACKTE DEZIMALE')
+     A            S              4S 2       TEXT('GEZONTE DEZIMALE')
+     A            B              5B         TEXT('BINÄRE DATEN')
+     A            F              8F 2       TEXT('GLEITKOMMADATEN')
+     A            L               L         TEXT('DATUMSDATEN')
+     A            T               T         TEXT('ZEITDATEN')
+     A            Z               Z         TEXT('ZEITMARKENDATEN')
+     A            H              1H         TEXT('HEXADEZIMALE DATEN')
+     A            J              4J         TEXT('DBCS-ONLY-DATEN')
+     A            E              4E         TEXT('DBCS-EITHER-DATEN')
+     A            O              4O         TEXT('DBCS-OPEN-DATEN')
+     A            G              8G         TEXT('DBCS-GRAFIKDATEN')
+     A            B5             15         TEXT('BINÄRZEICHENDATEN')

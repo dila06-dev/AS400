@@ -1,0 +1,16 @@
+     A                                      UNIQUE
+     A          R KALKSZUF1
+     A            JAHR           4S 0       TEXT('JAHR')
+     A            WINSTATNR      3A         TEXT('WAECO STATNR')
+     A            DOMSTATNR      3A         TEXT('DOMETIC STATNR')
+     A            BESCHREIB1    50A         TEXT('BESCHREIBUNG1')
+     A            BESCHREIB2    50A         TEXT('BESCHREIBUNG2')
+     A            KALKSCHEMA     2S 0       TEXT('KALKULATIONSSCHEMA')
+     A            VERANTWORT    50A         TEXT('VERANTWORTLICHER')
+     A            WDKZ           1A         TEXT('WAECO DOMETIC KZ')
+     A            LIEFERANT     10A         TEXT('LIEFERANT')
+
+     A          K JAHR
+     A          K WINSTATNR
+     A          K LIEFERANT
+     A          K DOMSTATNR

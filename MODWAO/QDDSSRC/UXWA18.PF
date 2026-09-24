@@ -1,0 +1,17 @@
+     A**************************************************************************
+     A*  Copyright 2024 by    trend SWM EDV-Beratung GmbH & Co. KG             *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Jechtinger Straße 9                              *
+     A*                       DE 79111 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Belegübernahme Toleranzdefinition                                     *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: PH 29.11.2024 Case #03829427                                *
+     A*  Änderung: XX XX.XX.XXXX                                               *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R UXWA181
+     A*
+     A            UXWA18FIRMR               REFFLD(WA181/WA18FIRM *LIBL/WA18)
+     A            UXWA18LFNRR               REFFLD(WA181/WA18LFNR *LIBL/WA18)
+     A            UXWA18URLDR               REFFLD(WA181/WA18URLD *LIBL/WA18)

@@ -1,0 +1,41 @@
+     A          R NAVLINER
+     A
+      * :HeaderInfos
+     A            EDIL010        7A
+     A                                      TEXT('Mitglieds-Nr. Absender')
+     A            EDIL020        7A
+     A                                      TEXT('Mitglieds-Nr. Empfänger')
+     A            EDIL030        7A
+     A                                      TEXT('Kunden-Nr. beim Empf.')
+     A            EDIL040        7A
+     A                                      TEXT('Auftr.Nr. beim Abs.')
+     A            EDIL050        5A
+     A                                      TEXT('Positions-Nr. beim Abs.')
+     A            EDIL060        8A
+     A                                      TEXT('Datum JJJJMMTT')
+     A            EDIL070        6A
+     A                                      TEXT('Zeit')
+     A            EDIL210        3A
+     A                                      TEXT('Art.Nr.-Präfix Empfänger')
+     A            EDIL220       15A
+     A                                      TEXT('Art.Nr.-beim   Empfänger')
+     A            EDIL230       40A
+     A                                      TEXT('Art.Nr.-beim   Absender')
+     A            EDIL240        8A
+     A                                      TEXT('Mengen  Bestellt')
+     A            EDIL250        1A
+     A                                      TEXT('Kezi. Rückstand')
+     A            EDIL300       20A
+     A                                      TEXT('Art.Nr.-beim   Kunden')
+     A            EDIL310       30A
+     A                                      TEXT('Art.Bez. beim Kunden')
+     A            EDIL320        2A
+     A                                      TEXT('Auftragsstatus')
+     A            EDIL330       10A
+     A                                      TEXT('Bediener')
+     A            EDIL340        6A
+     A                                      TEXT('WAECO ANR')
+     A            EDIL350        3A
+     A                                      TEXT('WAECO APOS')
+     A            EDIL999        3A
+     A                                      TEXT('REST      ')

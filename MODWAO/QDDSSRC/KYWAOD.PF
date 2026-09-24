@@ -1,0 +1,21 @@
+     A**************************************************************************
+     A*  Copyright 2009 by    trend SWM                                        *
+     A*                       Verwaltungs GmbH                                 *
+     A*                       Ziegelhofstraße 210a                             *
+     A*                       DE 79110 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Margenmatrix                                                          *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: HR 03.02.2011 Projekt 7120 für Kunde Dometec                *
+     A*  Änderung: XX XX.XX.XXXX                                               *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(WAOD)
+     A          R KYWAOD1
+     A*-------------------------------------------------------------------------
+     A            KYWAODFIRMR               REFFLD(WAODFIRM)
+     A            KYWAODRSBER               REFFLD(WAODRSBE)
+     A            K$WAODFREI    30
+     A            K#WAODLOCKR               REFFLD(WAODLOCK)
+     A            K#WAODFIRMR               REFFLD(WAODFIRM)
+     A            K#WAODRSBER               REFFLD(WAODRSBE)

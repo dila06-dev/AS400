@@ -1,0 +1,20 @@
+     A**************************************************************************
+     A*  Copyright 2009 by    trend SWM                                        *
+     A*                       Verwaltungs GmbH                                 *
+     A*                       Ziegelhofstraße 210a                             *
+     A*                       DE 79110 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Skiplot-Zähler                                                        *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: RE 20.08.2013 Projekt 9609                                  *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(WAOT)
+     A          R KYWAOT1
+     A*-------------------------------------------------------------------------
+     A            KYWAOTFIRMR               REFFLD(WAOTFIRM)
+     A            KYWAOTTENRR               REFFLD(WAOTTENR)
+     A            K$WAOTFREI    30
+     A            K#WAOTLOCKR               REFFLD(WAOTLOCK)
+     A            K#WAOTFIRMR               REFFLD(WAOTFIRM)
+     A            K#WAOTTENRR               REFFLD(WAOTTENR)

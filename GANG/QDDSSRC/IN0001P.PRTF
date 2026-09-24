@@ -1,0 +1,119 @@
+     A*%%***********************************************************************
+     A*%%TS  RD  20000523  125240  GANG        REL-V4R2M0  5769-PW1
+     A*%%REFERENZDATEI                                                        
+     A*%%SPOOLATTRIBUTEN SPOOLBREITE 132                                      
+     A*%%                SPOOLLÄNGE   96 WENN OPTION 2 STANDARD/OVRPTF        
+     A*%%                OVRFLW       67                                      
+    A*%%DRUCKATTRIBUTE FÜR LASERDRUCKER OHNE FWL-FORMULAR     OPTION 1
+     A*%%***********************************************************************
+     A*%% KEINE   R E F E R E N Z           REF(BAB6011)
+     A          R ESCAPER
+     A*%%***********************************************************************
+     A                                      SKIPB(001)
+     A N98        ESCAPE       132A        1
+     A N98                                  SPACEA(001)
+     A                                      SKIPB(001)
+     A*%%***********************************************************************
+    A*%% DRUCKATTRIBUTE FÜR LASERDRUCKER MIT FWL-FORMULAR     OPTION 2
+     A*%%***********************************************************************
+     A          R FORMULAR
+     A            §SEQ1        132A     1  1
+     A            §SEQ2        132A     2  1
+     A            §SEQ3        132A     3  1
+     A            §SEQ4        116A     4  1
+     A*%%***********************************************************************
+     A*%%DRUCKATTRIBUTE FÜR FWL-FORMULAR LEERZEILE                            
+     A*%%***********************************************************************
+     A          R LEERZLER
+     A                                      SPACEB(001)
+     A*%%***********************************************************************
+    A*%% PROGRAMMSPEZIFISCHER ÜBERSCHRIFTENBEREICH            OPTION 3
+     A*%%KOPFFORMATBEREICH 132 STELLIG FÜR ERSTE DRUCKDATEIERÖFFNUNG          
+     A*%%***********************************************************************
+     A          R FWLH02D1
+     A                                      SKIPB(001)
+     A            D1FLIN       115         1
+     A            D1TVTL         4       117
+     A            D1VTL         10       123
+     A                                      SPACEA(001)
+     A            D1TSYS        10         1
+     A            D1SYS          8        10
+     A                                    19
+     A                                      'I'
+     A            D1H1          95        20
+     A                                   115
+     A                                      'I'
+     A            D1TDAT         6       117
+     A                                   125
+     A                                      DATE
+     A                                      EDTCDE(Y)
+     A                                      SPACEA(001)
+     A            D1TDOK        10         1
+     A            D1DOK          8        10
+     A                                    19
+     A                                      'I'
+     A            D1H2          95        20
+     A                                   115
+     A                                      'I'
+     A            D1TTIM         6       117
+     A N98                               125
+     A                                      TIME
+     A                                      SPACEA(001)
+     A            D1TPGM        10         1
+     A            D1PGM          8        10
+     A                                    19
+     A                                      'I'
+     A            D1H3          95        20
+     A                                   115
+     A                                      'I'
+     A            D1TPAG         6       117
+     A                                    +6
+     A                                      PAGNBR
+     A                                      EDTCDE(3)
+     A                                      SPACEA(001)
+     A            D1LLIN       132         1
+     A*%%***********************************************************************
+     A*%%BEI IPDS KANN CHRSIZ VERWENDET WERDEN (PSF/400 ERFORDERLICH), *********
+     A*%%BEI AFPDS GIBTS NUR FONT.                                     *********
+     A*%%***********************************************************************
+     A          R LINE
+      *               SONORAN SERIF 12P
+     A            INPUT         35A         POSITION(0.20 .50)
+     A                                      FONT(2304)
+     A                                      CHRSIZ(2.0 2.0)
+     A            OUTPUT        35A         POSITION(0.37 .60)
+     A                                      FONT(2304)
+     A                                      CHRSIZ(2.0 2.0)
+     A*%%***********************************************************************
+    A*%% PROGRAMMSPEZIFISCHER ÜBERSCHRIFTENBEREICH
+     A*%%***********************************************************************
+     A          R QM0001D1
+     A                                      SPACEB(002)
+     A            D1U1         132         1
+     A                                      SPACEA(001)
+     A            D1U2         132         1
+     A                                      SPACEA(001)
+     A*%%***********************************************************************
+     A*%%VARIABLER DRUCKBEREICH                                               
+     A*%%***********************************************************************
+     A          R QM0001D2
+     A                                      SPACEB(001)
+     A            D2AUSGABE    132A      001
+     A*%%***********************************************************************
+     A*%%VARIABLER DRUCKBEREICH                                               
+     A*%%***********************************************************************
+     A          R QM0001D3
+     A                                      SPACEB(001)
+     A            D2AUSGABE    132A      001
+     A*%%***********************************************************************
+     A*%%SELEKTIONSPARAMETER                                                  
+     A*%%***********************************************************************
+     A          R QM0001D4
+     A                                      SPACEB(002)
+     A            C1FIRMAN       1A      013
+     A                                   015'(F)irma:'
+     A            C1FIRMA        3S 0    024EDTCDE(3)
+     A            C1FIRMABEZ    25A      028
+     A                                   055'Speicher:'
+     A
+     A*%%***********************************************************************

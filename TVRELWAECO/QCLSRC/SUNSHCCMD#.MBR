@@ -1,0 +1,8 @@
+sunshine  SuN1311!
+LCD TVRELWAECO
+ascii
+NAMEFMT 0
+rem cd /transfer/incoming
+CD /de411
+APPEND SUNSHINE_C ORDERINPUT.TXT
+QUIT

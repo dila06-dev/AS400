@@ -1,0 +1,39 @@
+     A**************************************************************************
+     A*  Copyright 2010 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Etiketten Boll/Unitrans                                               *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: SZ 19.01.2011 Projekt Vertrieb                              *
+     A*                                                                        *
+     A**************************************************************************
+     A          R WAOA1
+     A*-------------------------------------------------------------------------
+     A            TXT010         2S 0
+     A                                      COLHDG('Ben')
+     A                                      TEXT('Benutzer')
+     A            TXT020         4S 0
+     A                                      COLHDG('Brfnr')
+     A                                      TEXT('Briefnr')
+     A            TXT030         4S 0
+     A                                      COLHDG('Zlnr')
+     A                                      TEXT('Zeilennr')
+     A            TXT040         2S 0
+     A                                      COLHDG('Pos')
+     A                                      TEXT('Position')
+     A            TXT050       146A
+     A                                      COLHDG('Text')
+     A                                      TEXT('Text')
+     A            TXT060         1A
+     A                                      COLHDG('Fill')
+     A                                      TEXT('Filler')
+     A            TXT999         1A
+     A                                      COLHDG('St')
+     A                                      TEXT('Status')
+     A*
+     A          K TXT010
+     A          K TXT020
+     A          K TXT030
+     A          K TXT040

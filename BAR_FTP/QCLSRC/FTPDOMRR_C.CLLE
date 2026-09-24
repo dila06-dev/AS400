@@ -1,0 +1,25 @@
+/*-------------------------------------------------*/
+/* FTP Dometic Rückrufaktion-Daten abholen         */
+/*-------------------------------------------------*/
+             PGM
+
+             OVRDBF     FILE(INPUT) TOFILE(BAR_FTP/QCLSRC) +
+                          MBR(FTPDOMRCMD)
+             OVRDBF     FILE(OUTPUT) TOFILE(BAR_FTP/QCLSRC) +
+                          MBR(FTPDOMRLOG)
+
+             CLRPFM     FILE(BAR_FTP/QCLSRC) MBR(FTPDOMRLOG)
+
+/* FTP-Befehl ausführen */
+             FTP        RMTSYS('ftp.dometic-group.com')
+
+             DLTOVR *ALL LVL(*JOB)
+
+             CPYFRMIMPF FROMSTMF('/domrra/export.csv') +
+                          TOFILE(BAR_VERT/CUSTOMER) +
+                          MBROPT(*REPLACE) RCDDLM(*CRLF) +
+                          STRDLM(*DBLQUOTE) STRESCCHR('\') +
+                          RMVBLANK(*LEADING) FLDDLM(';') +
+                          DATSEP('-') RPLNULLVAL(*FLDDFT)
+
+ ENDE:       ENDPGM

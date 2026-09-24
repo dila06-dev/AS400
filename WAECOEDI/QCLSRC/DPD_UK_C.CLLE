@@ -1,0 +1,18 @@
+/*-----------------------------------------------------*/
+/* DPD-Schnittstelle - Dometic UK Adressen korrigieren */
+/*-----------------------------------------------------*/
+             PGM
+
+/*           DCL        VAR(&LIBKZ1) TYPE(*LGL) VALUE('1')        */
+
+/*           ADDLIBLE   LIB(WAECOEDI)                             */
+/*           MONMSG     MSGID(CPF2103) EXEC(CHGVAR VAR(&LIBKZ1) + */
+/*                        VALUE('0'))                             */
+
+
+             CALL       PGM(WAECOEDI/DPD_UK1)
+             CALL       PGM(WAECOEDI/DPD_UK2)
+
+/*           IF         COND(&LIBKZ1 *EQ '1') THEN(RMVLIBLE +   */
+/*                        LIB(WAECOEDI))                        */
+             ENDPGM

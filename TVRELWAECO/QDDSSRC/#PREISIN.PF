@@ -1,0 +1,12 @@
+     A          R PREISIF                   TEXT('VORBELEGUNG')
+     A*****************************************************************
+     A            PRIKDNR       10A         COLHDG('KDNR')
+     A            PRITENR       15A         COLHDG('IDENTNR')
+     A            PRIMENG        9S 3       COLHDG('MENGE')
+     A            PRIMENGE       1A         COLHDG('MENGENEINHEIT')
+     A            PRIDATUM       8S         COLHDG('DATUM')
+     A            PRIWAECD       3A         COLHDG('WÄHRUNGS-CODE')
+     A*****************************************************************
+     A
+     A          K PRIKDNR
+     A          K PRITENR

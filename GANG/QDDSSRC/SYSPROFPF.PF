@@ -1,0 +1,25 @@
+0001  * Physische Datei: SYSPROFPF
+0001  * ANLEGEDATUM: OKTOBER 2009
+0001  * ÄNDERUNGEN:
+0005  *
+0006            R SYSPROFPFR
+0007              S5PRF         10A         TEXT('PROFILE')
+0008                                        COLHDG('PROFILE')
+0007              S5USRP        10A         TEXT('USER')
+0008                                        COLHDG('USER')
+0013              S5DESC        60A         TEXT('PROFILEBESCHREIBUNG')
+0014                                        COLHDG('PROFILEBESCHREIBUNG')
+0013              S5BERE        09A         TEXT('BERECHTIGUNG')
+0014                                        COLHDG('BERECHTIGUNG')
+0013              S5STEP        01A         TEXT('JOBSTEP J/N')
+0014                                        COLHDG('JOBSTEP J/N')
+0005  *
+0013              S5AKT          1A         TEXT('(A)AKTIV,(I)INAKTIV')
+0014                                        COLHDG('(A)AKTIV, (I)INAKTIV')
+0005  *ÄNDERUNGSDIENST
+0013              S5EDAT         8S 0       TEXT('Änderungs-Datum JJJJMMTT')
+0014                                        COLHDG('Änderungs-Datum')
+0013              S5ADAT         8S 0       TEXT('Anlage-Datum JJJJMMTT')
+0014                                        COLHDG('Anlagedatum')
+0013              S5USR         10A         TEXT('Modifizierung-USER')
+0014                                        COLHDG('Modifizierung-USER')

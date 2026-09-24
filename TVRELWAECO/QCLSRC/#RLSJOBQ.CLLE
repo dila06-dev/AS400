@@ -1,0 +1,28 @@
+/*    * PROGRAMMNAME.:#RLSJOBQ                                               */
+/*    * FUNKTION.....:steuern jobq für rechnungen TAMP/JQPRTSVR01            */
+/*    *               gezieltes anhalten und freigeben                       */
+/*    *                                                                       */
+/*    *                                                                      */
+/*    * 12/2011        SCHNEIDER                                              */
+/*    *                                                                       */
+/*    *                                                                       */
+/*    *-ÄNDERUNGSDIENST-------------------------------------------------------*/
+/*    * XX.XX.XX                                          PGMR.....           */
+/******************************************************************************/
+             PGM
+
+             DCL        VAR(&COUNT) TYPE(*DEC) LEN(3 0) VALUE(0)
+
+             CHGJOB     LOG(4 00 *SECLVL) LOGCLPGM(*YES) +
+                          LOGOUTPUT(*JOBEND)
+
+/*             PROGRAMMAUFRUF                                                */
+             HLDJOBQ    JOBQ(TAMP/JQPRTSVR01)
+             MONMSG     MSGID(CPF0000)
+
+             DLYJOB     DLY(120)
+
+             RLSJOBQ    JOBQ(TAMP/JQPRTSVR01)
+             MONMSG     MSGID(CPF0000)
+
+             ENDPGM

@@ -1,0 +1,8 @@
+winadmin   3veKhCMZ
+ascii
+NAMEFMT 1
+cd domains/dometic-group.com/public_ftp/dwes/snd
+lcd /WAECOEDI/es
+MGET ES*
+MDELETE ES*
+quit

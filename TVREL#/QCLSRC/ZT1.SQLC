@@ -1,0 +1,1 @@
+delete FROM ifak WHERE IFAKIFFI = '99999' or IFAKIFFI = '99999'

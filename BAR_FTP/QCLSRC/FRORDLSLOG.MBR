@@ -1,0 +1,36 @@
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host dometic-group.com, Adresse
+ 193.84.54.32 über Port 21 herzustellen.
+220 ProFTPD 1.3.1 Server ready.
+Anmelde-ID (pohl) eingeben:
+331 Password required for winadmin
+230 User winadmin logged in
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 1
+500 'SITE NAMEFMT' not understood
+Client NAMEFMT ist 1.
+Einen FTP-Unterbefehl eingeben.
+> cd domains/dometic-group.com/public_ftp/dwfr/snd
+250 CWD command successful
+Einen FTP-Unterbefehl eingeben.
+> lcd /WAECOEDI/fr
+Das lokale Arbeitsverzeichnis ist /WAECOEDI/fr
+Einen FTP-Unterbefehl eingeben.
+> LS
+227 Entering Passive Mode (193,84,54,32,174,36).
+150 Opening ASCII mode data connection for file list
+.
+FRH090403_1102.TXT
+..
+FRL090403_1002.TXT
+FRL090403_1102.TXT
+FRH090403_1002.TXT
+226 Transfer complete
+Einen FTP-Unterbefehl eingeben.
+> quit
+221 Goodbye.

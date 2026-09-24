@@ -1,0 +1,32 @@
+     A**************************************************************************
+     A*  Copyright 2011 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Absatz-Plan %-Sätze Jahresebene                                       *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: MG 28.08.2011 Projekt 7668, Planungssystem                  *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(WAOM)
+     A          R KYWAOM1
+     A*-------------------------------------------------------------------------
+     A            KYWAOMFIRMR               REFFLD(WAOMFIRM)
+     A            KYWAOMKSTCR               REFFLD(WAOMKSTC)
+     A            KYWAOMKDGRR               REFFLD(WAOMKDGR)
+     A            KYWAOMKDPLR               REFFLD(WAOMKDPL)
+     A            KYWAOMKDNRR               REFFLD(WAOMKDNR)
+     A            KYWAOMLDNRR               REFFLD(WAOMLDNR)
+     A            KYWAOMPRGRR               REFFLD(WAOMPRGR)
+     A            KYWAOMJAHRR               REFFLD(WAOMJAHR)
+     A            K$WAOMFREI    27
+     A            K#WAOMLOCKR               REFFLD(WAOMLOCK)
+     A            K#WAOMFIRMR               REFFLD(WAOMFIRM)
+     A            K#WAOMKSTCR               REFFLD(WAOMKSTC)
+     A            K#WAOMKDGRR               REFFLD(WAOMKDGR)
+     A            K#WAOMKDPLR               REFFLD(WAOMKDPL)
+     A            K#WAOMKDNRR               REFFLD(WAOMKDNR)
+     A            K#WAOMLDNRR               REFFLD(WAOMLDNR)
+     A            K#WAOMPRGRR               REFFLD(WAOMPRGR)
+     A            K#WAOMJAHRR               REFFLD(WAOMJAHR)

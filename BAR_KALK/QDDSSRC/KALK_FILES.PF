@@ -1,0 +1,35 @@
+     A*                                     UNIQUE
+     A          R KALK_FS1
+     A            JAHR           4S 0       TEXT('JAHR')
+     A            LIEFNR         3A         TEXT('LIEFERANTENNUMMER')
+     A            ARTNR         15A         TEXT('ARTIKELNUMMER')
+     A            ARTBEZ        30A         TEXT('ARTIKELBEZEICHNUNG')
+     A            ARTGRP         3A         TEXT('ARTIKELGRUPPE')
+     A            STATNR         3A         TEXT('STATISTIKNUMMER')
+     A            ABC            1A         TEXT('ABC')
+     A            KSCHEMA        2S 0       TEXT('KALKULATIONSSCHEMA')
+     A            ULAND          2A         TEXT('URSPRUNGSLAND')
+     A            LIEFERANT1    10A         TEXT('LIEFERANT1')
+     A            LIEFERANT2    10A         TEXT('LIEFERANT2')
+     A            ZOLLNR        12A         TEXT('ZOLLTARIFNUMMER')
+     A            VARP           3A         TEXT('VARIANTE POS')
+     A            POS            5S 0       TEXT('POS')
+     A            KOTE          15A         TEXT('KOMPONENTE')
+     A            KBZ1          30A         TEXT('BEZEICHNUNG1')
+     A            WACDVK         2S 0       TEXT('WÄHRUNGSCODE VK')
+     A            WACDEK         3A         TEXT('WÄHRUNGSCODE EK')
+     A            WEKPR         12S 4       TEXT('WAEHRUNGSEK-PREIS')
+     A            DATUMV         8S 0       TEXT('GÜLTIG AB  DATUM')
+     A            DATUMB         8S 0       TEXT('GÜLTIG BIS DATUM')
+     A            KWAKURS        4S 2       TEXT('KWKURS')
+     A            WAKURS         4S 2       TEXT('WKURS')
+     A            MENGE         12S 2       TEXT('MENGE')
+     A            EKPR          12S 2       TEXT('EK-PREIS')
+     A            WERT          12S 2       TEXT('WERT')
+     A            STATUS         1A         TEXT('STATUS')
+
+     A          K JAHR
+     A          K LIEFNR
+     A          K ARTNR
+     A          K KOTE
+     A          K POS

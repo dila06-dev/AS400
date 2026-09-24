@@ -1,0 +1,65 @@
+     A**************************************************************************
+     A*  Copyright 2025 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Jechtinger Straße 9                              *
+     A*                       DE 79111 Freiburg                                *
+     A*  --------------------------------------------------------------------- *
+     A*  Rückgabebereich W017                                                  *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: MG 15.07.2025 Case #04264118 Integration Siegen             *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R RTW0171
+     A*-------------------------------------------------------------------------
+     A* allgemeine Rückgabe
+     A*-------------------------------------------------------------------------
+     A            RTW017PROGR               REFFLD(##PROG)
+     A            RTW017DANAR               REFFLD(##DANA)
+     A            RTW017RTCDR               REFFLD(##RTCD)
+     A            RTW017FFLDR               REFFLD(##FFLD)
+     A            RTW017FENRR               REFFLD(##FENR)
+     A            RTW017PA03R               REFFLD(##A010)
+     A            RTW017PA04R               REFFLD(##A010)
+     A            RTW017PA05R               REFFLD(##A010)
+     A            RTW017PA06R               REFFLD(##A010)
+     A            RTW017PA07R               REFFLD(##A010)
+     A*-------------------------------------------------------------------------
+     A* ON/OFF Rückgabe KZ für Prüfungen
+     A*-------------------------------------------------------------------------
+     A            RTW017FR01R  100A         REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* Key-Felder
+     A*-------------------------------------------------------------------------
+     A            RTW017TSTPR               REFFLD(W0171/W017TSTP *LIBL/W017)
+     A            RTW017FR02R  100A         REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* evt. weitere Felder nach Ermittlung
+     A*-------------------------------------------------------------------------
+     A            RTW017ERUSR               REFFLD(W0171/W017ERUS *LIBL/W017)
+     A            RTW017ERDAR               REFFLD(W0171/W017ERDA *LIBL/W017)
+     A            RTW017TDIRR               REFFLD(W0171/W017TDIR *LIBL/W017)
+     A            RTW017IDENR               REFFLD(W0171/W017IDEN *LIBL/W017)
+     A            RTW017LFTER               REFFLD(W0171/W017LFTE *LIBL/W017)
+     A            RTW017REFNR               REFFLD(W0171/W017REFN *LIBL/W017)
+     A            RTW017BEPOR               REFFLD(W0171/W017BEPO *LIBL/W017)
+     A            RTW017BEDAR               REFFLD(W0171/W017BEDA *LIBL/W017)
+     A            RTW017TEXTR               REFFLD(W0171/W017TEXT *LIBL/W017)
+     A            RTW017PLMGR               REFFLD(W0171/W017PLMG *LIBL/W017)
+     A            RTW017BSMGR               REFFLD(W0171/W017BSMG *LIBL/W017)
+     A            RTW017KDNRR               REFFLD(W0171/W017KDNR *LIBL/W017)
+     A            RTW017ABMAR               REFFLD(W0171/W017ABMA *LIBL/W017)
+     A            RTW017FRZOR               REFFLD(W0171/W017FRZO *LIBL/W017)
+     A            RTW017TENRR               REFFLD(W0171/W017TENR *LIBL/W017)
+     A            RTW017VWARR               REFFLD(W0171/W017VWAR *LIBL/W017)
+     A            RTW017WKNRR               REFFLD(W0171/W017WKNR *LIBL/W017)
+     A            RTW017AFATR               REFFLD(W0171/W017AFAT *LIBL/W017)
+     A            RTW017STATR               REFFLD(W0171/W017STAT *LIBL/W017)
+     A            RTW017IFFIR               REFFLD(W0171/W017IFFI *LIBL/W017)
+     A            RTW017IFNRR               REFFLD(W0171/W017IFNR *LIBL/W017)
+     A            RTW017IFPOR               REFFLD(W0171/W017IFPO *LIBL/W017)
+     A            RTW017AFJJR               REFFLD(W0171/W017AFJJ *LIBL/W017)
+     A            RTW017AFNRR               REFFLD(W0171/W017AFNR *LIBL/W017)
+     A            RTW017AFPOR               REFFLD(W0171/W017AFPO *LIBL/W017)
+     A            RTW017VSNRR               REFFLD(W0171/W017VSNR *LIBL/W017)
+     A            RTW017FR03R  176A         REFFLD(##FREI)

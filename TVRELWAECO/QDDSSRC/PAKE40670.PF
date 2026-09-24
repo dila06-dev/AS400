@@ -1,0 +1,12 @@
+     A*
+     A*         DATUM IMMER TT.MM.JJJJ
+     A*         ZEIT  IMMER HH:MM
+     A*           PAKE40670     = EMSDETTEN
+     A          R PAKE40670R                TEXT('PROTOKOLLDATEI')
+     A*****************************************************************
+     A            ARRIVALID     10A         COLHDG('UNIQUE ID TRANSPORT')
+     A            CUSTOMER      10A         COLHDG('KUNDEN#')
+     A            LINENUM        4S 0       COLHDG('LINEPOSITION')
+     A            PURCHID       10A         COLHDG('ORDERREFERENZ')
+     A            ITEMID        15A         COLHDG('ARTIKEL')
+     A            QTY           11S 0       COLHDG('DELIVERED QUANTITY')

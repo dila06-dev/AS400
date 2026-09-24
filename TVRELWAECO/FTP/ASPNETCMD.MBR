@@ -1,0 +1,8 @@
+Axapta_ftp Ax4t42424
+ascii
+NAMEFMT 1
+cd /sitecore
+REM cd /aspnet_client/rcv
+SYSCMD CHGCURLIB TVRELWAECO
+PUT /QSYS.LIB/TVRELWAECO.LIB/#DC0000E.FILE/#DC0000E.MBR winartnav.txt
+QUIT

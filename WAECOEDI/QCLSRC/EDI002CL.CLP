@@ -1,0 +1,14 @@
+             PGM
+
+             ADDLIBLE EDIFACT
+             MONMSG     MSGID(CPF0000)
+
+             OVRDBF     FILE(STDDAT) TOFILE(EDIFACT/STDDAT)
+             OVRDBF     FILE(WWWORD10) TOFILE(WAECOEDI/WWWORD10)
+             OVRDBF     FILE(WWWORD50) TOFILE(WAECOEDI/WWWORD50)
+             OVRDBF     FILE(WWWORD60) TOFILE(WAECOEDI/WWWORD60)
+
+             CALL       EDI002
+
+
+             ENDPGM

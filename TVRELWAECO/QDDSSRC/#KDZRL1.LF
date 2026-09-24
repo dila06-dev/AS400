@@ -1,0 +1,14 @@
+      * Physische Datei: KOND
+      * ANLEGEDATUM: OKTOBER 2010
+      *SORT:        ...
+      * ÄNDERUNGEN:
+      * AUSSCHLUSS:  ...
+     A
+     A*                                     UNIQUE
+     A          R KDZR1                     PFILE(KDZR)
+     A
+     A
+     A          K KDZRFIRM
+     A          K KDZRMIKD
+     A          S KDZRZRKD                  CMP(EQ '007260')
+     A          S KDZRZRKD                  CMP(EQ '190629')

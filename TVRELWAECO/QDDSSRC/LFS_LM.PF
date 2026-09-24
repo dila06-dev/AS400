@@ -1,0 +1,6 @@
+     A          R LFS_LM
+      * :LADEMITTEL
+     A            LKIDEN        28A         COLHDG('ARTIKELNUMMER')
+     A            BMLMNEU        3A         COLHDG('LADE- MITTEL NEU')
+     A            MENGELM        6S 0       COLHDG('MENGE           ')
+     A*

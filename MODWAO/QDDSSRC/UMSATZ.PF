@@ -1,0 +1,53 @@
+     A**************************************************************************
+     A*  Copyright 2011 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Umsatz-Statistik                                                      *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: MG 25.05.2011 Projekt 7375                                  *
+     A*                                                                        *
+     A**************************************************************************
+     A          R UMSATZ1
+     A*-------------------------------------------------------------------------
+     A            AREA1          1A         TEXT('Vertriebsbereich')
+     A                                      COLHDG('Vertriebsbereich')
+     A            AREA2          3A         TEXT('Vertriebsbereich')
+     A                                      COLHDG('Vertriebsbereich')
+     A            PB             1A         TEXT('Produkt-Bereich')
+     A                                      COLHDG('Produkt-Bereich')
+     A            PG             4A         TEXT('Produkt-Gruppe')
+     A                                      COLHDG('Produkt-Gruppe')
+     A            BEZ           40A         TEXT('Bezeichnung')
+     A                                      COLHDG('Bezeichnung')
+     A            DIVISION      10A         TEXT('Division')
+     A                                      COLHDG('Division')
+     A            JAHR           4S 0       TEXT('Jahr')
+     A                                      COLHDG('Jahr')
+     A            TOTAL         11S 2       TEXT('Umsatz')
+     A                                      COLHDG('Umsatz')
+     A            UMS01         11S 2       TEXT('Umsatz')
+     A                                      COLHDG('Umsatz')
+     A            UMS02         11S 2       TEXT('Umsatz')
+     A                                      COLHDG('Umsatz')
+     A            UMS03         11S 2       TEXT('Umsatz')
+     A                                      COLHDG('Umsatz')
+     A            UMS04         11S 2       TEXT('Umsatz')
+     A                                      COLHDG('Umsatz')
+     A            UMS05         11S 2       TEXT('Umsatz')
+     A                                      COLHDG('Umsatz')
+     A            UMS06         11S 2       TEXT('Umsatz')
+     A                                      COLHDG('Umsatz')
+     A            UMS07         11S 2       TEXT('Umsatz')
+     A                                      COLHDG('Umsatz')
+     A            UMS08         11S 2       TEXT('Umsatz')
+     A                                      COLHDG('Umsatz')
+     A            UMS09         11S 2       TEXT('Umsatz')
+     A                                      COLHDG('Umsatz')
+     A            UMS10         11S 2       TEXT('Umsatz')
+     A                                      COLHDG('Umsatz')
+     A            UMS11         11S 2       TEXT('Umsatz')
+     A                                      COLHDG('Umsatz')
+     A            UMS12         11S 2       TEXT('Umsatz')
+     A                                      COLHDG('Umsatz')

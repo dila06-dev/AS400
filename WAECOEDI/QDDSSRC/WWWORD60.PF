@@ -1,0 +1,43 @@
+     A          R ORT00R1
+     A            ORT010         7S 0
+     A                                      TEXT('Mitglieds-Nr. Absender')
+     A                                      COLHDG('Mit' -
+     A                                      'gl.-' -
+     A                                      'Nr.')
+     A                                      EDTCDE(Z)
+     A            ORT020         7S 0
+     A                                      TEXT('Mitglieds-Nr. Empfänger')
+     A                                      COLHDG('Mit' -
+     A                                      'gl.-' -
+     A                                      'Nr.')
+     A                                      EDTCDE(Z)
+     A            ORT030         7S 0
+     A                                      TEXT('Kunden-Nr. beim Empf.')
+     A                                      COLHDG('Kd.Nr.' -
+     A                                      'beim ' -
+     A                                      'Empf.')
+     A                                      EDTCDE(Z)
+     A            ORT040         7S 0
+     A                                      TEXT('Auftr.Nr. beim Abs.')
+     A                                      COLHDG('Auft.Nr.' -
+     A                                      'beim ' -
+     A                                      'Abs.')
+     A                                      EDTCDE(Z)
+     A            ORT050         5S 0
+     A                                      TEXT('Positions-Nr. beim Abs.')
+     A                                      COLHDG('Pos..Nr.' -
+     A                                      'beim ' -
+     A                                      'Abs.')
+     A                                      EDTCDE(Z)
+     A            ORT060         8S 0
+     A                                      TEXT('Datum JJJJMMTT')
+     A                                      COLHDG('Datum ' -
+     A                                      'JJJJMMTT')
+     A            ORT070         6S 0
+     A                                      TEXT('Zeit')
+     A                                      COLHDG('Zeit')
+     A                                      EDTWRD('0 :  :  ')
+     A            ORT080        60A
+     A                                      TEXT('Zeilen-Text ')
+     A                                      COLHDG('Zeilen-' -
+     A                                      'text')

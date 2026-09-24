@@ -1,0 +1,25 @@
+     A**************************************************************************
+     A*  Copyright 2001 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Sachbearbeiter       Schlüsselaufbau                                  *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: VU 18.05.2011                                               *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R KYSPD01
+     A*-------------------------------------------------------------------------
+     A            KYSD20    R               REFFLD(SPEDD01/SCH020 *LIBL/SPEDD0)
+     A            KYSD$F        30
+     A            K#SDLK    R               REFFLD(##LOCK)
+     A            K#SD20    R               REFFLD(SPEDD01/SCH020 *LIBL/SPEDD0)
+     A            SDLOCK    R               REFFLD(##LOCK)
+     A            SDJNAM    R               REFFLD(##JNAM)
+     A            SDJDAT    R               REFFLD(##JDAT)
+     A            SDJZEI    R               REFFLD(##JZEI)
+     A            SDUSER    R               REFFLD(##USER)
+     A            SDPROG    R               REFFLD(##PROG)
+     A            SDBIBL    R               REFFLD(##BIBL)

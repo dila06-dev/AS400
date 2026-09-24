@@ -1,0 +1,45 @@
+     A**************************************************************************
+     A*  Copyright 2010 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------- *
+     A*  Datenfelder für Sichtensteuerung Konditionenübersicht                 *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: RH 02.12.10                                                 *
+     A*  Änderung: MG 06.02.26 Case #05943829 Erweiterung der Konditionsver-   *
+     A*            waltung für Segmente. Neues Feld W015SIKSTC "Vertr.-Bereich"*
+     A*************************************************************h************
+     A                                      REF(SWMREF)
+     A          R WAO015SI1
+     A            W015SIPRGRR               REFFLD(##PRGR)
+     A            W015SIPRGBR               REFFLD(##BEZ1)
+     A                                      TEXT('PRGR BEZEICHNUNG')
+     A                                      COLHDG('PRGR BEZEICHNUNG')
+     A            W015SIBEG1R               REFFLD(##BEGR)
+     A                                      TEXT('Kondition 1')
+     A                                      COLHDG('Kondition 1')
+     A            W015SIRAB1R               REFFLD(##KOW1)
+     A                                      TEXT('Rabatt 1')
+     A                                      COLHDG('Rabatt 1')
+     A            W015SISTA1R               REFFLD(##N112)
+     A                                      TEXT('Staffel 1')
+     A                                      COLHDG('Staffel 1')
+     A            W015SIRBK1R               REFFLD(##A001)
+     A                                      TEXT('%')
+     A                                      COLHDG('%')
+     A            W015SIBEG2R               REFFLD(##BEGR)
+     A                                      TEXT('Kondition 2')
+     A                                      COLHDG('Kondition 2')
+     A            W015SIRAB2R               REFFLD(##KOW1)
+     A                                      TEXT('Rabatt 2')
+     A                                      COLHDG('Rabatt 2')
+     A            W015SISTA2R               REFFLD(##N112)
+     A                                      TEXT('Staffel 2')
+     A                                      COLHDG('Staffel 2')
+     A            W015SIRBK2R               REFFLD(##A001)
+     A                                      TEXT('%')
+     A                                      COLHDG('%')
+     A            W015SIKSTCR               REFFLD(##KSTC)
+     A                                      TEXT('Vertr.-Bereich')
+     A                                      COLHDG('Vertr.-Bereich')

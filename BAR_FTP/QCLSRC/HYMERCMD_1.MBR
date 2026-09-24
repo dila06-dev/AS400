@@ -1,0 +1,12 @@
+dometicwaeco dwdw555
+NA 1
+CD lieferavis
+LCD /TREND/echt/edi/out/desadv
+MPUT 50018293*
+MPUT 50000096*
+
+CDUP
+MDEL 50018293*
+MDEL 50000096*
+QUIT
+

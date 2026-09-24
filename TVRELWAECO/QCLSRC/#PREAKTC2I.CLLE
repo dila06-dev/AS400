@@ -1,0 +1,121 @@
+/*    * PROGRAMMNAME.:#PREAKTC2B                                             */
+/*    * FUNKTION.....:ERMITTELN PREISE IN DATEI #PREISAKT                    */
+/*    *               TEMPORÄRE DATEI VORGESCHALTET #KUND_T                  */
+/*    *               interaktiv oder batch mit bildschirmauswahl            */
+/*    *               _                                                      */
+/*    *               bei jahresechsel im  QRY(TVRELWAECO/KALKVJ)            */
+/*    *               in datei kalkVJ die version ändern (erfragen)          */
+/*    *               danach kann dass  QRY(TVRELWAECO/TRDCGQ4)              */
+/*    *               korrekt laufen                                         */
+/*    *               _                                                      */
+/*    * 11/2011        SCHNEIDER                                              */
+/*    * 01/2012        SCHNEIDER  umbau auf parallel-update lj/vj             */
+/*    *                                                                       */
+/*    *                                                                       */
+/*    *-ÄNDERUNGSDIENST-------------------------------------------------------*/
+/*    * XX.XX.XX                                          PGMR.....           */
+/******************************************************************************/
+             PGM
+
+             DCLF       FILE(TVRELWAECO/#PREAKTDS) RCDFMT(FMT010)
+
+             DCL        VAR(&DATUM) TYPE(*CHAR) LEN(6)
+             DCL        VAR(&LAUFDATUM) TYPE(*CHAR) LEN(6)
+             DCL        VAR(&LAUFZEIT) TYPE(*CHAR) LEN(6)
+             DCL        VAR(&PDATU) TYPE(*CHAR) LEN(8)
+             DCL        VAR(&PDATUVJ) TYPE(*CHAR) LEN(8) +
+                          VALUE('20111231')
+             DCL        VAR(&DATEI) TYPE(*CHAR) LEN(10)
+             DCL        VAR(&LIB) TYPE(*CHAR) LEN(10)
+             DCL        VAR(&DATEI2) TYPE(*CHAR) LEN(10)
+             DCL        VAR(&LIB2) TYPE(*CHAR) LEN(10)
+             DCL        VAR(&BATCH) TYPE(*CHAR) LEN(1)
+
+             CHGJOB     LOG(4 00 *SECLVL) LOGCLPGM(*YES) +
+                          LOGOUTPUT(*JOBEND)
+
+             RTVSYSVAL  SYSVAL(QDATE) RTNVAR(&DATUM)
+             RTVSYSVAL  SYSVAL(QTIME) RTNVAR(&LAUFZEIT)
+
+             CVTDAT     DATE(&DATUM) TOVAR(&PDATU) FROMFMT(*DMY) +
+                          TOFMT(*YYMD) TOSEP(*NONE)
+             CHGVAR     VAR(&FLDAT1) VALUE(&PDATU)
+             CHGVAR     VAR(&FLDAT2) VALUE(&PDATUVJ)
+             CHGVAR     VAR(&FLDLDAT) VALUE(&DATUM)
+             CHGVAR     VAR(&FLDLZEIT) VALUE(&LAUFZEIT)
+
+/*             protokollierung                                               */
+             SNDRCVF    RCDFMT(FMT010)
+             IF         COND(&IN03 = '1') THEN(GOTO CMDLBL(ENDE))
+
+             CHGVAR     VAR(&PDATU) VALUE(&FLDAT1)
+             CHGVAR     VAR(&PDATUVJ) VALUE(&FLDAT2)
+             CHGVAR     VAR(&DATEI) VALUE(&FLDATEI)
+             CHGVAR     VAR(&LIB) VALUE(&FLDLIB)
+             CHGVAR     VAR(&DATEI2) VALUE(&FLDATEI2)
+             CHGVAR     VAR(&LIB2) VALUE(&FLDLIB2)
+             CHGVAR     VAR(&BATCH) VALUE(&FLDAT3)
+             CHGVAR     VAR(&LAUFDATUM) VALUE(&FLDLDAT)
+             CHGVAR     VAR(&LAUFZEIT) VALUE(&FLDLZEIT)
+
+/*             interaktiv                                                    */
+             IF         COND(&BATCH = 'I') THEN(DO)
+
+             OVRDBF     FILE(#KUND_T) TOFILE(&LIB/&DATEI) MBR(*FIRST)
+             OVRDBF     FILE(TEIL01) TOFILE(&LIB2/&DATEI2) MBR(*FIRST)
+
+             CLRPFM     FILE(TVRELWAECO/#PREISLJT)
+             OVRDBF     FILE(#PREISAKT) TOFILE(TVRELWAECO/#PREISLJT) +
+                          MBR(*FIRST)
+
+
+/*             PROGRAMMAUFRUF                                                */
+             CALL       PGM(TVRELWAECO/#PREAKTR2) PARM(&PDATU)
+             MONMSG     MSGID(CPF0000)
+
+             DLTOVR     FILE(*ALL)
+/*----------------------------------------------------------------------------*/
+
+             CLRPFM     FILE(TVRELWAECO/#PREISVJT)
+
+             OVRDBF     FILE(#KUND_T) TOFILE(&LIB/&DATEI) MBR(*FIRST)
+             OVRDBF     FILE(TEIL01) TOFILE(&LIB2/&DATEI2) MBR(*FIRST)
+             OVRDBF     FILE(#PREISAKT) TOFILE(TVRELWAECO/#PREISVJT) +
+                          MBR(*FIRST)
+
+/*             PROGRAMMAUFRUF                                                */
+             CALL       PGM(TVRELWAECO/#PREAKTR2) PARM(&PDATUVJ)
+             MONMSG     MSGID(CPF0000)
+
+             DLTOVR     FILE(*ALL)
+/*----------------------------------------------------------------------------*/
+
+             CPYF       FROMFILE(TVRELWAECO/#PREISLJT) +
+                          TOFILE(TVRELWAECO/#PREISAKT) MBROPT(*UPDADD)
+
+             CPYF       FROMFILE(TVRELWAECO/#PREISVJT) +
+                          TOFILE(TVRELWAECO/#PREISVJ) MBROPT(*UPDADD)
+
+             RUNQRY     QRY(TVRELWAECO/TRDCGQ4) /* Erstellen Datei +
+                          #TRDCGP2 */
+
+             CLRPFM     FILE(TVRELWAECO/#PREISLJT)
+             CLRPFM     FILE(TVRELWaECO/#PREISVJT)
+             ENDDO
+
+/*----------------------------------------------------------------------------*/
+
+/*             batch                                                         */
+             IF         COND(&BATCH = 'B') THEN(DO)
+
+             SBMJOB     CMD(CALL PGM(TVRELWAECO/#PREIC2B1) +
+                          PARM(&PDATU &PDATUVJ &DATEI &LIB &DATEI2 +
+                          &LIB2)) JOB(PREIS_BLJ) +
+                          JOBD(MODWAO/JDTREND) JOBQ(QSYSNOMAX) +
+                          JOBMSGQFL(*WRAP) SCDDATE(&LAUFDATUM) +
+                          SCDTIME(&LAUFZEIT)
+             ENDDO
+
+
+ ENDE:       RCLRSC
+             ENDPGM

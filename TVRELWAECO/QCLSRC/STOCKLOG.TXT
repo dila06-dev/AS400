@@ -1,0 +1,595 @@
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host DOMETIC-GROUP.COM, Adresse 193.84.54.32 über Port 21 herzustellen.
+220 ProFTPD Server ready.
+Anmelde-ID (gang) eingeben:
+331 Password required for winadmin
+230 User winadmin logged in
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 1
+500 'SITE NAMEFMT' not understood
+Client NAMEFMT ist 1.
+Einen FTP-Unterbefehl eingeben.
+> REM *****
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> cd domains/dometic-group.com/public_ftp/dwfr/rcv
+250 CWD command successful
+Einen FTP-Unterbefehl eingeben.
+> SYSCMD CHGCURLIB TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> PUT /QSYS.LIB/TVRELWAECO.LIB/#DC0000E.FILE/#DC0000E.MBR winartnav.txt
+229 Entering Extended Passive Mode (|||35817|)
+150 Opening ASCII mode data connection for winartnav.txt
+226 Transfer complete
+242730 Byte in 0.072 Sekunden übertragen. Übertragungsgeschwindigkeit 3358.858 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host DOMETIC-GROUP.COM, Adresse 193.84.54.32 über Port 21 herzustellen.
+220 ProFTPD Server ready.
+Anmelde-ID (gang) eingeben:
+331 Password required for winadmin
+230 User winadmin logged in
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 1
+500 'SITE NAMEFMT' not understood
+Client NAMEFMT ist 1.
+Einen FTP-Unterbefehl eingeben.
+> REM *****
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> cd domains/dometic-group.com/public_ftp/dwit/rcv
+250 CWD command successful
+Einen FTP-Unterbefehl eingeben.
+> SYSCMD CHGCURLIB TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> PUT /QSYS.LIB/TVRELWAECO.LIB/#DC0000E.FILE/#DC0000E.MBR winartnav.txt
+229 Entering Extended Passive Mode (|||35139|)
+150 Opening ASCII mode data connection for winartnav.txt
+226 Transfer complete
+242730 Byte in 0.028 Sekunden übertragen. Übertragungsgeschwindigkeit 8570.880 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host DOMETIC-GROUP.COM, Adresse 193.84.54.32 über Port 21 herzustellen.
+220 ProFTPD Server ready.
+Anmelde-ID (gang) eingeben:
+331 Password required for winadmin
+230 User winadmin logged in
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 1
+500 'SITE NAMEFMT' not understood
+Client NAMEFMT ist 1.
+Einen FTP-Unterbefehl eingeben.
+> REM *****
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> cd domains/dometic-group.com/public_ftp/dwes/rcv
+250 CWD command successful
+Einen FTP-Unterbefehl eingeben.
+> SYSCMD CHGCURLIB TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> PUT /QSYS.LIB/TVRELWAECO.LIB/#DC0000E.FILE/#DC0000E.MBR winartnav.txt
+229 Entering Extended Passive Mode (|||35271|)
+150 Opening ASCII mode data connection for winartnav.txt
+226 Transfer complete
+242730 Byte in 0.024 Sekunden übertragen. Übertragungsgeschwindigkeit 9942.221 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host DOMETIC-GROUP.COM, Adresse 193.84.54.32 über Port 21 herzustellen.
+220 ProFTPD Server ready.
+Anmelde-ID (gang) eingeben:
+331 Password required for winadmin
+230 User winadmin logged in
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 1
+500 'SITE NAMEFMT' not understood
+Client NAMEFMT ist 1.
+Einen FTP-Unterbefehl eingeben.
+> REM *****
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> cd domains/dometic-group.com/public_ftp/dwse/rcv
+250 CWD command successful
+Einen FTP-Unterbefehl eingeben.
+> SYSCMD CHGCURLIB TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> PUT /QSYS.LIB/TVRELWAECO.LIB/#DC0000E.FILE/#DC0000E.MBR winartnav.txt
+229 Entering Extended Passive Mode (|||35664|)
+150 Opening ASCII mode data connection for winartnav.txt
+226 Transfer complete
+242730 Byte in 0.024 Sekunden übertragen. Übertragungsgeschwindigkeit 9942.221 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host DOMETIC-GROUP.COM, Adresse 193.84.54.32 über Port 21 herzustellen.
+220 ProFTPD Server ready.
+Anmelde-ID (gang) eingeben:
+331 Password required for winadmin
+230 User winadmin logged in
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 1
+500 'SITE NAMEFMT' not understood
+Client NAMEFMT ist 1.
+Einen FTP-Unterbefehl eingeben.
+> REM *****
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> cd domains/dometic-group.com/public_ftp/dwno/rcv
+250 CWD command successful
+Einen FTP-Unterbefehl eingeben.
+> SYSCMD CHGCURLIB TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> PUT /QSYS.LIB/TVRELWAECO.LIB/#DC0000E.FILE/#DC0000E.MBR winartnav.txt
+229 Entering Extended Passive Mode (|||35614|)
+150 Opening ASCII mode data connection for winartnav.txt
+226 Transfer complete
+242730 Byte in 0.028 Sekunden übertragen. Übertragungsgeschwindigkeit 8570.880 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host DOMETIC-GROUP.COM, Adresse 193.84.54.32 über Port 21 herzustellen.
+220 ProFTPD Server ready.
+Anmelde-ID (gang) eingeben:
+331 Password required for winadmin
+230 User winadmin logged in
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 1
+500 'SITE NAMEFMT' not understood
+Client NAMEFMT ist 1.
+Einen FTP-Unterbefehl eingeben.
+> REM *****
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> cd domains/dometic-group.com/public_ftp/dwpl/rcv
+250 CWD command successful
+Einen FTP-Unterbefehl eingeben.
+> SYSCMD CHGCURLIB TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> PUT /QSYS.LIB/TVRELWAECO.LIB/#DC0000E.FILE/#DC0000E.MBR winartnav.txt
+229 Entering Extended Passive Mode (|||35108|)
+150 Opening ASCII mode data connection for winartnav.txt
+226 Transfer complete
+242730 Byte in 0.024 Sekunden übertragen. Übertragungsgeschwindigkeit 9942.221 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host DOMETIC-GROUP.COM, Adresse 193.84.54.32 über Port 21 herzustellen.
+220 ProFTPD Server ready.
+Anmelde-ID (gang) eingeben:
+331 Password required for winadmin
+230 User winadmin logged in
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 1
+500 'SITE NAMEFMT' not understood
+Client NAMEFMT ist 1.
+Einen FTP-Unterbefehl eingeben.
+> REM *****
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> cd domains/dometic-group.com/public_ftp/dwat/rcv
+250 CWD command successful
+Einen FTP-Unterbefehl eingeben.
+> SYSCMD CHGCURLIB TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> PUT /QSYS.LIB/TVRELWAECO.LIB/#DC0000E.FILE/#DC0000E.MBR winartnav.txt
+229 Entering Extended Passive Mode (|||35171|)
+150 Opening ASCII mode data connection for winartnav.txt
+226 Transfer complete
+242730 Byte in 0.025 Sekunden übertragen. Übertragungsgeschwindigkeit 9559.828 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host DOMETIC-GROUP.COM, Adresse 193.84.54.32 über Port 21 herzustellen.
+220 ProFTPD Server ready.
+Anmelde-ID (gang) eingeben:
+331 Password required for winadmin
+230 User winadmin logged in
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 1
+500 'SITE NAMEFMT' not understood
+Client NAMEFMT ist 1.
+Einen FTP-Unterbefehl eingeben.
+> REM *****
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> cd domains/dometic-group.com/public_ftp/dwdk/rcv
+250 CWD command successful
+Einen FTP-Unterbefehl eingeben.
+> SYSCMD CHGCURLIB TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> PUT /QSYS.LIB/TVRELWAECO.LIB/#DC0000E.FILE/#DC0000E.MBR winartnav.txt
+229 Entering Extended Passive Mode (|||35314|)
+150 Opening ASCII mode data connection for winartnav.txt
+226 Transfer complete
+242730 Byte in 0.024 Sekunden übertragen. Übertragungsgeschwindigkeit 9942.221 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host DOMETIC-GROUP.COM, Adresse 193.84.54.32 über Port 21 herzustellen.
+220 ProFTPD Server ready.
+Anmelde-ID (gang) eingeben:
+331 Password required for winadmin
+230 User winadmin logged in
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 1
+500 'SITE NAMEFMT' not understood
+Client NAMEFMT ist 1.
+Einen FTP-Unterbefehl eingeben.
+> REM *****
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> cd domains/dometic-group.com/public_ftp/dwuk/rcv
+250 CWD command successful
+Einen FTP-Unterbefehl eingeben.
+> SYSCMD CHGCURLIB TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> PUT /QSYS.LIB/TVRELWAECO.LIB/#DC0000E.FILE/#DC0000E.MBR winartnav.txt
+229 Entering Extended Passive Mode (|||35456|)
+150 Opening ASCII mode data connection for winartnav.txt
+226 Transfer complete
+242730 Byte in 0.025 Sekunden übertragen. Übertragungsgeschwindigkeit 9559.828 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host DOMETIC-GROUP.COM, Adresse 193.84.54.32 über Port 21 herzustellen.
+220 ProFTPD Server ready.
+Anmelde-ID (gang) eingeben:
+331 Password required for winadmin
+230 User winadmin logged in
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 1
+500 'SITE NAMEFMT' not understood
+Client NAMEFMT ist 1.
+Einen FTP-Unterbefehl eingeben.
+> REM *****
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> cd domains/dometic-group.com/public_ftp/dwru/rcv
+250 CWD command successful
+Einen FTP-Unterbefehl eingeben.
+> SYSCMD CHGCURLIB TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> PUT /QSYS.LIB/TVRELWAECO.LIB/#DC0000E.FILE/#DC0000E.MBR winartnav.txt
+229 Entering Extended Passive Mode (|||35190|)
+150 Opening ASCII mode data connection for winartnav.txt
+226 Transfer complete
+242730 Byte in 0.026 Sekunden übertragen. Übertragungsgeschwindigkeit 9205.760 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host DOMETIC-GROUP.COM, Adresse 193.84.54.32 über Port 21 herzustellen.
+220 ProFTPD Server ready.
+Anmelde-ID (gang) eingeben:
+331 Password required for winadmin
+230 User winadmin logged in
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 1
+500 'SITE NAMEFMT' not understood
+Client NAMEFMT ist 1.
+Einen FTP-Unterbefehl eingeben.
+> REM *****
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> cd domains/dometic-group.com/public_ftp/dwnl/rcv
+250 CWD command successful
+Einen FTP-Unterbefehl eingeben.
+> SYSCMD CHGCURLIB TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> PUT /QSYS.LIB/TVRELWAECO.LIB/#DC0000E.FILE/#DC0000E.MBR winartnav.txt
+229 Entering Extended Passive Mode (|||35688|)
+150 Opening ASCII mode data connection for winartnav.txt
+226 Transfer complete
+242730 Byte in 0.025 Sekunden übertragen. Übertragungsgeschwindigkeit 9559.828 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host DOMETIC-GROUP.COM, Adresse 193.84.54.32 über Port 21 herzustellen.
+220 ProFTPD Server ready.
+Anmelde-ID (gang) eingeben:
+331 Password required for winadmin
+230 User winadmin logged in
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 1
+500 'SITE NAMEFMT' not understood
+Client NAMEFMT ist 1.
+Einen FTP-Unterbefehl eingeben.
+> REM *****
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> cd domains/dometic-group.com/public_ftp/dwbe/rcv
+250 CWD command successful
+Einen FTP-Unterbefehl eingeben.
+> SYSCMD CHGCURLIB TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> PUT /QSYS.LIB/TVRELWAECO.LIB/#DC0000E.FILE/#DC0000E.MBR winartnav.txt
+229 Entering Extended Passive Mode (|||35468|)
+150 Opening ASCII mode data connection for winartnav.txt
+226 Transfer complete
+242730 Byte in 0.025 Sekunden übertragen. Übertragungsgeschwindigkeit 9559.828 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host DOMETIC-GROUP.COM, Adresse 193.84.54.32 über Port 21 herzustellen.
+220 ProFTPD Server ready.
+Anmelde-ID (gang) eingeben:
+331 Password required for winadmin
+230 User winadmin logged in
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 1
+500 'SITE NAMEFMT' not understood
+Client NAMEFMT ist 1.
+Einen FTP-Unterbefehl eingeben.
+> REM *****
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> cd domains/dometic-group.com/public_ftp/dwch/rcv
+250 CWD command successful
+Einen FTP-Unterbefehl eingeben.
+> SYSCMD CHGCURLIB TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> PUT /QSYS.LIB/TVRELWAECO.LIB/#DC0000E.FILE/#DC0000E.MBR winartnav.txt
+229 Entering Extended Passive Mode (|||35628|)
+150 Opening ASCII mode data connection for winartnav.txt
+226 Transfer complete
+242730 Byte in 0.025 Sekunden übertragen. Übertragungsgeschwindigkeit 9559.828 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host DOMETIC-GROUP.COM, Adresse 193.84.54.32 über Port 21 herzustellen.
+220 ProFTPD Server ready.
+Anmelde-ID (gang) eingeben:
+331 Password required for winadmin
+230 User winadmin logged in
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 1
+500 'SITE NAMEFMT' not understood
+Client NAMEFMT ist 1.
+Einen FTP-Unterbefehl eingeben.
+> REM *****
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> cd domains/dometic-group.com/public_ftp/dwsi/rcv
+250 CWD command successful
+Einen FTP-Unterbefehl eingeben.
+> SYSCMD CHGCURLIB TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> PUT /QSYS.LIB/TVRELWAECO.LIB/#DC0000E.FILE/#DC0000E.MBR winartnav.txt
+229 Entering Extended Passive Mode (|||35418|)
+150 Opening ASCII mode data connection for winartnav.txt
+226 Transfer complete
+242730 Byte in 0.024 Sekunden übertragen. Übertragungsgeschwindigkeit 9942.221 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host DOMETIC-GROUP.COM, Adresse 193.84.54.32 über Port 21 herzustellen.
+220 ProFTPD Server ready.
+Anmelde-ID (gang) eingeben:
+331 Password required for winadmin
+230 User winadmin logged in
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 1
+500 'SITE NAMEFMT' not understood
+Client NAMEFMT ist 1.
+Einen FTP-Unterbefehl eingeben.
+> REM *****
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> cd domains/dometic-group.com/public_ftp/dwlu/rcv
+550 domains/dometic-group.com/public_ftp/dwlu/rcv: No such file or directory
+Einen FTP-Unterbefehl eingeben.
+> SYSCMD CHGCURLIB TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> PUT /QSYS.LIB/TVRELWAECO.LIB/#DC0000E.FILE/#DC0000E.MBR winartnav.txt
+229 Entering Extended Passive Mode (|||35403|)
+150 Opening ASCII mode data connection for winartnav.txt
+226 Transfer complete
+242730 Byte in 0.024 Sekunden übertragen. Übertragungsgeschwindigkeit 9942.221 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host DOMETIC-GROUP.COM, Adresse 193.84.54.32 über Port 21 herzustellen.
+220 ProFTPD Server ready.
+Anmelde-ID (gang) eingeben:
+331 Password required for winadmin
+230 User winadmin logged in
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 1
+500 'SITE NAMEFMT' not understood
+Client NAMEFMT ist 1.
+Einen FTP-Unterbefehl eingeben.
+> REM *****
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> cd domains/dometic-group.com/public_ftp/dwsk/rcv
+250 CWD command successful
+Einen FTP-Unterbefehl eingeben.
+> SYSCMD CHGCURLIB TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> PUT /QSYS.LIB/TVRELWAECO.LIB/#DC0000E.FILE/#DC0000E.MBR winartnav.txt
+229 Entering Extended Passive Mode (|||35023|)
+150 Opening ASCII mode data connection for winartnav.txt
+226 Transfer complete
+242730 Byte in 0.024 Sekunden übertragen. Übertragungsgeschwindigkeit 9942.221 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host DOMETIC-GROUP.COM, Adresse 193.84.54.32 über Port 21 herzustellen.
+220 ProFTPD Server ready.
+Anmelde-ID (gang) eingeben:
+331 Password required for winadmin
+230 User winadmin logged in
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 1
+500 'SITE NAMEFMT' not understood
+Client NAMEFMT ist 1.
+Einen FTP-Unterbefehl eingeben.
+> REM *****
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> cd domains/dometic-group.com/public_ftp/dwhu/rcv
+250 CWD command successful
+Einen FTP-Unterbefehl eingeben.
+> SYSCMD CHGCURLIB TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> PUT /QSYS.LIB/TVRELWAECO.LIB/#DC0000E.FILE/#DC0000E.MBR winartnav.txt
+229 Entering Extended Passive Mode (|||35587|)
+150 Opening ASCII mode data connection for winartnav.txt
+226 Transfer complete
+242730 Byte in 0.024 Sekunden übertragen. Übertragungsgeschwindigkeit 9942.221 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host DOMETIC-GROUP.COM, Adresse 193.84.54.32 über Port 21 herzustellen.
+220 ProFTPD Server ready.
+Anmelde-ID (gang) eingeben:
+331 Password required for winadmin
+230 User winadmin logged in
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 1
+500 'SITE NAMEFMT' not understood
+Client NAMEFMT ist 1.
+Einen FTP-Unterbefehl eingeben.
+> REM *****
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> cd domains/dometic-group.com/public_ftp/dwfi/rcv
+250 CWD command successful
+Einen FTP-Unterbefehl eingeben.
+> SYSCMD CHGCURLIB TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> PUT /QSYS.LIB/TVRELWAECO.LIB/#DC0000E.FILE/#DC0000E.MBR winartnav.txt
+229 Entering Extended Passive Mode (|||35892|)
+150 Opening ASCII mode data connection for winartnav.txt
+226 Transfer complete
+242730 Byte in 0.024 Sekunden übertragen. Übertragungsgeschwindigkeit 9942.221 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.

@@ -1,0 +1,55 @@
+/*       PROGRAMMNAME:  TRCTEST                                      */
+/*       VERFASSER   :  Schneider    STAND:24.01.2011                */
+/*       BESCHREIBUNG:  testumgebung aus echtumgebung aufbauen       */
+/*                      basis ist die durchgeführte Sicherung        */
+/*                                                                   */
+/*       Info:          bei rücksicherung vorh er in der datei       */
+/*                      bar_vert/kalender den Paramater              */
+/*                      bandsteuerung auf *REWIND setzten            */
+/*                                                                   */
+/*  GEÄNDERT:                                                        */
+/*                                                                   */
+/*********************************************************************/
+             PGM
+
+/*___________________________________________________________________  _______*/
+/*  beenden subsysteme                                                 -------*/
+/*___________________________________________________________________  _______*/
+             DLYJOB     DLY(360)
+             ENDSBS     SBS(TRDMDE) OPTION(*IMMED) ENDSBSOPT(*NOJOBLOG)
+             MONMSG     MSGID(CPF0000)
+             DLYJOB     DLY(60)
+
+             ENDSBS     SBS(TRBATCH) OPTION(*IMMED) +
+                          ENDSBSOPT(*NOJOBLOG)
+             MONMSG     MSGID(CPF0000)
+             DLYJOB     DLY(60)
+
+             ENDSBS     SBS(TRXCALP) OPTION(*IMMED) +
+                          ENDSBSOPT(*NOJOBLOG)
+             MONMSG     MSGID(CPF0000)
+             DLYJOB     DLY(60)
+
+/*___________________________________________________________________  _______*/
+/*  aufbau testumgebung aus Sicherung                                  -------*/
+/*___________________________________________________________________  _______*/
+             CLRLIB     LIB(TVPFTEST)
+             MONMSG     MSGID(CPF0000)
+
+             CLRLIB     LIB(TAMFTEST)
+             MONMSG     MSGID(CPF0000)
+
+             RSTLIB     SAVLIB(TAMF) DEV(TAP01) ENDOPT(*LEAVE) +
+                          RSTLIB(TAMFTEST)
+             MONMSG     MSGID(CPF0000)
+
+             RSTLIB     SAVLIB(TVPF) DEV(TAP01) ENDOPT(*UNLOAD) +
+                          RSTLIB(TVPFTEST)
+             MONMSG     MSGID(CPF0000)
+
+/*___________________________________________________________________  _______*/
+/*  starten subsysteme                                                 -------*/
+/*___________________________________________________________________  _______*/
+             CALL       PGM(BAR_VERT/SBSCHK)
+
+ ENDE:       ENDPGM

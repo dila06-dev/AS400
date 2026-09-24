@@ -1,0 +1,14 @@
+      * Physische Datei: ORDERT
+      * ANLEGEDATUM: OKTOBER 2010
+      *SORT:        SALESCOMPANY (88505), ORDER IN AXAPTA, PRIORITY
+      *SELECT:      STATUS (PRESELECTED)
+      * ÄNDERUNGEN:
+      * AUSSCHLUSS:  ...
+     A
+     A*                                     UNIQUE
+     A          R ORDERTPF                  PFILE(ORDERT)
+     A
+     A                                      TEXT('TEXTSÄTZE')
+     A          K T020
+     A          K T030
+     A          S T350                      CMP(EQ '          ' )

@@ -1,0 +1,45 @@
+     A**************************************************************************
+     A*  Copyright 2011 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Absatz-Plan %-Sätze Jahresebene                                       *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: MG 28.08.2011 Projekt 7668, Planungssystem                  *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R WAOM1
+     A*-------------------------------------------------------------------------
+     A            WAOMLOCK  R               REFFLD(##LOCK)
+     A            WAOMJNAM  R               REFFLD(##JNAM)
+     A            WAOMJDAT  R               REFFLD(##JDAT)
+     A            WAOMJZEI  R               REFFLD(##JZEI)
+     A            WAOMUSER  R               REFFLD(##USER)
+     A            WAOMPROG  R               REFFLD(##PROG)
+     A            WAOMBIBL  R               REFFLD(##BIBL)
+     A            WAOMFIRM  R               REFFLD(##FIRM)
+     A            WAOMKSTC  R               REFFLD(##KSTC)
+     A            WAOMKDGR  R               REFFLD(##KDGR)
+     A            WAOMKDPL  R               REFFLD(KDEW1/KDEWKDPL *LIBL/KDEW)
+     A            WAOMKDNR  R               REFFLD(##KDNR)
+     A            WAOMPRGR  R               REFFLD(##PRGR)
+     A            WAOMJAHR  R               REFFLD(##JAHR)
+     A            WAOMPZ01  R               REFFLD(##PROZ)
+     A            WAOMPZ02  R               REFFLD(##PROZ)
+     A            WAOMPZ03  R               REFFLD(##PROZ)
+     A            WAOMPZ04  R               REFFLD(##PROZ)
+     A            WAOMPZ05  R               REFFLD(##PROZ)
+     A            WAOMPZ06  R               REFFLD(##PROZ)
+     A            WAOMPZ07  R               REFFLD(##PROZ)
+     A            WAOMPZ08  R               REFFLD(##PROZ)
+     A            WAOMPZ09  R               REFFLD(##PROZ)
+     A            WAOMPZ10  R               REFFLD(##PROZ)
+     A            WAOMPZ11  R               REFFLD(##PROZ)
+     A            WAOMPZ12  R               REFFLD(##PROZ)
+     A            WAOMPLKZ       1A         TEXT('Planungskz')
+     A                                      COLHDG('Planungskz')
+     A            WAOMSTKD  R               REFFLD(##STKD)
+     A            WAOMLDNR  R               REFFLD(##LDNR)
+     A            WAOMFREI  R   87          REFFLD(##FREI)

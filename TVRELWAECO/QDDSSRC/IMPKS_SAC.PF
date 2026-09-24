@@ -1,0 +1,40 @@
+     A*
+     A*CRTSRCPF FILE(TVRELWAECO/IVEAS_I) RCDLEN(2400)
+     A*TEXT('DATA STREAM FOR IVEAS 2400 BYTES')
+     A*
+     A*CPYFRMSTMF FROMSTMF('/IVEAS/478451.BAK')
+     A*TOMBR('/QSYS.LIB/TVRELWAECO.LIB/IVEAS_I.FILE/IVEASI.MBR')
+     A*MBROPT(*REPLACE)
+     A*
+     A*SELECT SUBSTR( SRCDTA , 1, 1810) FROM TVRELWAECO/IVEAS_I WHERE
+     A*SUBSTR( SRCDTA , 1, 1) = '1'
+     A*DATEI IVEAS_I1 IN TVRELWAECO WURDE ERSTELLT.
+     A*
+     A*CPYF FROMFILE(IVEAS_I1) TOFILE(IVEAS_SA1) MBROPT(*REPLACE) FMTOPT(*NOCHK)
+     A*
+     A*
+     A*
+     A          R IMPKS_SAC                 TEXT('IVEAS')
+     A********************************************************************
+     A            COM           12A         COLHDG('COM         101   12')
+     A            REFNO         35A         COLHDG('REFNO       103   13')
+     A            SATZART        1A         COLHDG('SATZART     100    1')
+     A            XVALTYPE       3A         COLHDG('XVALTYPE    102   12')
+     A            FCVAL         12A         COLHDG('FCVAL       102   12')
+     A            CURR           3A         COLHDG('CURR        104   63')
+     A            EXCRATEAGR     1A         COLHDG('EXCRATEAGR  105   71')
+     A            EXCRATE       12A         COLHDG('EXCRATE     105   71')
+     A            EXCRATEDT      8A         COLHDG('EXCRATEDT   105   71')
+     A            XVALSTXT      30A         COLHDG('XVALSTXT    105   71')
+     A            CALCMETH       1A         COLHDG('CALCMETH    105   71')
+     A*****************************************************************
+     A*
+     A*****************************************************************
+     A            H1              L         TEXT('Date of transmissing')
+     A            H2              Z         TEXT('TIMESTAMP')
+     A            MANDANT        3A         COLHDG('MANDANT  ')
+     A            KJAHR          4S 0       COLHDG('JAHR     ')
+     A            KRL            1A         COLHDG('R=RECHNUNG, L=LIEF.')
+     A            KRECHLIEF     10A         COLHDG('RECHNUNG ODER LIEF.')
+     A            VERABKZ        1A         COLHDG('VERARBEITUNGSKZ')
+     A*****************************************************************

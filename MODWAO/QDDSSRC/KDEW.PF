@@ -1,0 +1,104 @@
+     A**************************************************************************
+     A*  Copyright 2010 by    trend SWM                                        *
+     A*                       Verwaltungs GmbH                                 *
+     A*                       Gundelfinger Str. 11                             *
+     A*                       D-79111 Freiburg                                 *
+     A*  --------------------------------------------------------------------  *
+     A*  KUNDENSTAMM-ERWEITERUNGEN                                             *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: RH 02.11.2010                                               *
+     A*  Änderung: ZG 18.11.2010 Referenz korrigiert.                          *
+     A*  Änderung: ZG 03.12.2010 PROJEKT 6975 - DRUCK URSPRUNGSLAND            *
+     A*                                         DRUCK AGB                      *
+     A*  Änderung: MG 15.08.2011 Projekt 7668, Planungssystem                  *
+     A*            Neue Felder Planungskz, Kundenplanung                       *
+     A*  Änderung: ZG 20.08.2012 PROJEKT 8762 -                                *
+     A*            "Einzel-Picklistensteuerung" 0/1                            *
+     A*  Änderung: GS 11.11.2012 PROJEKT 9021 - "Konzernschlüßel" (KDEWKZKY)   *
+     A*  Änderung: ZG 02.05.2013 PROJEKT 9449 - neues Feld                     *
+     A*            "Druck UStIDNr"              0/1                            *
+     A*  Änderung: PH 09.07.2014 Projekt 10655. Neue Felder KDEWRPMG "RPM-     *
+     A*            Gruppe", KDEWFL01...04 "KD-Steuerung 01...04"; alle 10A     *
+     A*  Änderung: PH 13.08.2015 Projekt 11567. Neues Feld KDEWFGZT            *
+     A*            "F-Gas berechtigt"                                          *
+     A*  Änderung: PH 28.08.2015 Projekt 11427. Neues Feld KDEWSPTE "Kom-      *
+     A*            Schein verdichten"                                          *
+     A*  Änderung: PH 26.04.2022 DOMETIC Projekt 220189-01. Erweiterung des    *
+     A*            Feldes KDEWFL03 von 10 auf 20 Stellen.                      *
+     A*  Änderung: PH 01.12.2022 Projekt 220562-01. Neue Felder KDEWFL05...09  *
+     A*            "KD-Steuerung 05...09", alle 20A.                           *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R KDEW1
+     A*
+     A            KDEWLOCK  R               REFFLD(##LOCK)
+     A            KDEWJNAM  R               REFFLD(##JNAM)
+     A            KDEWJDAT  R               REFFLD(##JDAT)
+     A            KDEWJZEI  R               REFFLD(##JZEI)
+     A            KDEWUSER  R               REFFLD(##USER)
+     A            KDEWPROG  R               REFFLD(##PROG)
+     A            KDEWBIBL  R               REFFLD(##BIBL)
+     A            KDEWFIRM  R               REFFLD(##FIRM)
+     A            KDEWKDNR  R               REFFLD(##KDNR)
+     A            KDEWGSKZ  R               REFFLD(MODREF1/##GSKZ *LIBL/MODREF)
+     A            KDEWBLKZ  R               REFFLD(MODREF1/##BLKZ *LIBL/MODREF)
+     A            KDEWBVKG  R               REFFLD(MODREF1/##BVKZ *LIBL/MODREF)
+     A            KDEWKSST  R               REFFLD(##KSST)
+     A            KDEWKDKR  R               REFFLD(##KDKR)
+     A            KDEWZOTN  R    1          REFFLD(##ZOTN)
+     A            KDEWZPUR  R    1          REFFLD(##ZPUR)
+     A            KDEWURLD  R    1          REFFLD(##URLD)
+     A                                      TEXT('Druck-Ursprungs-Land')
+     A                                      COLHDG('DUrL')
+     A            KDEWDAGB  R    1          REFFLD(##DRKZ)
+     A                                      TEXT('Druck-AGB')
+     A                                      COLHDG('DAGB')
+     A            KDEWPLKZ       1A         TEXT('Planungskz')
+     A                                      COLHDG('Planungskz')
+     A            KDEWKDPL       4A         TEXT('Kundenplanung')
+     A                                      COLHDG('Kundenplanung')
+     A            KDEWEZPL  R               REFFLD(##JNKZ)
+     A                                      TEXT('Einzel-Pickliste')
+     A                                      COLHDG('EzPl')
+     A            KDEWKZKY       3A         TEXT('Konzernschlüßel')
+     A                                      COLHDG('Konzernschlüßel')
+     A            KDEWDUST  R    1          REFFLD(##DRKZ)
+     A                                      TEXT('Druck-UStIdNr')
+     A                                      COLHDG('DUStIdNr')
+     A            KDEWRPMG  R               REFFLD(##A010)
+     A                                      TEXT('RPM-Gruppe')
+     A                                      COLHDG('RPM-Gruppe')
+     A            KDEWFL01  R               REFFLD(##A010)
+     A                                      TEXT('KD-Steuerung 01')
+     A                                      COLHDG('KD-St-01')
+     A            KDEWFL02  R               REFFLD(##A010)
+     A                                      TEXT('KD-Steuerung 02')
+     A                                      COLHDG('KD-St-02')
+     A            KDEWFL03  R               REFFLD(##A020)
+     A                                      TEXT('KD-Steuerung 03')
+     A                                      COLHDG('KD-St-03')
+     A            KDEWFL04  R               REFFLD(##A010)
+     A                                      TEXT('KD-Steuerung 04')
+     A                                      COLHDG('KD-St-04')
+     A            KDEWFGZT  R               REFFLD(##A001)
+     A                                      TEXT('F-Gas berechtig')
+     A                                      COLHDG('F-GBr')
+     A            KDEWSPTE  R               REFFLD(##SPTE)
+     A                                      TEXT('Kom-Schein verd')
+     A                                      COLHDG('KSV')
+     A            KDEWFL05  R               REFFLD(##A020)
+     A                                      TEXT('KD-Steuerung 05')
+     A                                      COLHDG('KD-St-05')
+     A            KDEWFL06  R               REFFLD(##A020)
+     A                                      TEXT('KD-Steuerung 06')
+     A                                      COLHDG('KD-St-06')
+     A            KDEWFL07  R               REFFLD(##A020)
+     A                                      TEXT('KD-Steuerung 07')
+     A                                      COLHDG('KD-St-07')
+     A            KDEWFL08  R               REFFLD(##A020)
+     A                                      TEXT('KD-Steuerung 08')
+     A                                      COLHDG('KD-St-08')
+     A            KDEWFL09  R               REFFLD(##A020)
+     A                                      TEXT('KD-Steuerung 09')
+     A                                      COLHDG('KD-St-09')
+     A            KDEWFFRI  R   86          REFFLD(##FREI)

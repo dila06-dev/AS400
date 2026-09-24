@@ -1,0 +1,97 @@
+     A**************************************************************************
+     A*  Copyright 2001 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------- *
+     A*  Kommunikationsparameter Rechenschemaübersicht                         *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: HR 31.03.11                                                 *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R EXWAOF1
+     A*-------------------------------------------------------------------------
+     A* Programmstatus
+     A*-------------------------------------------------------------------------
+     A            EXWAOFPGSTR               REFFLD(##PGST)
+     A            EXWAOFPROGR               REFFLD(##PROG)
+     A            EXWAOFFLDNR               REFFLD(##FLDN)
+     A*-------------------------------------------------------------------------
+     A* ON/OFF KZ für Prüfungen
+     A*-------------------------------------------------------------------------
+     A            EXWAOFIFKZR               REFFLD(##IFKZ)
+     A            EXWAOFYYKZR               REFFLD(##A001)
+     A                                      TEXT('ON/OFF-Feld für Prüfung 2')
+     A            EXWAOFFR01R               REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* Key-Felder
+     A*-------------------------------------------------------------------------
+     A            EXWAOFKAJJR               REFFLD(WAOF1/WAOFKAJJ *LIBL/WAOF)
+     A            EXWAOFKANRR               REFFLD(WAOF1/WAOFKANR *LIBL/WAOF)
+     A            EXWAOFVEURR               REFFLD(WAOF1/WAOFVEUR *LIBL/WAOF)
+     A            EXWAOFFR02R  256          REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* Kopier-Begriff NACH
+     A*-------------------------------------------------------------------------
+     A            EXWAOFNKAJR               REFFLD(WAOF1/WAOFKAJJ *LIBL/WAOF)
+     A            EXWAOFNKANR               REFFLD(WAOF1/WAOFKANR *LIBL/WAOF)
+     A            EXWAOFNVEUR               REFFLD(WAOF1/WAOFVEUR *LIBL/WAOF)
+     A            EXWAOFFR03R  256          REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* evt. weitere Felder für Update oder Prüfungen
+     A*-------------------------------------------------------------------------
+     A            EXWAOFWF01R               REFFLD(WAOF1/WAOFWF01 *LIBL/WAOF)
+     A            EXWAOFWF02R               REFFLD(WAOF1/WAOFWF02 *LIBL/WAOF)
+     A            EXWAOFWF03R               REFFLD(WAOF1/WAOFWF03 *LIBL/WAOF)
+     A            EXWAOFWF04R               REFFLD(WAOF1/WAOFWF04 *LIBL/WAOF)
+     A            EXWAOFWF05R               REFFLD(WAOF1/WAOFWF05 *LIBL/WAOF)
+     A            EXWAOFWF06R               REFFLD(WAOF1/WAOFWF06 *LIBL/WAOF)
+     A            EXWAOFWF07R               REFFLD(WAOF1/WAOFWF07 *LIBL/WAOF)
+     A            EXWAOFWF08R               REFFLD(WAOF1/WAOFWF08 *LIBL/WAOF)
+     A            EXWAOFWF09R               REFFLD(WAOF1/WAOFWF09 *LIBL/WAOF)
+     A            EXWAOFWF10R               REFFLD(WAOF1/WAOFWF10 *LIBL/WAOF)
+     A            EXWAOFWF11R               REFFLD(WAOF1/WAOFWF11 *LIBL/WAOF)
+     A            EXWAOFWF12R               REFFLD(WAOF1/WAOFWF12 *LIBL/WAOF)
+     A            EXWAOFWF13R               REFFLD(WAOF1/WAOFWF13 *LIBL/WAOF)
+     A            EXWAOFWF14R               REFFLD(WAOF1/WAOFWF14 *LIBL/WAOF)
+     A            EXWAOFWF15R               REFFLD(WAOF1/WAOFWF15 *LIBL/WAOF)
+     A            EXWAOFWF16R               REFFLD(WAOF1/WAOFWF16 *LIBL/WAOF)
+     A            EXWAOFWF17R               REFFLD(WAOF1/WAOFWF17 *LIBL/WAOF)
+     A            EXWAOFWF18R               REFFLD(WAOF1/WAOFWF18 *LIBL/WAOF)
+     A            EXWAOFWF19R               REFFLD(WAOF1/WAOFWF19 *LIBL/WAOF)
+     A            EXWAOFWF20R               REFFLD(WAOF1/WAOFWF20 *LIBL/WAOF)
+     A            EXWAOFWF21R               REFFLD(WAOF1/WAOFWF21 *LIBL/WAOF)
+     A            EXWAOFWF22R               REFFLD(WAOF1/WAOFWF22 *LIBL/WAOF)
+     A            EXWAOFWF23R               REFFLD(WAOF1/WAOFWF23 *LIBL/WAOF)
+     A            EXWAOFWF24R               REFFLD(WAOF1/WAOFWF24 *LIBL/WAOF)
+     A            EXWAOFWF25R               REFFLD(WAOF1/WAOFWF25 *LIBL/WAOF)
+     A            EXWAOFWF26R               REFFLD(WAOF1/WAOFWF26 *LIBL/WAOF)
+     A            EXWAOFWF27R               REFFLD(WAOF1/WAOFWF27 *LIBL/WAOF)
+     A            EXWAOFWF28R               REFFLD(WAOF1/WAOFWF28 *LIBL/WAOF)
+     A            EXWAOFWF29R               REFFLD(WAOF1/WAOFWF29 *LIBL/WAOF)
+     A            EXWAOFWF30R               REFFLD(WAOF1/WAOFWF30 *LIBL/WAOF)
+     A            EXWAOFWF31R               REFFLD(WAOF1/WAOFWF31 *LIBL/WAOF)
+     A            EXWAOFWF32R               REFFLD(WAOF1/WAOFWF32 *LIBL/WAOF)
+     A            EXWAOFWF33R               REFFLD(WAOF1/WAOFWF33 *LIBL/WAOF)
+     A            EXWAOFWF34R               REFFLD(WAOF1/WAOFWF34 *LIBL/WAOF)
+     A            EXWAOFWF35R               REFFLD(WAOF1/WAOFWF35 *LIBL/WAOF)
+     A            EXWAOFWF36R               REFFLD(WAOF1/WAOFWF36 *LIBL/WAOF)
+     A            EXWAOFWF37R               REFFLD(WAOF1/WAOFWF37 *LIBL/WAOF)
+     A            EXWAOFWF38R               REFFLD(WAOF1/WAOFWF38 *LIBL/WAOF)
+     A            EXWAOFWF39R               REFFLD(WAOF1/WAOFWF39 *LIBL/WAOF)
+     A            EXWAOFWF40R               REFFLD(WAOF1/WAOFWF40 *LIBL/WAOF)
+     A            EXWAOFWF41R               REFFLD(WAOF1/WAOFWF41 *LIBL/WAOF)
+     A            EXWAOFWF42R               REFFLD(WAOF1/WAOFWF42 *LIBL/WAOF)
+     A            EXWAOFWF43R               REFFLD(WAOF1/WAOFWF43 *LIBL/WAOF)
+     A            EXWAOFWF44R               REFFLD(WAOF1/WAOFWF44 *LIBL/WAOF)
+     A            EXWAOFWF45R               REFFLD(WAOF1/WAOFWF45 *LIBL/WAOF)
+     A            EXWAOFWF46R               REFFLD(WAOF1/WAOFWF46 *LIBL/WAOF)
+     A            EXWAOFWF47R               REFFLD(WAOF1/WAOFWF47 *LIBL/WAOF)
+     A            EXWAOFWF48R               REFFLD(WAOF1/WAOFWF48 *LIBL/WAOF)
+     A            EXWAOFWF49R               REFFLD(WAOF1/WAOFWF49 *LIBL/WAOF)
+     A            EXWAOFWF50R               REFFLD(WAOF1/WAOFWF50 *LIBL/WAOF)
+     A            EXWAOFTSTPR               REFFLD(WAOF1/WAOFTSTP *LIBL/WAOF)
+     A            EXWAOFERUSR               REFFLD(WAOF1/WAOFERUS *LIBL/WAOF)
+     A            EXWAOFBERER               REFFLD(WAOF1/WAOFBERE *LIBL/WAOF)
+     A            EXWAOFFR04R 1024          REFFLD(##FREI)

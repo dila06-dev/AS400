@@ -1,0 +1,94 @@
+     A          R EDILPF0
+     A            EDIL010        7S 0
+     A                                      TEXT('Mitglieds-Nr. Absender')
+     A                                      COLHDG('Mit' -
+     A                                      'gl.-' -
+     A                                      'Nr.')
+     A                                      EDTCDE(Z)
+     A            EDIL020        7S 0
+     A                                      TEXT('Mitglieds-Nr. Empfänger')
+     A                                      COLHDG('Mit' -
+     A                                      'gl.-' -
+     A                                      'Nr.')
+     A                                      EDTCDE(Z)
+     A            EDIL030        7S 0
+     A                                      TEXT('Kunden-Nr. beim Empf.')
+     A                                      COLHDG('Kd.Nr.' -
+     A                                      'beim ' -
+     A                                      'Empf.')
+     A                                      EDTCDE(Z)
+     A            EDIL040        7S 0
+     A                                      TEXT('Auftr.Nr. beim Abs.')
+     A                                      COLHDG('Auft.Nr.' -
+     A                                      'beim ' -
+     A                                      'Abs.')
+     A                                      EDTCDE(Z)
+     A            EDIL050        5S 0
+     A                                      TEXT('Positions-Nr. beim Abs.')
+     A                                      COLHDG('Pos..Nr.' -
+     A                                      'beim ' -
+     A                                      'Abs.')
+     A                                      EDTCDE(Z)
+     A            EDIL060        8S 0
+     A                                      TEXT('Datum JJJJMMTT')
+     A                                      COLHDG('Datum ' -
+     A                                      'JJJJMMTT')
+     A                                      EDTWRD('    .  .  ')
+     A            EDIL070        6S 0
+     A                                      TEXT('Zeit')
+     A                                      COLHDG('Zeit')
+     A                                      EDTWRD('0 :  :  ')
+     A            EDIL210        3A
+     A                                      TEXT('Art.Nr.-Präfix Empfänger')
+     A                                      COLHDG('Art' -
+     A                                      'Nr.' -
+     A                                      'Prfx')
+     A            EDIL220       15A
+     A                                      TEXT('Art.Nr.-beim   Empfänger')
+     A                                      COLHDG('Art' -
+     A                                      'Nr.' -
+     A                                      'Empf')
+     A            EDIL230       40A
+     A                                      TEXT('Art.Nr.-beim   Absender')
+     A                                      COLHDG('Art' -
+     A                                      'Nr.' -
+     A                                      'Abs.')
+     A            EDIL240        8S 3
+     A                                      TEXT('Mengen  Bestellt')
+     A                                      COLHDG('Mengen' -
+     A                                      'bestellt')
+     A            EDIL250        1A
+     A                                      TEXT('Kezi. Rückstand')
+     A                                      COLHDG('Kezi' -
+     A                                      'Rück-' -
+     A                                      'stand')
+     A            EDIL300       20A
+     A                                      TEXT('Art.Nr.-beim   Kunden')
+     A                                      COLHDG('Art' -
+     A                                      'Nr.' -
+     A                                      'Kd.')
+     A            EDIL310       30A
+     A                                      TEXT('Art.Bez. beim Kunden')
+     A                                      COLHDG('Art' -
+     A                                      'bez' -
+     A                                      'Kd.')
+     A            EDIL320        2S 0
+     A                                      TEXT('Auftragsstatus')
+     A                                      COLHDG('Status')
+     A            EDIL330       10A
+     A                                      TEXT('Bediener')
+     A                                      COLHDG('Bediener')
+     A            EDIL340        6S 0
+     A                                      TEXT('WAECO ANR')
+     A                                      COLHDG('WAECO-' -
+     A                                      'AuftragsNr')
+     A            EDIL350        3S 0
+     A                                      TEXT('WAECO APOS')
+     A                                      COLHDG('WAECO-' -
+     A                                      'Auftragspositions-Nr')
+
+     A          K EDIL010
+     A          K EDIL020
+     A          K EDIL030
+     A          K EDIL040
+     A          K EDIL050

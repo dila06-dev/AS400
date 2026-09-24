@@ -1,0 +1,90 @@
+     C*Ausgabe SUPPID    - 5 -
+     c/exec sql
+     C+ update einvoice/SUPPID
+     c+ set INVOICEID = :INVOICEID,
+     c+     id_id     = '               '
+     c/end-exec
+     C*
+     c/exec sql
+     C+ update einvoice/SUPPID
+     c+ set ID_ID=(select distinct
+     c+                   substr("LegalEntityUniqueID", 1, 30)
+     c+            from einvoice/idnumbers
+     c+            where WAECONR = :WAECONR   and
+     c+            "LegalEntityUniqueID"        is not null and
+     C+            substr(COMPA00001, 1, 2) = :RKFIRM    and
+     C+            COMPA00001 is not null )
+     4+ where      SCHEMENAME='LegalEntityUniqueID'
+     c/end-exec
+     C*
+     c/exec sql
+     C+ update einvoice/SUPPID
+     c* set ID_ID=(select substr("CompanyRegistryData", 1, 30)
+     c+ set ID_ID=(select distinct
+     c+                   substr("CompanyTaxNumber", 1, 30)
+     c+            from einvoice/idnumbers
+     c+            where WAECONR = :WAECONR   and
+     c+            "CompanyTaxNumber"         is not null and
+     C+            substr(COMPA00001, 1, 2) = :RKFIRM    and
+     C+            COMPA00001 is not null )
+     4+ where      SCHEMENAME='CompanyRegistryData'
+     c/end-exec
+     C*
+     c/exec sql
+     C+ update einvoice/SUPPID
+     c*+ set ID_ID=(select substr("TradeRegistryNumber", 1, 20)
+     c+ set ID_ID=(select distinct
+     c+                   substr("CompanyTaxNumber", 1, 30)
+     c+            from einvoice/idnumbers
+     c+            where WAECONR = :WAECONR   and
+     c+            "CompanyTaxNumber"         is not null and
+     C+            substr(COMPA00001, 1, 2) = :RKFIRM    and
+     C+            COMPA00001 is not null )
+     4+ where      SCHEMENAME='TradeRegistryNumber'
+     c/end-exec
+     C*
+
+     C*Ausgabe SUPPTAXID  - 6 -
+     c/exec sql
+     C+ update einvoice/SUPPTAXID
+     4+ set INVOICEID = :INVOICEID, SCHEMEAGEN = '   ',
+     4+     TAXID_TAXI= '                    '
+     c/end-exec
+     C*
+     c/exec sql
+     C+ update einvoice/SUPPTAXID
+     C+ set TAXID_TAXI =(select distinct
+     C+                         substr("CompanyTaxNumber", 1, 30)
+     C+                  from einvoice/idnumbers
+     C+                  where WAECONR = :WAECONR   and
+     C+                  "CompanyTaxNumber"         is not null and
+     C+                  substr(COMPA00001, 1, 2) = :RKFIRM    and
+     C+                  COMPA00001 is not null )
+     C+ where            SCHEMENAME='CompanyTaxNumber   '
+     c/end-exec
+     C*
+     c/exec sql
+     C+ update einvoice/SUPPTAXID
+     C*+ set TAXID_TAXI =(select substr("GeneralTaxNumber", 1, 20)
+     C+ set TAXID_TAXI =(select distinct
+     C+                         substr("CompanyTaxNumber", 1, 30)
+     C+                  from einvoice/idnumbers
+     C+                  where WAECONR = :WAECONR   and
+     C+                  "CompanyTaxNumber"         is not null and
+     C+                  substr(COMPA00001, 1, 2) = :RKFIRM    and
+     C+                  COMPA00001 is not null )
+     C+ where            SCHEMENAME='GeneralTaxNumber   '
+     c/end-exec
+     C*
+     c/exec sql
+     C+ update einvoice/SUPPTAXID
+     C+ set SCHEMEAGEN =(select distinct
+     C+                         substr("LogicalID", 1, 2)
+     C+                  from einvoice/idnumbers
+     C+                  where WAECONR = :WAECONR   and
+     C+                  "LogicalID"      is not null and
+     C+                  substr(COMPA00001, 1, 2) = :RKFIRM    and
+     C+                  COMPA00001 is not null )
+     C+ where            SCHEMENAME='TypeOfVAT          '
+     c/end-exec
+     C*

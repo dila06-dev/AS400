@@ -1,0 +1,57 @@
+     A**************************************************************************
+     A*  Copyright 2011 by    trend SWM                                        *
+     A*                       Verwaltungs GmbH                                 *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------- *
+     A*  Lagerzugang Fehler-Code                                               *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: RE 23.01.2012 DOMETIC Projekt 7558                          *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R RTWAOO1
+     A*-------------------------------------------------------------------------
+     A* allgemeine Rückgabe
+     A*-------------------------------------------------------------------------
+     A            RTWAOOPROGR               REFFLD(##PROG)
+     A            RTWAOODANAR               REFFLD(##DANA)
+     A            RTWAOORTCDR               REFFLD(##RTCD)
+     A            RTWAOOFFLDR               REFFLD(##FFLD)
+     A            RTWAOOFENRR               REFFLD(##FENR)
+     A            RTWAOOPA03R               REFFLD(##A010)
+     A                                      TEXT('Parameter 3 bei Fehler')
+     A            RTWAOOPA04R               REFFLD(##A010)
+     A                                      TEXT('Parameter 4 bei Fehler')
+     A            RTWAOOPA05R               REFFLD(##A010)
+     A                                      TEXT('Parameter 5 bei Fehler')
+     A            RTWAOOPA06R               REFFLD(##A010)
+     A                                      TEXT('Parameter 6 bei Fehler')
+     A            RTWAOOPA07R               REFFLD(##A010)
+     A                                      TEXT('Parameter 7 bei Fehler')
+     A*-------------------------------------------------------------------------
+     A* ON/OFF Rückgabe KZ für Prüfungen
+     A*-------------------------------------------------------------------------
+     A            RTWAOOQQKZR               REFFLD(##A001)
+     A                                      TEXT('ON/OFF-Feld für Prüfung 1')
+     A            RTWAOOYYKZR               REFFLD(##A001)
+     A                                      TEXT('ON/OFF-Feld für Prüfung 2')
+     A            RTWAOOFR01R               REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* Key-Felder
+     A*-------------------------------------------------------------------------
+     A            RTWAOOLGJJR               REFFLD(WAOO1/WAOOLGJJ *LIBL/WAOO)
+     A            RTWAOOLGNRR               REFFLD(WAOO1/WAOOLGNR *LIBL/WAOO)
+     A            RTWAOOLGPOR               REFFLD(WAOO1/WAOOLGPO *LIBL/WAOO)
+     A            RTWAOOFBNRR               REFFLD(WAOO1/WAOOFBNR *LIBL/WAOO)
+     A            RTWAOOTSTPR               REFFLD(WAOO1/WAOOTSTP *LIBL/WAOO)
+     A            RTWAOOFR02R  100          REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* evt. weitere Felder nach Ermittlung
+     A*-------------------------------------------------------------------------
+     A            RTWAOOERUSR               REFFLD(WAOO1/WAOOERUS *LIBL/WAOO)
+     A            RTWAOOFEATR               REFFLD(WAOO1/WAOOFEAT *LIBL/WAOO)
+     A            RTWAOOFEARR               REFFLD(WAOO1/WAOOFEAR *LIBL/WAOO)
+     A            RTWAOOFEUSR               REFFLD(WAOO1/WAOOFEUS *LIBL/WAOO)
+     A            RTWAOOFEBMR               REFFLD(WAOO1/WAOOFEBM *LIBL/WAOO)
+     A            RTWAOOPERGR               REFFLD(WAOO1/WAOOPERG *LIBL/WAOO)
+     A            RTWAOOFR03R  705          REFFLD(##FREI)

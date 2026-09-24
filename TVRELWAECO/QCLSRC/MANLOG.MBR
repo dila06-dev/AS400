@@ -1,0 +1,54 @@
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host DOMETIC-GROUP.COM, Adresse 193.84.54.32 über Port 21 herzustellen.
+220---------- Welcome to Pure-FTPd [privsep] [TLS] ----------
+220-You are user number 2 of 50 allowed.
+220-Local time is now 12:08. Server port: 21.
+220-This is a private system - No anonymous login
+220-IPv6 connections are also welcome on this server.
+220 You will be disconnected after 15 minutes of inactivity.
+Anmelde-ID (gang) eingeben:
+331 User winadmin OK. Password required
+230-This server supports FXP transfers
+230 OK. Current restricted directory is /
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> ascii
+200 TYPE is now ASCII
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 1
+500 SITE NAMEFMT is an unknown extension
+Client NAMEFMT ist 1.
+Einen FTP-Unterbefehl eingeben.
+> REM *****
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP eingeben.
+Einen FTP-Unterbefehl eingeben.
+> REM *****   *****
+Unterbefehl 'REM' nicht gültig.
+Einen FTP-Unterbefehl eingeben.
+> cd domains/dometic-group.com/public_ftp/dwman
+250 OK. Current directory is /domains/dometic-group.com/public_ftp/dwman
+Einen FTP-Unterbefehl eingeben.
+> SYSCMD CHGCURLIB TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> SYSCMD RMVM FILE(TVRELWAECO/MAN_UPLOAD) MBR(MAN_UPLOAD)
+Einen FTP-Unterbefehl eingeben.
+> PUT /QSYS.LIB/TVRELWAECO.LIB/MAN_EXPORT.FILE/MAN_EXPORT.MBR  MAN_EXPORT.CSV
+229 Extended Passive mode OK (|||35050|)
+150 Accepted data connection
+226-File successfully transferred
+226 0.107 seconds (measured here), 0.79 Mbytes per second
+ 88712 Byte in 0.025 Sekunden übertragen. Übertragungsgeschwindigkeit 3493.888 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> PUT /QSYS.LIB/TVRELWAECO.LIB/MAN_DOCUM.FILE/MAN_DOCUM.MBR  MAN_DOCUM.TXT
+229 Extended Passive mode OK (|||35554|)
+150 Accepted data connection
+226-File successfully transferred
+226 0.046 seconds (measured here), 0.67 Mbytes per second
+ 32530 Byte in 0.005 Sekunden übertragen. Übertragungsgeschwindigkeit 6662.144 KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221-Goodbye. You uploaded 118 and downloaded 0 kbytes.
+221 Logout.

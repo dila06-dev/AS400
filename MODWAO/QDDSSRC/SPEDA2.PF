@@ -1,0 +1,27 @@
+     A**************************************************************************
+     A*  Copyright 2010 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Hellmann Aktion Empfangsdatei                                         *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: SZ 10.08.2011                                               *
+     A*                                                                        *
+     A**************************************************************************
+     A          R SPEDA2R
+     A*-------------------------------------------------------------------------
+     A            SPEDA2KDBL    10A         ALWNULL
+     A            SPEDA2FR01    10A         ALWNULL
+     A            SPEDA2FRAN     2A         ALWNULL
+     A            SPEDA2DPDN    20A         ALWNULL
+     A            SPEDA2DATE    10A         ALWNULL
+     A            SPEDA2GW01    10A         ALWNULL
+     A            SPEDA2FR02    10A         ALWNULL
+     A            SPEDA2FR03    10A         ALWNULL
+     A            SPEDA2FR04    10A         ALWNULL
+     A            SPEDA2ANZA     2A         ALWNULL
+     A            SPEDA2VPCD     2A         ALWNULL
+     A            SPEDA2GW02     8A         ALWNULL
+     A            SPEDA2PAKN    20A         ALWNULL
+     A            SPEDA2FR05    10A         ALWNULL

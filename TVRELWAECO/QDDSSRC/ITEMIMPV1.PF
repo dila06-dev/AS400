@@ -1,0 +1,97 @@
+     A*
+     A*CRTSRCPF FILE(TVRELWAECO/IMPORT2400) RCDLEN(2400)
+     A*TEXT('DATA STREAM FOR IMPORT 2400 BYTES')
+     A*
+     A*
+     A*
+     A*CPYFRMSTMF FROMSTMF('/LAGER/SCM/ITEMSUPLOADV1.1.CSV')
+     A*TOMBR('/QSYS.LIB/TVRELWAECO.LIB/IMPORT2400.FILE/IMPORT2400.MBR')
+     A*MBROPT(*REPLACE)
+     A*
+     A*CPYFRMIMPF FROMFILE(TVRELWAECO/IMPORT2400)
+     A*TOFILE(TVRELWAECO/ITEMIMPV1) MBROPT(*REPLACE)
+     A*FLDDLM(';') DECPNT(*COMMA)
+     A*FROMRCD(1) RPLNULLVAL(*FLDDFT)
+     A*
+     A*
+     A*
+     A          R ITEMIMPV1R                TEXT('ITEMIMPV1')
+     A********************************************************************
+     A            #SKU          15A         COLHDG('01SKU')
+     A            #DESCENG      40A         COLHDG('02ITEM DESCRIPTION')
+     A            #SUPPLIER     15A         COLHDG('03SUPPLIER NAME')
+     A            #EAN          13A         COLHDG('04EAN 13 CODE')
+     A            #PGRP         03A         COLHDG('05DOM FIN PROD GROUP')
+     A            #PAREA        25A         COLHDG('06PRODUCT AREA')
+     A            #PGROUP       35A         COLHDG('07PRODUCT GROUP')
+     A            #PFAMILY      25A         COLHDG('08MODEL FAMILY')
+     A            #PMODEL       40A         COLHDG('09MODEL')
+     A            #GOODCOMP     02A         COLHDG('10FINISH GOODS/COMP')
+     A*
+     A            #OEM          12A         COLHDG('11OEM / AM ITEM')
+     A            #SUBST        15A         COLHDG('12SUBSTITUTE ITEM')
+     A            #STATUS       03A         COLHDG('13STATUS ITEM')
+     A*
+     A            RELEASE       01A         COLHDG('14RELEASE J/N/#')
+     A            REFERENZ      15A         COLHDG('15REFERENZARTIKEL')
+     A            PREZPR        11S 3       COLHDG('16PREZPR HIER LP1')
+     A            PRWACD        03A         COLHDG('17WÄHRUNGSCODE')
+     A            PRGADA        08S 0       COLHDG('18GÜLTIG AB  DATUM')
+     A            PRGBDA        08S 0       COLHDG('19GÜLTIG BIS DATUM')
+     A            BOM           03A         COLHDG('20BOM')
+     A*
+     A            TESTLF        10A         COLHDG('21SUPPLIER NUMBER')
+     A**********  TEABC1        01A         COLHDG('22BW-KL. PR. EK')
+     A            LPIDEN        30A         COLHDG('22ITEM NUMBER SUPPL')
+     A            TESTPR        11S 3       COLHDG('23STK3')
+     A            TEOSMM01      10A         COLHDG('24IDCO')
+     A            LPMIBM        11S 2       COLHDG('25BE-MENGE MIN LPIF')
+     A            LPLZTG        03S 0       COLHDG('26LIEF-VORL-ZT.E')
+     A            LPLZTD        01A         COLHDG('27LIEF-VORL-ARTE')
+     A            INCODEL       03A         COLHDG('28DELIVERY TERM INCO')
+     A            INCOPLC       03A         COLHDG('29PLACE OF TERM INCO')
+     A            INCOPAY       03A         COLHDG('30PAYMENT TERM INCO')
+     A*
+     A            T1             1A         COLHDG('31T1')
+     A            T2             1A         COLHDG('32T2')
+     A            T3             1A         COLHDG('33T3')
+     A            T4             1A         COLHDG('34T4')
+     A            T5             1A         COLHDG('35T5')
+     A            T6             1A         COLHDG('36T6')
+     A            T7             1A         COLHDG('37T7')
+     A            T8             1A         COLHDG('38T8')
+     A            T9             1A         COLHDG('39T9')
+     A            T10            1A         COLHDG('40T10')
+     A*
+     A            TEWEMT         1A         COLHDG('41QS-METHODE WE')
+     A            TETART         1A         COLHDG('42IDENT-ART')
+     A            TEMAGR         4A         COLHDG('43MATERIAL-GRP')
+     A            TEPRGR         4A         COLHDG('44PRODUKT-GRUPPE')
+     A            TESAEK         3A         COLHDG('45SACHBEARB. EK')
+     A            TEDIEK         3A         COLHDG('46DISPONENT EK')
+     A            TEURLD         3A         COLHDG('47URSPR-LAND')
+     A            TEUREG         2A         COLHDG('48URSPR-REGION')
+     A            TEMCBG        10A         COLHDG('49MATCHCODE')
+     A            TEARKZ         2A         COLHDG('50SOND-DISP-KZ')
+     A*
+     A            TEZOAN        01A         COLHDG('51ZOLLANMELDUNG')
+     A            TEZPUR         2A         COLHDG('52ZOLLPRÄFERENZ')
+     A            TELANG#        9S 4       COLHDG('53LÄNGE CM     ')
+     A            TEBREI#        9S 4       COLHDG('54BREITE CM=>MM')
+     A            TEHOHE#        9S 4       COLHDG('55HÖHE CM=>MM ')
+     A            TEGWNT#        9S 4       COLHDG('56GEWICHT NE KG')
+     A            TEGWBR#        9S 4       COLHDG('57GEWICHT BR KG')
+     A            TETEST         2A         COLHDG('58STATUS TREND ')
+     A**********  TEABC1        01A         COLHDG('22BW-KL. PR. EK')
+     A            TEABC1        01A         COLHDG('59BW-KL. PR. EK')
+     A            TLALTE        30A         COLHDG('60ALTE ITEM NR ')
+     A***                                   COLHDG('AUS TEAL       ')
+     A*****************************************************************
+     A*
+     A*****************************************************************
+     A            H1              L         TEXT('Date of transmissing')
+     A            H2              Z         TEXT('TIMESTAMP')
+     A            H3              L         TEXT('Date of INPUT')
+     A            H4              Z         TEXT('TIMESTAMP INPUT')
+     A            H5              T         TEXT('TIME      INPUT')
+     A*****************************************************************

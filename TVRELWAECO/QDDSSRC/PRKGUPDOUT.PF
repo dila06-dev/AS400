@@ -1,0 +1,34 @@
+     A*
+     A*         DATUM IMMER TT.MM.JJJJ
+     A*         ZEIT  IMMER HH:MM
+     A          R PRKGUPDOUT                TEXT('____')
+     A*****************************************************************
+     A            COMPANY        2A         COLHDG('COMPANY  ')
+     A            ITEM          15A         COLHDG('ITEM     ')
+     A            KIND          03A         COLHDG('KIND PVK ')
+     A            GROUP         04A         COLHDG('GROUP 073')
+     A            PVKNETTO      12S 4       COLHDG('PVKNETTO ')
+     A            FROMDAT       08S 0       COLHDG('FROM     ')
+     A            UNTILDAT      08S 0       COLHDG('UNTIL    ')
+     A            CURRENTCY      3A         COLHDG('CURRENTCY')
+     A            REFERENCE     50A         COLHDG('REFERENCE')
+     A            LIEFERANT     10A         COLHDG('LIEFERANT')
+     A*****************************************************************
+     A            #COMPANY       2A         COLHDG('COMPANY  ')
+     A            #ITEM         15A         COLHDG('ITEM     ')
+     A            #KIND         03A         COLHDG('KIND PVK ')
+     A            #GROUP        04A         COLHDG('GROUP 073')
+     A            #PVKNETTO     12S 4       COLHDG('PVKNETTO ')
+     A            #FROMDAT      08S 0       COLHDG('FROM     ')
+     A            #UNTILDAT     08S 0       COLHDG('UNTIL    ')
+     A            #CURRENTCY     3A         COLHDG('CURRENTCY')
+     A            #TEILCHECK     1A         COLHDG('TEILCHECK')
+     A            #ERRORS       50A         COLHDG('#ERRORS  ')
+     A*****************************************************************
+     A            H1            10A         TEXT('status')
+     A            H2              L         TEXT('Date of transmissing')
+     A            H3              Z         TEXT('TIMESTAMP')
+     A            H4           256A         TEXT('statusII')
+     A            H5              L         TEXT('Date of UPLOAD      ')
+     A            H6              Z         TEXT('TIMESTAMP OF UPLOAD')
+     A

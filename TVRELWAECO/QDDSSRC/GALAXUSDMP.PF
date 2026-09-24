@@ -1,0 +1,12 @@
+     A*
+     A*         DATUM IMMER TT.MM.JJJJ
+     A*         ZEIT  IMMER HH:MM
+     A          R GALAXUSIM                 TEXT('GALAXUSDMP')
+     A*****************************************************************
+     A            DOM           15A
+     A            ITEM          15A
+     A            NET            9S 2
+     A            BRUTT          9S 2
+     A            RAB            6S 2
+     A            NETTEX         9S 2
+     A            TOTAL          9S 2

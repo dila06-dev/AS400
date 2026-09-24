@@ -1,0 +1,19 @@
+/*-------------------------------------------------*/
+/* säubern                                         */
+/*-------------------------------------------------*/
+             PGM
+
+             RUNSQLSTM  SRCFILE(TVRELWAECO/QCLSRC) SRCMBR(ZT1) +
+                          COMMIT(*NONE)
+             RUNSQLSTM  SRCFILE(TVRELWAECO/QCLSRC) SRCMBR(ZT2) +
+                          COMMIT(*NONE)
+             RUNSQLSTM  SRCFILE(TVRELWAECO/QCLSRC) SRCMBR(ZT3) +
+                          COMMIT(*NONE)
+             RUNSQLSTM  SRCFILE(TVRELWAECO/QCLSRC) SRCMBR(ZT4) +
+                          COMMIT(*NONE)
+      /*     RUNSQLSTM  SRCFILE(TVRELWAECO/QCLSRC) SRCMBR(ZT7) +*/
+      /*                  COMMIT(*NONE)                         */
+      /*     RUNSQLSTM  SRCFILE(TVRELWAECO/QCLSRC) SRCMBR(ZT8) +*/
+      /*                  COMMIT(*NONE)                         */
+
+             ENDPGM

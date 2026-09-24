@@ -1,0 +1,53 @@
+2026-09-18-10.19.11.054864   18.09.2026   10.19.11
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Es wird versucht, eine Verbindung zu Host ftpsyncro.tradeinn.com, Adresse
+ 35.195.107.158 über Port 21 herzustellen.
+220---------- Welcome to Pure-FTPd [privsep] [TLS] ----------
+220-You are user number 22 of 500 allowed.
+220-Local time is now 10:19. Server port: 21.
+220-This is a private system - No anonymous login
+220-IPv6 connections are also welcome on this server.
+220 You will be disconnected after 15 minutes of inactivity.
+Anmelde-ID (gang) eingeben:
+331 User DometicSpain OK. Password required
+230 OK. Current directory is /
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> REM **********************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP
+ eingeben.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 TYPE is now ASCII
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 SITE NAMEFMT is an unknown extension
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** ******************
+Unterbefehl 'REM' nicht gültig.
+Einen FTP-Unterbefehl eingeben.
+> cd /
+250 OK. Current directory is /
+Einen FTP-Unterbefehl eingeben.
+> mdelete *
+229 Extended Passive mode OK (|||11568|)
+550 Can't check for file existence
+Einen FTP-Unterbefehl eingeben.
+> APPEND TRADEINN_S TRADEINNS-20260918101911.csv
+229 Extended Passive mode OK (|||11238|)
+150 Accepted data connection
+226-Warning: client is in ASCII mode - Assuming data is plain text
+226-File successfully transferred
+226 0.052 seconds (measured here), 0.78 Mbytes per second
+ 42651 Byte in 0.003 Sekunden übertragen. Übertragungsgeschwindigkeit 14558.208
+ KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221-Goodbye. You uploaded 42 and downloaded 0 kbytes.
+221 Logout.

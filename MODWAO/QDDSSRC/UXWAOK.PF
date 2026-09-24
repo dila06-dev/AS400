@@ -1,0 +1,22 @@
+     A**************************************************************************
+     A*  Copyright 2011 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Absatz-Plan Erhöhungstabelle                                          *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: MG 15.08.2011 Projekt 7668, Planungssystem                  *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R UXWAOK1
+     A*
+     A            UXWAOKFIRMR               REFFLD(WAOK1/WAOKFIRM *LIBL/WAOK)
+     A            UXWAOKKSTCR               REFFLD(WAOK1/WAOKKSTC *LIBL/WAOK)
+     A            UXWAOKKDGRR               REFFLD(WAOK1/WAOKKDGR *LIBL/WAOK)
+     A            UXWAOKKDPLR               REFFLD(WAOK1/WAOKKDPL *LIBL/WAOK)
+     A            UXWAOKKDNRR               REFFLD(WAOK1/WAOKKDNR *LIBL/WAOK)
+     A            UXWAOKLDNRR               REFFLD(WAOK1/WAOKLDNR *LIBL/WAOK)
+     A            UXWAOKPRGRR               REFFLD(WAOK1/WAOKPRGR *LIBL/WAOK)
+     A            UXWAOKJAHRR               REFFLD(WAOK1/WAOKJAHR *LIBL/WAOK)

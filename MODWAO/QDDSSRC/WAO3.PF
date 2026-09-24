@@ -1,0 +1,48 @@
+     A**************************************************************************
+     A*  Copyright 2010 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Schnittstelle zum QS-System PDAP7 für die Einlagerung                 *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: PH 13.01.2010 Projekt 5309 für Kunde WAECO                  *
+     A*  Änderung: XX XX.XX.XXXX                                               *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R WAO31
+     A*-------------------------------------------------------------------------
+     A            WAO3WENR  R   30A         REFFLD(##WENR)
+     A            WAO3BENR  R   15A         REFFLD(##BENR)
+     A            WAO3EZNR  R   30A         REFFLD(##EZNR)
+     A            WAO3EZIX  R               REFFLD(##A004)
+     A                                      TEXT('Erzeugnis-Nr Index')
+     A                                      COLHDG('Erzeugnis-Nr Index')
+     A            WAO3LFNR  R   30A         REFFLD(##LFNR)
+     A            WAO3WEDA  R   10A         REFFLD(##WEDA)
+     A            WAO3LINR  R   30A         REFFLD(##LINR)
+     A            WAO3LFTE  R   10A         REFFLD(##LFTE)
+     A                                      TEXT('Soll-Lieferdatum')
+     A                                      COLHDG('Soll-Lieferdatum')
+     A            WAO3BETE  R   10A         REFFLD(##LFTE)
+     A                                      TEXT('Best-Liefertermin')
+     A                                      COLHDG('Best-Liefertermin')
+     A            WAO3WEMG  R               REFFLD(##WEMG)
+     A                                      TEXT('WE-Liefermenge')
+     A                                      COLHDG('WE-Liefermenge')
+     A            WAO3BSMG  R               REFFLD(##BSMG)
+     A                                      TEXT('Soll-Liefermenge')
+     A                                      COLHDG('Soll-Liefermenge')
+     A            WAO3MEIN  R   10A         REFFLD(##MEIN)
+     A                                      COLHDG('Mengen-Einheit')
+     A            WAO3STKZ  R               REFFLD(##STKZ)
+     A            WAO3SAPT  R               REFFLD(##A030)
+     A                                      TEXT('SAP-TL11')
+     A                                      COLHDG('SAP-TL11')
+     A            WAO3TL11  R               REFFLD(##A030)
+     A                                      TEXT('TL11-Menge')
+     A                                      COLHDG('TL11-Menge')
+     A            WAO3DUMM  R               REFFLD(##A001)
+     A                                      TEXT('Dummy Satzende-Kz')
+     A                                      COLHDG('Dummy')

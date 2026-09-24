@@ -1,0 +1,30 @@
+      * :AB 26.12.2012 VERSION 2004/07
+     A
+     A          R A00
+     A            A00ART        03A         COLHDG('SATZART KONSTANTE')
+     A            A00SATZART    03A         COLHDG('QUALIFIER        ')
+     A            A00RELEASE    03A         COLHDG('STD,KDF,ABH      ')
+     A            A00BORDNR     35A         COLHDG('BORDERONUMMER    ')
+     A            A00BORDDAT    08A         COLHDG('BORDERODATUM     ')
+     A            A00VERKEHR    03A         COLHDG('VERKEHR          ')
+     A            A00PRODUKT    03A         COLHDG('PRODUKT          ')
+     A            A00CODELIS    03A         COLHDG('CODELISTE        ')
+     A            A00WAHRUNG    03A         COLHDG('WÄHRUNG ISO      ')
+     A            A00IDENT_V    35A         COLHDG('KUNDE BEI KDF,AP ')
+     A            A00IDENT_E    35A         COLHDG('VP               ')
+     A            A00FF         35A         COLHDG('FRACHTFÜHRER     ')
+     A            A00FFLAND     03A         COLHDG('FRACHTFÜHRER LAND')
+     A            A00FFPLZ      09A         COLHDG('FRACHTFÜHRER PLZ ')
+     A            A00FFORT      35A         COLHDG('FRACHTFÜHRER ORT ')
+     A            A00KFZKZ1     35A         COLHDG('FRACHTFÜHRER KZ1 ')
+     A            A00KFZKZ2     35A         COLHDG('FRACHTFÜHRER KZ2 ')
+     A            A00WEITER1    35A         COLHDG('BORDERO #        ')
+     A            A00WEITER2    35A         COLHDG('BORDERO #        ')
+     A            A00TSTAMP       T
+     A
+     A          R A10
+     A            A00ART        03A         COLHDG('SATZART KONSTANTE')
+     A            A00SATZART    03A         COLHDG('QUALIFIER        ')
+     A
+     A*
+     A          K A00TSTAMP

@@ -1,0 +1,47 @@
+     A**************************************************************************
+     A*  Copyright 2022 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Jechtinger Straße 9                              *
+     A*                       DE 79111 Freiburg                                *
+     A*  --------------------------------------------------------------------- *
+     A*  Rückgabebereich Zuordnung Auftragswerk <- Artikel-Werk                *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: PH 08.12.2022 Projekt 220567-02                             *
+     A*  Änderung: XX XX.XX.XXXX                                               *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R RTWA111
+     A*-------------------------------------------------------------------------
+     A* allgemeine Rückgabe
+     A*-------------------------------------------------------------------------
+     A            RTWA11PROGR               REFFLD(##PROG)
+     A            RTWA11DANAR               REFFLD(##DANA)
+     A            RTWA11RTCDR               REFFLD(##RTCD)
+     A            RTWA11FFLDR               REFFLD(##FFLD)
+     A            RTWA11FENRR               REFFLD(##FENR)
+     A            RTWA11PA03R               REFFLD(##A010)
+     A                                      TEXT('Parameter 3 bei Fehler')
+     A            RTWA11PA04R               REFFLD(##A010)
+     A                                      TEXT('Parameter 4 bei Fehler')
+     A            RTWA11PA05R               REFFLD(##A010)
+     A                                      TEXT('Parameter 5 bei Fehler')
+     A            RTWA11PA06R               REFFLD(##A010)
+     A                                      TEXT('Parameter 6 bei Fehler')
+     A            RTWA11PA07R               REFFLD(##A010)
+     A                                      TEXT('Parameter 7 bei Fehler')
+     A*-------------------------------------------------------------------------
+     A* ON/OFF Rückgabe KZ für Prüfungen
+     A*-------------------------------------------------------------------------
+     A            RTWA11FR01R               REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* Key-Felder
+     A*-------------------------------------------------------------------------
+     A            RTWA11WKNRR               REFFLD(WA111/WA11WKNR *LIBL/WA11)
+     A            RTWA11TEWKR               REFFLD(WA111/WA11TEWK *LIBL/WA11)
+     A            RTWA11FR02R  256          REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* evt. weitere Felder nach Ermittlung
+     A*-------------------------------------------------------------------------
+     A            RTWA11TSTPR               REFFLD(WA111/WA11TSTP *LIBL/WA11)
+     A            RTWA11ERUSR               REFFLD(WA111/WA11ERUS *LIBL/WA11)
+     A            RTWA11FR03R  621          REFFLD(##FREI)

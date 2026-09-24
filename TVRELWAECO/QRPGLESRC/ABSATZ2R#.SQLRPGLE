@@ -1,0 +1,815 @@
+     ******************************************************************
+      * PROGRAMMNAME.:...                                                     
+      * FUNKTION.....:...
+      * ==>          :..........                         JJ==>OK
+      *               ...
+      *(dec(max(PREZPR), 12, 2) * dec(100-(max(koraba*-1)), 12, 2)/100)
+      *
+      * 15. Okt.2010   GANG, MANFRED
+      *
+      * WAECO International GmbH
+      *
+      * Hollefeldstrasse 63
+      *
+      * 48282 Emsdetten
+      *
+      * SELECT DISTINCT STATISTIK.APAFJJ, STATISTIK.APAFNR,
+      * STATISTIK.APAFPO, STATISTIK.APGLMG FROM statistik, afad WHERE
+      * APTENR = '9103500212' and AKAFJJ =2011 and AKAFAT <> '08' and
+      * AKAFJJ =2011 and adpold = 'DE' and akaFNR = AdAFNR and AKAFJJ =
+      * ADAFJJ
+      *
+      **** §PWC000001 in TVRELWAECO                                          */
+      * SELECT DISTINCT char(substr(rkreda, 1, 6)) RKREDA, APTENR ,APGLMG,
+      * ADPOLD, APAFJJ,APAFNR,APAFPO,ADAART, RPFIRM, RPRGJJ, RPRGNR,
+      * RPLIJJ, RPLINR, RPLIPO ,rkreda FROM afad,statistik WHERE ADAART
+      * in('ADVS', 'ADAG') and akaFNR = AdAFNR and AKAFJJ = ADAFJJ and    =
+      * ADFIRM in ('01', '51') and rkreda > 20121200 and rkreda < 20130000
+      * Datei §PWC000001 in TVRELWAECO wurde ersetzt.
+      *
+      **** §PWC000002 in TVRELWAECO                                          */
+      * SELECT DISTINCT char(substr(rkreda, 1, 6)) RKREDA, APTENR ,APGLMG,
+      * ADPOLD, APAFJJ,APAFNR,APAFPO,ADAART, RPFIRM, RPRGJJ, RPRGNR,
+      * RPNESU, RPBRSU, RPLIJJ, RPLINR, RPLIPO ,rkreda , STATISTIK.APPRGR
+      * FROM afad,statistik WHERE                   ADAART in('ADVS',     =
+      * 'ADAG') and akaFNR = AdAFNR and AKAFJJ = ADAFJJ and ADFIRM in
+      * ('01', '51') and rkreda > 20120000 and rkreda < 20130000
+      * Datei §PWC000002 in TVRELWAECO wurde erstellt.
+      *
+      *
+      **** Ausrichtung Basisdaten Artikel                             */
+      *    -  gültige Einträge vorhanden                        wenn ja
+      *    -  Umsätze vorhanden                                 wenn ja
+      *       *** Ausrichtung Kunde
+      *       -  ist der Kunde eine Ausnahme Vertrag           wenn nein
+      *          (seit 2012 (Trend) keine relevante Prüfung,
+      *          daher stehen alle Kunden grundsätzlich auf
+      *          Nein und sind Bestandteil der Berechnung
+      *          *** Ausrichtung Belieferung
+      *          -  wohin wurde geliefert nur DE ist relevant  wenn DE
+      *             -  wohin wurde tatsächlich geliefert
+      *                ist Rechnungsadresse DE und Lieferadresse
+      *                vorhanden, entscheidet die Lieferadresse
+      *                diese muß DE sein
+      *
+      *SELECT APTENR, APAFJJ, APAFNR, APAFPO, ADAART, RKREDA, APGLMG,
+      *ADPOLD FROM ummfile1 WHERE RKREDA> 201600 and rkreda < 202000 and
+      *APTENR in ('9105204142','8880400428','RV-50-OE1 ',
+      *'9102200030','8880400320','TK-280SB  ',
+      *'8880400261','8880100053','9105705356',
+      *'9103555825','9104100091','9105705359',
+      *'9105305506','VAS 581 001','9104108580', '9105302940','9103301819',
+      *'9107200098', '9101700023','9105202819') ORDER BY APTENR, APAFJJ,
+      *APAFNR, APAFPo
+      *
+      * SELECT APTENR, APAFJJ, APAFNR, APAFPO, ADAART ,rkredA,
+      * apglmg,adpold FROM ummfile1 WHERE aptenr='9105204142'
+      * Datei PVC001 in TVRELWAECO wurde erstellt.
+      *
+      * SELECT APTENR, APAFJJ, APAFNR, APAFPO, ADAART ,rkredA,
+      * apglmg,adpold FROM ummfile1 WHERE aptenr='9105302940'
+      * 1084 Sätze zu Teildatei PVC001 in Datei PVC001 hinzugefügt.
+      *
+      * SELECT APTENR, ARTBEZ, STATNR, JANA, FEBA, MAEA, APRA, MAIA, JUNA,
+      * JULA, AUGA, SEPA, OKTA, NOVA, DEZA, dec( (JANA+ FEBA+ MAEA+ APRA+
+      * MAIA+ JUNA+ JULA+ AUGA+ SEPA+ OKTA+ NOVA+ DEZA), 13, 0) summe
+      * FROM ummfile3 WHERE aptenr in ('9105202819','9105202809',
+      * '9105305825','9105302940','9105302772',
+      * '9600000482','A411412   ','9105306210',
+      * '9103501265','9105203202','9103300508',
+      * '9103301741','9104100237','9104114007',
+      * '9600000668','9600000057','9103301736',
+      * '9600000063','9600000110','9102100026',
+      * 'A460785   ','          ','          ')
+      * Datei PVC002 in TVRELWAECO wurde erstellt.
+      *
+      * 02.05.2019
+      * SELECT a.APTENR, a.APGLMG, a.RKREDA,a.APAFJJ,a.APAFNR,a.APAFPO,
+      * statistik.APWACD,statistik.APKURS, STATISTIK.RPBRSU,
+      * STATISTIK.RPMWCD FROM ummfile1 a, statistik WHERE T4000 <> ' ' and
+      * a.APAFJJ = STATISTIK.APAFJJ and a.APAFNR = STATISTIK.APAFNR and
+      * a.APAFPO = STATISTIK.APAFPO
+      * Datei PWC2018_01 in TVRELWAECO wurde ersetzt.
+      * SELECT APTENR, decimal(sum(APGLMG), 13, 2) absatz,
+      * decimal(sum(RPBRSU*apkurs), 13, 2) umsatz FROM PWC2018_01 GROUP BY
+      * APTENR ORDER BY APTENR
+      * Datei PWC2018_02 in TVRELWAECO wurde ersetzt.
+      *
+      * ***************************************************************        
+      * Änderungsprotokoll:...                                                
+      *
+      *****************************************************************
+
+     fUMMFILE1  uf   e             disk
+     f                                     RENAME(ummfile1:phy01r)
+     f***                                  INFDS(DSF1)
+     F                                     USROPN
+
+     DDate             S               D   DATFMT(*EUR)
+     Djahr             S              4  0
+     Dmonat            S              2  0
+     Dtag              S              2  0
+     DTime             S               D   DATFMT(*EUR)
+     DPLZHelp          S              5A
+     D#TIMESTAMP       S               z
+
+     Dtstampi          S               Z
+     Ddatum            S               D
+     Dzeit             S               T
+     D
+     D**********************************************************************
+     ****
+     D***  KOMMUNIKATIONSPARAMETER
+     ***
+     D**********************************************************************
+     D/COPY QCPYSRC,EXTRIN
+     D KOM             S              1    DIM(220)                             Kommunikation
+     D EXTR02        E DS
+     I*-------------------------------------------------------------------------
+     D DSF1            DS
+     D  F1STS                 11     15  0
+     D  F1RRN                397    400B 0
+     I*-------------------------------------------------------------------------
+     D DSF2            DS
+     D  F2STS                 11     15  0
+     D  F2RRN                397    400B 0
+     D*-------------------------------------------------------------------------
+       // ______________________________________________________________________
+       // dummy512
+       // ______________________________________________________________________
+     D DUMMY512        PR                  ExtPgm('DUMMY512')
+     D p_md                         256a
+     D p_MSG                          7a
+     D p_MSGF                        10a
+     D p_PRINT                       10a
+     D p_OUTFIL                      10a
+     D p_LIB                         10a
+     D P_REPADD                      10a
+
+
+      // dummy512
+      //------------------------------------------------------------------------
+      // p_md            s            001a   inz
+      //                                     dim(256)
+     D p_md            s            256a   inz
+     D p_MSG           s              7a   inz
+     D p_MSGF          s             10a   inz
+     D p_PRINT         s             10a   inz
+     D p_OUTFIL        s             10a   inz
+     D p_LIB           s             10a   inz
+     D P_REPADD        s             10a   inz
+     D p_inFIL         s             24a   inz
+
+
+      // qcmdexc
+      //------------------------------------------------------------------------
+     D Wrk             DS                  Qualified inz
+     D Var1                         460A   inz(' ')
+     D L               s              9  0
+     D
+     D QCMDEXC         PR                  ExtPgm('QCMDEXC')
+     D cmd                        32702A   const options(*varsize)
+     D len                           15P 5 const
+
+     D cmd             s            460A   varying
+
+     Dstatus           s            132A   inz
+
+     I/COPY ##E
+     I/COPY ##I001
+     I*/COPY ##I002
+     I*/COPY ##I003
+     I*/COPY ##I003
+     I*-------------------------------------------------------------------------
+b
+     C*    *ENTRY        PLIST
+     C*                  PARM                    ic               06
+b
+     C**************************************************************************
+     C*über preselect lesen der Interface_daten
+     C*-------------------------------------------------------------------------
+
+     C*Absatz/Umsatzdaten
+     c                   eval      status ='Start ABSATZ2R Ummfile3 ermitteln' +
+     c                                     '          '
+     c                   exsr      SR_log
+     c                   exsr      sr1000
+     c                   exsr      sr8000
+     c                   exsr      sr8001
+     c                   exsr      SR_report
+     c                   exsr      SR_report2
+     c                   eval      status ='Ende  ABSATZ2R Ummfile3 ermitteln' +
+     c                                     '          '
+     c                   exsr      SR_log
+
+     C                   EXSR      RETURN
+
+     C**************************************************************************
+     C*Absatzzahlen
+     C*-------------------------------------------------------------------------
+     C*
+     C     sr1000        BEGSR
+     C*
+     c/exec sql
+     c*+ whenever not found goto ##1000
+     c+ whenever not found CONTINUE
+     c/end-exec
+     c/exec sql
+     c+ WHENEVER SQLWARNING CONTINUE
+     c/end-exec
+     c/exec sql
+     c+ WHENEVER SQLERROR  CONTINUE
+     c/end-exec
+
+     C*Grundaufbau Umweltmanagementfile
+     c/exec sql
+     c+ insert into tvrelwaeco/ummfile1
+     c+ SELECT distinct
+     c+ char(substr(rkreda, 1, 6)) RKREDA, APTENR ,sum(APGLMG), ADPOLD,
+     c+ char(' ', 4) T4000, char(' ', 10) M40001, char(' ', 10) M40002,
+     c+ char(' ', 4) T4010, char(' ', 10) M40101, char(' ', 10) M40102,
+     c+                     char(' ', 10) M40103,
+     c+ char(' ', 4) T4020, char(' ', 10) M40201, char(' ', 10) M40202,
+     c+ char(' ', 10) M40203, char(' ', 4) T1000, char(' ', 10) M10008,
+     c+ dec(0, 13, 2) jana, dec(0, 13, 2) feba,
+     c+ dec(0, 13, 2) maea, dec(0, 13, 2) apra,
+     c+ dec(0, 13, 2) maia, dec(0, 13, 2) juna,
+     c+ dec(0, 13, 2) jula, dec(0, 13, 2) auga,
+     c+ dec(0, 13, 2) sepa, dec(0, 13, 2) okta,
+     c+ dec(0, 13, 2) nova, dec(0, 13, 2) deza,APAFJJ,APAFNR,APAFPO,ADAART
+     c+ FROM afad,statistik
+     c+ WHERE adpold = 'DE' and ADAART in('ADVS', 'ADAG')
+     c+                     and akaFNR = AdAFNR and AKAFJJ = ADAFJJ
+     c******                and AKKDNR not in (select kdnr from ummfile6)
+     c+                     and ADFIRM in ('01', '51')
+     c+                     and char(substr(rkreda, 1, 4)) ='2024'
+     c+ group by            RKREDA,APTENR,ADPOLD,APAFJJ,APAFNR,APAFPO,ADAART
+     c/end-exec
+
+
+     C*Gruppierung greift sonst nichtle
+     c/exec sql
+     c+ insert into tvrelwaeco/ummfile1_
+     c+ SELECT RKREDA, APTENR, zoned((sum(APGLMG)), 11, 2) APGLMG,
+     c+                                     ADPOLD, T4000, M40001, M40002,
+     c+ T4010, M40101, M40102, M40103, T4020, M40201, M40202, M40203,
+     c+ T1000, M10008, JANA, FEBA, MAEA, APRA, MAIA, JUNA, JULA, AUGA,
+     c+ SEPA, OKTA, NOVA, DEZA, APAFJJ, APAFNR, APAFPO, ADAART FROM
+     c+ ummfile1
+     c+ group by
+     c+        RKREDA, APTENR,              ADPOLD, T4000, M40001, M40002,
+     c+ T4010, M40101, M40102, M40103, T4020, M40201, M40202, M40203,
+     c+ T1000, M10008, JANA, FEBA, MAEA, APRA, MAIA, JUNA, JULA, AUGA,
+     c+ SEPA, OKTA, NOVA, DEZA, APAFJJ, APAFNR, APAFPO, ADAART
+     c/end-exec
+
+     C*doppelte ermitteln
+     c/exec sql
+     c+ delete from ummfile1
+     c/end-exec
+
+     C*doppelte ermitteln
+     c/exec sql
+     c+ insert into ummfile1
+     c+ select * from ummfile1_
+     c/end-exec
+
+     C*doppelte ermitteln
+     c/exec sql
+     c+ insert into tvrelwaeco/ummfile4
+     c+ SELECT APAFJJ, APAFNR, APAFPO, count(*) FROM ummfile1 GROUP BY
+     c+ APAFJJ, APAFNR, APAFPO HAVING count(*) > 1
+     c/end-exec
+
+     C*doppelte ermitteln
+     c/exec sql
+     c+ delete from ummfile1 where
+     c+ adaart = 'ADAG' and APAFnr in
+     c+    (select ummfile4.apafnr from ummfile4 where
+     c+            ummfile1.APAFJJ= ummfile4.APAFJJ
+     c+        and ummfile1.APAFnr= ummfile4.APAFnr
+     c+        and ummfile1.APAFpo= ummfile4.APAFpo  )
+     c/end-exec
+
+     C*TEOS 4000
+     c/exec sql
+     c+ update ummfile1       set T4000  =
+     c+ (select max(TEOSKLCD) from teos where APTENR = TEOSTENR and
+     c+         TEOSFIRM in ('01', '51')
+     c+                        and TEOSKLCD ='4000' and TEOSMM01 ='J'
+     c+    and  (TEOSMM02 <> '0000000000' or TEOSMM03 <> '0000000000')
+     c+         group by TEOSKLCD)
+     c+ where exists
+     c+ (select max(TEOSKLCD) from teos where APTENR = TEOSTENR and
+     c+         TEOSFIRM in ('01', '51')
+     c+                        and TEOSKLCD ='4000' and TEOSMM01 ='J'
+     c+    and  (TEOSMM02 <> '0000000000' or TEOSMM03 <> '0000000000')
+     c+         group by TEOSKLCD)
+     c/end-exec
+     c*
+     C*TEOS 4010
+     c/exec sql
+     c+ update ummfile1       set T4010  =
+     c+ (select TEOSKLCD from teos where APTENR = TEOSTENR and
+     c+         TEOSFIRM in ('01', '51')
+     c+                        and TEOSKLCD ='4010' and TEOSMM01 ='J'
+     c+    and  (TEOSMM02 <> '0000000000' or TEOSMM03 <> '0000000000'
+     c+                                   or TEOSMM04 <> '0000000000'))
+     c+ where exists
+     c+ (select TEOSKLCD from teos where APTENR = TEOSTENR and
+     c+         TEOSFIRM in ('01', '51')
+     c+                        and TEOSKLCD ='4010' and TEOSMM01 ='J'
+     c+    and  (TEOSMM02 <> '0000000000' or TEOSMM03 <> '0000000000'
+     c+                                   or TEOSMM04 <> '0000000000'))
+     c/end-exec
+     c*
+     C*TEOS 4020
+     c/exec sql
+     c+ update ummfile1       set T4020  =
+     c+ (select TEOSKLCD from teos where APTENR = TEOSTENR and
+     c+         TEOSFIRM in ('01', '51')
+     c+                        and TEOSKLCD ='4020' and TEOSMM01 ='J'
+     c+    and  (TEOSMM02 <> '0000000000' or TEOSMM03 <> '0000000000'
+     c+                                   or TEOSMM04 <> '0000000000'))
+     c+ where exists
+     c+ (select TEOSKLCD from teos where APTENR = TEOSTENR and
+     c+         TEOSFIRM in ('01', '51')
+     c+                        and TEOSKLCD ='4020' and TEOSMM01 ='J'
+     c+    and  (TEOSMM02 <> '0000000000' or TEOSMM03 <> '0000000000'
+     c+                                   or TEOSMM04 <> '0000000000'))
+     c/end-exec
+     c*
+     C*TEOS 40001 Papier/Pappe in Gramm
+     c/exec sql
+     c+ update ummfile1       set M40001 =
+     c+ (select max(TEOSMM02) from teos where APTENR = TEOSTENR and
+     c+         TEOSMM02 <> '0000000000' and
+     c+         TEOSFIRM in ('01', '51')
+     c+                        and TEOSKLCD ='4000' and TEOSMM01 ='J'
+     c+         group by TEOSMM02)
+     c+ where exists
+     c+ (select max(TEOSMM02) from teos where APTENR = TEOSTENR and
+     c+         TEOSMM02 <> '0000000000' and
+     c+         TEOSFIRM in ('01', '51')
+     c+                        and TEOSKLCD ='4000' and TEOSMM01 ='J'
+     c+         group by TEOSMM02)
+     c/end-exec
+     c*
+     C*TEOS 40002 Kunststoff in Gramm
+     c/exec sql
+     c+ update ummfile1       set M40002 =
+     c+ (select max(TEOSMM03) from teos where APTENR = TEOSTENR and
+     c+         TEOSMM03 <> '0000000000' and
+     c+         TEOSFIRM in ('01', '51')
+     c+                        and TEOSKLCD ='4000' and TEOSMM01 ='J'
+     c+         group by TEOSMM03)
+     c+ where exists
+     c+ (select max(TEOSMM03) from teos where APTENR = TEOSTENR and
+     c+         TEOSMM03 <> '0000000000' and
+     c+         TEOSFIRM in ('01', '51')
+     c+                        and TEOSKLCD ='4000' and TEOSMM01 ='J'
+     c+         group by TEOSMM03)
+     c/end-exec
+     c*
+     C*TEOS 40101 Grundgewicht Elektro
+     c/exec sql
+     c+ update ummfile1       set M40101 =
+     c+ (select TEOSMM02 from teos where APTENR = TEOSTENR and
+     c+         TEOSMM02 <> '0000000000' and
+     c+         TEOSFIRM in ('01', '51')
+     c+                        and TEOSKLCD ='4010' and TEOSMM01 ='J')
+     c+ where exists
+     c+ (select TEOSMM02 from teos where APTENR = TEOSTENR and
+     c+         TEOSMM02 <> '0000000000' and
+     c+         TEOSFIRM in ('01', '51')
+     c+                        and TEOSKLCD ='4010' and TEOSMM01 ='J')
+     c/end-exec
+     c*
+     C*TEOS 40102 Kategorie
+     c/exec sql
+     c+ update ummfile1       set M40102 =
+     c+ (select TEOSMM03 from teos where APTENR = TEOSTENR and
+     c+         TEOSMM03 <> '0000000000' and
+     c+         TEOSFIRM in ('01', '51')
+     c+                        and TEOSKLCD ='4010' and TEOSMM01 ='J')
+     c+ where exists
+     c+ (select TEOSMM03 from teos where APTENR = TEOSTENR and
+     c+         TEOSMM03 <> '0000000000' and
+     c+         TEOSFIRM in ('01', '51')
+     c+                        and TEOSKLCD ='4010' and TEOSMM01 ='J')
+     c/end-exec
+     c*
+     C*TEOS 40103 Sammelgruppe
+     c/exec sql
+     c+ update ummfile1       set M40103 =
+     c+ (select TEOSMM04 from teos where APTENR = TEOSTENR and
+     c+         TEOSMM04 <> '0000000000' and
+     c+         TEOSFIRM in ('01', '51')
+     c+                        and TEOSKLCD ='4010' and TEOSMM01 ='J')
+     c+ where exists
+     c+ (select TEOSMM04 from teos where APTENR = TEOSTENR and
+     c+         TEOSMM04 <> '0000000000' and
+     c+         TEOSFIRM in ('01', '51')
+     c+                        and TEOSKLCD ='4010' and TEOSMM01 ='J')
+     c/end-exec
+     c*
+     C*TEOS 40201 Batterietyp
+     c/exec sql
+     c+ update ummfile1       set M40201 =
+     c+ (select TEOSMM02 from teos where APTENR = TEOSTENR and
+     c+         TEOSMM02 <> '0000000000' and
+     c+         TEOSFIRM in ('01', '51')
+     c+                        and TEOSKLCD ='4020' and TEOSMM01 ='J')
+     c+ where exists
+     c+ (select TEOSMM02 from teos where APTENR = TEOSTENR and
+     c+         TEOSMM02 <> '0000000000' and
+     c+         TEOSFIRM in ('01', '51')
+     c+                        and TEOSKLCD ='4020' and TEOSMM01 ='J')
+     c/end-exec
+     c*
+     C*TEOS 40202 Anzahl Batterien
+     c/exec sql
+     c+ update ummfile1       set M40202 =
+     c+ (select TEOSMM03 from teos where APTENR = TEOSTENR and
+     c+         TEOSMM03 <> '0000000000' and
+     c+         TEOSFIRM in ('01', '51')
+     c+                        and TEOSKLCD ='4020' and TEOSMM01 ='J')
+     c+ where exists
+     c+ (select TEOSMM03 from teos where APTENR = TEOSTENR and
+     c+         TEOSMM03 <> '0000000000' and
+     c+         TEOSFIRM in ('01', '51')
+     c+                        and TEOSKLCD ='4020' and TEOSMM01 ='J')
+     c/end-exec
+     c*
+     C*TEOS 40203 Gewicht eine Batterie
+     c/exec sql
+     c+ update ummfile1       set M40203 =
+     c+ (select TEOSMM04 from teos where APTENR = TEOSTENR and
+     c+         TEOSMM04 <> '0000000000' and
+     c+         TEOSFIRM in ('01', '51')
+     c+                        and TEOSKLCD ='4020' and TEOSMM01 ='J')
+     c+ where exists
+     c+ (select TEOSMM04 from teos where APTENR = TEOSTENR and
+     c+         TEOSMM04 <> '0000000000' and
+     c+         TEOSFIRM in ('01', '51')
+     c+                        and TEOSKLCD ='4020' and TEOSMM01 ='J')
+     c/end-exec
+     c*
+     c*
+     C     ##1000        ENDSR
+     c*
+     c*
+     C**************************************************************************
+     C*Zuweisungen Case
+     C*-------------------------------------------------------------------------
+     C*
+     C     sr8000        BEGSR
+
+     C                   open      UMMFILE1
+
+     C                   DO        *HIVAL
+     C                   READ      UMMFILE1                               95
+     C                   IF        *in95 = '1'
+     C                   leave
+     C                   else
+     C                   movel     rkreda        #rkreda           8
+     C                   if        %subst(#RKREDA: 1: 4) = '2024'
+     C                   select
+     C                   when      %subst(#RKREDA: 5: 2) = '01'
+     c                   eval      JANA = JANA + (APGLMG)
+     C                   when      %subst(#RKREDA: 5: 2) = '02'
+     c                   eval      FEBA = FEBA + (APGLMG)
+     C                   when      %subst(#RKREDA: 5: 2) = '03'
+     c                   eval      MAEA = MAEA + (APGLMG)
+     C                   when      %subst(#RKREDA: 5: 2) = '04'
+     c                   eval      APRA = APRA + (APGLMG)
+     C                   when      %subst(#RKREDA: 5: 2) = '05'
+     c                   eval      MAIA = MAIA + (APGLMG)
+     C                   when      %subst(#RKREDA: 5: 2) = '06'
+     c                   eval      JUNA = JUNA + (APGLMG)
+     C                   when      %subst(#RKREDA: 5: 2) = '07'
+     c                   eval      JULA = JULA + (APGLMG)
+     C                   when      %subst(#RKREDA: 5: 2) = '08'
+     c                   eval      AUGA = AUGA + (APGLMG)
+     C                   when      %subst(#RKREDA: 5: 2) = '09'
+     c                   eval      SEPA = SEPA + (APGLMG)
+     C                   when      %subst(#RKREDA: 5: 2) = '10'
+     c                   eval      OKTA = OKTA + (APGLMG)
+     C                   when      %subst(#RKREDA: 5: 2) = '11'
+     c                   eval      NOVA = NOVA + (APGLMG)
+     C                   when      %subst(#RKREDA: 5: 2) = '12'
+     c                   eval      DEZA = DEZA + (APGLMG)
+     c                   other
+     c                   endsl
+     c                   update    phy01r
+     C                   endif
+     C                   endif
+     C                   enddo
+     c                   close     UMMFILE1
+
+     C     ##8000        ENDSR
+
+     C**************************************************************************
+     C*abschluss
+     C*-------------------------------------------------------------------------
+
+     C     sr8001        BEGSR
+     C*
+     c/exec sql
+     c+ whenever not found goto ##8001
+     c/end-exec
+     c/exec sql
+     c+ WHENEVER SQLWARNING CONTINUE
+     c/end-exec
+     c/exec sql
+     c+ WHENEVER SQLERROR  CONTINUE
+     c/end-exec
+     C*
+
+     c/exec sql
+     c+ insert into tvrelwaeco/ummfile2
+     c+ select
+     c+ APTENR, T4000, M40001, M40002, T4010, M40101, M40102, M40103,
+     c+  T4020, M40201, M40202, M40203,
+     c+ dec(sum(jana), 13, 2) jana, dec(sum(feba), 13, 2) feba,
+     c+ dec(sum(maea), 13, 2) maea, dec(sum(apra), 13, 2) apra,
+     c+ dec(sum(maia), 13, 2) maia, dec(sum(juna), 13, 2) juna,
+     c+ dec(sum(jula), 13, 2) jula, dec(sum(auga), 13, 2) auga,
+     c+ dec(sum(sepa), 13, 2) sepa, dec(sum(okta), 13, 2) okta,
+     c+ dec(sum(nova), 13, 2) nova, dec(sum(deza), 13, 2) deza
+     c+ from  ummfile1
+     c****+ where (T4000<>' ' or T4010<>' ' or T4020<>' ')
+     c+ GROUP BY
+     c+ APTENR, T4000, M40001, M40002, T4010, M40101, M40102, M40103,
+     c+  T4020, M40201, M40202, M40203
+     c/end-exec
+
+     c/exec sql
+     c+ insert into  tvrelwaeco/UMMFILE3
+     c+ SELECT APTENR, ARTBEZ, ARTGRP, STATNR, ABC, JANA, FEBA, MAEA, aPRA,
+     c+ MAIA, JUNA, JULA, AUGA, SEPA, OKTA, NOVA, DEZA, T4000, M40001,
+     c+ M40002, T4010, M40101, M40102, M40103,
+     c+                        T4020, M40201, M40202, M40203, GEWICHT,
+     c+ LAENGE, BREITE, HOEHE, current timestamp tstamp FROM ummfile2,
+     c+ bar_kalk/kalk_file WHERE version = '$$EL_PS_DB' and APTENR= ARTNR
+     c+ ORDER BY artnr
+     c/end-exec
+
+         MONITOR;
+            Wrk.var1 =
+                'CLRPFM FILE(tvrelwaeco/LAGERGRPKT)';
+            cmd = %TrimR(Wrk.Var1);
+            L      = %Len(Cmd);
+            QCMDEXC(cmd: %len(cmd));
+            on-error;
+               status='error CLRPFM FILE(tvrelwaeco/LAGERGRPKT)  ';
+               exsr      SR_log;
+         endmon;
+
+     c/exec sql
+     c+ insert into tvrelwaeco/LAGERGRPKT
+     c+ SELECT DISTINCT APTENR,ARTBEZ, T4000, M40001, M40002, T4010,
+     c+ M40101,M40102, M40103, T4020, M40201, M40202, M40203, T1000,
+     c+ M10008, ZOLLNR, LAENGE, BREITE, HOEHE, GEWICHT FROM UMMFILE1 ,
+     c+ bar_kalk/kalk_file WHERE version='$$EL_PS_DB' and aptenr= ARTNR
+     c/end-exec
+
+     C     ##8001        ENDSR
+
+
+     C**************************************************************************
+     C*time stamp
+     C*-------------------------------------------------------------------------
+
+     C     sr9999        BEGSR
+     C*
+     c/exec sql
+     c+ whenever not found goto ##9999
+     c/end-exec
+     c/exec sql
+     c+ WHENEVER SQLWARNING CONTINUE
+     c/end-exec
+     c/exec sql
+     c+ WHENEVER SQLERROR  CONTINUE
+     c/end-exec
+     C*
+
+     c/exec sql
+     c+ select current timestamp, current date, current time
+     c+ into   :tstampi, :datum, :zeit
+     c+ from   gang/systempf
+     c/end-exec
+
+     C     ##9999        ENDSR
+
+     C**************************************************************************
+     C*.
+     C*-------------------------------------------------------------------------
+
+       //-----------------------------------------------------------------------
+       //report im Verzeichnis ablegen  ==> RPMKALKUL
+       //-----------------------------------------------------------------------
+
+      /FREE
+       begsr SR_report;
+
+       //Ausgabe der einzelnen Files über variable
+         eval p_infil   =  'UMMFILE3' + '_'  +
+                        %char(%dec(%char(%date():*iso0):8:0)) +
+                        %char(%dec(%char(%time():*iso0):8:0));
+         eval p_outfil =  'UMMFILE3';
+
+         eval p_msgf    =  *blank;
+         eval p_print   =  *blank;
+         eval p_lib     =  'TVRELWAECO';
+
+         clear     Wrk.var1;
+         clear     status;
+
+       MONITOR;
+       Wrk.var1 =
+           'RMVLNK OBJLNK(''/Lager/Stammdaten/UMMFILE3*'')';
+         cmd = %TrimR(Wrk.Var1);
+         l      = %Len(Cmd);
+         QCMDEXC(cmd: %len(cmd));
+          status='rmvlnk successful removed UMMFILE3*              ';
+          exsr      SR_log;
+       on-error;
+          status='Error by rmvlnk object UMMFILE3*                 ';
+          exsr      SR_log;
+       endmon;
+
+       eval p_outfil  =  'UMMFILE3';
+
+       MONITOR;
+       Wrk.var1 =
+           'CVTDBF OBJ(''/Lager/Stammdaten/'+ p_infil +''  +
+                      '.csv'') ' +
+           'DBFILE(TVRELWAECO/'+ p_outfil +') DBOUTFMT(*CSV) '  +
+           'DBFLDDSC(*YES)';
+         cmd = %TrimR(Wrk.Var1);
+         l      = %Len(Cmd);
+         QCMDEXC(cmd: %len(cmd));
+          status='CVTDBF successful done for UMMFILE3              ';
+          exsr      SR_log;
+       on-error;
+          status='Error by CVTDBF object UMMFILE3                  ';
+          exsr      SR_log;
+       endmon;
+       eval p_outfil  =  'RPMKALKUL';
+
+
+       MONITOR;
+       Wrk.var1 =
+           'CHGAUT OBJ(''/Lager/Stammdaten/'+ p_infil +''  +
+                      '.csv'') ' +
+           'USER(*PUBLIC) DTAAUT(*RWX)                   ' +
+           'OBJAUT(*OBJMGT *OBJEXIST *OBJALTER *OBJREF)';
+         cmd = %TrimR(Wrk.Var1);
+         L      = %Len(Cmd);
+         QCMDEXC(cmd: %len(cmd));
+          status='chgaut successful FILE(TVRELWAECO/UMMFILE3)      ';
+       on-error;
+          status='Error by chgaut object (TVRELWAECO/UMMFILE3)     ';
+       endmon;
+
+
+       endsr;
+
+      /End-FREE
+
+     C**************************************************************************
+     C*.
+     C*-------------------------------------------------------------------------
+
+       //-----------------------------------------------------------------------
+       //report im Verzeichnis ablegen  ==> für Lager LAGERGRPKT
+       //-----------------------------------------------------------------------
+
+      /FREE
+       begsr SR_report2;
+
+       //Ausgabe der einzelnen Files über variable
+         eval p_infil   =  'LAGERGRPKT' + '_'  +
+                        %char(%dec(%char(%date():*iso0):8:0)) +
+                        %char(%dec(%char(%time():*iso0):8:0));
+         eval p_outfil =  'LAGERGRPKT';
+
+         eval p_msgf    =  *blank;
+         eval p_print   =  *blank;
+         eval p_lib     =  'TVRELWAECO';
+
+         clear     Wrk.var1;
+         clear     status;
+
+       MONITOR;
+       Wrk.var1 =
+           'RMVLNK OBJLNK(''/Lager/LAGERGRPKT*'')';
+         cmd = %TrimR(Wrk.Var1);
+         l      = %Len(Cmd);
+         QCMDEXC(cmd: %len(cmd));
+          status='rmvlnk successful removed LAGERGRPKT*            ';
+          exsr      SR_log;
+       on-error;
+          status='Error by rmvlnk object LAGERGRPKT*               ';
+          exsr      SR_log;
+       endmon;
+
+       eval p_outfil  =  'LAGERGRPKT';
+
+       MONITOR;
+       Wrk.var1 =
+           'CVTDBF OBJ(''/Lager/'+ p_infil +''  +
+                      '.csv'') ' +
+           'DBFILE(TVRELWAECO/'+ p_outfil +') DBOUTFMT(*CSV) '  +
+           'DBFLDDSC(*YES)';
+         cmd = %TrimR(Wrk.Var1);
+         l      = %Len(Cmd);
+         QCMDEXC(cmd: %len(cmd));
+          status='CVTDBF successful done for LAGERGRPKT            ';
+          exsr      SR_log;
+       on-error;
+          status='Error by CVTDBF object LAGERGRPKT                ';
+          exsr      SR_log;
+       endmon;
+       eval p_outfil  =  'LAGERGRPKT';
+
+
+       MONITOR;
+       Wrk.var1 =
+           'CHGAUT OBJ(''/Lager/'+ p_infil +''  +
+                      '.csv'') ' +
+           'USER(*PUBLIC) DTAAUT(*RWX)                   ' +
+           'OBJAUT(*OBJMGT *OBJEXIST *OBJALTER *OBJREF)';
+         cmd = %TrimR(Wrk.Var1);
+         L      = %Len(Cmd);
+         QCMDEXC(cmd: %len(cmd));
+          status='chgaut successful FILE(TVRELWAECO/LAGERGRPKT)    ';
+       on-error;
+          status='Error by chgaut object (TVRELWAECO/LAGERGRPKT)   ';
+       endmon;
+
+
+       endsr;
+
+      /End-FREE
+
+       //-----------------------------------------------------------------------
+       //log report
+       //-----------------------------------------------------------------------
+
+     C     sr_log        BEGSR
+
+      /FREE
+         clear p_md;
+         eval p_md      =  §§§PGM         +
+                           §§§JOB         +
+                           §§§USR         +
+                           status;
+
+         eval p_msg     =  '#DC0002';
+         eval p_msgf    =  *blank;
+         eval p_print   =  *blank;
+         eval p_outfil  =  'JOB_RUN   ';
+         eval p_lib     =  'TVRELWAECO';
+         eval p_repadd  =  '*ADD';
+
+         callP DUMMY512(p_md:     p_msg:    p_msgf:     p_print:
+                        p_outfil: p_lib:    p_repadd);
+         clear status;
+
+      /End-FREE
+
+     c                   clear                   status
+     C
+     C     #sr_log       ENDSR
+
+     C**************************************************************************
+     C*.
+     C*-------------------------------------------------------------------------
+
+     C     *inzsr        BEGSR
+      *
+
+     C                   TIME                    Date
+     c                   extrct    date:*Y       jahr
+     c                   extrct    date:*M       monat
+     C                   extrct    date:*D       tag
+
+     c                   CLEAR                   ATR
+     c                   CALL      '#MODATR'                            97
+     c                   PARM                    ATR
+     C                   ENDSR
+
+     C**************************************************************************
+     C* PROGRAMM VERLASSEN
+     C*-------------------------------------------------------------------------
+     C*
+     C     RETURN        BEGSR
+     C                   MOVE      '1'           *INLR
+     C*
+     C                   RETURN
+     C*
+     C                   ENDSR
+     C*
+     C**************************************************************************

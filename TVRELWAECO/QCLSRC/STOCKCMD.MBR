@@ -1,0 +1,8 @@
+winadmin   gbjYzXrqX44T6bZV
+ascii
+NAMEFMT 1
+REM ASCII
+cd domains/dometic-group.com/public_ftp/dwfi/rcv
+SYSCMD CHGCURLIB TVRELWAECO
+PUT /QSYS.LIB/TVRELWAECO.LIB/#DC0000E.FILE/#DC0000E.MBR winartnav.txt
+QUIT

@@ -1,0 +1,19 @@
+     A          R PREISAF                   TEXT('AKTUELLE PREISE')
+     A*****************************************************************
+     A            PRAKDNR       10A         COLHDG('KDNR')
+     A            PRATENR       15A         COLHDG('IDENTNR')
+     A            PRAMENG       10A         COLHDG('MENGE')
+     A            PRAMENGE       1A         COLHDG('MENGENEINHEIT')
+     A            PRADATUM       8S         COLHDG('DATUM')
+     A            PRAWAECD       3A         COLHDG('WÄHRUNGS-CODE')
+     A            PRAPREI        9S 3       COLHDG('PREIS')
+     A            PRANESU        9S 3       COLHDG('PREIS OHNEN RABATT')
+     A            PRABEGR        3A         COLHDG('PREISBEGRIFF')
+     A            PRAKON1        3A         COLHDG('KONDITION 1')
+     A            PRAKOW1        9S 2       COLHDG('WERT KONDITION 1')
+     A            PRAKON2        3A         COLHDG('KONDITION 2')
+     A            PRAWOW2        9S 2       COLHDG('WERT KONDITION 2')
+     A*****************************************************************
+     A
+     A          K PRAKDNR
+     A          K PRATENR

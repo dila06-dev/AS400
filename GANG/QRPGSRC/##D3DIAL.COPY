@@ -1,0 +1,178 @@
+     C**************************************************************************
+     C* PROGRAMMNAME.:##D3DIAL                                                
+     C* FUNKTION.....:STEUERUNGSROUTINEN DIALOG
+     C* OKTOBER 2009   GANG, MANFRED
+     C*-------------------------------------------------------------------------
+     C**************************************************************************
+     C* SCHLEIFE FÜR DIALOG
+     C*-------------------------------------------------------------------------
+     C*
+    C* SCHLEIFE FÜR DIALOG                                START DO
+     C                     DO   *HIVAL
+     C* D3FMT   LADEN
+     C                     EXSR SR1100
+     C           CTLLD     IFEQ 'J'
+     C           *IN26     OREQ '1'
+     C           CTLVLD    IFNE 'F'
+     C                     EXSR SR1101
+     C                     MOVE 'N'       CTLLD   1
+     C                     MOVE 'N'       CTLVLD  1
+     C                     END
+     C                     END
+     C*
+     C           *IN86     IFEQ '1'
+     C                     MOVEAFUNKT     *IN,81
+     C                     SETON                     86    PROTECTED
+     C                     ELSE
+     C                     MOVEAFUNKT     *IN,81
+     C                     END
+     C                     WRITEMSGSFLC                    NACHRICHTEN-SFL
+     C                     MOVEACTL29     *IN,29
+     C                     EXFMT§DDS1§D3
+     C*
+     C* CURSORPOSITIONIERUNG ERRECHNEN
+     C                     Z-ADD*ZERO     §§§LIN
+     C                     Z-ADD*ZERO     §§§COL
+     C                     MOVE §§§L      §§§B
+     C                     MOVE §§§C      §§§D
+     C                     MOVE §§§LIN    §§CRLN
+     C                     MOVE §§§COL    §§CRCL
+     C*
+     C                     EXSR CLRMSG                     CLEARE MSG
+     C           *IN26     IFEQ '1'                        CHANGES ON
+     C           D3OP      ANDNE'N'
+     C           D3OP      ANDNE'Ä'
+     C           §§§CFK    ANDNEBT06
+     C           §§§CFK    ANDNEBT02
+     C                     MOVE 'J'       CTLLD
+     C                     MOVE 'J'       CTLCHG
+     C                     END
+     C*
+     C                     MOVE CTLVLD    VALID   1        NEU
+     C                     MOVE 'N'       CTLVLD  1
+    C* BEARBEITUNG                                        START SELECT
+     C                     SELEC
+     C*
+     C* F03=BEENDEN
+     C           §§§CFK    WHEQ BT03
+     C                     MOVEL'03'      CTLTST
+     C                     EXSR RETURN
+     C* F12=ABBRECHEN
+     C           §§§CFK    WHEQ BT12
+     C           CTLVLD    IFEQ 'N'
+     C                     MOVEL'12'      CTLTST
+     C                     EXSR RETURN
+     C                     END
+     C* F4=BEDIENERFÜHRUNG
+     C           §§§CFK    WHEQ BT04
+     C                     EXSR SR1200
+     C* F5=AKTUALISIEREN
+     C           §§§CFK    WHEQ BT05
+     C           D3OP      OREQ 'A'
+     C                     MOVE 'J'       CTLLD
+     C                     MOVE 'N'       CTLVLD
+     C* F14=CLEAR-SCREEN
+     C           §§§CFK    WHEQ BT14
+     C                     EXSR SR1150
+     C* F17=DATEIANFANG
+     C           §§§CFK    WHEQ BT17
+     C                     MOVELKEYC      KEYFMT
+     C           KEYSR1    SETGT§000LOG1
+     C                     READ §000LOG1                 91
+     C           *IN91     IFEQ '1'
+     C                     MOVEL'AL00013' MSG              ENDE
+     C                     EXSR SNDMSG                     ERREICHT
+     C                     MOVELKEYDAT    KEYFMT
+     C                     EXSR SR1150
+     C                     ELSE
+     C                     MOVELKEYDAT    KEYFMT
+     C                     EXSR SR1101
+     C                     END
+     C* F18=DATEIENDE
+     C           §§§CFK    WHEQ BT18
+     C                     MOVELKEYM      KEYFMT
+     C           KEYSR1    SETLL§000LOG1
+     C                     READP§000LOG1                 91
+     C           *IN91     IFEQ '1'
+     C                     MOVEL'AL00014' MSG              ANFANG
+     C                     EXSR SNDMSG                     ERREICHT
+     C                     MOVELKEYDAT    KEYFMT
+     C                     EXSR SR1150
+     C                     ELSE
+     C                     MOVELKEYDAT    KEYFMT
+     C                     EXSR SR1101
+     C                     END
+     C* F22=SQL
+     C           §§§CFK    WHEQ BT22
+     C           CTLVLD    IFEQ 'N'
+     C                     EXSR SR2201
+     C                     MOVE 'J'       CTLLD
+     C                     END
+     C* F *=BLÄTTERN RÜCKWERTS
+     C           §§§CFK    WHEQ FAUF
+     C           KEY001    SETLL§000LOG1
+     C                     READP§000LOG1                 91
+     C           *IN91     IFEQ '1'
+     C                     MOVEL'AL00014' MSG              ANFANG
+     C                     EXSR SNDMSG                     ERREICHT
+     C                     MOVELKEYDAT    KEYFMT
+     C                     ELSE
+     C                     MOVELKEYDAT    KEYFMT
+     C                     EXSR SR1101
+     C                     END
+     C* F *=BLÄTTERN VORWÄRTS
+     C           §§§CFK    WHEQ FUNTEN
+     C           KEY001    SETGT§000LOG1
+     C                     READ §000LOG1                 91
+     C           *IN91     IFEQ '1'
+     C                     MOVEL'AL00013' MSG              ENDE
+     C                     EXSR SNDMSG                     ERREICHT
+     C                     MOVELKEYDAT    KEYFMT
+     C                     ELSE
+     C                     MOVELKEYDAT    KEYFMT
+     C                     EXSR SR1101
+     C                     END
+     C* HELP
+     C           §§§CFK    WHEQ FHELP
+     C*
+     C* F24=PF-TASTEN-WECHSEL
+     C           §§§CFK    WHEQ BT24
+     C                     EXSR FKTPGM                     TASTEN-PGM
+     C                     WRITE§DDS1§D2                   FUSSZEILE
+     C*
+     C* F10=WECHSELN ZUR COMMAND-LINE DER AS/400
+     C           §§§CFK    WHEQ BT10
+     C                     CALL 'QUSCMDLN'
+     C*
+     C* F13=SONSTIGE FREI WÄHLBARE FUNKTIONEN
+     C           §§§CFK    WHEQ BT13
+     C                     EXSR SRFK13
+     C*
+     C* F16=SONSTIGE FREI WÄHLBARE FUNKTIONEN
+     C           §§§CFK    WHEQ BT16
+     C                     EXSR SRFK16
+     C*
+     C* PGM BEENDEN ODER WEITERE VERARBEITUNG
+     C                     OTHER
+     C           CTLVLD    IFNE 'J'
+     C           CTLLD     ANDNE'J'
+     C           KEYFMT    ANDNEKEYC
+     C                     EXSR SR1401
+     C                     END
+     C           CTLCHG    IFEQ 'N'
+     C           CTLVLD    ANDEQ'N'
+     C****> NO             EXSR RETURN
+     C                     MOVEL'USR0001' MSG              ANFANG
+     C                     MOVEL'SYGMSG ' MSGF             ANFANG
+     C                     EXSR SNDMSG                     ERREICHT
+     C                     MOVEL'       ' MSGF             ANFANG
+     C                     END
+     C*
+     C                     ENDSL
+    C* BEARBEITUNGSENDE                                   ENDE SELECT
+     C*
+     C                     MOVE 'N'       CTLCHG
+     C*
+     C                     ENDDO
+    C* ENDE DER SCHLEIFE FÜR DIALOG                       END DO
+     C*

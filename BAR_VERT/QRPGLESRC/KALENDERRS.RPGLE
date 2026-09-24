@@ -1,0 +1,287 @@
+     H option(*srcstmt: *nodebugio)
+     H dftactgrp(*no) bnddir('QC2LE')
+     *_______________________________________________________________________*/
+     * Programmname.: #kalenderr                                             */
+     * Funktion.....: anzeigen dateiinhalt von bar_vert/kalender             */
+     *                in subfile bar_vert/kalendersf                         */
+     *                                                                       */
+     *                                                                       */
+     * 10/2011        schneider                                              */
+     *                                                                       */
+     *-Änderungsdienst-------------------------------------------------------*/
+     *                                                                       */
+     *_______________________________________________________________________*/
+
+     Fkalender  if   e           k disk
+
+     Fkalendersfcf   e             workstn sfile(kalendsf: rrn)
+
+     D sortds          pr                  extproc('qsort')
+     D   datatosort                        like(subfiledata)
+     D   elements                    10u 0 value
+     D   size                        10u 0 value
+     D   sortfunct                     *   procptr value
+
+     D high            c                   1
+     D low             c                   -1
+     D equal           c                   0
+
+     D datumsort       pr            10i 0
+     D   element1                          likerec(kalendsf: *output)
+     D   element2                          likerec(kalendsf: *output)
+
+     D rgsort          pr            10i 0
+     D   element1                          likerec(kalendsf: *output)
+     D   element2                          likerec(kalendsf: *output)
+
+     D rgtagsort       pr            10i 0
+     D   element1                          likerec(kalendsf: *output)
+     D   element2                          likerec(kalendsf: *output)
+
+
+     D loadarray       pr            10i 0
+     D displaysubfile  pr
+     D clearsubfile    pr
+     D loadsubfile     pr
+     D   recordcount                 10i 0
+
+
+     D subfiledata     ds                  qualified
+     D    subfilerec                       likerec(kalendsf: *output) dim(1000)
+
+     D count           s             10i 0 inz(0)
+     D rrn             s             10i 0 inz(0)
+     DDate             s               D   DATFMT(*ISO)
+     D datum           s              8s 0 inz(0)
+
+     D sortroutine     s               *   procptr
+     D sortdatum       s               *   procptr inz(%paddr(datumsort))
+     D sortrg          s               *   procptr inz(%paddr(rgsort))
+     D sortrgtag       s               *   procptr inz(%paddr(rgtagsort))
+
+     D exit            c                   3
+     D sortdatums      c                   5
+     D sortrgs         c                   6
+     D sorttags        c                   7
+
+     D sfldspctl       c                   90
+     D sflclear        c                   91
+     D sfldsp          c                   92
+
+     C                   TIME                    Date
+
+     c     key_datum     klist
+     c                   kfld                    datum
+
+     *___hauptroutine beginn_________________________________________________*/
+      /free
+
+       datum = %Uns(%Char(%Date:*ISO0));
+
+       count = loadarray();
+
+ 1b    dou *in(exit);
+
+           loadsubfile(count);
+
+           displaysubfile();
+
+ 2b        select;
+
+ 2x          when *in(sortdatums);
+               sortroutine = sortdatum;
+
+ 2x          when *in(sortrgs);
+               sortroutine = sortrg;
+
+ 2x          when *in(sorttags);
+               sortroutine = sortrgtag;
+
+ 2x          other;
+               sortroutine = sortdatum;
+
+ 2e        endsl;
+
+                 sortds(subfiledata:
+                        count:
+                        %size(subfiledata.subfilerec):
+                        sortroutine);
+
+           clearsubfile();
+
+ 1e    enddo;
+
+       *inlr = *on;
+
+      /end-free
+     *__hauptroutine ende____________________________________________________*/
+
+     *__bereich pozeduren_*************************************************__*/
+
+     *__beginn loadarray_____________________________________________________*/
+     P loadarray       b
+     D                 pi            10i 0
+
+     D n               s             10i 0
+
+      /free
+
+        setll key_datum kalpf;
+
+ 1b     dou %eof(kalender);
+
+          read kalpf;
+
+ 2b       if not %eof(kalender);
+
+            n +=1;
+
+            subfiledata.subfilerec(n).kaldat1   = kaldat1;
+            subfiledata.subfilerec(n).kalwotag  = kalwotag;
+            subfiledata.subfilerec(n).kalbandi  = kalbandi;
+            subfiledata.subfilerec(n).kalbands  = kalbands;
+            subfiledata.subfilerec(n).kalrgpara = kalrgpara;
+            subfiledata.subfilerec(n).kalrgzeit = kalrgzeit;
+            subfiledata.subfilerec(n).kalrgzeite = kalrgzeite;
+            subfiledata.subfilerec(n).kalrgzeiti = kalrgzeiti;
+
+ 2e       endif;
+
+ 1e     enddo;
+
+        return n;
+
+       /end-free
+
+     P loadarray       e
+     *__ende loadarray_______________________________________________________*/
+
+     *__beginn displaysubfile________________________________________________*/
+     P displaysubfile  b
+     D                 pi
+
+      /free
+
+         *in(sflclear) = *off;
+         *in(sfldspctl) = *on;
+         *in(sfldsp) = *on;
+
+         write keys;
+
+         exfmt kalendctl;
+
+         return;
+
+      /end-free
+
+     P displaysubfile  e
+     *__ende displaysubfile__________________________________________________*/
+
+     *__beginn loadsubfile___________________________________________________*/
+     P loadsubfile     b
+     D                 pi
+     D   recordcount                 10i 0
+
+     D i               s             10i 0
+
+      /free
+
+ 1b     for rrn = 1 to recordcount;
+
+            write kalendsf subfiledata.subfilerec(rrn);
+
+ 1e     endfor;
+
+      /end-free
+
+     P loadsubfile     e
+     *__ende loadsubfile_____________________________________________________*/
+
+     *__beginn clearsubfile__________________________________________________*/
+     P clearsubfile    b
+     D                 pi
+      /free
+
+        *in(sflclear) = *on;
+        *in(sfldspctl) = *off;
+        *in(sfldsp) = *off;
+
+        write kalendctl;
+
+        return;
+
+      /end-free
+
+     P clearsubfile    e
+     *__ende clear subfile___________________________________________________*/
+
+     *__beginn datumsort_____________________________________________________*/
+     P datumsort       b
+     D                 pi            10i 0
+     D   element1                          likerec(kalendsf: *output)
+     D   element2                          likerec(kalendsf: *output)
+
+      /free
+
+ 1b      select;
+ 1x        when element1.kaldat1 > element2.kaldat1;
+              return high;
+ 1x        when element1.kaldat1 < element2.kaldat1;
+              return low;
+ 1x        other;
+              return equal;
+ 1e      endsl;
+
+      /end-free
+
+     P datumsort       e
+     *__ende datumsort_______________________________________________________*/
+
+     *__beginn rgsort________________________________________________________*/
+     P rgsort          b
+
+     D                 pi            10i 0
+     D   element1                          likerec(kalendsf: *output)
+     D   element2                          likerec(kalendsf: *output)
+
+      /free
+
+ 1b      select;
+ 1x        when element1.kalrgpara > element2.kalrgpara;
+              return low;
+ 1x        when element1.kalrgpara < element2.kalrgpara;
+              return high;
+ 1x        other;
+              return equal;
+
+ 1e      endsl;
+
+      /end-free
+
+     P rgsort          e
+     *__ende rgsort__________________________________________________________*/
+
+     *__beginn rgtagsort_____________________________________________________*/
+     P rgtagsort       b
+
+     D                 pi            10i 0
+     D   element1                          likerec(kalendsf: *output)
+     D   element2                          likerec(kalendsf: *output)
+
+      /free
+
+ 1b      select;
+ 1x        when element1.kalwotag > element2.kalwotag;
+              return low;
+ 1x        when element1.kalwotag < element2.kalwotag;
+              return high;
+ 1x        other;
+              return equal;
+
+ 1e      endsl;
+
+      /end-free
+
+     P rgtagsort       e
+     *__ende rgtagsort_______________________________________________________*/
+

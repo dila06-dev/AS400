@@ -1,0 +1,20 @@
+     A**************************************************************************
+     A*  Copyright 2020 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Jechtinger Straße 9                              *
+     A*                       79111 Freiburg                                   *
+     A*  --------------------------------------------------------------------  *
+     A*  UPS Schnittstellendatei für IVEAS                                     *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: SC 09.12.2020 Projekt 16157                                 *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R WAOUPS1
+     A*-------------------------------------------------------------------------
+     A            WAOUFIRM  R               REFFLD(##FIRM)
+     A            WAOURGJJ  R               REFFLD(##RGJJ)
+     A            WAOURGNR  R               REFFLD(##RGNR)
+     A            WAOULIJJ  R               REFFLD(##LIJJ)
+     A            WAOULINR  R               REFFLD(##LINR)
+     A*

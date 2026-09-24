@@ -1,0 +1,784 @@
+      * PROGRAMMNAME.:SYS0015R                                                
+      * FUNKTION.....:........-VERARBEITUNG
+      * 06.07.98       GANG, MANFRED
+     * UPDATE         FILE(§000PHY1) TOFILE(*LIBL/SYSPROFPF)
+      * READ/F.UPDATE  FILE(§000LOG1) TOFILE(*LIBL/SYSPROFL2)
+      * READ FÜR F4    FILE(SYSPROG1) TOFILE(*LIBL/SYSPROGL1)
+      *
+      * Faserwerke-Lingen GmbH
+      * Darmer Esch 75
+      * 49811 Lingen
+      *
+      *-ÄNDERUNGSDIENST---------------------------------------------------------
+      * XX.XX.XX                                              PGMR.....
+      *-------------------------------------------------------------------------
+     F**************************************************************************
+     FSYS0015DCF  E                    WORKSTN      KINFSR *PSSR
+     F                                              KINFDS DSDSPF
+     F                                        SFLRN1KSFILE §DDS1§S1
+     F            SYS0015D0                         KRENAME§DDS1§D0
+     F            SYS0015D1                         KRENAME§DDS1§D1
+     F            SYS0015C1                         KRENAME§DDS1§C1
+     F            SYS0015S1                         KRENAME§DDS1§S1
+     F§000LOG1IF  E           K        DISK         KINFSR *PSSR
+     F            SYSPROFPFR                        KRENAMELOG01R
+     F                                              KINFDS DSF1
+     F§000PHY1UF  E                    DISK         KINFSR *PSSR A
+     F            SYSPROFPFR                        KRENAMEPHY01R
+     F*                                             KCOMIT
+     FSYSPROG1IF  E           K        DISK         KINFSR *PSSR
+     F            SYSPROGPFR                        KRENAMELOG02R
+     F                                              KINFDS DSF2
+     E**************************************************************************
+     I/COPY ##E
+     I*-------------------------------------------------------------------------
+     ILOG01R
+     I              S5USRP                          §KEY01
+     I              S5PRF                           §KEY02
+     IPHY01R
+     I              S5USRP                          §KEY01
+     I              S5PRF                           §KEY02
+     I§DDS1§S1
+     I* KEY-AREA
+     I              S1USRP                          S1KY01
+     I              S1PRF                           S1KY02
+     I* HIDDEN-KEY-AREA
+     I              H1USRP                          H1KY01
+     I              H1PRF                           H1KY02
+     I* ATTRIBUTE-AREA
+     I              §§PRF                           §§KY01
+     I*             §§USRP                          §§KY02
+     I*-------------------------------------------------------------------------
+     IDSF1        DS
+     I                                       11  150F1STS
+     I                                    B 397 4000F1RRN
+     IDSF2        DS
+     I                                       11  150F2STS
+     I                                    B 397 4000F2RRN
+     I*-------------------------------------------------------------------------
+     I* PROGRAMMSPEZIFISCHE ZUWEISUNGEN FÜR MELDUNGEN
+     ICTLMSG      DS
+     I I            '"Profile"           '    1  30 IMSG01
+     I I                                     31  60 IMSG02
+     I I                                     61  90 IMSG03
+     ISFLMSG      DS
+     I I            '"Profilesteuerung"  '    1  20 I§§§01
+     ICTLEOF      DS
+     I I                                      1  10 IEOF01
+     I I            '"Profileschlüssel"  '   11  40 IEOF02
+     I I                                     41  70 IEOF03
+     ICTLFKT      DS
+     I I            'F16=Aufruf-Programm '    1  30 IF16
+     ICTL001      DS
+     I I            'SYS0015S1'               1   9 §§§§§1
+     I*-----------Dateischlüsselbereich ----------------------------------------
+     IKEYDAT      DS
+     I I                                      1  10 §KEY01
+     I I                                     11  20 §KEY02
+     I*-----------Startposition Schlüssel---------------------------------------
+     IKEYS        DS
+     I I                                      1  10 KEYS01
+     I I                                     11  20 KEYS02
+     I*-----------Range-Area Schlüssel von--------------------------------------
+     IKEYV        DS
+     I I                                      1  10 KEYV01
+     I I                                     11  20 KEYV02
+     I*-----------Range-Area Schlüssel bis--------------------------------------
+     IKEYB        DS
+     I I                                      1  10 KEYB01
+     I I                                     11  20 KEYB02
+     I*-----------erster modifizierter Satz bei DFTLD=J-------------------------
+     IMODK        DS
+     I I                                      1  10 MODK01
+     I I                                     11  20 MODK02
+     I*-----------erster Key in gelesener Subfile ------------------------------
+     IFSTK        DS
+     I I                                      1  10 FSTK01
+     I I                                     11  20 FSTK02
+     I*-----------letzter Key in gelesener Subfile -----------------------------
+     ILSTK        DS
+     I I                                      1  10 LSTK01
+     I I                                     11  20 LSTK02
+     I*-----------Key in Subfile-Sätze Display-Area-----------------------------
+     IKEYFMT      DS
+     I I                                      1  10 S1KY01
+     I I                                     11  20 S1KY02
+     I*-----------Key in Subfile-Sätze Hidden-Area------------------------------
+     IKEYHID      DS
+     I I                                      1  10 H1KY01
+     I I                                     11  20 H1KY02
+     I*-----------Clear-Key-Area------------------------------------------------
+     IKEYC        DS
+     I I            '          '              1  10 KEYC01
+     I I            '          '             11  20 KEYC02
+     IKEYM        DS
+     I I            '          '              1  10 KEYM01
+     I I            '          '             11  20 KEYM02
+     I*-------------------------------------------------------------------------
+     I/COPY ##I001
+     I/COPY ##I002
+     I/COPY ##I003
+     I*-------------------------------------------------------------------------
+     C**************************************************************************
+     C*VORLAUFKARTEN ÜBERGABEBEREICHE                                  *********
+     C**************************************************************************
+     C           *ENTRY    PLIST
+     C                     PARM           DSPMOD  1        BILDS.-MODUS
+     C                     PARM           §§XP             X-KOORDINATE
+     C                     PARM           §§YP             Y-KOORDINATE
+     C                     PARM           FUNKT   9        FUNKTIONEN
+     C                     PARM           SFLP1   5        SUBF.-RECORDS
+     C                     PARM           DFTLD   1        DEFAULT LOAD
+     C                     PARM           PKYS01           SCHLÜSSEL
+     C                     PARM           PKYS02           SCHLÜSSEL
+     C                     PARM           PKYV01           SCHLÜSSELVON
+     C                     PARM           PKYV02           SCHLÜSSELVON
+     C                     PARM           PKYB01           SCHLÜSSELBIS
+     C                     PARM           PKYB02           SCHLÜSSELBIS
+     C                     PARM           CTL34   1        DEFAULT MOD
+     C                     PARM           CTLRWT  1        DEFAULT REW
+     C*
+     C*                    MOVEL*LOVAL    KEYC01
+     C*                    MOVEL*LOVAL    KEYC02
+     C                     MOVEL*HIVAL    KEYM01
+     C                     MOVEL*HIVAL    KEYM02
+     C*
+     C           *LIKE     DEFN KEYS01    PKYS01
+     C                     MOVELPKYS01    KEYS01
+     C           *LIKE     DEFN KEYS02    PKYS02
+     C                     MOVELPKYS02    KEYS02
+     C*
+     C           *LIKE     DEFN KEYV01    PKYV01
+     C*                    MOVELPKYV01    KEYV01
+     C           *LIKE     DEFN KEYV02    PKYV02
+     C                     MOVELPKYV02    KEYV02
+     C*
+     C           *LIKE     DEFN KEYB01    PKYB01
+     C                     MOVELPKYB01    KEYB01
+     C           *LIKE     DEFN KEYB02    PKYB02
+     C                     MOVELPKYB02    KEYB02
+     C*
+     C           KEYV01    IFEQ *BLANK
+     C                     MOVEL§§§USR    KEYV01
+     C                     ENDIF
+     C           *LIKE     DEFN §§§USR    §§§ALL
+     C                     MOVEL'*ALL'    §§§ALL
+     C           LOG202    CHAIN§000LOG1             91
+     C   91                CLEAR§§§ALL
+     C  N91                MOVELS5BERE    §§§ALL
+     C  N91                MOVEL*LOVAL    KEYV01
+     C*
+     C*
+     C                     SETOF                     07
+     C*
+     C                     Z-ADD69        FTLNG            LÄNGE TASTE
+     C*                    30+   56789.
+     C                     MOVEA'010000'  FKTTST           TASTATUR
+     C*AUS *LDA
+     C           F4RRN     IFNE *ZERO
+     C           F4RRN     CHAIN§000PHY1             91    INPUT-READ
+     C  N91                MOVEL§KEY01    KEYS01
+     C  N91                MOVEL§KEY02    KEYS02
+     C  N91                UNLCK§000PHY1
+     C                     ENDIF
+     C/COPY ##SUB1FA
+     C*
+     C           KEYC      IFNE KEYS
+     C                     MOVEL'J'       CTLLD
+     C                     END
+     C*
+     C           KEYV01    IFEQ *BLANK
+     C                     MOVE *LOVAL    KEYV01
+     C                     END
+     C           KEYV02    IFEQ *BLANK
+     C                     MOVE *LOVAL    KEYV02
+     C                     END
+     C*
+     C           KEYB01    IFEQ *BLANK
+     C                     MOVE *HIVAL    KEYB01
+     C                     END
+     C           KEYB02    IFEQ *BLANK
+     C                     MOVE *HIVAL    KEYB02
+     C                     END
+     C*
+     C*EIGENE FUNKTIONSTASTE FÜR BEARBEITUNG DATEI
+     C                     Z-ADD16        NEUFNR
+     C                     Z-ADD*ZERO     CTLARB
+     C                     MOVELIF16      NEUFKT
+     C                     EXSR FKTPGM
+     C*
+     C*-------------------------------------------------------------------------
+     C* DATEI-SCHLÜSSEL
+     C* §000LOG1:
+     C           KEY001    KLIST
+     C                     KFLD           §KEY01
+     C                     KFLD           §KEY02
+     C*
+     C           KEYSR1    KLIST
+     C                     KFLD           S1KY01
+     C                     KFLD           S1KY02
+     C*
+     C           LSTKEY    KLIST
+     C                     KFLD           LSTK01
+     C                     KFLD           LSTK02
+     C*
+     C           LOG202    KLIST
+     C                     KFLD           §§§USR
+     C                     KFLD           §§§ALL
+     C* SYSPROG1:
+     C           LOG301    KLIST
+     C                     KFLD           S1KY02
+     C                     KFLD           LFD     50
+     C                     KFLD           PGM    10
+     C*
+     C* WINDOW AUSGEBEN
+     C                     WRITE§DDS1§D0
+     C                     WRITE§DDS1§D1
+     C*
+     C/COPY ##SUB1DIAL                                    DIALOGSCHL.
+     C/COPY ##SUB1CTLA                                    SR1101SR1111
+     C**************************************************************************
+     C* SR1100: SONSTIGE ZUWEISUNGEN NACH READ FORMAT
+     C*-------------------------------------------------------------------------
+     C*
+     C           SR1100    BEGSR
+     C*
+     C           KEYV01    IFNE §§§USR
+     C           §§§ALL    IFNE '*CHANGE'
+     C           §§§ALL    ANDNE'*ALL'
+     C                     MOVELKEYV01    KEYB01
+     C                     ELSE
+     C           KEYV01    IFEQ *BLANK
+     C           KEYV01    OREQ *LOVAL
+     C                     MOVEL*HIVAL    KEYB01
+     C                     ELSE
+     C                     MOVELKEYV01    KEYB01
+     C                     ENDIF
+     C                     ENDIF
+     C                     ELSE
+     C                     MOVELKEYV01    KEYB01
+     C                     ENDIF
+     C                     MOVEL*HIVAL    KEYB02
+     C                     MOVELKEYV01    KEYS01
+     C*
+     C           ##1100    ENDSR
+     C*
+     C**************************************************************************
+     C* SR1120: SONSTIGE PRÜFUNGEN  CTRPRF=0 ==> OK
+     C*-------------------------------------------------------------------------
+     C*
+     C           SR1120    BEGSR
+     C*
+     C                     MOVEL'0'       CTLPRF
+     C*
+     C           ##1120    ENDSR
+     C*
+     C**************************************************************************
+     C* SR1121: SUBFILE-SÄTZE AUFBEREITEN FÜR SUBFILE #1
+     C*-------------------------------------------------------------------------
+     C*
+     C           SR1121    BEGSR
+     C*
+     C                     MOVELKEYDAT    KEYFMT           DISPLAY KEY
+     C                     MOVELS5DESC    S1DESC
+     C                     MOVELKEYDAT    KEYHID           SAVE-AREA
+     C                     MOVELS5DESC    H1DESC
+     C                     Z-ADDF1RRN     S1F1RR           RELATIV.KEY
+     C                     MOVEAFUNKT     *IN,81
+     C*
+     C           ##1121    ENDSR
+     C*
+     C/COPY ##SUB1ANLA                                    SR1131
+     C**************************************************************************
+     C* SR1198: VARIABLE ATTRIBUTSTEUERUNG PROTECTED (AATR,33)
+     C*-------------------------------------------------------------------------
+     C*
+     C           SR1198    BEGSR
+     C* KEYBEREICH
+     C                     MOVEAATR,33    §§KY01
+     C*                    MOVEAATR,33    §§KY02
+     C* SONSTIGE
+     C                     MOVEAATR,33    §§DESC
+     C* CONTROL-RECORD
+     C                     MOVEAATR,33    §§OP
+     C                     MOVEAATR,33    §§§S01
+     C                     MOVEAATR,7     §§§V01
+     C*
+     C           ##1198    ENDSR
+     C*
+     C**************************************************************************
+     C* SR1199: VARIABLE ATTRIBUTSTEUERUNG
+     C*-------------------------------------------------------------------------
+     C*
+     C           SR1199    BEGSR
+     C* KEYBEREICH
+     C                     MOVEAATTK      §§KY01
+     C**                   MOVEAATTK      §§KY02
+     C* SONSTIGE
+     C                     MOVEAATTS      §§DESC
+     C* CONTROL-RECORD
+     C                     MOVEAATTO      §§OP
+     C*  06                MOVEAATR,33    §§OP
+     C                     MOVEAATR,7     §§§S01
+     C   06                MOVEAATR,33    §§§S01
+     C                     MOVEAATR,7     §§§V01
+     C   06                MOVEAATR,33    §§§V01
+     C           KEYV01    IFNE §§§USR
+     C           §§§ALL    IFNE '*CHANGE'
+     C           §§§ALL    ANDNE'*ALL'
+     C                     EXSR SR1198
+     C                     ENDIF
+     C                     ENDIF
+     C*
+     C           ##1199    ENDSR
+     C*
+     C**************************************************************************
+     C* SR1201: F4=BEDIENERFÜHRUNG
+     C*-------------------------------------------------------------------------
+     C*
+     C           SR1200    BEGSR
+     C*
+     C           §§CRR     IFEQ §§§§§1
+     C*
+     C                     Z-ADDSFLDR1    SAVDR1
+     C                     Z-ADD*ZERO     SFLDR1
+     C                     Z-ADDSFLRN1    XX     150
+     C*
+     C                     SELEC                           START SELECT
+     C           §§CRN     WHNE *ZERO
+     C           *IN83     ANDEQ'0'
+     C           *IN89     ANDEQ'1'
+     C                     Z-ADD§§CRN     SFLRN1
+     C           SFLRN1    CHAIN§DDS1§S1             91
+     C  N91                Z-ADDS1F1RR    F4RRN
+     C  N91                EXSR RETURN
+     C   91                MOVEL'AL00002' MSG
+     C   91                EXSR SNDMSG
+     C   91                MOVE 'F'       CTLVLD
+     C*EINZELSATZ UBER SYS0016R
+     C*------------------------
+     C           §§CRN     WHNE *ZERO
+     C           *IN89     ANDEQ'0'
+     C                     CLEARF4RRN
+     C                     Z-ADD§§CRN     SFLRN1
+     C           SFLRN1    CHAIN§DDS1§S1             91
+     C**N91                CLEARMSGPGM
+     C  N91                Z-ADDS1F1RR    F4RRN
+     C  N91                OUT  LDA
+     C  N91                CALL 'SYS0016C'             97
+     C  N91                MOVEL§§§PGM    MSGPGM           PGM-NACHRICHTEN
+     C  N91                IN   LDA
+     C  N91      CTLTST    IFEQ '03'
+     C  N91                EXSR RETURN                     TASTEN-PGM
+     C                     ENDIF
+     C   91                MOVEL'AL00002' MSG
+     C   91                EXSR SNDMSG
+     C   91                MOVE 'F'       CTLVLD
+     C* POSITION UNGÜLTIG
+     C                     OTHER
+     C                     MOVEL'AL00002' MSG
+     C                     EXSR SNDMSG
+     C                     MOVE 'F'       CTLVLD
+     C*
+     C                     ENDSL                           END SELECT
+     C*
+     C                     Z-ADDSFLAS1    SFLRN1
+     C           SFLDR1    IFEQ *ZERO
+     C                     Z-ADDSAVDR1    SFLDR1
+     C                     END
+     C                     Z-ADDXX        SFLRN1
+     C* FUNKTIONSTASTENAKTUALISIERUNG
+     C                     Z-ADD16        NEUFNR
+     C                     Z-ADD*ZERO     CTLARB
+     C                     MOVELIF16      NEUFKT
+     C                     EXSR FKTPGM
+     C*
+     C* POSITION UNGÜLTIG
+     C                     ELSE
+     C                     MOVEL'AL00002' MSG
+     C                     EXSR SNDMSG
+     C                     MOVE 'F'       CTLVLD
+     C                     ENDIF
+     C*
+     C           ##1200    ENDSR
+     C*
+     C**************************************************************************
+     C* SR1301: BEARBEITEN VON 1 BIS N-1 (KOMPLETTE SUBF.) NSUBFILE #1
+     C*-------------------------------------------------------------------------
+     C*
+     C           SR1301    BEGSR
+     C*
+     C*          C1AUSW    IFEQ 'X'
+     C*
+     C           1         DO   SFLAS1    SFLRN1           START DO
+     C           SFLRN1    CHAIN§DDS1§S1             91
+     C           *IN91     IFEQ '0'
+     C                     MOVEAFUNKT     *IN,81
+     C                     MOVE 'X'       D3OP
+     C                     UPDAT§DDS1§S1
+     C                     ENDIF
+     C                     ENDDO                           END DO
+     C*
+     C*                    ENDIF
+     C*
+     C* SUBFILE BEARBEITEN
+     C                     EXSR SR1401
+     C*
+     C           ##1301    ENDSR
+     C*
+     C/COPY ##SUB1OPTA                                     SR1401
+     C/COPY ##OPCODE                                       SR1500
+     C*
+     C**************************************************************************
+     C* SR1501: PRÜFUNGEN FÜR SUBFILE #1
+     C*-------------------------------------------------------------------------
+     C*
+     C           SR1501    BEGSR
+     C*
+     C                     EXSR SRATTR
+     C           D3OP      IFNE 'X'
+     C                     EXSR SR1500                     PRÜFUNGEN
+     C                     ENDIF
+     C           CTLVLD    IFEQ 'F'
+     C                     MOVE '1'       *IN60
+     C                     MOVEAATR,9     §§OP
+     C                     ENDIF
+     C*
+     C           KEYFMT    IFNE KEYHID
+     C           CTLVLD    ANDNE'F'
+     C           KEYSR1    CHAIN§000LOG1             91
+     C           *IN91     IFEQ '0'
+     C                     MOVEL'AL00012' MSG
+     C                     MOVELI§§§01    TXT24  24
+     C                     MOVE S1KY01    TXT24
+     C                     MOVEATXT24     MD
+     C                     EXSR SNDMSG
+     C                     MOVE 'F'       CTLVLD
+     C                     SETON                     62
+     C                     END
+     C                     END
+     C*
+     C                     EXSR SR1503                     PRÜFUNGEN
+     C*
+     C           ##1501    ENDSR
+     C*
+     C**************************************************************************
+     C* SR1502: SATZMODIFIZIERUNG DURCH EINEN ANDEREN ANWENDER?
+     C*-------------------------------------------------------------------------
+     C*
+     C           SR1502    BEGSR
+     C*
+     C           KEYHID    IFNE KEYDAT
+     C           H1DESC    ORNE S5DESC
+     C                     MOVEL'AL00015' MSG
+     C                     EXSR SNDMSG
+     C                     MOVE 'F'       CTLVLD
+     C                     SETON                     60
+     C                     MOVEAATR,9     §§OP
+     C                     MOVE ' '       CTLMOD           KEIN  UPDATE
+     C                     ENDIF
+     C           H1KY01    IFNE §KEY01
+     C                     SETON                     62
+     C                     MOVEAATR,9     §§KY01
+     C                     ENDIF
+     C*          H1KY02    IFNE §KEY02
+     C*                    SETON                     62
+     C*                    MOVEAATR,9     §§KY02
+     C*                    ENDIF
+     C           H1DESC    IFNE S5DESC
+     C                     SETON                     70
+     C                     MOVEAATR,9     §§DESC
+     C                     ENDIF
+     C*
+     C           ##1502    ENDSR
+     C*
+     C**************************************************************************
+     C* SR1503: KENNWORTEINGABE OK
+     C*-------------------------------------------------------------------------
+     C*
+     C           SR1503    BEGSR
+     C*
+     C                     CALL 'KNWPRF1'              97
+     C                     PARM           C1KW
+     C                     PARM 'D'       MODUS   1
+     C                     PARM ' '       RTNCOD  1
+     C                     PARM           §§§PGM
+     C                     MOVE '0'       *IN61
+     C           RTNCOD    IFNE '0'
+     C                     MOVE 'F'       CTLVLD
+     C                     MOVE '1'       *IN61
+     C                     MOVEAATR,9     §§KW
+     C                     MOVE ' '       CTLMOD           KEIN  UPDATE
+     C                     MOVE '1'       *IN34            SELNEXTCHG
+     C                     ENDIF
+     C*
+     C           ##1503    ENDSR
+     C*
+     C**************************************************************************
+     C* SR1505: OP-CODE UND DATENSATZ STEHEN IM WIDERSPRUCH
+     C*-------------------------------------------------------------------------
+     C*
+     C           SR1505    BEGSR
+     C*
+     C           *IN91     IFEQ '0'
+     C*
+     C           D3OP      IFEQ 'N'
+     C           §§§CFK    OREQ BT06
+     C                     MOVEL'AL00031' MSG              KEINE SÄTZE
+     C                     EXSR SNDMSG
+     C                     MOVE 'F'       CTLVLD
+     C                     MOVE ' '       CTLMOD           KEIN  UPDATE
+     C                     SETON                     60
+     C                     SETON                     62
+     C                     MOVEAATR,9     §§KY01
+     C*                    MOVEAATR,9     §§KY02
+     C                     ENDIF
+     C           D3OP      IFEQ 'Ä'
+     C           §§§CFK    OREQ BT02
+     C           CTLRWT    IFNE 'J'
+     C           KEYFMT    ANDNEKEYHID
+     C                     MOVEL'AL00031' MSG              KEINE SÄTZE
+     C                     EXSR SNDMSG
+     C                     MOVE 'F'       CTLVLD
+     C                     MOVE ' '       CTLMOD           KEIN  UPDATE
+     C                     MOVEAATR,9     §§KY01
+     C*                    MOVEAATR,9     §§KY02
+     C                     SETON                     60
+     C                     SETON                     62
+     C                     ENDIF
+     C                     ENDIF
+     C*
+     C                     ENDIF
+     C*
+     C           ##1505    ENDSR
+     C*
+     C**************************************************************************
+     C* SR1506: KEINE ÄNDERUNGEN VORGENOMMEN
+     C*-------------------------------------------------------------------------
+     C*
+     C           SR1506    BEGSR
+     C*
+     C           KEYHID    IFEQ KEYFMT
+     C           H1DESC    ANDEQS1DESC
+     C                     MOVEL'AL00048' MSG
+     C                     MOVELS1KY01    IMSG02
+     C                     MOVELI§§009    IMSG03
+     C                     MOVEACTLMSG    MD
+     C                     EXSR SNDMSG
+     C                     MOVE 'F'       CTLVLD
+     C                     SETON                     60
+     C                     MOVEAATR,9     §§OP
+     C                     MOVE ' '       CTLMOD           KEIN  UPDATE
+     C                     ENDIF
+     C*
+     C           ##1506    ENDSR
+     C*
+     C/COPY ##DATUM                                        SR1510 DATUM
+     C*
+     C**************************************************************************
+     C* SR1601: SÄTZE KOPIEREN
+     C*-------------------------------------------------------------------------
+     C*
+     C           SR1601    BEGSR
+    C* KOPIER-MODUS
+     C                     MOVE '1'       *IN60
+     C                     MOVEL'AL00026' MSG
+     C                     EXSR SNDMSG
+     C                     MOVE 'F'       CTLVLD
+     C           ##1601    ENDSR
+     C*
+     C**************************************************************************
+     C* SR1701: SÄTZE DRUCKEN
+     C*-------------------------------------------------------------------------
+     C*
+     C           SR1701    BEGSR
+    C* DRUCK-MODUS
+     C                     MOVE '1'       *IN60
+     C                     MOVEL'AL00026' MSG
+     C                     EXSR SNDMSG
+     C                     MOVE 'F'       CTLVLD
+     C           ##1701    ENDSR
+     C*
+     C**************************************************************************
+     C* SR1801: SÄTZE ANLEGEN/UPDATEN UPDATE-DATEI #1: DATEI
+     C*-------------------------------------------------------------------------
+     C*
+     C           SR1801    BEGSR
+     C*
+     C           S1F1RR    IFNE *ZERO
+     C                     MOVE 'U'       CTLMOD           MODUS UPDATE
+     C           S1F1RR    CHAIN§000PHY1             91
+     C                     EXSR SR1502
+     C                     ELSE
+     C                     MOVE 'W'       CTLMOD           MODUS WRITE
+     C                     CLEARPHY01R
+     C                     END
+     C                     EXSR SR1505
+     C                     EXSR SR1506
+     C           S1F1RR    IFNE *ZERO
+     C           CTLMOD    ANDEQ' '
+     C                     UNLCK§000PHY1                   ENTSPERREN
+     C                     ENDIF
+     C*
+     C           CTLMOD    IFNE ' '
+     C                     MOVELKEYFMT    KEYDAT           IN DATA-AREA
+     C                     MOVELS1DESC    S5DESC
+     C                     MOVEL§§§USR    S5USR
+     C                     MOVELKEYDAT    KEYHID           SAVE-AREA
+     C                     MOVELS5DESC    H1DESC
+     C                     CLEARS1OP
+     C           CTLMOD    IFEQ 'W'
+     C           S1KY01    IFEQ *BLANK
+     C                     MOVEL§§§USR    S1KY01           IN DATA-AREA
+     C                     ENDIF
+     C                     Z-ADDLDADTP    S5ADAT
+     C                     MOVEL'A'       S5AKT
+     C                     WRITEPHY01R
+     C                     ADD  1         CRTREC
+     C                     ADD  1         E1CRT
+     C                     MOVE 'J'       CTLCHG  1
+     C                     MOVE 'J'       CTLLD
+     C                     MOVELI§§010    IMSG03
+     C                     EXSR MSG001
+     C                     ELSE
+     C                     MOVELLDADTP    S5EDAT
+     C                     UPDATPHY01R
+     C                     ADD  1         MODREC
+     C                     ADD  1         E1MOD
+     C                     MOVE 'J'       CTLCHG  1
+     C                     MOVELI§§009    IMSG03
+     C                     EXSR MSG001
+     C                     END
+     C                     END
+     C*
+     C           ##1801    ENDSR
+     C*
+     C**************************************************************************
+     C* SR1901: SÄTZE LÖSCHEN UPDATE-DATEI #1: DATEI
+     C*-------------------------------------------------------------------------
+     C*
+     C           SR1901    BEGSR
+     C*
+     C           KEYSR1    SETLL§000LOG1
+     C                     DO   *HIVAL
+     C           KEYSR1    READE§000LOG1                 91
+     C   91                LEAVE
+     C                     Z-ADDF1RRN     X1RRN  150
+     C           X1RRN     DELETPHY01R               93
+     C                     SETON                     86    PROTECTED
+     C                     CLEARS1OP
+     C                     EXSR SRATTR
+     C                     EXSR SR1199
+     C                     CLEARKEYHID
+     C                     ADD  1         DLTREC
+     C                     ADD  1         E1DLT
+     C                     MOVE 'J'       CTLCHG  1
+     C                     MOVELI§§011    IMSG03
+     C                     EXSR MSG001
+     C                     END
+     C*
+     C           ##1901    ENDSR
+     C*
+     C**************************************************************************
+     C* SRFK13: ???
+     C*-------------------------------------------------------------------------
+     C*
+     C           SRFK13    BEGSR
+     C*
+     C*
+     C           ##FK13    ENDSR
+     C*
+     C**************************************************************************
+     C* SRFK16: AUFRUF ....
+     C*-------------------------------------------------------------------------
+     C*
+     C           SRFK16    BEGSR
+     C*
+     C                     Z-ADDSFLDR1    SAVDR1
+     C                     Z-ADD*ZERO     SFLDR1
+     C                     Z-ADDSFLRN1    XX     150
+     C           §§CRR     IFEQ §§§§§1
+     C                     SELEC                           START SELECT
+     C*EINZELSATZ UBER SYS0005R
+     C*------------------------
+     C           §§CRN     WHNE *ZERO
+     C           *IN89     ANDEQ'0'
+     C                     CLEARF4RRN
+     C                     Z-ADD§§CRN     SFLRN1
+     C           SFLRN1    CHAIN§DDS1§S1             91
+     C**N91                CLEARMSGPGM
+     C  N91                CLEARPGM
+     C  N91                CLEARLFD
+     C  N91      LOG301    SETLLSYSPROG1             91
+     C  N91                READ SYSPROG1                 91
+     C  N91                Z-ADDF2RRN     F4RRN
+     C  N91                OUT  LDA
+     C  N91                CALL 'SYS0005C'             97
+     C  N91                MOVEL§§§PGM    MSGPGM           PGM-NACHRICHTEN
+     C  N91                IN   LDA
+     C  N91      CTLTST    IFEQ '03'
+     C  N91                EXSR RETURN                     TASTEN-PGM
+     C                     ENDIF
+     C   91                MOVEL'AL00002' MSG
+     C   91                EXSR SNDMSG
+     C   91                MOVE 'F'       CTLVLD
+     C* POSITION UNGÜLTIG
+     C                     OTHER
+     C                     MOVEL'AL00002' MSG
+     C                     EXSR SNDMSG
+     C                     MOVE 'F'       CTLVLD
+     C*
+     C                     ENDSL                           END SELECT
+     C*
+     C                     Z-ADDSFLAS1    SFLRN1
+     C           SFLDR1    IFEQ *ZERO
+     C                     Z-ADDSAVDR1    SFLDR1
+     C                     END
+     C                     Z-ADDXX        SFLRN1
+     C*
+     C* FUNKTIONSTASTENAKTUALISIERUNG
+     C                     Z-ADD16        NEUFNR
+     C                     Z-ADD*ZERO     CTLARB
+     C                     MOVELIF16      NEUFKT
+     C                     EXSR FKTPGM
+     C*
+     C* POSITION UNGÜLTIG
+     C                     ELSE
+     C                     MOVEL'AL00002' MSG
+     C                     EXSR SNDMSG
+     C                     MOVE 'F'       CTLVLD
+     C                     ENDIF
+     C*
+     C           ##FK16    ENDSR
+     C*
+     C**************************************************************************
+     C* INITIALISIERUNGSROUTINE
+     C*-------------------------------------------------------------------------
+     C*
+     C           *INZSR    BEGSR
+     C* *LDA DEFINIEREN/LESEN
+     C           *NAMVAR   DEFN *LDA      LDA
+     C                     IN   LDA
+     C*
+     C* NACHRICHTEN-SFL INITIALISIEREN
+     C                     MOVEL'*'       §§§PGQ
+     C                     EXSR CLRMSG
+     C*
+     C                     ENDSR
+     C*
+     C**************************************************************************
+     C* PROGRAMM VERLASSEN
+     C*-------------------------------------------------------------------------
+     C*
+     C           RETURN    BEGSR
+     C                     WRITE§DDS1§D0
+     C                     OUT  LDA
+     C                     MOVE '1'       *INLR
+     C                     RETRN
+     C                     ENDSR
+     C*
+     C**************************************************************************
+     C/COPY ##PSSR                                         Errorroutine
+     C/COPY ##MESSAGES                                     Nachrichten
+     C/COPY ##MODATR                                       variabl.Attr.
+     C/COPY ##TASTATUR                                     TastatDef.

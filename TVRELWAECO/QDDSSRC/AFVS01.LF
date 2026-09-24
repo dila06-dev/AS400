@@ -1,0 +1,13 @@
+      * Physische Datei: AFLP
+      * ANLEGEDATUM: OKTOBER 2010
+      *SORT:        FIRMA, RECHNUNG, LIEFERSCHEIN
+      * ÄNDERUNGEN:
+      * AUSSCHLUSS:  ...
+     A
+     A**********                            UNIQUE
+     A          R AFVS1                     PFILE(AFVS)
+     A
+     A          K AVFIRM
+     A          K AVKMJJ
+     A          K AVKMNR
+     A          K AVKMPO

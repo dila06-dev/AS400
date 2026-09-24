@@ -1,0 +1,7 @@
+     A*****************************************************************
+     A          R WERKAF                    TEXT('AKTUELLES WERK')
+     A            LOKATION       3A         COLHDG('LOKATION')
+     A            FIRMA          2A         COLHDG('FIRMENNR')
+     A            WERK           3A         COLHDG('WERK')
+     A*****************************************************************
+     A          K LOKATION

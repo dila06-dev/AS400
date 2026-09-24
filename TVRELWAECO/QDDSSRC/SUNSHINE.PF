@@ -1,0 +1,19 @@
+     A*
+     A*         DATUM IMMER TT.MM.JJJJ
+     A*         ZEIT  IMMER HH:MM
+     A*
+     A          R SUNSHINER                 TEXT('____')
+     A*****************************************************************
+     A            IITEM         15A         COLHDG('I1  ')
+     A            IQUANTITY     10S 3       COLHDG('I2  ')
+     A            IDESCR        50A         COLHDG('I3  ')
+     A            ICLASS        05A         COLHDG('I4  ')
+     A            ILEADTIME     05S 0       COLHDG('I5  ')
+     A*****************************************************************
+     A            H1            10A         TEXT('status')
+     A            H2              L         TEXT('Date of transmissing')
+     A            H3              Z         TEXT('TIMESTAMP')
+     A            H4           256A         TEXT('statusII')
+     A            H5              L         TEXT('Date of UPLOAD      ')
+     A            H6              Z         TEXT('TIMESTAMP OF UPLOAD')
+     A

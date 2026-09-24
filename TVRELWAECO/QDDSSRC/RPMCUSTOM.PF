@@ -1,0 +1,31 @@
+     A*___________________________________________________________________
+     A* TRANSFER FILE CUSTOMER INFORMATION FOR RPM
+     A* 25.08.2015
+     A* M.GANG
+     A* ÄNDERUNGEN:
+     A*___________________________________________________________________
+     A*
+     A          R RPMCUSTOMR                TEXT('TRANSFERFILE')
+     A********************************************************************
+     A            I1           128A         COLHDG('AUSGABE ALS TXT FILE')
+     A********************************************************************
+     A            ENTITY        10A         TEXT('ENTITY                ')
+     A            CUSTOMER#     10A         TEXT('CUSTOMER NUMBER       ')
+     A            CUSTOMER      50A         TEXT('CUSTOMER NAME         ')
+     A            DIVISION       8A         TEXT('DIVISION              ')
+     A            VAT#          20A         TEXT('VAT REGISTRATION #    ')
+     A            RPMGROUP      20A         TEXT('RPM CLASSIFICATION    ')
+     A            STATUSCUS      2A         TEXT('KUNDE STATUS          ')
+     A            PLANKUNDE     10A         TEXT('PLANKUNDE             ')
+     A            ABSATZAJ      14S 2       TEXT('ABSATZAJ              ')
+     A            ABSATZVJ      14S 2       TEXT('ABSATZVJ              ')
+     A            ABSATZVVJ     14S 2       TEXT('ABSATZVVJ             ')
+     A            ABSATZ_       14S 2       TEXT('ABSATZ_  HISTORIE     ')
+     A********************************************************************
+     A            H1            10A         TEXT('status')
+     A            H2              L         TEXT('Date of transmissing')
+     A            H3              Z         TEXT('TIMESTAMP')
+     A            H4           256A         TEXT('statusII')
+     A            H5              L         TEXT('Date of UPLOAD      ')
+     A            H6              Z         TEXT('TIMESTAMP OF UPLOAD')
+     A

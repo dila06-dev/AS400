@@ -1,0 +1,53 @@
+     A*___________________________________________________________________
+     A* TRANSFER FILE SALES TRANSACTIONS FOR RPM
+     A* 25.08.2015
+     A* M.GANG
+     A* ÄNDERUNGEN:
+     A*___________________________________________________________________
+     A*
+     A          R RPMSALESR                 TEXT('TRANSFERFILE')
+     A********************************************************************
+     A*****       I1           128A         COLHDG('AUSGABE ALS TXT FILE')
+     A********************************************************************
+     A            YEAR#          4A         TEXT('YEAR                  ')
+     A            WEEK#          2A         TEXT('WEEK                  ')
+     A            ENTITY         5A         TEXT('ENTITY                ')
+     A            ITEM          15A         TEXT('ITEM# SKU             ')
+     A            ITEMDESC      30A         TEXT('ITEM DESCRIPTION      ')
+     A            APGLMG        14S 3       TEXT('DELIVERY QUANTITY     ')
+     A            WERT          14S 3       TEXT('DELIVERY AMOUNT       ')
+     A            RKWACD         3A         TEXT('CURRENCY              ')
+     A            APPRGR         4A         TEXT('PRODUCT GROUP         ')
+     A            DIVISION       8A         TEXT('DIVISION              ')
+     A            CUSTOMER#     10A         TEXT('CUSTOMER NUMBER       ')
+     A            CUSTOMER      30A         TEXT('CUSTOMER SHORT NAME   ')
+     A            RPMGROUP      20A         TEXT('RPM CLASSIFICATION    ')
+     A********************************************************************
+     A            AKFIRM        02A         TEXT('FIRMA                 ')
+     A            AKAFJJ        04S 0       TEXT('AUFTRAGSJAHR          ')
+     A            AKAFNR        06A         TEXT('AUFTRAGSNUMMER        ')
+     A            APAFPO        04S 0       TEXT('AUFTRAGPOSITION       ')
+     A            APAFST        02A         TEXT('AUFTRAGSSTATUS POSIT. ')
+     A            APLFTE        08S 0       TEXT('LIEFERDATUM           ')
+     A            APAFAT        03A         TEXT('AUFTRAGSART           ')
+     A            APUSER        10A         TEXT('USER                  ')
+     A            APSABE         3A         TEXT('APSABE                ')
+     A            APSABEI       40A         TEXT('APSABE INHALT         ')
+     A            TEPRGR        04A         TEXT('GRUPPE WAECO          ')
+     A            PLANKUNDE     10A         TEXT('PLANKUNDE             ')
+     A            VAT#          20A         TEXT('VAT REGISTRATION #    ')
+     A********************************************************************
+     A            I_RKWACD       3A         TEXT('CURRENCY ORIGINAL     ')
+     A            I_RPNESU      13S 0       TEXT('INVOICING AMOUNT ORIG ')
+     A            ARTNR         15A         TEXT('ARTNR                 ')
+     A            ARTSKU        15A         TEXT('ARTSKU                ')
+     A            ARTBEZFRA     15A         TEXT('ARTBEZFRA             ')
+     A            ART           15A         TEXT('ART                   ')
+     A********************************************************************
+     A            H1            10A         TEXT('status')
+     A            H2              L         TEXT('Date of transmissing')
+     A            H3              Z         TEXT('TIMESTAMP')
+     A            H4           256A         TEXT('statusII')
+     A            H5              L         TEXT('Date of UPLOAD      ')
+     A            H6              Z         TEXT('TIMESTAMP OF UPLOAD')
+     A

@@ -1,0 +1,18 @@
+      * Physische Datei: KOND
+      * ANLEGEDATUM: OKTOBER 2010
+      *SORT:        ...
+      * ÄNDERUNGEN:
+      * AUSSCHLUSS:  ...
+     A
+     A*                                     UNIQUE
+     A          R KOND1                     PFILE(KOND)
+     A
+     A                                      TEXT('KONDITIONEN')
+     A          K KOFIRM
+     A          K KOBEGR
+     A          K KOKDLG
+     A          K KOPRGR
+     A*         O KOKDLI                    CMP(LT ' ')
+     A*         S KOKDLI                    CMP(NE '          ')
+     A          S KOBEGR                    CMP(EQ 'RG1')
+     A          S KOBEGR                    CMP(EQ 'RG2')

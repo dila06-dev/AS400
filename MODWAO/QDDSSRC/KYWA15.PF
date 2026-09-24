@@ -1,0 +1,22 @@
+     A**************************************************************************
+     A*  Copyright 2021 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Jechtinger Straße 9                              *
+     A*                       DE 79111 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Lieferant/Versandbedingung                                            *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: JK 31.08.2021 DOMETIC Projekt 16637                         *
+     A*  Änderung: XX XX.XX.XXXX                                               *
+     A**************************************************************************
+     A                                      REF(WA15)
+     A          R KYWA151
+     A*-------------------------------------------------------------------------
+     A            KYWA15FIRMR               REFFLD(WA15FIRM)
+     A            KYWA15LFNRR               REFFLD(WA15LFNR)
+     A            KYWA15VSBDR               REFFLD(WA15VSBD)
+     A            K$WA15FREI    30
+     A            K#WA15LOCKR               REFFLD(WA15LOCK)
+     A            K#WA15FIRMR               REFFLD(WA15FIRM)
+     A            K#WA15LFNRR               REFFLD(WA15LFNR)
+     A            K#WA15VSBDR               REFFLD(WA15VSBD)

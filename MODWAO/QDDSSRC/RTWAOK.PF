@@ -1,0 +1,56 @@
+     A**************************************************************************
+     A*  Copyright 2011 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------- *
+     A*  Rückgabebereich Absatz-Plan Erhöhungstabelle                          *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: MG 15.08.2011 Projekt 7668, Planungssystem                  *
+     A*  Änderung: MG 07.09.2012 Projekt 8886, Neues Feld WAOKSTKD "KD-Nr Stat"*
+     A*  Änderung: MG 09.10.2012 Telefonat Herr Schneider, Prozent-Sätze 4,2   *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R RTWAOK1
+     A*-------------------------------------------------------------------------
+     A* allgemeine Rückgabe
+     A*-------------------------------------------------------------------------
+     A            RTWAOKPROGR               REFFLD(##PROG)
+     A            RTWAOKDANAR               REFFLD(##DANA)
+     A            RTWAOKRTCDR               REFFLD(##RTCD)
+     A            RTWAOKFFLDR               REFFLD(##FFLD)
+     A            RTWAOKFENRR               REFFLD(##FENR)
+     A            RTWAOKPA03R               REFFLD(##A010)
+     A                                      TEXT('Parameter 3 bei Fehler')
+     A            RTWAOKPA04R               REFFLD(##A010)
+     A                                      TEXT('Parameter 4 bei Fehler')
+     A            RTWAOKPA05R               REFFLD(##A010)
+     A                                      TEXT('Parameter 5 bei Fehler')
+     A            RTWAOKPA06R               REFFLD(##A010)
+     A                                      TEXT('Parameter 6 bei Fehler')
+     A            RTWAOKPA07R               REFFLD(##A010)
+     A                                      TEXT('Parameter 7 bei Fehler')
+     A*-------------------------------------------------------------------------
+     A* ON/OFF Rückgabe KZ für Prüfungen
+     A*-------------------------------------------------------------------------
+     A            RTWAOKFR01R               REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* Key-Felder
+     A*-------------------------------------------------------------------------
+     A            RTWAOKKSTCR               REFFLD(WAOK1/WAOKKSTC *LIBL/WAOK)
+     A            RTWAOKKDGRR               REFFLD(WAOK1/WAOKKDGR *LIBL/WAOK)
+     A            RTWAOKKDPLR               REFFLD(WAOK1/WAOKKDPL *LIBL/WAOK)
+     A            RTWAOKKDNRR               REFFLD(WAOK1/WAOKKDNR *LIBL/WAOK)
+     A            RTWAOKLDNRR               REFFLD(WAOK1/WAOKLDNR *LIBL/WAOK)
+     A            RTWAOKPRGRR               REFFLD(WAOK1/WAOKPRGR *LIBL/WAOK)
+     A            RTWAOKJAHRR               REFFLD(WAOK1/WAOKJAHR *LIBL/WAOK)
+     A            RTWAOKFR02R  253          REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* evt. weitere Felder nach Ermittlung
+     A*-------------------------------------------------------------------------
+     A            RTWAOKMGPZR               REFFLD(WAOK1/WAOKMGPZ *LIBL/WAOK)
+     A            RTWAOKPRPZR               REFFLD(WAOK1/WAOKPRPZ *LIBL/WAOK)
+     A            RTWAOKPLKZR               REFFLD(WAOK1/WAOKPLKZ *LIBL/WAOK)
+     A            RTWAOKSTKDR               REFFLD(WAOK1/WAOKSTKD *LIBL/WAOK)
+     A            RTWAOKFR03R  611          REFFLD(##FREI)

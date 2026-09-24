@@ -1,0 +1,15 @@
+     A*
+     A*         DATUM IMMER TT.MM.JJJJ
+     A*         ZEIT  IMMER HH:MM
+     A*
+     A* CPYFRMIMPF FROMFILE(TVRELWAECO/CSV_ITEMS) TOFILE(TVRELWAECO/FROM_EXCE5) M
+     A* BROPT(*REPLACE) FLDDLM(';') DECPNT(*COMMA) RPLNULLVAL(*FLDDFT)
+     A*
+     A*
+     A*
+     A*
+     A          R INPUT                     TEXT('INPUT')
+     A*****************************************************************
+     A            ARTIKEL      015A         COLHDG('I01  ')
+     A            ZOLLTARIF    015A         COLHDG('I02  ')
+     A            PROZENT       13S 3       COLHDG('I03  ')

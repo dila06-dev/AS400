@@ -1,0 +1,16 @@
+     A**************************************************************************
+     A*  Copyright 2012 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Versandbedingung/Pickliste                                            *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: ZG 19.07.2012 Projekt 8587                                  *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R UXWAOR1
+     A*
+     A            UXWAORFIRMR               REFFLD(WAOR1/WAORFIRM *LIBL/WAOR)
+     A            UXWAORVSBDR               REFFLD(WAOR1/WAORVSBD *LIBL/WAOR)

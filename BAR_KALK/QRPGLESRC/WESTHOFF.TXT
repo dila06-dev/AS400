@@ -1,0 +1,47 @@
+     SELECT substr(I02, 1, 15) artnr, I01 BezeichI, I01 BezeichII,
+     substr(I03, 1, 05) GRP, E1 Ersatz,LAENGE, BREITE, HOEHE, 'CM',
+     GEWICHT, VGEWICHT, 'KG',ZOLLNR, ARTEAN, ULAND, abc ,veh veh_stk
+     FROM TVRELWAECO/FROM_EXCE3, bar_kalk/kalk_file WHERE substr(I02, 1,
+     15)= artnr and version= '$$EL_PS_DB'
+     Datei WESTHOFF in TVRELWAECO wurde ersetzt.
+
+     update        westhoff  set bezeichII =
+     (select TETBZ2 from teil01 where tefirm = '01' and
+             tetenr = artnr   )
+      where exists
+     (select TETBZ2 from teil01 where tefirm = '01' and
+             tetenr = artnr   )
+     594 Zeilen in WESTHOFF in TVRELWAECO aktualisiert.
+     SELECT * FROM kund01 WHERE KDKDNR in (select b.kdkdnr from pp b)
+     ORDER BY KDFIRM, KDKDNR
+     Datei DUPLIKATE in TVRELWAECO wurde erstellt.
+
+     594 Zeilen in WESTHOFF in TVRELWAECO aktualisiert.
+
+     SELECT PRLOCK, PRJNAM, PRJDAT, PRJZEI, PRUSER, char('SYS0057', 10 )
+     PRPROG, PRBIBL, PRFIRM, PRBEGR, PRPSLI, PRABTL, PRLAND, PRBLGA,
+     PRKDLI, PRVSNR, PRKDLG, PRPRGR, PRMAGR, PRVKGB, PRPOLZ, PRSTCD,
+     substr(FROM_EXCE3.I02, 1, 15) PRTENR, PRWACD, PRGADA, PRGBDA,
+     PRMIBT, PREZPR, PRPDVK, PRMG01, PRMG02, PRMG03, PRMG04, PRMG05,
+     PRMG06, PRMG07, PRMG08, PRMG09, PRMG10, PRPR01, PRPR02, PRPR03,
+     PRPR04, PRPR05, PRPR06, PRPR07, PRPR08, PRPR09, PRPR10, PRMEPR,
+     PRGEBI, PRBFLD, PRLNKZ, PRTSTP, PRPJNR, PRFRIN, PRFREX FROM
+     tvpf/prei01,tvrelwaeco/FROM_EXCE3 WHERE PRFIRM ='01' and PRBEGR
+     ='LP1' and PRTENR = substr(I01, 1, 15)
+     1434 Sätze zu Teildatei PREI in Datei PREI hinzugefügt.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

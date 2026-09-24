@@ -1,0 +1,21 @@
+     A**************************************************************************
+     A*  Copyright 2024 by    trend SWM EDV-Beratung GmbH & Co. KG             *
+     A*                       Jechtinger Straße 9                              *
+     A*                       DE 79111 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Belegübernahme Toleranzdefinition                                     *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: PH 29.11.2024 Case #03829427                                *
+     A*  Änderung: XX XX.XX.XXXX                                               *
+     A**************************************************************************
+     A                                      REF(WA18)
+     A          R KYWA181
+     A*-------------------------------------------------------------------------
+     A            KYWA18FIRMR               REFFLD(WA18FIRM)
+     A            KYWA18LFNRR               REFFLD(WA18LFNR)
+     A            KYWA18URLDR               REFFLD(WA18URLD)
+     A            K$WA18FREI    30
+     A            K#WA18LOCKR               REFFLD(WA18LOCK)
+     A            K#WA18FIRMR               REFFLD(WA18FIRM)
+     A            K#WA18LFNRR               REFFLD(WA18LFNR)
+     A            K#WA18URLDR               REFFLD(WA18URLD)

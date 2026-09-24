@@ -1,0 +1,4 @@
+     A          R #DSPMSGR                  TEXT('NACHRICHTEN')
+     A            #MSGID         7A         COLHDG('MSGID')
+     A            #MSGTXT      132A         COLHDG('MSGTEXT')
+     A          K #MSGID

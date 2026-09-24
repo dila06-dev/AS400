@@ -1,0 +1,7 @@
+winadmin   3veKhCMZ
+ascii
+NAMEFMT 0
+cd domains/dometic-group.com/public_ftp/dwdk/rcv
+lcd TVRELWAECO
+PUT DOMINV_DK DKI110214_1905.TXT
+quit

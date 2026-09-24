@@ -1,0 +1,47 @@
+2026-09-18-10.19.09.769897   18.09.2026   10.19.09
+Ausgabe wurde in eine Datei umgeleitet.
+Eingabe aus angegebener Überschreibungsdatei wurde gelesen.
+Versuch, eine Verbindung zum fernen Host 167.235.94.140 über Port 21
+ herzustellen.
+220 ProFTPD Server (ProFTPD) [::ffff:167.235.94.140]
+Anmelde-ID (gang) eingeben:
+331 Password required for dometic
+230 User dometic logged in
+UNIX Type: L8
+Einen FTP-Unterbefehl eingeben.
+> REM **************
+Unterbefehl 'REM' nicht gültig.
+Zum Anzeigen der Liste der verfügbaren FTP-Unterbefehle, den Unterbefehl HELP
+ eingeben.
+Einen FTP-Unterbefehl eingeben.
+> LCD TVRELWAECO
+Das lokale Arbeitsverzeichnis ist TVRELWAECO
+Einen FTP-Unterbefehl eingeben.
+> ASCII
+200 Type set to A
+Einen FTP-Unterbefehl eingeben.
+> NAMEFMT 0
+500 'SITE NAMEFMT' not understood
+Client NAMEFMT ist 0.
+Einen FTP-Unterbefehl eingeben.
+> REM ** *
+Unterbefehl 'REM' nicht gültig.
+Einen FTP-Unterbefehl eingeben.
+> cd /
+250 CWD command successful
+Einen FTP-Unterbefehl eingeben.
+> mdelete *
+229 Entering Extended Passive Mode (|||53468|)
+150 Opening ASCII mode data connection for file list
+226 Transfer complete
+250 DELE command successful
+Einen FTP-Unterbefehl eingeben.
+> APPEND KOBERGER_D ZAMPETASR-20260918101909.csv
+229 Entering Extended Passive Mode (|||51532|)
+150 Opening ASCII mode data connection for ZAMPETASR-20260918101909.csv
+226 Transfer complete
+211187 Byte in 0.105 Sekunden übertragen. Übertragungsgeschwindigkeit 2002.366
+ KB/s.
+Einen FTP-Unterbefehl eingeben.
+> QUIT
+221 Goodbye.

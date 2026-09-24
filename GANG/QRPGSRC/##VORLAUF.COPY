@@ -1,0 +1,38 @@
+     C**************************************************************************
+     C* PROGRAMMNAME.:##VORLAUF                                               
+     C* FUNKTION.....:VORLAUFKARTEN
+     C* OKTOBER 2009   GANG, MANFRED
+     C**************************************************************************
+     C*
+     C           *LIKE     DEFN F1RRN     CRTREC           CREATE RECOR
+     C           *LIKE     DEFN F1RRN     DLTREC           DELETE RECOR
+     C           *LIKE     DEFN F1RRN     MODREC           MODIF. RECOR
+     C*
+     C           1         SUBSTFUNKT:2   CTL82   1        ÄNDERBERECHTIGT
+     C           1         SUBSTFUNKT:3   CTL83   1        ANLAGBERECHTIGT
+     C           1         SUBSTFUNKT:4   CTL84   1        LÖSCHBERECHTIGT
+     C           1         SUBSTFUNKT:5   CTL85   1        PRINT/REST
+     C           1         SUBSTFUNKT:6   CTL86   1        COPYBERECHTIIGT
+     C           1         SUBSTFUNKT:7   CTL87   1        SQL-AUFRUF
+     C           1         SUBSTFUNKT:8   CTL88   1        SQL-CHANGE
+     C           1         SUBSTFUNKT:9   CTL89   1        CALL/WRITE
+     C                     MOVEL§§§PGM    MSGPGM           PGM-NACHRICHTEN
+     C                     MOVE 'N'       CTLLD   1        LADEN  => J
+     C                     MOVE 'N'       CTLCHG  1        CHANGES=> N
+     C                     MOVE 'N'       CTLVLD  1        VALID  => N
+     C                     MOVE ' '       CTLMOD  1        MODUS  =>
+     C                     MOVE 'D'       MODUS   1        MODUS D=>DIA
+     C                     MOVEADSPMOD    *IN,33           BILDS.-MODUS
+     C                     MOVEAFUNKT     *IN,81           BERECHTIGUNGEN
+     C                     MOVEAFKTTST    *IN,35           BERECHTIGUNGEN
+     C*
+     C                     Z-ADD9         CTLARB           FÜR *INLR=1
+     C                     EXSR FKTPGM                     TASTEN-PGM
+     C                     Z-ADD*ZERO     CTLARB           TASTEN
+     C                     Z-ADD*ZERO     NEUFNR           NEUE TASTE
+     C                     MOVE *BLANK    NEUFKT           NEUE TASTE
+     C                     EXSR TASTEN                     TASTEN
+     C                     EXSR FKTPGM                     TASTEN-PGM
+     C                     EXSR MODATR                     ATRRIBUTE
+     C                     EXSR SRATTR
+     C                     EXSR SR1199

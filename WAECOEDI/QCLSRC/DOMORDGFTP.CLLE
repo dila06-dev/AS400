@@ -1,0 +1,26 @@
+/*-------------------------------------------------*/
+/* Dometic Order Schnittstellen abfragen           */
+/*-------------------------------------------------*/
+             PGM
+
+             ADDLIBLE   LIB(WAECOEDI)
+             MONMSG     MSGID(CPF2103)
+             ADDLIBLE   LIB(BAR_FTP)
+             MONMSG     MSGID(CPF2103)
+
+/* Dometic FR FTP's generieren */
+             CALL       PGM(BAR_FTP/GFTPORDERS) PARM('fr')
+
+/* Dometic UK FTP's generieren */
+             CALL       PGM(BAR_FTP/GFTPORDERS) PARM('uk')
+
+/* Dometic DK FTP's generieren */
+             CALL       PGM(BAR_FTP/GFTPORDERS) PARM('dk')
+
+/* Dometic CH FTP's generieren */
+             CALL       PGM(BAR_FTP/GFTPORDERS) PARM('ch')
+
+             RMVLIBLE   LIB(WAECOEDI)
+             RMVLIBLE   LIB(BAR_FTP)
+
+             ENDPGM

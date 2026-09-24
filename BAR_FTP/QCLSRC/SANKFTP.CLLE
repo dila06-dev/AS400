@@ -1,0 +1,10 @@
+/*-------------------------------------------------*/
+/* FTP Command zum senden von Files (Ba.2014)      */
+/* Dometic Server Siegen - Sanktionsmonitor       */
+/*-------------------------------------------------*/
+             PGM
+             OVRDBF     FILE(INPUT) TOFILE(BAR_FTP/QCLSRC) MBR(SANKCMD)
+             OVRDBF     FILE(OUTPUT) TOFILE(BAR_FTP/QCLSRC) +
+                          MBR(SANKLOG)
+             FTP        RMTSYS('10.90.10.63')
+             ENDPGM

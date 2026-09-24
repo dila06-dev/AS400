@@ -1,0 +1,13 @@
+      * Physische Datei: ORDERH
+      * ANLEGEDATUM: MAI     2012
+      *SORT:        SALESCOMPANY (88505), ORDER IN AXAPTA, PRIORITY
+      *SELECT:      STATUS (PRESELECTED)
+      * ÄNDERUNGEN:
+      * AUSSCHLUSS:  ...
+     A
+     A*                                     UNIQUE
+     A          R UNFREEZEPF                PFILE(UNFREEZE)
+     A
+     A                                      TEXT('CONFIRMATION')
+     A          K C010
+     A          S C080                      CMP(EQ '00' )

@@ -1,0 +1,30 @@
+     A**************************************************************************
+     A*  Copyright 2010 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  HUB-Ketten-Datei für Schenker                                         *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: VU 10.06.2011 Projekt 7485                                  *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R WAOJ1
+     A*-------------------------------------------------------------------------
+     A            WAOJLOCK  R               REFFLD(##LOCK)
+     A            WAOJJNAM  R               REFFLD(##JNAM)
+     A            WAOJJDAT  R               REFFLD(##JDAT)
+     A            WAOJJZEI  R               REFFLD(##JZEI)
+     A            WAOJUSER  R               REFFLD(##USER)
+     A            WAOJPROG  R               REFFLD(##PROG)
+     A            WAOJBIBL  R               REFFLD(##BIBL)
+     A            WAOJFIRM  R               REFFLD(##FIRM)
+     A            WAOJGENR       2          COLHDG('Gesch-Nr')
+     A                                      TEXT('Gesch-Nr')
+     A            WAOJKTNR       1          COLHDG('Ketten-Nr')
+     A                                      TEXT('Ketten-Nr')
+     A            WAOJHUBN       2          COLHDG('Hub-Nr')
+     A                                      TEXT('Hub-Nr')
+     A            WAOJFREI  R  100          REFFLD(##FREI)
+     A*

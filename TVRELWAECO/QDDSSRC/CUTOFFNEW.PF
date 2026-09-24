@@ -1,0 +1,20 @@
+     A*****************************************************************
+     A*
+     A*
+     A*
+     A          R CUTOFFNEWR                TEXT('CUTOFFNEW     ')
+     A            LND           40A         COLHDG('LAND    ')
+     A            LNDKZ          3A         COLHDG('LANDKZ  ')
+     A            VSB            3A         COLHDG('VSB     ')
+     A            LANDVSB        6A         COLHDG('LANDVSB ')
+     A            MAX            2S 0       COLHDG('MAX     ')
+     A            MIN            2S 0       COLHDG('MIN     ')
+     A            TARIFDESC     40A         COLHDG('TARIFDESC  ')
+     A            CUTOFFT       06A         COLHDG('TIME CUTOFF')
+     A            ADVICE         1A         COLHDG('ADVICE     ')
+     A            PICKUPT       06A         COLHDG('TIME PICKUP')
+     A            FORWARDER     40A         COLHDG('FORWARDER  ')
+     A            T1            15A         COLHDG('T1')
+     A            T2            15A         COLHDG('T2')
+     A            AKTIVKZ        1A         COLHDG('AKTIV/INAKTIV')
+     A            TSTAMP          Z         COLHDG('TIMESTAMP')

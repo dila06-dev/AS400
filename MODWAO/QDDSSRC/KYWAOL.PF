@@ -1,0 +1,36 @@
+     A**************************************************************************
+     A*  Copyright 2011 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Absatz/Umsatz-Statistik                                               *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: MG 24.08.2011 Projekt 7668, Planungssystem                  *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(WAOL)
+     A          R KYWAOL1
+     A*-------------------------------------------------------------------------
+     A            KYWAOLFIRMR               REFFLD(WAOLFIRM)
+     A            KYWAOLPLATR               REFFLD(WAOLPLAT)
+     A            KYWAOLWKNRR               REFFLD(WAOLWKNR)
+     A            KYWAOLKSTCR               REFFLD(WAOLKSTC)
+     A            KYWAOLKDGRR               REFFLD(WAOLKDGR)
+     A            KYWAOLKDPLR               REFFLD(WAOLKDPL)
+     A            KYWAOLKDNRR               REFFLD(WAOLKDNR)
+     A            KYWAOLPRGRR               REFFLD(WAOLPRGR)
+     A            KYWAOLJAHRR               REFFLD(WAOLJAHR)
+     A            KYWAOLMONAR               REFFLD(WAOLMONA)
+     A            K$WAOLFREI    30
+     A            K#WAOLLOCKR               REFFLD(WAOLLOCK)
+     A            K#WAOLFIRMR               REFFLD(WAOLFIRM)
+     A            K#WAOLPLATR               REFFLD(WAOLPLAT)
+     A            K#WAOLWKNRR               REFFLD(WAOLWKNR)
+     A            K#WAOLKSTCR               REFFLD(WAOLKSTC)
+     A            K#WAOLKDGRR               REFFLD(WAOLKDGR)
+     A            K#WAOLKDPLR               REFFLD(WAOLKDPL)
+     A            K#WAOLKDNRR               REFFLD(WAOLKDNR)
+     A            K#WAOLPRGRR               REFFLD(WAOLPRGR)
+     A            K#WAOLJAHRR               REFFLD(WAOLJAHR)
+     A            K#WAOLMONAR               REFFLD(WAOLMONA)

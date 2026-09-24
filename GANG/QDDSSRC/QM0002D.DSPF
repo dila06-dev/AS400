@@ -1,0 +1,171 @@
+     A*%%TS  SD  20100325  115237  GANG        REL-V5R4M0  5722-WDS
+     A*------------------------------------------------------------------------
+     A*GANG, MANFRED                                                  ---------
+     A*-------------                                                  ---------
+     A*VARIABLER BILDSCHIRMDEFINITION DS3/DS4                         ---------
+     A*WINDOW-FUNKTION                                                ---------
+     A*MESSAGES ÜBER SUBFILE                                          ---------
+     A*BERECHTIGUNGSPLAUSIBILITÄT                                     ---------
+     A*------------------------------------------------------------------------
+     A*%%EC
+     A                                      DSPSIZ(24 80 *DS3                  -
+     A                                             27 132 *DS4)
+     A                                      CHGINPDFT
+     A                                      PRINT
+     A  35                                  CF01(01)
+     A  82                                  CF02(02)
+     A                                      CA03(03)
+     A                                      CF04(04)
+     A                                      CF05(05)
+     A                                      CF10(10)
+     A                                      CF16(16)
+     A  83                                  CF06(06)
+     A  36                                  CF07(07)
+     A  36                                  CF08(08)
+     A  40                                  CF09(09)
+     A  37                                  CF11(11)
+     A                                      CA12(12)
+     A  82
+     AO 83                                  CA14(14)
+     A  83                                  CF15(15)
+     A  39                                  CA17(17)
+     A  39                                  CA18(18)
+     A  38                                  CA19(19)
+     A  38                                  CA20(20)
+     A  85                                  CF21(21)
+     A  87                                  CF22(22)
+     A  84                                  CF23(23)
+     A  29                                  CF24(24)
+     A                                      ROLLUP(99)
+     A                                      ROLLDOWN(99)
+     A                                      HELP(01)
+     A                                      VLDCMDKEY(99)
+     A*------------------------------------------------------------------------
+     A*PSEUDO-SATZ                                                    ---------
+     A*------------------------------------------------------------------------
+     A          R QM0002D0
+     A*%%TS  SD  19940626  083756  GANG        REL-V2R2M0  5738-PW1
+     A                                      TEXT('Pseudo-Satz')
+     A                                      ASSUME
+     A                                      OVERLAY
+     A  33                                  DSPMOD(*DS4)
+     A                                 24 80' '
+     A  *DS4                           27132
+     A*------------------------------------------------------------------------
+     A*KOPFBEREICH-D1                                                 ---------
+     A*------------------------------------------------------------------------
+     A          R QM0002D1
+     A*%%TS  SD  20060406  180645  GANG        REL-V5R2M0  5722-WDS
+     A  *DS3                                WINDOW(&§§YP &§§XP 16 60)
+     A  *DS4                                WINDOW(&§§YP &§§XP 16 60)
+     A                                      TEXT('Window')
+     A                                      RTNCSRLOC(&§§CRR &§§CRF &§§CRP)
+     A  33                                  DSPMOD(*DS4)
+     A                                      CSRLOC(§§CRLN     §§CRCL)
+     A                                      OVERLAY
+     A                                      WDWBORDER((*DSPATR RI) (*CHAR '    -
+     A                                          '))
+     A            §§XP           3S 0P
+     A            §§YP           2S 0P
+     A            §§CRLN         3S 0H
+     A            §§CRCL         3S 0H
+     A            §§CRR         10A  H
+     A            §§CRF         10A  H
+     A            §§CRP          4S 0H
+     A            §§§JOB        10A  O  1  1TEXT('Jobname')
+     A                                      COLOR(BLU)
+     A  82
+     AO 83
+     AO 84                              1 22' Ausgabesteuerung '
+     A                                      DSPATR(HI)
+     A                                      DSPATR(RI)
+     A                                  1 22' Ausgabesteuerung '
+     A                                      DSPATR(HI)
+     A                                      DSPATR(RI)
+     A            §§§PGM        10A  O  1 51TEXT('Programmname')
+     A                                      COLOR(BLU)
+     A                                  2  1USER
+     A                                      COLOR(BLU)
+     A            LDADTD         8Y 0O  2 51EDTWRD('  .  .    ')
+     A                                      COLOR(BLU)
+     A*------------------------------------------------------------------------
+     A*FUßBEREICH D2  WINDOWDEFINTION                                 ---------
+     A*------------------------------------------------------------------------
+     A          R QM0002D2
+     A*%%TS  SD  20060406  225845  GANG        REL-V5R2M0  5722-WDS
+     A  *DS3                                WINDOW(QM0002D1)
+     A  *DS4                                WINDOW(QM0002D1)
+     A                                      INVITE
+     A  33                                  DSPMOD(*DS4)
+     A                                      OVERLAY
+     A            D2FT01        60A  O 15  1COLOR(BLU)
+     A*------------------------------------------------------------------------
+     A*VERARBEITUNGSSATZ-D3                                           ---------
+     A*------------------------------------------------------------------------
+     A          R QM0002D3
+     A*%%TS  SD  20100325  115237  GANG        REL-V5R4M0  5722-WDS
+     A  *DS3                                WINDOW(QM0002D1)
+     A  *DS4                                WINDOW(QM0002D1)
+     A                                      RTNCSRLOC(&§§CRR &§§CRF &§§CRP)
+     A  33                                  DSPMOD(*DS4)
+     A                                      OVERLAY
+     A                                      INVITE
+     A            §§CRR         10A  H
+     A            §§CRF         10A  H
+     A            §§CRP          4S 0H
+     A            S1F1RR        15S 0H
+     A            §§O            1A  P
+     A            §§AUFTRAG      1A  P
+     A            §§KUNDE        1A  P
+     A            §§AUSGABE      1A  P
+     A*------------------------------                                 ---------
+     A*------------------------------                                 ---------
+     A            H3OPT          1A  H
+     A                                  3 51TIME
+     A                                      COLOR(BLU)
+     A            D3TEXT        60A  B  4  1DSPATR(&§§O)
+     A                                  6  1'customer:'
+     A            D3KUNDE        7Y 0B  6 18DSPATR(&§§KUNDE)
+     A  60                                  DSPATR(PC)
+     A                                      EDTCDE(3)
+     A                                  8  1'order# customer:'
+     A            D3AUFTRAG      7Y 0B  8 18DSPATR(&§§AUFTRAG)
+     A  61                                  DSPATR(PC)
+     A                                      EDTCDE(3)
+     A                                 13  1'Ausgabe'
+     A                                 13  9'Drucker(D)/Bildschirm(B):'
+     A            D3AUSGABE      1A  B 13 35DSPATR(&§§AUSGABE)
+     A  66                                  DSPATR(PC)
+     A*------------------------------------------------------------------------
+     A*MESSAGE-SUBFILE                                                ---------
+     A*------------------------------------------------------------------------
+     A* NACHRICHTEN-SUBFILE
+     A          R MSGSFL                    SFL
+     A*%%TS  SD  19980717  135441  GANG        REL-V3R2M0  5763-PW1
+     A                                      TEXT('Nachrichten-Subfile')
+     A  *DS3                                SFLMSGRCD(12)
+     A  *DS4                                SFLMSGRCD(12)
+     A            §§§MKY                    SFLMSGKEY
+     A            §§§PGQ                    SFLPGMQ(10)
+     A*
+     A*-------------------------------------------------------------------------
+     A*
+     A          R MSGSFLC                   SFLCTL(MSGSFL)
+     A*%%TS  SD  19980717  131740  GANG        REL-V3R2M0  5763-PW1
+     A  33                                  DSPMOD(*DS4)
+     A                                      OVERLAY
+     A                                      PUTOVR
+     A                                      OVRDTA
+     A                                      OVRATR
+     A                                      SFLDSP
+     A                                      SFLDSPCTL
+     A                                      SFLINZ
+     A  99
+     AON99                                  SFLEND
+     A  *DS3                                SFLSIZ(0002)
+     A  *DS4                                SFLSIZ(0002)
+     A  *DS3                                SFLPAG(0001)
+     A  *DS4                                SFLPAG(0001)
+     A  *DS3                                WINDOW(QM0002D1)
+     A  *DS4                                WINDOW(QM0002D1)
+     A            §§§PGQ                    SFLPGMQ(10)

@@ -1,0 +1,16 @@
+     A**************************************************************************
+     A*  Copyright 2000 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Interface Auftrag Nachnahme                                           *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: SZ 07.12.2010 WAECO, Projekt 6864                           *
+     A*                                                                        *
+     A**************************************************************************
+     A          R WAO81                     PFILE(WAO8)
+     A*
+     A          K WAO8IFFI
+     A          K WAO8IFNR
+     A          K WAO8IFPO

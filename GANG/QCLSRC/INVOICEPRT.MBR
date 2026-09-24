@@ -1,0 +1,7 @@
+winadmin   3veKhCMZ
+LCD GANG
+ascii
+NAMEFMT 0
+cd domains/dometic-group.com/public_ftp/dwuk/rcv
+APPEND INVOICELOG INVOICELOG.TXT
+quit

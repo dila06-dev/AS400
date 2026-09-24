@@ -1,0 +1,29 @@
+     A*
+     A*         DATUM IMMER TT.MM.JJJJ
+     A*         ZEIT  IMMER HH:MM
+     A*           ORDANLORT     = EMSDETTEN
+     A          R WORKIST_R9                TEXT('WORKIST_R9')
+     A*****************************************************************
+     A            H050          10A         COLHDG('WORKISTINB ORDER')
+     A            H240          21A         COLHDG('BESTELLNUM KUNDE')
+     A            H040          10S 0       COLHDG('KUNDEN##')
+     A            L080          15A         COLHDG('ARTIKEL# TREND')
+     A            L100           8S 3       COLHDG('MENGE')
+     A            L060            L         COLHDG('LIEFERDATUM')
+     A            L180            L         COLHDG('ANLAGEDATUM')
+     A            H100          30A         COLHDG('LIEF_ADD_NAME1')
+     A            H110          30A         COLHDG('LIEF_ADD_NAME2')
+     A            H120          30A         COLHDG('LIEF_ADD_NAME3')
+     A            H130          30A         COLHDG('LIEF_ADD_STREET')
+     A            H190         100A         COLHDG('LIEF_ADD_MISC')
+     A            ZIPCODE       12A         COLHDG('LIEF_ADD_ZIP')
+     A            H160          30A         COLHDG('LIEF_ADD_CITY')
+     A            H140           3A         COLHDG('LIEF_ADD_COUNTRY')
+     A            H210         100A         COLHDG('E-MAIL')
+     A            H310A         25A         COLHDG('PHONE')
+     A            H300          60A         COLHDG('SACHBEAR_KUERZEL')
+     A            H170         100A         COLHDG('REFERENZ2')
+     A*****************************************************************
+     A            H360            L          COLHDG('Date of transmissing')
+     A            H370            Z          COLHDG('TIMESTAMP')
+     A*           L050          05S 0        COLHDG('LINE#')

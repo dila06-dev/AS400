@@ -1,0 +1,24 @@
+     A**************************************************************************
+     A*  Copyright 2009 by    trend SWM                                        *
+     A*                       Verwaltungs GmbH                                 *
+     A*                       Ziegelhofstraße 210a                             *
+     A*                       DE 79110 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Produktgruppen<-Margenmatrix                                          *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: HR 03.02.2011 Projekt 7120 für Kunde Dometec                *
+     A*  Änderung: XX XX.XX.XXXX                                               *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(WAOC)
+     A          R KYWAOC1
+     A*-------------------------------------------------------------------------
+     A            KYWAOCFIRMR               REFFLD(WAOCFIRM)
+     A            KYWAOCPRGRR               REFFLD(WAOCPRGR)
+     A            KYWAOCLFNRR               REFFLD(WAOCLFNR)
+     A            KYWAOCRSBER               REFFLD(WAOCRSBE)
+     A            K$WAOCFREI    30
+     A            K#WAOCLOCKR               REFFLD(WAOCLOCK)
+     A            K#WAOCFIRMR               REFFLD(WAOCFIRM)
+     A            K#WAOCPRGRR               REFFLD(WAOCPRGR)
+     A            K#WAOCLFNRR               REFFLD(WAOCLFNR)

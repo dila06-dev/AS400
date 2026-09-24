@@ -1,0 +1,36 @@
+     A**************************************************************************
+     A*  Copyright 2000 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Gundelfinger Straße 11                           *
+     A*                       DE 79108 Freiburg                                *
+     A*  --------------------------------------------------------------------  *
+     A*  Interface Auftrag Nachnahme Schlüsseldefinitionen                     *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: SZ 07.12.2010 WAECO, Projekt 6864                           *
+     A*                                                                        *
+     A**************************************************************************
+     A                                      REF(WAO8)
+     A          R KYWAO81
+     A*
+     A            KYWAO8IFFIR               REFFLD(WAO8IFFI)
+     A            KYWAO8IFNRR               REFFLD(WAO8IFNR)
+     A            KYWAO8IFPOR               REFFLD(WAO8IFPO)
+     A            KYWAO8FIRMR               REFFLD(WAO8FIRM)
+     A            KYWAO8AFJJR               REFFLD(WAO8AFJJ)
+     A            KYWAO8AFNRR               REFFLD(WAO8AFNR)
+     A            KYWAO8AFPOR               REFFLD(WAO8AFPO)
+     A            KYWAO8IFSTR               REFFLD(WAO8IFST)
+     A            KYWAO8KMJJR               REFFLD(WAO8KMJJ)
+     A            KYWAO8KMNRR               REFFLD(WAO8KMNR)
+     A*
+     A            K$WAO8        10
+     A            K#WAO8LOCKR               REFFLD(WAO8LOCK)
+     A*
+     A            K#WAO8IFFIR               REFFLD(WAO8IFFI)
+     A            K#WAO8IFNRR               REFFLD(WAO8IFNR)
+     A            K#WAO8IFPOR               REFFLD(WAO8IFPO)
+     A            K#WAO8FIRMR               REFFLD(WAO8FIRM)
+     A            K#WAO8AFJJR               REFFLD(WAO8AFJJ)
+     A            K#WAO8AFNRR               REFFLD(WAO8AFNR)
+     A            K#WAO8AFPOR               REFFLD(WAO8AFPO)
+     A*

@@ -1,0 +1,153 @@
+     A          R EDIHPF0
+     A            EDIH010        7S 0
+     A                                      TEXT('Mitglieds-Nr. Absender')
+     A                                      COLHDG('Mit' -
+     A                                      'glied ' -
+     A                                      'Abs.')
+     A                                      EDTCDE(Z)
+     A            EDIH020        7S 0
+     A                                      TEXT('Mitglieds-Nr. Empfänger')
+     A                                      COLHDG('Mit' -
+     A                                      'glied' -
+     A                                      'Empf.')
+     A                                      EDTCDE(Z)
+     A            EDIH030        7S 0
+     A                                      TEXT('Kunden-Nr. beim Empf.')
+     A                                      COLHDG('Kd.Nr.' -
+     A                                      'beim ' -
+     A                                      'Empf.')
+     A                                      EDTCDE(Z)
+     A            EDIH040        7S 0
+     A                                      TEXT('Auftr.Nr. beim Abs.')
+     A                                      COLHDG('Auft.Nr.' -
+     A                                      'beim ' -
+     A                                      'Abs.')
+     A                                      EDTCDE(Z)
+     A            EDIH050        5S 0
+     A                                      TEXT('Positions-Nr. beim Abs.')
+     A                                      COLHDG('Pos..Nr.' -
+     A                                      'beim ' -
+     A                                      'Abs.')
+     A                                      EDTCDE(Z)
+     A            EDIH060        8S 0
+     A                                      TEXT('Datum JJJJMMTT')
+     A                                      COLHDG('Datum ' -
+     A                                      'JJJJMMTT')
+     A                                      EDTWRD('    .  .  ')
+     A            EDIH070        6S 0
+     A                                      TEXT('Zeit')
+     A                                      COLHDG('Zeit')
+     A                                      EDTWRD('0 :  :  ')
+     A            EDIH080       30A
+     A                                      TEXT('Bestellzeichen Abs.')
+     A                                      COLHDG('Bestell-' -
+     A                                      'zeichen' -
+     A                                      'Abs.')
+     A            EDIH090        8S 0
+     A                                      TEXT('Termin JJJJMMTT')
+     A                                      COLHDG('Datum ' -
+     A                                      'Termin' -
+     A                                      'JJJJMMTT')
+     A                                      EDTWRD('    .  .  ')
+     A            EDIH100        1A
+     A                                      TEXT('Kezi. abw. Vers.Adr')
+     A                                      COLHDG('Kezi' -
+     A                                      'Vers.' -
+     A                                      'Adr.')
+     A            EDIH210       30A
+     A                                      TEXT('Vers.Adr.Name 1')
+     A                                      COLHDG('abw.' -
+     A                                      'Vers.Adr.' -
+     A                                      'Name 1')
+     A            EDIH220       30A
+     A                                      TEXT('Vers.Adr.Name 2')
+     A                                      COLHDG('abw.' -
+     A                                      'Vers.Adr.' -
+     A                                      'Name 2')
+     A            EDIH230       30A
+     A                                      TEXT('Vers.Adr.Name 3')
+     A                                      COLHDG('abw.' -
+     A                                      'Vers.Adr.' -
+     A                                      'Name 3')
+     A            EDIH240       30A
+     A                                      TEXT('Vers.Adr.Strasse')
+     A                                      COLHDG('abw.' -
+     A                                      'Vers.Adr.' -
+     A                                      'Strasse')
+     A            EDIH250        3A
+     A                                      TEXT('Vers.Adr. Land')
+     A                                      COLHDG('abw.' -
+     A                                      'Vers.Adr.' -
+     A                                      'Land')
+     A            EDIH260        5S 0
+     A                                      TEXT('Vers.Adr. PLZ')
+     A                                      COLHDG('abw.' -
+     A                                      'Vers.Adr.' -
+     A                                      'PLZ')
+     A            EDIH270       30A
+     A                                      TEXT('Vers.Adr. O r t')
+     A                                      COLHDG('abw.' -
+     A                                      'Vers.Adr.' -
+     A                                      'O r t')
+     A            EDIH280       60A
+     A                                      TEXT('Kopf-Text  1')
+     A                                      COLHDG('Kopf-' -
+     A                                      'text' -
+     A                                      '1')
+     A            EDIH290       60A
+     A                                      TEXT('Kopf-Text  2')
+     A                                      COLHDG('Kopf-' -
+     A                                      'text' -
+     A                                      '2')
+     A            EDIH300       60A
+     A                                      TEXT('Kopf-Text  3')
+     A                                      COLHDG('Kopf-' -
+     A                                      'text' -
+     A                                      '3')
+     A            EDIH310        2A
+     A                                      TEXT('Versandart')
+     A                                      COLHDG('Versandart')
+     A            EDIH320       21A
+     A                                      TEXT('Kartentyp')
+     A                                      COLHDG('Kartentyp')
+     A            EDIH330       16A
+     A                                      TEXT('Kartennummer')
+     A                                      COLHDG('Karten -
+     A                                      nummer')
+     A            EDIH340        1A
+     A                                      TEXT('Teillieferung')
+     A                                      COLHDG('Teill. J/N')
+     A            EDIH350       25A
+     A                                      TEXT('Karteninhaber')
+     A                                      COLHDG('Karten -
+     A                                      inhaber')
+     A            EDIH360        7A
+     A                                      TEXT('Karten Gültigkeit')
+     A                                      COLHDG('Karten -
+     A                                      gültigkeit')
+     A            EDIH370        3A
+     A                                      TEXT('Auftragsherkunft')
+     A                                      COLHDG('Auft-' -
+     A                                      'Her-' -
+     A                                      'kunft')
+     A**    EDI  - Edifact-orders
+     A**    WWW  - Internet
+     A**    TPO  - Toolpartner-Organisation
+     A**    WAE  - WAECO-Verbund
+     A            EDIH380        6S 0
+     A                                      TEXT('WAECO ANR')
+     A                                      DFT(0)
+     A                                      COLHDG('WAECO-' -
+     A                                      'AuftragsNr')
+     A            EDIH390        2S 0
+     A                                      TEXT('Auftragsstatus')
+     A                                      COLHDG('Status')
+     A            TEXTH512     512A
+     A                                      TEXT('TEST')
+     A                                      COLHDG('TEXT')
+     A            HBUCHUNG      10A         TEXT('BUCHUNG')
+     A            USER          10A         TEXT('USER')
+     A            HRESTART       1A         TEXT('RESTART')
+     A            HSTATUS       10A         TEXT('STATUS')
+     A            PDATE           L         TEXT('LAUFDATUM')
+     A            TSTAMP          Z         TEXT('TIMESTAMP')

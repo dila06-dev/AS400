@@ -1,0 +1,43 @@
+     A**************************************************************************
+     A*  Copyright 2021 by    trend SWM                                        *
+     A*                       Verwaltung GmbH                                  *
+     A*                       Jechtinger Straße 9                              *
+     A*                       DE 79111 Freiburg                                *
+     A*  --------------------------------------------------------------------- *
+     A*  Kommunikationsbereich Zuordnung Land <- Artikel (Ein-/Ausschluss)     *
+     A*  --------------------------------------------------------------------  *
+     A*  Erstellt: PH 01.03.2021 Projekt 16393-01                              *
+     A*  Änderung: XX XX.XX.XXXX                                               *
+     A**************************************************************************
+     A                                      REF(SWMREF)
+     A          R EXWAOY1
+     A*-------------------------------------------------------------------------
+     A* Programmstatus
+     A*-------------------------------------------------------------------------
+     A            EXWAOYPGSTR               REFFLD(##PGST)
+     A            EXWAOYPROGR               REFFLD(##PROG)
+     A            EXWAOYFLDNR               REFFLD(##FLDN)
+     A*-------------------------------------------------------------------------
+     A* ON/OFF KZ für Prüfungen
+     A*-------------------------------------------------------------------------
+     A            EXWAOYIFKZR               REFFLD(##IFKZ)
+     A            EXWAOYFR01R               REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* Key-Felder
+     A*-------------------------------------------------------------------------
+     A            EXWAOYLANDR               REFFLD(WAOY1/WAOYLAND *LIBL/WAOY)
+     A            EXWAOYTENRR               REFFLD(WAOY1/WAOYTENR *LIBL/WAOY)
+     A            EXWAOYFR02R  256          REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* Kopier-Begriff NACH
+     A*-------------------------------------------------------------------------
+     A            EXWAOYNLNDR               REFFLD(WAOY1/WAOYLAND *LIBL/WAOY)
+     A            EXWAOYNTENR               REFFLD(WAOY1/WAOYTENR *LIBL/WAOY)
+     A            EXWAOYFR03R  256          REFFLD(##FREI)
+     A*-------------------------------------------------------------------------
+     A* evt. weitere Felder für Update oder Prüfungen
+     A*-------------------------------------------------------------------------
+     A            EXWAOYEASCR               REFFLD(WAOY1/WAOYEASC *LIBL/WAOY)
+     A            EXWAOYTSTPR               REFFLD(WAOY1/WAOYTSTP *LIBL/WAOY)
+     A            EXWAOYERUSR               REFFLD(WAOY1/WAOYERUS *LIBL/WAOY)
+     A            EXWAOYFR04R  392          REFFLD(##FREI)

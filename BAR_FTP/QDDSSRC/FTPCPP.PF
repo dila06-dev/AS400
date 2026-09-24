@@ -1,0 +1,39 @@
+     A                                      UNIQUE
+     A          R WN_F0
+     A            WNOCC         15          COLHDG('OCC')
+     A                                      TEXT('Own company code')
+     A            WNCPCC        15          COLHDG('CPCC')
+     A                                      TEXT('Counterpart company code')
+     A            WNCC           3          COLHDG('CURCODE')
+     A                                      TEXT('Currency code')
+     A            WNAMOUNT      15S 2       COLHDG('AMOUNT')
+     A                                      TEXT('Amount')
+     A            WNRDATE       10          COLHDG('RDATE')
+     A                                      TEXT('Reference date')
+     A            WNIN          25          COLHDG('INVOICE_NR')
+     A                                      TEXT('Invoice number')
+     A            WNCN           1          COLHDG('CREDIT_NOTE')
+     A                                      TEXT('Credit note')
+     A            WNIR1         25          COLHDG('INVOICE_REF1')
+     A                                      TEXT('Invoice ref 1')
+     A            WNIR2         25          COLHDG('INVOICE_REF2')
+     A                                      TEXT('Invoice ref 2')
+     A            WNCBOC         5          COLHDG('BANK_CODE_OWN')
+     A                                      TEXT('Bank code own')
+     A            WNCBCP         5          COLHDG('BANK_CODE_CP')
+     A                                      TEXT('Bank code partner')
+     A            WNCOMM       255          COLHDG('COMMENTS')
+     A                                      TEXT('Comments')
+     A            WNBS           1          COLHDG('BUY_SELL')
+     A                                      TEXT('Buy/Sell')
+     A            WNC            3          COLHDG('CURRENCY')
+     A                                      TEXT('Currency')
+     A            WNAMOUNTC     15S 2       COLHDG('AMOUNTCUR')
+     A                                      TEXT('Amount Currency')
+     A            WNTT           3          COLHDG('TRANSACTION')
+     A                                      TEXT('Transaction')
+     A
+     A
+     A          K WNIN
+     A          K WNRDATE
+     A          K WNCPCC

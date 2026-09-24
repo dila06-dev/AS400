@@ -1,0 +1,11 @@
+     A
+     A          R ##CTLR
+     A            #MBR          10A
+     A            #FILE         10A
+     A            #LIBL         10A
+     A            #ATTRC         2A
+     A            #TXT         256A
+     A            #STATUS        1A
+     A          K #MBR
+     A          K #FILE
+     A          K #LIBL

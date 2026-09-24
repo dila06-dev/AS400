@@ -1,0 +1,49 @@
+0001  * Physische Datei: SYSPROGPF
+0001  * ANLEGEDATUM: OKTOBER 2009
+0001  * ÄNDERUNGEN:
+0005  *
+0006            R SYSPROGPFR
+0007              S4PGM         10A         TEXT('PROGRAMM')
+0008                                        COLHDG('PROGRAMM')
+0007              S4USRP        10A         TEXT('USER')
+0008                                        COLHDG('USER')
+0007              S4LFD#         5S         TEXT('LFD#')
+0008                                        COLHDG('LFD#')
+0013              S4LIB         10A         TEXT('BIBLIOTHEK')
+0014                                        COLHDG('BIBLIOTHEK')
+0013              S4DESC        60A         TEXT('PROGRAMMBESCHREIBUNG')
+0014                                        COLHDG('PROGRAMMBESCHREIB.')
+0013              S4DES2        60A         TEXT('PROGRAMMBESCHREIBUNG')
+0014                                        COLHDG('PROGRAMMBESCHREIB.')
+0013              S4PGMV        10A         TEXT('VORGESCHALTETES PGM')
+0014                                        COLHDG('VORGESCH.PGM')
+0013              S4LIBV        10A         TEXT('BIBLIOTHEK')
+0014                                        COLHDG('BIBLIOTHEK')
+0013              S4OPT          2A         TEXT('KURZOPTION')
+0014                                        COLHDG('KURZOPTION')
+0013              S4CALL       256A         TEXT('QUALIFIZIERTER CALL')
+0014                                        COLHDG('QUALIFIZIERTER CALL')
+0005  *
+0013              S4TIMC         8A         TEXT('LETZTER AUFRUF ZEIT')
+0014                                        COLHDG('LETZTER AUFRUF ZEIT')
+0013              S4DAYC         8A         TEXT('LETZTER AUFRUF DATUM')
+0014                                        COLHDG('LETZTER AUFRUF DATUM')
+0013              S4USRC        10A         TEXT('LETZTER AUFRUF USER')
+0014                                        COLHDG('LETZTER AUFRUF USER')
+0013              S4COUNT        8S         TEXT('COUNTER')
+0014                                        COLHDG('COUNTER')
+0005  *
+0013              S4PGMC         1A         TEXT('B/BATCH,D/DIALOG,P/PRINT')
+0014                                        COLHDG('B/BATCH,D/DIALOG,P/P')
+0013              S4PGMK         1A         TEXT('PROGRAMMKLASSE')
+0014                                        COLHDG('PROGRAMMKLASSE')
+0005  *
+0013              S4AKT          1A         TEXT('(A)AKTIV,(I)INAKTIV')
+0014                                        COLHDG('(A)AKTIV, (I)INAKTIV')
+0005  *ÄNDERUNGSDIENST
+0013              S4EDAT         8S 0       TEXT('Änderungs-Datum JJJJMMTT')
+0014                                        COLHDG('Änderungs-Datum')
+0013              S4ADAT         8S 0       TEXT('Anlage-Datum JJJJMMTT')
+0014                                        COLHDG('Anlagedatum')
+0013              S4USR         10A         TEXT('Modifizierung-USER')
+0014                                        COLHDG('Modifizierung-USER')
