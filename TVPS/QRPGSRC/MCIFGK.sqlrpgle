@@ -621,10 +621,10 @@ dcl-proc MCIFGK;
       when WKPGST = PGST_DETAIL or WKPGST = 'DETAIL';
         dspWrite('MCIFGKB2');
       when WKBT24 = *OFF;
-        dspFKeysAllowed(fKeysAllowed.Number: 6: 20: 24);
+        dspFKeysAllowed(fKeysAllowed.Number: 6: 8: 20: 24);
         dspWrite('MCIFGKB1');
       when WKBT24 = *ON;
-        dspFKeysAllowed(fKeysAllowed.Number: 6: 20: 24);
+        dspFKeysAllowed(fKeysAllowed.Number: 6: 8: 20: 24);
         dspWrite('MCIFGKB3');
       endsl;
 
@@ -2404,7 +2404,7 @@ dcl-proc MCIFGK;
   //------------------------------------------------------------------------------------------------
   begsr UEIFGK;
 
-    WKSTMT = 'SELECT * FROM IFGK WHERE IFGK.IFGKIFFI = ''' + DSIFGKIFFI + '''';
+    WKSTMT1 = 'SELECT * FROM IFGK WHERE IFGK.IFGKIFFI = ''' + DSIFGKIFFI + '''';
 
     // IF Auftrags-Nr
     if DSIFGKIFNR <> *BLANK;
@@ -2690,6 +2690,15 @@ dcl-proc MCIFGK;
       //TRDZ-Optionen anlegen
       select;
 
+      // Komplettübernahme
+      when EXTRDNDANA = 'MCIFGKF8';
+        exsr UEIFGK;
+        // Job wurde zur Ausführung in die Warteschlange übertragen.
+        WKFENR = '3558';
+        #CRTCD = *BLANK;
+        WKSUPD = *ON;
+        leave;
+
       when EXTRDNDANA = 'TRIFGK02';
         PCPGST = 'STATUS';
         EXSR TRIFGK;
@@ -2730,15 +2739,6 @@ dcl-proc MCIFGK;
         endif;
 
         select;
-
-        // Komplettübernahme
-        when EXTRDNDANA = 'MCIFGKF8';
-          exsr UEIFGK;
-          // Job wurde zur Ausführung in die Warteschlange übertragen.
-          WKFENR = '3558';
-          #CRTCD = *BLANK;
-          WKSUPD = *ON;
-          leave;
 
         when IFGKIFST <= '10';
           // Es dürfen nur Sätze mit zur Auswahl passendem Status ausgewählt werden.
@@ -2924,7 +2924,7 @@ dcl-proc trAufrSbfl;
   dspSflColumnValue(PGM_NAME: 'TXIFGKFENR': SFIFGKFENR);
   dspSflColumnValue(PGM_NAME: '##IFST': SFIFGKIFST:WKAT01ST);
   dspSflColumnValue(PGM_NAME: '##IFKO': SFIFGKIFKO:WKAT01KO);
-  dspSflColumnValue(PGM_NAME: '##IFPO': SFIFGKIFKO:WKAT01PO);
+  dspSflColumnValue(PGM_NAME: '##IFPO': SFIFGKIFPO:WKAT01PO);
 
 END-PROC;
 
