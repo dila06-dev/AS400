@@ -1130,57 +1130,109 @@
                 and substr( MAIKEY, 1, 4)>'2021');
 
 
-       //a14#2 ZR
+       // a14#2: ZR
        exec sql
-          update  edifact/stddat set a14#2 =
-          (SELECT distinct substr(PROTOKOLL, 4, 5) FROM bar_edi/aktivbank
-           where  aktivbank.status='10' and
-                  char(RKRGJJ concat RKRGNR)= MAIKEY and
-                  (a14#1=' ' or a14#2=' ' or a14#4=' ') and
-                  hrclvl= '100000000' and STDDAT.XEORF <>'#'
-                  and substr( MAIKEY, 1, 4)>'2021')
-          where exists
-          (SELECT distinct substr(PROTOKOLL, 4, 5) FROM bar_edi/aktivbank
-           where  aktivbank.status='10' and
-                  char(RKRGJJ concat RKRGNR)= MAIKEY and
-                  (a14#1=' ' or a14#2=' ' or a14#4=' ') and
-                  hrclvl= '100000000' and STDDAT.XEORF <>'#'
-                  and substr( MAIKEY, 1, 4)>'2021');
+         UPDATE edifact/stddat AS S
+            SET a14#2 =
+                (SELECT DISTINCT
+                        bar_edi.PROT_WERT(
+                          CAST(A.PROTOKOLL
+                            AS VARCHAR(1024) CCSID 273),
+                          'ZR:')
+                   FROM bar_edi/aktivbank AS A
+                  WHERE A.status = '10'
+                    AND CHAR(A.RKRGJJ CONCAT A.RKRGNR)
+                        = S.MAIKEY
+                    AND bar_edi.PROT_WERT(
+                          CAST(A.PROTOKOLL
+                            AS VARCHAR(1024) CCSID 273),
+                          'ZR:') IS NOT NULL)
+          WHERE (S.a14#1 = ' '
+                 OR S.a14#2 = ' '
+                 OR S.a14#4 = ' ')
+            AND S.hrclvl = '100000000'
+            AND S.XEORF <> '#'
+            AND SUBSTR(S.MAIKEY, 1, 4) > '2021'
+            AND EXISTS
+                (SELECT 1
+                   FROM bar_edi/aktivbank AS A
+                  WHERE A.status = '10'
+                    AND CHAR(A.RKRGJJ CONCAT A.RKRGNR)
+                        = S.MAIKEY
+                    AND bar_edi.PROT_WERT(
+                          CAST(A.PROTOKOLL
+                            AS VARCHAR(1024) CCSID 273),
+                          'ZR:') IS NOT NULL);
 
-       //a14#1 VL
+
+       // a14#1: VL
        exec sql
-          update  edifact/stddat set a14#1 =
-          (SELECT distinct substr(PROTOKOLL, 12, 7) FROM bar_edi/aktivbank
-           where  aktivbank.status='10' and
-                  char(RKRGJJ concat RKRGNR)= MAIKEY and
-                  (a14#1=' ' or a14#2=' ' or a14#4=' ') and
-                  hrclvl= '100000000' and STDDAT.XEORF <>'#'
-                  and substr( MAIKEY, 1, 4)>'2021')
-          where exists
-          (SELECT distinct substr(PROTOKOLL, 12, 7) FROM bar_edi/aktivbank
-           where  aktivbank.status='10' and
-                  char(RKRGJJ concat RKRGNR)= MAIKEY and
-                  (a14#1=' ' or a14#2=' ' or a14#4=' ') and
-                  hrclvl= '100000000' and STDDAT.XEORF <>'#'
-                  and substr( MAIKEY, 1, 4)>'2021');
+         UPDATE edifact/stddat AS S
+            SET a14#1 =
+                (SELECT DISTINCT
+                        bar_edi.PROT_WERT(
+                          CAST(A.PROTOKOLL
+                            AS VARCHAR(1024) CCSID 273),
+                          'VL:')
+                   FROM bar_edi/aktivbank AS A
+                  WHERE A.status = '10'
+                    AND CHAR(A.RKRGJJ CONCAT A.RKRGNR)
+                        = S.MAIKEY
+                    AND bar_edi.PROT_WERT(
+                          CAST(A.PROTOKOLL
+                            AS VARCHAR(1024) CCSID 273),
+                          'VL:') IS NOT NULL)
+          WHERE (S.a14#1 = ' '
+                 OR S.a14#2 = ' '
+                 OR S.a14#4 = ' ')
+            AND S.hrclvl = '100000000'
+            AND S.XEORF <> '#'
+            AND SUBSTR(S.MAIKEY, 1, 4) > '2021'
+            AND EXISTS
+                (SELECT 1
+                   FROM bar_edi/aktivbank AS A
+                  WHERE A.status = '10'
+                    AND CHAR(A.RKRGJJ CONCAT A.RKRGNR)
+                        = S.MAIKEY
+                    AND bar_edi.PROT_WERT(
+                          CAST(A.PROTOKOLL
+                            AS VARCHAR(1024) CCSID 273),
+                          'VL:') IS NOT NULL);
 
 
-       //a14#4 AH
+       // a14#4: AH
        exec sql
-          update  edifact/stddat set a14#4 =
-          (SELECT distinct substr(PROTOKOLL, 22, 7) FROM bar_edi/aktivbank
-           where  aktivbank.status='10' and
-                  char(RKRGJJ concat RKRGNR)= MAIKEY and
-                  (a14#1=' ' or a14#2=' ' or a14#4=' ') and
-                  hrclvl= '100000000' and STDDAT.XEORF <>'#'
-                  and substr( MAIKEY, 1, 4)>'2021')
-          where exists
-          (SELECT distinct substr(PROTOKOLL, 22, 7) FROM bar_edi/aktivbank
-           where  aktivbank.status='10' and
-                  char(RKRGJJ concat RKRGNR)= MAIKEY and
-                  (a14#1=' ' or a14#2=' ' or a14#4=' ') and
-                  hrclvl= '100000000' and STDDAT.XEORF <>'#'
-                  and substr( MAIKEY, 1, 4)>'2021');
+         UPDATE edifact/stddat AS S
+            SET a14#4 =
+                (SELECT DISTINCT
+                        bar_edi.PROT_WERT(
+                          CAST(A.PROTOKOLL
+                            AS VARCHAR(1024) CCSID 273),
+                          'AH:')
+                   FROM bar_edi/aktivbank AS A
+                  WHERE A.status = '10'
+                    AND CHAR(A.RKRGJJ CONCAT A.RKRGNR)
+                        = S.MAIKEY
+                    AND bar_edi.PROT_WERT(
+                          CAST(A.PROTOKOLL
+                            AS VARCHAR(1024) CCSID 273),
+                          'AH:') IS NOT NULL)
+          WHERE (S.a14#1 = ' '
+                 OR S.a14#2 = ' '
+                 OR S.a14#4 = ' ')
+            AND S.hrclvl = '100000000'
+            AND S.XEORF <> '#'
+            AND SUBSTR(S.MAIKEY, 1, 4) > '2021'
+            AND EXISTS
+                (SELECT 1
+                   FROM bar_edi/aktivbank AS A
+                  WHERE A.status = '10'
+                    AND CHAR(A.RKRGJJ CONCAT A.RKRGNR)
+                        = S.MAIKEY
+                    AND bar_edi.PROT_WERT(
+                          CAST(A.PROTOKOLL
+                            AS VARCHAR(1024) CCSID 273),
+                          'AH:') IS NOT NULL);
 
 
        //update Aktivbank restart bbbb
@@ -2118,32 +2170,32 @@
          SELECT B.KDLIFN FROM TVPF.KUND03 B
                     WHERE
                         A.MSGTYP = 'ORDRSP' AND
-                        A.A17#4  = B.KDKDNR AND
                         A.HRCLVL = '120000000' AND
-                        A.A35#01 = '4015704000009' AND
                         B.KDFIRM = '01' AND
                         A.MAIKEY IN (
                     SELECT C.MAIKEY FROM EDIFACT.STDDAT C
                     WHERE  A.MAIKEY = C.MAIKEY AND
                            A.MSGTYP = C.MSGTYP AND
+                           C.A17#4  = B.KDKDNR AND
+                           C.A35#01 = '4015704000009' AND
                            A.WRTDAT = C.WRTDAT AND
                                       C.HRCLVL = '100000000' AND
                                       C.SCDDAT <> 'Yce'))
           WHERE  EXISTS(
            SELECT B.KDLIFN FROM TVPF.KUND03 B
-            WHERE
-                A.MSGTYP = 'ORDRSP' AND
-                A.A17#4  = B.KDKDNR AND
-                A.HRCLVL = '120000000' AND
-                A.A35#01 = '4015704000009' AND
-                B.KDFIRM = '01' AND
-                A.MAIKEY IN (
-            SELECT C.MAIKEY FROM EDIFACT.STDDAT C
-            WHERE  A.MAIKEY = C.MAIKEY AND
-                   A.MSGTYP = C.MSGTYP AND
-                   A.WRTDAT = C.WRTDAT AND
-                              C.HRCLVL = '100000000' AND
-                              C.SCDDAT <> 'Yce'));
+                    WHERE
+                        A.MSGTYP = 'ORDRSP' AND
+                        A.HRCLVL = '120000000' AND
+                        B.KDFIRM = '01' AND
+                        A.MAIKEY IN (
+                    SELECT C.MAIKEY FROM EDIFACT.STDDAT C
+                    WHERE  A.MAIKEY = C.MAIKEY AND
+                           A.MSGTYP = C.MSGTYP AND
+                           C.A17#4  = B.KDKDNR AND
+                           C.A35#01 = '4015704000009' AND
+                           A.WRTDAT = C.WRTDAT AND
+                                      C.HRCLVL = '100000000' AND
+                                      C.SCDDAT <> 'Yce'));
 
        //ORDRSP EAN Code
        exec sql
