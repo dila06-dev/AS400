@@ -1539,6 +1539,7 @@
        //Funktion HRCLVLZUAB nur prtnum='MARKANT_RECHNUNG' alt aus 2020 und 2021
        //die über den restart hineingegangen sind wrtdat(20220805) ladedatum
        //===> update  afrk01 set RKST02= '10'
+       // ein Test
        exec sql
           insert into tvrelwaeco/HRCLVL1300
           SELECT a.SNDREC, a.PRTNUM, a.MSGTYP, a.MAIKEY,
