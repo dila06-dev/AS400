@@ -2330,6 +2330,7 @@
 
        //Update der Käufer-GLN für Igloo mit dem Feld EDI-ILN
        //ORDRSP Tabelle ZKUND liefert EDI-Kundenstamm (7315090000001)
+       //Die Käufer-GLN wird in der Tabelle ZKUN01 im Feld KZEDIB hinterlegt
         EXEC SQL
         UPDATE EDIFACT.STDDAT A SET A.A17#2 =(
         SELECT B.KZEDIB FROM TVPF.ZKUN01 B
