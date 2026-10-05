@@ -95,6 +95,7 @@
       // Diverse, historisch genutzte Arbeits-Arrays (z. T. ungenutzt)
       // Git Hub Test
       // Git Hub Test 2
+      // Git Hub Test 3
      D MD#2            S              1    DIM(512)
      D ATR             S              1    DIM(63)
      D ATTS            S              1    DIM(1)
