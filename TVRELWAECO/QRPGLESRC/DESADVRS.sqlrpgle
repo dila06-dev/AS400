@@ -96,6 +96,7 @@
       // Git Hub Test
       // Git Hub Test 2
       // Git Hub Test 3
+      // Git Hub Test 4 für Morgen
      D MD#2            S              1    DIM(512)
      D ATR             S              1    DIM(63)
      D ATTS            S              1    DIM(1)
