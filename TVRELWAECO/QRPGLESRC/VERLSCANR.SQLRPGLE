@@ -332,7 +332,8 @@ b
      c  n97              eval      NURABSCHL = '1'
      c   97              eval      NURABSCHL = '0'
      C*
-     c   97              write     phy02r
+      * : Rücksprach Aaron auch die besonderen Kunden werden übergeb 20.10.2026
+     c                   write     phy02r
      C*
      C     ##2000        ENDSR
      C*
