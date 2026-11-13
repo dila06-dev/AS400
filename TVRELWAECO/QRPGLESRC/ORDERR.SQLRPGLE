@@ -1,12 +1,12 @@
      h option(*SRCSTMT:*NoDebugIO)
      ******************************************************************
-      * PROGRAMMNAME.:‚FTPI002r          0761/8888038 SZ                       €
-      * FUNKTION.....:‚holen Aufträge             010 Burkart
-      *               ‚CALL PGM(MODWAOREL/STRTRDREL)
-      * Konditionen:  ‚a) feld: ifapIFNR in der ifap entspricht
-      *               ‚         Auftrags# im Fremdsystem
-      *               ‚b) es besteht Positionstreue zwischen den Systemen
-      *               ‚call trlftest Kom-date lead time
+      * PROGRAMMNAME.:Â‚FTPI002r          0761/8888038 SZ                       Â€
+      * FUNKTION.....:Â‚holen AuftrÃ¤ge             010 Burkart
+      *               Â‚CALL PGM(MODWAOREL/STRTRDREL)
+      * Konditionen:  Â‚a) feld: ifapIFNR in der ifap entspricht
+      *               Â‚         Auftrags# im Fremdsystem
+      *               Â‚b) es besteht Positionstreue zwischen den Systemen
+      *               Â‚call trlftest Kom-date lead time
       *
       *                SELECT * FROM trtp WHERE TPTCDE = 'AFDA'
       *
@@ -18,76 +18,76 @@
       *
       * 48282 Emsdetten
       *
-      *‚  1.)  es wird *defaulf das Datum eingetragen, welches dem nächst
-      *‚  möglichen Auslieferungstermin entspricht
-      *‚        (das Datum entspricht nur einem Wunschtermin)
-      *‚  2.) das übergebene Datum entspricht dem Datum, wann geliefert
-      *‚  werden soll, daraus errechnet sich auch der Kom-Termin
-      *‚       ( mehr als nur Wunschtermin )
-      *‚  3.) es erfolgt eine Berechnung auf Basis der Kalenderdaten, d.h.
-      *‚  Feiertage werden sowohl in Deutschland als auch
-      *‚       in Österreich berücksichtigt.
-      *‚
-      *‚H310 Character 419  EDC N 803 1221 Free
-      *‚H311A Character 2   Sc N 1222 1223 COD Forwarder service way
-      *‚H311B Character 2   Sc N 1224 1225 COD Forwarder service way
-      *‚H311C Character 5   Sc N 1226 1230 COD Forwarder service way
-      *‚H311D Character 1   Sc N 1231 1231 COD Forwarder service day/night
-      *‚H311E Character 3   Sc N 1232 1234 COD currency
-      *‚H311F Numerical 5 2 Sc N 1235 1239 discount
-      *‚H311G Numerical 5 2 Sc N 1240 1244 tax
-      *‚H311H Numerical 8 2 Sc N 1245 1252 amount
-      *‚H311I Numerical 6 2 Sc N 1253 1258 delivery cost
-      *‚H311J Numerical 6 2 Sc N 1259 1264 packing cost
-      *‚H311K Numerical 6 2 Sc N 1265 1270 insurance cost
-      *‚
-      *‚SELECT h050,
-      *‚substr(h310, 0420, 2) servWay1  ,substr(h310, 0422, 2) servWay2,
-      *‚substr(h310, 0424, 5) servWay3  ,substr(h310, 0429, 1) coddayni,
-      *‚substr(h310, 0430, 3) currency  ,substr(h310, 0435, 5) discount,
-      *‚substr(h310, 0438, 5) tax       ,substr(h310, 0443, 8) amount  ,
-      *‚substr(h310, 0451, 6) delivery  ,substr(h310, 0457, 6) package ,
-      *‚substr(h310, 0463, 6) insurance ,substr(h310, 0420, 49) image,h360
-      *‚FROM orderh where substr(h310, 0420, 49) <>' '  and  H030=   55278
-      *‚and  substr(h310, 0420, 49)  not like '%      0       %'
-      *‚and  substr(h310, 0420, 49)      like '%,%'
-      *‚
-      *‚
-      *‚
-      *‚
-      *‚
-      *‚  _ #DC4804 Positionen Sicherung nach Input
-      *‚  _ #DC4805 Kopfsätze  Sicherung nach Input
-      *‚  _ 54939 Österreich bei 16 bzw. 15 mit 8 zusatz also 815 oder 816
-      *‚
-      *‚ Anina Rücksprach 20.02.2015
-      *‚ ===========================
-      *‚ update       afko set akvsbd='008'
-      *‚                          WHERE akvsbd ='   ' and AKAFST < '89' and
-      *‚ akfirm='01' and akmaaf > ' '
-      *‚
-      *‚ 01.02.2016  HDX Freigabe bestimmter Rechnungen
-      *‚ Freigabe erfolgt später über Status 35 in den Positionen und
-      *‚ dem Kopf; beide brauchen von Status 35 anstelle des Status 30
-      *‚ ==> nach Feststellung alles OK auf 35 setzten
-      *‚Pascale direkte Umsatzung Mail Henk 20.06.2016
-      *‚update        afko01 set   AKvsbd = '011'
-      *‚                     WHERE AKvsbd <>'011' and AKFIRM = '01' and
-      *‚AKKDNR ='088505' and AKAFST < '90' and akmaaf in (select h050 from
-      *‚orderh where h100 like '%SPBI SA%' )
+      *Â‚  1.)  es wird *defaulf das Datum eingetragen, welches dem nÃ¤chst
+      *Â‚  mÃ¶glichen Auslieferungstermin entspricht
+      *Â‚        (das Datum entspricht nur einem Wunschtermin)
+      *Â‚  2.) das Ã¼bergebene Datum entspricht dem Datum, wann geliefert
+      *Â‚  werden soll, daraus errechnet sich auch der Kom-Termin
+      *Â‚       ( mehr als nur Wunschtermin )
+      *Â‚  3.) es erfolgt eine Berechnung auf Basis der Kalenderdaten, d.h.
+      *Â‚  Feiertage werden sowohl in Deutschland als auch
+      *Â‚       in Ã–sterreich berÃ¼cksichtigt.
+      *Â‚
+      *Â‚H310 Character 419  EDC N 803 1221 Free
+      *Â‚H311A Character 2   Sc N 1222 1223 COD Forwarder service way
+      *Â‚H311B Character 2   Sc N 1224 1225 COD Forwarder service way
+      *Â‚H311C Character 5   Sc N 1226 1230 COD Forwarder service way
+      *Â‚H311D Character 1   Sc N 1231 1231 COD Forwarder service day/night
+      *Â‚H311E Character 3   Sc N 1232 1234 COD currency
+      *Â‚H311F Numerical 5 2 Sc N 1235 1239 discount
+      *Â‚H311G Numerical 5 2 Sc N 1240 1244 tax
+      *Â‚H311H Numerical 8 2 Sc N 1245 1252 amount
+      *Â‚H311I Numerical 6 2 Sc N 1253 1258 delivery cost
+      *Â‚H311J Numerical 6 2 Sc N 1259 1264 packing cost
+      *Â‚H311K Numerical 6 2 Sc N 1265 1270 insurance cost
+      *Â‚
+      *Â‚SELECT h050,
+      *Â‚substr(h310, 0420, 2) servWay1  ,substr(h310, 0422, 2) servWay2,
+      *Â‚substr(h310, 0424, 5) servWay3  ,substr(h310, 0429, 1) coddayni,
+      *Â‚substr(h310, 0430, 3) currency  ,substr(h310, 0435, 5) discount,
+      *Â‚substr(h310, 0438, 5) tax       ,substr(h310, 0443, 8) amount  ,
+      *Â‚substr(h310, 0451, 6) delivery  ,substr(h310, 0457, 6) package ,
+      *Â‚substr(h310, 0463, 6) insurance ,substr(h310, 0420, 49) image,h360
+      *Â‚FROM orderh where substr(h310, 0420, 49) <>' '  and  H030=   55278
+      *Â‚and  substr(h310, 0420, 49)  not like '%      0       %'
+      *Â‚and  substr(h310, 0420, 49)      like '%,%'
+      *Â‚
+      *Â‚
+      *Â‚
+      *Â‚
+      *Â‚
+      *Â‚  _ #DC4804 Positionen Sicherung nach Input
+      *Â‚  _ #DC4805 KopfsÃ¤tze  Sicherung nach Input
+      *Â‚  _ 54939 Ã–sterreich bei 16 bzw. 15 mit 8 zusatz also 815 oder 816
+      *Â‚
+      *Â‚ Anina RÃ¼cksprach 20.02.2015
+      *Â‚ ===========================
+      *Â‚ update       afko set akvsbd='008'
+      *Â‚                          WHERE akvsbd ='   ' and AKAFST < '89' and
+      *Â‚ akfirm='01' and akmaaf > ' '
+      *Â‚
+      *Â‚ 01.02.2016  HDX Freigabe bestimmter Rechnungen
+      *Â‚ Freigabe erfolgt spÃ¤ter Ã¼ber Status 35 in den Positionen und
+      *Â‚ dem Kopf; beide brauchen von Status 35 anstelle des Status 30
+      *Â‚ ==> nach Feststellung alles OK auf 35 setzten
+      *Â‚Pascale direkte Umsatzung Mail Henk 20.06.2016
+      *Â‚update        afko01 set   AKvsbd = '011'
+      *Â‚                     WHERE AKvsbd <>'011' and AKFIRM = '01' and
+      *Â‚AKKDNR ='088505' and AKAFST < '90' and akmaaf in (select h050 from
+      *Â‚orderh where h100 like '%SPBI SA%' )
       *
-      *‚19.01.2018 alle f informationen auch auf lieferschein
+      *Â‚19.01.2018 alle f informationen auch auf lieferschein
       * 2018/608957   bei text spedition TXSP ==> auch druckkz L
-      *‚14.10.2025
+      *Â‚14.10.2025
       * update kund set KDKOSP ='N'
       *  WHERE KDKDNR in ('199283', '210500','251377', '210560') and
       *  kdfirm='01'
-      * ***************************************************************        €
-      * Änderungsprotokoll:‚...                                                €
+      * ***************************************************************        Â€
+      * Ã„nderungsprotokoll:Â‚...                                                Â€
       * mg01 c   93              exsr      sr2300k
       * mg02     timestamp lesen bei auftragswechsel sr9999
       *
-      * h210 bei Teccom 00003 beinhaltet den Warenempfänger
+      * h210 bei Teccom 00003 beinhaltet den WarenempfÃ¤nger
       *      des Kunden
       * 008239  trend 900000
       * SELECT IFAKVSNR FROM ifak01 WHERE IFAKIFNR
@@ -95,11 +95,13 @@
       *
       *
       * 10/2025 B2B integration
-      * - nachträglich   IFAD iso 3 auf Iso 2 code
+      * - nachtrÃ¤glich   IFAD iso 3 auf Iso 2 code
       *
-      * update ifak01 set ifakkdnr = '089879'
+      * update ifak01 set ifakkdnr = '089879', IFAKWACD ='USD'
       * WHERE IFAkIFFI = '00002' and ifakkdnr = '089878' and
-      *       IFAKIFNR = '9190326 '
+      *       IFAKIFNR = :orderhdx and  :orderhdx  in
+      *       (select ifapifnr from ifap01 where IFAPTENR ='9105330369'
+      *       and IFAkIFFI = IFAPIFFI)
       * SELECT * FROM ifap01  WHERE IFApIFFI = '00002' and IFApIFNR =
       * '9190326 ' mehr als 1 Position
       *****************************************************************
@@ -150,21 +152,21 @@
      D*
      I*-------------------------------------------------------------------------
      d d_head          DS                  INZ
-     D  §orh310                1      2
-     D  §orh315                3      4
-     D  §orh316                5      9
-     D  §orh400               10     10
-     D  §orh420               11     13
-     D  §orh430               14     18
-     D  §orh440               19     23
-     D  §orh410               24     31
-     D  §orh450               32     37
-     D  §orh460               38     43
-     D  §orh470               44     49
-     D*                                    prefix('§')
+     D  Â§orh310                1      2
+     D  Â§orh315                3      4
+     D  Â§orh316                5      9
+     D  Â§orh400               10     10
+     D  Â§orh420               11     13
+     D  Â§orh430               14     18
+     D  Â§orh440               19     23
+     D  Â§orh410               24     31
+     D  Â§orh450               32     37
+     D  Â§orh460               38     43
+     D  Â§orh470               44     49
+     D*                                    prefix('Â§')
      D Ch              DS
      D  ch1                    1     20    INZ(' !!!! Achtung !!!   ')
-     D  ch2                   21     40    INZ('Häfele Etiketten    ')
+     D  ch2                   21     40    INZ('HÃ¤fele Etiketten    ')
 
      D Chx             DS
      D  chx1                   1     20    INZ('Auftrag in Trend ein')
@@ -175,7 +177,7 @@
      D  dst                    1     44    INZ('wichtiger Hinweis             ')
 
      D Chx5            DS
-     D  LONGMSG1               1    132    INZ('Datei prüfen                  ')
+     D  LONGMSG1               1    132    INZ('Datei prÃ¼fen                  ')
      D  LONGMSG2             133    264    INZ('Artikel 207205701 in Order    ')
      D  LONGMSG3             265    396    INZ('Info an Ingo Schlemper        ')
      D chrc            S              1    DIM(1024)
@@ -233,34 +235,34 @@
      C     *LIKE         DEFINE    IFAKIFNR      $IFAKIFNR
 
      C**************************************************************************
-     C*‚über preselect lesen der Interface_daten
+     C*Â‚Ã¼ber preselect lesen der Interface_daten
      C*-------------------------------------------------------------------------
 
      C                   seton                                        30
-     C*‚                 Stammdatenauftrag Workist
+     C*Â‚                 Stammdatenauftrag Workist
      C                   if        #h030     = 00035
-     C                   movel     'WORKIST  '   §§§usr
+     C                   movel     'WORKIST  '   Â§Â§Â§usr
      C                   endif
      C                   if        #h030     = 00055
-     C                   movel     'B2BB2C   '   §§§usr
+     C                   movel     'B2BB2C   '   Â§Â§Â§usr
      C                   endif
      C                   if        #h030     = 0000003
-     C                   movel     'TECCOM   '   §§§usr
+     C                   movel     'TECCOM   '   Â§Â§Â§usr
      C                   endif
      C                   if        #h030     = 0000025
-     C                   movel     'EASYIMPORT'  §§§usr
+     C                   movel     'EASYIMPORT'  Â§Â§Â§usr
      C                   endif
      C                   if        #h030     = 0000008
-     C                   movel     'LASERNET '   §§§usr
+     C                   movel     'LASERNET '   Â§Â§Â§usr
      C                   endif
      C                   if        #h030     = 0000002
-     C                   movel     'HDXORDER '   §§§usr
+     C                   movel     'HDXORDER '   Â§Â§Â§usr
      C                   endif
-     C*‚                 dcs dometic claim system internetuser
+     C*Â‚                 dcs dometic claim system internetuser
      C                   if        #h030     = 0000005  and
      C*************                #h030     = h030
      C                             h330      = 'DCS       '
-     C                   movel     h330          §§§usr
+     C                   movel     h330          Â§Â§Â§usr
      C                   endif
      c                   setoff                                       77
      c                   if        IFAKIFFI = '15177' or
@@ -278,7 +280,7 @@
      C                              h330      =    'DCS       ')
 MG02 c                   exsr      sr9999
      C                   exsr      srlines
-     C*‚                 update Protokoll Header
+     C*Â‚                 update Protokoll Header
      c                   exsr      sr2900
      c                   unlock    #IFAKL1
      c                   unlock    #IFAPL1
@@ -315,6 +317,11 @@ MG02 c                   exsr      sr9999
      c************Achtung!!!!!!
      c                             *in71='1'
      c                   else
+     C*Â‚10.11.2026 VW Kd-Auftrag mit WÃ¤hrung USD #SR-424152
+     c                   if        IFAKIFFI = '00002' and
+     c                             ifakkdnr = '089878'
+     c                   exsr      sr_Â§dollar
+     c                   endif
      c                   exsr      GNIFAK
      c                   exsr      message
      c                   exsr      sr_aksarg
@@ -346,13 +353,13 @@ MG02 c                   exsr      sr9999
      C                   clear                   xcxx              1
      C                   endif
 
-     C*‚                 Routine Mail Auftragsbestätigung
+     C*Â‚                 Routine Mail AuftragsbestÃ¤tigung
      C                   if        ifakiffi = '78678'       or
      C                             ifakiffi = '78680'
      C                   eval      eMail='ada.glowacka@dometic.com'
      C                   endif
-     C*‚                 Routine Mail Auftragsbestätigung
-     C*‚                 funtioniert nur, wenn Auftrag generiert wurde
+     C*Â‚                 Routine Mail AuftragsbestÃ¤tigung
+     C*Â‚                 funtioniert nur, wenn Auftrag generiert wurde
      c                   if        ( IFAKIFFI = '88505'     or
      c                               IFAKIFFI = '40631'     or
      c                               IFAKIFFI = '40670'     or
@@ -372,23 +379,23 @@ MG02 c                   exsr      sr9999
      c                   movel     '0'           xifakiffi
      c                   eval      %subst(xIFAKIFFI:02:05) = IFAKIFFI
      c
-     C*‚                 Routine Mail Auftragsbestätigung
+     C*Â‚                 Routine Mail AuftragsbestÃ¤tigung
      C                   if        $IFAKAFNR  <> *blank
      C                   CALL      'KDAP_GENR'
      C                   PARM                    xIFAKIFFI        10
      C                   PARM                    eMail            60
      C                   PARM                    #IFAKAFJJ         4
      C                   PARM                    $IFAKAFNR
-     C                   PARM                    §§§job
-     C                   PARM                    §§§usr
-     C                   PARM                    §§§pgm
-     C                   PARM                    §§§LIB
+     C                   PARM                    Â§Â§Â§job
+     C                   PARM                    Â§Â§Â§usr
+     C                   PARM                    Â§Â§Â§pgm
+     C                   PARM                    Â§Â§Â§LIB
      C
-     C*‚                 Routine Mail Auftragsbestätigung
-     C*‚                 Druckkennzeichen im Auftragskopf auf "Y für
-     C*‚                 Mail
-     C*‚                 ab 7.12.2012 beinhalten die Strukturen auch
-     C*‚                 die Rückgabeinhalte
+     C*Â‚                 Routine Mail AuftragsbestÃ¤tigung
+     C*Â‚                 Druckkennzeichen im Auftragskopf auf "Y fÃ¼r
+     C*Â‚                 Mail
+     C*Â‚                 ab 7.12.2012 beinhalten die Strukturen auch
+     C*Â‚                 die RÃ¼ckgabeinhalte
      C                   movel     RTIFAKAFJJ    ###FAKAFJJ        4
      C                   CALL      'WAO038'
      C                   Parm                    RTIFAKIFFI
@@ -398,9 +405,9 @@ MG02 c                   exsr      sr9999
      C                   endif
      C                   endif
 
-     C*‚                 Routine Mail Auftragsbestätigung Besonderheit
-     C*‚                 Siegen 098264 und Feld H020=220034 Fendt
-     C*‚                 04.07.2024 #SR-302748
+     C*Â‚                 Routine Mail AuftragsbestÃ¤tigung Besonderheit
+     C*Â‚                 Siegen 098264 und Feld H020=220034 Fendt
+     C*Â‚                 04.07.2024 #SR-302748
      c                   if        H020 = 300117 and h030 = 98264 and
      C                             $IFAKAFNR  <> *blank
      C                   eval      eMail='Verwaltung-WKL@fendt-caravan.de'
@@ -409,17 +416,17 @@ MG02 c                   exsr      sr9999
      C                   PARM                    eMail            60
      C                   PARM                    #IFAKAFJJ         4
      C                   PARM                    $IFAKAFNR
-     C                   PARM                    §§§job
-     C                   PARM                    §§§usr
-     C                   PARM                    §§§pgm
-     C                   PARM                    §§§LIB
+     C                   PARM                    Â§Â§Â§job
+     C                   PARM                    Â§Â§Â§usr
+     C                   PARM                    Â§Â§Â§pgm
+     C                   PARM                    Â§Â§Â§LIB
      C                   endif
      C
-     C*‚                 Routine Sicherung Auftragsdaten
+     C*Â‚                 Routine Sicherung Auftragsdaten
      c                   exsr      sr_save
-     C*‚                 confirmation generieren
+     C*Â‚                 confirmation generieren
      c                   exsr      confirm
-     C*‚                 mailout
+     C*Â‚                 mailout
      c                   if        mailout  = '1'
      c                   exsr      sr_mail
      C                   endif
@@ -428,12 +435,12 @@ MG02 c                   exsr      sr9999
      c                   if        ifakiffi='00099' and
      c                             #h030= 900000    and
      c                              h030= 900000
-     C*‚                 confirmation generieren
+     C*Â‚                 confirmation generieren
      c*                  exsr      confirm
      c                   endif
 
      C**************************************************************************
-     C*‚lesen Positionen aus interface
+     C*Â‚lesen Positionen aus interface
      C*-------------------------------------------------------------------------
      C*
      C     srlines       BEGSR
@@ -448,7 +455,7 @@ MG02 c                   exsr      sr9999
      C                   DO        *HIVAL
      C     KEYlines      READE     orderll1                               91
      C   91              LEAVE
-     C*‚                 sc # und auftrag müssen identisch sein
+     C*Â‚                 sc # und auftrag mÃ¼ssen identisch sein
      C                   if        l250  <> h030    or
      c                             l040  <> h050
      c                   leave
@@ -460,8 +467,8 @@ MG02 c                   exsr      sr9999
      C     ##lines       ENDSR
 
      C**************************************************************************
-     C*‚lesen Kopfsatz in Trend z.B: 88505 und Auftrags# Fremdsystem
-     C*‚lesen Possatz in Trend z.B: 88505 und Auftrags# Fremdsystem und Pos#
+     C*Â‚lesen Kopfsatz in Trend z.B: 88505 und Auftrags# Fremdsystem
+     C*Â‚lesen Possatz in Trend z.B: 88505 und Auftrags# Fremdsystem und Pos#
      C*-------------------------------------------------------------------------
      C*
      C     sr1000        BEGSR
@@ -472,7 +479,7 @@ MG02 c                   exsr      sr9999
      c                   move      h030          ifakiffi
      c                   movel     h050          ifakIFNR
      c                   if        h030  = 900000
-     C*‚                 Testdaten aus 365 ORDERFTEST
+     C*Â‚                 Testdaten aus 365 ORDERFTEST
      c                   move      '00099'       ifakiffi
      c                   endif
      c     keykopf       chain     #IFAKL1                            92
@@ -498,11 +505,11 @@ MG02 c                   exsr      sr9999
 
 MG02 c****               exsr      sr9999
 
-     C*‚                 Kopfdaten Trend bei *in92 = '1'
+     C*Â‚                 Kopfdaten Trend bei *in92 = '1'
      c   92              exsr      sr2000
-     C*‚                 Sendungsdaten Trend bei *in92 = '1' Ebene 92
+     C*Â‚                 Sendungsdaten Trend bei *in92 = '1' Ebene 92
      c   92              exsr      sr2200
-     C*‚                 Incoterms aufbereiten aus h160
+     C*Â‚                 Incoterms aufbereiten aus h160
      c                   clear                   incoterm         65
      c                   clear                   mScan
      c                   clear                   pos
@@ -520,7 +527,7 @@ MG02 c****               exsr      sr9999
      c                                         ', Incoterms 2010'
      c                   endif
      c
-     C*‚                 Textdaten Trend bei *in92 = '1' Ebene 92
+     C*Â‚                 Textdaten Trend bei *in92 = '1' Ebene 92
      c                   setoff                                       202122
      c                   clear                   p                 3 0
      c                   if        h180 = 'H' or h180 = 'F' or h180 = 'B'
@@ -535,48 +542,48 @@ MG02 c****               exsr      sr9999
      c                   seton                                        22
      c   92              exsr      sr2300
      c                   endif
-     C*‚                 Tesco
+     C*Â‚                 Tesco
      c                   if        IFAKIFFI = '40631' and
      c                             H020 =  1001798
      c   92              exsr      srTESCO
      c                   endif
-     C*‚                 MGD Products Ltd
+     C*Â‚                 MGD Products Ltd
      c                   if        IFAKIFFI = '40631' and
      c                             H020 =  644871
      c   92              exsr      srMGD
      c                   endif
-     C*‚                 AO RETAIL LTD
+     C*Â‚                 AO RETAIL LTD
      c                   if        IFAKIFFI = '40631' and
      c                             H020 =  1002638
      c   92              exsr      srRETAIL
      c                   endif
-     C*‚                 Robert Dyas
+     C*Â‚                 Robert Dyas
      c                   if        IFAKIFFI = '40631' and
      c                             H020 =  1001969
      c   92              exsr      srDyas
      c                   endif
-     C*‚                 EDIdaten Trend bei *in92 = '1' Ebene 92
+     C*Â‚                 EDIdaten Trend bei *in92 = '1' Ebene 92
      c   92              exsr      sr2250
-     C*‚                 Sonderinfos für Benelux Ebene kopf
+     C*Â‚                 Sonderinfos fÃ¼r Benelux Ebene kopf
      c                   if        IFAKIFFI = '15177' or
      c                             IFAKIFFI = '62765'
      c                   clear                   p                 3 0
 mg01 c   92              exsr      sr2300k
      c                   endif
 
-     C*‚                 zusätzliche eMail Adressierungen  xyz
+     C*Â‚                 zusÃ¤tzliche eMail Adressierungen  xyz
      c                   if        IFAKIFFI = '55278' or
      c                             IFAKIFFI = '35671'
      c                   clear                   p                 3 0
 mg01 c   92              exsr      sr2300k
      c                   endif
 
-     C*‚                 zusätzliche eMail Adressierungen  xyz
+     C*Â‚                 zusÃ¤tzliche eMail Adressierungen  xyz
      c                   if        IFAKIFFI = '00077'
 mg01 c                   exsr      sr2300Bank
      c                   endif
 
-     C*‚                 Speditionsinformationen
+     C*Â‚                 Speditionsinformationen
      c                   if        H280   ='401 -                  '
      c                   clear                   H280
      c                   endif
@@ -586,21 +593,21 @@ mg01 c                   exsr      sr2300Bank
      c                   endif
 mg01 c   92              exsr      sr2300spd
      c                   endif
-     C*‚                 Warehouse Informationen
+     C*Â‚                 Warehouse Informationen
      c                   if        H180 = 'W' or H200 ='W' or H220 ='W' or
      c                             H180 = 'B' or H200 ='B'
 mg01 c   92              exsr      sr2300wae
      c                   endif
 
-     C*‚                 lesen über KPIF, da evtl. Hauptartikel nur in
-     C*‚                 kpif hinterlegt wegen sku-Anpassung
+     C*Â‚                 lesen Ã¼ber KPIF, da evtl. Hauptartikel nur in
+     C*Â‚                 kpif hinterlegt wegen sku-Anpassung
      c                   if        IFAKIFFI <>'55278'  or
      c                             IFAKIFFI <>'35671'
      c   93              exsr      sr9992
      c                   endif
-     C*‚                 Positionsdaten Trend bei *in93 = '1'
+     C*Â‚                 Positionsdaten Trend bei *in93 = '1'
      c   93              exsr      sr2100
-     C*‚                 Textdaten Trend bei *in93 = '1' Ebene 93
+     C*Â‚                 Textdaten Trend bei *in93 = '1' Ebene 93
      c                   setoff                                       202122
      c                   clear                   p                 3 0
      c                   if        h180 = 'L'
@@ -621,25 +628,25 @@ mg01 c   92              exsr      sr2300wae
      c                   if        IFAKIFFI = '00005' and l110 <> ' '
      c   93              exsr      sr2300art
      c                   endif
-     C*‚                 italy also 25.09.2013
+     C*Â‚                 italy also 25.09.2013
      c                   if        IFAKIFFI = '55278' and l110 <> ' '
      c   93              exsr      sr2300art
      c                   endif
      c                   if        IFAKIFFI = '35671' and l110 <> ' '
      c   93              exsr      sr2300art
      c                   endif
-     C*‚                 Siegen also 26.05.2017
+     C*Â‚                 Siegen also 26.05.2017
      c****               if        IFAKIFFI = '98264' and l110 <> ' '
      c** 93              exsr      sr2300art
      c****               endif
-     C*‚                 HDX 15.02.2024 Erweiterungen Dirk/Anja  20240228 Achtung ohne *in93
+     C*Â‚                 HDX 15.02.2024 Erweiterungen Dirk/Anja  20240228 Achtung ohne *in93
      c                   if        IFAKIFFI = '00002' and
      c                             (%subst(l150:415:10) <> ' ' or
      c                              %subst(l150:433:15) <> ' ' )
      c***93              exsr      sr2300art
      c                   exsr      sr2300art
      c                   endif
-     C*‚                 Sonderinfos für Benelux/Siegen Ebene Position
+     C*Â‚                 Sonderinfos fÃ¼r Benelux/Siegen Ebene Position
      c                   if        IFAKIFFI = '15177' or
      c                             IFAKIFFI = '62765' or
      c                             IFAKIFFI = '98264' or
@@ -667,7 +674,7 @@ mg01 c   92              exsr      sr2300wae
      c                   endif
 
 
-     C*‚                 zusätzliche eMail function
+     C*Â‚                 zusÃ¤tzliche eMail function
      c                   if        (( IFAKIFFI = '55278' or
      c                                IFAKIFFI = '35671' or
      c                                IFAKIFFI = '88505' or
@@ -686,7 +693,7 @@ mg01 c   92              exsr      sr2300wae
      c                   eval      umlaut2 = '##'
      c                   eval      pos = %scan(umlaut: h310)
      c                   eval      pos2= %scan(umlaut2: h310)
-      *‚Zeichen
+      *Â‚Zeichen
      c   92              if        pos > 0 and pos2 > 0  and *in92='1'
      C                   clear                   address
      C                   setoff                                       61
@@ -702,7 +709,7 @@ mg01 c   92              exsr      sr2300wae
      c   62              movel     date          h360
      c   62              movel     tstampi       h370
      c   62              write     ordermsghf
-     c***62***********   exsr      sr_t_and_t ==> im Nachlauf über sql
+     c***62***********   exsr      sr_t_and_t ==> im Nachlauf Ã¼ber sql
      c                   endif
      C   62              clear                   h600x
      C   62              clear                   h610x
@@ -725,7 +732,7 @@ mg01 c   92              exsr      sr2300wae
      c                   movel     date          h360
      c                   movel     tstampi       h370
      c                   write     ordermsghf
-     c***62***********   exsr      sr_t_and_t ==> im Nachlauf über sql
+     c***62***********   exsr      sr_t_and_t ==> im Nachlauf Ã¼ber sql
      c                   endif
      c                   clear                   h600x
      c                   clear                   h610x
@@ -740,25 +747,25 @@ mg01 c   92              exsr      sr2300wae
      c                   endif
 
 
-     C*‚                 update Protokoll line
+     C*Â‚                 update Protokoll line
      c                   exsr      sr2800
 
       *
      C     ##1000        ENDSR
 
      C**************************************************************************
-     C*‚übergaben Kopf KOPFEBENE Kopfdatei
-     C*‚ifakvsbd  = spediteur/versandbedingung  '014' z.B Hellmann  UK
+     C*Â‚Ã¼bergaben Kopf KOPFEBENE Kopfdatei
+     C*Â‚ifakvsbd  = spediteur/versandbedingung  '014' z.B Hellmann  UK
      C*-------------------------------------------------------------------------
      C*
      C     sr2000        BEGSR
       *
-     C*‚                 Kopfdaten Trend
+     C*Â‚                 Kopfdaten Trend
      c                   setoff                                       79
      c                   clear                   IFAK1
      c                   move      h030          ifakiffi
      c                   if        h030  = 900000
-     C*‚                 Testdaten aus 365
+     C*Â‚                 Testdaten aus 365
      c                   move      '00099'       ifakiffi
      c                   endif
      c                   movel     date          ifakueda
@@ -768,10 +775,10 @@ mg01 c   92              exsr      sr2300wae
      c                   movel     date          ifakJDAT
      c                   movel     zeit          ifakJZEI
      C                   movel     'EDI    '     IFAKKDSB
-     C                   movel     §§§usr        IFAkUSER
-     C                   movel     §§§pgm        IFAkPROG
-     C                   movel     §§§job        IFAkjnam
-     C                   movel     §§§LIB        IFAkbibl
+     C                   movel     Â§Â§Â§usr        IFAkUSER
+     C                   movel     Â§Â§Â§pgm        IFAkPROG
+     C                   movel     Â§Â§Â§job        IFAkjnam
+     C                   movel     Â§Â§Â§LIB        IFAkbibl
      C                   movel     '01'          IFAkfirm
       *
      c                   movel     '*  '         ifAKSABE
@@ -842,7 +849,7 @@ mg01 c   92              exsr      sr2300wae
      c                   if        IFAKIFFI = '91453'
      c                   movel     '#15'         ifAKSABE
      C                   endif
-     C*‚                 Stammdatenauftrag Workist
+     C*Â‚                 Stammdatenauftrag Workist
      C                   if        #h030     = 00035
      c                   eval      ifAKSABE  = %subst(h300:001:03)
      c                   if        ifAKSABE  = ' '
@@ -851,18 +858,18 @@ mg01 c   92              exsr      sr2300wae
      C*                             ifAKSABE  = '*  '
      c                   endif
      C                   endif
-     C*‚                 Stammdatenauftrag B2BB2C übersteueren
+     C*Â‚                 Stammdatenauftrag B2BB2C Ã¼bersteueren
      C                   if        #h030     = 00055
      c                   eval      ifAKSABE  = %subst(h300:001:03)
      c                   eval      ifAKSABE  = 'B2B'
      C                   endif
-     C*‚                 dcs dometic claim system internetuser
+     C*Â‚                 dcs dometic claim system internetuser
      C                   if        #h030     = 0000005
      c                   exsr      srDCS_ADR
      c                   movel     'GAR'         ifAKSABE
      c                   eval      ifAKSABE  = %subst(h310:232:03)
      C                   endif
-     C*‚                 dcs dometic claim system internetuser
+     C*Â‚                 dcs dometic claim system internetuser
      C                   if        #h030     = 0000077   or
      C                             #h030     = 0000079
      c                   movel     'GA '         ifAKSABE
@@ -877,7 +884,7 @@ mg01 c   92              exsr      sr2300wae
      c                   seton                                        79
      c                   endif
      c                   movel     '08 '         ifakafat
-     C*‚                 dcs dometic claim system internetuser
+     C*Â‚                 dcs dometic claim system internetuser
      C                   if        #h030     = 0000005
      c                   movel     '17 '         ifakafat
      c                   eval      ifakafat = %subst(h310:229:02)
@@ -888,11 +895,11 @@ mg01 c   92              exsr      sr2300wae
      c                   if        IFAKIFFI  = '00025'
      c                   movel     '01 '         ifakafat
      c                   endif
-     C*‚                 Stammdatenauftrag Workist
+     C*Â‚                 Stammdatenauftrag Workist
      C                   if        #h030     = 00035
      c                   movel     '01 '         ifakafat
      C                   endif
-     C*‚                 Stammdatenauftrag wie Workist
+     C*Â‚                 Stammdatenauftrag wie Workist
      C                   if        #h030     = 00055
      c                   movel     '01 '         ifakafat
      C                   endif
@@ -909,7 +916,7 @@ mg01 c   92              exsr      sr2300wae
      c                   movel     '08 '         ifakafat
      c                   endif
      c                   endif
-     C*‚                 webOrder
+     C*Â‚                 webOrder
      C                   if        #h030     = 0000077
      c                   movel     '81 '         ifakafat
      C                   endif
@@ -918,11 +925,11 @@ mg01 c   92              exsr      sr2300wae
      C                   endif
      c                   move      h040          ##h040            6
      c                   movel     ##h040        ifakkdnr
-     C*‚                 Frankreich Dachser Renault  20211206    088510 eigener Kunde
+     C*Â‚                 Frankreich Dachser Renault  20211206    088510 eigener Kunde
      C                   if        #h030     = 0088505   and
      C                             (h020      = 5007913  or
      C                              h020      = 5007935  )
-     C*‚                 Frankreich Dachser Renault   229677   17.02.2022
+     C*Â‚                 Frankreich Dachser Renault   229677   17.02.2022
      C                   movel     '088510    '  ifakkdnr
      C                   endif
      c                   clear                   #IFAKVSBD
@@ -932,7 +939,7 @@ mg01 c   92              exsr      sr2300wae
      c                   move      h230          IFAKVSBD
      c                   movel     '0'           IFAKVSBD
      c                   endif
-     c*  übergaben aus Italien teilweise falsch
+     c*  Ã¼bergaben aus Italien teilweise falsch
      c                   if        IFAKIFFI = '55278'  or
      c                             IFAKIFFI = '35671'
      c                   move      h230          IFAKVSBD
@@ -945,39 +952,39 @@ mg01 c   92              exsr      sr2300wae
      c                   movel     '103'         IFAKVSBD
      c                   endif
      C                   endif
-     c*  übergaben aus Spanien bei blank
+     c*  Ã¼bergaben aus Spanien bei blank
      c                   if        IFAKIFFI = '78146' and
      c                             h230     = '   '
      c                   movel     '032'         IFAKVSBD
-     c*  übergaben aus Spanien jetzt Dacher #INC-189181
+     c*  Ã¼bergaben aus Spanien jetzt Dacher #INC-189181
      c                   movel     '220'         IFAKVSBD
      C                   endif
-     c*  übergaben aus Spanien bei blank
+     c*  Ã¼bergaben aus Spanien bei blank
      c                   if        IFAKIFFI = '78146' and
      c                             h230     = '04'
      c                   movel     '104'         IFAKVSBD
-     c*  übergaben aus Spanien jetzt Dacher #INC-189181
+     c*  Ã¼bergaben aus Spanien jetzt Dacher #INC-189181
      c                   movel     '220'         IFAKVSBD
      C                   endif
      c                   if        IFAKIFFI = '78146' and
      c                             h230     = '02'
      c                   movel     '025'         IFAKVSBD
-     c*  übergaben aus Spanien jetzt Dacher #INC-189181
+     c*  Ã¼bergaben aus Spanien jetzt Dacher #INC-189181
      c                   movel     '220'         IFAKVSBD
      C                   endif
      c                   if        IFAKIFFI = '78146' and
      c                             h230     = '25'
      c                   movel     '025'         IFAKVSBD
-     c*  übergaben aus Spanien jetzt Dacher #INC-189181
+     c*  Ã¼bergaben aus Spanien jetzt Dacher #INC-189181
      c                   movel     '220'         IFAKVSBD
      C                   endif
      c                   if        IFAKIFFI = '78146' and
      c                             h230     = '24'
      c                   movel     '024'         IFAKVSBD
-     c*  übergaben aus Spanien jetzt Dacher #INC-189181
+     c*  Ã¼bergaben aus Spanien jetzt Dacher #INC-189181
      c                   movel     '220'         IFAKVSBD
      C                   endif
-     c*  übergaben aus Spanien bei blank
+     c*  Ã¼bergaben aus Spanien bei blank
      c                   if        IFAKIFFI = '78146' and
      c                             h230     = '22'
      c                   movel     '220'         IFAKVSBD
@@ -986,7 +993,7 @@ mg01 c   92              exsr      sr2300wae
      c                             h230     = '00'
      c                   movel     '220'         IFAKVSBD
      C                   endif
-     c*  übergaben aus Spanien bei 32 Dachser nach Hellmann
+     c*  Ã¼bergaben aus Spanien bei 32 Dachser nach Hellmann
      c                   if        IFAKIFFI = '78146' and
      c                             h230     = '32'
      c***************    movel     '008'         IFAKVSBD
@@ -997,7 +1004,7 @@ mg01 c   92              exsr      sr2300wae
      c                             h230     = '77'
      c                   movel     '220'         IFAKVSBD
      C                   endif
-     c*  übergaben aus Siegen
+     c*  Ã¼bergaben aus Siegen
      c                   if        IFAKIFFI  = '98264'  and
      c                             ( h230 = '11' or h230 = '12'
      c                                           or h230 = '13')
@@ -1016,7 +1023,7 @@ mg01 c   92              exsr      sr2300wae
      c                             %subst(h290:001:03) <> 'DAY'
      C                   eval      IFAKVSBD = %subst(h290:001:03)
      c                   endif
-     c*  übergaben aus Österreich
+     c*  Ã¼bergaben aus Ã–sterreich
      c                   if        IFAKIFFI  = '54939'  and
      c                             ( h230 = '15' or h230 = '16')
      c                   move      h230          IFAKVSBD
@@ -1082,7 +1089,7 @@ mg01 c   92              exsr      sr2300wae
      c                   eval      IFAKVSBD = %subst(h310:417:03)
      c                   movel     IFAKVSBD      #IFAKVSBD         3
      c                   endif
-     c*  übergaben aus Italien teilweise falsch
+     c*  Ã¼bergaben aus Italien teilweise falsch
      c                   if        IFAKIFFI = '55278' or
      c                             IFAKIFFI = '35671'
      c**** bella 06.11.2015
@@ -1093,7 +1100,7 @@ mg01 c   92              exsr      sr2300wae
      c                   movel     '103'         IFAKVSBD
      c                   endif
      C                   endif
-     c**** nur für Slowakia
+     c**** nur fÃ¼r Slowakia
      c                   if        IFAKIFFI = '72511'  and
      c                             ifakvsbd  ='029'
      c                   movel     '129'         ifakvsbd
@@ -1119,7 +1126,7 @@ MG01 C                   endif
      c                   eval      IFAKVSBD = '027'
      c                   endif
      c                   if        h030     =  02511
-     c**** linn #INC-141204 grundsätzlich jetzt
+     c**** linn #INC-141204 grundsÃ¤tzlich jetzt
      c                   eval      IFAKVSBD = '224'
      c**** linn #INC-135293
      c                   if        h140     = 'UK'  or
@@ -1239,57 +1246,57 @@ MG01 C                   endif
      C                   movel     'DCS    '     IFAKKDSB
      C********???        movel     '004'         ifaklibd
      c                   endif
-     C*‚                 B2C  ==> IFAKLIAR
-     C*‚                 Komplettkennzeichen wird beachtet und würde übersteuern.
-     C*‚                 GB
+     C*Â‚                 B2C  ==> IFAKLIAR
+     C*Â‚                 Komplettkennzeichen wird beachtet und wÃ¼rde Ã¼bersteuern.
+     C*Â‚                 GB
      C                   if        #h030     = 0040631   and
      C                             h020      = 1002918
      c                   movel     'B2C'         ifakafat
      C                   endif
-     C*‚                 Norwegen
+     C*Â‚                 Norwegen
      C                   if        #h030     = 0042634   and
      C                             h020      = 0034369
      c                   movel     'B2C'         ifakafat
      C                   endif
-     C*‚                 Polen
+     C*Â‚                 Polen
      C                   if        #h030     = 0078678   and
      C                             h020      = 0001716
      c                   movel     'B2C'         ifakafat
      C                   endif
-     C*‚                 Finnland
+     C*Â‚                 Finnland
      C                   if        #h030     = 0005084   and
      C                             %subst(h310:417:03)  = '219'
      C*************                h020      = 0006793          20.4.2021
      c                   movel     'B2C'         ifakafat
      C                   endif
-     C*‚                 Dänemark
+     C*Â‚                 DÃ¤nemark
      C                   if        #h030     = 0001887   and
      C                             %subst(h310:417:03)  = '219'
      C*************                h020      = 0006998          20.4.2021
      c                   movel     'B2C'         ifakafat
      C                   endif
-     C*‚                 Schweden
+     C*Â‚                 Schweden
      C                   if        #h030     = 0008138   and
      C                             %subst(h310:417:03)  = '219'
      C*************                h020      = 0050337          20.4.2021
      c                   movel     'B2C'         ifakafat
      C                   endif
-     C*‚                 Frankreich b2c
+     C*Â‚                 Frankreich b2c
      C                   if        #h030     = 0088505   and
      C                             h020      = 5007481
      c                   movel     'B2C'         ifakafat
      C                   endif
-     C*‚                 Frankreich Dachser Renault  20211206   0088510 eigener Kunde
+     C*Â‚                 Frankreich Dachser Renault  20211206   0088510 eigener Kunde
      C                   if        #h030     = 0088505   and
      C                             h020      = 5007913
-     C*‚                 Frankreich Dachser Renault   229677
+     C*Â‚                 Frankreich Dachser Renault   229677
      C                   endif
-     C*‚                 Spanien
+     C*Â‚                 Spanien
      C                   if        #h030     = 0078146   and
      C                             %subst(h310:417:03)  = '219'
      c                   movel     'B2C'         ifakafat
      C                   endif
-     C*‚                 Italien
+     C*Â‚                 Italien
      C                   if        #h030     = 0055278   and
      C                             %subst(h310:417:03)  = '219'
      c                   movel     'B2C'         ifakafat
@@ -1330,7 +1337,7 @@ MG01 C                   endif
      C                   movel     'EXP'         IFAKABTL
      C                   movel     'F01'         IFAKKSTC
      c                   endif
-     c*********          Änderung 01.02.2016
+     c*********          Ã„nderung 01.02.2016
      c                   if        H040      =   001075 or
      c                             H040      =   082157
      c***                Sammelrechnungskennzeichen
@@ -1339,8 +1346,8 @@ MG01 C                   endif
      c                   endif
      c                   endif
      c
-     c*********          Änderung 13.04.2023
-     C*‚                 Frankreich, England und Polen Testdaten ORDERFTEST
+     c*********          Ã„nderung 13.04.2023
+     C*Â‚                 Frankreich, England und Polen Testdaten ORDERFTEST
      C                   if        (#h030     = 0088505  or
      C                              #h030     = 0040631  or
      C                              #h030     = 0040670  or
@@ -1354,13 +1361,13 @@ MG01 C                   endif
      c                   endif
      c                   endif
      c
-     c*********          Änderung 05.09.2013
+     c*********          Ã„nderung 05.09.2013
      c                   if        IFAKIFFI = '01887' or
      c                             IFAKIFFI = '08138'
      c                   movel     h050          IFAKMAAF
      c                   movel     h240          ifakref1
      c                   endif
-     c*********          Änderung 17.04.2012
+     c*********          Ã„nderung 17.04.2012
      c                   if        IFAKIFFI = '55278' or
      c                             IFAKIFFI = '35671' or
      c                             IFAKIFFI = '78678' or
@@ -1369,23 +1376,23 @@ MG01 C                   endif
      c                             IFAKIFFI = '78146'
      c                   movel     h050          IFAKMAAF
      c                   endif
-     c*********          Änderung 04.07.2012
+     c*********          Ã„nderung 04.07.2012
      c                   if        IFAKIFFI = '78146'
      c                   movel     h240          IFAKREF1
      c                   endif
      c
-     c*********          Änderung 02.11.2016 wegen AMAZONE
+     c*********          Ã„nderung 02.11.2016 wegen AMAZONE
      c                   if        IFAKIFFI = '40631' or
      c                             IFAKIFFI = '88505'
      c                   movel     H170          IFAKREF1
      c                   endif
      c
-     c*********          aus Lager Schilgen nur für diesen Kunden
+     c*********          aus Lager Schilgen nur fÃ¼r diesen Kunden
      c                   if        IFAKIFFI = '72511'
      c                   movel     '060'         IFAKLANR
      c                   endif
      c
-     c*********          Änderung 19.04.2012
+     c*********          Ã„nderung 19.04.2012
      c                   if        IFAKIFFI = '55278' or
      c                             IFAKIFFI = '35671'
      c                   movel     h240          IFAKREF1
@@ -1396,7 +1403,7 @@ MG01 C                   endif
      c                   movel     h240          IFAKREF1
      c                   endif
      c
-     c*********          Änderung 18.02.2014
+     c*********          Ã„nderung 18.02.2014
      c                   if        IFAKIFFI = '00004'
      c                   movel     'PDAP   '     IFAKKDSB
      c                   endif
@@ -1419,7 +1426,7 @@ MG01 C                   endif
      c                   movel     h270          #ifaksarg         1
      c                   movel     h270          #ifaksarg2        1
 
-     c*********          Änderung 01.02.2016
+     c*********          Ã„nderung 01.02.2016
      c                   if        IFAKIFFI = '00002'
      c                   if        H040      =   001075 or
      c                             H040      =   082157
@@ -1431,7 +1438,7 @@ MG01 C                   endif
      c                   endif
      c                   endif
 
-     C*‚                 dcs dometic claim system internetuser
+     C*Â‚                 dcs dometic claim system internetuser
      c                   if        IFAKIFFI = '00005'
      c***                Kostenbriefkasten
      c****               movel     'J'           IFAKKOKZ
@@ -1443,12 +1450,12 @@ MG01 C                   endif
      c                   endif
      c
      c                   if        h030  = 900000
-     C*‚                 Testdaten aus 365
+     C*Â‚                 Testdaten aus 365
      c                   movel     ifakref1      IFAKMAAF
-     C*‚                 Testdaten aus 365 22.03.3022 !!!!
+     C*Â‚                 Testdaten aus 365 22.03.3022 !!!!
      c                   movel     h240          ifakref1
      c                   endif
-     C*‚                 Achtung übersteuern
+     C*Â‚                 Achtung Ã¼bersteuern
      c                   if        IFAKIFFI  = '98264'  and
      c                             h230 = '66'
      c                   eval      IFAKAFAT = '59 '
@@ -1461,16 +1468,16 @@ MG01 C                   endif
      C     ##2000        ENDSR
 
      C**************************************************************************
-     C*‚übergaben Sendungsempfangsdaten KOPFEBENE
-     C*‚IFADIFAA = 1 Auftraggeber-Adresse             adag
-     C*‚IFADIFAA = 2 Versand Adresse                  adve
-     C*‚IFADIFAA = 3 Rechnungsempfänger Adresse       adre
-     C*‚IFADIFAA =   Rechnungsempfänger Adresse       *default keinen Satz
+     C*Â‚Ã¼bergaben Sendungsempfangsdaten KOPFEBENE
+     C*Â‚IFADIFAA = 1 Auftraggeber-Adresse             adag
+     C*Â‚IFADIFAA = 2 Versand Adresse                  adve
+     C*Â‚IFADIFAA = 3 RechnungsempfÃ¤nger Adresse       adre
+     C*Â‚IFADIFAA =   RechnungsempfÃ¤nger Adresse       *default keinen Satz
      C*-------------------------------------------------------------------------
      C*
      C     sr2200        BEGSR
       *
-     C*‚                 Sendungsempfangsdaten übergeben Neuanlage *in53=1
+     C*Â‚                 Sendungsempfangsdaten Ã¼bergeben Neuanlage *in53=1
      c                   clear                   IFAd1
      c                   movel     date          ifadueda
      c                   movel     zeit          ifadueuz
@@ -1478,10 +1485,10 @@ MG01 C                   endif
      c                   movel     zeit          ifadEZEI
      c                   movel     date          ifadJDAT
      c                   movel     zeit          ifadJZEI
-     C                   movel     §§§usr        IFAdUSER
-     C                   movel     §§§pgm        IFAdPROG
-     C                   movel     §§§job        IFAdjnam
-     C                   movel     §§§LIB        IFAdbibl
+     C                   movel     Â§Â§Â§usr        IFAdUSER
+     C                   movel     Â§Â§Â§pgm        IFAdPROG
+     C                   movel     Â§Â§Â§job        IFAdjnam
+     C                   movel     Â§Â§Â§LIB        IFAdbibl
      C                   movel     '01'          IFADFIRM
      c                   move      IFAkIFFI      ifadiffi
      C                   movel     ifakIFNR      ifadifnr
@@ -1546,16 +1553,16 @@ MG01 C                   endif
      C*********          if        ifakiffi  = '08138'
      c*********          movel     h110          ifadstra
      c*********          clear                   ifadnam2
-     c*********          eval      ifadwort   = 'VÄSTRA FRÖLUNDA'
+     c*********          eval      ifadwort   = 'VÃ„STRA FRÃ–LUNDA'
      C*********          endif
      c
-      *                  ab 16.02.2012 Änderung
+      *                  ab 16.02.2012 Ã„nderung
      C                   if        ifakiffi  = '02921'
      c                   movel     h110          ifadstra
      c                   clear                   ifadnam2
      C                   endif
       *
-      *                  ab 07.10.2020 Änderung for Spain
+      *                  ab 07.10.2020 Ã„nderung for Spain
      C                   if        ifakiffi  = '78146' and
      c                             %subst(h310:301:60) <> *blank
      c                   eval      ifadstra  = %subst(h310:301:30)
@@ -1565,19 +1572,19 @@ MG01 C                   endif
      c                   endif
      C                   endif
       *
-      *                  ab 06.08.2019 Änderung
+      *                  ab 06.08.2019 Ã„nderung
      C                   if        ifakiffi  = '98264' and
      c                             %subst(h310:501:12) <> *blank
      c                   movel     ' '           ifadpolz
      c                   eval      ifadpolz = %subst(h310:501:12)
      C                   endif
       *
-      *‚                 ifadpold für b2b übersteuern
+      *Â‚                 ifadpold fÃ¼r b2b Ã¼bersteuern
      C                   if        #h030     = 00055
      C                   exsr      srIso2
      C                   endif
       *
-      *‚                 HDX Besonderheit 07.08.2026
+      *Â‚                 HDX Besonderheit 07.08.2026
      C                   if        IFAKIFFI = '00002' and
      C                             %subst(h310:480:21) <> *blank
      c                   clear                   ifadnam2
@@ -1592,12 +1599,12 @@ MG01 C                   endif
      C     ##2200        ENDSR
 
      C**************************************************************************
-     C*‚übergaben EDIdaten KOPFEBENE
+     C*Â‚Ã¼bergaben EDIdaten KOPFEBENE
      C*-------------------------------------------------------------------------
      C*
      C     sr2250        BEGSR
       *
-     C*‚                 Sendungsempfangsdaten übergeben Neuanlage *in53=1
+     C*Â‚                 Sendungsempfangsdaten Ã¼bergeben Neuanlage *in53=1
      c                   clear                   IFed1
      c                   movel     date          ifedueda
      c                   movel     zeit          ifedueuz
@@ -1605,14 +1612,14 @@ MG01 C                   endif
      c                   movel     zeit          ifedEZEI
      c                   movel     date          ifedJDAT
      c                   movel     zeit          ifedJZEI
-     C                   movel     §§§usr        IFedUSER
-     C                   movel     §§§pgm        IFedPROG
-     C                   movel     §§§job        IFedjnam
-     C                   movel     §§§LIB        IFedbibl
+     C                   movel     Â§Â§Â§usr        IFedUSER
+     C                   movel     Â§Â§Â§pgm        IFedPROG
+     C                   movel     Â§Â§Â§job        IFedjnam
+     C                   movel     Â§Â§Â§LIB        IFedbibl
      C                   movel     '01'          IFedfirm
      c                   move      IFAkIFFI      ifediffi
      C                   movel     ifakIFNR      ifedifnr
-     c*****              Warenempfänger bei Teccom
+     c*****              WarenempfÃ¤nger bei Teccom
      c                   if        IFAKIFFI = '00003'
      C                   movel     H210          ifedilnr
      C                   endif
@@ -1623,15 +1630,15 @@ MG01 C                   endif
      C     ##2250        ENDSR
 
      C**************************************************************************
-     C*‚übergaben Textdaten     IFTA  Tab-Code
-     C*‚          Kopf     ==>   1    TXKO    ifatiftx
-     C*‚          Position ==>   3    TXPO    ifatiftx
-     C*‚          Schluss  ==>   2    TXSC    ifatiftx
-     C*‚
+     C*Â‚Ã¼bergaben Textdaten     IFTA  Tab-Code
+     C*Â‚          Kopf     ==>   1    TXKO    ifatiftx
+     C*Â‚          Position ==>   3    TXPO    ifatiftx
+     C*Â‚          Schluss  ==>   2    TXSC    ifatiftx
+     C*Â‚
      C*-------------------------------------------------------------------------
      C*
      C     sr2300        BEGSR
-     C*‚                 Textfelder auf Ebene des Kopfes und des Fusses
+     C*Â‚                 Textfelder auf Ebene des Kopfes und des Fusses
      c                   clear                   IFAt1
      c                   clear                   ##IFAt1
      c                   movel     date          ifatueda
@@ -1640,17 +1647,17 @@ MG01 C                   endif
      c                   movel     zeit          ifatEZEI
      c                   movel     date          ifatJDAT
      c                   movel     zeit          ifatJZEI
-     C                   movel     §§§usr        IFAtUSER
-     C                   movel     §§§pgm        IFAtPROG
-     C                   movel     §§§job        IFAtjnam
-     C                   movel     §§§LIB        IFatbibl
+     C                   movel     Â§Â§Â§usr        IFAtUSER
+     C                   movel     Â§Â§Â§pgm        IFAtPROG
+     C                   movel     Â§Â§Â§job        IFAtjnam
+     C                   movel     Â§Â§Â§LIB        IFatbibl
      C                   movel     '01'          IFatfirm
      c                   move      IFAkIFFI      ifatiffi
      C                   move      ifakIFNR      ifatifnr
      c                   movel     h060          ifaterda
      c***                movel     h070          ifatezei
      C*
-     C*‚                 kopf (1)
+     C*Â‚                 kopf (1)
      c                   if        ( h180 = 'H' and *in20 = '1' or
      c                               h180 = 'B' and *in20 = '1' or
      c                               h200 = 'H' and *in21 = '1' or
@@ -1666,13 +1673,13 @@ MG01 C                   endif
      c                   movel     'C '          IFATDRK4
      c                   endif
      c                   endif
-     C*‚                 Fuss (2)
+     C*Â‚                 Fuss (2)
      c                   if        ( h180 = 'F' and *in20 = '1' or
      c                               h200 = 'F' and *in21 = '1' or
      c                               h220 = 'F' and *in22 = '1'    )
      c                   movel     '2 '          ifatiftx
      c                   endif
-     C*‚                 Position (3)
+     C*Â‚                 Position (3)
      c                   if        ( h180 = 'L' and *in20 = '1' or
      c                               h200 = 'L' and *in21 = '1' or
      c                               h220 = 'L' and *in22 = '1'    )
@@ -1702,15 +1709,15 @@ MG01 c                   endif
      C     ##2300        ENDSR
 
      C**************************************************************************
-     C*‚übergaben Textdaten     IFTA  Tab-Code
-     C*‚          Kopf     ==>   1    TXKO    ifatiftx
-     C*‚          Position ==>   3    TXPO    ifatiftx
-     C*‚          Schluss  ==>   2    TXSC    ifatiftx
-     C*‚
+     C*Â‚Ã¼bergaben Textdaten     IFTA  Tab-Code
+     C*Â‚          Kopf     ==>   1    TXKO    ifatiftx
+     C*Â‚          Position ==>   3    TXPO    ifatiftx
+     C*Â‚          Schluss  ==>   2    TXSC    ifatiftx
+     C*Â‚
      C*-------------------------------------------------------------------------
      C*
      C     srTESCO       BEGSR
-     C*‚                 Textfelder auf Ebene des Kopfes und des Fusses
+     C*Â‚                 Textfelder auf Ebene des Kopfes und des Fusses
      c                   clear                   IFAt1
      c                   clear                   ##IFAt1
      c                   movel     date          ifatueda
@@ -1719,17 +1726,17 @@ MG01 c                   endif
      c                   movel     zeit          ifatEZEI
      c                   movel     date          ifatJDAT
      c                   movel     zeit          ifatJZEI
-     C                   movel     §§§usr        IFAtUSER
-     C                   movel     §§§pgm        IFAtPROG
-     C                   movel     §§§job        IFAtjnam
-     C                   movel     §§§LIB        IFatbibl
+     C                   movel     Â§Â§Â§usr        IFAtUSER
+     C                   movel     Â§Â§Â§pgm        IFAtPROG
+     C                   movel     Â§Â§Â§job        IFAtjnam
+     C                   movel     Â§Â§Â§LIB        IFatbibl
      C                   movel     '01'          IFatfirm
      c                   move      IFAkIFFI      ifatiffi
      C                   move      ifakIFNR      ifatifnr
      c                   movel     h060          ifaterda
      c***                movel     h070          ifatezei
      C*
-     C*‚                 kopf (1)
+     C*Â‚                 kopf (1)
      c                   movel     '1 '          ifatiftx
      c                   if        IFAKIFFI  =   '40631'
      c                             and  ( H020 =1001798  or
@@ -1759,15 +1766,15 @@ MG01 c                   endif
      C     ##Tesco       ENDSR
 
      C**************************************************************************
-     C*‚übergaben Textdaten     IFTA  Tab-Code
-     C*‚          Kopf     ==>   1    TXKO    ifatiftx
-     C*‚          Position ==>   3    TXPO    ifatiftx
-     C*‚          Schluss  ==>   2    TXSC    ifatiftx
-     C*‚
+     C*Â‚Ã¼bergaben Textdaten     IFTA  Tab-Code
+     C*Â‚          Kopf     ==>   1    TXKO    ifatiftx
+     C*Â‚          Position ==>   3    TXPO    ifatiftx
+     C*Â‚          Schluss  ==>   2    TXSC    ifatiftx
+     C*Â‚
      C*-------------------------------------------------------------------------
      C*
      C     srMGD         BEGSR
-     C*‚                 Textfelder auf Ebene des Kopfes und des Fusses
+     C*Â‚                 Textfelder auf Ebene des Kopfes und des Fusses
      c                   clear                   IFAt1
      c                   clear                   ##IFAt1
      c                   movel     date          ifatueda
@@ -1776,17 +1783,17 @@ MG01 c                   endif
      c                   movel     zeit          ifatEZEI
      c                   movel     date          ifatJDAT
      c                   movel     zeit          ifatJZEI
-     C                   movel     §§§usr        IFAtUSER
-     C                   movel     §§§pgm        IFAtPROG
-     C                   movel     §§§job        IFAtjnam
-     C                   movel     §§§LIB        IFatbibl
+     C                   movel     Â§Â§Â§usr        IFAtUSER
+     C                   movel     Â§Â§Â§pgm        IFAtPROG
+     C                   movel     Â§Â§Â§job        IFAtjnam
+     C                   movel     Â§Â§Â§LIB        IFatbibl
      C                   movel     '01'          IFatfirm
      c                   move      IFAkIFFI      ifatiffi
      C                   move      ifakIFNR      ifatifnr
      c                   movel     h060          ifaterda
      c***                movel     h070          ifatezei
      C*
-     C*‚                 kopf (1)
+     C*Â‚                 kopf (1)
      c                   movel     '1 '          ifatiftx
      c                   if        IFAKIFFI  =   '40631'
      c                             and  ( H020 = 644871  or
@@ -1807,15 +1814,15 @@ MG01 c                   endif
      C     ##MGD         ENDSR
 
      C**************************************************************************
-     C*‚übergaben Textdaten     IFTA  Tab-Code
-     C*‚          Kopf     ==>   1    TXKO    ifatiftx
-     C*‚          Position ==>   3    TXPO    ifatiftx
-     C*‚          Schluss  ==>   2    TXSC    ifatiftx
-     C*‚
+     C*Â‚Ã¼bergaben Textdaten     IFTA  Tab-Code
+     C*Â‚          Kopf     ==>   1    TXKO    ifatiftx
+     C*Â‚          Position ==>   3    TXPO    ifatiftx
+     C*Â‚          Schluss  ==>   2    TXSC    ifatiftx
+     C*Â‚
      C*-------------------------------------------------------------------------
      C*
      C     srRETAIL      BEGSR
-     C*‚                 Textfelder auf Ebene des Kopfes und des Fusses
+     C*Â‚                 Textfelder auf Ebene des Kopfes und des Fusses
      c                   clear                   IFAt1
      c                   clear                   ##IFAt1
      c                   movel     date          ifatueda
@@ -1824,17 +1831,17 @@ MG01 c                   endif
      c                   movel     zeit          ifatEZEI
      c                   movel     date          ifatJDAT
      c                   movel     zeit          ifatJZEI
-     C                   movel     §§§usr        IFAtUSER
-     C                   movel     §§§pgm        IFAtPROG
-     C                   movel     §§§job        IFAtjnam
-     C                   movel     §§§LIB        IFatbibl
+     C                   movel     Â§Â§Â§usr        IFAtUSER
+     C                   movel     Â§Â§Â§pgm        IFAtPROG
+     C                   movel     Â§Â§Â§job        IFAtjnam
+     C                   movel     Â§Â§Â§LIB        IFatbibl
      C                   movel     '01'          IFatfirm
      c                   move      IFAkIFFI      ifatiffi
      C                   move      ifakIFNR      ifatifnr
      c                   movel     h060          ifaterda
      c***                movel     h070          ifatezei
      C*
-     C*‚                 kopf (1)
+     C*Â‚                 kopf (1)
      c                   movel     '1 '          ifatiftx
      c                   if        IFAKIFFI  =   '40631'
      c                             and  ( H020 = 1002638 or
@@ -1891,15 +1898,15 @@ MG01 c                   endif
      C     ##RETAIL      ENDSR
 
      C**************************************************************************
-     C*‚übergaben Textdaten     IFTA  Tab-Code
-     C*‚          Kopf     ==>   1    TXKO    ifatiftx
-     C*‚          Position ==>   3    TXPO    ifatiftx
-     C*‚          Schluss  ==>   2    TXSC    ifatiftx
-     C*‚
+     C*Â‚Ã¼bergaben Textdaten     IFTA  Tab-Code
+     C*Â‚          Kopf     ==>   1    TXKO    ifatiftx
+     C*Â‚          Position ==>   3    TXPO    ifatiftx
+     C*Â‚          Schluss  ==>   2    TXSC    ifatiftx
+     C*Â‚
      C*-------------------------------------------------------------------------
      C*
      C     srDyas        BEGSR
-     C*‚                 Textfelder auf Ebene des Kopfes und des Fusses
+     C*Â‚                 Textfelder auf Ebene des Kopfes und des Fusses
      c                   clear                   IFAt1
      c                   clear                   ##IFAt1
      c                   movel     date          ifatueda
@@ -1908,17 +1915,17 @@ MG01 c                   endif
      c                   movel     zeit          ifatEZEI
      c                   movel     date          ifatJDAT
      c                   movel     zeit          ifatJZEI
-     C                   movel     §§§usr        IFAtUSER
-     C                   movel     §§§pgm        IFAtPROG
-     C                   movel     §§§job        IFAtjnam
-     C                   movel     §§§LIB        IFatbibl
+     C                   movel     Â§Â§Â§usr        IFAtUSER
+     C                   movel     Â§Â§Â§pgm        IFAtPROG
+     C                   movel     Â§Â§Â§job        IFAtjnam
+     C                   movel     Â§Â§Â§LIB        IFatbibl
      C                   movel     '01'          IFatfirm
      c                   move      IFAkIFFI      ifatiffi
      C                   move      ifakIFNR      ifatifnr
      c                   movel     h060          ifaterda
      c***                movel     h070          ifatezei
      C*
-     C*‚                 kopf (1)
+     C*Â‚                 kopf (1)
      c                   movel     '1 '          ifatiftx
      c                   if        IFAKIFFI  =   '40631'
      c                             and  ( H020 = 1002638 or
@@ -1959,13 +1966,13 @@ MG01 c                   endif
      C     ##DYAS        ENDSR
 
      C**************************************************************************
-     C*‚übergaben Textdaten     IFTA  Tab-Code     ARTIKEL
-     C*‚          Position ==>   3    TXPO    ifatiftx
-     C*‚SELECT * FROM txbe01 WHERE TBAFNR ='611115' and TBJHJJ =2024
+     C*Â‚Ã¼bergaben Textdaten     IFTA  Tab-Code     ARTIKEL
+     C*Â‚          Position ==>   3    TXPO    ifatiftx
+     C*Â‚SELECT * FROM txbe01 WHERE TBAFNR ='611115' and TBJHJJ =2024
      C*-------------------------------------------------------------------------
      C*
      C     sr2300art     BEGSR
-     C*‚                 Textfelder auf Ebene des Kopfes und des Fusses
+     C*Â‚                 Textfelder auf Ebene des Kopfes und des Fusses
      c                   clear                   IFAt1
      c                   clear                   ##IFAt1
      c                   movel     date          ifatueda
@@ -1974,17 +1981,17 @@ MG01 c                   endif
      c                   movel     zeit          ifatEZEI
      c                   movel     date          ifatJDAT
      c                   movel     zeit          ifatJZEI
-     C                   movel     §§§usr        IFAtUSER
-     C                   movel     §§§pgm        IFAtPROG
-     C                   movel     §§§job        IFAtjnam
-     C                   movel     §§§LIB        IFatbibl
+     C                   movel     Â§Â§Â§usr        IFAtUSER
+     C                   movel     Â§Â§Â§pgm        IFAtPROG
+     C                   movel     Â§Â§Â§job        IFAtjnam
+     C                   movel     Â§Â§Â§LIB        IFatbibl
      C                   movel     '01'          IFatfirm
      c                   move      IFAkIFFI      ifatiffi
      C                   move      ifakIFNR      ifatifnr
      c                   movel     h060          ifaterda
      c***                movel     h070          ifatezei
      C*
-     C*‚                 Position (3)
+     C*Â‚                 Position (3)
      c                   movel     '3 '          ifatiftx
      c*****              eval      ifatifpo   =  l050
      c                   z-add     l050          ifatifpo
@@ -1997,13 +2004,13 @@ MG01 c                   endif
      c
      c                   movel     '1         '  ifatifuc
      c                   movel     l110          ifattext
-     C*‚                 HDX 15.02.2024 Erweiterungen Dirk/Anja
-     C*‚                     eval      %subst(l150:415:10) = EINZELLIEF
-     C*‚                     eval      %subst(l150:428:05) = LIEFERPOS
-     C*‚                     eval      %subst(l150:433:10) = BESTELLPOS
-     C*‚                                BESTELLPOS Achtung BestellNummer gemeint
-     C*‚                     SELECT H050, H030, L080II, H020, L050, EINZELLIEF, LIEFERPOS,
-     C*‚                     BESTELLPOS FROM hdxorder§
+     C*Â‚                 HDX 15.02.2024 Erweiterungen Dirk/Anja
+     C*Â‚                     eval      %subst(l150:415:10) = EINZELLIEF
+     C*Â‚                     eval      %subst(l150:428:05) = LIEFERPOS
+     C*Â‚                     eval      %subst(l150:433:10) = BESTELLPOS
+     C*Â‚                                BESTELLPOS Achtung BestellNummer gemeint
+     C*Â‚                     SELECT H050, H030, L080II, H020, L050, EINZELLIEF, LIEFERPOS,
+     C*Â‚                     BESTELLPOS FROM hdxorderÂ§
       *                  *
      c                   if        IFAKIFFI   = '00002'
      c                   movel     'A '          IFATDRK1
@@ -2014,11 +2021,11 @@ MG01 c                   endif
      c                                          %subst(L040:001:10) +
      c                                          ' Purchase Order Nr.' +
      c                                          %subst(l150:433:15)
-     C*‚                 * bei Einzellieferscheinen aus l150:415:10
-     C*‚                 SELECT L040,substr(l150, 415, 10) FROM orderl
-     C*‚                 WHERE l160='HDXORDER'
-     C*‚                 and (substr(l150, 415, 1))<> X'00' and
-     C*‚                     (substr(l150, 416, 9))<> ' '
+     C*Â‚                 * bei Einzellieferscheinen aus l150:415:10
+     C*Â‚                 SELECT L040,substr(l150, 415, 10) FROM orderl
+     C*Â‚                 WHERE l160='HDXORDER'
+     C*Â‚                 and (substr(l150, 415, 1))<> X'00' and
+     C*Â‚                     (substr(l150, 416, 9))<> ' '
      C                   clear                   $x                1
      C                   eval      $x         = %subst(l150:415:1)
      c                   if        %subst(l150:416:09) <> *blank and
@@ -2055,15 +2062,15 @@ MG01 c                   endif
      C     ##2300art     ENDSR
 
      C**************************************************************************
-     C*‚übergaben Textdaten     IFTA  Tab-Code     Daten an Sedition
-     C*‚          Kopf     ==>   4    TX??    ifatiftx  (Speditionsdaten)
-     C*‚          Kopf     ==>   1    TX??    ifatiftx  (Speditionsdaten)
-     C*‚          Druck    ==>   F    TX??    IFATDRK1  (Speditionsdaten)
-     C*‚
+     C*Â‚Ã¼bergaben Textdaten     IFTA  Tab-Code     Daten an Sedition
+     C*Â‚          Kopf     ==>   4    TX??    ifatiftx  (Speditionsdaten)
+     C*Â‚          Kopf     ==>   1    TX??    ifatiftx  (Speditionsdaten)
+     C*Â‚          Druck    ==>   F    TX??    IFATDRK1  (Speditionsdaten)
+     C*Â‚
      C*-------------------------------------------------------------------------
      C*
      C     sr2300spd     BEGSR
-     C*‚                 Textfelder auf Ebene des Kopfes und des Fusses
+     C*Â‚                 Textfelder auf Ebene des Kopfes und des Fusses
      c                   clear                   IFAt1
      c                   clear                   ##IFAt1
      c                   movel     date          ifatueda
@@ -2072,19 +2079,19 @@ MG01 c                   endif
      c                   movel     zeit          ifatEZEI
      c                   movel     date          ifatJDAT
      c                   movel     zeit          ifatJZEI
-     C                   movel     §§§usr        IFAtUSER
-     C                   movel     §§§pgm        IFAtPROG
-     C                   movel     §§§job        IFAtjnam
-     C                   movel     §§§LIB        IFatbibl
+     C                   movel     Â§Â§Â§usr        IFAtUSER
+     C                   movel     Â§Â§Â§pgm        IFAtPROG
+     C                   movel     Â§Â§Â§job        IFAtjnam
+     C                   movel     Â§Â§Â§LIB        IFatbibl
      C                   movel     '01'          IFatfirm
      c                   move      IFAkIFFI      ifatiffi
      C                   move      ifakIFNR      ifatifnr
      c                   movel     h060          ifaterda
      c***                movel     h070          ifatezei
      C*
-     C*‚                 Spedition (4)
+     C*Â‚                 Spedition (4)
      c                   movel     '4 '          ifatiftx
-     c* änderungen 29.09.2011
+     c* Ã¤nderungen 29.09.2011
      c                   movel     '1 '          ifatiftx
      c                   movel     'F '          IFATDRK1
      c                   if        %subst(h280:1:3) ='301'  or
@@ -2092,7 +2099,7 @@ MG01 c                   endif
      c                   movel     'L '          IFATDRK2
      c                   endif
      c*                  movel     *off          IFATPRKZ
-     c* änderungen 29.09.2011 ende
+     c* Ã¤nderungen 29.09.2011 ende
      C*
      c                   movel     '1         '  ifatifuc
      c                   z-add     0             ifatifzn
@@ -2103,7 +2110,7 @@ MG01 c                   endif
 MG01 c                   if        IFAKIFFI = '98264'
      C                   movel     'sr2300spd '  IFatbibl
      c   30              write     ##IFAt1
-     C                   movel     §§§LIB        IFatbibl
+     C                   movel     Â§Â§Â§LIB        IFatbibl
 MG01 c                   endif
      c                   eval      p = p + 1
      c                   endif
@@ -2114,7 +2121,7 @@ MG01 c                   endif
 MG01 c                   if        IFAKIFFI = '98264'
      C                   movel     'sr2300spd '  IFatbibl
      c   30              write     ##IFAt1
-     C                   movel     §§§LIB        IFatbibl
+     C                   movel     Â§Â§Â§LIB        IFatbibl
 MG01 c                   endif
      c                   eval      p = p + 1
      c                   endif
@@ -2122,15 +2129,15 @@ MG01 c                   endif
      C     ##2300spd     ENDSR
 
      C**************************************************************************
-     C*‚übergaben Textdaten     IFTA  Tab-Code     Daten an Sedition
-     C*‚          Kopf     ==>   4    TX??    ifatiftx  (Speditionsdaten)
-     C*‚          Kopf     ==>   1    TX??    ifatiftx  (Speditionsdaten)
-     C*‚          Druck    ==>   F    TX??    IFATDRK1  (Speditionsdaten)
-     C*‚Inhalt des Fixtermines übergeben für Siegen 18.08.2015
+     C*Â‚Ã¼bergaben Textdaten     IFTA  Tab-Code     Daten an Sedition
+     C*Â‚          Kopf     ==>   4    TX??    ifatiftx  (Speditionsdaten)
+     C*Â‚          Kopf     ==>   1    TX??    ifatiftx  (Speditionsdaten)
+     C*Â‚          Druck    ==>   F    TX??    IFATDRK1  (Speditionsdaten)
+     C*Â‚Inhalt des Fixtermines Ã¼bergeben fÃ¼r Siegen 18.08.2015
      C*-------------------------------------------------------------------------
      C*
      C     sr2300fix     BEGSR
-     C*‚                 Textfelder auf Ebene des Kopfes und des Fusses
+     C*Â‚                 Textfelder auf Ebene des Kopfes und des Fusses
      c                   clear                   IFAt1
      c                   clear                   ##IFAt1
      c                   movel     date          ifatueda
@@ -2139,17 +2146,17 @@ MG01 c                   endif
      c                   movel     zeit          ifatEZEI
      c                   movel     date          ifatJDAT
      c                   movel     zeit          ifatJZEI
-     C                   movel     §§§usr        IFAtUSER
+     C                   movel     Â§Â§Â§usr        IFAtUSER
      C                   movel     'ORDERR#  '   IFAtPROG
-     C                   movel     §§§job        IFAtjnam
-     C                   movel     §§§LIB        IFatbibl
+     C                   movel     Â§Â§Â§job        IFAtjnam
+     C                   movel     Â§Â§Â§LIB        IFatbibl
      C                   movel     '01'          IFatfirm
      c                   move      IFAkIFFI      ifatiffi
      C                   move      ifakIFNR      ifatifnr
      c                   movel     h060          ifaterda
      c***                movel     h070          ifatezei
      C*
-     C*‚                 Spedition (4)
+     C*Â‚                 Spedition (4)
      c                   movel     '4 '          ifatiftx
      c*
      c                   movel     '1 '          ifatiftx
@@ -2180,15 +2187,15 @@ MG01 c                   endif
      C     ##2300fix     ENDSR
 
      C**************************************************************************
-     C*‚übergaben Textdaten     IFTA  Tab-Code     Daten für Warehouse
-     C*‚          Position ==>   5    TX??    ifatiftx  (Warehouseangaben)
-     C*‚          Position ==>   1    TX??    ifatiftx  (Warehouseangaben)
-     C*‚          Druck    ==>   K    TX??    IFATDRK1  (Warehouseangaben)
-     C*‚
+     C*Â‚Ã¼bergaben Textdaten     IFTA  Tab-Code     Daten fÃ¼r Warehouse
+     C*Â‚          Position ==>   5    TX??    ifatiftx  (Warehouseangaben)
+     C*Â‚          Position ==>   1    TX??    ifatiftx  (Warehouseangaben)
+     C*Â‚          Druck    ==>   K    TX??    IFATDRK1  (Warehouseangaben)
+     C*Â‚
      C*-------------------------------------------------------------------------
      C*
      C     sr2300wae     BEGSR
-     C*‚                 Textfelder auf Ebene des Kopfes und des Fusses
+     C*Â‚                 Textfelder auf Ebene des Kopfes und des Fusses
      c                   clear                   IFAt1
      c                   clear                   ##IFAt1
      c                   movel     date          ifatueda
@@ -2197,31 +2204,31 @@ MG01 c                   endif
      c                   movel     zeit          ifatEZEI
      c                   movel     date          ifatJDAT
      c                   movel     zeit          ifatJZEI
-     C                   movel     §§§usr        IFAtUSER
-     C                   movel     §§§pgm        IFAtPROG
-     C                   movel     §§§job        IFAtjnam
-     C                   movel     §§§LIB        IFatbibl
+     C                   movel     Â§Â§Â§usr        IFAtUSER
+     C                   movel     Â§Â§Â§pgm        IFAtPROG
+     C                   movel     Â§Â§Â§job        IFAtjnam
+     C                   movel     Â§Â§Â§LIB        IFatbibl
      C                   movel     '01'          IFatfirm
      c                   move      IFAkIFFI      ifatiffi
      C                   move      ifakIFNR      ifatifnr
      c                   movel     h060          ifaterda
      c***                movel     h070          ifatezei
      C*
-     C*‚                 Warehouse (5)
+     C*Â‚                 Warehouse (5)
      c                   movel     '5 '          ifatiftx
-     c* änderungen 29.09.2011
+     c* Ã¤nderungen 29.09.2011
      c                   movel     '1 '          ifatiftx
      c                   if        IFAKIFFI  <>  '00077'
      c                   movel     'K '          IFATDRK3
      c                   endif
-     C*‚                 Änderung daniel 19.01.2018
+     C*Â‚                 Ã„nderung daniel 19.01.2018
      c                   movel     'K '          IFATDRK1
      c
 MG01 c                   if        IFAKIFFI <>'05084'
      c                   movel     'L '          IFATDRK2
      c                   endif
      c*                  movel     *off          IFATPRKZ
-     c* änderungen 29.09.2011 ende
+     c* Ã¤nderungen 29.09.2011 ende
      c
      c                   movel     '1         '  ifatifuc
      c                   z-add     0             ifatifzn
@@ -2234,7 +2241,7 @@ MG01 c                   if        IFAKIFFI <>'05084'
 MG01 c                   if        IFAKIFFI = '98264'
      C                   movel     'sr2300wae '  IFatbibl
      c   30              write     ##IFAt1
-     C                   movel     §§§LIB        IFatbibl
+     C                   movel     Â§Â§Â§LIB        IFatbibl
 MG01 c                   endif
      c                   eval      p = p + 1
      c                   endif
@@ -2247,7 +2254,7 @@ MG01 c                   endif
 MG01 c                   if        IFAKIFFI = '98264'
      C                   movel     'sr2300wae '  IFatbibl
      c   30              write     ##IFAt1
-     C                   movel     §§§LIB        IFatbibl
+     C                   movel     Â§Â§Â§LIB        IFatbibl
 MG01 c                   endif
      c                   eval      p = p + 1
      c                   endif
@@ -2260,7 +2267,7 @@ MG01 c                   endif
 MG01 c                   if        IFAKIFFI = '98264'
      C                   movel     'sr2300wae '  IFatbibl
      c   30              write     ##IFAt1
-     C                   movel     §§§LIB        IFatbibl
+     C                   movel     Â§Â§Â§LIB        IFatbibl
 MG01 c                   endif
      c                   eval      p = p + 1
      c                   endif
@@ -2273,7 +2280,7 @@ MG01 c                   endif
 MG01 c                   if        IFAKIFFI = '98264'
      C                   movel     'sr2300wae '  IFatbibl
      c   30              write     ##IFAt1
-     C                   movel     §§§LIB        IFatbibl
+     C                   movel     Â§Â§Â§LIB        IFatbibl
 MG01 c                   endif
      c                   eval      p = p + 1
      c                   endif
@@ -2282,11 +2289,11 @@ MG01 c                   endif
      C     ##2300wae     ENDSR
 
      C**************************************************************************
-     C*‚übergaben Textdaten Kopf
+     C*Â‚Ã¼bergaben Textdaten Kopf
      C*-------------------------------------------------------------------------
      C*
      C     sr2300k       BEGSR
-     C*‚                 Textfelder auf Ebene des Kopfes und des Fusses
+     C*Â‚                 Textfelder auf Ebene des Kopfes und des Fusses
      c                   clear                   IFAt1
      c                   clear                   ##IFAt1
      c                   movel     date          ifatueda
@@ -2295,10 +2302,10 @@ MG01 c                   endif
      c                   movel     zeit          ifatEZEI
      c                   movel     date          ifatJDAT
      c                   movel     zeit          ifatJZEI
-     C                   movel     §§§usr        IFAtUSER
-     C                   movel     §§§pgm        IFAtPROG
-     C                   movel     §§§job        IFAtjnam
-     C                   movel     §§§LIB        IFatbibl
+     C                   movel     Â§Â§Â§usr        IFAtUSER
+     C                   movel     Â§Â§Â§pgm        IFAtPROG
+     C                   movel     Â§Â§Â§job        IFAtjnam
+     C                   movel     Â§Â§Â§LIB        IFatbibl
      C                   movel     '01'          IFatfirm
      c                   move      IFAkIFFI      ifatiffi
      C                   move      ifakIFNR      ifatifnr
@@ -2308,7 +2315,7 @@ MG01 c                   endif
      c                   z-add     1             z                 3 0
      C     z             DOUgt     420
      c
-     C*‚                 kopf
+     C*Â‚                 kopf
      c                   if        %subst(h310:z:59) <> *blank
      c                   movel     '2 '          ifatiftx
      c                   eval      ifattext   =  %subst(h310:z:60) +
@@ -2318,7 +2325,7 @@ MG01 c                   endif
 MG01 c                   if        IFAKIFFI = '98264'
      C                   movel     'sr2300k   '  IFatbibl
      c   30              write     ##IFAt1
-     C                   movel     §§§LIB        IFatbibl
+     C                   movel     Â§Â§Â§LIB        IFatbibl
 MG01 c                   endif
      c                   eval      p = p + 1
      c                   z-add     p             ifatifzn
@@ -2334,7 +2341,7 @@ MG01 c                   endif
 MG01 c                   if        IFAKIFFI = '98264'
      C                   movel     'sr2300k   '  IFatbibl
      c   30              write     ##IFAt1
-     C                   movel     §§§LIB        IFatbibl
+     C                   movel     Â§Â§Â§LIB        IFatbibl
 MG01 c                   endif
      c                   eval      p = p + 1
      c                   z-add     p             ifatifzn
@@ -2346,7 +2353,7 @@ MG01 c                   endif
 MG01 c                   if        IFAKIFFI = '98264'
      C                   movel     'sr2300k   '  IFatbibl
      c   30              write     ##IFAt1
-     C                   movel     §§§LIB        IFatbibl
+     C                   movel     Â§Â§Â§LIB        IFatbibl
 MG01 c                   endif
      c                   eval      p = p + 1
      c                   z-add     p             ifatifzn
@@ -2360,7 +2367,7 @@ MG01 c                   endif
 MG01 c                   if        IFAKIFFI = '98264'
      C                   movel     'sr2300k   '  IFatbibl
      c   30              write     ##IFAt1
-     C                   movel     §§§LIB        IFatbibl
+     C                   movel     Â§Â§Â§LIB        IFatbibl
 MG01 c                   endif
      c                   if        IFAKIFFI  <>  '00077'
      c                   movel     'K '          IFATDRK3
@@ -2372,15 +2379,15 @@ MG01 c                   endif
      C     ##2300k       ENDSR
 
      C**************************************************************************
-     C*‚übergaben Bankdaten     IFTA  Tab-Code
-     C*‚          Kopf     ==>   1    TXKO    ifatiftx
-     C*‚          Position ==>   3    TXPO    ifatiftx
-     C*‚          Schluss  ==>   2    TXSC    ifatiftx
-     C*‚
+     C*Â‚Ã¼bergaben Bankdaten     IFTA  Tab-Code
+     C*Â‚          Kopf     ==>   1    TXKO    ifatiftx
+     C*Â‚          Position ==>   3    TXPO    ifatiftx
+     C*Â‚          Schluss  ==>   2    TXSC    ifatiftx
+     C*Â‚
      C*-------------------------------------------------------------------------
      C*
      C     sr2300Bank    BEGSR
-     C*‚                 Textfelder auf Ebene des Kopfes und des Fusses
+     C*Â‚                 Textfelder auf Ebene des Kopfes und des Fusses
      c                   clear                   IFAt1
      c                   clear                   ##IFAt1
      c                   movel     date          ifatueda
@@ -2389,55 +2396,55 @@ MG01 c                   endif
      c                   movel     zeit          ifatEZEI
      c                   movel     date          ifatJDAT
      c                   movel     zeit          ifatJZEI
-     C                   movel     §§§usr        IFAtUSER
-     C                   movel     §§§pgm        IFAtPROG
-     C                   movel     §§§job        IFAtjnam
-     C                   movel     §§§LIB        IFatbibl
+     C                   movel     Â§Â§Â§usr        IFAtUSER
+     C                   movel     Â§Â§Â§pgm        IFAtPROG
+     C                   movel     Â§Â§Â§job        IFAtjnam
+     C                   movel     Â§Â§Â§LIB        IFatbibl
      C                   movel     '01'          IFatfirm
      c                   move      IFAkIFFI      ifatiffi
      C                   move      ifakIFNR      ifatifnr
      c                   movel     h060          ifaterda
      c***                movel     h070          ifatezei
      C*
-     C*‚                 Fuss (2)
+     C*Â‚                 Fuss (2)
      c                   movel     '2 '          ifatiftx
      c                   movel     '#'           IFATDRK1
      c                   z-add     0             ifatifzn
-     C*‚                 Vat Nummer
+     C*Â‚                 Vat Nummer
      c                   eval      ifattext  =  %subst(h310:121:15)
      c                   movel     'TXSC'        IFATTCDE
      c                   movel     'D'           IFATSPCD
      c                   movel     '1         '  ifatifuc
      c                   write     IFAt1
      c                   z-add     1             ifatifzn
-     C*‚                 Bank
+     C*Â‚                 Bank
      c                   eval      ifattext  =  %subst(h310:136:30)
      c                   write     IFAt1
      c                   z-add     2             ifatifzn
-     C*‚                 IBAN
+     C*Â‚                 IBAN
      c                   eval      ifattext  =  %subst(h310:166:32)
      c                   write     IFAt1
      c                   z-add     3             ifatifzn
-     C*‚                 BIC
+     C*Â‚                 BIC
      c                   eval      ifattext  =  %subst(h310:198:30)
      c                   write     IFAt1
      c                   z-add     4             ifatifzn
-     C*‚                 ComContact
+     C*Â‚                 ComContact
      c                   eval      ifattext  =  %subst(h310:228:30)
      c                   write     IFAt1
      c                   z-add     5             ifatifzn
-     C*‚                 Telefon
+     C*Â‚                 Telefon
      c                   eval      ifattext  =  %subst(h310:258:30)
      c                   write     IFAt1
       *
      C     ##2300Bank    ENDSR
 
      C**************************************************************************
-     C*‚übergaben Textdaten Positionen
+     C*Â‚Ã¼bergaben Textdaten Positionen
      C*-------------------------------------------------------------------------
      C*
      C     sr2300p       BEGSR
-     C*‚                 Textfelder auf Ebene des Kopfes und des Fusses
+     C*Â‚                 Textfelder auf Ebene des Kopfes und des Fusses
      c                   clear                   IFAt1
      c                   clear                   ##IFAt1
      c                   movel     date          ifatueda
@@ -2446,17 +2453,17 @@ MG01 c                   endif
      c                   movel     zeit          ifatEZEI
      c                   movel     date          ifatJDAT
      c                   movel     zeit          ifatJZEI
-     C                   movel     §§§usr        IFAtUSER
-     C                   movel     §§§pgm        IFAtPROG
-     C                   movel     §§§job        IFAtjnam
-     C                   movel     §§§LIB        IFatbibl
+     C                   movel     Â§Â§Â§usr        IFAtUSER
+     C                   movel     Â§Â§Â§pgm        IFAtPROG
+     C                   movel     Â§Â§Â§job        IFAtjnam
+     C                   movel     Â§Â§Â§LIB        IFatbibl
      C                   movel     '01'          IFatfirm
      c                   move      IFAkIFFI      ifatiffi
      C                   move      ifakIFNR      ifatifnr
      c                   movel     h060          ifaterda
      c***                movel     h070          ifatezei
      C*
-     C*‚                 Fremdartikel nennen
+     C*Â‚                 Fremdartikel nennen
      c                   if        L120              <> *blank
      c                   movel     '3 '          ifatiftx
      c                   movel     l120          ifattext
@@ -2472,7 +2479,7 @@ MG01 c                   endif
 MG01 c                   if        IFAKIFFI = '98264'
      C                   movel     'sr2300p   '  IFatbibl
      c   30              write     ##IFAt1
-     C                   movel     §§§LIB        IFatbibl
+     C                   movel     Â§Â§Â§LIB        IFatbibl
 MG01 c                   endif
      c                   eval      p = p + 1
      c                   z-add     p             ifatifzn
@@ -2482,7 +2489,7 @@ MG01 c                   endif
      c                   z-add     1             z                 3 0
      C     z             DOUgT     420
      c
-     C*‚                 positionen
+     C*Â‚                 positionen
      c                   if        %subst(l150:z:60) <> *blank
      c                   movel     '3 '          ifatiftx
      c                   eval      ifattext   =  %subst(l150:z:60) +
@@ -2490,7 +2497,7 @@ MG01 c                   endif
      c                   movel     '3         '  ifatifuc
      c****               eval      ifatifpo   =  l050
      c                   z-add     l050          ifatifpo
-     c*********          if        IFAKIFFI  <>  '00077'          Kommentar 19.01.2018  Param. geändert
+     c*********          if        IFAKIFFI  <>  '00077'          Kommentar 19.01.2018  Param. geÃ¤ndert
      c**********         movel     'K '          IFATDRK3         Kommentar 19.01.2018
      c*********          endif                                    Kommentar 19.01.2018
      c                   movel     'L '          IFATDRK1
@@ -2499,7 +2506,7 @@ MG01 c                   endif
 MG01 c                   if        IFAKIFFI = '98264'
      C                   movel     'sr2300p   '  IFatbibl
      c   30              write     ##IFAt1
-     C                   movel     §§§LIB        IFatbibl
+     C                   movel     Â§Â§Â§LIB        IFatbibl
 MG01 c                   endif
      c                   eval      p = p + 1
      c                   z-add     p             ifatifzn
@@ -2510,12 +2517,12 @@ MG01 c                   endif
      C     ##2300p       ENDSR
 
      C**************************************************************************
-     C*‚übergaben Positionen POSITIONSEBENE
+     C*Â‚Ã¼bergaben Positionen POSITIONSEBENE
      C*-------------------------------------------------------------------------
      C*
      C     sr2100        BEGSR
 
-     C*‚                 Positionsdaten Trend
+     C*Â‚                 Positionsdaten Trend
      c                   clear                   IFAp1
      c                   clear                   ##IFAp1
      c                   movel     date          ifapueda
@@ -2524,10 +2531,10 @@ MG01 c                   endif
      c                   movel     zeit          ifapEZEI
      c                   movel     date          ifapJDAT
      c                   movel     zeit          ifapJZEI
-     C                   movel     §§§usr        IFApUSER
-     C                   movel     §§§pgm        IFApPROG
-     C                   movel     §§§job        IFApjnam
-     C                   movel     §§§LIB        IFapbibl
+     C                   movel     Â§Â§Â§usr        IFApUSER
+     C                   movel     Â§Â§Â§pgm        IFApPROG
+     C                   movel     Â§Â§Â§job        IFApjnam
+     C                   movel     Â§Â§Â§LIB        IFapbibl
      C                   movel     '01'          IFapfirm
      c                   movel     IFAkIFFI      IFApIFFI
      c                   movel     ifakIFNR      ifapIFNR
@@ -2619,11 +2626,11 @@ MG01 C                   exsr      sr9900y
 MG01 C                   movel     newdate       ifaplfte
 MG01 C                   endif
      c
-     c**** nur für Slowakia
+     c**** nur fÃ¼r Slowakia
      c                   if        IFAKIFFI = '72511'
      c                   movel     '060'         IFAPLANR
 MG01 C                   endif
-     c**** Österreich ==> aktuelles Datum
+     c**** Ã–sterreich ==> aktuelles Datum
      c
      c                   z-add     l100          IFAPBSMG
      c                   if        l210 <> 0   and
@@ -2634,13 +2641,13 @@ MG01 c                             IFAKIFFI = '00005'
      c                   movel     '1'           IFAPPDIM
      c                   movel     'S'           IFAPMEPR
      c                   endif
-     C*‚                 dcs dometic claim system internetuser  kostenlose posit
+     C*Â‚                 dcs dometic claim system internetuser  kostenlose posit
      c                   if        IFAKIFFI = '00005'
      c                   if        l170= '1'
      c                   movel     'K  '         IFAPPRAR
      c                   endif
      c                   endif
-     C*‚                 Kom-Datum-Übergeben!!!!!! aktuelles Tagesdatum    gang/langlitz 31.01.20025
+     C*Â‚                 Kom-Datum-Ãœbergeben!!!!!! aktuelles Tagesdatum    gang/langlitz 31.01.20025
      c                   if        IFAKIFFI = '00002'
      c                   movel     date          IFAPKMTE
      c                   endif
@@ -2654,12 +2661,12 @@ MG01 c                   endif
      C     ##2100        ENDSR
 
      C**************************************************************************
-     C*‚übergaben Sendungsempfangsdaten KOPFEBENE
+     C*Â‚Ã¼bergaben Sendungsempfangsdaten KOPFEBENE
      C*-------------------------------------------------------------------------
      C*
      C     sr2500        BEGSR
       *
-     C*‚                 Sendungsempfangsdaten übergeben Neuanlage *in53=1
+     C*Â‚                 Sendungsempfangsdaten Ã¼bergeben Neuanlage *in53=1
      c                   clear                   IFAn1
      c                   movel     date          ifanueda
      c                   movel     zeit          ifanueuz
@@ -2667,14 +2674,14 @@ MG01 c                   endif
      c                   movel     zeit          ifanEZEI
      c                   movel     date          ifanJDAT
      c                   movel     zeit          ifanJZEI
-     C                   movel     §§§usr        IFAnUSER
-     C                   movel     §§§pgm        IFAnPROG
-     C                   movel     §§§job        IFAnjnam
-     C                   movel     §§§LIB        IFanbibl
+     C                   movel     Â§Â§Â§usr        IFAnUSER
+     C                   movel     Â§Â§Â§pgm        IFAnPROG
+     C                   movel     Â§Â§Â§job        IFAnjnam
+     C                   movel     Â§Â§Â§LIB        IFanbibl
      C                   movel     '01'          IFanfirm
      c                   movel     IFAkIFFI      IFAnIFFI
      c                   movel     ifakIFNR      ifanIFNR
-     c* kein Druckoptionsfenster eröffnen IFANDRKZ = 'N'
+     c* kein Druckoptionsfenster erÃ¶ffnen IFANDRKZ = 'N'
      c                   movel     'N'           IFANDRKZ
       *
      c                   movel     h060          ifanerda
@@ -2685,20 +2692,20 @@ MG01 c                   endif
      C     ##2500        ENDSR
 
      C**************************************************************************
-     C*‚übergaben Nachnahmedaten in WAO8 Benelux Sonderformat
+     C*Â‚Ã¼bergaben Nachnahmedaten in WAO8 Benelux Sonderformat
      C*-------------------------------------------------------------------------
      C*
      C     sr2260        BEGSR
       *
-     C*‚                 Sendungsempfangsdaten übergeben Neuanlage *in53=1
+     C*Â‚                 Sendungsempfangsdaten Ã¼bergeben Neuanlage *in53=1
      c                   clear                   wao81
      c                   movel     date          WAO8ERDA
      c                   movel     date          WAO8JDAT
      c                   movel     zeit          WAO8JZEI
-     C                   movel     §§§usr        WAO8USER
-     C                   movel     §§§pgm        WAO8PROG
-     C                   movel     §§§job        WAO8jnam
-     C                   movel     §§§LIB        WAO8bibl
+     C                   movel     Â§Â§Â§usr        WAO8USER
+     C                   movel     Â§Â§Â§pgm        WAO8PROG
+     C                   movel     Â§Â§Â§job        WAO8jnam
+     C                   movel     Â§Â§Â§LIB        WAO8bibl
      C                   movel     '01'          WAO8FIRM
      c                   move      IFAkIFFI      WAO8iffi
      C                   movel     ifakIFNR      WAO8ifnr
@@ -2706,37 +2713,37 @@ MG01 c                   endif
      c                   z-add     l050          WAO8IFPO
 
      c                   eval      d_head    = %subst(h310:420:49)
-     c*                  movel     §orh310       orh310
-     c*                  movel     §orh315       orh315
-     c                   movel     §orh316       WAO8SPWG
-     c                   if        §orh400 =' '
-     c                   movel     'J'           §orh400
+     c*                  movel     Â§orh310       orh310
+     c*                  movel     Â§orh315       orh315
+     c                   movel     Â§orh316       WAO8SPWG
+     c                   if        Â§orh400 =' '
+     c                   movel     'J'           Â§orh400
      c                   endif
-     c                   movel     §orh400       WAO8CODN
-     c                   if        §orh420 ='   '
-     c                   movel     'EUR'         §orh420
+     c                   movel     Â§orh400       WAO8CODN
+     c                   if        Â§orh420 ='   '
+     c                   movel     'EUR'         Â§orh420
      c                   endif
-     c                   movel     §orh420       WAO8CODW
-     c     ' ':'0'       xlate     §orh430       §orh430
-     c                   move      §orh430       WAO8CODS
-     c     ' ':'0'       xlate     §orh440       §orh440
-     c                   move      §orh440       WAO8CODM
-     c     ' ':'0'       xlate     §orh410       §orh410
-     c                   move      §orh410       WAO8CODB
-     c     ' ':'0'       xlate     §orh450       §orh450
-     c                   move      §orh450       WAO8CODV
-     c     ' ':'0'       xlate     §orh460       §orh460
-     c                   move      §orh460       WAO8CODK
-     c     ' ':'0'       xlate     §orh470       §orh470
-     c                   move      §orh470       WAO8CODI
+     c                   movel     Â§orh420       WAO8CODW
+     c     ' ':'0'       xlate     Â§orh430       Â§orh430
+     c                   move      Â§orh430       WAO8CODS
+     c     ' ':'0'       xlate     Â§orh440       Â§orh440
+     c                   move      Â§orh440       WAO8CODM
+     c     ' ':'0'       xlate     Â§orh410       Â§orh410
+     c                   move      Â§orh410       WAO8CODB
+     c     ' ':'0'       xlate     Â§orh450       Â§orh450
+     c                   move      Â§orh450       WAO8CODV
+     c     ' ':'0'       xlate     Â§orh460       Â§orh460
+     c                   move      Â§orh460       WAO8CODK
+     c     ' ':'0'       xlate     Â§orh470       Â§orh470
+     c                   move      Â§orh470       WAO8CODI
      c                   clear                   ##pwinord        18
      c                   eval      ##pwinord = %subst(l150:481:18)
-     c                   movel     ##pwinord     §ord450          11 2
-     c                   move      ##pwinord     §ord460           7 2
-     c     ' ':'0'       xlate     §orh450       §orh450
-     c     ' ':'0'       xlate     §orh460       §orh460
-     c                   z-add     §ord450       WAO8CODP
-     c                   z-add     §ord460       WAO8CODU
+     c                   movel     ##pwinord     Â§ord450          11 2
+     c                   move      ##pwinord     Â§ord460           7 2
+     c     ' ':'0'       xlate     Â§orh450       Â§orh450
+     c     ' ':'0'       xlate     Â§orh460       Â§orh460
+     c                   z-add     Â§ord450       WAO8CODP
+     c                   z-add     Â§ord460       WAO8CODU
      c                   if        l070 = '1' or l070 = 'J' or l070 = 'Y'
      c                   move      l060          WAO8LFTE
      c                   endif
@@ -2746,20 +2753,20 @@ MG01 c                   endif
      C     ##2260        ENDSR
 
      C**************************************************************************
-     C*‚übergaben Nachnahmedaten in WAO8 Benelux Sonderformat
+     C*Â‚Ã¼bergaben Nachnahmedaten in WAO8 Benelux Sonderformat
      C*-------------------------------------------------------------------------
      C*
      C     sr2265        BEGSR
       *
-     C*‚                 Sendungsempfangsdaten übergeben Neuanlage *in53=1
+     C*Â‚                 Sendungsempfangsdaten Ã¼bergeben Neuanlage *in53=1
      c                   clear                   wao81
      c                   movel     date          WAO8ERDA
      c                   movel     date          WAO8JDAT
      c                   movel     zeit          WAO8JZEI
-     C                   movel     §§§usr        WAO8USER
-     C                   movel     §§§pgm        WAO8PROG
-     C                   movel     §§§job        WAO8jnam
-     C                   movel     §§§LIB        WAO8bibl
+     C                   movel     Â§Â§Â§usr        WAO8USER
+     C                   movel     Â§Â§Â§pgm        WAO8PROG
+     C                   movel     Â§Â§Â§job        WAO8jnam
+     C                   movel     Â§Â§Â§LIB        WAO8bibl
      c                   move      IFAkIFFI      WAO8iffi
      C                   movel     ifakIFNR      WAO8ifnr
      C                   movel     '01'          WAO8FIRM
@@ -2776,12 +2783,12 @@ MG01 c                   endif
      C     ##2265        ENDSR
 
      C**************************************************************************
-     C*‚übergaben Kundendaten Artikel
+     C*Â‚Ã¼bergaben Kundendaten Artikel
      C*-------------------------------------------------------------------------
      C*
      C     sr2280        BEGSR
       *
-     C*‚                 Positionsdaten Trend
+     C*Â‚                 Positionsdaten Trend
      c                   clear                   ifep1
      c                   movel     date          ifepueda
      c                   movel     zeit          ifepueuz
@@ -2789,10 +2796,10 @@ MG01 c                   endif
      c                   movel     zeit          ifepEZEI
      c                   movel     date          ifepJDAT
      c                   movel     zeit          ifepJZEI
-     C                   movel     §§§usr        IFepUSER
-     C                   movel     §§§pgm        IFepPROG
-     C                   movel     §§§job        IFepjnam
-     C                   movel     §§§LIB        IFepbibl
+     C                   movel     Â§Â§Â§usr        IFepUSER
+     C                   movel     Â§Â§Â§pgm        IFepPROG
+     C                   movel     Â§Â§Â§job        IFepjnam
+     C                   movel     Â§Â§Â§LIB        IFepbibl
      C                   movel     '01'          IFepfirm
      c                   movel     IFAkIFFI      IFepIFFI
      c                   movel     ifakIFNR      ifepIFNR
@@ -2802,8 +2809,8 @@ MG01 c                   endif
      C*Stefie 20140916
      C                   if        #h030     = 0000003
      c                   z-add     l050          ifepposi
-     C*                  Abweiche. Lieferadr. anhand der Warenempfänger
-     C*                  H210 => WE bestimmen, da zum Teil unvollständig
+     C*                  Abweiche. Lieferadr. anhand der WarenempfÃ¤nger
+     C*                  H210 => WE bestimmen, da zum Teil unvollstÃ¤ndig
      c                   endif
      c                   eval      IFEPTENR   =  L080
      c                   eval      IFEPIDEN   =  L110
@@ -2822,12 +2829,12 @@ MG01 c                   endif
      C     ##2280        ENDSR
 
      C**************************************************************************
-     C*‚Protokoll line
+     C*Â‚Protokoll line
      C*-------------------------------------------------------------------------
      C*
      C     sr2800        BEGSR
       *
-     C*‚                 Übergabeprotokoll  "E D C" - part Kopf
+     C*Â‚                 Ãœbergabeprotokoll  "E D C" - part Kopf
      c*                  clear                   l150
      c                   if        *in93 = '1' and
      c                             ( ifakafjj <>   *Zero  or
@@ -2838,7 +2845,7 @@ MG01 c                   endif
      C                             ' order already in the system          '
      C*                            ===> date and time
      c                   endif
-     c                   movel     §§§USR        l160
+     c                   movel     Â§Â§Â§USR        l160
      c                   movel     '10'          l240
      c                   movel     date          l180
      c                   movel     tstampi       l190
@@ -2849,12 +2856,12 @@ MG01 c                   endif
      C     ##2800        ENDSR
 
      C**************************************************************************
-     C*‚Protokoll header
+     C*Â‚Protokoll header
      C*-------------------------------------------------------------------------
      C*
      C     sr2900        BEGSR
       *
-     C*‚                 Übergabeprotokoll  "E D C" - part Kopf
+     C*Â‚                 Ãœbergabeprotokoll  "E D C" - part Kopf
      c*                  clear                   h310
      c                   if        *in93 = '1' and
      c                             ( ifakafjj <>   *Zero  or
@@ -2865,7 +2872,7 @@ MG01 c                   endif
      C                             ' order already in the system'
      C*                            ===> date and time
      c                   endif
-     c                   movel     §§§USR        h330
+     c                   movel     Â§Â§Â§USR        h330
      c                   movel     '10'          h350
      c                   movel     date          h360
      c                   movel     tstampi       h370
@@ -2876,14 +2883,14 @@ MG01 c                   endif
      C     ##2900        ENDSR
 
      C**********************************************************************
-     C*‚delivery date ermitteln
+     C*Â‚delivery date ermitteln
      C*-------------------------------------------------------------------------
      C
      C     sr8000        BEGSR
      c*
      c                   clear                   #CDATEISO2
      c                   if        IFAKIFFI = '08138'
-     c*    Katrin: von 2 auf 3 geändert
+     c*    Katrin: von 2 auf 3 geÃ¤ndert
      c*                  z-add     3             count
      c*                  movel     'SE'          sc
      c                   goto      ##8000
@@ -2961,7 +2968,7 @@ MG01 c                   endif
      C     ##8000        ENDSR
      C
      C**********************************************************************
-     C*‚LÖSCHEN IFAK
+     C*Â‚LÃ–SCHEN IFAK
      C*-------------------------------------------------------------------------
      C
      C     LIFAK         BEGSR
@@ -2978,7 +2985,7 @@ MG01 c                   endif
      C     ##LIFAK       ENDSR
      C
      C**********************************************************************
-     C*‚ABSCHLIEßEN IFAK
+     C*Â‚ABSCHLIEÃŸEN IFAK
      C*-------------------------------------------------------------------------
      C
      C     AIFAK         BEGSR
@@ -2995,7 +3002,7 @@ MG01 c                   endif
      C     ##AIFAK       ENDSR
      C
      C**********************************************************************
-     C*‚FREIGEBEN IFAK
+     C*Â‚FREIGEBEN IFAK
      C*-------------------------------------------------------------------------
      C
      C     GNIFAK        BEGSR
@@ -3012,7 +3019,7 @@ MG01 c                   endif
      C     ##GNIFAK      ENDSR
      C
      C**********************************************************************
-     C*‚message
+     C*Â‚message
      C*-------------------------------------------------------------------------
      C
      C     message       BEGSR
@@ -3037,7 +3044,7 @@ MG01 c                   endif
      C     ##message     ENDSR
      C
      C**********************************************************************
-     C*‚confirmation ==> TVRELWAECO/confirm
+     C*Â‚confirmation ==> TVRELWAECO/confirm
      C*-------------------------------------------------------------------------
      C
      C     confirm       BEGSR
@@ -3055,7 +3062,7 @@ MG01 c                   endif
      C     ##confirm     ENDSR
      C
      C**********************************************************************
-     C*‚oem   Auftragsbestätigung und Priorität
+     C*Â‚oem   AuftragsbestÃ¤tigung und PrioritÃ¤t
      C*-------------------------------------------------------------------------
      C
      C     sr_oem        BEGSR
@@ -3083,8 +3090,25 @@ MG01 c                   endif
       *
      C     ##_oem        ENDSR
      C
+     C
      C**********************************************************************
-     C*‚fixtermin in Auftragposition Bestätigung
+     C*Â‚10.11.2026 VW Kd-Auftrag mit WÃ¤hrung USD #SR-424152
+     C*-------------------------------------------------------------------------
+     C
+     C     sr_Â§dollar    BEGSR
+      *
+     c/exec sql
+     C+    update ifak01 set ifakkdnr = '089879', IFAKWACD ='USD'
+     C+    WHERE IFAkIFFI = '00002' and ifakkdnr = '089878' and
+     c+          IFAKIFNR = :IFAKIFNR and  :IFAKIFNR  in
+     c+          (select ifapifnr from ifap01 where IFAPTENR ='9105330369'
+     C+           and IFAkIFFI = IFAPIFFI)
+     c/end-exec
+     C*
+     C     ##_Â§dollar    ENDSR
+     C
+     C**********************************************************************
+     C*Â‚fixtermin in Auftragposition BestÃ¤tigung
      C*-------------------------------------------------------------------------
      C
      C     sr_fix        BEGSR
@@ -3114,7 +3138,7 @@ MG01 c                   endif
      C     ##_fix        ENDSR
      C
      C**********************************************************************
-     C*‚Sicherung nach Auftragserzeugung und Protokoll
+     C*Â‚Sicherung nach Auftragserzeugung und Protokoll
      C*-------------------------------------------------------------------------
      C
      C     sr_save       BEGSR
@@ -3141,8 +3165,8 @@ MG01 c                   endif
       *
      C                   clear                   md
      C                   movea(p)  'ORDERR    '  md(001)
-     C                   movea(p)  §§§job        md(011)
-     C                   movea(p)  §§§usr        md(022)
+     C                   movea(p)  Â§Â§Â§job        md(011)
+     C                   movea(p)  Â§Â§Â§usr        md(022)
      C                   movea(p)  '          '  md(033)
      C                   movea(p)  'LOOP  '      md(040)
      C                   movea(p)  chx           md(046)
@@ -3163,7 +3187,7 @@ MG01 c                   endif
      C     ##_save       ENDSR
      C
      C**********************************************************************
-     C*‚Sicherung Fehlererkennung
+     C*Â‚Sicherung Fehlererkennung
      C*-------------------------------------------------------------------------
      C
      C     sr_save2      BEGSR
@@ -3172,8 +3196,8 @@ MG01 c                   endif
      c                   clear                   xxxxx            10
      c                   eval      xxxxx = %subst(l150:433:10)
      C                   movea(p)  'ORDERR    '  md(001)
-     C                   movea(p)  §§§job        md(011)
-     C                   movea(p)  §§§usr        md(022)
+     C                   movea(p)  Â§Â§Â§job        md(011)
+     C                   movea(p)  Â§Â§Â§usr        md(022)
      C                   movea(p)  '          '  md(033)
      C                   movea(p)  '      '      md(040)
      C                   movea(p)  chx           md(046)
@@ -3195,7 +3219,7 @@ MG01 c                   endif
      C     ##_save2      ENDSR
      C
      C**********************************************************************
-     C*‚vsbd
+     C*Â‚vsbd
      C*-------------------------------------------------------------------------
      C
      C     sr_VSBD       BEGSR
@@ -3222,16 +3246,16 @@ MG01 c                   endif
      C     ##_vsbd       ENDSR
      C
      C**********************************************************************
-     C*‚sr_akkosp  Kom_sperr
+     C*Â‚sr_akkosp  Kom_sperr
      C*-------------------------------------------------------------------------
      C
      C     sr_akkosp     BEGSR
       *
-     C*‚                 Ausschluss ab 09.07.2025
+     C*Â‚                 Ausschluss ab 09.07.2025
      c****** 09.07.2025  if        ( H040      =   001075 or
      c****** 09.07.2025              H040      =   082157   ) and
      c****** 09.07.2025              ifakiffi  = '00002'
-     C*‚                 Ausschluss ab 02.02.2016
+     C*Â‚                 Ausschluss ab 02.02.2016
      c****** 09.07.2025  goto      ##_akkosp
      c****** 09.07.2025  endif
      C                   if        ifakiffi  = '78677' or
@@ -3271,7 +3295,7 @@ MG01 c                   endif
      C     ##_akkosp     ENDSR
      C
      C**********************************************************************
-     C*‚Sammelrechnungskennzeichen
+     C*Â‚Sammelrechnungskennzeichen
      C*-------------------------------------------------------------------------
      C
      C     sr_aksarg     BEGSR
@@ -3315,12 +3339,12 @@ MG01 c                   endif
      C     ##_sarg       ENDSR
      C
      C**********************************************************************
-     C*‚Incoterms
+     C*Â‚Incoterms
      C*-------------------------------------------------------------------------
      C
      C     sr_inco       BEGSR
       *
-     C*‚Incoterms bei Norwegen einfache Variante
+     C*Â‚Incoterms bei Norwegen einfache Variante
      C                   if          ifakiffi  = '42634'  or
      C                               ifakiffi  = '08138'  or
      C                               ifakiffi  = '02921'  or
@@ -3332,7 +3356,7 @@ MG01 c                   endif
      c                   eval      incoterm =
      c                             'Emsdetten, Incoterms 2010'
      C                   endif
-     C*‚Incoterms
+     C*Â‚Incoterms
      C                   if          ifakiffi  = '55278'  or
      C                               ifakiffi  = '35671'  or
      C                               ifakiffi  = '78678'  or
@@ -3364,12 +3388,12 @@ MG01 c                   endif
       *
      C     ##_inco       ENDSR
      C**********************************************************************
-     C*‚afad Hinweisfeld Kunde
+     C*Â‚afad Hinweisfeld Kunde
      C*-------------------------------------------------------------------------
      C
      C     sr_hinw       BEGSR
       *
-     C*‚afad Hinweisfeld Kunde
+     C*Â‚afad Hinweisfeld Kunde
      C                   if          h020      <> 0       and
      C                               h030      >  10      and
      C                               H020      <> H040
@@ -3394,7 +3418,7 @@ MG01 c                   endif
       *
      C     ##_hinw       ENDSR
      C**********************************************************************
-     C*‚mail info
+     C*Â‚mail info
      C*-------------------------------------------------------------------------
      C
      C     sr_mail       BEGSR
@@ -3412,7 +3436,7 @@ MG01 c                   endif
      C     ##_mail       ENDSR
      C
      C**********************************************************************
-     C*‚mailaddon ==> lesen aler weiteren zusätzlichen optionen
+     C*Â‚mailaddon ==> lesen aler weiteren zusÃ¤tzlichen optionen
      C*-------------------------------------------------------------------------
      C
      C     mailaddon     BEGSR
@@ -3455,27 +3479,27 @@ MG01 c                   endif
      C                   clear                   Argument          1
      c                   eval      Argument='L'
      C                   eval      pos = %scan(%trim(Argument):H600x:1)
-     C*‚      -----------
+     C*Â‚      -----------
      C                   if        pos <> 0
      C                   clear                   email
      C                   EVAL      email  = %TRIM(h610x)
-     C*‚                 update addon
-     C*‚                 Routine Mail Auftragsbestätigung
+     C*Â‚                 update addon
+     C*Â‚                 Routine Mail AuftragsbestÃ¤tigung
      C                   CALL      'KDAP_GENR'
      C                   PARM                    xIFAKIFFI        10
      C                   PARM                    eMail            60
      C                   PARM                    #IFAKAFJJ         4
      C                   PARM                    $IFAKAFNR
-     C                   PARM                    §§§job
-     C                   PARM                    §§§usr
-     C                   PARM                    §§§pgm
-     C                   PARM                    §§§LIB
+     C                   PARM                    Â§Â§Â§job
+     C                   PARM                    Â§Â§Â§usr
+     C                   PARM                    Â§Â§Â§pgm
+     C                   PARM                    Â§Â§Â§LIB
      C
-     C*‚                 Routine Mail Auftragsbestätigung
-     C*‚                 Druckkennzeichen im Auftragskopf auf "Y für
-     C*‚                 Mail
-     C*‚                 ab 7.12.2012 beinhalten die Strukturen auch
-     C*‚                 die Rückgabeinhalte
+     C*Â‚                 Routine Mail AuftragsbestÃ¤tigung
+     C*Â‚                 Druckkennzeichen im Auftragskopf auf "Y fÃ¼r
+     C*Â‚                 Mail
+     C*Â‚                 ab 7.12.2012 beinhalten die Strukturen auch
+     C*Â‚                 die RÃ¼ckgabeinhalte
      C                   movel     RTIFAKAFJJ    ###FAKAFJJ        4
      C                   CALL      'WAO038'
      C                   Parm                    RTIFAKIFFI
@@ -3483,7 +3507,7 @@ MG01 c                   endif
      C                   parm                    RTIFAKAFNR
      C
      c                   endif
-     C*‚      -----------
+     C*Â‚      -----------
      C                   clear                   pos
      C                   clear                   Argument          1
      c                   eval      Argument='T'
@@ -3495,7 +3519,7 @@ MG01 c                   endif
      C                   movel     xcount        ycount           10
      C                   exsr      sr_t_and_t
      C                   endif
-     C*‚      -----------
+     C*Â‚      -----------
      c                   endif
      c                   enddo
      c                   endif
@@ -3505,9 +3529,9 @@ MG01 c                   endif
      C
      C
      C**********************************************************************
-     C*‚Track and Tracing
-     C*‚Sprachcode dauerhaft geändert auf D
-     C*‚TBUCDE     dauerhaft geändert auf 1
+     C*Â‚Track and Tracing
+     C*Â‚Sprachcode dauerhaft geÃ¤ndert auf D
+     C*Â‚TBUCDE     dauerhaft geÃ¤ndert auf 1
      C*-------------------------------------------------------------------------
      C
      C     sr_t_and_t    BEGSR
@@ -3534,7 +3558,7 @@ MG01 c                   endif
      C
      c/exec sql
      c+ insert into txbe
-     c+ select  char(' ', 1) TBlock,  char(:§§§job, 10) TPJNAM,
+     c+ select  char(' ', 1) TBlock,  char(:Â§Â§Â§job, 10) TPJNAM,
      c+ zoned(('20')
      c+ concat  substr(char(current date +0 day), 7, 2)  concat
      c+ substr(char(current date +0 day), 4, 2)  concat
@@ -3542,8 +3566,8 @@ MG01 c                   endif
      c+ zoned(substr(char(current time), 1, 2)  concat
      C+ substr(char(current time), 4, 2)  concat
      C+ substr(char(current time), 7, 2), 6, 0)   tpJZEI,
-     C+ char(:§§§usr, 10) tpUSER, char(:§§§pgm, 10) tpPROG,
-     C+ char(:§§§LIB, 10) TPBIBL,char('01', 02) TPFIRM,
+     C+ char(:Â§Â§Â§usr, 10) tpUSER, char(:Â§Â§Â§pgm, 10) tpPROG,
+     C+ char(:Â§Â§Â§LIB, 10) TPBIBL,char('01', 02) TPFIRM,
      C+ char('AFDA', 10) TBTXAR, zoned(:#IFAKAFJJ, 4, 0) TBjhjj,
      C+ char(:$IFAKAFNR, 06) TBafnr, zoned(0, 4, 0) TBPOSI,
      C+ zoned(0, 4, 0) TBupos,char('TXVS', 10) tbtcde,
@@ -3566,7 +3590,7 @@ MG01 c                   endif
      C
      C
      C**************************************************************************
-     C*‚time stamp
+     C*Â‚time stamp
      C*-------------------------------------------------------------------------
      C*
      C     sr9900        BEGSR
@@ -3596,7 +3620,7 @@ MG01 c                   endif
      C     ##9900        ENDSR
 
      C**************************************************************************
-     C*‚time stamp
+     C*Â‚time stamp
      C*-------------------------------------------------------------------------
      C*
      C     sr9900x       BEGSR
@@ -3618,12 +3642,12 @@ MG01 c                   endif
      C     ##9900x       ENDSR
 
      C**************************************************************************
-     C*‚time stamp
-     C*‚update ifap set ifaplfte =  (select
-     C*‚zoned(year(current date)
-     C*‚concat digits(dec(month(current date), 2, 0)) concat
-     C*‚       digits(dec(day(current date), 2, 0)))
-     C*‚       FROM qsys2/qsqptabl) WHERE IFAPIFNR = '109175'
+     C*Â‚time stamp
+     C*Â‚update ifap set ifaplfte =  (select
+     C*Â‚zoned(year(current date)
+     C*Â‚concat digits(dec(month(current date), 2, 0)) concat
+     C*Â‚       digits(dec(day(current date), 2, 0)))
+     C*Â‚       FROM qsys2/qsqptabl) WHERE IFAPIFNR = '109175'
      C*-------------------------------------------------------------------------
      C*
      C     sr9900y       BEGSR
@@ -3641,7 +3665,7 @@ MG01 c                   endif
      C     ##9900y       ENDSR
 
      C**************************************************************************
-     C*‚Ermittlung Auftragsnummer nach Generierung
+     C*Â‚Ermittlung Auftragsnummer nach Generierung
      C*-------------------------------------------------------------------------
      C*
      C     sr9991        BEGSR
@@ -3667,7 +3691,7 @@ MG01 c                   endif
      C     ##9991        ENDSR
 
      C**************************************************************************
-     C* sr9992: zusatz lesen der teil und evtl change der item# über
+     C* sr9992: zusatz lesen der teil und evtl change der item# Ã¼ber
      c*         kpif
      C*-------------------------------------------------------------------------
      C*
@@ -3698,13 +3722,13 @@ MG01 c                   endif
      c                   movel     L080          KPIDEN
      C*
      c     KEYkpif       chain     kpif02                             98
-     C*‚                 l080 = original und evtl. neue SKU
+     C*Â‚                 l080 = original und evtl. neue SKU
      c  n98              eval      %subst(l990:01:15) = L080
      c  n98              eval      %subst(l990:16:15) = %subst(KPTENR:01:15)
      c  n98              if        %subst(l110:01:15) = *blank
      c                   eval      %subst(l110:01:15) = l080
      c                   endif
-     C*‚                 übersteuern
+     C*Â‚                 Ã¼bersteuern
      c  n98              movel     KPTENR        L080
      c                   endif
      C*
@@ -3738,7 +3762,7 @@ MG01 c                   endif
      C*
      c     KEYkund       chain     kund01                             98
      c
-     C*‚                 über Kundenstamm
+     C*Â‚                 Ã¼ber Kundenstamm
      c                   if        *in98 = '0'
      c                   movel     kdNAM1        h100
      c                   move      kdNAM2        h110
@@ -3764,7 +3788,7 @@ MG01 c                   endif
      C*
      c     KEYkdvs       chain     kdvs01                             98
      c
-     C*‚                 über Kundenstamm Versandadresse
+     C*Â‚                 Ã¼ber Kundenstamm Versandadresse
      c                   if        *in98 = '0'
      c                   movel     VSNAM1        h100
      c                   move      VSNAM2        h110
@@ -3802,7 +3826,7 @@ MG01 c                   endif
      C*
      c     KEYkund       chain     kund01                             98
      c
-     C*‚                 über Kundenstamm
+     C*Â‚                 Ã¼ber Kundenstamm
      c                   if        *in98 = '0'
      c                   movel     kdvsbd        ifakvsbd
      c                   endif
@@ -3811,7 +3835,7 @@ MG01 c                   endif
      C     ##vsbdoem     ENDSR
      C*
      C**************************************************************************
-     C* srIso2: von Iso3 auf iso2 Landcodes ändern
+     C* srIso2: von Iso3 auf iso2 Landcodes Ã¤ndern
      c*
      C*-------------------------------------------------------------------------
      C*
@@ -3827,13 +3851,13 @@ MG01 c                   endif
      C*
      c     KEYSYTP       chain     SYTP01                             51
      C*
-     C*‚                 übersteuern
+     C*Â‚                 Ã¼bersteuern
      c  n51              movel     SYTPTTXT      ifadpold
      C*
      C     ##Iso2        ENDSR
      C*
      C**************************************************************************
-     C*‚time stamp
+     C*Â‚time stamp
      C*-------------------------------------------------------------------------
      C*
      C     sr9999        BEGSR
