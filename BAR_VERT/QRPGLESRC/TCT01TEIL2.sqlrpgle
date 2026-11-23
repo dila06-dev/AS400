@@ -203,7 +203,7 @@
             NumSysTime = %Dec(%Time(): *ISO);
             MONITOR;
                Wrk.var1 =
-                   'DLYJOB DLY(0100)';
+                   'DLYJOB DLY(0001)';
                cmd = %TrimR(Wrk.Var1);
                L      = %Len(Cmd);
                QCMDEXC(cmd: %len(cmd));
@@ -213,7 +213,7 @@
             endmon;
       // enddo;
 
-       eval status ='Ende Erweiterung der bar_vert/tct01 Ausgabe       ';
+       eval status ='Ende: Erweiterung der bar_vert/tct01 Ausgabe      ';
        exsr      SR_log;
 
        *inlr = *on;
@@ -240,66 +240,66 @@
        //==> Artikelart
          exec sql
            update bar_vert/tct01 set BZTETART =
-           (select TPTTXT FROM trtp01
+           (select TPTTXT FROM tamf/trtp01
             WHERE TPFIRM ='01' and TPSPCD='D' and
                   TPTCDE = TETART and TPTART ='PRAT')
             where exists
-           (select TPTTXT FROM trtp01
+           (select TPTTXT FROM tamf/trtp01
             WHERE TPFIRM ='01' and TPSPCD='D' and
                   TPTCDE = TETART and TPTART ='PRAT');
 
        //==> Brand
          exec sql
            update bar_vert/tct01 set BZTEEWBRND =
-           (select SYTPTTXT FROM sytp01
+           (select SYTPTTXT FROM tamf/sytp01
             WHERE SYTPFIRM ='01' and SYTPTART ='$$TEEWBRND' and
                 SYTPTCDE = TEEWBRND )
             where exists
-           (select SYTPTTXT FROM sytp01
+           (select SYTPTTXT FROM tamf/sytp01
             WHERE SYTPFIRM ='01' and SYTPTART ='$$TEEWBRND' and
                 SYTPTCDE = TEEWBRND );
 
        //==> Itemtype Itty(?)
          exec sql
            update bar_vert/tct01 set BZTEEWITTY  =
-           (select TPTTXT FROM trtp01
+           (select TPTTXT FROM tamf/trtp01
             WHERE TPFIRM ='01' and TPSPCD='D' and
                   TPTCDE = TEEWITTY and TPTART ='$$TEEWITTY')
             where exists
-           (select TPTTXT FROM trtp01
+           (select TPTTXT FROM tamf/trtp01
             WHERE TPFIRM ='01' and TPSPCD='D' and
                   TPTCDE = TEEWITTY and TPTART ='$$TEEWITTY');
 
        //==> Idco
          exec sql
            update bar_vert/tct01 set BZTEEWIDCO  =
-           (select TPTTXT FROM trtp01
+           (select TPTTXT FROM tamf/trtp01
             WHERE TPFIRM ='01' and TPSPCD='D' and
                   TPTCDE = TEEWIDCO and TPTART ='$$TEEWIDCO')
             where exists
-           (select TPTTXT FROM trtp01
+           (select TPTTXT FROM tamf/trtp01
             WHERE TPFIRM ='01' and TPSPCD='D' and
                   TPTCDE = TEEWIDCO and TPTART ='$$TEEWIDCO');
 
        //==> Produktgruppe   mit TPTFLG =0
          exec sql
             update bar_vert/tct01 set BZTEEWPRGR  =
-            (select TPTTXT FROM trtp01
+            (select TPTTXT FROM tamf/trtp01
              WHERE TPFIRM ='01' and TPSPCD='D' and TPTFLG =0 and
                    TPTCDE = TEEWPRGR and TPTART ='$$TEEWPRGR')
              where exists
-            (select TPTTXT FROM trtp01
+            (select TPTTXT FROM tamf/trtp01
              WHERE TPFIRM ='01' and TPSPCD='D' and TPTFLG =0 and
                    TPTCDE = TEEWPRGR and TPTART ='$$TEEWPRGR');
 
        //==> ProduktaeraCode
          exec sql
            update bar_vert/tct01 set BZTEEWPACD =
-           (select SYTPTTXT FROM sytp01
+           (select SYTPTTXT FROM tamf/sytp01
             WHERE SYTPFIRM ='01' and SYTPTART ='$$PAC' and
                 SYTPTCDE = TEEWPACD )
             where exists
-           (select SYTPTTXT FROM sytp01
+           (select SYTPTTXT FROM tamf/sytp01
             WHERE SYTPFIRM ='01' and SYTPTART ='$$PAC' and
                 SYTPTCDE = TEEWPACD );
 
