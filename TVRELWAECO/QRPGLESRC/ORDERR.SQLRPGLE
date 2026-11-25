@@ -3092,7 +3092,13 @@ MG01 c                   endif
      C
      C
      C**********************************************************************
-     C*10.11.2026 VW Kd-Auftrag mit Währung USD #SR-424152
+     C*10.11.2026 VW Kd-Auftrag mit Währung USD #SR-424152    2026P4883
+     C*update ifak01 set ifakkdnr = '089879', IFAKWACD ='USD'
+     C*WHERE IFAkIFFI = '00002' and ifakkdnr = '089878' and
+     C*      IFAKIFNR = '26134112' and  IFAKIFNR  in
+     C*      (select ifapifnr from ifap01 where IFAPTENR ='9105330369'
+     C*       and IFAkIFFI = IFAPIFFI)
+     C*-1 Zeilen in IFAK01 in TVPF aktualisiert.                      ----------
      C*-------------------------------------------------------------------------
      C
      C     sr_§dollar    BEGSR
